@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Sistema Cursos Companhia de Idiomas</title>
+<title>Sistema Cursos </title>
  <meta http-equiv="refresh"
-   content="1; url=https://www.companhiadeidiomas.net/cursos">
+   content="1; url=/cursos">
 </head>
 <body>
 <p>Esta página foi movida para:
-   <a href="https://www.companhiadeidiomas.net/cursos">Cursos</a></p>
+   <a href="/cursos">Cursos</a></p>
 </body>
 </html>
