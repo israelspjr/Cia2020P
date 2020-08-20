@@ -787,7 +787,7 @@ a:active{
 	.c1{
 		
 		height:500px;
-		background-image: url(images/c1.jpg);
+		background-image: url(../../images/c1.jpg);
 		-webkit-transition: background 1s ease-in-out;
    		-moz-transition: background 1s ease-in-out;
     	-o-transition: background 1s ease-in-out;
@@ -797,13 +797,13 @@ a:active{
 	}
 
 	.c1:hover{
-		background-image: url(images/c1h.jpg);
+		background-image: url(../../images/c1h.jpg);
 	 }
 
 	.c2{
 		
 		height:500px;
-		background-image: url(images/c2.jpg);
+		background-image: url(../../images/c2.jpg);
 	    -webkit-transition: background 1s ease-in-out;
         -moz-transition: background 1s ease-in-out;
         -o-transition: background 1s ease-in-out;
@@ -813,12 +813,12 @@ a:active{
 }
 
 .c2:hover{				
-		background-image: url(images/c2h.jpg);
+		background-image: url(../../images/c2h.jpg);
 }
 
 .c3{
 		height:500px;
-		background-image: url(images/c3.jpg);
+		background-image: url(../../images/c3.jpg);
 	 	 -webkit-transition: background 1s ease-in-out;
    		 -moz-transition: background 1s ease-in-out;
    		 -o-transition: background 1s ease-in-out;
@@ -828,12 +828,12 @@ a:active{
 }
 
 .c3:hover{
-		background-image: url(images/c3h.jpg);
+		background-image: url(../../images/c3h.jpg);
 }
 
 .c4{
 		height:500px;
-		background-image: url(images/c4.jpg);
+		background-image: url(../../images/c4.jpg);
 		-webkit-transition: background 1s ease-in-out;
     	-moz-transition: background 1s ease-in-out;
     	-o-transition: background 1s ease-in-out;
@@ -842,7 +842,7 @@ a:active{
 }
 
 .c4:hover{
-	    background-image: url(images/c4h.jpg);
+	    background-image: url(../../images/c4h.jpg);
 }
 
 	.ficons1{
