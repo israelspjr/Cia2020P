@@ -126,10 +126,10 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 //	var_dump($row);
    //  echo "Id is ".$row['id']."<br>";
 }
-		
+		echo "<pre>";
 		var_dump($array);
 		$num = numRows($result);
-		echo "<pre>";
+		
 		var_dump($num);
 /*		for ($i = 0; $i < $this -> count($result); $i++) {
 			echo $i;
