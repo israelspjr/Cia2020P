@@ -123,7 +123,7 @@ class Configuracoes extends Database{
   //Select Config
   function selectConfig($where = "WHERE 1"){
     $sql = "SELECT `configuracoes`.`idConfig`, `configuracoes`.`nomeEmpresa`, `configuracoes`.`logo`,`configuracoes`.`whatsApp`, `configuracoes`.`email`, `configuracoes`.`site`, `configuracoes`.`rodape`, `configuracoes`.`cabecalho` FROM `sistemac_bd`.`configuracoes`" . $where;
-	echo $sql;
+//	echo $sql;
     return $this -> executeQuery($sql);
   }
   

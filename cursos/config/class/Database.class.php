@@ -119,7 +119,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 
 	function executeQuery($sql) {
 		$result = $this -> query($sql);
-	//	var_dump($result);
+		var_dump($result);
 		$num = numRows($result);
 		echo "<pre>";
 		var_dump($num);
