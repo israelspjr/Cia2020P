@@ -5,8 +5,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/padrao.php");
 $Configuracoes = new Configuracoes();
 ini_set("display_errors", 1);
 
-$result = $Configuracoes->selectConfig();
-var_dump($result);
+$config = $Configuracoes->selectConfig();
+var_dump($config);
 
 session_start(); 
 session_destroy();
@@ -17,7 +17,7 @@ session_destroy();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sistema Cursos - <?php //echo $Configuracoes->selectConfig()?></title>
+<title>Sistema Cursos - <?php echo $config[0]['nomeEmpresa'];?></title>
 <link rel="shortcut icon" href="images/_favicon.ico">
 <style>
 	.t1{
@@ -254,17 +254,17 @@ session_destroy();
  </div>
     <div class="footer" width="100%">
 		   	<div class="footer1C">
-	    		<center> <a href="https://api.whatsapp.com/send?phone=5511982044234&amp;text=Dúvida Geral: " rel="noopener noreferrer"> <img src="images/whats.png" class="ficons1"> </a></center> 
+	    		<center> <a href="https://api.whatsapp.com/send?phone=<?php echo $config[0]['whatsApp'];?>&amp;text=Dúvida Geral: " rel="noopener noreferrer"> <img src="images/whats.png" class="ficons1"> </a></center> 
 		   	</div>
 
     	   	<div class="footer1C">
-		    	<center>  <a href="mailto:atendimento@companhiadeidiomas.com.br "> <img src="images/emaill.png" class="ficons2"> </a></center> 
+		    	<center>  <a href="mailto:<?php echo $config[0]['email'];?>"> <img src="images/emaill.png" class="ficons2"> </a></center> 
 	    	</div>
     </div>
  
 
    <div class="site">
-	   <a href="https://www.companhiadeidiomas.com.br" target="_blank" >  WWW.COMPANHIADEIDIOMAS.COM.BR </a> <br> <br>
+	   <a href="https://<?php echo $config[0]['site'];?>" target="_blank" >  <?php echo $config[0]['site'];?> </a> <br> <br>
    </div>
 </body>
 </html>
