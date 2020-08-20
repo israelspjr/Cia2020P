@@ -25,10 +25,10 @@ class Database {
       //      $Log->Log("Erro ao conctar db", 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));
         }
 
-		if ($database) {
-			$this -> selectDb($database);
-            mysql_set_charset('utf8');
-		}
+	//	if ($database) {
+	//		$this -> selectDb($database);
+    //        mysql_set_charset('utf8');
+	//	}
 
 	}
 
