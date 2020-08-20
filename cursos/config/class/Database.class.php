@@ -20,7 +20,7 @@ class Database {
 
 		//$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 		$link = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
-		
+		echo "<pre>";
 		var_dump($link);
 		
 /* check connection */
