@@ -14,7 +14,7 @@ session_destroy();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sistema Cursos - <?php echo $Configuracoes->getNomeEmpresa()?></title>
+<title>Sistema Cursos - <?php echo $Configuracoes->selectConfig()?></title>
 <link rel="shortcut icon" href="images/_favicon.ico">
 <style>
 	.t1{
