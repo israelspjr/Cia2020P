@@ -68,13 +68,13 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 		}
 	}
 
-	function query($sql, $log = true) {
+	function query($sql, $log = true, $link) {
 
 	//echo $sql;
 	//   $Log = new Log();
 	    
 	      
-		if (!($query = mysqli_query(connect, $sql))){        
+		if (!($query = mysqli_query($link, $sql))){        
 		  $mensagemErro = $sql;
 		  $acao = "Erro Ao executar acao: ".mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
 		  
