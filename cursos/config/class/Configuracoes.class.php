@@ -6,6 +6,7 @@ class Configuracoes extends Database{
   var $logo;
   var $whatsApp;
   var $email;
+  var $site;
   var $rodape;
   var $cabecalho;
   
@@ -17,6 +18,7 @@ class Configuracoes extends Database{
     $this->logo = "NULL";
     $this->whatsApp = 0;
     $this->email = "NULL";
+	$this->site = "NULL";
 	$this->rodape = "NULL";
 	$this->cabecalho = "NULL";
   }
@@ -44,6 +46,10 @@ class Configuracoes extends Database{
   
   function setEmail($value){
     $this -> whatsApp = ($value) ? $this -> gravarBD($value) : "NULL";
+  }
+  
+  function setSite($value){
+    $this -> site = ($value) ? $this -> gravarBD($value) : "NULL";
   }
   
   function setRodape($value){
@@ -74,6 +80,10 @@ class Configuracoes extends Database{
    function getEmail(){
     return $this -> email;
   }
+  
+  function getSite(){
+    return $this -> site;
+  }
    
   function getRodape(){
     return $this -> rodape;
@@ -85,8 +95,8 @@ class Configuracoes extends Database{
   
   //Add Config
   function addConfig(){
-    $sql = "INSERT INTO configuracoes (INSERT INTO `configuracoes` (`nomeEmpresa`, `logo`, `whatsApp`, `email`, `rodape`, `cabecalho`)
-				VALUES ($this->nomeEmpresa, $this->logo, $this->whatsApp, $this->email, $this->rodape, $this>cabecalho)";
+    $sql = "INSERT INTO configuracoes (INSERT INTO `configuracoes` (`nomeEmpresa`, `logo`, `whatsApp`, `email`, `site`, `rodape`, `cabecalho`)
+				VALUES ($this->nomeEmpresa, $this->logo, $this->whatsApp, $this->email, $this->site, $this->rodape, $this>cabecalho)";
     $result = $this -> query($sql, true);
     return mysql_insert_id($this -> connect);
   }
@@ -106,21 +116,19 @@ class Configuracoes extends Database{
   
   //update Todos os campos
    function updateConfig(){    
-    $sql = "UPDATE `configuracoes` SET `nomeEmpresa` = $this->nomeEmpresa, `logo` = $this->logo, `whatsApp` = $this->whatsApp, `email` = $this->email, `rodape` = $this->rodape, `cabecalho` = $this>cabecalho WHERE `idConfig` = $this->idConfig";
+    $sql = "UPDATE `configuracoes` SET `nomeEmpresa` = $this->nomeEmpresa, `logo` = $this->logo, `whatsApp` = $this->whatsApp, `email` = $this->email, `site` = $this->site, `rodape` = $this->rodape, `cabecalho` = $this>cabecalho WHERE `idConfig` = $this->idConfig";
     $result = $this -> query($sql, true);
   }
   
   //Select Config
   function selectConfig($where = "WHERE 1"){
-    $sql = "SELECT `configuracoes`.`idConfig`, `configuracoes`.`nomeEmpresa`, `configuracoes`.`logo`,`configuracoes`.`whatsApp`, `configuracoes`.`email`,
-    `configuracoes`.`rodape`, `configuracoes`.`cabecalho` FROM `sistemac_bd`.`configuracoes`" . $where;
+    $sql = "SELECT `configuracoes`.`idConfig`, `configuracoes`.`nomeEmpresa`, `configuracoes`.`logo`,`configuracoes`.`whatsApp`, `configuracoes`.`email`, `configuracoes`.`site`, `configuracoes`.`rodape`, `configuracoes`.`cabecalho` FROM `sistemac_bd`.`configuracoes`" . $where;
     return $this -> executeQuery($sql);
   }
   
 function selectConfigTr($where = "", $apenasLinha = false){
 
-      $sql = "SELECT `configuracoes`.`idConfig`, `configuracoes`.`nomeEmpresa`, `configuracoes`.`logo`,`configuracoes`.`whatsApp`,`configuracoes`.`email`,
-    `configuracoes`.`rodape`, `configuracoes`.`cabecalho` FROM `sistemac_bd`.`configuracoes`" . $where;
+      $sql = "SELECT `configuracoes`.`idConfig`, `configuracoes`.`nomeEmpresa`, `configuracoes`.`logo`,`configuracoes`.`whatsApp`,`configuracoes`.`email`, `configuracoes`.`site`,  `configuracoes`.`rodape`, `configuracoes`.`cabecalho` FROM `sistemac_bd`.`configuracoes`" . $where;
       $result = $this -> query($sql);
       $html = "";
       
@@ -134,7 +142,8 @@ function selectConfigTr($where = "", $apenasLinha = false){
         $nomeEmpresa = $valor['nomeEmpresa'];
         $logo = $valor['logo'];
         $whatsApp = $valor['whatsApp'];
-        $email = $valor['email'];  
+        $email = $valor['email']; 
+		$site = $valor['site']; 
 		$rodape = $valor['rodape'];
 		$cabecalho = $valor['cabecalho']; 
 		    
@@ -161,6 +170,8 @@ function selectConfigTr($where = "", $apenasLinha = false){
           $html .= "<td align=\"center\" >" . $whatsApp . "</td>";
           
           $html .= "<td align=\"center\" >" . $email . "</td>";
+		  
+		  $html .= "<td align=\"center\" >" . $site . "</td>";
           
           $html .= "<td align=\"center\" >" . $rodape . "</td>";         
 
