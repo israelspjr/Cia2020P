@@ -1,13 +1,13 @@
 <?php
-$pgprof = true;
+//$pgprof = true;
 require_once($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/padrao.php");
 
 $Configuracoes = new Configuracoes();
 ini_set("display_errors", 1);
 
 $config = $Configuracoes->selectConfig();
-echo "<pre>";
-var_dump($config);
+//echo "<pre>";
+//var_dump($config);
 
 session_start(); 
 session_destroy();
