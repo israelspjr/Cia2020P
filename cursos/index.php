@@ -92,7 +92,7 @@ session_destroy();
 		   	</div>
 
     	   	<div class="footer1C">
-		    	<center>  <a href="mailto:<?php echo $config[0]['email'];?>"> <img src="images/emaill.png" class="ficons2"> </a></center> 
+		    	<center>  <a href="mailto:<?php echo $config[0]['email'];?>"> <img src="images/email.png" class="ficons2"> </a></center> 
 	    	</div>
     </div>
  
