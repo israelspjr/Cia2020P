@@ -17,17 +17,17 @@ class Database {
 	// class methods
 	function connect($database = false) {
 	//    $Log = new Log();
-	echo DATABASE_SERVER;
+
 		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 		
 		/* check connection */
 if ($this->connect_errno) {
-    printf("Connect failed: %s\n", $mysqli->connect_error);
+    printf("Connect failed: %s\n", $this->connect_error);
     exit();
 }
 
 if (!$this->query("SET a=1")) {
-    printf("Errorcode: %d\n", $mysqli->errno);
+    printf("Errorcode: %d\n", $this->errno);
 }
 
 		if (!$this -> connect){
