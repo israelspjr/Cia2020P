@@ -29,11 +29,11 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-if (!mysqli_query($link, "SELECT * FROM configuracoes")) {
+if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
     printf("Errorcode: %d\n", mysqli_errno($link));
 }
 
-if (!mysqli_query($link, "SELECT * FROM configuracoes")) {
+if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
     print_r(mysqli_error_list($link));
 }
 		if (!$this -> connect){
@@ -71,7 +71,7 @@ if (!mysqli_query($link, "SELECT * FROM configuracoes")) {
 	//   $Log = new Log();
 	    
 	      
-		if (!($query = mysqli_query($sql))){        
+		if (!($query = mysqli_query(connect, $sql))){        
 		  $mensagemErro = $sql;
 		  $acao = "Erro Ao executar acao: ".mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
 		  
