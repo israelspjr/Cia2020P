@@ -51,13 +51,15 @@ class Database {
 
 	function query($sql, $log = true) {
 
-	echo $sql;
+	//echo $sql;
 	//   $Log = new Log();
 	    
 	      
 		if (!($query = mysqli_query($sql))){        
 		  $mensagemErro = $sql;
 		  $acao = "Erro Ao executar acao: ".mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
+		  
+		  echo $acao;
 	//	  $Log->Log($acao, 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'], $_SESSION['idUsuario'])); 
         }
      
