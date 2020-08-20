@@ -19,6 +19,16 @@ class Database {
 	//    $Log = new Log();
 	
 		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+		
+		/* check connection */
+if ($this->connect_errno) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+}
+
+if (!$this->query("SET a=1")) {
+    printf("Errorcode: %d\n", $mysqli->errno);
+}
 
 		if (!$this -> connect){
             $mensagemErro = mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
