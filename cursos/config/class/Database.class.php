@@ -65,7 +65,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 		} else {
 		//	$array = array_map("stripslashes", mysqli_fetch_array($result, MYSQL_ASSOC));
 		$array = mysqli_fetch_array($result, MYSQL_ASSOC);
-	//	var_dump($array);
+		var_dump($array);
 			return $array;
 		}
 	}
