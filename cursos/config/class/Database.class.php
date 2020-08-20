@@ -21,7 +21,7 @@ class Database {
 		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 
 		if (!$this -> connect){
-            $mensagemErro = mysql_errno($this -> connect) . ": " . mysql_error($this -> connect);
+            $mensagemErro = mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
       //      $Log->Log("Erro ao conctar db", 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));
         }
 
@@ -57,7 +57,7 @@ class Database {
 	      
 		if (!($query = mysqli_query($sql))){        
 		  $mensagemErro = $sql;
-		  $acao = "Erro Ao executar acao: ".mysql_errno($this -> connect) . ": " . mysql_error($this -> connect);
+		  $acao = "Erro Ao executar acao: ".mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
 	//	  $Log->Log($acao, 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'], $_SESSION['idUsuario'])); 
         }
      
@@ -97,13 +97,13 @@ class Database {
 		for ($i = 0; $i < $this -> numRows($result); $i++) {
 			$array[$i] = $this -> fetchArray($result);
 		}
-		mysql_free_result($result);
+		mysqli_free_result($result);
        	return $array;
 	}
 
 	function gravarBD($texto) {
 
-		$res = mysql_escape_string(trim($texto));
+		$res = mysqli_escape_string(trim($texto));
         //echo $res;
 		//mysql_real_escape_string
 
