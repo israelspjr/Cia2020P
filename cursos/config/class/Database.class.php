@@ -119,21 +119,22 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 
 	function executeQuery($sql) {
 		$result = $this -> query($sql);
-/*		foreach($result as $row )
+		$array = $array[0];
+		foreach($rows as $key => $row)
 {
-	$array[] = $row;
-	var_dump($row);
+	$array[0][$key] = $row;
+//	var_dump($row);
    //  echo "Id is ".$row['id']."<br>";
-}*/
+}
 		
-		var_dump($result);
+		var_dump($array);
 		$num = numRows($result);
 		echo "<pre>";
 		var_dump($num);
-		for ($i = 0; $i < $this -> count($result); $i++) {
+/*		for ($i = 0; $i < $this -> count($result); $i++) {
 			echo $i;
 			$array[$i] = $this -> fetchArray($result);
-		}
+		}*/
 		mysqli_free_result($result);
        	return $array;
 	}
