@@ -29,11 +29,11 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-if (!mysqli_query($link, "SET a=1")) {
+if (!mysqli_query($link, "SELECT * FROM configuracoes")) {
     printf("Errorcode: %d\n", mysqli_errno($link));
 }
 
-if (!mysqli_query($link, "SET a=1")) {
+if (!mysqli_query($link, "SELECT * FROM configuracoes")) {
     print_r(mysqli_error_list($link));
 }
 		if (!$this -> connect){
