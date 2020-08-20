@@ -718,6 +718,16 @@ a:active{
     border-radius: 70px;	
 }
 
+.zap23 span {
+	font-size: 30px;
+    /* line-height: 36px; */
+    text-align: -webkit-auto;
+    color: black;
+    font-weight: bold;
+    float: right;
+    line-height: 53px;	
+}
+
 .t1{
 		border-bottom: 5px #ff6e15 solid;
 		border-right: 3px #fff solid;
