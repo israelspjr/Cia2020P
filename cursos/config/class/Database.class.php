@@ -17,7 +17,7 @@ class Database {
 	// class methods
 	function connect($database = false) {
 	//    $Log = new Log();
-	
+	echo DATABASE_SERVER;
 		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 		
 		/* check connection */
