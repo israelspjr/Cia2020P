@@ -18,7 +18,10 @@ class Database {
 	function connect($database = false) {
 	//    $Log = new Log();
 
-		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+		//$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+		$link = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+		
+		var_dump($link);
 		
 /* check connection */
 if (mysqli_connect_errno()) {
