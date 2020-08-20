@@ -17,13 +17,8 @@ class Database {
 	// class methods
 	function connect($database = false) {
 	//    $Log = new Log();
-		$mysqli = new mysqlí(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
-		
-		if ($mysqli->connect_errno) {
-    		echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-			}
-
-		$this -> connect = $mysqli;
+	
+		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 
 		if (!$this -> connect){
             $mensagemErro = mysql_errno($this -> connect) . ": " . mysql_error($this -> connect);
