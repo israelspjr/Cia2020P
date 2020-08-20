@@ -71,8 +71,6 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 	function query($sql, $log = true) {
 		
 	     $link = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);	
-		echo "<pre>";
-		var_dump($link);
 
 	//echo $sql;
 	//   $Log = new Log();
@@ -82,7 +80,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 		  $mensagemErro = $sql;
 		  $acao = "Erro Ao executar acao: ".mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
 		  
-		  echo $acao;
+//		  echo $acao;
 	//	  $Log->Log($acao, 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'], $_SESSION['idUsuario'])); 
         }
      
@@ -119,6 +117,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 
 	function executeQuery($sql) {
 		$result = $this -> query($sql);
+		
 		for ($i = 0; $i < $this -> numRows($result); $i++) {
 			$array[$i] = $this -> fetchArray($result);
 		}
