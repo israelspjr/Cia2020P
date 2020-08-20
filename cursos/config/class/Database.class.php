@@ -7,7 +7,7 @@ class Database {
 	// constructor
 	function __construct() {
 	//	$this -> connect(DATABASE_DB);        
-		$link = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+		
 	}
 
 	// constructor
@@ -68,8 +68,9 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 		}
 	}
 
-	function query($sql, $log = true, $link) {
+	function query($sql, $log = true) {
 		
+	     $link = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);	
 		echo "<pre>";
 		var_dump($link);
 
