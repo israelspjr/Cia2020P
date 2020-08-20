@@ -16,7 +16,7 @@ class Database {
 
 	// class methods
 	function connect($database = false) {
-	    $Log = new Log();
+	//    $Log = new Log();
 		$mysqli = new mysqlí(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 		
 		if ($mysqli->connect_errno) {
