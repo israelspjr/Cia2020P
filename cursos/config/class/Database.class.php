@@ -121,6 +121,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 		$result = $this -> query($sql);
 	//	var_dump($result);
 		$num = numRows($result);
+		echo "<pre>";
 		var_dump($num);
 		for ($i = 0; $i < $this -> numRows($result); $i++) {
 			echo $i;
