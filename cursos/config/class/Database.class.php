@@ -130,8 +130,8 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
    //  echo "Id is ".$row['id']."<br>";
 				
 		
-		echo "<pre>";
-		var_dump($array);
+//		echo "<pre>";
+//		var_dump($array);
 //		$num = numRows($result);
 		
 //		var_dump($num);
