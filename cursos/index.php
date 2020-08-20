@@ -6,6 +6,7 @@ $Configuracoes = new Configuracoes();
 ini_set("display_errors", 1);
 
 $config = $Configuracoes->selectConfig();
+echo "<pre>";
 var_dump($config);
 
 session_start(); 
