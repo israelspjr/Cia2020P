@@ -63,7 +63,8 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 		if (!$result) {
 			return false;
 		} else {
-			$array = array_map("stripslashes", mysqli_fetch_array($result, MYSQL_ASSOC));
+		//	$array = array_map("stripslashes", mysqli_fetch_array($result, MYSQL_ASSOC));
+		$array = mysqli_fetch_array($result, MYSQL_ASSOC);
 			return $array;
 		}
 	}
@@ -78,7 +79,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 	      
 		if (!($query = mysqli_query($link, $sql))){        
 		  $mensagemErro = $sql;
-		  $acao = "Erro Ao executar acao: ".mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
+		  $acao = "Erro Ao executar acao: ".mysqli_errno($link) . ": " . mysqli_error($link);
 		  
 //		  echo $acao;
 	//	  $Log->Log($acao, 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'], $_SESSION['idUsuario'])); 
