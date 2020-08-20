@@ -32,19 +32,19 @@ class Database {
 
 	}
 
-	function selectDb($database) {
+/*	function selectDb($database) {
 	  //  $Log = new Log();
 		if (!mysql_select_db($database, $this -> connect)){
 		    $mensagemErro = mysql_errno($this -> connect) . ": " . mysql_error($this -> connect);			
        //     $Log->Log("Erro ao selecionar db", 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));
         }
-	}
+	}*/
 
 	function fetchArray($result) {
 		if (!$result) {
 			return false;
 		} else {
-			$array = array_map("stripslashes", mysql_fetch_array($result, MYSQL_ASSOC));
+			$array = array_map("stripslashes", mysqli_fetch_array($result, MYSQL_ASSOC));
 			return $array;
 		}
 	}
@@ -55,34 +55,19 @@ class Database {
 	//   $Log = new Log();
 	    
 	      
-		if (!($query = mysql_query($sql))){        
+		if (!($query = mysqli_query($sql))){        
 		  $mensagemErro = $sql;
 		  $acao = "Erro Ao executar acao: ".mysql_errno($this -> connect) . ": " . mysql_error($this -> connect);
 	//	  $Log->Log($acao, 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'], $_SESSION['idUsuario'])); 
         }
-      
-        /*if (preg_match("/update/i", $sql)) {
-            $acao = "UPDATE";
-        } else if (preg_match("/insert/i", $sql)) {
-            $acao = "INSERT";
-        } else if (preg_match("/delete/i", $sql)) {
-            $acao = "DELETE";
-        }else{
-            $acao="";    
-        }
-        	  
-	    if(($acao == "UPDATE" || $acao == "INSERT" || $acao == "DELETE") AND $mensagemErro=="" AND $log==true){
-          $mensagem = $sql;
-          $Log->Log($acao, 0, $mensagem, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));      
-        }*/
-         
+     
 		return $query;
 
 	}
 
 	function mostraErr($sql = "", $soEmail = false) {
 
-		$mensagemErro = "<br />$sql<br />" . mysql_errno($this -> connect) . ": " . mysql_error($this -> connect);
+		$mensagemErro = "<br />$sql<br />" . mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
 		$emails =  array(0 => array("email" => EMAIL_ADM, "nome" => "Administrador"));
 		Uteis::enviarEmail("ERRO SISTEMA", $mensagemErro, $emails);
 		
@@ -103,7 +88,7 @@ class Database {
 		if (!$result) {
 			return false;
 		} else {
-			return mysql_num_rows($result);
+			return mysqli_num_rows($result);
 		}
 	}
 
@@ -133,7 +118,7 @@ class Database {
 	}
     
     function logQuery($sql){
-        $query = mysql_query($sql);
+        $query = mysqli_query($sql);
     }
 
 }
