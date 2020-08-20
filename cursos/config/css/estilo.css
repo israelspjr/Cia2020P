@@ -725,7 +725,8 @@ a:active{
     color: black;
     font-weight: bold;
     float: right;
-    line-height: 53px;	
+    line-height: 53px;
+	padding-right: 19px;	
 }
 
 .t1{
