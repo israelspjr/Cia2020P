@@ -20,16 +20,15 @@ class Database {
 
 		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 		
-		/* check connection */
-if ($this->connect_errno) {
-    printf("Connect failed: %s\n", $this->connect_error);
+/* check connection */
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
 
-if (!$this->query("SET a=1")) {
-    printf("Errorcode: %d\n", $this->errno);
+if (!mysqli_query($link, "SET a=1")) {
+    printf("Errorcode: %d\n", mysqli_errno($link));
 }
-
 		if (!$this -> connect){
             $mensagemErro = mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
       //      $Log->Log("Erro ao conctar db", 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));
