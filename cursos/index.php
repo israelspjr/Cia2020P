@@ -1,7 +1,7 @@
 <?php
 $pgprof = true;
 require_once($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/padrao.php");
-ini_set("display_errors", 0);
+ini_set("display_errors", 1);
 
 session_start(); 
 session_destroy();
