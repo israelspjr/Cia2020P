@@ -739,6 +739,17 @@ a:active{
     border-radius: 70px;	
 }
 
+.emailIndex span {
+	font-size: 30px;
+    /* line-height: 36px; */
+    text-align: -webkit-auto;
+    color: black;
+    font-weight: bold;
+    float: right;
+    line-height: 53px;
+	padding-right: 19px;	
+}
+
 .t1{
 		border-bottom: 5px #ff6e15 solid;
 		border-right: 3px #fff solid;
