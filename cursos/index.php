@@ -20,6 +20,7 @@ session_destroy();
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sistema Cursos - <?php echo $config[0]['nomeEmpresa'];?></title>
 <link rel="shortcut icon" href="images/_favicon.ico">
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php"); ?>
 <style>
 	.t1{
 		border-bottom: 5px #ff6e15 solid;
@@ -226,7 +227,7 @@ session_destroy();
 
 <body>
 	<div class="header">
- 			 <center> <img src="images/logo3.png" alt="logo" class="logo"/></center>
+ 			 <center> <img src="<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
 	</div>
      
     <div>
