@@ -729,6 +729,16 @@ a:active{
 	padding-right: 19px;	
 }
 
+.emailIndex {
+	width: 350px;
+    text-align: initial;
+    background: rgb(222,58,76);
+    background: linear-gradient(90deg, rgba(222,58,76,1) 0%, rgba(132,40,107,1) 46%);
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 10px -2px 26px 1px rgba(0,0,0,0.31);
+    box-shadow: 0px 10px 13px -7px #000000, 10px -2px 26px 1px rgba(0,0,0,0.31);
+    border-radius: 70px;	
+}
+
 .t1{
 		border-bottom: 5px #ff6e15 solid;
 		border-right: 3px #fff solid;
