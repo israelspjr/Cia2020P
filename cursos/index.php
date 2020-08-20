@@ -255,7 +255,7 @@ session_destroy();
  </div>
     <div class="footer" width="100%">
 		   	<div class="footer1C">
-	    		<center> <a href="https://api.whatsapp.com/send?phone=<?php echo $config[0]['whatsApp'];?>&amp;text=Dúvida Geral: " rel="noopener noreferrer"> <img src="images/whats.png" class="ficons1"> </a></center> 
+	    		<center> <a href="https://api.whatsapp.com/send?phone=<?php echo $config[0]['whatsApp'];?>&amp;text=Dúvida Geral: " rel="noopener noreferrer"> <img src="images/zap23.png" class="ficons1"> </a></center> 
 		   	</div>
 
     	   	<div class="footer1C">
