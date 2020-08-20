@@ -51,7 +51,7 @@ class Database {
 
 	function query($sql, $log = true) {
 
-	//echo $sql;
+	echo $sql;
 	//   $Log = new Log();
 	    
 	      
