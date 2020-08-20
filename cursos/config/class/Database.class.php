@@ -123,10 +123,10 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 		$num = numRows($result);
 		echo "<pre>";
 		var_dump($num);
-		for ($i = 0; $i < $this -> numRows($result); $i++) {
+	/*	for ($i = 0; $i < $this -> numRows($result); $i++) {
 			echo $i;
 			$array[$i] = $this -> fetchArray($result);
-		}
+		}*/
 		mysqli_free_result($result);
        	return $array;
 	}
