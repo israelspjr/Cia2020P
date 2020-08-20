@@ -119,18 +119,18 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 
 	function executeQuery($sql) {
 		$result = $this -> query($sql);
-		$array = $array[0];
+		echo mysqli_num_rows($result);
 		foreach($result as $key => $row)
 {
-	$array[0][$key] = $row;
+	$array[$key] = $row;
 //	var_dump($row);
    //  echo "Id is ".$row['id']."<br>";
 }
 		echo "<pre>";
 		var_dump($array);
-		$num = numRows($result);
+//		$num = numRows($result);
 		
-		var_dump($num);
+//		var_dump($num);
 /*		for ($i = 0; $i < $this -> count($result); $i++) {
 			echo $i;
 			$array[$i] = $this -> fetchArray($result);
