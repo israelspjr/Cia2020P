@@ -122,7 +122,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 		for ($i=0;$i<mysqli_num_rows($result);$i++) {
 			foreach($result as $key => $row)
 				{
-					$array[$i][$key] = $row;
+					$array[$key] = $row;
 				}
 		}
 
