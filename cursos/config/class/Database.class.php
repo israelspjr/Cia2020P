@@ -6,25 +6,28 @@ class Database {
 
 	// constructor
 	function __construct() {
-		$this -> connect(DATABASE_DB);        
+	//	$this -> connect(DATABASE_DB);        
+		$link = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 	}
 
 	// constructor
 	function __destruct() {
 		//if( $this->connect ) mysql_close($this->connect);
 	}
+	
+	
 
 	// class methods
-	function connect($database = false) {
+/*	function connect($database = false) {
 	//    $Log = new Log();
 
 		//$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
-		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
-		echo "<pre>";
+	//	$this -> connect = 
+//		echo "<pre>";
 		var_dump($this);
 		
 /* check connection */
-if (mysqli_connect_errno()) {
+/*if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
