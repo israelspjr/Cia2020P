@@ -65,7 +65,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 		} else {
 		//	$array = array_map("stripslashes", mysqli_fetch_array($result, MYSQL_ASSOC));
 		$array = mysqli_fetch_array($result, MYSQL_ASSOC);
-		var_dump($array);
+	//	var_dump($array);
 			return $array;
 		}
 	}
@@ -119,7 +119,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 
 	function executeQuery($sql) {
 		$result = $this -> query($sql);
-		var_dump($result);
+	//	var_dump($result);
 		$num = numRows($result);
 		var_dump($num);
 		for ($i = 0; $i < $this -> numRows($result); $i++) {
