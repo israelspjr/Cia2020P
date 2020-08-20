@@ -19,9 +19,9 @@ class Database {
 	//    $Log = new Log();
 
 		//$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
-		$link = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 		echo "<pre>";
-		var_dump($link);
+		var_dump($this);
 		
 /* check connection */
 if (mysqli_connect_errno()) {
