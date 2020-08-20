@@ -32,6 +32,10 @@ if (mysqli_connect_errno()) {
 if (!mysqli_query($link, "SET a=1")) {
     printf("Errorcode: %d\n", mysqli_errno($link));
 }
+
+if (!mysqli_query($link, "SET a=1")) {
+    print_r(mysqli_error_list($link));
+}
 		if (!$this -> connect){
             $mensagemErro = mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
       //      $Log->Log("Erro ao conctar db", 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));
