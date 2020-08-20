@@ -120,7 +120,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 	function executeQuery($sql) {
 		$result = $this -> query($sql);
 		echo mysqli_num_rows($result);
-		for ($i=0;$i<=mysqli_num_rows($result);$i++) {
+		for ($i=0;$i<mysqli_num_rows($result);$i++) {
 			foreach($result as $key => $row)
 				{
 					$array[$i][$key] = $row;
