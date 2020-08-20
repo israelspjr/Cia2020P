@@ -59,7 +59,7 @@ session_destroy();
 
 <body>
 	<div class="header">
- 			 <center> <img src="<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
+ 			 <center> <img src="images/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
 	</div>
      
     <div>
