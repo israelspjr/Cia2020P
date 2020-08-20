@@ -69,6 +69,9 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 	}
 
 	function query($sql, $log = true, $link) {
+		
+		echo "<pre>";
+		var_dump($link);
 
 	//echo $sql;
 	//   $Log = new Log();
