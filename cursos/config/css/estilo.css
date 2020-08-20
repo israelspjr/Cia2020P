@@ -667,7 +667,7 @@ table.dataTable.no-footer {
 
 .header{
    height: 100px;
-   background-image: url("../../images/logo3.png");
+ /*  background-image: url("../../images/logo3.png");*/
    background-repeat: no-repeat;
    background-position: center;
    background-size: 200px;
