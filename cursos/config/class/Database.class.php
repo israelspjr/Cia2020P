@@ -113,12 +113,18 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 		if (!$result) {
 			return false;
 		} else {
-			return mysqli_num_rows($result);
+			return 3; //mysqli_num_rows($result);
 		}
 	}
 
 	function executeQuery($sql) {
 		$result = $this -> query($sql);
+		foreach($result as $row)
+{
+	var_dump($row);
+   //  echo "Id is ".$row['id']."<br>";
+}
+		
 		var_dump($result);
 		$num = numRows($result);
 		echo "<pre>";
