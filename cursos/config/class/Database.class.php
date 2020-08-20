@@ -117,7 +117,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 
 	function executeQuery($sql) {
 		$result = $this -> query($sql);
-		
+		var_dump($result);
 		for ($i = 0; $i < $this -> numRows($result); $i++) {
 			$array[$i] = $this -> fetchArray($result);
 		}
