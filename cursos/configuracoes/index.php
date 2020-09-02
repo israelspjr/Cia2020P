@@ -27,12 +27,12 @@ if( isset($_REQUEST["tr"]) ){
 
 <script src="https://code.jquery.com/jquery-3.5.1.js" language="javascript" type="text/javascript"></script>
 
-<!-- data Tables 
+<!-- data Tables -->
 
-<script src="<?php echo CAMINHO_CFG?>DataTables/datatables.js" language="javascript" type="text/javascript" ></script>-->
+<script src="<?php echo CAMINHO_CFG?>DataTables/datatables.js" language="javascript" type="text/javascript" ></script>
 
-<!-- Funções uteis -->
-<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" language="javascript" type="text/javascript"></script>
+<!-- Funções uteis 
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" language="javascript" type="text/javascript"></script>-->
 
 <fieldset>
   <legend>Configurações de sistema</legend>
