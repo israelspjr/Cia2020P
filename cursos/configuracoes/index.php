@@ -21,7 +21,8 @@ if( isset($_REQUEST["tr"]) ){
 ?>
 
 <!-- data Tables -->
-<link rel="stylesheet" href="<?php echo CAMINHO_CFG?>css/table_jui.css" />
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php"); ?>
+<!--<link rel="stylesheet" href="<?php echo CAMINHO_CFG?>css/table_jui.css" />
 
 <script src="https://code.jquery.com/jquery-3.5.1.js" language="javascript" type="text/javascript"></script>
 
