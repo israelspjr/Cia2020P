@@ -70,8 +70,8 @@ if( isset($_REQUEST["tr"]) ){
 </div>
 </fieldset>
 <script>
-$(document).ready( function () {
+/*$(document).ready( function () {
     $('#tb_lista_config').DataTable();
-} );
-//tabelaDataTable('tb_lista_acervo');
+} );*/
+tabelaDataTable('tb_lista_config');
 </script> 
