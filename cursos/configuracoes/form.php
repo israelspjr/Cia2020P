@@ -4,6 +4,7 @@ $Configuracoes = new Configuracoes();
  
  $Configuracoes->setIdConfig(1);
 // $valorConfig = $Configuracoes->selectConfig("WHERE idConfig=1"); 
+$seguranca = $Configuracoes->getSeguranca();
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -34,16 +35,16 @@ $Configuracoes = new Configuracoes();
         <input type="text" name="disponivel" id="disponivel" value="<?php echo $Configuracoes->getLogo();?>" />
       </p>
       <p>
-        <label>logo Favorito  (.ico):</label>
+        <label>Marca D'Agua:</label>
+        <input type="text" name="disponivel" id="disponivel" value="<?php echo $Configuracoes->getLogo();?>" />
+      </p>
+      <p>
+        <label>logo Favorito (.ico):</label>
         <input type="text" name="disponivel" id="disponivel" value="<?php echo $Configuracoes->getFavIcon();?>" />
       </p>
       <p>
         <label>WhatsApp:</label>
         <input type="text" name="zap" id="zap" value="<?php echo $Configuracoes->getWhatsApp();?>" />
-      </p>
-       <p>
-        <label>Email:</label>
-        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
       </p>
       <p>
         <label>Site:</label>
@@ -59,13 +60,17 @@ $Configuracoes = new Configuracoes();
       </p>
     </div>
     <div class="direita">
+     <p>
+        <label>Email (para dúvidas):</label>
+        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+      </p>
        <p>
         <label>Servidor SMTP:</label>
-        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getSmtp();?>" />
       </p>
       <p>
         <label>Porta SMTP:</label>
-        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getPorta();?>" />
       </p>
       <p>
         <label>Segurança:</label>
@@ -73,11 +78,11 @@ $Configuracoes = new Configuracoes();
       </p>
       <p>
         <label>Email de envio(envio@...):</label>
-        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmailEnvio();?>" />
       </p>
        <p>
         <label>Senha do email:</label>
-        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmailSenha();?>" />
       </p>
     </div>
     <div class="linha-inteira">
