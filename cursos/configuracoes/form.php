@@ -80,7 +80,9 @@ $Configuracoes = new Configuracoes();
         <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
       </p>
     </div>
+    <div class="linha-inteira">
      <button class="button blue" onclick="postForm('form_acervo', '<?php echo CAMINHO_CFG?>configuracoes/acao.php')">Salvar</button>
+     </div>
     </form>
   </div>
 </div>
