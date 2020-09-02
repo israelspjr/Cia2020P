@@ -43,6 +43,7 @@ function __autoload($class) {
 	$caminhoClass = $_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."class/".$class.".class.php";
 		
 	if( file_exists($caminhoClass) ){ 
+	echo $caminhoClass;
 		require_once $caminhoClass;
 		return true; 
 	}else{
