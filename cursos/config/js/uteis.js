@@ -47,7 +47,7 @@ function removeAcento(strToReplace) {
 }
 
 function abrirNivelPagina(e, pagina, atualizaPg, localAtu) {
-//	alert(e);
+	alert(e);
 
 	contaNivel(1);
 
