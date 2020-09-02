@@ -1,8 +1,9 @@
 <?php  
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/padrao.php");
 $Configuracoes = new Configuracoes();
-
- $valorConfig = $Configuracoes->selectConfig("WHERE idConfig=1"); 
+ 
+ $Configuracoes->setIdConfig(1);
+// $valorConfig = $Configuracoes->selectConfig("WHERE idConfig=1"); 
 
 ?>
 
@@ -18,7 +19,7 @@ $Configuracoes = new Configuracoes();
      <input type="hidden" name="idConfig" value="1" /> 
       <p>
         <label>Nome da Empresa</label>
-        <input type="text" name="nomeEmpresa" id="nomeEmpresa" value="<?php echo $valorConfig->getNomeEmpresa();?>" />
+        <input type="text" name="nomeEmpresa" id="nomeEmpresa" value="<?php echo $Configuracoes->getNomeEmpresa();?>" />
       </p>
       <p>
         <label>logo:</label>
