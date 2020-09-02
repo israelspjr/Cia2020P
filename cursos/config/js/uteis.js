@@ -168,7 +168,7 @@ function viraEditor(id) {
 	    images_upload_credentials: true,
 				relative_urls : false,
 		remove_script_host : false,
-		document_base_url : "http://www.companhiadeidiomas.net/cursos/upload/outros",
+		document_base_url : "/cursos/upload/outros",
 
 		
 		file_picker_callback: function(callback, value, meta) {

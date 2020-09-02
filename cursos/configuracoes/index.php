@@ -20,8 +20,10 @@ if( isset($_REQUEST["tr"]) ){
 }
 ?>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php"); ?>
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php"); ?>
+<!-- data Tables -->
+<link rel="stylesheet" href="<?php echo CAMINHO_CFG?>css/table_jui.css" />
+<!-- data Tables -->
+<script src="<?php echo CAMINHO_CFG?>js/jquery.dataTables.min.js" language="javascript" type="text/javascript" ></script>
 <fieldset>
   <legend>Configurações de sistema</legend>
 

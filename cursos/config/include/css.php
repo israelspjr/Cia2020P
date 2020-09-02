@@ -1,6 +1,4 @@
-<!--<link rel="shortcut icon" type="image/x-icon" href="<?php echo CAMINHO_IMG?>_favicon.ico" />
-
-<link rel="stylesheet" href="<?php echo CAMINHO_CFG?>css/zerar.css" type="text/css" />-->
+<link rel="stylesheet" href="<?php echo CAMINHO_CFG?>css/zerar.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo CAMINHO_CFG?>css/estilo.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo CAMINHO_CFG?>css/menu.css" type="text/css" />
 
