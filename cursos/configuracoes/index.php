@@ -22,13 +22,14 @@ if( isset($_REQUEST["tr"]) ){
 
 <!-- data Tables -->
 <?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php"); ?>
 <!--<link rel="stylesheet" href="<?php echo CAMINHO_CFG?>css/table_jui.css" />-->
 
-<script src="https://code.jquery.com/jquery-3.5.1.js" language="javascript" type="text/javascript"></script>
+<!--<script src="https://code.jquery.com/jquery-3.5.1.js" language="javascript" type="text/javascript"></script>
 
 <!-- data Tables -->
 
-<script src="<?php echo CAMINHO_CFG?>DataTables/datatables.js" language="javascript" type="text/javascript" ></script>
+
 
 <!-- Funções uteis 
 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" language="javascript" type="text/javascript"></script>-->

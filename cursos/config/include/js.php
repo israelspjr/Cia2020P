@@ -1,16 +1,17 @@
 <!-- JQuery -->
-<script src="<?php echo CAMINHO_CFG?>js/jquery.min.js" language="javascript" type="text/javascript"></script>
+<script src="<?php echo CAMINHO_CFG?>js/jquery351.js" language="javascript" type="text/javascript"></script>
 <script src="<?php echo CAMINHO_CFG?>js/login.js" language="javascript" type="text/javascript"></script>
 
-<!-- JQuery Ui -->
-<script src="<?php echo CAMINHO_CFG?>js/jquery-ui.min.js" language="javascript" type="text/javascript"></script>
+<!-- JQuery Ui 
+<script src="<?php echo CAMINHO_CFG?>js/jquery-ui.min.js" language="javascript" type="text/javascript"></script>-->
 
 <!-- Editor -->
 <script src="<?php echo CAMINHO_CFG?>js/tinymce.min.js" language="javascript" type="text/javascript" ></script>
 
-<!-- data Tables -->
-<script src="<?php echo CAMINHO_CFG?>js/jquery.dataTables.min.js" language="javascript" type="text/javascript" ></script>
-<script src="<?php echo CAMINHO_CFG?>js/dataTables.fixedHeader.min.js" language="javascript" type="text/javascript" ></script>
+<!-- data Tables 
+<script src="<?php echo CAMINHO_CFG?>js/jquery.dataTables.min.js" language="javascript" type="text/javascript" ></script>-->
+<!--<script src="<?php echo CAMINHO_CFG?>js/dataTables.fixedHeader.min.js" language="javascript" type="text/javascript" ></script>-->
+<script src="<?php echo CAMINHO_CFG?>DataTables/datatables.js" language="javascript" type="text/javascript" ></script>
 
 <!-- Atualização para sortear data -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
