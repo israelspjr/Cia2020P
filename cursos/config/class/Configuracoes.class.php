@@ -13,16 +13,17 @@ class Configuracoes extends Database{
   
   //construtor
   function __construct(){
+	  $valor = self::selectConfig(" WHERE idConfig = 1");
     parent::__construct();
-    $this->idConfig = "NULL";
-    $this->nomeEmpresa = "NULL";
-    $this->logo = "NULL";
-    $this->whatsApp = 0;
-    $this->email = "NULL";
-	$this->site = "NULL";
-	$this->rodape = "NULL";
-	$this->cabecalho = "NULL";
-	$this->favIcon = "NULL";
+    //$this->idConfig = "NULL";
+    $this->nomeEmpresa = $valor[0]['nomeEmpresa']; //"NULL";
+    $this->logo = $valor[0]['logo'];"NULL";
+    $this->whatsApp = $valor[0]['whatsApp'];
+    $this->email = $valor[0]['email'];
+	$this->site = $valor[0]['site'];
+	$this->rodape = $valor[0]['rodape'];
+	$this->cabecalho = $valor[0]['cabecalho'];
+	$this->favIcon = $valor[0]['favIcon'];
   }
 
   function __destruct(){
