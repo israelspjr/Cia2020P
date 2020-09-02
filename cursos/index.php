@@ -6,6 +6,10 @@ $Configuracoes = new Configuracoes();
 ini_set("display_errors", 1);
 
 $config = $Configuracoes->selectConfig();
+
+$array = array("+", "-", " ");
+
+$zap = str_replace($array, "", $config[0]['whatsApp']);
 //echo "<pre>";
 //var_dump($config);
 
@@ -44,9 +48,6 @@ session_destroy();
 	    max-width: 250px;
 		padding: 10px;
 	}
-
-	
-	
 	
 	.footer {
 	    font: 13px verdana,tahoma,sans-serif;
