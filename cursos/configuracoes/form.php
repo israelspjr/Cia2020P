@@ -23,11 +23,11 @@ $Configuracoes = new Configuracoes();
       </p>
       <p>
         <label>logo:</label>
-        <input type="number" name="disponivel" id="disponivel" value="<?php echo $disponivel;?>" />
+        <input type="number" name="disponivel" id="disponivel" value="<?php echo $Configuracoes->getLogo();?>" />
       </p>
       <p>
         <label>logo Favorito  (.ico):</label>
-        <input type="number" name="disponivel" id="disponivel" value="<?php echo $disponivel;?>" />
+        <input type="number" name="disponivel" id="disponivel" value="<?php echo $Configuracoes->getFavIcon();?>" />
       </p>
       <p>
         <label>WhatsApp:</label>
