@@ -76,11 +76,11 @@ $Configuracoes = new Configuracoes();
         <label>Segurança:</label>
         <input type="radio" name="seguranca" id="seguranca" value="-" />Nenhuma &nbsp;&nbsp;&nbsp; <input type="radio" name="seguranca" id="seguranca" value="SSL" />SSL &nbsp;&nbsp;&nbsp; <input type="radio" name="seguranca" id="seguranca" value="TLS" /> TLS &nbsp;&nbsp;&nbsp; <input type="radio" name="seguranca" id="seguranca" value="STARTTLS" />STARTTLS
       </p>
-  <!--    <p>
+      <p>
         <label>Email de envio(envio@...):</label>
         <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmailEnvio();?>" />
       </p>
-       <p>
+ <!--      <p>
         <label>Senha do email:</label>
         <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getSenhaEmail();?>" />
       </p>
