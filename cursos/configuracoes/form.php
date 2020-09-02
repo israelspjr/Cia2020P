@@ -80,11 +80,11 @@ $Configuracoes = new Configuracoes();
         <label>Email de envio(envio@...):</label>
         <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmailEnvio();?>" />
       </p>
- <!--      <p>
+       <p>
         <label>Senha do email:</label>
         <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getSenhaEmail();?>" />
       </p>
-    </div>
+   </div>
     <div class="linha-inteira">
      <button class="button blue" onclick="postForm('form_acervo', '<?php echo CAMINHO_CFG?>configuracoes/acao.php')">Salvar</button>
      </div>
