@@ -10,6 +10,11 @@ class Configuracoes extends Database{
   var $rodape;
   var $cabecalho;
   var $favIcon;
+  var $smtp;
+  var $seguranca;
+  var $porta;
+  var $emailEnvio;
+  var $senhaEmail;
   
   //construtor
   function __construct(){
@@ -24,6 +29,11 @@ class Configuracoes extends Database{
 	$this->rodape = $valor[0]['rodape'];
 	$this->cabecalho = $valor[0]['cabecalho'];
 	$this->favIcon = $valor[0]['favIcon'];
+	$this->smtp = $valor[0]['smtp'];
+    $this->seguranca = $valor[0]['seguranca'];
+    $this->porta = $valor[0]['porta'];
+    $this->emailEnvio = $valor[0]['emailEnvio'];
+    $this->senhaEmail = $valor[0]['senhaEmail'];
   }
 
   function __destruct(){
@@ -67,6 +77,26 @@ class Configuracoes extends Database{
     $this -> favIcon = ($value) ? $this -> gravarBD($value) : "NULL";
   }
   
+  function setSmtp($value){
+    $this -> smtp = ($value) ? $this -> gravarBD($value) : "NULL";
+  }
+  
+  function setSeguranca($value){
+    $this -> seguranca = ($value) ? $this -> gravarBD($value) : "NULL";
+  }
+  
+  function setPorta($value){
+    $this -> porta = ($value) ? $this -> gravarBD($value) : "NULL";
+  }
+  
+  function setEmailEnvio($value){
+    $this -> emailEnvio = ($value) ? $this -> gravarBD($value) : "NULL";
+  }
+  
+  function setSenhaEmail($value){
+    $this -> senhaEmail = ($value) ? $this -> gravarBD($value) : "NULL";
+  }
+ 
    // Method's Get's
   function getIdConfig(){
     return $this -> idConfig;
@@ -104,10 +134,30 @@ class Configuracoes extends Database{
     return $this -> favIcon;
   }
   
+  function getSmtp(){
+    return $this -> smtp;
+  }
+  
+  function getSeguranca(){
+    return $this -> seguranca;
+  }
+  
+  function getPorta(){
+    return $this -> porta;
+  }
+  
+  function getEmailEnvio(){
+    return $this -> emailEnvio;
+  }
+  
+  function getSenhaEmail(){
+    return $this -> senhaEmail;
+  }
+  
   //Add Config
   function addConfig(){
-    $sql = "INSERT INTO configuracoes (INSERT INTO `configuracoes` (`nomeEmpresa`, `logo`, `whatsApp`, `email`, `site`, `rodape`, `cabecalho`, `favIcon` )
-				VALUES ($this->nomeEmpresa, $this->logo, $this->whatsApp, $this->email, $this->site, $this->rodape, $this>cabecalho, $this>favIcon)";
+    $sql = "INSERT INTO configuracoes (INSERT INTO `configuracoes` (`nomeEmpresa`, `logo`, `whatsApp`, `email`, `site`, `rodape`, `cabecalho`, `smtp`, `seguranca`, `porta`, `emailEnvio`, `senhaEmail`, `favIcon` )
+				VALUES ($this->nomeEmpresa, $this->logo, $this->whatsApp, $this->email, $this->site, $this->rodape, $this>cabecalho, $this>smtp, $this>seguranca, $this>porta, $this>emailEnvio, $this>senhaEmail, $this>favIcon)";
     $result = $this -> query($sql, true);
     return mysql_insert_id($this -> connect);
   }
@@ -124,23 +174,30 @@ class Configuracoes extends Database{
     $sql = "UPDATE configuracoes SET " . $field . " = " . $value . " WHERE idConfig = $this->idConfig";
     $result = $this -> query($sql, true);
   }
-  
+   
+  var $smtp;
+  var $seguranca;
+  var $porta;
+  var $emailEnvio;
+  var $senhaEmail;
+ 
+   
   //update Todos os campos
    function updateConfig(){    
-    $sql = "UPDATE `configuracoes` SET `nomeEmpresa` = $this->nomeEmpresa, `logo` = $this->logo, `whatsApp` = $this->whatsApp, `email` = $this->email, `site` = $this->site, `rodape` = $this->rodape, `cabecalho` = $this>cabecalho, `favIcon` = $this>favIcon WHERE `idConfig` = $this->idConfig";
+    $sql = "UPDATE `configuracoes` SET `nomeEmpresa` = $this->nomeEmpresa, `logo` = $this->logo, `whatsApp` = $this->whatsApp, `email` = $this->email, `site` = $this->site, `rodape` = $this->rodape, `cabecalho` = $this>cabecalho, `smtp` = $this>smtp, `seguranca` = $this>seguranca, `porta` = $this>porta, `emailEnvio` = $this>emailEnvio, `senhaEmail` = $this>senhaEmail, `favIcon` = $this>favIcon WHERE `idConfig` = $this->idConfig";
     $result = $this -> query($sql, true);
   }
   
   //Select Config
   function selectConfig($where = "WHERE 1"){
-    $sql = "SELECT `idConfig`, `nomeEmpresa`, `logo`,`whatsApp`, `email`, `site`, `rodape`, `cabecalho`, `favIcon` FROM `sistemac_bd`.`configuracoes`" . $where;
+    $sql = "SELECT `idConfig`, `nomeEmpresa`, `logo`,`whatsApp`, `email`, `site`, `rodape`, `cabecalho`, `smtp`, `seguranca`, `porta`, `emailEnvio`, `senhaEmail`, `favIcon` FROM `configuracoes`" . $where;
 //	echo $sql;
     return $this -> executeQuery($sql);
   }
   
 function selectConfigTr($where = "", $apenasLinha = false){
 
-      $sql = "SELECT `idConfig`, `nomeEmpresa`, `logo`,`whatsApp`,`email`, `site`,  `rodape`, `cabecalho`, `favIcon` FROM `sistemac_bd`.`configuracoes`" . $where;
+      $sql = "SELECT `idConfig`, `nomeEmpresa`, `logo`,`whatsApp`,`email`, `site`,  `rodape`, `cabecalho`, `smtp`, `seguranca`, `porta`, `emailEnvio`, `senhaEmail`, `favIcon` FROM `configuracoes`" . $where;
       $result = $this -> query($sql);
 	  $html = "";
  
