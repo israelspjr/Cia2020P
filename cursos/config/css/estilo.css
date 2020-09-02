@@ -13,6 +13,21 @@ html, body{
 	background:transparent;
 }
 
+/* Zerar.css*/
+/* CSS Document */
+body, html, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, form, label, fieldset, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;	padding: 0;	border: 0;	outline: 0;	background: transparent;}
+ol, ul { list-style: none;}
+blockquote, q {	quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {	Content: '';	Content: none;}
+:focus {	outline: 0;}
+a:: -moz-focus-inner { border: 0;}
+a:focus{outline:0;}
+ins {	text-decoration: none;}
+del {	text-decoration: line-through;}
+table {	border-collapse: collapse;	border-spacing: 0;}
+a{color:inherit;cursor:pointer;text-decoration:none;}
+
 
 /* Botão do menu*/
 @media (min-width: 768px) {
