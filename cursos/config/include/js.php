@@ -1,9 +1,9 @@
 <!-- JQuery -->
-<script src="<?php echo CAMINHO_CFG?>js/jquery351.js" language="javascript" type="text/javascript"></script>
+<script src="<?php echo CAMINHO_CFG?>js/jquery351.js" language="javascript" type="text/javascript"></script>-->
 <script src="<?php echo CAMINHO_CFG?>js/login.js" language="javascript" type="text/javascript"></script>
 
-<!-- JQuery Ui 
-<script src="<?php echo CAMINHO_CFG?>js/jquery-ui.min.js" language="javascript" type="text/javascript"></script>-->
+<!-- JQuery Ui -->
+<script src="<?php echo CAMINHO_CFG?>js/jquery-ui.min.js" language="javascript" type="text/javascript"></script>
 
 <!-- Editor -->
 <script src="<?php echo CAMINHO_CFG?>js/tinymce.min.js" language="javascript" type="text/javascript" ></script>
