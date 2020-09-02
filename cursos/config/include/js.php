@@ -1,4 +1,4 @@
-<!-- JQuery -->
+<!-- JQuery 
 <script src="<?php echo CAMINHO_CFG?>js/jquery351.js" language="javascript" type="text/javascript"></script>-->
 <script src="<?php echo CAMINHO_CFG?>js/login.js" language="javascript" type="text/javascript"></script>
 
