@@ -24,6 +24,7 @@ $Configuracoes = new Configuracoes();
     <form id="form_acervo" class="validate" action="" method="post"  onsubmit="return false" >
      <input type="hidden" name="acao" value="cadastrar" />
      <input type="hidden" name="idConfig" value="1" /> 
+     <div class="esquerda">
       <p>
         <label>Nome da Empresa</label>
         <input type="text" name="nomeEmpresa" id="nomeEmpresa" value="<?php echo $Configuracoes->getNomeEmpresa();?>" />
@@ -56,7 +57,29 @@ $Configuracoes = new Configuracoes();
         <label>Cabeçalho:</label>
         <input type="text" name="cabecalho" id="cabecalho" value="<?php echo $Configuracoes->getCabecalho();?>" />
       </p>
-    
+    </div>
+    <div class="direita">
+       <p>
+        <label>Servidor SMTP:</label>
+        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+      </p>
+      <p>
+        <label>Porta SMTP:</label>
+        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+      </p>
+      <p>
+        <label>Segurança:</label>
+        <input type="radio" name="seguranca" id="seguranca" value="-" />Nenhuma &nbsp;&nbsp;&nbsp; <input type="radio" name="seguranca" id="seguranca" value="SSL" />SSL &nbsp;&nbsp;&nbsp; <input type="radio" name="seguranca" id="seguranca" value="TLS" /> TLS &nbsp;&nbsp;&nbsp; <input type="radio" name="seguranca" id="seguranca" value="STARTTLS" />STARTTLS
+      </p>
+      <p>
+        <label>Email de envio(envio@...):</label>
+        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+      </p>
+       <p>
+        <label>Senha do email:</label>
+        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+      </p>
+    </div>
      <button class="button blue" onclick="postForm('form_acervo', '<?php echo CAMINHO_CFG?>configuracoes/acao.php')">Salvar</button>
     </form>
   </div>
