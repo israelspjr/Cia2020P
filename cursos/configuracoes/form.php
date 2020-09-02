@@ -72,6 +72,7 @@ $Configuracoes = new Configuracoes();
           <?php if($Configuracoes->getLogo() != ''){?>
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getLogo();?>" />
           <?php }?>
+          </div>
           <input type="hidden" name="foto_oculta" value="<?php echo $Configuracoes->getLogo();?>" />
       </p>
       <p>
@@ -81,6 +82,7 @@ $Configuracoes = new Configuracoes();
           <?php if($Configuracoes->getMarca() != ''){?>
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getMarca();?>" />
           <?php }?>
+          </div>
           <input type="hidden" name="marca_oculta" value="<?php echo $Configuracoes->getMarca();?>" />
       </p>
        <p>
@@ -90,6 +92,7 @@ $Configuracoes = new Configuracoes();
           <?php if($Configuracoes->getFavIcon() != ''){?>
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getFavIcon();?>" />
           <?php }?>
+          </div>
           <input type="hidden" name="favIcon_oculta" value="<?php echo $Configuracoes->getFavIcon();?>" />
       </p>
      
@@ -108,6 +111,7 @@ $Configuracoes = new Configuracoes();
           <?php if($Configuracoes->getRodape() != ''){?>
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getRodape();?>" />
           <?php }?>
+          </div>
           <input type="hidden" name="favIcon_oculta" value="<?php echo $Configuracoes->getRodape();?>" />
       </p>
       <p>
@@ -117,13 +121,10 @@ $Configuracoes = new Configuracoes();
           <?php if($Configuracoes->getCabecalho() != ''){?>
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getCabecalho();?>" />
           <?php }?>
+          </div>
           <input type="hidden" name="favIcon_oculta" value="<?php echo $Configuracoes->getCabecalho();?>" />
       </p>
    
-       <p>
-        <label>Cabeçalho:</label>
-        <input type="text" name="cabecalho" id="cabecalho" value="<?php echo $Configuracoes->getCabecalho();?>" />
-      </p>
     </div>
     <div class="direita">
      <p>
