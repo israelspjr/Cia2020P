@@ -21,16 +21,16 @@ if( isset($_REQUEST["tr"]) ){
 ?>
 
 <!-- data Tables -->
-<link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="<?php echo CAMINHO_CFG?>css/table.css" />
 
-<script src="<?php echo CAMINHO_CFG?>js/jquery.min.js" language="javascript" type="text/javascript"></script>
+<!--<script src="<?php echo CAMINHO_CFG?>js/jquery.min.js" language="javascript" type="text/javascript"></script>
 
 <!-- data Tables -->
 
 <script src="<?php echo CAMINHO_CFG?>js/jquery.dataTables.min.js" language="javascript" type="text/javascript" ></script>
 
 <!-- Funções uteis -->
-<script src="<?php echo CAMINHO_CFG?>js/uteis.js" language="javascript" type="text/javascript"></script>
+<!--<script src="<?php echo CAMINHO_CFG?>js/uteis.js" language="javascript" type="text/javascript"></script>-->
 
 <fieldset>
   <legend>Configurações de sistema</legend>
@@ -68,5 +68,10 @@ if( isset($_REQUEST["tr"]) ){
 </div>
 </fieldset>
 <script>
-tabelaDataTable('tb_lista_acervo');
+$(document).ready( function () {
+    $('tb_lista_acervo').DataTable();
+} );
+
+
+//tabelaDataTable('tb_lista_acervo');
 </script> 
