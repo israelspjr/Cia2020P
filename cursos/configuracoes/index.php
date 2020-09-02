@@ -19,6 +19,9 @@ if( isset($_REQUEST["tr"]) ){
   exit;   
 }
 ?>
+
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php"); ?>
 <fieldset>
   <legend>Configurações de sistema</legend>
 

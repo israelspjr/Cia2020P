@@ -141,12 +141,9 @@ function selectConfigTr($where = "", $apenasLinha = false){
 
       $sql = "SELECT `idConfig`, `nomeEmpresa`, `logo`,`whatsApp`,`email`, `site`,  `rodape`, `cabecalho`, `favIcon` FROM `sistemac_bd`.`configuracoes`" . $where;
       $result = $this -> query($sql);
-	  Uteis::pr($result);
-      $html = "";
-      
-
+	  $html = "";
+ 
       $caminhoAtualizar_base = CAMINHO_CFG . "configuracoes/index.php";
-     
       
       while ($valor = mysqli_fetch_array($result)){
         
@@ -191,9 +188,6 @@ function selectConfigTr($where = "", $apenasLinha = false){
     
     return $html;
   }
-
-  
-
 
 } 
 ?>
