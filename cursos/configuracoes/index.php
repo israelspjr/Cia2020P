@@ -39,7 +39,7 @@ if( isset($_REQUEST["tr"]) ){
 
 
 <div class="lista">
-  <table id="tb_lista_config" class="registros">
+  <table id="tb_lista_config" class="display">
     <thead>
       <tr>
         <th>Nome da empresa</th>
@@ -71,7 +71,7 @@ if( isset($_REQUEST["tr"]) ){
 </fieldset>
 <script>
 $(document).ready( function () {
-    $('#tb_lista_acervo').DataTable();
+    $('#tb_lista_config').DataTable();
 } );
 
 $(document).ready(function() {
