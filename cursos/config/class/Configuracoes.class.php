@@ -141,13 +141,14 @@ function selectConfigTr($where = "", $apenasLinha = false){
 
       $sql = "SELECT `idConfig`, `nomeEmpresa`, `logo`,`whatsApp`,`email`, `site`,  `rodape`, `cabecalho`, `favIcon` FROM `sistemac_bd`.`configuracoes`" . $where;
       $result = $this -> query($sql);
+	  Uteis::pr($result);
       $html = "";
       
 
       $caminhoAtualizar_base = CAMINHO_CFG . "configuracoes/index.php";
      
       
-      while ($valor = mysql_fetch_array($result)){
+      while ($valor = mysqli_fetch_array($result)){
         
         $idConfig = $valor['idConfig'];
         $nomeEmpresa = $valor['nomeEmpresa'];
