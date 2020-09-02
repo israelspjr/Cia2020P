@@ -175,13 +175,6 @@ class Configuracoes extends Database{
     $result = $this -> query($sql, true);
   }
    
-  var $smtp;
-  var $seguranca;
-  var $porta;
-  var $emailEnvio;
-  var $senhaEmail;
- 
-   
   //update Todos os campos
    function updateConfig(){    
     $sql = "UPDATE `configuracoes` SET `nomeEmpresa` = $this->nomeEmpresa, `logo` = $this->logo, `whatsApp` = $this->whatsApp, `email` = $this->email, `site` = $this->site, `rodape` = $this->rodape, `cabecalho` = $this>cabecalho, `smtp` = $this>smtp, `seguranca` = $this>seguranca, `porta` = $this>porta, `emailEnvio` = $this>emailEnvio, `senhaEmail` = $this>senhaEmail, `favIcon` = $this>favIcon WHERE `idConfig` = $this->idConfig";

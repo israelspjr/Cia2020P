@@ -82,7 +82,7 @@ $Configuracoes = new Configuracoes();
       </p>
        <p>
         <label>Senha do email:</label>
-        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmailSenha();?>" />
+        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getSenhaEmail();?>" />
       </p>
     </div>
     <div class="linha-inteira">
