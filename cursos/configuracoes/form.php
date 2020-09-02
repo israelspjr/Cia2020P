@@ -6,6 +6,13 @@ $Configuracoes = new Configuracoes();
 // $valorConfig = $Configuracoes->selectConfig("WHERE idConfig=1"); 
 
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php"); ?>
 
 <div id="cadastro_acervo" class="">
   <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
@@ -23,11 +30,11 @@ $Configuracoes = new Configuracoes();
       </p>
       <p>
         <label>logo:</label>
-        <input type="number" name="disponivel" id="disponivel" value="<?php echo $Configuracoes->getLogo();?>" />
+        <input type="text" name="disponivel" id="disponivel" value="<?php echo $Configuracoes->getLogo();?>" />
       </p>
       <p>
         <label>logo Favorito  (.ico):</label>
-        <input type="number" name="disponivel" id="disponivel" value="<?php echo $Configuracoes->getFavIcon();?>" />
+        <input type="text" name="disponivel" id="disponivel" value="<?php echo $Configuracoes->getFavIcon();?>" />
       </p>
       <p>
         <label>WhatsApp:</label>
