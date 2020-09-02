@@ -23,7 +23,8 @@ session_destroy();
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sistema Cursos - <?php echo $config[0]['nomeEmpresa'];?></title>
-<link rel="shortcut icon" href="images/_favicon.ico">
+<link rel="shortcut icon" href="images/<?php echo $config[0]['favIcon'];?>">
+
 <?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php"); ?>
 <style>
 	
