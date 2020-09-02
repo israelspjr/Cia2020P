@@ -31,26 +31,26 @@ $Configuracoes = new Configuracoes();
       </p>
       <p>
         <label>WhatsApp:</label>
-        <input type="text" name="zap" id="zap" value="<?php echo $valorConfig->getWhatsApp();?>" />
+        <input type="text" name="zap" id="zap" value="<?php echo $Configuracoes->getWhatsApp();?>" />
       </p>
        <p>
         <label>Email:</label>
-        <input type="text" name="email" id="email" value="<?php echo $valorConfig->getEmail();?>" />
+        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
       </p>
       <p>
         <label>Site:</label>
-        <input type="text" name="site" id="site" value="<?php echo $valorConfig->getSite();?>" />
+        <input type="text" name="site" id="site" value="<?php echo $Configuracoes->getSite();?>" />
       </p>
        <p>
         <label>Rodapé:</label>
-        <input type="text" name="rodape" id="rodape" value="<?php echo $valorConfig->getRodape();?>" />
+        <input type="text" name="rodape" id="rodape" value="<?php echo $Configuracoes->getRodape();?>" />
       </p>
        <p>
         <label>Cabeçalho:</label>
-        <input type="text" name="cabecalho" id="cabecalho" value="<?php echo $valorConfig->getCabecalho();?>" />
+        <input type="text" name="cabecalho" id="cabecalho" value="<?php echo $Configuracoes->getCabecalho();?>" />
       </p>
     
-     <button class="button blue" onclick="postForm('form_acervo', '<?php echo CAMINHO_CF?>configuracoes/acao.php')">Salvar</button>
+     <button class="button blue" onclick="postForm('form_acervo', '<?php echo CAMINHO_CFG?>configuracoes/acao.php')">Salvar</button>
     </form>
   </div>
 </div>
