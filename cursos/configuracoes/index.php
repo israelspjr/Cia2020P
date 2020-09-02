@@ -21,11 +21,12 @@ if( isset($_REQUEST["tr"]) ){
 ?>
 
 <!-- data Tables -->
-<link rel="stylesheet" href="<?php echo CAMINHO_CFG?>css/table_jui.css" />
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
 
 <script src="<?php echo CAMINHO_CFG?>js/jquery.min.js" language="javascript" type="text/javascript"></script>
 
 <!-- data Tables -->
+
 <script src="<?php echo CAMINHO_CFG?>js/jquery.dataTables.min.js" language="javascript" type="text/javascript" ></script>
 
 <!-- Funções uteis -->
