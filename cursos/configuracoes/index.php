@@ -21,13 +21,13 @@ if( isset($_REQUEST["tr"]) ){
 ?>
 
 <!-- data Tables -->
-<link rel="stylesheet" href="<?php echo CAMINHO_CFG?>DataTable/datatables.css" />
+<link rel="stylesheet" href="<?php echo CAMINHO_CFG?>DataTables/datatables.css" />
 
 <!--<script src="<?php echo CAMINHO_CFG?>js/jquery.min.js" language="javascript" type="text/javascript"></script>
 
 <!-- data Tables -->
 
-<script src="<?php echo CAMINHO_CFG?>DataTable/datatables.js" language="javascript" type="text/javascript" ></script>
+<script src="<?php echo CAMINHO_CFG?>DataTables/datatables.js" language="javascript" type="text/javascript" ></script>
 
 <!-- Funções uteis -->
 <!--<script src="<?php echo CAMINHO_CFG?>js/uteis.js" language="javascript" type="text/javascript"></script>-->
