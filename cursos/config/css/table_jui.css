@@ -231,7 +231,7 @@ table.display td.center {
  * DataTables sorting
  */
 
-.sorting_asc {
+.sorting_asc {       
 	background: url('../../images/sort_asc.png') no-repeat center right;	
 }
 
