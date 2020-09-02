@@ -144,7 +144,7 @@ function selectConfigTr($where = "", $apenasLinha = false){
       $html = "";
       
 
-      $caminhoAtualizar_base = CAMINHO_CFG . "config/index.php";
+      $caminhoAtualizar_base = CAMINHO_CFG . "configuracoes/index.php";
      
       
       while ($valor = mysql_fetch_array($result)){
@@ -166,7 +166,7 @@ function selectConfigTr($where = "", $apenasLinha = false){
           
         }
         
-        $onclick = " onclick=\"abrirNivelPagina(this, '". CAMINHO_CFG ."/config/configForm.php?idConfig=$idConfig', '".$caminhoAtualizar."', 'tr')\" ";
+        $onclick = " onclick=\"abrirNivelPagina(this, '". CAMINHO_CFG ."/configuracoes/form.php?idConfig=$idConfig', '".$caminhoAtualizar."', 'tr')\" ";
 
           $html .= "<tr >";
 
