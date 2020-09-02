@@ -23,7 +23,7 @@ if( isset($_REQUEST["tr"]) ){
 <!-- data Tables -->
 <link rel="stylesheet" href="<?php echo CAMINHO_CFG?>DataTables/datatables.css" />
 
-<!--<script src="<?php echo CAMINHO_CFG?>js/jquery.min.js" language="javascript" type="text/javascript"></script>
+<script src="<?php echo CAMINHO_CFG?>js/jquery.min.js" language="javascript" type="text/javascript"></script>
 
 <!-- data Tables -->
 
