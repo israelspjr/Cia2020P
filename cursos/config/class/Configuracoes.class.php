@@ -9,6 +9,7 @@ class Configuracoes extends Database{
   var $site;
   var $rodape;
   var $cabecalho;
+  var $favIcon;
   
   //construtor
   function __construct(){
@@ -21,6 +22,7 @@ class Configuracoes extends Database{
 	$this->site = "NULL";
 	$this->rodape = "NULL";
 	$this->cabecalho = "NULL";
+	$this->favIcon = "NULL";
   }
 
   function __destruct(){
@@ -60,6 +62,10 @@ class Configuracoes extends Database{
     $this -> cabecalho = ($value) ? $this -> gravarBD($value) : "NULL";
   }
   
+  function setFavIcon($value){
+    $this -> favIcon = ($value) ? $this -> gravarBD($value) : "NULL";
+  }
+  
    // Method's Get's
   function getIdConfig(){
     return $this -> idConfig;
@@ -93,10 +99,14 @@ class Configuracoes extends Database{
     return $this -> cabecalho;
   }
   
+  function getFavIcon(){
+    return $this -> favIcon;
+  }
+  
   //Add Config
   function addConfig(){
-    $sql = "INSERT INTO configuracoes (INSERT INTO `configuracoes` (`nomeEmpresa`, `logo`, `whatsApp`, `email`, `site`, `rodape`, `cabecalho`)
-				VALUES ($this->nomeEmpresa, $this->logo, $this->whatsApp, $this->email, $this->site, $this->rodape, $this>cabecalho)";
+    $sql = "INSERT INTO configuracoes (INSERT INTO `configuracoes` (`nomeEmpresa`, `logo`, `whatsApp`, `email`, `site`, `rodape`, `cabecalho`, `favIcon` )
+				VALUES ($this->nomeEmpresa, $this->logo, $this->whatsApp, $this->email, $this->site, $this->rodape, $this>cabecalho, $this>favIcon)";
     $result = $this -> query($sql, true);
     return mysql_insert_id($this -> connect);
   }
@@ -116,25 +126,25 @@ class Configuracoes extends Database{
   
   //update Todos os campos
    function updateConfig(){    
-    $sql = "UPDATE `configuracoes` SET `nomeEmpresa` = $this->nomeEmpresa, `logo` = $this->logo, `whatsApp` = $this->whatsApp, `email` = $this->email, `site` = $this->site, `rodape` = $this->rodape, `cabecalho` = $this>cabecalho WHERE `idConfig` = $this->idConfig";
+    $sql = "UPDATE `configuracoes` SET `nomeEmpresa` = $this->nomeEmpresa, `logo` = $this->logo, `whatsApp` = $this->whatsApp, `email` = $this->email, `site` = $this->site, `rodape` = $this->rodape, `cabecalho` = $this>cabecalho, `favIcon` = $this>favIcon WHERE `idConfig` = $this->idConfig";
     $result = $this -> query($sql, true);
   }
   
   //Select Config
   function selectConfig($where = "WHERE 1"){
-    $sql = "SELECT `configuracoes`.`idConfig`, `configuracoes`.`nomeEmpresa`, `configuracoes`.`logo`,`configuracoes`.`whatsApp`, `configuracoes`.`email`, `configuracoes`.`site`, `configuracoes`.`rodape`, `configuracoes`.`cabecalho` FROM `sistemac_bd`.`configuracoes`" . $where;
+    $sql = "SELECT `idConfig`, `nomeEmpresa`, `logo`,`whatsApp`, `email`, `site`, `rodape`, `cabecalho`, `favIcon` FROM `sistemac_bd`.`configuracoes`" . $where;
 //	echo $sql;
     return $this -> executeQuery($sql);
   }
   
 function selectConfigTr($where = "", $apenasLinha = false){
 
-      $sql = "SELECT `configuracoes`.`idConfig`, `configuracoes`.`nomeEmpresa`, `configuracoes`.`logo`,`configuracoes`.`whatsApp`,`configuracoes`.`email`, `configuracoes`.`site`,  `configuracoes`.`rodape`, `configuracoes`.`cabecalho` FROM `sistemac_bd`.`configuracoes`" . $where;
+      $sql = "SELECT `idConfig`, `nomeEmpresa`, `logo`,`whatsApp`,`email`, `site`,  `rodape`, `cabecalho`, `favIcon` FROM `sistemac_bd`.`configuracoes`" . $where;
       $result = $this -> query($sql);
       $html = "";
       
 
-      $caminhoAtualizar_base = CAMINHO_BIBLIOTECA . "Config/index.php";
+      $caminhoAtualizar_base = CAMINHO_CFG . "config/index.php";
      
       
       while ($valor = mysql_fetch_array($result)){
@@ -156,11 +166,7 @@ function selectConfigTr($where = "", $apenasLinha = false){
           
         }
         
-        $onclick = " onclick=\"abrirNivelPagina(this, '". CAMINHO_CFG ."/ConfigForm.php?idConfig=$idConfig', '".$caminhoAtualizar."', 'tr')\" ";
-
-     /*   $delete = "<center>
-          <img src=\"" . CAMINHO_IMG . "excluir.png\" onclick=\"deletaRegistro('" . CAMINHO_CFG . "Config/acao.php?acao=deletar', '" . $idConfig . "', '".$caminhoAtualizar."', 'tr')\" />
-        </center>";      */
+        $onclick = " onclick=\"abrirNivelPagina(this, '". CAMINHO_CFG ."/config/configForm.php?idConfig=$idConfig', '".$caminhoAtualizar."', 'tr')\" ";
 
           $html .= "<tr >";
 
