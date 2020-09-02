@@ -7,7 +7,7 @@
 
 <!-- Editor -->
 <!--<script src="<?php echo CAMINHO_CFG?>tinymce/tinymce.min.js" language="javascript" type="text/javascript" ></script>-->
-<script src="<?php echo CAMINHO_CFG?>tinymce2/tinymce.min.js" language="javascript" type="text/javascript" ></script>
+<script src="<?php echo CAMINHO_CFG?>js/tinymce.min.js" language="javascript" type="text/javascript" ></script>
 
 <!-- data Tables -->
 <script src="<?php echo CAMINHO_CFG?>js/jquery.dataTables.min.js" language="javascript" type="text/javascript" ></script>
