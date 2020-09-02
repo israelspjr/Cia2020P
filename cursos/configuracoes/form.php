@@ -62,13 +62,13 @@ $Configuracoes = new Configuracoes();
     <div class="direita">
      <p>
         <label>Email (para dúvidas):</label>
-   <!--     <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+       <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
       </p>
        <p>
         <label>Servidor SMTP:</label>
         <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getSmtp();?>" />
       </p>
-      <p>
+<!--      <p>
         <label>Porta SMTP:</label>
         <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getPorta();?>" />
       </p>
