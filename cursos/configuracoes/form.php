@@ -22,6 +22,41 @@ $Configuracoes = new Configuracoes();
   </div>
   <div id="modulos_clientepf" class="conteudo_nivel">
     <div id="div_cadastro_acervo" class="div_aba_interna">
+    <!--LOGO -->
+     <form id="formularioPf" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CAD."clientePf/include/acao/clientepf.php"?>" style="display:none;" >
+      <input type="hidden" id="acao" name="acao" value="foto" />
+      <input type="hidden" id="destino" name="destino" value="#visualizar" />
+      <input type="file" id="add_foto" name="foto" onchange="postFileForm('formularioPf')" />
+    </form>
+    
+      <!--Marca D'Agua -->
+     <form id="formularioPf2" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CAD."clientePf/include/acao/clientepf.php"?>" style="display:none;" >
+      <input type="hidden" id="acao" name="acao" value="marca" />
+      <input type="hidden" id="destino" name="destino" value="#visualizarM" />
+      <input type="file" id="add_foto2" name="foto" onchange="postFileForm('formularioPf2')" />
+    </form>
+    
+      <!--LOGO  Favorito-->
+     <form id="formularioPf3" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CAD."clientePf/include/acao/clientepf.php"?>" style="display:none;" >
+      <input type="hidden" id="acao" name="acao" value="fav" />
+      <input type="hidden" id="destino" name="destino" value="#visualizarF" />
+      <input type="file" id="add_foto3" name="foto" onchange="postFileForm('formularioPf3')" />
+    </form>
+    
+      <!--Rodapé -->
+     <form id="formularioPf4" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CAD."clientePf/include/acao/clientepf.php"?>" style="display:none;" >
+      <input type="hidden" id="acao" name="acao" value="rodape" />
+      <input type="hidden" id="destino" name="destino" value="#visualizarR" />
+      <input type="file" id="add_foto4" name="foto" onchange="postFileForm('formularioPf4')" />
+    </form>
+    
+      <!-- Cabeçalho -->
+     <form id="formularioPf5" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CAD."clientePf/include/acao/clientepf.php"?>" style="display:none;" >
+      <input type="hidden" id="acao" name="acao" value="cabecalho" />
+      <input type="hidden" id="destino" name="destino" value="#visualizarC" />
+      <input type="file" id="add_foto5" name="foto" onchange="postFileForm('formularioPf5')" />
+    </form>
+    
     <form id="form_acervo" class="validate" action="" method="post"  onsubmit="return false" >
      <input type="hidden" name="acao" value="cadastrar" />
      <input type="hidden" name="idConfig" value="1" /> 
@@ -31,17 +66,33 @@ $Configuracoes = new Configuracoes();
         <input type="text" name="nomeEmpresa" id="nomeEmpresa" value="<?php echo $Configuracoes->getNomeEmpresa();?>" />
       </p>
       <p>
-        <label>logo:</label>
-        <input type="text" name="disponivel" id="disponivel" value="<?php echo $Configuracoes->getLogo();?>" />
+        <label>Logo:</label>
+          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto').click();" title="Adicionar" />
+        <div id="visualizar">
+          <?php if($Configuracoes->getLogo() != ''){?>
+          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getLogo();?>" />
+          <?php }?>
+          <input type="hidden" name="foto_oculta" value="<?php echo $Configuracoes->getLogo();?>" />
       </p>
       <p>
         <label>Marca D'Agua:</label>
-        <input type="text" name="disponivel" id="disponivel" value="<?php echo $Configuracoes->getLogo();?>" />
+          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto2').click();" title="Adicionar" />
+        <div id="visualizarM">
+          <?php if($Configuracoes->getMarca() != ''){?>
+          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getMarca();?>" />
+          <?php }?>
+          <input type="hidden" name="marca_oculta" value="<?php echo $Configuracoes->getMarca();?>" />
       </p>
-      <p>
+       <p>
         <label>logo Favorito (.ico):</label>
-        <input type="text" name="disponivel" id="disponivel" value="<?php echo $Configuracoes->getFavIcon();?>" />
+          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto3').click();" title="Adicionar" />
+        <div id="visualizarF">
+          <?php if($Configuracoes->getFavIcon() != ''){?>
+          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getFavIcon();?>" />
+          <?php }?>
+          <input type="hidden" name="favIcon_oculta" value="<?php echo $Configuracoes->getFavIcon();?>" />
       </p>
+     
       <p>
         <label>WhatsApp:</label>
         <input type="text" name="zap" id="zap" value="<?php echo $Configuracoes->getWhatsApp();?>" />
@@ -52,8 +103,23 @@ $Configuracoes = new Configuracoes();
       </p>
        <p>
         <label>Rodapé:</label>
-        <input type="text" name="rodape" id="rodape" value="<?php echo $Configuracoes->getRodape();?>" />
+          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto4').click();" title="Adicionar" />
+        <div id="visualizarR">
+          <?php if($Configuracoes->getRodape() != ''){?>
+          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getRodape();?>" />
+          <?php }?>
+          <input type="hidden" name="favIcon_oculta" value="<?php echo $Configuracoes->getRodape();?>" />
       </p>
+      <p>
+        <label>Cabeçalho:</label>
+          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto5').click();" title="Adicionar" />
+        <div id="visualizarC">
+          <?php if($Configuracoes->getCabecalho() != ''){?>
+          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getCabecalho();?>" />
+          <?php }?>
+          <input type="hidden" name="favIcon_oculta" value="<?php echo $Configuracoes->getCabecalho();?>" />
+      </p>
+   
        <p>
         <label>Cabeçalho:</label>
         <input type="text" name="cabecalho" id="cabecalho" value="<?php echo $Configuracoes->getCabecalho();?>" />
@@ -91,5 +157,54 @@ $Configuracoes = new Configuracoes();
     </form>
   </div>
 </div>
-<script>ativarForm();</script>   
+<script>
+
+ativarForm();
+
+/* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
+$('#add_file').on('change', function(){
+	$('#visualizarFile').html('Enviando...');
+	/* Efetua o Upload sem dar refresh na pagina */ 
+	$('#form_uploadFile').ajaxForm({
+		target:'#visualizarFile' // o callback será no elemento com o id #visualizar
+	}).submit();
+});
+
+/* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
+$('#add_file2').on('change', function(){
+	$('#visualizarFile').html('Enviando...');
+	/* Efetua o Upload sem dar refresh na pagina */ 
+	$('#form_uploadFile').ajaxForm({
+		target:'#visualizarFile' // o callback será no elemento com o id #visualizar
+	}).submit();
+});
+
+/* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
+$('#add_file3').on('change', function(){
+	$('#visualizarFile').html('Enviando...');
+	/* Efetua o Upload sem dar refresh na pagina */ 
+	$('#form_uploadFile').ajaxForm({
+		target:'#visualizarFile' // o callback será no elemento com o id #visualizar
+	}).submit();
+});
+
+/* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
+$('#add_file4').on('change', function(){
+	$('#visualizarFile').html('Enviando...');
+	/* Efetua o Upload sem dar refresh na pagina */ 
+	$('#form_uploadFile').ajaxForm({
+		target:'#visualizarFile' // o callback será no elemento com o id #visualizar
+	}).submit();
+});
+
+/* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
+$('#add_file5').on('change', function(){
+	$('#visualizarFile').html('Enviando...');
+	/* Efetua o Upload sem dar refresh na pagina */ 
+	$('#form_uploadFile').ajaxForm({
+		target:'#visualizarFile' // o callback será no elemento com o id #visualizar
+	}).submit();
+});
+
+</script>   
 
