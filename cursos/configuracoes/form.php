@@ -52,7 +52,7 @@ $Configuracoes = new Configuracoes();
     
       <!-- Cabeçalho -->
      <form id="formularioPf5" method="post" enctype="multipart/form-data" action="<?php echo "/cursos/configuracoes/acao.php"?>" style="display:none;" >
-      <input type="hidden" id="acao" name="acao" value="rodape" />
+      <input type="hidden" id="acao" name="acao" value="cabecalho" />
       <input type="hidden" id="destino" name="destino" value="#visualizar5" />
       <input type="file" id="add_foto5" name="foto" onchange="postFileForm('formularioPf5')" />
     </form>
