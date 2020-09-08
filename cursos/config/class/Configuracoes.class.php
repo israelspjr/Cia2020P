@@ -45,13 +45,11 @@ class Configuracoes extends Database{
   
    // Method's Set's
    function setIdConfig($value){
-    $this -> idConfig = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> idConfig = ($value) ; //? $this -> gravarBD($value) : "NULL";
   }
 
   function setNomeEmpresa($value){
-	  echo $value;
     $this -> nomeEmpresa = ($value); // ? $this -> gravarBD($value) : "NULL";
-	 echo $this->nomeEmpresa;
   }
   
   function setLogo($value){
