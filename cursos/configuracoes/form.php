@@ -90,7 +90,7 @@ $Configuracoes = new Configuracoes();
        <p>
         <label>logo Favorito (fundo transparente 40x40):</label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto3').click();" title="Adicionar" />
-          <input type="hidden" name="favIcon_oculta" value="<?php echo $Configuracoes->getFavIcon();?>" />
+          <input type="hidden" name="fav_oculta" value="<?php echo $Configuracoes->getFavIcon();?>" />
         <div id="visualizar3">
           <?php if($Configuracoes->getFavIcon() != ''){?>
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getFavIcon();?>" width="50px"/>
