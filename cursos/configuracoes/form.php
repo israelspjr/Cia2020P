@@ -66,7 +66,7 @@ $Configuracoes = new Configuracoes();
         <input type="text" name="nomeEmpresa" id="nomeEmpresa" value="<?php echo $Configuracoes->getNomeEmpresa();?>" />
       </p>
       <p>
-        <label>Logo:</label>
+        <label>Logo (formato retangular 200X100): </label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto').click();" title="Adicionar" />
         <div id="visualizar">
           <?php if($Configuracoes->getLogo() != ''){?>
@@ -76,7 +76,7 @@ $Configuracoes = new Configuracoes();
           <input type="hidden" name="foto_oculta" value="<?php echo $Configuracoes->getLogo();?>" />
       </p>
       <p>
-        <label>Marca D'Agua:</label>
+        <label>Marca D'Agua (formato quadrado 400X400 com opacidade 0.3):</label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto2').click();" title="Adicionar" />
         <div id="visualizarM">
           <?php if($Configuracoes->getMarca() != ''){?>
@@ -86,7 +86,7 @@ $Configuracoes = new Configuracoes();
           <input type="hidden" name="marca_oculta" value="<?php echo $Configuracoes->getMarca();?>" />
       </p>
        <p>
-        <label>logo Favorito (.ico):</label>
+        <label>logo Favorito (extensão precisa ser .ico):</label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto3').click();" title="Adicionar" />
         <div id="visualizarF">
           <?php if($Configuracoes->getFavIcon() != ''){?>
@@ -105,7 +105,7 @@ $Configuracoes = new Configuracoes();
         <input type="text" name="site" id="site" value="<?php echo $Configuracoes->getSite();?>" />
       </p>
        <p>
-        <label>Rodapé:</label>
+        <label>Rodapé (formato retangular 600X200):</label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto4').click();" title="Adicionar" />
         <div id="visualizarR">
           <?php if($Configuracoes->getRodape() != ''){?>
@@ -115,7 +115,7 @@ $Configuracoes = new Configuracoes();
           <input type="hidden" name="favIcon_oculta" value="<?php echo $Configuracoes->getRodape();?>" />
       </p>
       <p>
-        <label>Cabeçalho:</label>
+        <label>Cabeçalho (formato retangular 600X200):</label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto5').click();" title="Adicionar" />
         <div id="visualizarC">
           <?php if($Configuracoes->getCabecalho() != ''){?>
@@ -144,7 +144,7 @@ $Configuracoes = new Configuracoes();
         <input type="radio" name="seguranca" id="seguranca" value="-" />Nenhuma &nbsp;&nbsp;&nbsp; <input type="radio" name="seguranca" id="seguranca" value="SSL" />SSL &nbsp;&nbsp;&nbsp; <input type="radio" name="seguranca" id="seguranca" value="TLS" /> TLS &nbsp;&nbsp;&nbsp; <input type="radio" name="seguranca" id="seguranca" value="STARTTLS" />STARTTLS
       </p>
       <p>
-        <label>Email de envio(envio@...):</label>
+        <label>Email de envio de comunicações do sistema(envio@...):</label>
         <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmailEnvio();?>" />
       </p>
        <p>
