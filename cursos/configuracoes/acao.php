@@ -253,7 +253,7 @@ if($_POST['acao']=="foto"){
     }else{
         $arrayRetorno['mensagem'] = "Selecione uma imagem";
     }
-} else {
+} elseif($_POST['acao']=="cadastrar"){
 	
 	echo "teste";
 	
