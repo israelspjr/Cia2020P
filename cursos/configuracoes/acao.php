@@ -3,6 +3,8 @@
 $Configuracoes = new Configuracoes();
 
 $Configuracoes->setIdConfig(1);
+
+Uteis::pr($Configuracoes);
 	
 //$img = new Image();
 
@@ -40,9 +42,9 @@ if($_POST['acao']=="cadastrar"){
 	 $Configuracoes->updateConfig(); */
 	 
 	 $arrayRetorno['mensagem'] = "Atualizado com sucesso!";
-}
 
-if($_POST['acao']=="foto"){
+
+} elseif($_POST['acao']=="foto"){
 	/* formatos de imagem permitidos */
     $permitidos = array(".jpg",".jpeg",".gif",".png", ".bmp");
     $pasta = CAMINHO_UP_ROOT."imagem/empresa/";
