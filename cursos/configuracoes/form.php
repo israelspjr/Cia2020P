@@ -16,7 +16,7 @@ $Configuracoes = new Configuracoes();
 <?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php"); ?>
 
 <div id="cadastro_acervo" class="">
-  <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
+ <!-- <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>-->
   <div id="abas">
     <div id="aba_cadastro_acervo" divExibir="div_cadastro_acervo" class="aba_interna ativa">Configurações do Sistema</div>   
   </div>
