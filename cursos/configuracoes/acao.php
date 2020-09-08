@@ -9,7 +9,7 @@ $Configuracoes->setIdConfig(1);
 //$idClientePf = $_REQUEST['id'];
 
 $arrayRetorno = array();
-
+Uteis::pr($_POST['acao']);
 
 if($_POST['acao']=="cadastrar"){
 	
