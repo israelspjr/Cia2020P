@@ -49,7 +49,7 @@ class Configuracoes extends Database{
 
   function setNomeEmpresa($value){
 	  echo $value;
-    $this -> nomeEmpresa = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> nomeEmpresa = ($value); // ? $this -> gravarBD($value) : "NULL";
 	 echo $this->nomeEmpresa;
   }
   
