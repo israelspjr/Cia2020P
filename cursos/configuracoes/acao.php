@@ -4,7 +4,7 @@ $Configuracoes = new Configuracoes();
 	
 //$img = new Image();
 
-$idClientePf = $_REQUEST['id'];
+//$idClientePf = $_REQUEST['id'];
 
 $arrayRetorno = array();
 
@@ -254,6 +254,8 @@ if($_POST['acao']=="foto"){
         $arrayRetorno['mensagem'] = "Selecione uma imagem";
     }
 } else {
+	
+	echo "teste";
 	
 	$seguranca = $_POST['seguranca'];
 	if ($seguranca != '-') {
