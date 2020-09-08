@@ -18,7 +18,7 @@ if($_POST['acao']=="cadastrar"){
 			$tipo = $seguranca;		
 		}
 	}
-	
+	echo $_POST['nomeEmpresa'];
 	 $Configuracoes->updateConfigField("nomeEmpresa", $_POST['nomeEmpresa']);
 	 $Configuracoes->setLogo($_POST['foto_oculta']);
 	 $Configuracoes->setWhatsApp($_POST['marca_oculta']);
