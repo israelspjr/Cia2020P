@@ -68,12 +68,13 @@ $Configuracoes = new Configuracoes();
       <p>
         <label>Logo (formato retangular 200X100): </label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto').click();" title="Adicionar" />
+          <input type="hidden" name="foto_oculta" value="<?php echo $Configuracoes->getLogo();?>" />
         <div id="visualizar">
           <?php if($Configuracoes->getLogo() != ''){?>
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getLogo();?>" />
           <?php }?>
           </div>
-          <input type="hidden" name="foto_oculta" value="<?php echo $Configuracoes->getLogo();?>" />
+          
       </p>
       <p>
         <label>Marca D'Agua (formato quadrado 400X400 com opacidade 0.3):</label>
