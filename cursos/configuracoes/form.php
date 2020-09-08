@@ -67,33 +67,33 @@ $Configuracoes = new Configuracoes();
       </p>
       <p>
         <label>Logo (formato retangular 200X100): </label>
-          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto').click();" title="Adicionar" width="150px"/>
+          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto').click();" title="Adicionar" />
           <input type="hidden" name="foto_oculta" value="<?php echo $Configuracoes->getLogo();?>" />
         <div id="visualizar">
           <?php if($Configuracoes->getLogo() != ''){?>
-          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getLogo();?>" />
+          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getLogo();?>" width="150px"/>
           <?php }?>
           </div>
           
       </p>
       <p>
         <label>Marca D'Agua (formato quadrado 400X400 com opacidade 0.3):</label>
-          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto2').click();" title="Adicionar" width="400px"/>
+          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto2').click();" title="Adicionar" />
           <input type="hidden" name="marca_oculta" value="<?php echo $Configuracoes->getMarca();?>" />
         <div id="visualizar2">
           <?php if($Configuracoes->getMarca() != ''){?>
-          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getMarca();?>" />
+          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getMarca();?>" width="400px"/>
           <?php }?>
           </div>
           
       </p>
        <p>
         <label>logo Favorito (fundo transparente 40x40):</label>
-          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto3').click();" title="Adicionar" width="50px"/>
+          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto3').click();" title="Adicionar" />
           <input type="hidden" name="favIcon_oculta" value="<?php echo $Configuracoes->getFavIcon();?>" />
         <div id="visualizar3">
           <?php if($Configuracoes->getFavIcon() != ''){?>
-          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getFavIcon();?>" />
+          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getFavIcon();?>" width="50px"/>
           <?php }?>
           </div>
           
@@ -109,22 +109,22 @@ $Configuracoes = new Configuracoes();
       </p>
        <p>
         <label>Rodapé (formato retangular 600X200):</label>
-          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto4').click();" title="Adicionar" width="400px"/>
+          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto4').click();" title="Adicionar" />
           <input type="hidden" name="rodape_oculta" value="<?php echo $Configuracoes->getRodape();?>" />
         <div id="visualizar4">
           <?php if($Configuracoes->getRodape() != ''){?>
-          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getRodape();?>" />
+          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getRodape();?>" width="400px"/>
           <?php }?>
           </div>
           
       </p>
       <p>
         <label>Cabeçalho (formato retangular 600X200):</label>
-          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto5').click();" title="Adicionar" width="400px"/>
+          <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto5').click();" title="Adicionar" />
           <input type="hidden" name="cabecalho_oculta" value="<?php echo $Configuracoes->getCabecalho();?>" />
         <div id="visualizar5">
           <?php if($Configuracoes->getCabecalho() != ''){?>
-          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getCabecalho();?>" />
+          <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getCabecalho();?>" width="400px"/>
           <?php }?>
           </div>
           
