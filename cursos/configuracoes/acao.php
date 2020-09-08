@@ -108,7 +108,7 @@ if($_POST['acao']=="foto"){
     }
 } elseif($_POST['acao']=="fav"){
 	/* formatos de imagem permitidos */
-    $permitidos = array(".ico");
+    $permitidos = array(".jpg",".jpeg",".gif",".png", ".bmp");
     $pasta = CAMINHO_UP_ROOT."imagem/empresa/";
 	
     if(isset($_POST)){
