@@ -31,9 +31,7 @@ if($_POST['acao']=="cadastrar"){
 	 $Configuracoes->updateConfigField("whatsApp", $_POST['zap']);
 	 
 	 $arrayRetorno['mensagem'] = "Atualizado com sucesso!";
-	 
-	 echo json_encode($arrayRetorno);
-
+	
 
 } elseif($_POST['acao']=="foto"){
 	/* formatos de imagem permitidos */
