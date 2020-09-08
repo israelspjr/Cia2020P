@@ -1,6 +1,8 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/padrao.php");
 
 $Configuracoes = new Configuracoes();
+
+$Configuracoes->setIdConfig(1);
 	
 //$img = new Image();
 
