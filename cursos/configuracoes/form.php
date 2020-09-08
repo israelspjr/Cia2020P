@@ -146,7 +146,10 @@ $Configuracoes = new Configuracoes();
       </p>
       <p>
         <label>Segurança:</label>
-        <input type="radio" name="seguranca" id="seguranca" value="-" />Nenhuma &nbsp;&nbsp;&nbsp; <input type="radio" name="seguranca" id="seguranca" value="SSL" />SSL &nbsp;&nbsp;&nbsp; <input type="radio" name="seguranca" id="seguranca" value="TLS" /> TLS &nbsp;&nbsp;&nbsp; <input type="radio" name="seguranca" id="seguranca" value="STARTTLS" />STARTTLS
+        <input type="radio" name="seguranca" id="seguranca" value="-" <?php if ($Configuracoes->getSeguranca() == '') { echo "checked";}?>/>Nenhuma &nbsp;&nbsp;&nbsp; 
+        <input type="radio" name="seguranca" id="seguranca" value="SSL" <?php if ($Configuracoes->getSeguranca() == 'SSL') { echo "checked";}?>/>SSL &nbsp;&nbsp;&nbsp; 
+        <input type="radio" name="seguranca" id="seguranca" value="TLS" <?php if ($Configuracoes->getSeguranca() == 'TLS') { echo "checked";}?> /> TLS &nbsp;&nbsp;&nbsp; 
+        <input type="radio" name="seguranca" id="seguranca" value="STARTTLS" <?php if ($Configuracoes->getSeguranca() == 'STARTTLS') { echo "checked";}?> />STARTTLS
       </p>
       <p>
         <label>Email de envio de comunicações do sistema(envio@...):</label>
