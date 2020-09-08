@@ -14,8 +14,6 @@ $arrayRetorno = array();
 
 if($_POST['acao']=="cadastrar"){
 	
-	echo "teste";
-	
 	$seguranca = $_POST['seguranca'];
 	if ($seguranca != '-') {
 		if ($seguranca != '') {
@@ -39,9 +37,9 @@ if($_POST['acao']=="cadastrar"){
 	 $Configuracoes->setSenhaEmail($_POST['emailSenha']);
 	 $Configuracoes->setMarca($_POST['marca_oculta']);
 	 
-	 Uteis::pr($Configuracoes);
-	 
-	 /*$Configuracoes->updateConfig(); */
+	// Uteis::pr($Configuracoes);
+
+	 $Configuracoes->updateConfig(); 
 	 
 	 $arrayRetorno['mensagem'] = "Atualizado com sucesso!";
 
