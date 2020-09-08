@@ -4,7 +4,7 @@ $Configuracoes = new Configuracoes();
 
 $Configuracoes->setIdConfig(1);
 
-Uteis::pr($Configuracoes);
+
 	
 //$img = new Image();
 
@@ -24,7 +24,7 @@ if($_POST['acao']=="cadastrar"){
 	}
 	
 	
-	/* $Configuracoes->setNomeEmpresa($_POST['nomeEmpresa']);
+	 $Configuracoes->setNomeEmpresa($_POST['nomeEmpresa']);
 	 $Configuracoes->setLogo($_POST['foto_oculta']);
 	 $Configuracoes->setWhatsApp($_POST['marca_oculta']);
      $Configuracoes->setEmail($_POST['email']);
@@ -39,7 +39,9 @@ if($_POST['acao']=="cadastrar"){
 	 $Configuracoes->setSenhaEmail($_POST['emailSenha']);
 	 $Configuracoes->setMarca($_POST['marca_oculta']);
 	 
-	 $Configuracoes->updateConfig(); */
+	 Uteis::pr($Configuracoes);
+	 
+	 /*$Configuracoes->updateConfig(); */
 	 
 	 $arrayRetorno['mensagem'] = "Atualizado com sucesso!";
 
