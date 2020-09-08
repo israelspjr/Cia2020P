@@ -78,7 +78,7 @@ $Configuracoes = new Configuracoes();
       <p>
         <label>Marca D'Agua (formato quadrado 400X400 com opacidade 0.3):</label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto2').click();" title="Adicionar" />
-        <div id="visualizarM">
+        <div id="visualizar2">
           <?php if($Configuracoes->getMarca() != ''){?>
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getMarca();?>" />
           <?php }?>
@@ -88,7 +88,7 @@ $Configuracoes = new Configuracoes();
        <p>
         <label>logo Favorito (extensão precisa ser .ico):</label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto3').click();" title="Adicionar" />
-        <div id="visualizarF">
+        <div id="visualizar3">
           <?php if($Configuracoes->getFavIcon() != ''){?>
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getFavIcon();?>" />
           <?php }?>
@@ -107,7 +107,7 @@ $Configuracoes = new Configuracoes();
        <p>
         <label>Rodapé (formato retangular 600X200):</label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto4').click();" title="Adicionar" />
-        <div id="visualizarR">
+        <div id="visualizar4">
           <?php if($Configuracoes->getRodape() != ''){?>
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getRodape();?>" />
           <?php }?>
@@ -117,7 +117,7 @@ $Configuracoes = new Configuracoes();
       <p>
         <label>Cabeçalho (formato retangular 600X200):</label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto5').click();" title="Adicionar" />
-        <div id="visualizarC">
+        <div id="visualizar5">
           <?php if($Configuracoes->getCabecalho() != ''){?>
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getCabecalho();?>" />
           <?php }?>
