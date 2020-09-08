@@ -20,7 +20,7 @@ class Configuracoes extends Database{
   //construtor
   function __construct(){
 	parent::__construct();
-//	  $valor = self::selectConfig(" WHERE idConfig = 1");
+	  $valor = self::selectConfig(" WHERE idConfig = 1");
     
     //$this->idConfig = "NULL";
     $this->nomeEmpresa = "NULL"; //$valor[0]['nomeEmpresa']; //"NULL";
@@ -50,7 +50,7 @@ class Configuracoes extends Database{
 
   function setNomeEmpresa($value){
 	  echo $value;
-    $this -> nomeEmpresa = ($value); // ? $this -> gravarBD($value) : "NULL";
+    $this -> nomeEmpresa = ($value) ? $this -> gravarBD($value) : "NULL";
 	 echo $this->nomeEmpresa;
   }
   
