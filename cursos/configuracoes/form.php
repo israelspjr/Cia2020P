@@ -99,14 +99,7 @@ $Configuracoes = new Configuracoes();
           
       </p>
      
-      <p>
-        <label>WhatsApp:</label>
-        <input type="text" name="zap" id="zap" value="<?php echo $Configuracoes->getWhatsApp();?>" />
-      </p>
-      <p>
-        <label>Site:</label>
-        <input type="text" name="site" id="site" value="<?php echo $Configuracoes->getSite();?>" />
-      </p>
+    
        <p>
         <label>Rodapé (formato retangular 600X200):</label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto4').click();" title="Adicionar" />
@@ -135,6 +128,14 @@ $Configuracoes = new Configuracoes();
      <p>
         <label>Email (para dúvidas):</label>
        <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+      </p>
+        <p>
+        <label>WhatsApp:</label>
+        <input type="text" name="zap" id="zap" value="<?php echo $Configuracoes->getWhatsApp();?>" />
+      </p>
+      <p>
+        <label>Site:</label>
+        <input type="text" name="site" id="site" value="<?php echo $Configuracoes->getSite();?>" />
       </p>
        <p>
         <label>Servidor SMTP:</label>
