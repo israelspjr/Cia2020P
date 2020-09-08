@@ -23,14 +23,14 @@ $Configuracoes = new Configuracoes();
   <div id="modulos_clientepf" class="conteudo_nivel">
     <div id="div_cadastro_acervo" class="div_aba_interna">
     <!--LOGO -->
-     <form id="formularioPf" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CFG."configuracoes/acao.php"?>" style="display:none;" >
+     <form id="formularioPf" method="post" enctype="multipart/form-data" action="<?php echo "cursos/configuracoes/acao.php"?>" style="display:none;" >
       <input type="hidden" id="acao" name="acao" value="foto" />
       <input type="hidden" id="destino" name="destino" value="#visualizar" />
       <input type="file" id="add_foto" name="foto" onchange="postFileForm('formularioPf')" />
     </form>
     
       <!--Marca D'Agua -->
-     <form id="formularioPf2" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CFG."configuracoes/acao.php"?>" style="display:none;" >
+     <form id="formularioPf2" method="post" enctype="multipart/form-data" action="<?php echo "/configuracoes/acao.php"?>" style="display:none;" >
       <input type="hidden" id="acao" name="acao" value="marca" />
       <input type="hidden" id="destino" name="destino" value="#visualizar2" />
       <input type="file" id="add_foto2" name="foto" onchange="postFileForm('formularioPf2')" />
