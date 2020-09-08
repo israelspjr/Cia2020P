@@ -48,6 +48,7 @@ class Configuracoes extends Database{
   }
 
   function setNomeEmpresa($value){
+	  echo $value;
     $this -> nomeEmpresa = ($value) ? $this -> gravarBD($value) : "NULL";
   }
   
