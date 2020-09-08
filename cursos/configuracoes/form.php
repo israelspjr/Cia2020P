@@ -23,37 +23,37 @@ $Configuracoes = new Configuracoes();
   <div id="modulos_clientepf" class="conteudo_nivel">
     <div id="div_cadastro_acervo" class="div_aba_interna">
     <!--LOGO -->
-     <form id="formularioPf" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CAD."clientePf/include/acao/clientepf.php"?>" style="display:none;" >
+     <form id="formularioPf" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CFG."configuracoes/acao.php"?>" style="display:none;" >
       <input type="hidden" id="acao" name="acao" value="foto" />
       <input type="hidden" id="destino" name="destino" value="#visualizar" />
       <input type="file" id="add_foto" name="foto" onchange="postFileForm('formularioPf')" />
     </form>
     
       <!--Marca D'Agua -->
-     <form id="formularioPf2" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CAD."clientePf/include/acao/clientepf.php"?>" style="display:none;" >
+     <form id="formularioPf2" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CFG."configuracoes/acao.php"?>" style="display:none;" >
       <input type="hidden" id="acao" name="acao" value="marca" />
-      <input type="hidden" id="destino" name="destino" value="#visualizarM" />
+      <input type="hidden" id="destino" name="destino" value="#visualizar2" />
       <input type="file" id="add_foto2" name="foto" onchange="postFileForm('formularioPf2')" />
     </form>
     
       <!--LOGO  Favorito-->
-     <form id="formularioPf3" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CAD."clientePf/include/acao/clientepf.php"?>" style="display:none;" >
+     <form id="formularioPf3" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CFG."configuracoes/acao.php"?>" style="display:none;" >
       <input type="hidden" id="acao" name="acao" value="fav" />
-      <input type="hidden" id="destino" name="destino" value="#visualizarF" />
+      <input type="hidden" id="destino" name="destino" value="#visualizar3" />
       <input type="file" id="add_foto3" name="foto" onchange="postFileForm('formularioPf3')" />
     </form>
     
       <!--Rodapé -->
-     <form id="formularioPf4" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CAD."clientePf/include/acao/clientepf.php"?>" style="display:none;" >
+     <form id="formularioPf4" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CFG."configuracoes/acao.php"?>" style="display:none;" >
       <input type="hidden" id="acao" name="acao" value="rodape" />
-      <input type="hidden" id="destino" name="destino" value="#visualizarR" />
+      <input type="hidden" id="destino" name="destino" value="#visualizar4" />
       <input type="file" id="add_foto4" name="foto" onchange="postFileForm('formularioPf4')" />
     </form>
     
       <!-- Cabeçalho -->
-     <form id="formularioPf5" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CAD."clientePf/include/acao/clientepf.php"?>" style="display:none;" >
+     <form id="formularioPf5" method="post" enctype="multipart/form-data" action="<?php echo CAMINHO_CFG."configuracoes/acao.php"?>" style="display:none;" >
       <input type="hidden" id="acao" name="acao" value="cabecalho" />
-      <input type="hidden" id="destino" name="destino" value="#visualizarC" />
+      <input type="hidden" id="destino" name="destino" value="#visualizar5" />
       <input type="file" id="add_foto5" name="foto" onchange="postFileForm('formularioPf5')" />
     </form>
     
@@ -173,37 +173,37 @@ $('#add_file').on('change', function(){
 
 /* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
 $('#add_file2').on('change', function(){
-	$('#visualizarFile').html('Enviando...');
+	$('#visualizarFile2').html('Enviando...');
 	/* Efetua o Upload sem dar refresh na pagina */ 
-	$('#form_uploadFile').ajaxForm({
-		target:'#visualizarFile' // o callback será no elemento com o id #visualizar
+	$('#form_uploadFile2').ajaxForm({
+		target:'#visualizarFile2' // o callback será no elemento com o id #visualizar
 	}).submit();
 });
 
 /* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
 $('#add_file3').on('change', function(){
-	$('#visualizarFile').html('Enviando...');
+	$('#visualizarFile3').html('Enviando...');
 	/* Efetua o Upload sem dar refresh na pagina */ 
-	$('#form_uploadFile').ajaxForm({
-		target:'#visualizarFile' // o callback será no elemento com o id #visualizar
+	$('#form_uploadFile3').ajaxForm({
+		target:'#visualizarFile3' // o callback será no elemento com o id #visualizar
 	}).submit();
 });
 
 /* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
 $('#add_file4').on('change', function(){
-	$('#visualizarFile').html('Enviando...');
+	$('#visualizarFile4').html('Enviando...');
 	/* Efetua o Upload sem dar refresh na pagina */ 
-	$('#form_uploadFile').ajaxForm({
-		target:'#visualizarFile' // o callback será no elemento com o id #visualizar
+	$('#form_uploadFile4').ajaxForm({
+		target:'#visualizarFile4' // o callback será no elemento com o id #visualizar
 	}).submit();
 });
 
 /* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
 $('#add_file5').on('change', function(){
-	$('#visualizarFile').html('Enviando...');
+	$('#visualizarFile5').html('Enviando...');
 	/* Efetua o Upload sem dar refresh na pagina */ 
-	$('#form_uploadFile').ajaxForm({
-		target:'#visualizarFile' // o callback será no elemento com o id #visualizar
+	$('#form_uploadFile5').ajaxForm({
+		target:'#visualizarFile5' // o callback será no elemento com o id #visualizar
 	}).submit();
 });
 
