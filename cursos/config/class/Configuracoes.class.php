@@ -23,7 +23,7 @@ class Configuracoes extends Database{
 	  $valor = self::selectConfig(" WHERE idConfig = 1");
     
     //$this->idConfig = "NULL";
-    $this->nomeEmpresa = "NULL"; //$valor[0]['nomeEmpresa']; //"NULL";
+    $this->nomeEmpresa = $valor[0]['nomeEmpresa']; //"NULL";
     $this->logo = $valor[0]['logo'];
     $this->whatsApp = $valor[0]['whatsApp'];
     $this->email = $valor[0]['email'];
@@ -55,55 +55,55 @@ class Configuracoes extends Database{
   }
   
   function setLogo($value){
-    $this -> logo = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> logo = ($value); // ? $this -> gravarBD($value) : "NULL";
   }
   
   function setWhatsApp($value){
-    $this -> whatsApp = ($value) ? $this -> gravarBD($value) : "0";
+    $this -> whatsApp = ($value); // ? $this -> gravarBD($value) : "0";
   }
   
   function setEmail($value){
-    $this -> whatsApp = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> whatsApp = ($value); // ? $this -> gravarBD($value) : "NULL";
   }
   
   function setSite($value){
-    $this -> site = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> site = ($value) ; //? $this -> gravarBD($value) : "NULL";
   }
   
   function setRodape($value){
-    $this -> rodape = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> rodape = ($value); // ? $this -> gravarBD($value) : "NULL";
   }
   
   function setCabecalho($value){
-    $this -> cabecalho = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> cabecalho = ($value); // ? $this -> gravarBD($value) : "NULL";
   }
   
   function setFavIcon($value){
-    $this -> favIcon = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> favIcon = ($value); // ? $this -> gravarBD($value) : "NULL";
   }
   
   function setSmtp($value){
-    $this -> smtp = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> smtp = ($value); // ? $this -> gravarBD($value) : "NULL";
   }
   
   function setSeguranca($value){
-    $this -> seguranca = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> seguranca = ($value); // ? $this -> gravarBD($value) : "NULL";
   }
   
   function setPorta($value){
-    $this -> porta = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> porta = ($value); // ? $this -> gravarBD($value) : "NULL";
   }
   
   function setEmailEnvio($value){
-    $this -> emailEnvio = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> emailEnvio = ($value); // ? $this -> gravarBD($value) : "NULL";
   }
   
   function setSenhaEmail($value){
-    $this -> senhaEmail = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> senhaEmail = ($value);// ? $this -> gravarBD($value) : "NULL";
   }
   
   function setMarca($value){
-    $this -> marca = ($value) ? $this -> gravarBD($value) : "NULL";
+    $this -> marca = ($value); // ? $this -> gravarBD($value) : "NULL";
   }
  
    // Method's Get's
