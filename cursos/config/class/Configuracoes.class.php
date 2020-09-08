@@ -183,6 +183,7 @@ class Configuracoes extends Database{
   function updateConfigField($field, $value){
     $value = ($value != "NULL") ? $this -> gravarBD($value) : $value;
     $sql = "UPDATE configuracoes SET " . $field . " = " . $value . " WHERE idConfig = $this->idConfig";
+	echo $sql;
     $result = $this -> query($sql, true);
   }
    
