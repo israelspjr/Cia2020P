@@ -8,6 +8,37 @@ $Configuracoes = new Configuracoes();
 
 $arrayRetorno = array();
 
+
+if($_POST['acao']=="cadastrar"){
+	
+	echo "teste";
+	
+	$seguranca = $_POST['seguranca'];
+	if ($seguranca != '-') {
+		if ($seguranca != '') {
+			$tipo = $seguranca;		
+		}
+	}
+	
+	
+	 $Configuracoes->setNomeEmpresa($_POST['nomeEmpresa']);
+	 $Configuracoes->setLogo($_POST['foto_oculta']);
+	 $Configuracoes->setWhatsApp($_POST['marca_oculta']);
+     $Configuracoes->setEmail($_POST['email']);
+	 $Configuracoes->setSite($_POST['site']);
+	 $Configuracoes->setRodape($_POST['rodape_oculta']);
+	 $Configuracoes->setCabecalho($_POST['cabecalho_oculta']);
+	 $Configuracoes->setFavIcon($_POST['favIcon_oculta']);
+	 $Configuracoes->setSmtp($_POST['smtp']);
+	 $Configuracoes->setSeguranca($tipo);
+	 $Configuracoes->setPorta($_POST['portaSmtp']);
+	 $Configuracoes->setEmailEnvio($_POST['emailEnvio']);
+	 $Configuracoes->setSenhaEmail($_POST['emailSenha']);
+	 $Configuracoes->setMarca($_POST['marca_oculta']);
+	 
+	 $Configuracoes->updateConfig();
+}
+
 if($_POST['acao']=="foto"){
 	/* formatos de imagem permitidos */
     $permitidos = array(".jpg",".jpeg",".gif",".png", ".bmp");
@@ -253,35 +284,7 @@ if($_POST['acao']=="foto"){
     }else{
         $arrayRetorno['mensagem'] = "Selecione uma imagem";
     }
-} elseif($_POST['acao']=="cadastrar"){
-	
-	echo "teste";
-	
-	$seguranca = $_POST['seguranca'];
-	if ($seguranca != '-') {
-		if ($seguranca != '') {
-			$tipo = $seguranca;		
-		}
-	}
-	
-	
-	 $Configuracoes->setNomeEmpresa($_POST['nomeEmpresa']);
-	 $Configuracoes->setLogo($_POST['foto_oculta']);
-	 $Configuracoes->setWhatsApp($_POST['marca_oculta']);
-     $Configuracoes->setEmail($_POST['email']);
-	 $Configuracoes->setSite($_POST['site']);
-	 $Configuracoes->setRodape($_POST['rodape_oculta']);
-	 $Configuracoes->setCabecalho($_POST['cabecalho_oculta']);
-	 $Configuracoes->setFavIcon($_POST['favIcon_oculta']);
-	 $Configuracoes->setSmtp($_POST['smtp']);
-	 $Configuracoes->setSeguranca($tipo);
-	 $Configuracoes->setPorta($_POST['portaSmtp']);
-	 $Configuracoes->setEmailEnvio($_POST['emailEnvio']);
-	 $Configuracoes->setSenhaEmail($_POST['emailSenha']);
-	 $Configuracoes->setMarca($_POST['marca_oculta']);
-	 
-	 $Configuracoes->updateConfig();
-}
+} 
 
 echo json_encode($arrayRetorno);
 ?>
