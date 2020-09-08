@@ -39,7 +39,7 @@ if($_POST['acao']=="cadastrar"){
 	 
 	// Uteis::pr($Configuracoes);
 
-	 $Configuracoes->updateConfig(); 
+	// $Configuracoes->updateConfig(); 
 	 
 	 $arrayRetorno['mensagem'] = "Atualizado com sucesso!";
 
