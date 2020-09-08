@@ -18,25 +18,21 @@ if($_POST['acao']=="cadastrar"){
 			$tipo = $seguranca;		
 		}
 	}
-	echo $_POST['nomeEmpresa'];
+	
 	 $Configuracoes->updateConfigField("nomeEmpresa", $_POST['nomeEmpresa']);
-	 $Configuracoes->setLogo($_POST['foto_oculta']);
-	 $Configuracoes->setWhatsApp($_POST['marca_oculta']);
-     $Configuracoes->setEmail($_POST['email']);
-	 $Configuracoes->setSite($_POST['site']);
-	 $Configuracoes->setRodape($_POST['rodape_oculta']);
-	 $Configuracoes->setCabecalho($_POST['cabecalho_oculta']);
-	 $Configuracoes->setFavIcon($_POST['favIcon_oculta']);
-	 $Configuracoes->setSmtp($_POST['smtp']);
-	 $Configuracoes->setSeguranca($tipo);
-	 $Configuracoes->setPorta($_POST['portaSmtp']);
-	 $Configuracoes->setEmailEnvio($_POST['emailEnvio']);
-	 $Configuracoes->setSenhaEmail($_POST['emailSenha']);
-	 $Configuracoes->setMarca($_POST['marca_oculta']);
-	 
-	// Uteis::pr($Configuracoes);
-
-	// $Configuracoes->updateConfig(); 
+	 $Configuracoes->updateConfigField("logo",$_POST['foto_oculta']);
+	 $Configuracoes->updateConfigField("marca",$_POST['marca_oculta']);
+     $Configuracoes->updateConfigField("email",$_POST['email']);
+	 $Configuracoes->updateConfigField("site",$_POST['site']);
+	 $Configuracoes->updateConfigField("rodape",$_POST['rodape_oculta']);
+	 $Configuracoes->updateConfigField("cabecalho",$_POST['cabecalho_oculta']);
+	 $Configuracoes->updateConfigField("favicon",$_POST['favIcon_oculta']);
+	 $Configuracoes->updateConfigField("smtp",$_POST['smtp']);
+	 $Configuracoes->updateConfigField("seguranca",$tipo);
+	 $Configuracoes->updateConfigField("porta",$_POST['portaSmtp']);
+	 $Configuracoes->updateConfigField("emailEnvio",$_POST['emailEnvio']);
+	 $Configuracoes->updateConfigField("senhaEmail",$_POST['emailSenha']);
+	 $Configuracoes->updateConfigField("whatsApp", $_POST['zap']);
 	 
 	 $arrayRetorno['mensagem'] = "Atualizado com sucesso!";
 
