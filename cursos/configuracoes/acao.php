@@ -22,7 +22,7 @@ if($_POST['acao']=="cadastrar"){
 	 $Configuracoes->updateConfigField("site",$_POST['site']);
 	 $Configuracoes->updateConfigField("rodape",$_POST['rodape_oculta']);
 	 $Configuracoes->updateConfigField("cabecalho",$_POST['cabecalho_oculta']);
-	 $Configuracoes->updateConfigField("favIcon",$_POST['favIcon_oculta']);
+	 $Configuracoes->updateConfigField("favIcon",$_POST['fav_oculta']);
 	 $Configuracoes->updateConfigField("smtp",$_POST['smtp']);
 	 $Configuracoes->updateConfigField("seguranca",$tipo);
 	 $Configuracoes->updateConfigField("porta",$_POST['portaSmtp']);
