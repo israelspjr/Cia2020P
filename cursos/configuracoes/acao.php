@@ -3,8 +3,6 @@
 $Configuracoes = new Configuracoes();
 
 $Configuracoes->setIdConfig(1);
-
-
 	
 //$img = new Image();
 
@@ -21,8 +19,7 @@ if($_POST['acao']=="cadastrar"){
 		}
 	}
 	
-	Uteis::pr($_POST['nomeEmpresa']);
-	 $Configuracoes->setNomeEmpresa($_POST['nomeEmpresa']);
+	 $Configuracoes->updateConfigField("nomeEmpresa", $_POST['nomeEmpresa']);
 	 $Configuracoes->setLogo($_POST['foto_oculta']);
 	 $Configuracoes->setWhatsApp($_POST['marca_oculta']);
      $Configuracoes->setEmail($_POST['email']);
