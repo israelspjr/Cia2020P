@@ -112,7 +112,7 @@ $Configuracoes = new Configuracoes();
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getRodape();?>" />
           <?php }?>
           </div>
-          <input type="hidden" name="favIcon_oculta" value="<?php echo $Configuracoes->getRodape();?>" />
+          <input type="hidden" name="rodape_oculta" value="<?php echo $Configuracoes->getRodape();?>" />
       </p>
       <p>
         <label>Cabeçalho (formato retangular 600X200):</label>
@@ -122,7 +122,7 @@ $Configuracoes = new Configuracoes();
           <img src="<?php echo CAMINHO_UP?>imagem/empresa/<?php echo $Configuracoes->getCabecalho();?>" />
           <?php }?>
           </div>
-          <input type="hidden" name="favIcon_oculta" value="<?php echo $Configuracoes->getCabecalho();?>" />
+          <input type="hidden" name="cabecalho_oculta" value="<?php echo $Configuracoes->getCabecalho();?>" />
       </p>
    
     </div>
