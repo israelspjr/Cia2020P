@@ -3,7 +3,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/padrao.php");
 
 $Configuracoes = new Configuracoes();
 	
-$img = new Image();
+//$img = new Image();
 
 $idClientePf = $_REQUEST['id'];
 
@@ -35,9 +35,9 @@ if($_POST['acao']=="foto"){
 								if(move_uploaded_file($tmp, $pasta.$nome_atual)){
 								
 									//Redimensiona novamente a imagem, mantendo a original.
-									$imgPointer = $img->prepareImage($pasta.$nome_atual);
-									$img->prepareResize($imgPointer, 100, 150);
-									$img->createThumbNail($imgPointer, $pasta."miniatura-".$nome_atual);
+							//		$imgPointer = $img->prepareImage($pasta.$nome_atual);
+							//		$img->prepareResize($imgPointer, 100, 150);
+							//		$img->createThumbNail($imgPointer, $pasta."miniatura-".$nome_atual);
 									
 									$arrayRetorno['elementoAtualizar'][0] = $_POST['destino'];
 									
