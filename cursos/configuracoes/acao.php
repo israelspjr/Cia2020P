@@ -90,7 +90,7 @@ if($_POST['acao']=="foto"){
 									$arrayRetorno['elementoAtualizar'][0] = $_POST['destino'];
 									
 									$arrayRetorno['valor2'][0] = "<img src='".CAMINHO_UP."imagem/empresa/".$nome_atual."' width=\"250px\"/>
-									<input type=\"hidden\" name=\"foto_oculta\" value=\"".$nome_atual."\">"; 
+									<input type=\"hidden\" name=\"marca_oculta\" value=\"".$nome_atual."\">"; 
 									
 									$arrayRetorno['mensagem'] = "Carregado com sucesso.";
 								
@@ -139,7 +139,7 @@ if($_POST['acao']=="foto"){
 									$arrayRetorno['elementoAtualizar'][0] = $_POST['destino'];
 									
 									$arrayRetorno['valor2'][0] = "<img src='".CAMINHO_UP."imagem/empresa/".$nome_atual."' width=\"50px\"/>
-									<input type=\"hidden\" name=\"foto_oculta\" value=\"".$nome_atual."\">"; 
+									<input type=\"hidden\" name=\"fav_oculta\" value=\"".$nome_atual."\">"; 
 									
 									$arrayRetorno['mensagem'] = "Carregado com sucesso.";
 								
@@ -188,7 +188,7 @@ if($_POST['acao']=="foto"){
 									$arrayRetorno['elementoAtualizar'][0] = $_POST['destino'];
 									
 									$arrayRetorno['valor2'][0] = "<img src='".CAMINHO_UP."imagem/empresa/".$nome_atual."' width=\"400px\"/>
-									<input type=\"hidden\" name=\"foto_oculta\" value=\"".$nome_atual."\">"; 
+									<input type=\"hidden\" name=\"rodape_oculta\" value=\"".$nome_atual."\">"; 
 									
 									$arrayRetorno['mensagem'] = "Carregado com sucesso.";
 								
@@ -207,7 +207,7 @@ if($_POST['acao']=="foto"){
 }  elseif($_POST['acao']=="cabecalho"){
 	/* formatos de imagem permitidos */
     $permitidos = array(".jpg",".jpeg",".gif",".png", ".bmp");
-    $pasta = CAMINHO_UP_ROOT."imagem/empresa";
+    $pasta = CAMINHO_UP_ROOT."imagem/empresa/";
 	
     if(isset($_POST)){
         $nome_imagem    = $_FILES['foto']['name'];
@@ -237,7 +237,7 @@ if($_POST['acao']=="foto"){
 									$arrayRetorno['elementoAtualizar'][0] = $_POST['destino'];
 									
 									$arrayRetorno['valor2'][0] = "<img src='".CAMINHO_UP."imagem/empresa/".$nome_atual."' width=\"400px\"/>
-									<input type=\"hidden\" name=\"foto_oculta\" value=\"".$nome_atual."\">"; 
+									<input type=\"hidden\" name=\"cabecalho_oculta\" value=\"".$nome_atual."\">"; 
 									
 									$arrayRetorno['mensagem'] = "Carregado com sucesso.";
 								
