@@ -22,8 +22,8 @@ class Configuracoes extends Database{
 	  $valor = self::selectConfig(" WHERE idConfig = 1");
     parent::__construct();
     //$this->idConfig = "NULL";
-    $this->nomeEmpresa = $valor[0]['nomeEmpresa']; //"NULL";
-    $this->logo = $valor[0]['logo'];"NULL";
+    $this->nomeEmpresa = "NULL"; //$valor[0]['nomeEmpresa']; //"NULL";
+    $this->logo = $valor[0]['logo'];
     $this->whatsApp = $valor[0]['whatsApp'];
     $this->email = $valor[0]['email'];
 	$this->site = $valor[0]['site'];
