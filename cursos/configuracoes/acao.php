@@ -7,7 +7,6 @@ $Configuracoes = new Configuracoes();
 $idClientePf = $_REQUEST['id'];
 
 $arrayRetorno = array();
-Uteis::pr($_POST['acao']);
 
 if($_POST['acao']=="foto"){
 	/* formatos de imagem permitidos */
@@ -27,10 +26,10 @@ if($_POST['acao']=="foto"){
             /* converte o tamanho para KB */
             $tamanho = round($tamanho_imagem / 1024);
              
-            if($tamanho < 1024){ //se imagem for até 1MB envia
+            if($tamanho < 10024){ //se imagem for até 10MB envia
                 $nome_atual = md5(uniqid(time())).$ext; //nome que dará a imagem
                 $tmp = $_FILES['foto']['tmp_name']; //caminho temporário da imagem
-                 
+				
                 /* se enviar a foto, insere o nome da foto no banco de dados */
 								if(move_uploaded_file($tmp, $pasta.$nome_atual)){
 								
@@ -58,7 +57,7 @@ if($_POST['acao']=="foto"){
     }else{
         $arrayRetorno['mensagem'] = "Selecione uma imagem";
     }
-	
-
 }
+
+echo json_encode($arrayRetorno);
 ?>
