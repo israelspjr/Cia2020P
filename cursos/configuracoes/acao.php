@@ -23,7 +23,7 @@ if($_POST['acao']=="cadastrar"){
 		}
 	}
 	
-	
+	Uteis::pr($_POST['nomeEmpresa']);
 	 $Configuracoes->setNomeEmpresa($_POST['nomeEmpresa']);
 	 $Configuracoes->setLogo($_POST['foto_oculta']);
 	 $Configuracoes->setWhatsApp($_POST['marca_oculta']);
