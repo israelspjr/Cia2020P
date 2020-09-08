@@ -86,7 +86,7 @@ $Configuracoes = new Configuracoes();
           <input type="hidden" name="marca_oculta" value="<?php echo $Configuracoes->getMarca();?>" />
       </p>
        <p>
-        <label>logo Favorito (extensão precisa ser .ico):</label>
+        <label>logo Favorito (fundo transparente 40x40):</label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto3').click();" title="Adicionar" />
         <div id="visualizar3">
           <?php if($Configuracoes->getFavIcon() != ''){?>
