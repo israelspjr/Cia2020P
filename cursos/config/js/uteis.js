@@ -557,7 +557,8 @@ function acaoJson(val) {
 	if (val !== undefined && val !== '') {
 
 		var jsonR = $.parseJSON(val);
-
+		console.log(jsonR);
+		
 		//EXPORTA P EXCEL 
 		if (jsonR.excel != '' && jsonR.excel != undefined) {
 			window.open('data:application/vnd.ms-excel;charset=iso-8859-1, ' + encodeURIComponent(jsonR.excel));
