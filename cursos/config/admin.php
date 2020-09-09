@@ -32,11 +32,11 @@ $Login = new Login();
 if ($Login -> verificarLogin() && $pgLogin) {
 //    require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php");
 //    require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
-    header('Location:/cursos/admin/index.php');
+ //   header('Location:/cursos/admin/index.php');
 
 } elseif (!($Login -> verificarLogin()) && !$pgLogin) {
 
-    header('Location:/cursos/admin/login.php');
+//    header('Location:/cursos/admin/login.php');
 
 }
 
