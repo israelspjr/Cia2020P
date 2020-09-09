@@ -1,5 +1,5 @@
 <!-- JQuery -->
-<script src="<?php echo CAMINHO_CFG?>js/jquery.js" language="javascript" type="text/javascript"></script>
+<script src="<?php echo CAMINHO_CFG?>js/jquery.min.js" language="javascript" type="text/javascript"></script>
 <script src="<?php echo CAMINHO_CFG?>js/login.js" language="javascript" type="text/javascript"></script>
 
 <!-- JQuery Ui -->
