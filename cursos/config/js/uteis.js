@@ -560,7 +560,6 @@ function acaoJson(val) {
 	if (val !== undefined && val !== '') {
 
 		var jsonR = $.parseJSON(val);
-		console.log(jsonR.mensagem);
 		
 		//EXPORTA P EXCEL 
 		if (jsonR.excel != '' && jsonR.excel != undefined) {
@@ -608,7 +607,6 @@ function acaoJson(val) {
 
 		//ENVIA MENSAGEM
 		if (jsonR.mensagem != undefined && jsonR.mensagem != '') {
-			alert("ok");
 			alerta(jsonR.mensagem);
 		}
 
