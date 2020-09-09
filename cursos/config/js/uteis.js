@@ -305,8 +305,8 @@ function postForm(idForm, pagina, param, onde) {
 	var form = $('#' + idForm);
 	if (onde != undefined && onde != '') {
 		var ondeR = $('#' + onde);
-		console.log(ondeR);
 	}
+
 	if (form.length > 0) {
 		form.submit();
 	} else {
@@ -318,10 +318,8 @@ function postForm(idForm, pagina, param, onde) {
 		showLoad();
 		$.post(pagina, parametros, function(e) {
 			if (ondeR != undefined && ondeR != '') {
-				
 				$(ondeR).html(e);
 			} else {
-				console.log(e);
 				acaoJson(e);
 			}
 			fecharNivel_load();
@@ -562,7 +560,7 @@ function acaoJson(val) {
 	if (val !== undefined && val !== '') {
 
 		var jsonR = $.parseJSON(val);
-		console.log(jsonR);
+		console.log(jsonR.mensagem);
 		
 		//EXPORTA P EXCEL 
 		if (jsonR.excel != '' && jsonR.excel != undefined) {
@@ -609,8 +607,10 @@ function acaoJson(val) {
 			novoAviso();
 
 		//ENVIA MENSAGEM
-		if (jsonR.mensagem != undefined && jsonR.mensagem != '')
+		if (jsonR.mensagem != undefined && jsonR.mensagem != '') {
+			alert("ok");
 			alerta(jsonR.mensagem);
+		}
 
 		//PAGINA A SER CARREGADA
 		if (jsonR.pagina != '' && jsonR.pagina != undefined) {
