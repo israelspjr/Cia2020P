@@ -15,6 +15,7 @@ $Configuracoes = new Configuracoes();
 <?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php"); ?>
 <?php require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php"); ?>
 
+<div id="alertas" style="z-index: 0;"></div>
 <div id="cadastro_acervo" class="">
  <!-- <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>-->
   <div id="abas">
