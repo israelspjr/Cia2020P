@@ -303,7 +303,8 @@ function postForm(idForm, pagina, param, onde) {
 	
 
 	var form = $('#' + idForm);
-
+	var ondeR = $('#' + onde);
+	console.log(ondeR);
 	if (form.length > 0) {
 		form.submit();
 	} else {
@@ -314,8 +315,8 @@ function postForm(idForm, pagina, param, onde) {
 		var parametros = form.serialize() + (param != undefined ? param : '');
 		showLoad();
 		$.post(pagina, parametros, function(e) {
-			if (onde != undefined && onde != '') {
-				$(onde).html(e);
+			if (ondeR != undefined && ondeR != '') {
+				$(ondeR).html(e);
 			} else {
 				acaoJson(e);
 			}
