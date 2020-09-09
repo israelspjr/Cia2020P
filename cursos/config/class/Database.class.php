@@ -136,8 +136,8 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 
 	function gravarBD($texto) {
 
-		$res = mysqli_escape_string(trim($texto));
-        //echo $res;
+		$res =  mysqli_real_escape_string(trim($texto));
+        echo $res;
 		//mysql_real_escape_string
 
 		if( is_numeric($res) ) {
