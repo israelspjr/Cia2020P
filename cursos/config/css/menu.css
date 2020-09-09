@@ -153,7 +153,7 @@
 	height: 10px;	
 	text-indent: 	-999em;
 	overflow:		hidden;
-	background:		url('/cursos/images/menu/arrows-ffffff.png') no-repeat -10px -103px; /* 8-bit indexed alpha png. IE6 gets solid image only */	
+	background:		url('/cursos/images/arrows-ffffff.png') no-repeat -10px -103px; /* 8-bit indexed alpha png. IE6 gets solid image only */	
 }
 
 #cssmenu ul li ul .has-sub-indicator { background-position:  -10px 0; }
