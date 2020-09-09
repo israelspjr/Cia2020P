@@ -170,7 +170,7 @@ $Configuracoes = new Configuracoes();
 </div>
 <script>
 
-ativarForm();
+//ativarForm();
 
 /* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
 $('#add_file').on('change', function(){
