@@ -19,11 +19,11 @@ class Login extends Database {
 	}
 
 	function efetuarLogin($documentoUnico, $senhaAcesso) {
-		echo $documentoUnico;
-		echo $senhaAcesso;
+	//	echo $documentoUnico;
+	//	echo $senhaAcesso;
 		$Log = new Log();
 		$sql = " SELECT documentoUnico, senhaAcesso, nomeExibicao, idFuncionario  FROM funcionario 
-		WHERE inativo = 0 AND excluido = 0 AND documentoUnico = " . $this -> gravarBD($documentoUnico) . " AND senhaAcesso = " . $this -> gravarBD($senhaAcesso) . " ";
+		WHERE inativo = 0 AND excluido = 0 AND documentoUnico = '" . $documentoUnico . "' AND senhaAcesso = '" . $senhaAcesso . "' ";
 		echo $sql;
 		$rs = $this -> query($sql);
 
