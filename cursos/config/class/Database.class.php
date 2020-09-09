@@ -76,7 +76,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 
 	//echo $sql;
 	//   $Log = new Log();
-	    
+	    mysqli_set_charset( $link, 'utf8');
 	      
 		if (!($query = mysqli_query($link, $sql))){        
 		  $mensagemErro = $sql;
@@ -137,7 +137,7 @@ if (!mysqli_query($this, "SELECT * FROM configuracoes")) {
 	function gravarBD($texto) {
 
 		$res =  mysqli_real_escape_string(trim($texto));
-        echo $res;
+   //     echo $res;
 		//mysql_real_escape_string
 
 		if( is_numeric($res) ) {
