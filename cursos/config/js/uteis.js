@@ -316,9 +316,10 @@ function postForm(idForm, pagina, param, onde) {
 		showLoad();
 		$.post(pagina, parametros, function(e) {
 			if (ondeR != undefined && ondeR != '') {
-				console.log(e);
+				
 				$(ondeR).html(e);
 			} else {
+				console.log(e);
 				acaoJson(e);
 			}
 			fecharNivel_load();
