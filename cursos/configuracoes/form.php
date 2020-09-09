@@ -20,7 +20,7 @@ $Configuracoes = new Configuracoes();
   <div id="abas">
     <div id="aba_cadastro_acervo" divExibir="div_cadastro_acervo" class="aba_interna ativa">Configurações do Sistema</div>   
   </div>
-  <!--<div id="modulos_clientepf" class="conteudo_nivel">-->
+  <div id="modulos_clientepf" class="conteudo_nivel">
     <div id="div_cadastro_acervo" class="div_aba_interna">
     <!--LOGO -->
      <form id="formularioPf" method="post" enctype="multipart/form-data" action="<?php echo "/cursos/configuracoes/acao.php"?>" style="display:none;" >
@@ -166,7 +166,7 @@ $Configuracoes = new Configuracoes();
      </div>
     </form>
   </div>
-<!--</div>-->
+</div>
 <script>
 
 ativarForm();
