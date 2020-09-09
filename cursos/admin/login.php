@@ -3,7 +3,6 @@ $pgLogin = true;
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 
 if(($_POST['cpf'] != '') && ($_POST['password'] != '')){	
-echo "ok";	
 	if(!$Login->efetuarLogin($_POST['cpf'], EncryptSenha::B64_Encode($_POST['password']))){ 			
 		Uteis::alertJava("Login ou senha inválidos.", true);
 	}
