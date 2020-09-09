@@ -24,7 +24,7 @@ define("P_SKYPE", 6014);
 
 //Local Companhia de Idiomas
 define("LOC_CIA", 6012);
-header('Content-Type: text/html; charset=utf-8');
+//header('Content-Type: text/html; charset=utf-8');
 //require_once $_SERVER['DOCUMENT_ROOT']."/../_config.php";
 
 $Login = new Login();
@@ -32,11 +32,11 @@ $Login = new Login();
 if ($Login -> verificarLogin() && $pgLogin) {
 //    require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php");
 //    require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
- //   header('Location:/cursos/admin/index.php');
+    header('Location:/cursos/admin/index.php');
 
 } elseif (!($Login -> verificarLogin()) && !$pgLogin) {
 
-//    header('Location:/cursos/admin/login.php');
+    header('Location:/cursos/admin/login.php');
 
 }
 
