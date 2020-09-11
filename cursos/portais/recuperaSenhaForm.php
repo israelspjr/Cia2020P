@@ -1,6 +1,5 @@
 <?php
-$pgaluno = true;
-//require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
 //require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js_area.php");
 //require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
