@@ -1,4 +1,7 @@
 <?php
+require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
+
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/admin.php");
 if($_SESSION['idFuncionario_SS']==""){
     session_destroy();
@@ -10,19 +13,15 @@ if($_SESSION['idFuncionario_SS']==""){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo NOME_APP?></title>
-<?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php");
-require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
-?>
 <script>
-	//verificaNovoAviso('/cursos/admin/verificaAviso.php');
+	verificaNovoAviso('/cursos/admin/verificaAviso.php');
 </script>
 </head>
 
 <body class="body" >		
 <div id="divs_jquery"> </div>
 <div id="cssmenu">
-  <?php //require_once "menu.php"?>
+  <?php require_once "menu.php"?>
 </div>
 <div id="alertas"></div>
 <div id="centro"></div>
