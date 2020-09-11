@@ -1,7 +1,7 @@
 <?php
 $pgaluno = true;
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
-require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js_area.php");
+//require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
+//require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js_area.php");
 //require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
 $TipoDocumentoUnico = new TipoDocumentoUnico();
@@ -44,16 +44,16 @@ if ($documento != '' && $password != '') {
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo NOME_APP ?></title>
+    <title><?php //echo NOME_APP ?></title>
     
-<link href="../config/css/bootstrap.min.css" rel="stylesheet">
+<!--<link href="../config/css/bootstrap.min.css" rel="stylesheet">
 <link href="../config/css/datepicker3.css" rel="stylesheet">
 <link href="../config/css/styles.css" rel="stylesheet">
-
-<link href="<?php echo CAMINHO_CFG?>css/jquery/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+-->
+<!--<link href="<?php echo CAMINHO_CFG?>css/jquery/jquery-ui.min.css" rel="stylesheet" type="text/css" />
 
 <script src="<?php echo CAMINHO_CFG?>js/login.js" language="javascript" type="text/javascript"></script>
-
+-->
 <style>
 	body{
 		background-image: url("../images/bcgaluno2.jpg");
