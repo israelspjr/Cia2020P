@@ -10,7 +10,7 @@ define("CAMINHO_PSA", CAMINHO_MODULO . "psa/");
 define("CAMINHO_PAG", CAMINHO_MODULO . "demonstrativoPagamento/");
 define("CAMINHO_BH", CAMINHO_MODULO . "bancoHoras/");
 
-$Login = new Login();
+//$Login = new Login();
 echo "teste3";
 /*
 if ($Login -> verificarLogin_Unico() /*&& $pgUnico*/ /*) {
