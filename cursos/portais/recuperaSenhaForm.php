@@ -1,6 +1,6 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
-//require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js_area.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
 //require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
 //$TipoDocumentoUnico = new TipoDocumentoUnico();
