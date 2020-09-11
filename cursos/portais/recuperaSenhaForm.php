@@ -5,7 +5,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
 $TipoDocumentoUnico = new TipoDocumentoUnico();
 
-$documento = $_REQUEST['documentoUnico'];
+/*$documento = $_REQUEST['documentoUnico'];
 $password = EncryptSenha::B64_Encode($_REQUEST['password']);
 $tipo = $_REQUEST['tipoDocumentoUnico_idTipoDocumentoUnico'];
 $idIntegranteGrupo = $_REQUEST['idIntegranteGrupo'];
@@ -35,7 +35,8 @@ if ($documento != '' && $password != '') {
 	if (!$Login -> efetuarLogin_Aluno($documento, $password)) {		
 		Uteis::alertJava("Login ou senha inválidos.", true);
 	}
-}
+}*/
+Uteis:pr($_SESSION);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -43,6 +44,9 @@ if ($documento != '' && $password != '') {
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div class="header">
+ 			 <center> <img src="../upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
+	</div>	
     <title><?php //echo NOME_APP ?></title>
     
 <!--<link href="../config/css/bootstrap.min.css" rel="stylesheet">
