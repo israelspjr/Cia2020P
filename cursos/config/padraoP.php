@@ -8,7 +8,7 @@ ini_set("register_globals","Off");
 mb_internal_encoding("UTF-8");
 
 set_time_limit(0);
-//CONFIGURA��O DE LOCALE
+//CONFIGURAÇÃO DE LOCALE
 if (strpos($_SERVER["SERVER_SOFTWARE"], "Win32")) {
 	define("LOCALE","ptb");
 } else {
@@ -35,16 +35,15 @@ define("MSG_CADNEW", "Cadastro efetuado com sucesso.");
 define("MSG_CADATU", "Cadastro atualizado com sucesso.");
 define("MSG_CADDEL", "Cadastro deletado com sucesso.");
 
-
 require_once $_SERVER['DOCUMENT_ROOT']."/../_config.php";
-echo  "teste3";
-/*
+
 //AUTOLOAD DE CLASSES
 function __autoload($class) {
 	
 	$caminhoClass = $_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."class/".$class.".class.php";
 		
 	if( file_exists($caminhoClass) ){ 
+	echo $caminhoClass;
 		require_once $caminhoClass;
 		return true; 
 	}else{
