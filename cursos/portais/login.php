@@ -3,6 +3,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
+$Configuracoes = new Configuracoes();
+
+$config = $Configuracoes->selectConfig();
+
 $TipoDocumentoUnico = new TipoDocumentoUnico();
 
 //$FolhaFrequencia = new FolhaFrequencia();
@@ -126,7 +130,9 @@ if  (($appN == 1) || ($appN == 3)) {
 <body>
 <script src="<?php echo CAMINHO_CFG ?>js/login.js" language="javascript" type="text/javascript"></script>
 
-<p>&nbsp;</p>
+<div class="header">
+ 			 <center> <img src="../upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
+	</div>	
 
 <div id="divs_jquery"></div>
 <div id="alertas"></div>
