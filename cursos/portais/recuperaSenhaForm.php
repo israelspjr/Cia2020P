@@ -49,7 +49,7 @@ if ($documento != '' && $password != '') {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="header">
- 			 <center> <!--<img src="../upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
+ 			 <center> <img src="../upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
 	</div>	
     <title><?php //echo NOME_APP ?></title>
     
