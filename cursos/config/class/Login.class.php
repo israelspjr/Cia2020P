@@ -211,7 +211,7 @@ class Login extends Database {
 	}
 
 	function verificarLogin() {
-		echo $_SESSION;
+//		echo $_SESSION;
 		/*$_SESSION['logado'] = true;
 		$_SESSION['idFuncionario_SS'] = 18;
 		$_SESSION['nome_SS'] = "Teste";*/
