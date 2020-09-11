@@ -186,7 +186,7 @@ if  (($appN == 1) || ($appN == 3)) {
 		</div><!-- /.col-->
 	</div><!-- /.row -->
 <script type="text/javascript">
-     function mensagem() {
+/*     function mensagem() {
                 alert("Sua senha foi enviada para o e-mail cadastrado.");
             }
 
@@ -194,10 +194,10 @@ if  (($appN == 1) || ($appN == 3)) {
      tipoDocumentoUnico("login");
      $('#tipoDocumentoUnico_idTipoDocumentoUnico').attr('onchange', 'tipoDocumentoUnico("login")')
 
-<?php if(isset($_GET['msg'])) { ?>
+<?php //if(isset($_GET['msg'])) { ?>
       alert('- Senha alterada com sucesso!');
-<?php } ?>
-ativarForm();
+<?php //} */?>
+//ativarForm();
 </script>
 </body>
 </html>
