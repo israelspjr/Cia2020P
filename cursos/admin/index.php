@@ -15,7 +15,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
 ?>
 <script>
-	verificaNovoAviso('/cursos/admin/verificaAviso.php');
+	//verificaNovoAviso('/cursos/admin/verificaAviso.php');
 </script>
 </head>
 
