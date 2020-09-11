@@ -41,7 +41,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/../_config.php";
 function __autoload($class) {
 	
 	$caminhoClass = $_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."class/".$class.".class.php";
-		
+		echo $caminhoClass;	
 	if( file_exists($caminhoClass) ){ 
 		require_once $caminhoClass;
 		return true; 
