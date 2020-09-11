@@ -3,6 +3,10 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
+$Configuracoes = new Configuracoes();
+
+$config = $Configuracoes->selectConfig();
+
 $TipoDocumentoUnico = new TipoDocumentoUnico();
 
 /*$documento = $_REQUEST['documentoUnico'];
@@ -54,8 +58,6 @@ Uteis:pr($_SESSION);
 <link href="../config/css/styles.css" rel="stylesheet">
 -->
 <!--<link href="<?php echo CAMINHO_CFG?>css/jquery/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-
-<script src="<?php echo CAMINHO_CFG?>js/login.js" language="javascript" type="text/javascript"></script>
 -->
 <style>
 	body{
@@ -108,8 +110,6 @@ Uteis:pr($_SESSION);
       <p>
         <button class="bBlue">Enviar dados</button>
         <p><a href="login.php">Voltar ao Login!</a></p>
-         <!--<p onClick="mensagem(); enviarSenha(redefSenha(),'#cpf', 'aluno')" class="onlink" >
-         <p>Não sabe a sua senha? Entre em contato com a companhia (11) 5061-0117 </p>-->
       </p>
     </form>
     <script>
