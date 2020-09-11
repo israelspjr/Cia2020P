@@ -14,4 +14,4 @@
 
  <!-- Portais --> 
 <!--<link href="<?php echo CAMINHO_CFG?>css/datepicker3.css" rel="stylesheet">-->
-<link href="<?php echo CAMINHO_CFG?>css/styles.css" rel="stylesheet">
+<!--<link href="<?php echo CAMINHO_CFG?>css/styles.css" rel="stylesheet">-->
