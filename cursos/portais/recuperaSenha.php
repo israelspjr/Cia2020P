@@ -14,6 +14,7 @@ if(isset($_POST)){
 
         $ClientePf = new ClientePf();
         $rs = $ClientePf->selectClientepf(" WHERE documentoUnico = '".$doc."' AND dataNascimento='".$data."'");
+		var_dump($rs);
         if($rs){
             $idClientePf = $rs[0]["idClientePf"];
             $nome = $rs[0]["nome"];
