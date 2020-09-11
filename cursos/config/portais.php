@@ -1,5 +1,5 @@
 <?php
-require_once "padrao.php";
+require_once "padraoP.php";
 
 define("CAMINHO_UNICO", "/cursos/portais/");
 define("CAMINHO_MODULO", CAMINHO_UNICO . "modulos/");
