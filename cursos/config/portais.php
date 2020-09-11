@@ -10,8 +10,6 @@ define("CAMINHO_PSA", CAMINHO_MODULO . "psa/");
 define("CAMINHO_PAG", CAMINHO_MODULO . "demonstrativoPagamento/");
 define("CAMINHO_BH", CAMINHO_MODULO . "bancoHoras/");
 
-require_once $_SERVER['DOCUMENT_ROOT']."/../_config.php";
-
 $Login = new Login();
 
 if ($Login -> verificarLogin_Unico() /*&& $pgUnico*/) {
