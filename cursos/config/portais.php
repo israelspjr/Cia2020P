@@ -11,7 +11,7 @@ define("CAMINHO_PAG", CAMINHO_MODULO . "demonstrativoPagamento/");
 define("CAMINHO_BH", CAMINHO_MODULO . "bancoHoras/");
 
 //$Login = new Login();
-echo "teste3";
+//echo "teste3";
 /*
 if ($Login -> verificarLogin_Unico() /*&& $pgUnico*/ /*) {
 	echo "teste";
