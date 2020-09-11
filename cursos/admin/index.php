@@ -22,7 +22,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
 <body class="body" >		
 <div id="divs_jquery"> </div>
 <div id="cssmenu">
-  <?php require_once "menu.php"?>
+  <?php //require_once "menu.php"?>
 </div>
 <div id="alertas"></div>
 <div id="centro"></div>
