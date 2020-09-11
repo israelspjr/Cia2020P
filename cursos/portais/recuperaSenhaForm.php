@@ -4,10 +4,10 @@ $pgaluno = true;
 //require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js_area.php");
 //require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
-$TipoDocumentoUnico = new TipoDocumentoUnico();
+//$TipoDocumentoUnico = new TipoDocumentoUnico();
 
 $documento = $_REQUEST['documentoUnico'];
-$password = EncryptSenha::B64_Encode($_REQUEST['password']);
+//$password = EncryptSenha::B64_Encode($_REQUEST['password']);
 $tipo = $_REQUEST['tipoDocumentoUnico_idTipoDocumentoUnico'];
 $idIntegranteGrupo = $_REQUEST['idIntegranteGrupo'];
 $idFolhaFrequencia = $_REQUEST['idFolhaFrequencia'];
@@ -74,7 +74,7 @@ if ($documento != '' && $password != '') {
       <p><strong>Área do aluno</strong></p> 
       <p><div class="form-group">
                 <label>Documento:</label>
-                <?php echo $TipoDocumentoUnico->selectTipoDocumentoUnicoSelect($teraDocumentoUnico, 1); //$tipoDocumentoUnicoIdTipoDocumentoUnico);?>
+                <?php //echo $TipoDocumentoUnico->selectTipoDocumentoUnicoSelect($teraDocumentoUnico, 1); //$tipoDocumentoUnicoIdTipoDocumentoUnico);?>
                 <span class="placeholder" style="display:none;color:red;">Campo Obrigatório</span>
             </div>
             </p>
