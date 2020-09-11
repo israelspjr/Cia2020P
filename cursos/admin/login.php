@@ -1,6 +1,7 @@
 <?php
-$pgLogin = true;
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
+require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/css.php");
+require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/js.php");
 
 if(($_POST['cpf'] != '') && ($_POST['password'] != '')){	
 	if(!$Login->efetuarLogin($_POST['cpf'], EncryptSenha::B64_Encode($_POST['password']))){ 			
@@ -14,32 +15,48 @@ if(($_POST['cpf'] != '') && ($_POST['password'] != '')){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo NOME_APP?></title>
-<?php require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/css.php");?>
-<?php require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/js.php");?>
+
 </head>
 
 <body>
 	<div id="divs_jquery"> </div>
-<div id="centro"> <br />
-  <div id="alertas"></div>
-  <div id="div_login">
-    <form id="login" class="validate" action="login.php" method="post" >
-      <p><strong>Área administrativa</strong></p> 
-      <p>
+	<div id="centro"> <br />
+    <div id="alertas"></div>
+  
+  <div class="row">
+		<div style="width:100%;    padding: 10px;">
+			<div class="login-panel panel panel-default">
+          			<div class="toplogin">Área administrativa</div>
+	
+				<div class="panel-body">
+ 
+     <form id="login" class="validate" action="login.php" method="post" >
+       
+      <p><div class="form-group">
         <label>CPF:</label>
         <input type="text" name="cpf" id="cpf" class="required cpf" value="<?php echo $login_temp?>" autocomplete="off" />
-        <span class="placeholder">Campo Obrigatório</span> </p>
-      <p>
+        <span class="placeholder">Campo Obrigatório</span> 
+        </div>
+      </p>
+      
+      
+      <p><div class="form-group">
         <label>Senha</label>        
         <input type="password" name="password" id="password" class="required" value="<?php echo $senha_temp?>" autocomplete="off" />
         <span class="placeholder">Campo Obrigatório</span> 
-        <input type="checkbox" value="1" onclick="mostraSenha(this)" /><small>mostrar a senha</small></p>
-      <p>
+        <input type="checkbox" value="1" onclick="mostraSenha(this)" /><small>mostrar a senha</small>
+        </div>
+      </p>
+      <p><div class="form-group">
         <button class="button blue submit">Efetuar Login</button>
+        </div>
       </p>
       <p onClick="confirmar();"  class="onlink" >Não sabe a sua senha?</p> 
       <!--mensagem(); enviarSenha(redefSenha(),'#cpf', 'admin')"-->
     </form>
+     			</div>
+		</div><!-- /.col-->
+	</div><!-- /.row -->
     <script>
 	function confirmar() {
 	var r = confirm("Tem certeza que deseja resetar a senha e receber no seu email? ");
