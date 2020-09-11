@@ -5,7 +5,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js_area.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
 $TipoDocumentoUnico = new TipoDocumentoUnico();
-$FolhaFrequencia = new FolhaFrequencia();
+//$FolhaFrequencia = new FolhaFrequencia();
 
 //$password = $_REQUEST['password'];
 $password = EncryptSenha::B64_Encode($_REQUEST['password']);
