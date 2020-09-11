@@ -24,9 +24,7 @@ if($_SESSION['idFuncionario_SS']==""){
 </head>
 
 <body class="body" >	
-<div class="header">
- 			 <center> <img src="upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
-	</div>	
+
 <div id="divs_jquery"> </div>
 <div id="cssmenu">
   <?php require_once "menu.php"?>

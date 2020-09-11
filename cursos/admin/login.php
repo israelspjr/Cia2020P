@@ -4,14 +4,16 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/css.php");
 require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/js.php");
 
+$Configuracoes = new Configuracoes();
+
+$config = $Configuracoes->selectConfig();
+
 if(($_POST['cpf'] != '') && ($_POST['password'] != '')){	
 	echo "teste";
 	if(!$Login->efetuarLogin($_POST['cpf'], EncryptSenha::B64_Encode($_POST['password']))){ 			
 		Uteis::alertJava("Login ou senha inválidos.", true);
 	}
 }
-
-
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -28,6 +30,9 @@ if(($_POST['cpf'] != '') && ($_POST['password'] != '')){
 </head>
 
 <body>
+<div class="header">
+ 			 <center> <img src="upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
+	</div>	
 	<div id="divs_jquery"> </div>
 	<div id="centro"> <br />
     <div id="alertas"></div>
