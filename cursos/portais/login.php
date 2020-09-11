@@ -141,7 +141,7 @@ if  (($appN == 1) || ($appN == 3)) {
             <p><div class="form-group">
             <?php if  ($appN != 4) { ?>
                 <label>Documento:</label>
-                <?php //echo $TipoDocumentoUnico->selectTipoDocumentoUnicoSelect($teraDocumentoUnico, 1); ?>
+                <?php echo $TipoDocumentoUnico->selectTipoDocumentoUnicoSelect($teraDocumentoUnico, 1); ?>
                 <span class="placeholder" style="display:none;color:red;">Campo Obrigatório</span>
             </div>
             </p>
