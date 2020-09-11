@@ -22,7 +22,7 @@ class Login extends Database {
 		$Log = new Log();
 		$sql = " SELECT documentoUnico, senhaAcesso, nomeExibicao, idFuncionario  FROM funcionario 
 		WHERE inativo = 0 AND excluido = 0 AND documentoUnico = '" . $documentoUnico . "' AND senhaAcesso = '" . $senhaAcesso . "' ";
-	//	echo $sql;
+	//echo $sql;
 		$rs = $this -> query($sql);
 
 		if ($result = mysqli_fetch_array($rs)) {		    			
