@@ -1,12 +1,12 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
-//require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
-//$TipoDocumentoUnico = new TipoDocumentoUnico();
+$TipoDocumentoUnico = new TipoDocumentoUnico();
 
 $documento = $_REQUEST['documentoUnico'];
-//$password = EncryptSenha::B64_Encode($_REQUEST['password']);
+$password = EncryptSenha::B64_Encode($_REQUEST['password']);
 $tipo = $_REQUEST['tipoDocumentoUnico_idTipoDocumentoUnico'];
 $idIntegranteGrupo = $_REQUEST['idIntegranteGrupo'];
 $idFolhaFrequencia = $_REQUEST['idFolhaFrequencia'];
