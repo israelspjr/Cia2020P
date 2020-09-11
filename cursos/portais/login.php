@@ -1,5 +1,8 @@
 <?php
-error_reporting(-1);
+require_once($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js_area.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
+
 echo "teste";
 
 ?>	
@@ -8,9 +11,7 @@ echo "teste";
 <body>
 <!--<script src="<?php echo CAMINHO_CFG ?>js/login.js" language="javascript" type="text/javascript"></script>
 -->
-<div class="header">
-<!--	<center> <img src="../images/logo3.png" alt="logo" class="logo"/></center>-->
-</div>
+
 
 <p>&nbsp;</p>
 
