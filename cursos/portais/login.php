@@ -1,11 +1,11 @@
 <?php
 error_reporting(-1);
 echo "teste";
-require_once($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js_area.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
+//require_once($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
+//require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js_area.php");
+//require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
-$TipoDocumentoUnico = new TipoDocumentoUnico();
+//$TipoDocumentoUnico = new TipoDocumentoUnico();
 /*
 //$FolhaFrequencia = new FolhaFrequencia();
 
@@ -126,7 +126,8 @@ if  (($appN == 1) || ($appN == 3)) {
 </head>
 
 <body>
-<script src="<?php echo CAMINHO_CFG ?>js/login.js" language="javascript" type="text/javascript"></script>
+<!--<script src="<?php echo CAMINHO_CFG ?>js/login.js" language="javascript" type="text/javascript"></script>
+-->
 <div class="header">
 <!--	<center> <img src="../images/logo3.png" alt="logo" class="logo"/></center>-->
 </div>
@@ -146,7 +147,7 @@ if  (($appN == 1) || ($appN == 3)) {
             <p><div class="form-group">
             <?php if  ($appN != 4) { ?>
                 <label>Documento:</label>
-                <?php echo $TipoDocumentoUnico->selectTipoDocumentoUnicoSelect($teraDocumentoUnico, 1); ?>
+                <?php echo //$TipoDocumentoUnico->selectTipoDocumentoUnicoSelect($teraDocumentoUnico, 1); ?>
                 <span class="placeholder" style="display:none;color:red;">Campo Obrigatório</span>
             </div>
             </p>
