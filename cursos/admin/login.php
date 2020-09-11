@@ -31,7 +31,7 @@ if(($_POST['cpf'] != '') && ($_POST['password'] != '')){
 
 <body>
 <div class="header">
- 			 <center> <img src="upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
+ 			 <center> <img src="../upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
 	</div>	
 	<div id="divs_jquery"> </div>
 	<div id="centro"> <br />
