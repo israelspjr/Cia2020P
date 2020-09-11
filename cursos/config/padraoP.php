@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 session_start();
 ob_start();
 
@@ -36,6 +36,8 @@ define("MSG_CADATU", "Cadastro atualizado com sucesso.");
 define("MSG_CADDEL", "Cadastro deletado com sucesso.");
 
 require_once $_SERVER['DOCUMENT_ROOT']."/../_config.php";
+echo "teste3";
+echo $_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."class/";
 
 //AUTOLOAD DE CLASSES
 function __autoload($class) {
