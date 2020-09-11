@@ -52,4 +52,3 @@ function __autoload($class) {
 		
 }
 
-$Login = new Login();
