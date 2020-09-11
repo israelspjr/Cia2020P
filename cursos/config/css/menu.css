@@ -10,12 +10,12 @@
   min-width:1050px;
   height: 40px;
   background: #141414;
-  background: -moz-linear-gradient(top, #dd3a4b 0%, #141414 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dd3a4b), color-stop(100%, #141414));
-  background: -webkit-linear-gradient(top, #dd3a4b 0%, #141414 100%);
-  background: -o-linear-gradient(top, #dd3a4b 0%, #141414 100%);
-  background: -ms-linear-gradient(top, #dd3a4b 0%, #141414 100%);
-  background: linear-gradient(to bottom, #dd3a4b 0%, #141414 100%);
+  background: -moz-linear-gradient(top, #dd3a4b 0%, #84286B 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dd3a4b), color-stop(100%, #84286B));
+  background: -webkit-linear-gradient(top, #dd3a4b 0%, #84286B 100%);
+  background: -o-linear-gradient(top, #dd3a4b 0%, #84286B 100%);
+  background: -ms-linear-gradient(top, #dd3a4b 0%, #84286B 100%);
+  background: linear-gradient(to bottom, #dd3a4b 0%, #84286B 100%);
   border-bottom: 2px solid #f1f1f1;
 }
 #cssmenu:after,
