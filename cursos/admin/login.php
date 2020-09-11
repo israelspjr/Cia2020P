@@ -11,6 +11,7 @@ if(($_POST['cpf'] != '') && ($_POST['password'] != '')){
 	}
 }
 
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -18,7 +19,11 @@ if(($_POST['cpf'] != '') && ($_POST['password'] != '')){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo NOME_APP?></title>
-
+<style>
+	body{
+		background-image: url("../images/bcgrh.jpg");
+	}
+</style>
 </head>
 
 <body>
