@@ -82,7 +82,7 @@ session_destroy();
 
            <!-- COLUNA 1 --4-->
             	<div class="c4">
-            		<center> <a href="/cursos/mobile/rh/login.php"> <img src="images/iconrh.png" class="bot"> </a></center> 
+            		<center> <a href="/cursos/portais/login.php?app=4"> <img src="images/iconrh.png" class="bot"> </a></center> 
             	</div>
  </div>
  <div style="padding-top:100px;">
