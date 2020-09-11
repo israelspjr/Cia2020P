@@ -362,7 +362,7 @@ legend {
 	background: url('/cursos/images/_marca_dagua.png') no-repeat center center fixed;
 	min-width:850px;
 	min-height:600px;
-	padding-top:20px;
+	padding-top:0px;
 }
 
 #centro {
