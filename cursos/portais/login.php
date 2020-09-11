@@ -1,127 +1,7 @@
 <?php
 error_reporting(-1);
 echo "teste";
-//require_once($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
-//require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js_area.php");
-//require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
-//$TipoDocumentoUnico = new TipoDocumentoUnico();
-/*
-//$FolhaFrequencia = new FolhaFrequencia();
-
-//$password = $_REQUEST['password'];
-$password = EncryptSenha::B64_Encode($_REQUEST['password']);
-$documento = $_REQUEST['documentoUnico'];
-$senha_temp = $password2;
-$CPF = $_REQUEST['cpf'];
-$appN = $_REQUEST['app'];
-
-if ($documento == '') {
-	$documento = $CPF;	
-}
-
-if ($documento == '') {
-	$documento = $_POST['cnpj'];
-}
-
-
-$tipo = $_REQUEST['tipoDocumentoUnico_idTipoDocumentoUnico'];
-$idIntegranteGrupo = $_REQUEST['idIntegranteGrupo'];
-$idFolhaFrequencia = $_REQUEST['idFolhaFrequencia'];
-$responderPsa = $_REQUEST['responderPsa'];
-$idPlanoAcaoGrupo = $_REQUEST['idPlanoAcaoGrupo'];
-
-if ($appN == 1) {
-	$app = "Aluno";	
-
-if ($_SESSION['tipo'] >= 1) {
-	$_SESSION['idIntegranteGrupo'] = $idIntegranteGrupo;
-	$_SESSION['idFolhaFrequencia'] = $idFolhaFrequencia;
-
-}
-if ($responderPsa == 1) {
-	$_SESSION['responderPsa'] = 1;	
-	$_SESSION['idPlanoAcaoGrupo'] = $idPlanoAcaoGrupo;
-	
-}
-
-if ($documento != '' && $password != '') {
-	if (!$Login -> efetuarLogin_Aluno($documento, $password, 1, 1)) {		
-		Uteis::alertJava("Login ou senha inválidos.", true);
-	}
-}
-
-} elseif ($appN == 2) {
-	$app = "Professor";
-	
-	$novo = $_REQUEST['novo'];
-	if  (($novo != '') || ($novo == 1)) {
-		$Login->efetuarLogin_Prof($documento, $password, $tipo, 1, 1);
-	} else {
-		if ($documento != '' && $password != '' && $tipo != '') {
-    		if (!$Login->efetuarLogin_Prof($documento, $password, $tipo, 1, 0)) {
-        		Uteis::alertJava("Login ou senha inválidos.", true);
-	    }
-	}
-}
-} elseif ($appN == 3) {
-	$app = "Aluno Pré-cadastro";	
-	
-	if ($documento != '' && $password != '') {
-	if (!$Login -> efetuarLogin_pre($documento, $password)) {		
-		Uteis::alertJava("Login ou senha inválidos.", true);
-	}
-}
-	
-	
-} else {
-	$app = "RH";
-	
-	if ($documento != '' && $password != '') {
-	if (!$Login -> efetuarLogin_RH($documento, $password, 1, 1)) {
-		Uteis::alertJava("Login ou senha inválidos.", true);
-	}
-}
-}
-//echo $app;
-
-if ($tipo == 1) {
-	$_SESSION['tipo'] = 1;
-	
-} elseif ($tipo == 2) {
-	$_SESSION['tipo'] = 2;
-}
-
-if  (($appN == 1) || ($appN == 3)) {
-?>
-<style>
-	body{
-		background-image: url("../images/bcgaluno2.jpg");
-	}
-</style>
-<?php	
-} elseif ($appN == 2) {
-	$novoCadastro = " <p><a href=\"login.php?app=2&novo=1\"><button class=\"Bblue\">Não tem cadastro? Crie um agora</button></a>";
-?>
-<style>
-	body{
-		background-image: url("../images/bcgprof.jpg");
-	}
-</style>
-
-<?php	
-} else {
-?>	
-<style>
-	body{
-		background-image: url("../images/bcgrh.jpg");
-	}
-</style>
-<?php	
-}
-
-//var_dump($_SESSION);
-*/
 ?>	
 </head>
 
@@ -147,7 +27,7 @@ if  (($appN == 1) || ($appN == 3)) {
             <p><div class="form-group">
             <?php if  ($appN != 4) { ?>
                 <label>Documento:</label>
-                <?php echo //$TipoDocumentoUnico->selectTipoDocumentoUnicoSelect($teraDocumentoUnico, 1); ?>
+                <?php //echo $TipoDocumentoUnico->selectTipoDocumentoUnicoSelect($teraDocumentoUnico, 1); ?>
                 <span class="placeholder" style="display:none;color:red;">Campo Obrigatório</span>
             </div>
             </p>
