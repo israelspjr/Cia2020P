@@ -4,10 +4,13 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 
 $msg = 0;
 if(isset($_POST)){
-    $doc = mysqli_real_escape_string($_POST['documentoUnico']);
-    $nasc = mysqli_real_escape_string($_POST['nasc']);
-    $senha = mysqli_real_escape_string($_POST['password']);
-
+    $doc = $_POST['documentoUnico'];
+    $nasc = $_POST['nasc'];
+    $senha = $_POST['password'];
+	echo $doc;
+	echo $nasc;
+	echo $senha;
+	
     if (isset($doc) AND isset($nasc) AND isset($senha)){
         $data = Uteis::gravarData($nasc);
         $senhaAcesso = EncryptSenha::B64_Encode($senha);
