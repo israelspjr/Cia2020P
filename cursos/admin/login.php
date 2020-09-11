@@ -24,6 +24,7 @@ if(($_POST['cpf'] != '') && ($_POST['password'] != '')){
 		background-image: url("../images/bcgrh.jpg");
 	}
 </style>
+<script src="<?php echo CAMINHO_CFG ?>js/login.js" language="javascript" type="text/javascript"></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@ if(($_POST['cpf'] != '') && ($_POST['password'] != '')){
 	<div id="centro"> <br />
     <div id="alertas"></div>
   
-  <div class="row">
+  <!--<div class="row">-->
 		<div style="width:100%;    padding: 10px;">
 			<div class="login-panel panel panel-default">
           			<div class="toplogin">Área administrativa</div>
