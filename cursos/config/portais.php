@@ -1,4 +1,6 @@
 <?php
+echo "teste2";
+/*
 require_once "padraoP.php";
 
 define("CAMINHO_UNICO", "/cursos/portais/");
@@ -12,11 +14,11 @@ define("CAMINHO_BH", CAMINHO_MODULO . "bancoHoras/");
 
 $Login = new Login();
 
-if ($Login -> verificarLogin_Unico() /*&& $pgUnico*/) {
-	echo "teste";
+if ($Login -> verificarLogin_Unico() /*&& $pgUnico*/ //) {
+/*	echo "teste";
    header('Location:/cursos/portais/index.php');
 } elseif (!($Login -> verificarLogin_Unico()) && ($pgUnico == 1)) {
    echo "teste@";
    echo '<meta http-equiv="refresh" content="0;url=/cursos/">';
-}
+}*/
 ?>
