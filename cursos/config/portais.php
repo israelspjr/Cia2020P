@@ -1,8 +1,8 @@
 <?php
 echo "teste2";
-/*
-require_once "padraoP.php";
 
+require_once "padraoP.php";
+/*
 define("CAMINHO_UNICO", "/cursos/portais/");
 define("CAMINHO_MODULO", CAMINHO_UNICO . "modulos/");
 define("CAMINHO_CONFIG", CAMINHO_MODULO . "configuracoes/");

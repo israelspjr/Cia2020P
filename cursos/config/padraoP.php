@@ -34,7 +34,8 @@ define("CAMINHO_VER_DM", $_SERVER['SERVER_NAME']."/cursos/demonstrativo/");
 define("MSG_CADNEW", "Cadastro efetuado com sucesso.");
 define("MSG_CADATU", "Cadastro atualizado com sucesso.");
 define("MSG_CADDEL", "Cadastro deletado com sucesso.");
-
+echo  "teste3";
+/*
 require_once $_SERVER['DOCUMENT_ROOT']."/../_config.php";
 
 //AUTOLOAD DE CLASSES
