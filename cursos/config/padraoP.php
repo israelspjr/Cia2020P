@@ -36,14 +36,11 @@ define("MSG_CADATU", "Cadastro atualizado com sucesso.");
 define("MSG_CADDEL", "Cadastro deletado com sucesso.");
 
 require_once $_SERVER['DOCUMENT_ROOT']."/../_config.php";
-echo "teste3";
-echo $_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."class/";
 
 //AUTOLOAD DE CLASSES
 function __autoload($class) {
 	
 	$caminhoClass = $_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."class/".$class.".class.php";
-	echo $caminhoClass;	
 	if( file_exists($caminhoClass) ){ 
 	
 		require_once $caminhoClass;

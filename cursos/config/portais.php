@@ -2,7 +2,7 @@
 echo "teste2";
 
 require_once "padraoP.php";
-/*
+
 define("CAMINHO_UNICO", "/cursos/portais/");
 define("CAMINHO_MODULO", CAMINHO_UNICO . "modulos/");
 define("CAMINHO_CONFIG", CAMINHO_MODULO . "configuracoes/");
@@ -13,7 +13,7 @@ define("CAMINHO_PAG", CAMINHO_MODULO . "demonstrativoPagamento/");
 define("CAMINHO_BH", CAMINHO_MODULO . "bancoHoras/");
 
 $Login = new Login();
-
+/*
 if ($Login -> verificarLogin_Unico() /*&& $pgUnico*/ //) {
 /*	echo "teste";
    header('Location:/cursos/portais/index.php');
