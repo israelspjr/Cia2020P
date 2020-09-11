@@ -1,13 +1,16 @@
 <?php
+$pgLogin = true;
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/css.php");
 require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/js.php");
 
 if(($_POST['cpf'] != '') && ($_POST['password'] != '')){	
+	echo "teste";
 	if(!$Login->efetuarLogin($_POST['cpf'], EncryptSenha::B64_Encode($_POST['password']))){ 			
 		Uteis::alertJava("Login ou senha inválidos.", true);
 	}
 }
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
