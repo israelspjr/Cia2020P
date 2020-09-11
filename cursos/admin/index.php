@@ -3,6 +3,10 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/admin.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
 
+$Configuracoes = new Configuracoes();
+
+$config = $Configuracoes->selectConfig();
+
 if($_SESSION['idFuncionario_SS']==""){
     session_destroy();
 }
@@ -13,6 +17,7 @@ if($_SESSION['idFuncionario_SS']==""){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo NOME_APP?></title>
+<link rel="shortcut icon" href="upload/imagem/empresa/<?php echo $config[0]['favIcon'];?>">
 <script>
 	verificaNovoAviso('/cursos/admin/verificaAviso.php');
 </script>
