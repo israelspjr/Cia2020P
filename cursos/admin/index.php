@@ -1,8 +1,8 @@
 <?php
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/admin.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
 
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/admin.php");
 if($_SESSION['idFuncionario_SS']==""){
     session_destroy();
 }
