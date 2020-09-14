@@ -105,9 +105,9 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
     <input type="file" id="add_file" name="file" />
   </form>
 
-<div class="conteudo_nivel">
+<!--<div class="conteudo_nivel">
   <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
-
+-->
     <legend>Folha de frequência</legend>
     
     <p>Grupo: <strong><?php echo $PlanoAcaoGrupo->getNomeGrupo($idPlanoAcaoGrupo)?></strong></p>
@@ -559,4 +559,4 @@ $('#add_file').on('change', function(){
 		
   </script>
 <?php }?>
-</div>
+<!--</div>-->
