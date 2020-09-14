@@ -76,7 +76,7 @@ class Login extends Database {
 	function efetuarLogin_Aluno($documentoUnico, $senhaAcesso, $mobile, $portalUnico = 0) {
        $Log = new Log();
 		$sql = " SELECT idClientePf, nomeExibicao, documentoUnico, senhaAcesso FROM clientePf 
-		WHERE tipoCliente_idTipoCliente = 3 AND inativo = 0 AND excluido = 0 AND documentoUnico = " . $this -> gravarBD($documentoUnico) . " AND senhaAcesso = " . $this -> gravarBD($senhaAcesso) . " ";
+		WHERE tipoCliente_idTipoCliente = 3 AND inativo = 0 AND excluido = 0 AND documentoUnico = '" .$documentoUnico . "' AND senhaAcesso = '" . $senhaAcesso . "' ";
 		echo $sql;
 		$rs = $this -> query($sql);
 		
