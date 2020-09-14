@@ -370,12 +370,7 @@ legend {
 	/*height:94%;	
 	min-height:590px;	*/
 }
-.nomeAluno {
-	width:300px;
-	float: left;
-	text-align: center;
-	line-height: 36px;
-}
+
 .logoPos {
 	margin-left: auto;
     margin-right: auto;
@@ -826,6 +821,13 @@ a:active{
 		padding-top:20px;
 		float:left;
 	}
+	
+	.nomeAluno {
+		width:300px;
+		float: left;
+		text-align: center;
+		line-height: 36px;
+	}
 	}
 	
 	@media (min-width:768px) {
@@ -846,7 +848,14 @@ a:active{
 		width:50%;
 		padding-top:20px;
 		float:left;
-	}	
+	}
+	.nomeAluno {
+		width:300px;
+		float: left;
+		text-align: center;
+		line-height: 10px;
+	}
+		
 	}
 	.c1{
 		
