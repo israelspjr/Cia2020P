@@ -111,8 +111,8 @@ if ($appN == 1) {
 
 </style>
 <div class="header">
-<span style="width:300px;float: left;"><a class="bemvindo" href="index.php" >BEM-VINDO(A)  <br><span><?php echo $_SESSION['nome_SS'] ?></span></a></span>
- <img src="../upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/>
+<span style="width:300px;float: left;float: left;text-align: center;"><a class="bemvindo" href="index.php" >BEM-VINDO(A)  <br><span><?php echo $_SESSION['nome_SS'] ?></span></a></span>
+ <img src="../upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo" style="text-align:center;"/>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
