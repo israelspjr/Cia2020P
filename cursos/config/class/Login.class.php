@@ -77,7 +77,7 @@ class Login extends Database {
        $Log = new Log();
 		$sql = " SELECT idClientePf, nomeExibicao, documentoUnico, senhaAcesso FROM clientePf 
 		WHERE tipoCliente_idTipoCliente = 3 AND inativo = 0 AND excluido = 0 AND documentoUnico = " . $this -> gravarBD($documentoUnico) . " AND senhaAcesso = " . $this -> gravarBD($senhaAcesso) . " ";
-	//	echo $sql;
+		echo $sql;
 		$rs = $this -> query($sql);
 		
 		if ($result = mysqli_fetch_array($rs)) {
