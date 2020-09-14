@@ -370,6 +370,12 @@ legend {
 	/*height:94%;	
 	min-height:590px;	*/
 }
+.nomeAluno {
+	width:300px;
+	float: left;
+	text-align: center;
+	line-height: 36px;
+}
 
 .img_loading {
 	cursor: wait;
