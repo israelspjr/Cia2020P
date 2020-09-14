@@ -101,8 +101,8 @@ $appN = $_SESSION['appN'];
   </div>
 </div>
 <script>
-tabelaDataTable('tb_lista_grupos', 'simples');
-tabelaDataTable('tb_lista_grupos_antigos', 'simples');
+//tabelaDataTable('tb_lista_grupos', 'simples');
+//tabelaDataTable('tb_lista_grupos_antigos', 'simples');
 
 function mostrar() {
 document.getElementById("antigo").style.display = "block";	
