@@ -91,7 +91,7 @@ class Database {
 
 	function gravarBD($texto) {
 
-		$res =  mysqli_real_escape_string(trim($texto));
+		$res =  trim($texto);
    //     echo $res;
 		//mysql_real_escape_string
 
