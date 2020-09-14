@@ -56,7 +56,7 @@ foreach ($valor as $value) {
 
 <link rel="s/tylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
 <script src="../config/js/jquery.min.js"></script>
-<script src="../config/js/dataTable/jquery.dataTables.min.js" type="text/javascript"></script>
+<!--<script src="../config/js/dataTable/jquery.dataTables.min.js" type="text/javascript"></script>-->
 <script src="../config/js/Chart.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
