@@ -9,8 +9,8 @@ $idPlanoAcaoGrupo = $_REQUEST['idPlanoAcaoGrupo'];
 $valorX = $PlanoAcaoGrupo->getTodosPAG($idPlanoAcaoGrupo);
 ?>
 
-<div class="conteudo_nivel">
-  <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
+<!--<div class="conteudo_nivel">
+  <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>-->
   <fieldset>
     <legend>Folha de frequência</legend>
     <p>Grupo: <strong><?php echo $PlanoAcaoGrupo->getNomeGrupo($idPlanoAcaoGrupo)?></strong></p>
@@ -40,4 +40,5 @@ $valorX = $PlanoAcaoGrupo->getTodosPAG($idPlanoAcaoGrupo);
   <script>
    // tabelaDataTable('tb_lista_grupos_Mes', 'ordenaColuna');
     </script> 
-</div>
+<!--</div>
+-->
