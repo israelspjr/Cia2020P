@@ -186,9 +186,9 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
         </button>
       </div>
       <div class="modal-body">
-   <div class="conteudo_nivel" style="z-index: 3002;">
+ <!--  <div class="conteudo_nivel" style="z-index: 3002;">
   <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
-  
+  -->
   <fieldset>  
   <center><legend>Pesquisa de satisfação</legend></center>
   
