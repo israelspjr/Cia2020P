@@ -17,7 +17,7 @@ $documento = $_REQUEST['documentoUnico'];
 $senha_temp = $password2;
 $CPF = $_REQUEST['cpf'];
 $appN = $_REQUEST['app'];
-echo $appN;
+//echo $appN;
 
 if ($documento == '') {
 	$documento = $CPF;	
@@ -49,8 +49,8 @@ if ($responderPsa == 1) {
 }
 
 if ($documento != '' && $password != '') {
-	echo $documento;
-	echo $password;
+//	echo $documento;
+//	echo $password;
 	if (!$Login -> efetuarLogin_Aluno($documento, $password, 1, 1)) {		
 		Uteis::alertJava("Login ou senha inválidos.", true);
 	}
