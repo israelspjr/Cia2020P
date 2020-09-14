@@ -38,6 +38,6 @@ $valorX = $PlanoAcaoGrupo->getTodosPAG($idPlanoAcaoGrupo);
     </div>
   </fieldset>
   <script>
-    tabelaDataTable('tb_lista_grupos_Mes', 'ordenaColuna');
+   // tabelaDataTable('tb_lista_grupos_Mes', 'ordenaColuna');
     </script> 
 </div>
