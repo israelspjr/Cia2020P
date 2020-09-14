@@ -125,7 +125,7 @@ if  (($appN == 1) || ($appN == 3)) {
 //var_dump($_SESSION);
 
 ?>	
-<link rel="shortcut icon" href="upload/imagem/empresa/<?php echo $config[0]['favIcon'];?>">
+<link rel="shortcut icon" href="../upload/imagem/empresa/<?php echo $config[0]['favIcon'];?>">
 </head>
 
 <body>
