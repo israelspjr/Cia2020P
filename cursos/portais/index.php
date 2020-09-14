@@ -4,8 +4,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
+$Configuracoes = new Configuracoes();
 $FolhaFrequencia = new FolhaFrequencia();
 $NewsProfessor = new NewsProfessor();
+
+$config = $Configuracoes->selectConfig();
 	
 if($_SESSION['logado']==""){
     session_destroy();
@@ -51,7 +54,7 @@ foreach ($valor as $value) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="../images/_favicon.ico" sizes="32x32">
+<link rel="shortcut icon" href="../upload/imagem/empresa/<?php echo $config[0]['favIcon'];?>">
 <title>Portal </title>
 
 <link rel="s/tylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
