@@ -823,10 +823,10 @@ a:active{
 	}
 	
 	.nomeAluno {
-		width:300px;
-		float: left;
-		text-align: center;
-		line-height: 36px;
+		width: 100%;
+    	float: left;
+    	text-align: center;
+    	/* line-height: 36px;*/
 	}
 	}
 	
@@ -853,7 +853,7 @@ a:active{
 		width:300px;
 		float: left;
 		text-align: center;
-		line-height: 10px;
+		line-height: 36px;
 	}
 		
 	}
