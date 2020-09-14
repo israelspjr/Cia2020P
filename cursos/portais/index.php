@@ -112,7 +112,6 @@ if ($appN == 1) {
 </style>
 <div class="header">
  <center> <img src="../upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
-<div>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -127,7 +126,8 @@ if ($appN == 1) {
 			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
-</div>	
+</div>
+</div>
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<?php require('menu.php'); ?>
 </div><!--/.sidebar-->
