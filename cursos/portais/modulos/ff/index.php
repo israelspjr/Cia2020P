@@ -7,7 +7,7 @@ $PlanoAcaoGrupo = new PlanoAcaoGrupo();
 $PlanoAcao = new PlanoAcao();
 $Relatorio = new Relatorio();
 
-$caminhoAbrir = "modulos/ff/resourceHTML/grupoMes.php";
+$caminhoAbrir = "modulos/ff/grupoMes.php";
 $caminhoAtualizar = "modulos/ff/index.php";
 $ondeAtualiza = "#centro";	
 
