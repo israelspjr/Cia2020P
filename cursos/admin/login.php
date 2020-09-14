@@ -9,7 +9,7 @@ $Configuracoes = new Configuracoes();
 $config = $Configuracoes->selectConfig();
 
 if(($_POST['cpf'] != '') && ($_POST['password'] != '')){	
-	echo "teste";
+//	echo "teste";
 	if(!$Login->efetuarLogin($_POST['cpf'], EncryptSenha::B64_Encode($_POST['password']))){ 			
 		Uteis::alertJava("Login ou senha inválidos.", true);
 	}
