@@ -482,7 +482,7 @@ class PlanoAcao extends Database {
         $PerfilProfessor = new OpcaoAtividadeExtraProfessorClientePf();
         $OpcaoDia = new OpcaoDia();
         $OpcaoDiaPlanoAcao = new OpcaoDiaPlanoAcao();
-        $kitMaterial = new KitMaterial();
+     //   $kitMaterial = new KitMaterial();
 		$TipoQualidadeComunicacao = new TipoQualidadeComunicacao();
 		$PlanoAcaoGrupo = new PlanoAcaoGrupo();
 		$RegistroDeAnotacoes = new RegistroDeAnotacoes();

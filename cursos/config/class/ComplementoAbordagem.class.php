@@ -60,7 +60,7 @@ class ComplementoAbordagem extends Database {
 	function addComplementoAbordagem() {
 		$sql = "INSERT INTO ComplementoAbordagem (item, inativo, padrao, nome, excluido) VALUES ($this->item, $this->inativo, $this->padrao, $this->nome, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysql_insert_id($this -> connect);
+		return mysqli_insert_id($this -> connect);
 	}
 
 	/**
@@ -103,9 +103,9 @@ class ComplementoAbordagem extends Database {
 	function selectComplementoAbordagemTr($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "", $idPai = "", $caminhoModulo = "") {
 		$sql = "SELECT SQL_CACHE idComplementoAbordagem, item, inativo, padrao, nome, excluido FROM ComplementoAbordagem " . $where;
 		$result = $this -> query($sql);
-		if (mysql_num_rows($result) > 0) {
+		if (mysqli_num_rows($result) > 0) {
 			$html = "";
-			while ($valor = mysql_fetch_array($result)) {
+			while ($valor = mysqli_fetch_array($result)) {
 				$html .= "<tr>";
 
 				$idComplementoAbordagem = $valor['idComplementoAbordagem'];
@@ -134,7 +134,7 @@ class ComplementoAbordagem extends Database {
 		$html = "<select id=\"idComplementoAbordagem\" name=\"idComplementoAbordagem\" class=\"" . $classes . "\" >";
 		$html .= "<option value=\"\">Selecione</option>";
 
-		while ($valor = mysql_fetch_array($result)) {
+		while ($valor = mysqli_fetch_array($result)) {
 			$selecionado = $idAtual == $valor['idComplementoAbordagem'] ? "selected=\"selected\"" : "";
 			$padrao = $valor['padrao'] ? " (padrão)" : "";
 			$html .= "<option " . $selecionado . " value=\"" . $valor['idComplementoAbordagem'] . "\">" . $valor['nome'] . $padrao . "</option>";
@@ -153,14 +153,14 @@ class ComplementoAbordagem extends Database {
 
     $PlanoAcaoComplemento = new PlanoAcaoComplemento();
 
-    if (mysql_num_rows($result) > 0) {
+    if (mysqli_num_rows($result) > 0) {
       $html = "";
 
       //CONSULTA SE HÁ ALGUM complemento cadastrado
       $where = " WHERE planoAcao_idPlanoAcao = " . $idPlanoAcao;
       $Acompanhamento = $PlanoAcaoComplemento -> selectPlanoAcaoComplemento($where);
 
-      while ($valor = mysql_fetch_array($result)) {
+      while ($valor = mysqli_fetch_array($result)) {
 
         if ($Acompanhamento) {
           $where = " WHERE planoAcao_idPlanoAcao = " . $idPlanoAcao . " AND complementoAbordagem_idComplementoAbordagem = " . $valor['idComplementoAbordagem'];
