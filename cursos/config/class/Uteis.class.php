@@ -45,7 +45,7 @@ class Uteis {
 	require_once 'mailer/class.smtp.php';
 
     $mailer = new PHPMailer();
-	self:pr($mailer);
+	self::pr($mailer);
 	self::pr($config);
     if($assunto !="ERRO SISTEMA" && $assunto!="Recuperação de senha"){
    //     $adm[] = array('nome'=>'Contato Companhia de Idiomas','email'=>$_SESSION['email']);
@@ -132,7 +132,7 @@ class Uteis {
 	}
 	
 		
-	Uteis::pr($mailer);
+//	Uteis::pr($mailer);
 	
 	
     $enviado = $mailer -> Send();
