@@ -544,7 +544,7 @@ class PlanoAcao extends Database {
             $idIdioma = $valorProposta[0]['idioma_idIdioma'];
             $html .= "
 			<link href=\"" . CAMINHO_CFG . "css/folha.css\" type=\"text/css\" rel=\"stylesheet\" media=\"all\" />
-			<div class=\"folhaP\" id=\"planoAcao_" . $idPlanoAcao . "\">";
+			<div class=\"folha\" id=\"planoAcao_" . $idPlanoAcao . "\">";
 
             //INF GERAL
             $html .= "<p class=\"titulo\" >Plano de ação número " . $idPlanoAcao . "</p>";
