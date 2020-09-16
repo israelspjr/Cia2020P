@@ -74,6 +74,7 @@ class Database {
 
 	function executeQuery($sql) {
 		$result = $this -> query($sql);
+		$array = "";
 		for ($i=0;$i<mysqli_num_rows($result);$i++) {
 			foreach($result as $key => $row)
 				{
