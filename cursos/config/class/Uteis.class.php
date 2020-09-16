@@ -41,10 +41,10 @@ class Uteis {
 	$config = new Configuracoes();
 	date_default_timezone_set('Etc/UTC');
 	self::pr($config);  
-    require_once 'mailer/PHPMailer.php';
+    require_once 'mailer/phpMailer.php';
 	
 	
-	$mail = new PHPMailer(true);
+	$mail = new phpMailer(true);
 	
 	
 
