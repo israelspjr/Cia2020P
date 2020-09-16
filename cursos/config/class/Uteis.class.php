@@ -47,12 +47,11 @@ class Uteis {
 	date_default_timezone_set('Etc/UTC');
 	
     $mailer = new PHPMailer();
-	self::pr($mailer);
 	self::pr($config);
-    if($assunto !="ERRO SISTEMA" && $assunto!="Recuperação de senha"){
+//    if($assunto !="ERRO SISTEMA" && $assunto!="Recuperação de senha"){
    //     $adm[] = array('nome'=>'Contato Companhia de Idiomas','email'=>$_SESSION['email']);
     //    array_push($copia,$adm);  
-     }
+ //    }
 	 
 	 if ($reply == '') {
 		define("FROM", $config[0]['emailEnvio']) ;
@@ -63,7 +62,7 @@ class Uteis {
       
 //    $mailer -> isSendmail(); //IsSMTP();
 	$mailer->isSMTP();
-    $mailer -> SMTPDebug = 2;
+    $mailer -> SMTPDebug = 3;
     $mailer -> SMTPSecure = 'ssl';
     $mailer -> SMTPAuth = true;
 	$mailer -> isHTML(true);
@@ -134,7 +133,7 @@ class Uteis {
 	}
 	
 		
-//	Uteis::pr($mailer);
+	Uteis::pr($mailer);
 	
 	
     $enviado = $mailer -> Send();
