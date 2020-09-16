@@ -94,7 +94,7 @@ class Login extends Database {
 		//		if ($portalUnico != 1) {
 		//			header('Location:/cursos/mobile/aluno/index.php');	
 		//		} else {
-					echo '<meta http-equiv="refresh" content="0;url=/cursos/portais/index.php">'; //header('Location:/cursos/portais/index.php');
+		//			echo '<meta http-equiv="refresh" content="0;url=/cursos/portais/index.php">'; //header('Location:/cursos/portais/index.php');
 			//	echo "teste3";
 		//		}
 				return true;
