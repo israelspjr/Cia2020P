@@ -91,6 +91,7 @@ class Login extends Database {
                 $_SESSION['idUsuario'] = $result['idClientePf'];
 				$_SESSION['appN'] = 1;
                 $Log -> Log('Login ClientePf', 0, "Login Efetuado com Sucesso usuário:".$documentoUnico." - senha:".EncryptSenha::B64_Decode($senhaAcesso),array("usuario"=>$_SESSION['usuario'],"idUsuario"=>$_SESSION['idUsuario']));
+				header('Location:/cursos/portais/index.php');
 		//		if ($portalUnico != 1) {
 		//			header('Location:/cursos/mobile/aluno/index.php');	
 		//		} else {
