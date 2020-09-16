@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 class Uteis {
 
   function __construct() {
@@ -39,10 +40,10 @@ class Uteis {
 	  
 	$config = new Configuracoes();
 	date_default_timezone_set('Etc/UTC');
-	  
+	self::pr($config);  
     require_once 'mailer/PHPMailer.php';
 	
-	self::pr($config);
+	
 	$mail = new PHPMailer(true);
 	
 	
