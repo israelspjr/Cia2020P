@@ -19,6 +19,7 @@ $posicao = $_REQUEST['posicao'];
 $obs = $_REQUEST['obs'];
 
 $where = " WHERE clientePf_idClientePf = " . $_SESSION['idClientePf_SS'] . " AND planoAcaoGrupo_idPlanoAcaoGrupo = $idPlanoAcaoGrupo ";
+echo $where;
 $rsIntegranteGrupo = $IntegranteGrupo -> selectIntegranteGrupo($where);
 $idIntegranteGrupo = $rsIntegranteGrupo[0]['idIntegranteGrupo'];
 
