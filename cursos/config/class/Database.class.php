@@ -75,11 +75,13 @@ class Database {
 	function executeQuery($sql) {
 		$result = $this -> query($sql);
 		$array = "";
+		if (mysqli_num_rows > 0) {
 		for ($i=0;$i<mysqli_num_rows($result);$i++) {
 			foreach($result as $key => $row)
 				{
 					$array[$key] = $row;
 				}
+			}
 		}
 
 /*		for ($i = 0; $i < $this -> count($result); $i++) {
