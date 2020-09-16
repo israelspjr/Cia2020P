@@ -202,11 +202,11 @@ class Login extends Database {
         }
      
 		if ($redireciona == true) {		
-		if ($mobile == 1) {
-			header('Location:/cursos/mobile');	
-		} else {
+	//	if ($mobile == 1) {
+	//		header('Location:/cursos/mobile');	
+	//	} else {
 			header('Location:/cursos');
-		}
+	//	}
 		}
 	}
 
