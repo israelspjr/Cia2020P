@@ -171,7 +171,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
         <label>Envie uma observação para o seu gerente:</label>
         <textarea name="obs" id="obs" cols="40" rows="5"></textarea>
       </p>
-      <button class="Bblue" onclick="enviado();postForm('form_cconcordoFF', '<?php echo "modulos/ff/gravaAprovacao.php"?>');"> Enviar</button> 
+      <button class="Bblue" onclick="postForm('form_cconcordoFF', '<?php echo "modulos/ff/gravaAprovacao.php"?>');"> Enviar</button> 
       <button class="button gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/ff/index.php', '#centro')"> Fechar</button>
     </form>
     
