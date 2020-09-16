@@ -48,29 +48,29 @@ class Uteis {
      }
 	 
 	 if ($reply == '') {
-		define("FROM", "envio@companhiadeidiomas.com.br") ;
+		define("FROM", $config[0]['emailEnvio']) ;
 	 } else {
 		 define("FROM", $reply);
 		 
 	 }
       
-    $mailer -> isSendmail(); //IsSMTP();
-//	$mailer->isSMTP();
+//    $mailer -> isSendmail(); //IsSMTP();
+	$mailer->isSMTP();
    $mailer -> SMTPDebug = 2;
  //   $mailer -> SMTPSecure = 'ssl';
     $mailer -> SMTPAuth = true;
 	$mailer -> isHTML(true);
-	if ($from == '') {
-		$mailer->setFrom(FROM, utf8_decode(FROMNAME));
-		$mailer -> Username = USERNAME;
-	} else {
-		$mailer->setFrom(FROM, $from);
-		$mailer -> Username = USERNAME;
-	}
+//	if ($from == '') {
+		$mailer->setFrom(FROM, utf8_decode($config[0]['emailEnvio']));
+		$mailer -> Username = $config[0]['emailEnvio'];
+//	} else {
+//		$mailer->setFrom(FROM, $from);
+//		$mailer -> Username = USERNAME;
+//	}
     
-    $mailer -> Port = 587;
-    $mailer -> Host = 'smtp.companhiadosidiomas.com.br';
-    $mailer -> Password = PASSWORD;
+    $mailer -> Port = $config[0]['porta'];
+    $mailer -> Host = $config[0]['smtp'];
+    $mailer -> Password = $config[0]['senhaEmail'];
 	if ($reply == '') {
 		$mailer -> AddReplyTo(FROM, "Envio");
 	} else {
@@ -220,7 +220,7 @@ class Uteis {
 								<tbody>
 									<tr>
 										<td style=\"text-align: center\"> 
-											<img src=\"" . CAMINHO_IMG2 . "_cabecalho.png\" width=\"400\"/>
+											<img src=\"" . CAMINHO_IMG ."/".$config[0]['cabecalho']."\" width=\"400\"/>
 										</td>
 									</tr>
 								</tbody>
@@ -243,7 +243,7 @@ class Uteis {
 						</tr>
 						<tr>
 							<td class=\"rodape\">												
-							<img alt=\"Companhia de Idiomas\" border=\"0\" src=\"" . CAMINHO_IMG2 . "_rodape.png\" width=\"650\"/></a>
+							<img alt=\"Companhia de Idiomas\" border=\"0\" src=\"" . CAMINHO_IMG ."/". $config[0]['rodape']."\" width=\"650\"/></a>
 							</td>
 						</tr>
 					</tbody>
@@ -870,7 +870,7 @@ return "<style>body{
 								<tbody>
 									<tr>
 										<td style=\"text-align: center\"> 
-											<img src=\"" . CAMINHO_IMG2 . "_cabecalho.png\" width=\"400\" />
+											<img src=\"" . CAMINHO_IMG . "/".$config[0]['cabecalho']." width=\"400\" />
 										</td>
 									</tr>
 								</tbody>
