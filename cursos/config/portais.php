@@ -14,8 +14,8 @@ $Login = new Login();
 
 
 if ($Login -> verificarLogin_Unico() && $pgUnico ) {
-   header('Location:/cursos/portais/index.php');
+//   header('Location:/cursos/portais/index.php');
 } elseif (!($Login -> verificarLogin_Unico()) && ($pgUnico == 1)) {
-   echo '<meta http-equiv="refresh" content="0;url=/cursos/">';
+//   echo '<meta http-equiv="refresh" content="0;url=/cursos/">';
 } 
 ?>
