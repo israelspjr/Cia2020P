@@ -59,6 +59,7 @@ if ($posicao == "2") {
   $arrayRetorno['mensagem'] = "Contestação enviada com sucesso, aguarde o nosso contato.";
     
 }
+$arrayRetorno['mensagem'] = "Observação gravada, obrigado.";
 
 $arrayRetorno['fecharNivel'] = true;
 

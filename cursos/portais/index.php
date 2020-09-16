@@ -107,9 +107,6 @@ if ($appN == 1) {
 }
 ?>
 <body>
-<style>
-
-</style>
 <div class="header">
 <span class="nomeAluno"><a class="bemvindo" href="index.php" >BEM-VINDO(A)  <br><span><?php echo $_SESSION['nome_SS'] ?></span></a></span>
  <div class="logoPos"><img src="../upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo" style="text-align:center;"/></div>
@@ -144,6 +141,7 @@ if ($appN == 1) {
     	</div>
 
 	<div id="divs_jquery"></div>
+    <div id="alertas"></div>
     <div id="centro"></div>
 
 </div><!--/.row-->
