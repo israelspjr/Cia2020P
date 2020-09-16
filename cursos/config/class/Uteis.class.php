@@ -41,8 +41,10 @@ class Uteis {
 	  
     require_once 'mailer/class.phpmailer.php';
     require_once 'mailer/class.smtp.php';
-	self::pr($config);
+	
     $mailer = new PHPMailer();
+	self:pr($mailer);
+	self::pr($config);
     if($assunto !="ERRO SISTEMA" && $assunto!="Recuperação de senha"){
    //     $adm[] = array('nome'=>'Contato Companhia de Idiomas','email'=>$_SESSION['email']);
     //    array_push($copia,$adm);  
