@@ -8,8 +8,22 @@
 	margin-top:5px;
 }
 
+.folhaP{
+	font-family:Arial, Helvetica, sans-serif;
+	-webkit-print-color-adjust: exact; /*IMPRIMIR COM CORES NO CHROME*/
+	padding:1em;
+/*	border: thin solid #cccccc; */
+	width: 800px;
+	margin: auto;
+	margin-top:5px;
+}
+
 .folha p{
 	border-bottom: #E9E9E9 thin solid;
+}
+
+.folhaP p{
+	/*border-bottom: #E9E9E9 thin solid;*/
 }
 
 .folha .titulo{
