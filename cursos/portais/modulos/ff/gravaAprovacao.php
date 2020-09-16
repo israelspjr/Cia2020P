@@ -48,15 +48,15 @@ if ($posicao == "2") {
 		$nome = $Funcionario -> getNome($idFuncionario_gerente);
 		$email = $Funcionario -> getEmail($idFuncionario_gerente);
 		$msg = $msg_base.$TextoEmailPadrao -> getTexto("5");
-		$paraQuem = array("nome" => $nome, "email" => $email);
+		$paraQuem = array("nome" => $nome, "email" => "israel@companhiadeidiomas.com.br"); //$email);
 
 		$rs = Uteis::enviarEmail($assunto, $msg, $paraQuem, "");
 		
 	}
 
-  	$paraQuem2 = array("israel"=> "Companhia de idiomas", "email" => "envio@companhiadeidiomas.com.br");
-	$rs = Uteis::enviarEmail($assunto, $msg, $paraQuem2, "");
-	Uteis::pr($rs);
+//  	$paraQuem2 = array("israel"=> "Companhia de idiomas", "email" => "envio@companhiadeidiomas.com.br");
+//	$rs = Uteis::enviarEmail($assunto, $msg, $paraQuem2, "");
+//	Uteis::pr($rs);
   
   $arrayRetorno['mensagem'] = "Contestação enviada com sucesso, aguarde o nosso contato.";
     
