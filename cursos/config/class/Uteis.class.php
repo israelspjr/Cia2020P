@@ -37,13 +37,15 @@ class Uteis {
 
   //ENVIAR E-MAIL
   static function enviarEmail($assunto = "", $mensagem = "", $paraQuem = array(), $arquivos = array(), $copia = array(), $bcopia = array(), $emailMkt, $from = '', $reply = '') {
-	  
-	$config = new Configuracoes();
-	date_default_timezone_set('Etc/UTC');
-	self::pr($config);  
-    require_once 'mailer/class.phpmailer.php';
+	
+	require_once 'mailer/class.phpmailer.php';
 	require_once 'mailer/class.smtp.php';
-
+	  
+	$Configuracoes = new Configuracoes();
+	$config = $Configuracoes->selectConfig();
+	
+	date_default_timezone_set('Etc/UTC');
+	
     $mailer = new PHPMailer();
 	self::pr($mailer);
 	self::pr($config);
