@@ -38,7 +38,7 @@ class Uteis {
   static function enviarEmail($assunto = "", $mensagem = "", $paraQuem = array(), $arquivos = array(), $copia = array(), $bcopia = array(), $emailMkt, $from = '', $reply = '') {
 	  
 	  $config = new Configuracoes();
-	  self::pr($config);
+	  
     require_once 'mailer/class.phpmailer.php';
     require_once 'mailer/class.smtp.php';
     $mailer = new PHPMailer();
@@ -53,11 +53,11 @@ class Uteis {
 		 define("FROM", $reply);
 		 
 	 }
-      
+      self::pr($config);
 //    $mailer -> isSendmail(); //IsSMTP();
 	$mailer->isSMTP();
-   $mailer -> SMTPDebug = 2;
- //   $mailer -> SMTPSecure = 'ssl';
+    $mailer -> SMTPDebug = 2;
+    $mailer -> SMTPSecure = 'ssl';
     $mailer -> SMTPAuth = true;
 	$mailer -> isHTML(true);
 //	if ($from == '') {
