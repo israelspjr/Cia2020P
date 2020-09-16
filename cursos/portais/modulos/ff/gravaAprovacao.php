@@ -55,13 +55,14 @@ if ($posicao == "2") {
 
   	$paraQuem2 = array("israel"=> "Companhia de idiomas", "email" => "envio@companhiadeidiomas.com.br");
 	$rs = Uteis::enviarEmail($assunto, $msg, $paraQuem2, "");
+	Uteis::pr($rs);
   
   $arrayRetorno['mensagem'] = "Contestação enviada com sucesso, aguarde o nosso contato.";
     
 }
 $arrayRetorno['mensagem'] = "Observação gravada, obrigado.";
 
-$arrayRetorno['fecharNivel'] = true;
+//$arrayRetorno['fecharNivel'] = true;
 
 echo json_encode($arrayRetorno);
 ?>
