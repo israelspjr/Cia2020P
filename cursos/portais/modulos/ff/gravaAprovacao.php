@@ -39,10 +39,10 @@ if ($posicao == "2") {
 	<p>Grupo: $nomeGrupo.</p>
 	<p>Aluno: $nomeAluno.</p>
 	<p>Comentário: <br><strong> $obs </strong></br></p>";
-	
-	echo $assunto;
+
 	//COMUNICA O GERENTE SOBRE A FINALIZAÇÃO DA FF
 	$idFuncionario_gerente = $GerenteTem -> selectGerenteTem_porGrupo($idPlanoAcaoGrupo);
+	echo $idFuncionario_gerente;
 	if ($idFuncionario_gerente) {    
 		//EMAIL
 		$nome = $Funcionario -> getNome($idFuncionario_gerente);
