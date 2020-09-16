@@ -19,7 +19,6 @@ $posicao = $_REQUEST['posicao'];
 $obs = $_REQUEST['obs'];
 
 $where = " WHERE clientePf_idClientePf = " . $_SESSION['idClientePf_SS'] . " AND planoAcaoGrupo_idPlanoAcaoGrupo = $idPlanoAcaoGrupo ";
-echo $where;
 $rsIntegranteGrupo = $IntegranteGrupo -> selectIntegranteGrupo($where);
 $idIntegranteGrupo = $rsIntegranteGrupo[0]['idIntegranteGrupo'];
 
@@ -40,7 +39,8 @@ if ($posicao == "2") {
 	<p>Grupo: $nomeGrupo.</p>
 	<p>Aluno: $nomeAluno.</p>
 	<p>Comentário: <br><strong> $obs </strong></br></p>";
-
+	
+	echo $assunto;
 	//COMUNICA O GERENTE SOBRE A FINALIZAÇÃO DA FF
 	$idFuncionario_gerente = $GerenteTem -> selectGerenteTem_porGrupo($idPlanoAcaoGrupo);
 	if ($idFuncionario_gerente) {    
