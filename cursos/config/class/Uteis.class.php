@@ -42,9 +42,10 @@ class Uteis {
 	  
     require_once 'mailer/PHPMailer.php';
 	
+	self::pr($config);
 	$mail = new PHPMailer(true);
 	
-	self::pr($config);
+	
 
 try {
     //Server settings
