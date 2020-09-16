@@ -77,7 +77,7 @@ class Login extends Database {
        $Log = new Log();
 		$sql = " SELECT idClientePf, nomeExibicao, documentoUnico, senhaAcesso FROM clientePf 
 		WHERE tipoCliente_idTipoCliente = 3 AND inativo = 0 AND excluido = 0 AND documentoUnico = '" .$documentoUnico . "' AND senhaAcesso = '" . $senhaAcesso . "' ";
-		echo $sql;
+//		echo $sql;
 		$rs = $this -> query($sql);
 		
 		if ($result = mysqli_fetch_array($rs)) {
@@ -92,13 +92,7 @@ class Login extends Database {
 				$_SESSION['appN'] = 1;
                 $Log -> Log('Login ClientePf', 0, "Login Efetuado com Sucesso usuário:".$documentoUnico." - senha:".EncryptSenha::B64_Decode($senhaAcesso),array("usuario"=>$_SESSION['usuario'],"idUsuario"=>$_SESSION['idUsuario']));
 				header('Location:/cursos/portais/index.php');
-		//		if ($portalUnico != 1) {
-		//			header('Location:/cursos/mobile/aluno/index.php');	
-		//		} else {
-		//			echo '<meta http-equiv="refresh" content="0;url=/cursos/portais/index.php">'; //header('Location:/cursos/portais/index.php');
-			//	echo "teste3";
-		//		}
-				return true;
+					return true;
 			}
 		} else {
 			$sql = " SELECT idProfessor, nomeExibicao, documentoUnico, senha FROM professor 
@@ -122,8 +116,6 @@ class Login extends Database {
 				return true;
 			}
 		} 
-		
-		
         	$Log -> Log('Login ClientePf', 1, "Erro ao efetuar o Login usuário:".$documentoUnico." - senha:".EncryptSenha::B64_Decode($senhaAcesso));
 			return false;
 		}
@@ -203,11 +195,7 @@ class Login extends Database {
         }
      
 		if ($redireciona == true) {		
-	//	if ($mobile == 1) {
-	//		header('Location:/cursos/mobile');	
-	//	} else {
 			header('Location:/cursos');
-	//	}
 		}
 	}
 
