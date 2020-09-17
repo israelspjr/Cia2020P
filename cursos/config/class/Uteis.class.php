@@ -1,5 +1,4 @@
 <?php
-error_reporting(E_ALL);
 class Uteis {
 
   function __construct() {
