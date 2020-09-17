@@ -453,7 +453,7 @@ function relatorioFrequenciaPdf($where = "", $tipo, $excel = false, $FME, $frequ
      
       $result = $this->relatorioFrequencia_mensal($where,"","","", $tipoR); 
 	  
-	  Uteis::pr($result);
+//	  Uteis::pr($result);
 	  	  
       if ($result) {
       
