@@ -372,12 +372,12 @@ class PsaIntegranteGrupo extends Database {
 				$ondeAtu = "#div_lista_psa";
 				$html .= "<tr>";
 				
-				if ($mobile != 1) {
-				$onclick = " onclick=\"abrirNivelPagina(this, '" . CAMINHO_PSA . "form/perguntasPsa.php?id=" . $idPsaIntegranteGrupo . "&idIntegranteGrupo=" . $idIntegranteGrupo . "&idPlanoAcaoGrupo=".$idPlanoAcaoGrupo."', '$camAtu', '$ondeAtu')\" ";
-				} else {
-				$onclick = " onclick=\"zerarCentro();carregarModulo('modulos/psa/form/perguntasPsa.php?id=" . $idPsaIntegranteGrupo . "&idIntegranteGrupo=" . $idIntegranteGrupo . "&idPlanoAcaoGrupo=".$idPlanoAcaoGrupo."', '#centro')\" ";	
+			//	if ($mobile != 1) {
+			//	$onclick = " onclick=\"abrirNivelPagina(this, '" . CAMINHO_PSA . "form/perguntasPsa.php?id=" . $idPsaIntegranteGrupo . "&idIntegranteGrupo=" . $idIntegranteGrupo . "&idPlanoAcaoGrupo=".$idPlanoAcaoGrupo."', '$camAtu', '$ondeAtu')\" ";
+			//	} else {
+				$onclick = " onclick=\"zerarCentro();carregarModulo('modulos/psa/perguntasPsa.php?id=" . $idPsaIntegranteGrupo . "&idIntegranteGrupo=" . $idIntegranteGrupo . "&idPlanoAcaoGrupo=".$idPlanoAcaoGrupo."', '#centro')\" ";	
 					
-				}
+			//	}
 
 				$html .= "<td $onclick >" . Uteis::exibirData($valor['dataReferencia'])."</td>";
 				if ($aluno != 1)
