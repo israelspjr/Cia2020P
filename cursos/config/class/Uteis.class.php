@@ -224,7 +224,7 @@ class Uteis {
 								<tbody>
 									<tr>
 										<td style=\"text-align: center\"> 
-											<img src=\"".CAMINHO_UP."imagem/empresa/".$config[0]['cabecalho']."\" width=\"400\"/>
+											<img src=\"https://".$config[0]['site'].CAMINHO_UP."imagem/empresa/".$config[0]['cabecalho']."\" width=\"400\"/>
 										</td>
 									</tr>
 								</tbody>
@@ -247,7 +247,7 @@ class Uteis {
 						</tr>
 						<tr>
 							<td class=\"rodape\">												
-							<img alt=\"Companhia de Idiomas\" border=\"0\" src=\"".CAMINHO_UP."imagem/empresa/" .$config[0]['rodape']."\" width=\"650\"/></a>
+							<img alt=\"Companhia de Idiomas\" border=\"0\" src=\"https://".$config[0]['site'].CAMINHO_UP."imagem/empresa/" .$config[0]['rodape']."\" width=\"650\"/></a>
 							</td>
 						</tr>
 					</tbody>
