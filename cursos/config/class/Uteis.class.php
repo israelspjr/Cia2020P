@@ -45,7 +45,10 @@ class Uteis {
 	$config = $Configuracoes->selectConfig();
 	
 	date_default_timezone_set('Etc/UTC');
-	
+//	  define("HOST", "smtp.companhiadosidiomas.com.br");
+//  define("USERNAME", "smtp");
+//  define("PASSWORD", "smtp2004");
+//  define("FROMNAME", "Companhia de Idiomas - favor não responder este email");
     $mailer = new PHPMailer();
 //    if($assunto !="ERRO SISTEMA" && $assunto!="Recuperação de senha"){
    //     $adm[] = array('nome'=>'Contato Companhia de Idiomas','email'=>$_SESSION['email']);
@@ -62,10 +65,10 @@ class Uteis {
 //    $mailer -> isSendmail(); 
 	$mailer->isSMTP();
     $mailer -> SMTPDebug = 3;
-    $mailer -> SMTPSecure = 'ssl';
+//    $mailer -> SMTPSecure = 'ssl';
     $mailer -> SMTPAuth = true;
 	$mailer -> isHTML(true);
-	$mailer -> Username = $config[0]['emailEnvio'];
+	$mailer -> Username = 'smtp';
 	if ($from == '') {
 		$mailer->setFrom(FROM, $config[0]['emailEnvio']);
 		
@@ -74,9 +77,9 @@ class Uteis {
 //		$mailer -> Username = USERNAME;
 	}
     
-    $mailer -> Port = 465; //$config[0]['porta'];
-    $mailer -> Host = $config[0]['smtp'];
-    $mailer -> Password = $config[0]['senhaEmail'];
+    $mailer -> Port = 587; //$config[0]['porta'];
+    $mailer -> Host = 'smtp.companhiadosidiomas.com.br'; //$config[0]['smtp'];
+    $mailer -> Password = 'smtp2004'; //$config[0]['senhaEmail'];
 	if ($reply == '') {
 		$mailer -> AddReplyTo(FROM, $config[0]['nomeEmpresa']."-Não responder diretamente a esse email!");
 	} else {
