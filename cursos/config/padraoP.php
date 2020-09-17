@@ -24,6 +24,8 @@ define("CAMINHO_UP_ROOT", $_SERVER['DOCUMENT_ROOT']."/cursos/upload/");
 
 define("CAMINHO_IMG", "/cursos/images/");
 define("CAMINHO_IMG2", "https://".$_SERVER['SERVER_NAME']."/cursos/images/");
+define("CAMINHO_IMG3", "https://".$_SERVER['SERVER_NAME']."/cursos/upload/empresa/");
+
 
 define("CAMINHO_CFG", "/cursos/config/");	
 
