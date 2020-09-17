@@ -1196,7 +1196,7 @@ function GraficoFrequencia($where = "", $tipo) {
       $AcompanhamentoCurso = new AcompanhamentoCurso();
       $PeriodoAcompanhamento = new PeriodoAcompanhamentoCurso();
       $RelatorioDesempenho = new RelatorioDesempenho();
-      $KitMaterial = new KitMaterial();
+   //   $KitMaterial = new KitMaterial();
       $Montado = new MaterialMontadoPlanoAcao();
       $MaterialPlano = new MaterialDidaticPlanoAcao();
       $FolhaFrequencia = new FolhaFrequencia();
@@ -1330,7 +1330,7 @@ $sql .=	" AND C.dataAplicacao is not null ";
 
             $idFolhaFrequencia = $valorFF[0]['idFolhaFrequencia'];
 
-   		    $kit = $KitMaterial->AcompanhamentoPorKit($valor['idPlanoAcaoGrupo'], $idFolhaFrequencia, $abrir, $atualizar,$relatorio,1,0,1);
+   		//    $kit = $KitMaterial->AcompanhamentoPorKit($valor['idPlanoAcaoGrupo'], $idFolhaFrequencia, $abrir, $atualizar,$relatorio,1,0,1);
             $mont = $Montado->AcompanhamentoMaterialMontado($valor['idPlanoAcaoGrupo'], $idFolhaFrequencia, $abrir, $atualizar,$relatorio,1,0,1);
             $plan = $MaterialPlano->AcompanhamentoMaterialPlano($valor['idPlanoAcaoGrupo'], $idFolhaFrequencia, $abrir, $atualizar,$relatorio,1,1);
             if($kit!="") {
