@@ -77,8 +77,8 @@ class Uteis {
 //		$mailer -> Username = USERNAME;
 	}
     
-    $mailer -> Port = 587; //$config[0]['porta'];
-    $mailer -> Host = 'smtp.companhiadosidiomas.com.br'; //$config[0]['smtp'];
+    $mailer -> Port = $config[0]['porta'];
+    $mailer -> Host = $config[0]['smtp'];
     $mailer -> Password = 'smtp2004'; //$config[0]['senhaEmail'];
 	if ($reply == '') {
 		$mailer -> AddReplyTo(FROM, $config[0]['nomeEmpresa']."-Não responder diretamente a esse email!");
@@ -228,7 +228,7 @@ class Uteis {
 								<tbody>
 									<tr>
 										<td style=\"text-align: center\"> 
-											<img src=\"" . CAMINHO_IMG ."/".$config[0]['cabecalho']."\" width=\"400\"/>
+											<img src=\"" . CAMINHO_IMG .$config[0]['cabecalho']."\" width=\"400\"/>
 										</td>
 									</tr>
 								</tbody>
@@ -251,7 +251,7 @@ class Uteis {
 						</tr>
 						<tr>
 							<td class=\"rodape\">												
-							<img alt=\"Companhia de Idiomas\" border=\"0\" src=\"" . CAMINHO_IMG ."/". $config[0]['rodape']."\" width=\"650\"/></a>
+							<img alt=\"Companhia de Idiomas\" border=\"0\" src=\"" . CAMINHO_IMG .$config[0]['rodape']."\" width=\"650\"/></a>
 							</td>
 						</tr>
 					</tbody>
