@@ -68,7 +68,7 @@ $dataReferencia = Uteis::exibirData($rsPsaIntegranteGrupo[0]['dataReferencia']);
           
           <form id="form_clientepf_professor_<?php echo $idRespostaPsaProfessor.$idIntegranteGrupo?>" 
           class="validate psa" action="" method="post"  onsubmit="return false" >                        
-            <input type="hidden" name="action" value="<?php echo "modulos/psa/acao/gravarPsa.php?idRespostaPsaProfessor=".$idRespostaPsaProfessor?>" />
+            <input type="hidden" name="action" value="<?php echo "modulos/psa/gravarPsa.php?idRespostaPsaProfessor=".$idRespostaPsaProfessor?>" />
             <input type="hidden" name="psaProfessor_idPsaProfessor" value="<?php echo $psaProfessor_idPsaProfessor?>" />
             <p>
             <label>Resposta:
@@ -121,7 +121,7 @@ $dataReferencia = Uteis::exibirData($rsPsaIntegranteGrupo[0]['dataReferencia']);
           
           <form id="form_clientepf_regular_<?php echo $idRespostaPsaRegular.$idIntegranteGrupo?>" 
           class="validate psa" action="" method="post"  onsubmit="return false" >          
-            <input type="hidden" name="action" value="<?php echo "modulos/psa/acao/gravarPsa.php?idRespostaPsaRegular=".$idRespostaPsaRegular?>" />
+            <input type="hidden" name="action" value="<?php echo "modulos/psa/gravarPsa.php?idRespostaPsaRegular=".$idRespostaPsaRegular?>" />
             <input type="hidden" name="psaRegular_idPsa" value="<?php echo $psaRegular_idPsa?>" />
             <p>
               <label>Resposta: 
