@@ -61,7 +61,11 @@ class Uteis {
     $mailer -> isSendmail(); 
 //	$mailer->isSMTP();
 //    $mailer -> SMTPDebug =1;
+if ($config[0]['seguranca'] == '') {
 //    $mailer -> SMTPSecure = 'ssl';
+} else {
+	$mailer -> SMTPSecure = $config[0]['seguranca'];
+}
     $mailer -> SMTPAuth = true;
 	$mailer -> isHTML(true);
 	$mailer -> Username = $config[0]['emailEnvio'];
@@ -130,7 +134,7 @@ class Uteis {
 	} else {
 		$mailer -> Body = utf8_decode($mensagem);
 	}
-	Uteis::pr($mailer);
+//	Uteis::pr($mailer);
     $enviado = $mailer -> Send();
 	
  //exit;

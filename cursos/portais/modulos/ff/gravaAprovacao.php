@@ -48,7 +48,7 @@ if ($posicao == "2") {
 		$nome = $Funcionario -> getNome($idFuncionario_gerente);
 		$email = $Funcionario -> getEmail($idFuncionario_gerente);
 		$msg = $msg_base.$TextoEmailPadrao -> getTexto("5");
-		$paraQuem = array("nome" => $nome, "email" => "israel@companhiadeidiomas.com.br"); //$email);
+		$paraQuem = array("nome" => $nome, $email);
 
 		$rs = Uteis::enviarEmail($assunto, $msg, $paraQuem, "");
 		
