@@ -62,7 +62,7 @@ class Uteis {
 //    $mailer -> isSendmail(); 
 	$mailer->isSMTP();
     $mailer -> SMTPDebug = 3;
-    $mailer -> SMTPSecure = 'TLS';
+    $mailer -> SMTPSecure = 'ssl';
     $mailer -> SMTPAuth = true;
 	$mailer -> isHTML(true);
 	if ($from == '') {
@@ -73,7 +73,7 @@ class Uteis {
 		$mailer -> Username = USERNAME;
 	}
     
-    $mailer -> Port = $config[0]['porta'];
+    $mailer -> Port = 465; //$config[0]['porta'];
     $mailer -> Host = $config[0]['smtp'];
     $mailer -> Password = $config[0]['senhaEmail'];
 	if ($reply == '') {
