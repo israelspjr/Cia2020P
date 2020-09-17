@@ -1,10 +1,10 @@
 <?php
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 
 $Relatorio = new Relatorio();
 
-require_once "../acao/filtros.php";?>
+require_once "filtros.php";?>
 
 <div class="esquerda">
 <p>
