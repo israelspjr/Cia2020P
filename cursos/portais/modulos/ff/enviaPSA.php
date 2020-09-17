@@ -391,7 +391,7 @@ $html .= "<p>Obs: ".$obsComp."</p>";
 	
 	
   
-  $arrayRetorno['mensagem'] = "Contestação enviada com sucesso, aguarde o nosso contato.";
+  $arrayRetorno['mensagem'] = "Pesquisa enviada com sucesso, obrigado.";
 
 $arrayRetorno['fecharNivel'] = true;
 

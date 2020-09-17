@@ -397,7 +397,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
     </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="fecharPSA" data-dismiss="modal">Fechar</button>
+        <button type="button" class="button gray" id="fecharPSA" data-dismiss="modal">Fechar</button>
        </div>
     </div>
   </div>
