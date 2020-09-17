@@ -42,7 +42,7 @@ if ($posicao == "2") {
 
 	//COMUNICA O GERENTE SOBRE A FINALIZAÇÃO DA FF
 	$idFuncionario_gerente = $GerenteTem -> selectGerenteTem_porGrupo($idPlanoAcaoGrupo);
-	echo $idFuncionario_gerente;
+//	echo $idFuncionario_gerente;
 	if ($idFuncionario_gerente) {    
 		//EMAIL
 		$nome = $Funcionario -> getNome($idFuncionario_gerente);
