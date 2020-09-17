@@ -66,7 +66,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
 
            <div id="grupo_idAlunos" name="grupo_idAlunos">
    <div class="linha-inteira" >
-        <button class="Bblue" id="geraRel" onclick="postForm_relatorio('img_form_Grupos', 'tipoRel', 'form_rel_pf', '<?php echo "modulos/frequencia/frequencia.php"?>', '#res_rel')">Gerar relatório</button>        
+        <button class="Bblue" id="geraRel" onclick="postForm_relatorio('img_form_Grupos', 'tipoRel', 'form_rel_pf', '<?php echo "modulos/frequencia/frequencia.php"?>', 'res_rel')">Gerar relatório</button>        
       </div>
     </form>
   </div>
