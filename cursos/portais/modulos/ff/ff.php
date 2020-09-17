@@ -397,7 +397,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
     </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="button gray" id="fecharPSA" data-dismiss="modal">Fechar</button>
+        <button type="button" class="button gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/ff/index.php', '#centro')">Fechar</button>
        </div>
     </div>
   </div>
