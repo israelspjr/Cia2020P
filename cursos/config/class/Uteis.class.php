@@ -68,7 +68,7 @@ class Uteis {
 //    $mailer -> SMTPSecure = 'ssl';
     $mailer -> SMTPAuth = true;
 	$mailer -> isHTML(true);
-	$mailer -> Username = $config[0]['email'];
+	$mailer -> Username = $config[0]['emailEnvio'];
 	if ($from == '') {
 		$mailer->setFrom(FROM, $config[0]['email']);
 		
@@ -228,7 +228,7 @@ class Uteis {
 								<tbody>
 									<tr>
 										<td style=\"text-align: center\"> 
-											<img src=\"cursos/upload/".$config[0]['cabecalho']."\" width=\"400\"/>
+											<img src=\"cursos/upload/imagem".$config[0]['cabecalho']."\" width=\"400\"/>
 										</td>
 									</tr>
 								</tbody>
@@ -251,7 +251,7 @@ class Uteis {
 						</tr>
 						<tr>
 							<td class=\"rodape\">												
-							<img alt=\"Companhia de Idiomas\" border=\"0\" src=\"cursos/upload/" .$config[0]['rodape']."\" width=\"650\"/></a>
+							<img alt=\"Companhia de Idiomas\" border=\"0\" src=\"cursos/upload/imagem" .$config[0]['rodape']."\" width=\"650\"/></a>
 							</td>
 						</tr>
 					</tbody>
