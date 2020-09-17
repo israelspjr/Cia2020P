@@ -160,7 +160,7 @@ function finalizar() {
 	
 }
 
-ativarForm();
+//ativarForm();
 
 function gravarRespostas(){
 	
