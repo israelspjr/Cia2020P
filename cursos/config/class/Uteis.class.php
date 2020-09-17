@@ -130,7 +130,7 @@ class Uteis {
 	} else {
 		$mailer -> Body = utf8_decode($mensagem);
 	}
-	
+	Uteis::pr($mailer);
     $enviado = $mailer -> Send();
 	
  //exit;
@@ -147,6 +147,9 @@ class Uteis {
 
   //CORPO PADRÃO DOS E-MAILS ENVIADOS
   static function montarEmail($mensagem = "", $assunto = "") {
+	  
+	$Configuracoes = new Configuracoes();
+	$config = $Configuracoes->selectConfig();
 
     $mensagem_final = "
 		<html>

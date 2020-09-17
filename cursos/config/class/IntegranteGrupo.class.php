@@ -93,7 +93,7 @@ class IntegranteGrupo extends Database {
 		VALUES ($this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->clientePfIdClientePf, $this->envioPsa, $this->dataEntrada, $this->dataSaida, $this->dataSaidaDemonstrativo, $this->dataCadastro, $this->obs, $this->dataRetorno, $this->professorIdProfessor)";
 		//echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return mysqlii_insert_id($this -> connect);
 	}
 
 	/**
@@ -145,11 +145,11 @@ class IntegranteGrupo extends Database {
 	//	echo $sql;
 		$result = $this -> query($sql);
 
-		if (mysqli_num_rows($result) > 0) {
+		if (mysqlii_num_rows($result) > 0) {
 
 			$html = "";
 
-			while ($valor = mysqli_fetch_array($result)) {
+			while ($valor = mysqlii_fetch_array($result)) {
 				
 				$prazoPsa = $valor['envioPsa'];
 			
@@ -298,11 +298,11 @@ class IntegranteGrupo extends Database {
 
 		$result = $this -> query($sql);
 
-		if (mysqli_num_rows($result) > 0) {
+		if (mysqlii_num_rows($result) > 0) {
 
 			$html = "";
 
-			while ($valor = mysqli_fetch_array($result)) {
+			while ($valor = mysqlii_fetch_array($result)) {
 
 				$idIntegranteGrupo = $valor['idIntegranteGrupo'];
 				$idPlanoAcaoGrupo = $valor['planoAcaoGrupo_idPlanoAcaoGrupo'];
@@ -424,11 +424,11 @@ class IntegranteGrupo extends Database {
 //		echo $sql;
 		$result = $this -> query($sql);
 
-		if (mysqli_num_rows($result) > 0) {
+		if (mysqlii_num_rows($result) > 0) {
 
 			$html = "";
 
-			while ($valor = mysqli_fetch_array($result)) {
+			while ($valor = mysqlii_fetch_array($result)) {
 				
 				//Avaliações
 				
@@ -438,10 +438,10 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 
 				$result2 = $this -> query($sql2);
 				
-				if (mysql_num_rows($result2) > 0) {
+				if (mysqli_num_rows($result2) > 0) {
 					
 				$notas = "";	
-					while ($valor2 = mysql_fetch_array($result2)) {
+					while ($valor2 = mysqli_fetch_array($result2)) {
 						if ($valor2['nota'] != '') {
 	
 					$notas .= "<div>".$valor2['nome'].":<strong>".$valor2['nota']."</strong></div>";		
@@ -525,11 +525,11 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 		}
 			$result = $this -> query($sql);
 
-		if (mysqli_num_rows($result) > 0) {
+		if (mysqlii_num_rows($result) > 0) {
 
 			$html = "";
 
-			while ($valor = mysqli_fetch_array($result)) {
+			while ($valor = mysqlii_fetch_array($result)) {
 				
 				$idPlanoAcaoGrupo = $valor['planoAcaoGrupo_idPlanoAcaoGrupo'];
 				$idClientePf = $valor['clientePf_idClientePf'];
@@ -544,7 +544,7 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 		 $result2 = $this -> query($sql2);	
 		 
 		 $x =0;
-		 while ($valor2 = mysqli_fetch_array($result2)) {
+		 while ($valor2 = mysqlii_fetch_array($result2)) {
 			$x++; 
 		 }
 		 
@@ -558,10 +558,10 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 				
 				$notas = "";
 				
-				if (mysqli_num_rows($result2) > 0) {
+				if (mysqlii_num_rows($result2) > 0) {
 					
 				$notas = "";	
-					while ($valor2 = mysqli_fetch_array($result2)) {
+					while ($valor2 = mysqlii_fetch_array($result2)) {
 						if ($valor2['nota'] != '') {
 	
 					$notas .= "<div>".$valor2['nome'].":<strong>".$valor2['nota']."</strong></div>";		
@@ -620,8 +620,8 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 				$telefones = " ";
                 $sql = " SELECT clientePf_idClientePf, ddd, numero, DT.nome FROM telefone INNER JOIN descricaoTelefone AS DT ON descricaoTelefone_idDescricaoTelefone = DT.idDescricaoTelefone WHERE clientePf_idClientePf = ".$idClientePf." limit 3";
 				$rsTelefone = $this->query($sql);
-		        if(mysql_num_rows($rsTelefone) > 0){
-                      while ($valorTelefone = mysql_fetch_array($rsTelefone)) {
+		        if(mysqli_num_rows($rsTelefone) > 0){
+                      while ($valorTelefone = mysqli_fetch_array($rsTelefone)) {
                        $telefones .= " <div class=\"destacaLinha\"> [".$valorTelefone['nome']."] (".$valorTelefone['ddd'].") ".$valorTelefone['numero']."</div>";
                		      }
                     }
@@ -665,7 +665,7 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 		$ClientePf =  new ClientePf();
 		$html = "<select id=\"idIntegranteGrupo\" name=\"idIntegranteGrupo\"  class=\"" . $classes . "\" >";
 		$html .= "<option value=\"\">Selecione</option>";
-		while ($valor = mysqli_fetch_array($result)) {
+		while ($valor = mysqlii_fetch_array($result)) {
 			$nome = $ClientePf->getNome($valor['clientePf_idClientePf']);
 			$selecionado = $idAtual == $valor['idIntegranteGrupo'] ? "selected=\"selected\"" : "";
 			$html .= "<option " . $selecionado . " value=\"" . $valor['idIntegranteGrupo'] . "\">";
@@ -724,7 +724,7 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
         LEFT JOIN descricaoTelefone AS D ON D.idDescricaoTelefone = T.descricaoTelefone_idDescricaoTelefone
         WHERE I.idIntegranteGrupo = " . $idIntegranteGrupo." LIMIT 1";
         $result = $this -> query($sql);
-        while ($valor = mysqli_fetch_array($result)) {
+        while ($valor = mysqlii_fetch_array($result)) {
             $telefones = "(".$valor['ddd'].") ".$valor['numero']." - ".$valor['descricao'];     
         }
         
@@ -750,8 +750,8 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 //		echo $sql;	
 		$rs = $this -> query($sql);
 
-		if (mysqli_num_rows($rs) > 0) {
-			while ($valor = mysqli_fetch_array($rs))
+		if (mysqlii_num_rows($rs) > 0) {
+			while ($valor = mysqlii_fetch_array($rs))
 				$id[] = $valor['idIntegranteGrupo'];
 		}
 		return implode(",", $id);
@@ -776,8 +776,8 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 //		echo $sql;	
 		$rs = $this -> query($sql);
 
-		if (mysqli_num_rows($rs) > 0) {
-			while ($valor = mysqli_fetch_array($rs))
+		if (mysqlii_num_rows($rs) > 0) {
+			while ($valor = mysqlii_fetch_array($rs))
 				$id[] = $valor['idIntegranteGrupo'];
 		}
 		return implode(",", $id);
@@ -844,7 +844,7 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 
 		$html = "<select id=\"idProfessor\" name=\"idProfessor\" class=\"$class\" >";
 		$html .= "<option value=\"\">Selecione</option>";
-		while ($valor = mysqli_fetch_array($result)) {
+		while ($valor = mysqlii_fetch_array($result)) {
 			$selecionado = $idProfessor == $valor['idProfessor'] ? "selected=\"selected\"" : "";
 			$html .= "<option " . $selecionado . " value=\"" . $valor['idProfessor'] . "\">" . ($valor['nome']) . "</option>";
 		}
@@ -884,7 +884,7 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 		$html = "<select id=\"idProfessor\" name=\"idProfessor\" class=\"$class\" >";
 		$html .= "<option value=\"\">Selecione</option>";
 		
-		while ($valor = mysqli_fetch_array($result)) {
+		while ($valor = mysqlii_fetch_array($result)) {
 			$ids[] = $valor['idProfessor'];
 			$selecionado = $idProfessor == $valor['idProfessor'] ? "selected=\"selected\"" : "";
 			$html .= "<option " . $selecionado . " value=\"" . $valor['idProfessor'] . "\">" . ($valor['nome']) . "</option>";
@@ -894,7 +894,7 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 		
 		$sql2 = "SELECT SQL_CACHE idProfessor, nome FROM professor WHERE excluido = 0 AND inativo = 0 AND idProfessor not in (" . $valorx2 . ") ORDER BY nome";
 		$result2 = $this -> query($sql2);
-		while ($valor2 = mysql_fetch_array($result2)) {
+		while ($valor2 = mysqli_fetch_array($result2)) {
 			$selecionado = $idProfessor == $valor2['idProfessor'] ? "selected=\"selected\"" : "";
 			$html .= "<option " . $selecionado . " value=\"" . $valor2['idProfessor'] . "\">" . ($valor2['nome']) . "</option>";
 		}
@@ -930,7 +930,7 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 
 		$html = "<select id=\"idFuncionario\" name=\"idFuncionario\" class=\"$class\" >";
 		$html .= "<option value=\"\">Selecione</option>";
-		while ($valor = mysqli_fetch_array($result)) {
+		while ($valor = mysqlii_fetch_array($result)) {
 			$selecionado = $idFuncionario == $valor['idFuncionario'] ? "selected=\"selected\"" : "";
 			$html .= "<option " . $selecionado . " value=\"" . $valor['idFuncionario'] . "\">" . ($valor['nome']) . "</option>";
 		}
@@ -938,7 +938,7 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 		$html .= "</select>";
 		
 		} else {
-			while ($valor = mysqli_fetch_array($result)) {
+			while ($valor = mysqlii_fetch_array($result)) {
 		$html = $valor['idFuncionario'];	
 			}
 			
