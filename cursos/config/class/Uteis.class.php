@@ -56,7 +56,7 @@ class Uteis {
  //    }
 	 
 	 if ($reply == '') {
-		define("FROM", utf8_decode($config[0]['emailEnvio'])) ;
+		define("FROM", 'envio@companhiadeidiomas.com.br'); //utf8_decode($config[0]['emailEnvio'])) ;
 	 } else {
 		 define("FROM", $reply);
 		 
@@ -70,7 +70,7 @@ class Uteis {
 	$mailer -> isHTML(true);
 	$mailer -> Username = 'smtp';
 	if ($from == '') {
-		$mailer->setFrom(FROM, $config[0]['emailEnvio']);
+		$mailer->setFrom(FROM, 'envio@companhiadeidiomas.com.br'); //$config[0]['emailEnvio']);
 		
 	} else {
 		$mailer->setFrom(FROM, $from);
@@ -136,7 +136,7 @@ class Uteis {
 	}
 
     $enviado = $mailer -> Send();
-		Uteis::pr($mailer);
+	
  //exit;
    if(!$enviado){
            return $mailer->ErrorInfo;
@@ -146,7 +146,7 @@ class Uteis {
             return true;
         }
     
-
+	Uteis::pr($mailer);
   }
 
   //CORPO PADRÃO DOS E-MAILS ENVIADOS
