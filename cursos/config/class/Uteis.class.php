@@ -47,14 +47,13 @@ class Uteis {
 	date_default_timezone_set('Etc/UTC');
 	
     $mailer = new PHPMailer();
-	self::pr($config);
 //    if($assunto !="ERRO SISTEMA" && $assunto!="Recuperação de senha"){
    //     $adm[] = array('nome'=>'Contato Companhia de Idiomas','email'=>$_SESSION['email']);
     //    array_push($copia,$adm);  
  //    }
 	 
 	 if ($reply == '') {
-		define("FROM", $config[0]['emailEnvio']) ;
+		define("FROM", utf8_decode($config[0]['emailEnvio'])) ;
 	 } else {
 		 define("FROM", $reply);
 		 
@@ -66,19 +65,19 @@ class Uteis {
     $mailer -> SMTPSecure = 'ssl';
     $mailer -> SMTPAuth = true;
 	$mailer -> isHTML(true);
-//	if ($from == '') {
-		$mailer->setFrom(FROM, utf8_decode($config[0]['emailEnvio']));
+	if ($from == '') {
+		$mailer->setFrom(FROM, $config[0]['emailEnvio']);
 		$mailer -> Username = $config[0]['emailEnvio'];
-//	} else {
-//		$mailer->setFrom(FROM, $from);
-//		$mailer -> Username = USERNAME;
-//	}
+	} else {
+		$mailer->setFrom(FROM, $from);
+		$mailer -> Username = USERNAME;
+	}
     
     $mailer -> Port = $config[0]['porta'];
     $mailer -> Host = $config[0]['smtp'];
     $mailer -> Password = $config[0]['senhaEmail'];
 	if ($reply == '') {
-		$mailer -> AddReplyTo(FROM, "Envio");
+		$mailer -> AddReplyTo(FROM, $config[0]['nomeEmpresa']."-Não responder diretamente a esse email!");
 	} else {
 		$mailer -> AddReplyTo(FROM, $reply);
 	}
@@ -119,7 +118,7 @@ class Uteis {
     if ($paraQuem) {    
 		
 		$email = $paraQuem['email'];
-		$nome =  $paraQuem['nome'];
+		$nome =  utf8_decode($paraQuem['nome']);
 	
 	$mailer -> AddAddress($email, $nome);  	
      
@@ -131,10 +130,6 @@ class Uteis {
 	} else {
 		$mailer -> Body = utf8_decode($mensagem);
 	}
-	
-		
-	Uteis::pr($mailer);
-	
 	
     $enviado = $mailer -> Send();
 	

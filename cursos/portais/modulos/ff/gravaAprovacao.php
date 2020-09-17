@@ -51,7 +51,6 @@ if ($posicao == "2") {
 		$paraQuem = array("nome" => $nome, "email" => "israel@companhiadeidiomas.com.br"); //$email);
 
 		$rs = Uteis::enviarEmail($assunto, $msg, $paraQuem, "");
-		Uteis::pr($rs);
 		
 	}
 
