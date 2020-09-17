@@ -45,10 +45,6 @@ class Uteis {
 	$config = $Configuracoes->selectConfig();
 	
 	date_default_timezone_set('Etc/UTC');
-//	  define("HOST", "smtp.companhiadosidiomas.com.br");
-//  define("USERNAME", "smtp");
-//  define("PASSWORD", "smtp2004");
-//  define("FROMNAME", "Companhia de Idiomas - favor não responder este email");
     $mailer = new PHPMailer();
 //    if($assunto !="ERRO SISTEMA" && $assunto!="Recuperação de senha"){
    //     $adm[] = array('nome'=>'Contato Companhia de Idiomas','email'=>$_SESSION['email']);
@@ -56,7 +52,7 @@ class Uteis {
  //    }
 	 
 	 if ($reply == '') {
-		define("FROM", $paraQuem['email']) ;
+		define("FROM", $paraQuem['email']);
 	 } else {
 		 define("FROM", $reply);
 		 
