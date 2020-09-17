@@ -43,7 +43,7 @@
                     
                     <?php } else { ?>
                      <li>
-						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/boletos/receber/', '#centro');">
+						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/boletos/', '#centro');">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Boletos
 						</a>
 					</li>    
