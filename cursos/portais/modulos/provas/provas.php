@@ -63,7 +63,7 @@ $valorProva = $CalendarioProva->selectCalendarioProva($where);
 </div>
 <button class="gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/provas/index.php', '#centro');">Fechar</button>
 <script>
-tabelaDataTable('tb_lista_res', 'simples');
+//tabelaDataTable('tb_lista_res', 'simples');
 
 function acessar(id, cod) {
 	
