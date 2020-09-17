@@ -65,12 +65,13 @@ class Uteis {
     $mailer -> SMTPSecure = 'ssl';
     $mailer -> SMTPAuth = true;
 	$mailer -> isHTML(true);
+	$mailer -> Username = $config[0]['emailEnvio'];
 	if ($from == '') {
 		$mailer->setFrom(FROM, $config[0]['emailEnvio']);
-		$mailer -> Username = $config[0]['emailEnvio'];
+		
 	} else {
 		$mailer->setFrom(FROM, $from);
-		$mailer -> Username = USERNAME;
+//		$mailer -> Username = USERNAME;
 	}
     
     $mailer -> Port = 465; //$config[0]['porta'];
