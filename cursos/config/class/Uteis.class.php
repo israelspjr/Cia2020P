@@ -134,9 +134,9 @@ class Uteis {
 	} else {
 		$mailer -> Body = utf8_decode($mensagem);
 	}
-	Uteis::pr($mailer);
+
     $enviado = $mailer -> Send();
-	
+		Uteis::pr($mailer);
  //exit;
    if(!$enviado){
            return $mailer->ErrorInfo;
