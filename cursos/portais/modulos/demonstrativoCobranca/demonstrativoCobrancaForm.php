@@ -427,9 +427,9 @@ $temAulaDataFixa = $AulaDataFixa -> ffTem_AulaDataFixaDemonstrativo($idPlanoAcao
 
 ?>
 
-<div class="conteudo_nivel">
+<!--<div class="conteudo_nivel">
   <div id="fechar_nivel" class="fechar" onclick="fecharNivel()"></div>
-  <fieldset>
+  --><fieldset>
     <legend>Demonstrativo de cobrança</legend>
     <style media="all">
         #demonstrativo_geral, #demonstrativo_sub, tr,td,th{
@@ -959,8 +959,8 @@ $temAulaDataFixa = $AulaDataFixa -> ffTem_AulaDataFixaDemonstrativo($idPlanoAcao
  </tr>
 </div>
 </fieldset>
-</div>
-
+<!--</div>
+-->
 <script>
 function gravaDemon(){
 	postForm('', '<?php echo CAMINHO_COBRANCA."demonstrativo/demonstrativoAcao.php"?>', '<?php echo $param?>&obs = ' + $('#obs_demostrativo').val());
