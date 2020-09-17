@@ -59,8 +59,8 @@ class Uteis {
 		 
 	 }
       
-//    $mailer -> isSendmail(); 
-	$mailer->isSMTP();
+    $mailer -> isSendmail(); 
+//	$mailer->isSMTP();
     $mailer -> SMTPDebug = 3;
     $mailer -> SMTPSecure = 'ssl';
     $mailer -> SMTPAuth = true;
