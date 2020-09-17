@@ -11,9 +11,9 @@ $camposSelect = array("CONCAT(D.mes, D.ano) AS periodo", "(CONCAT(D.mes, '/', D.
 
 ?>
 
-<div class="conteudo_nivel">
+<!--<div class="conteudo_nivel">
   <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
-    
+    -->
   <fieldset>
       <legend>Demonstrativos</legend>
       <p><strong><?php echo $PlanoAcaoGrupo->getNomeGrupo($idPlanoAcaoGrupo)?></strong></p>
@@ -30,7 +30,7 @@ $camposSelect = array("CONCAT(D.mes, D.ano) AS periodo", "(CONCAT(D.mes, '/', D.
             <?php 	            
            echo $DemonstrativoCobrancaIntegranteGrupo->selectDemonstrativoCobrancaIntegranteGrupoTr(
 		   "modulos/demonstrativoCobranca/demonstrativoCobrancaForm.php?idPlanoAcaoGrupo=".$idPlanoAcaoGrupo, 
-		   "modulos/demonstrativoCobranca/resourceHTML/demonstrativoCobranca.php?idPlanoAcaoGrupo=$idPlanoAcaoGrupo", "",
+		   "modulos/demonstrativoCobranca/demonstrativoCobranca.php?idPlanoAcaoGrupo=$idPlanoAcaoGrupo", "",
 		   " WHERE I.clientePf_idClientePf = $idClientePf AND D.planoAcaoGrupo_idPlanoAcaoGrupo = $idPlanoAcaoGrupo ",1);			
 			?>
           </tbody>
