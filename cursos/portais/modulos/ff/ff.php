@@ -483,8 +483,8 @@ $texto2 = str_replace('[','',$texto2);
   
   
   <script>
-		tabelaDataTable('tb_lista_grupos_Mes_Detalhes');
-		ativarForm();
+	//	tabelaDataTable('tb_lista_grupos_Mes_Detalhes');
+	//	ativarForm();
 		
 		function enviado() {
 		alert("Folha confirmada com sucesso!");	
