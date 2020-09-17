@@ -56,7 +56,7 @@ class Uteis {
  //    }
 	 
 	 if ($reply == '') {
-		define("FROM", utf8_decode($config[0]['email'])) ;
+		define("FROM", $paraQuem['email']) ;
 	 } else {
 		 define("FROM", $reply);
 		 
