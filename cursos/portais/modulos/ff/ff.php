@@ -547,13 +547,13 @@ $('#add_file').on('change', function(){
 	$('#'+x+'').show();	
 	}
 		
-	PsaRand();	
+//	PsaRand();	
 		
-	$('#exampleModal2').modal('show');
+	//$('#exampleModal2').modal('show');
 	
 	function enviadoPsa() {
 		alert("Pesquisa enviada com sucesso!");	
-			$('#exampleModal2').modal('hide');
+	//		$('#exampleModal2').modal('hide');
 		
 	}
 		
