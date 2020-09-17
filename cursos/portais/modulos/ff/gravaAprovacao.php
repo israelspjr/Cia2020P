@@ -48,9 +48,9 @@ if ($posicao == "2") {
 		$nome = $Funcionario -> getNome($idFuncionario_gerente);
 		$email = $Funcionario -> getEmail($idFuncionario_gerente);
 		$msg = $msg_base.$TextoEmailPadrao -> getTexto("5");
-		$paraQuem = array("nome" => $nome, $email);
+		$paraQuem = array("nome" => $nome, "email" => $email);
 
-		$rs = Uteis::enviarEmail($assunto, $msg, $paraQuem, "");
+		$rs = Uteis::enviarEmail($assunto, $msg, $paraQuem, "", "", "", "");
 		
 	}
 

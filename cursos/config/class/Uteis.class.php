@@ -35,7 +35,7 @@ class Uteis {
   }
 
   //ENVIAR E-MAIL
-  static function enviarEmail($assunto = "", $mensagem = "", $paraQuem = array(), $arquivos = array(), $copia = array(), $bcopia = array(), $emailMkt, $from = '', $reply = '') {
+  static function enviarEmail($assunto = "", $mensagem = "", $paraQuem = array(), $arquivos = array(), $copia = array(), $bcopia = array(), $emailMkt = 0, $from = '', $reply = '') {
 	
 	require_once 'mailer/class.phpmailer.php';
 	require_once 'mailer/class.smtp.php';
