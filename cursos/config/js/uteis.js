@@ -940,6 +940,8 @@ $('#img_form_Menu').attr("onclick", "fecharMenu(1)");
 //abrirFormulario('menu_area', 'img_form_Menu')";
 $('.main').css("width", "100%");
 $('.main').css("margin-left","0%");
+$('.col-lg-10').css("max-width","98%");
+$('.col-lg-10').css("float","none");
 $('#menu_area').show();
 	} else {
 $('#sidebar-collapse').show();	
@@ -947,6 +949,9 @@ $('#img_form_Menu').attr("onclick", "fecharMenu(0)");
 //abrirFormulario('menu_area', 'img_form_Menu')");
 $('.main').css("width", "");
 $('.main').css("margin-left","");
+$('.col-lg-10').css("max-width","70%");
+$('.col-lg-10').css("float","right");
+
 $('#menu_area').show();
 	}
 }
