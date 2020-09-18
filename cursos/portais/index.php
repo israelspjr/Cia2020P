@@ -128,15 +128,19 @@ if ($appN == 1) {
 	</nav>
 </div>
 </div>
-<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
-		<?php require('menu.php'); ?>
-</div><!--/.sidebar-->
-		
-	<ol class="breadcrumb">
+<div>
+<ol class="breadcrumb">
    
 		<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
 			<li class="active">Principal</li>
 	</ol>
+ </div>
+ 
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<?php require('menu.php'); ?>
+</div><!--/.sidebar-->
+		
+	
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 	
     	<div class="row">
