@@ -588,7 +588,7 @@ a.bg-danger:hover {
 	.sidebar {
 		border: 5px #dd3a4b solid;
 		border-radius:20px;
-		top: 50px;
+		top: 15px;
 		bottom: 0;
 		left: 44px;
 		z-index: 1000;
