@@ -237,7 +237,7 @@ Passo 1 de 3
 <?php 
  if ($_SESSION['idClientePf_SS'] != 4) {
 
-//require_once "endereco.php"; 
+require_once "endereco.php"; 
 echo "<p>";
 //require_once "enderecoVirtual.php"; 
 echo "</p>";
