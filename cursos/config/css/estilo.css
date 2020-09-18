@@ -247,7 +247,7 @@ a{color:inherit;cursor:pointer;text-decoration:none;}
 
 .navbar {
 	border: 0;
-	position: relative;
+/*	position: relative;*/
     min-height: 50px;
     margin-bottom: 20px;
     border: 1px solid transparent;
@@ -261,8 +261,8 @@ a{color:inherit;cursor:pointer;text-decoration:none;}
 	right: 0;
     left: 0;
     z-index: 1030;
-    -webkit-transform: translate3d(0,0,0);
-    -o-transform: translate3d(0,0,0);
+ /*   -webkit-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);*/
     transform: translate3d(0,0,0);
 }
 
