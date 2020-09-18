@@ -939,8 +939,8 @@ $('#sidebar-collapse').hide();
 $('#img_form_Menu').attr("onclick", "fecharMenu(1)");
 //abrirFormulario('menu_area', 'img_form_Menu')";
 $('.main').css("width", "100%");
-$('.main').css("margin-left","0%");
-$('.col-lg-10').css("max-width","98%");
+$('.col-lg-10').css("margin-left","15px");
+$('.col-lg-10').css("max-width","100%");
 $('.col-lg-10').css("float","none");
 $('#menu_area').show();
 	} else {
