@@ -127,7 +127,6 @@ if ($appN == 1) {
 		</div><!-- /.container-fluid -->
 	</nav>
 </div>
-</div>
 <div>
 <ol class="breadcrumb">
    
@@ -135,6 +134,8 @@ if ($appN == 1) {
 			<li class="active">Principal</li>
 	</ol>
  </div>
+</div>
+
  
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<?php require('menu.php'); ?>
