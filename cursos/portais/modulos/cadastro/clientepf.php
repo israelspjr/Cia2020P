@@ -239,7 +239,7 @@ Passo 1 de 3
 
 require_once "endereco.php"; 
 echo "<p>";
-//require_once "enderecoVirtual.php"; 
+require_once "enderecoVirtual.php"; 
 echo "</p>";
 echo "<p>";
 //require_once "telefone.php"; 
