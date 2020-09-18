@@ -169,9 +169,9 @@
     <?php if ($_SESSION['idClientePf_SS'] != 4) { ?>
     		 <?php if ($appN != 4) { ?>
              <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/opcaoAtividadeExtraClientePf.php', '#centro');"><svg class="glyph stroked external hard drive"><use xlink:href="#stroked-external-hard-drive"></use></svg> Perfil idioma</a></li>
-              <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/resourceHTML/opcaoAtividadeExtraProfessorClientePf.php', '#centro');"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Perfil professor</a></li>
+              <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/opcaoAtividadeExtraProfessorClientePf.php', '#centro');"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Perfil professor</a></li>
 			<?php } ?>
-           <li ><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portaismodulos/aviso/resourceHTML/aviso.php', '#centro');" ><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg>Meus avisos</a></li>
+           <li ><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/aviso/aviso.php', '#centro');" ><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg>Meus avisos</a></li>
 			<li role="presentation" class="divider"></li>
             <?php } ?>
 			<li><a href="logoff.php"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Sair</a></li>
@@ -222,6 +222,16 @@ function zerarCentro() {
   
 </script>
 
-<?php  }?>
+<?php  }
 
-<a target="_blank" title="Entre em contato" class="whatsapp-plug-icon" style="position: fixed; z-index: 1000; bottom: 20px; left: 20px; width: 50px; height: 50px; -webkit-border-radius: 50%; cursor: pointer; background-color: #0ba360; transition: .3s; background-position: center; background-repeat: no-repeat; background-image: url('<?php echo CAMINHO_IMG?>/zap23.png'); background-size: 50% auto;" href="https://api.whatsapp.com/send?phone=5511982044234&amp;text=Portal do aluno: " rel="noopener noreferrer"></a>
+if (($appN == 1) || ($appN == 3)) {
+	$portal = "Aluno";	
+} elseif ($appN == 2) {
+	$portal = "Professor";	
+} elseif ($appN == 4) {
+	$portal = "RH";	
+}
+
+?>
+
+<a target="_blank" title="Entre em contato" class="whatsapp-plug-icon" style="position: fixed; z-index: 1000; bottom: 20px; left: 20px; width: 50px; height: 50px; -webkit-border-radius: 50%; cursor: pointer; background-color: #0ba360; transition: .3s; background-position: center; background-repeat: no-repeat; background-image: url('<?php echo CAMINHO_IMG?>/zap23.png'); background-size: 50% auto;" href="https://api.whatsapp.com/send?phone=<?php echo $config[0]['telefone']?>&amp;text=Portal do <?php echo $portal;?>: " rel="noopener noreferrer"></a>
