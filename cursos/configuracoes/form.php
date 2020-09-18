@@ -127,8 +127,8 @@ $Configuracoes = new Configuracoes();
     </div>
     <div class="direita">
      <p>
-        <label>Email (para dúvidas):</label>
-       <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+        <label>Email (para dúvidas e atendimento):</label>
+       <input type="text" name="emailAten" id="emailAten" value="<?php echo $Configuracoes->getEmailAten();?>" />
       </p>
         <p>
         <label>WhatsApp:</label>
@@ -153,12 +153,16 @@ $Configuracoes = new Configuracoes();
         <input type="radio" name="seguranca" id="seguranca" value="TLS" <?php if ($Configuracoes->getSeguranca() == 'TLS') { echo "checked";}?> /> TLS &nbsp;&nbsp;&nbsp; 
         <input type="radio" name="seguranca" id="seguranca" value="STARTTLS" <?php if ($Configuracoes->getSeguranca() == 'STARTTLS') { echo "checked";}?> />STARTTLS
       </p>
+       <p>
+        <label>Email (para envio do sistema):</label>
+       <input type="text" name="email" id="email" value="<?php echo $Configuracoes->getEmail();?>" />
+      </p>
       <p>
-        <label>Email de envio de comunicações do sistema(envio@...):</label>
+        <label>Usuário:</label>
         <input type="text" name="emailEnvio" id="emailEnvio" value="<?php echo $Configuracoes->getEmailEnvio();?>" />
       </p>
        <p>
-        <label>Senha do email:</label>
+        <label>Senha:</label>
         <input type="text" name="emailSenha" id="emailSenha" value="<?php echo $Configuracoes->getSenhaEmail();?>" />
       </p>
    </div>
