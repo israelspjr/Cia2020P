@@ -233,6 +233,7 @@ if (($appN == 1) || ($appN == 3)) {
 }
 $Configuracoes = new Configuracoes();
 $config = $Configuracoes->selectConfig();
+Uteis::pr($config);
 ?>
 
 <a target="_blank" title="Entre em contato" class="whatsapp-plug-icon" style="position: fixed; z-index: 1000; bottom: 20px; left: 20px; width: 50px; height: 50px; -webkit-border-radius: 50%; cursor: pointer; background-color: #0ba360; transition: .3s; background-position: center; background-repeat: no-repeat; background-image: url('<?php echo CAMINHO_IMG?>/zap23.png'); background-size: 50% auto;" href="https://api.whatsapp.com/send?phone=<?php echo $config[0]['telefone']?>&amp;text=Portal do <?php echo $portal;?>: " rel="noopener noreferrer"></a>
