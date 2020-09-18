@@ -65,7 +65,7 @@ class Configuracoes extends Database{
   }
   
   function setEmail($value){
-    $this -> whatsApp = ($value); // ? $this -> gravarBD($value) : "NULL";
+    $this -> email = ($value); // ? $this -> gravarBD($value) : "NULL";
   }
   
   function setSite($value){
@@ -216,7 +216,7 @@ class Configuracoes extends Database{
   
   //Select Config
   function selectConfig($where = "WHERE 1"){
-    $sql = "SELECT `idConfig`, `nomeEmpresa`, `logo`,`whatsApp`, `email`, `site`, `rodape`, `cabecalho`, `smtp`, `seguranca`, `porta`, `emailEnvio`, `senhaEmail`, `favIcon`, `marca`, `emailAten, `siteEmp` FROM `configuracoes`" . $where;
+    $sql = "SELECT `idConfig`, `nomeEmpresa`, `logo`,`whatsApp`, `email`, `site`, `rodape`, `cabecalho`, `smtp`, `seguranca`, `porta`, `emailEnvio`, `senhaEmail`, `favIcon`, `marca`, `emailAten`, `siteEmp` FROM `configuracoes`" . $where;
 //	echo $sql;
     return $this -> executeQuery($sql);
   }
