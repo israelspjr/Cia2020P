@@ -262,8 +262,8 @@ a{color:inherit;cursor:pointer;text-decoration:none;}
     left: 0;
     z-index: 1030;
  /*   -webkit-transform: translate3d(0,0,0);
-    -o-transform: translate3d(0,0,0);*/
-    transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);*/
 }
 
 .container-fluid {
