@@ -67,7 +67,7 @@ class FormacaoPerfil extends Database {
 	function addFormacaoperfil() {
 		$sql = "INSERT INTO formacaoPerfil (professor_idProfessor, clientePf_idClientePf, formacao, curso, instituicao, obs, finalizado) VALUES ($this->professorIdProfessor, $this->clientePfIdClientePf, $this->formacao, $this->curso, $this->instituicao, $this->obs, $this->finalizado)";
 		$result = $this -> query($sql, true);
-		return mysql_insert_id($this -> connect);
+		return mysqli_insert_id($this -> connect);
 	}
 
 	/**
@@ -112,11 +112,11 @@ class FormacaoPerfil extends Database {
 		FROM formacaoPerfil " . $where;
 		$result = $this -> query($sql);
 
-		if (mysql_num_rows($result) > 0) {
+		if (mysqli_num_rows($result) > 0) {
 
 			$html = "";
 
-			while ($valor = mysql_fetch_array($result)) {
+			while ($valor = mysqli_fetch_array($result)) {
 				
 				if ($mobile != 1) {
 
