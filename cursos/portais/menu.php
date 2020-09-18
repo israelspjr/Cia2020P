@@ -168,7 +168,7 @@
 		
     <?php if ($_SESSION['idClientePf_SS'] != 4) { ?>
     		 <?php if ($appN != 4) { ?>
-             <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/resourceHTML/opcaoAtividadeExtraClientePf.php', '#centro');"><svg class="glyph stroked external hard drive"><use xlink:href="#stroked-external-hard-drive"></use></svg> Perfil idioma</a></li>
+             <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/opcaoAtividadeExtraClientePf.php', '#centro');"><svg class="glyph stroked external hard drive"><use xlink:href="#stroked-external-hard-drive"></use></svg> Perfil idioma</a></li>
               <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/resourceHTML/opcaoAtividadeExtraProfessorClientePf.php', '#centro');"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Perfil professor</a></li>
 			<?php } ?>
            <li ><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portaismodulos/aviso/resourceHTML/aviso.php', '#centro');" ><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg>Meus avisos</a></li>
