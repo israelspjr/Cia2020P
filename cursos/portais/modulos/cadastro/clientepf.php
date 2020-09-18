@@ -141,7 +141,8 @@ $idConheceu = $valorClientePF[0]['conheceu'];
           <br><input type="checkbox" value="1" onclick="mostraSenha(this)" /><small>mostrar a senha</small>
          <p>
           <label>Confirma Senha:</label>
-          <input type="password" name="senhaAcesso2" id="password2" class="required password" value="<?php echo $senhaAcesso?>" />
+          <input type="password" name="senhaAcesso2" id="password2" class="required password" value="<?php echo $senhaAcesso?>" /></p>
+          <br>
       </div>
       <div class="direita">
         <p>
@@ -225,7 +226,7 @@ Passo 1 de 3
 <a id="proximo" onclick="proximo();" >Clique aqui para ir para proximo passo.</a>
 </div>      
         <p>
-          <button class="Bblue" id="salvou" onclick="enviar()">Salvar</button>
+          <button class="Bblue" id="salvou" onclick="enviar();">Salvar</button>
           <button class="gray" onclick="zerarCentro();carregarModulo('cursos/portais/index.php', '#centro');">Fechar</button>
         </p>
       </div>
