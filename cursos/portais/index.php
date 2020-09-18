@@ -131,18 +131,12 @@ if ($appN == 1) {
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<?php require('menu.php'); ?>
 </div><!--/.sidebar-->
-	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
-		<div class="row">
 		
 	<ol class="breadcrumb">
    
 		<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
 			<li class="active">Principal</li>
-                    <li><span id="texto1"> Abrir/Fechar Menu </span><img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar Menu" id="img_form_Menu" 
-onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 	</ol>
-    </div>
-    </div>
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 	
     	<div class="row">
