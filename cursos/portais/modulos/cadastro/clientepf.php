@@ -57,7 +57,7 @@ $idConheceu = $valorClientePF[0]['conheceu'];
   
   <img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar formuário" id="img_" onclick="abrirFormulario('div_form_clientePf', 'img_');" />
   
-  <div class="agrupa" id="div_form_clientePf">
+  <div id="div_form_clientePf">
     <form id="form_clientepf" class="validate" action="" method="post"  onsubmit="return false" >
     <input type="hidden" id="idPreClientePf" name="idPreClientePf" value="<?php echo $idPreClientePf ?>" />
     <input type="hidden" id="clientePj_idClientePj" name="clientePj_idClientePj" value="<?php echo  $idClientePj ?>" />
@@ -237,15 +237,15 @@ Passo 1 de 3
 <?php 
  if ($_SESSION['idClientePf_SS'] != 4) {
 
-require_once "endereco.php"; 
+//require_once "endereco.php"; 
 echo "<p>";
-require_once "enderecoVirtual.php"; 
+//require_once "enderecoVirtual.php"; 
 echo "</p>";
 echo "<p>";
-require_once "telefone.php"; 
+//require_once "telefone.php"; 
 echo "</p>";
 echo "<p>";
-require_once "formacaoPerfil.php"; 
+//require_once "formacaoPerfil.php"; 
 echo "</p>";
 
  }
