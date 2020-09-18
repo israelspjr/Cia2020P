@@ -99,7 +99,7 @@ session_destroy();
  
 
    <div class="site">
-	   <a href="https://<?php echo $config[0]['site'];?>" target="_blank" >  <?php echo $config[0]['site'];?> </a> <br> <br>
+	   <a href="https://<?php echo $config[0]['siteEmp'];?>" target="_blank" >  <?php echo $config[0]['siteEmp'];?> </a> <br> <br>
    </div>
 </body>
 </html>
