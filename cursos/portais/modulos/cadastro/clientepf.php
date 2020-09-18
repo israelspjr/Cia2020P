@@ -245,7 +245,7 @@ echo "<p>";
 require_once "telefone.php"; 
 echo "</p>";
 echo "<p>";
-//require_once "formacaoPerfil.php"; 
+require_once "formacaoPerfil.php"; 
 echo "</p>";
 
  }
