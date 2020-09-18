@@ -141,7 +141,7 @@
 						</a>
 					</li>
                     	<li>
-						<a class="" id="perfil" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/form/clientepf.php', '#centro');">
+						<a class="" id="perfil" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/clientepf.php', '#centro');">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Perfil 
 						</a>
 					</li>
