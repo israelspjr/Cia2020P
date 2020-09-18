@@ -132,7 +132,7 @@ if ($appN == 1) {
    
 		<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
 			<li class="active">Principal</li>
-            <li><span class="active"> Abrir/Fechar Menu </span><img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar Menu" id="img_form_Menu" 
+            <li> Abrir/Fechar Menu <img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar Menu" id="img_form_Menu" 
 onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 	</ol>
  </div>
@@ -146,10 +146,7 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 	
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 	
-    	<div class="row">
-    	</div>
-
-	<div id="divs_jquery"></div>
+  	<div id="divs_jquery"></div>
     
     <div id="centro"></div>
 
