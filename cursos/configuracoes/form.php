@@ -135,7 +135,11 @@ $Configuracoes = new Configuracoes();
         <input type="text" name="zap" id="zap" value="<?php echo $Configuracoes->getWhatsApp();?>" />
       </p>
       <p>
-        <label>Site:</label>
+        <label>Site da empresa:</label>
+        <input type="text" name="siteEmp" id="siteEmp" value="<?php echo $Configuracoes->getSiteEmp();?>" />
+      </p>
+      <p>
+        <label>Site do sistema:</label>
         <input type="text" name="site" id="site" value="<?php echo $Configuracoes->getSite();?>" />
       </p>
        <p>

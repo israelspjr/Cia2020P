@@ -20,6 +20,7 @@ if($_POST['acao']=="cadastrar"){
 	 $Configuracoes->updateConfigField("marca",$_POST['marca_oculta']);
      $Configuracoes->updateConfigField("email",$_POST['email']);
 	 $Configuracoes->updateConfigField("site",$_POST['site']);
+	 $Configuracoes->updateConfigField("siteEmp",$_POST['siteEmp']);
 	 $Configuracoes->updateConfigField("rodape",$_POST['rodape_oculta']);
 	 $Configuracoes->updateConfigField("cabecalho",$_POST['cabecalho_oculta']);
 	 $Configuracoes->updateConfigField("favIcon",$_POST['fav_oculta']);
