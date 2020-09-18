@@ -141,8 +141,12 @@ if ($appN == 1) {
                     <li><span id="texto1"> Abrir/Fechar Menu </span><img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar Menu" id="img_form_Menu" 
 onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 	</ol>
-	</div>
-</div>
+    </div>
+    </div>
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+	
+    	<div class="row">
+    	</div>
 
 	<div id="divs_jquery"></div>
     
