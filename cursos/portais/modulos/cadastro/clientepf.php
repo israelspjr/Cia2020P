@@ -242,7 +242,7 @@ echo "<p>";
 require_once "enderecoVirtual.php"; 
 echo "</p>";
 echo "<p>";
-//require_once "telefone.php"; 
+require_once "telefone.php"; 
 echo "</p>";
 echo "<p>";
 //require_once "formacaoPerfil.php"; 
