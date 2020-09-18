@@ -132,7 +132,7 @@ if ($appN == 1) {
    
 		<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
 			<li class="active">Principal</li>
-            <li> Abrir/Fechar Menu <img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar Menu" id="img_form_Menu" 
+            <li class="active"> Abrir/Fechar Menu <img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar Menu" id="img_form_Menu" 
 onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 	</ol>
  </div>
