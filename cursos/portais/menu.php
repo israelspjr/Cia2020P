@@ -136,7 +136,7 @@
 						</a>
 					</li>
              <li>
-						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/frequencia/index.php', '#centro');">
+						<a class="" href="#" onclick="zerarCentro();fecharMenu(0);carregarModulo('/cursos/portais/modulos/frequencia/index.php', '#centro');">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Relatório de Frequência
 						</a>
 					</li>
