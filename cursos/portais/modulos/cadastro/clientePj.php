@@ -67,7 +67,7 @@ $senhaAcesso = $valorClientePJ[0]['senhaAcesso'];
       </div>
       <div class="linha-inteira">
       <p>
-        <button class="bBlue" onclick="postForm('form_clientePj', '<?php echo "modulos/cadastro/clientePj.php?id=$idClientePj"?>')">Salvar</button>
+        <button class="bBlue" onclick="postForm('form_clientePj', '<?php echo "modulos/cadastro/clientePjAcao.php?id=$idClientePj"?>')">Salvar</button>
       </p>
       </div>
     </form>
