@@ -138,7 +138,7 @@ $y++;
 
 <script> 
 
-  $('#Dados_consolidados_<?=$cont;?>').dataTable( {
+/*  $('#Dados_consolidados_<?=$cont;?>').dataTable( {
 	  
 	  searching: false, 
 	  paging: false, 
@@ -158,7 +158,7 @@ $y++;
         "sLast":     "&gt;&gt;"
     }},
  } );
-
+*/
 </script> 
 <?php
 $cont++;
@@ -170,7 +170,7 @@ $cont++;
 ?>
 <script> 
 
-  $('#Gerentes_<?=$x;?>').dataTable( {
+/*  $('#Gerentes_<?=$x;?>').dataTable( {
 	  
 	  searching: false, 
 	  paging: false, 
@@ -190,7 +190,7 @@ $cont++;
         "sLast":     "&gt;&gt;"
     }},
  } );
-
+*/
 </script> 	  
 	  
 <?php 	  
