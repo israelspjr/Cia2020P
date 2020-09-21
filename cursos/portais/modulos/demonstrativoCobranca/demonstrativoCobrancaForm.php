@@ -7,8 +7,6 @@ $DemonstrativoCobrancaIntegranteGrupo = new DemonstrativoCobrancaIntegranteGrupo
 $SubCursoDemonstrativoCobrancaIntegranteGrupo = new SubCursoDemonstrativoCobrancaIntegranteGrupo();
 $SubMaterialDemonstrativoCobrancaIntegranteGrupo = new SubMaterialDemonstrativoCobrancaIntegranteGrupo();
 
-$idClientePf = $_SESSION['idClientePf_SS'];
-
 $DemonstrativoCobrancaDias = new DemonstrativoCobrancaDias();
 $DemonstrativoCobrancaProfessor = new DemonstrativoCobrancaProfessor();
 $DemonstrativoCobrancaValorHora = new DemonstrativoCobrancaValorHora();
@@ -31,6 +29,10 @@ $DiaAulaFF = new DiaAulaFF();
 $AulaPermanenteGrupo = new AulaPermanenteGrupo();
 $AulaDataFixa = new AulaDataFixa();
 //PARAM BASICOS
+
+$idClientePf = $_SESSION['idClientePf_SS'];
+$appN = $_SESSION['appN'];
+
 $idPlanoAcaoGrupo = $_REQUEST['idPlanoAcaoGrupo'];
 $ano = $_REQUEST['ano'];
 
