@@ -99,7 +99,7 @@ if ($appN == 1) {
 	}
 	@media (min-width:756px) {
 		#centro {
-			width:890px;
+			width:90%;
 		}
 	}
 </style>
