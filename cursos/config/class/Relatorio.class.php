@@ -2680,12 +2680,11 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
 	}
 	
  $sql = "SELECT PIG.idPsaIntegranteGrupo, G.nome AS Grupo, CPF.nome AS nomeAluno, PIG.dataReferencia, CPF.idClientePf, GER.gerente_idGerente " . $sql_corpo . $where.$gerente;
- echo $sql;
 
      $result = $this -> query($sql);
-	 
-    
-    $psaProfessor = new PsaProfessor();
+	 Uteis::pr($result);
+     $psaProfessor = new PsaProfessor();
+	 echo "teste";
     $ConceitosPsa = $psaProfessor->conceitosPsaProfessor($tipo);
     foreach($ConceitosPsa as $k => $v){
         $retorno[$v['titulo']][$v['nome']]= 0;
