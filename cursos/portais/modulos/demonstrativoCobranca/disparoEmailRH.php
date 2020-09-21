@@ -15,6 +15,7 @@ $TextoEmailPadrao = new TextoEmailPadrao();
 $idDisparoEmail = $_GET['id'];      
 $idClientePj = $_GET['idClientePj'];
 $mes = $_GET['mes'];
+Uteis::pr($_SESSION);
 /*
 if($mes<10)
 $mes = "0".$mes;
