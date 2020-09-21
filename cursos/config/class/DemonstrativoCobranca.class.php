@@ -156,7 +156,6 @@ class DemonstrativoCobranca extends Database {
     }
 
     function selectDemonstrativoCobrancaTr($mes, $ano, $caminhoAtualizar_base = "", $ondeAtualiza = "", $where = "", $apenasLinha = false, $idStatusCobranca,$ordem, $rh, $mesF, $anoF) {
-		error_reporting(E_ALL);
 	
         $GrupoClientePj = new GrupoClientePj();
         $PlanoAcaoGrupoNaoFaturar = new PlanoAcaoGrupoNaoFaturar();
