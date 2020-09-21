@@ -2679,7 +2679,7 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
 		$where .= " AND RPP.professor_idProfessor = ".$idProfessor;
 	}
 	
- $sql = "SELECT SQL_CACHE PIG.idPsaIntegranteGrupo, G.nome AS Grupo, CPF.nome AS nomeAluno, PIG.dataReferencia, CPF.idClientePf, GER.gerente_idGerente " . $sql_corpo . $where.$gerente;
+ $sql = "SELECT PIG.idPsaIntegranteGrupo, G.nome AS Grupo, CPF.nome AS nomeAluno, PIG.dataReferencia, CPF.idClientePf, GER.gerente_idGerente " . $sql_corpo . $where.$gerente;
  echo $sql;
 
      $result = $this -> query($sql);

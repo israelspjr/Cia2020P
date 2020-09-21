@@ -43,7 +43,7 @@ if((is_numeric($clientePj)) || (is_numeric($idProfessor))){
 	}
 
 }
-
+Uteis::pr($resultado);
 //echo json_encode($result['professor']);
 $html = "";
 foreach ($resultado as $key => $value) {
