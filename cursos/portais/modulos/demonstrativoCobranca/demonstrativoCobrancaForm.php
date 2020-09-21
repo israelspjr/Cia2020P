@@ -501,7 +501,8 @@ $temAulaDataFixa = $AulaDataFixa -> ffTem_AulaDataFixaDemonstrativo($idPlanoAcao
         <button class="gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/demonstrativoCobranca/indexR.php', '#centro');">Fechar</button>
         <?php } else {?>
          <button class="gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/demonstrativoCobranca/index.php', '#centro');">Fechar</button>
-       <?php }?>
+       <?php }
+	  }?>
       </form>
     </div>
     
