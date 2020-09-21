@@ -1,12 +1,12 @@
 <?php  
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
-$grupo_pj = new GrupoClientePj();
-echo "teste";
-$grupo = new Grupo();
-$gerenteTem = new GerenteTem();
-$PlanoAcaoGrupo = new PlanoAcaoGrupo();
-$Relatorio = new Relatorio();
+//$grupo_pj = new GrupoClientePj();
+//$grupo = new Grupo();
 
+//$gerenteTem = new GerenteTem();
+//$PlanoAcaoGrupo = new PlanoAcaoGrupo();
+$Relatorio = new Relatorio();
+echo "teste";
 $clientePj = $_POST["clientePj"];
 $gerente = $_POST['gerente'];
 $quantidade = $_POST['quantidade'];
