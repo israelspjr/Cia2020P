@@ -47,11 +47,11 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 					</div><!--/.row-->
 				</div><hr>
 		</div>
-  <!--  
+    
 	<div class="row">
 		<div class="col-lg-12">
             
-  			<div class="col-md-6">
+  			<div class="direita">
 				<div class="panel panel-default">
 				<div class="panel-heading">Idiomas  </div>
 				<div class="panel-body">
@@ -61,9 +61,8 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 					</div>
 				</div>
 			</div><!--/.row-->
-			
-	<!--		
-   			<div class="col-md-6">
+
+   			<div class="esquerda">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:0px;padding-bottom:0px;    line-height: 30px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Professor*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $idProfessor, 4, $idNotasTipoNota, $quesito, 1);
@@ -82,7 +81,7 @@ echo $retorno['professor'];
 		   
    <div class="row">
 		<div class="col-lg-12">
-  		<div class="col-md-6">
+  		<div class="direita">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Gestão do curso*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $idProfessor, 4, $idNotasTipoNota, $quesito, 1);
@@ -95,8 +94,8 @@ echo $retorno['gestao'];
 					</div>
 				</div>
 		</div><!--/.row-->
-  <!--
-		<div class="col-md-6">
+ 
+		<div class="esquerda">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Qualidade da aula*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $idProfessor, 4, $idNotasTipoNota, $quesito, 1);
@@ -115,7 +114,7 @@ echo $retorno['qualidade'];
 			
 		<div class="row">
 		<div class="col-lg-12">
-			<div class="col-md-6">
+			<div class="direita">
 				<div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Resultado do curso*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $idProfessor, 4, $idNotasTipoNota, $quesito, 1);
@@ -128,8 +127,8 @@ echo $retorno['resultado'];
 					</div>
 				</div>
 			</div><!--/.row-->
-   <!-- 
-			<div class="col-md-6">
+   
+			<div class="esquerda">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 15px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Compromisso com o aprendizado*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $idProfessor, 4, $idNotasTipoNota, $quesito, 1);
@@ -148,7 +147,7 @@ echo $retorno['compromisso'];
 		   
        <div class="row">
 		<div class="col-lg-12">
-			<div class="col-md-6">
+			<div class="direita">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 15px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>NPS - Net Promoter Score*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $idProfessor, 4, $idNotasTipoNota, $quesito, 1);
@@ -161,17 +160,13 @@ echo $retorno['nps'];
 					</div>
 				</div>
 			</div><!--/.row-->
- <!--       </div><hr>
+        </div><hr>
 		</div>
 		
-  <div class="row">
-		
-  
-   
-  <div>* Este gráfico leva em consideração a data inicial de 01/09/2019 para pesquisar outro período utilize o relatório de pesquisa de satisfação. </div>
-  
- </div>
- -->
+  <div class="linha-inteira">
+	<div>* Este gráfico leva em consideração a data inicial de 01/09/2019 para pesquisar outro período utilize o relatório de pesquisa de satisfação. </div>
+  </div>
+
 <script>
 
 function grupos(x){
