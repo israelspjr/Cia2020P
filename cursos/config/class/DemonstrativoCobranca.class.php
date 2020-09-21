@@ -334,7 +334,7 @@ class DemonstrativoCobranca extends Database {
 				if ($rh !=1) {
                 $onclick2 = " onclick=\"abrirNivelPagina(this, '" . CAMINHO_COBRANCA . "demonstrativo/include/resourceHTML/disparoEmail.php?id=" . $idPlanoAcaoGrupo . "&mes=" . $mes . "&ano=" . $ano . "', '$caminhoAtualizar', '$ondeAtualiza')\" ";
 				} else {
-					$onclick2 = " onclick=\"abrirNivelPagina(this, 'cursos/portai/modulos/demonstrativo/disparoEmail.php?id=" . $idPlanoAcaoGrupo . "&mes=" . $mes . "&ano=" . $ano . "', '$caminhoAtualizar', '$ondeAtualiza')\" ";
+					$onclick2 = " onclick=\"zerarCentro();carregarModulo(this, 'cursos/portais/modulos/demonstrativo/disparoEmail.php?id=" . $idPlanoAcaoGrupo . "&mes=" . $mes . "&ano=" . $ano . "', '$caminhoAtualizar', '$ondeAtualiza')\" ";
 				}
 				 $email = "<img src=\"" . CAMINHO_IMG . "email.png\" title=\"Enviar Demonstrativo\" $onclick2 />";
                 
