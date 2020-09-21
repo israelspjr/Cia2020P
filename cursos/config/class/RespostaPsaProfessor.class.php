@@ -94,7 +94,7 @@ class RespostaPsaProfessor extends Database {
 	 * selectRespostaPsaProfessor() Function
 	 */
 	function selectRespostaPsaProfessor($where = "WHERE 1") {
-		  $sql = "SELECT SQL_CACHE r.idRespostaPsaProfessor, r.psaIntegranteGrupo_idPsaIntegranteGrupo, r.psaProfessor_idPsaProfessor, 
+		  $sql = "SELECT r.idRespostaPsaProfessor, r.psaIntegranteGrupo_idPsaIntegranteGrupo, r.psaProfessor_idPsaProfessor, 
         r.professor_idProfessor, r.notasTipoNota_idNotasTipoNota, r.obs, r.dataCadastro , p.nome, pp.titulo, pp.pergunta, pp.tipo FROM respostaPsaProfessor r 
         LEFT JOIN professor p ON p.idProfessor = r.professor_idProfessor 
         INNER JOIN psaProfessor pp ON pp.idPsaProfessor = r.psaProfessor_idPsaProfessor " . $where;
@@ -102,13 +102,13 @@ class RespostaPsaProfessor extends Database {
 	}
 	
 	function selectPsaProfessorNota($integrante, $periodo){
-	    $sql = "SELECT SQL_CACHE pp.titulo, n.nome FROM psaIntegranteGrupo as pi
+	    $sql = "SELECT pp.titulo, n.nome FROM psaIntegranteGrupo as pi
                 INNER JOIN respostaPsaProfessor AS r ON pi.idPsaIntegranteGrupo = r.psaIntegranteGrupo_idPsaIntegranteGrupo
                 INNER JOIN psaProfessor AS pp ON pp.idPsaProfessor = r.psaProfessor_idPsaProfessor
                 INNER JOIN tipoNota AS tn ON tn.idTipoNota = pp.tipo   
                 INNER JOIN notasTipoNota AS n ON n.tipoNota_idTipoNota = tn.idTipoNota AND n.idNotasTipoNota = r.notasTipoNota_idNotasTipoNota      
                 WHERE pi.idPsaIntegranteGrupo = $integrante AND r.notasTipoNota_idNotasTipoNota != 19 AND pi.dataReferencia = '".$periodo."'";
-   //    echo $sql;
+       echo $sql;
         return $this->executeQuery($sql);
 	}
 
