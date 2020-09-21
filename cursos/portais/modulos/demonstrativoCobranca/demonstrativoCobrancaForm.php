@@ -197,7 +197,7 @@ if($rsDemonstrativo){
 	//DIAS E HORAS
 	$demonstrativo = 1;
 	$rsTotalFF = $FolhaFrequencia->selectFF_diasHoras($idPlanoAcaoGrupo, $ano, $mes, $idProfessor, $demonstrativo);
-    Uteis::pr($rsTotalFF);//exit;
+  //  Uteis::pr($rsTotalFF);//exit;
    	$rsTotalFF = array_merge($rsTotalFF['permanente'], $rsTotalFF['fixa']);
 	
 	
@@ -427,9 +427,7 @@ $temAulaDataFixa = $AulaDataFixa -> ffTem_AulaDataFixaDemonstrativo($idPlanoAcao
 
 ?>
 
-<!--<div class="conteudo_nivel">
-  <div id="fechar_nivel" class="fechar" onclick="fecharNivel()"></div>
-  --><fieldset>
+<fieldset>
     <legend>Demonstrativo de cobrança</legend>
     <style media="all">
         #demonstrativo_geral, #demonstrativo_sub, tr,td,th{
@@ -499,7 +497,10 @@ $temAulaDataFixa = $AulaDataFixa -> ffTem_AulaDataFixaDemonstrativo($idPlanoAcao
       <?php }else{?>
       	
           <button class="Bblue" onclick="imprimirDiv('#div_demonstrativoCobranca', 'Demonstrativo <?php echo "$mes - $ano"?>')" >Imprimir</button>
-        <button class="gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/demonstrativoCobranca/index.php', '#centro');">Fechar</button>
+          <?php if ($appN == 4) {?>
+        <button class="gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/demonstrativoCobranca/indexR.php', '#centro');">Fechar</button>
+        <?php } else {?>
+         <button class="gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/demonstrativoCobranca/index.php', '#centro');">Fechar</button>
        <?php }?>
       </form>
     </div>
