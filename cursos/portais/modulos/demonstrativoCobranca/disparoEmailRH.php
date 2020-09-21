@@ -13,9 +13,9 @@ $tipo = "contatoCobranca";
 $TextoEmailPadrao = new TextoEmailPadrao();
       
 $idDisparoEmail = $_GET['id'];      
-$idClientePj = $_GET['idClientePj'];
+$idClientePj = $_SESSION['idClientePj_SS'];
 $mes = $_GET['mes'];
-Uteis::pr($_SESSION);
+
 /*
 if($mes<10)
 $mes = "0".$mes;
