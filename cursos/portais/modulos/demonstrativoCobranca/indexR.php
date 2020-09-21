@@ -68,7 +68,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos', true);" />
         </p>
       </div>
       <div class="linha-inteira">
-        <button class="bBlue" onclick="filtro_postForm('img_form_Grupos', 'form_DemonstrativoCobranca_data', '<?php echo "modulos/demonstrativoCobranca/demonstrativoCobrancaR.php"?>', '', '#lista_DemonstrativoCobranca')">Buscar</button>
+        <button class="bBlue" onclick="filtro_postForm('img_form_Grupos', 'form_DemonstrativoCobranca_data', '<?php echo "modulos/demonstrativoCobranca/demonstrativoCobrancaR.php"?>', '', 'lista_DemonstrativoCobranca')">Buscar</button>
       </div>
     </form>
   </div>
