@@ -102,7 +102,7 @@ class RespostaPsaRegular extends Database {
         INNER JOIN tipoNota AS tn ON tn.idTipoNota = pp.tipo 
         INNER JOIN notasTipoNota AS n ON n.tipoNota_idTipoNota = tn.idTipoNota AND n.idNotasTipoNota = r.notasTipoNota_idNotasTipoNota  
         WHERE pi.idPsaIntegranteGrupo = $integrante AND r.notasTipoNota_idNotasTipoNota != 19 AND pi.dataReferencia = '".$periodo."'";
-        echo $sql;
+    //    echo $sql;
         return $this -> executeQuery($sql);
     }
 	/**

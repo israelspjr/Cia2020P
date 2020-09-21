@@ -47,7 +47,7 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 					</div><!--/.row-->
 				</div>
 			</div>
-    
+    <hr>
 	<div class="row">
 		<div class="col-lg-12">
             
@@ -78,11 +78,11 @@ echo $retorno['professor'];
            </div>
 		   </div>
 	</div>
+	<hr>	   
 		   
-		   
-            </div>
-                       <div class="row" style="margin-left: 0px; margin-right: 0px;">
-			<div class="col-md-6">
+   <div class="row">
+		<div class="col-lg-12">
+  		<div class="col-md-6">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Gestão do curso*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $idProfessor, 4, $idNotasTipoNota, $quesito, 1);
@@ -94,23 +94,27 @@ echo $retorno['gestao'];
 						</div>
 					</div>
 				</div>
-			</div><!--/.row-->
-             <div class="row" >
-			<div class="col-md-6">
+		</div><!--/.row-->
+  
+		<div class="col-md-6">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Qualidade da aula*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $idProfessor, 4, $idNotasTipoNota, $quesito, 1);
 echo $retorno['qualidade'];
 	?></div>
 					<div class="panel-body">
-                    <div class="canvasG">
-						<canvas id="QUALIDADE DA AULA" width=250 height=250></canvas>
+						<div class="canvasG">
+							<canvas id="QUALIDADE DA AULA" width=250 height=250></canvas>
 						</div>
 					</div>
 				</div>
-           </div>
+        </div>
             </div>
-                       <div class="row" style="margin-left: 0px; margin-right: 0px;">
+			</div>
+			<hr>
+			
+		<div class="row">
+		<div class="col-lg-12">
 			<div class="col-md-6">
 				<div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Resultado do curso*</strong> <br />
@@ -124,7 +128,7 @@ echo $retorno['resultado'];
 					</div>
 				</div>
 			</div><!--/.row-->
-             <div class="row" >
+    
 			<div class="col-md-6">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 15px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Compromisso com o aprendizado*</strong> <br />
@@ -138,8 +142,12 @@ echo $retorno['compromisso'];
 					</div>
 				</div>
            </div>
-            </div>
-                       <div class="row" style="margin-left: 0px; margin-right: 0px;">
+		   </div>
+		   </div>
+		  <hr> 
+		   
+       <div class="row">
+		<div class="col-lg-12">
 			<div class="col-md-6">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 15px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>NPS - Net Promoter Score*</strong> <br />
@@ -154,10 +162,15 @@ echo $retorno['nps'];
 				</div>
 			</div><!--/.row-->
         </div>
-  <div class="row" style="margin-left: 30px; margin-right: 30px;">
+		</div>
+		
+  <div class="row">
+		<div class="col-lg-12">
+  
    
   <div>* Este gráfico leva em consideração a data inicial de 01/09/2019 para pesquisar outro período utilize o relatório de pesquisa de satisfação. </div>
   </div>
+ </div>
  
 <script>
 
