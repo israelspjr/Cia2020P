@@ -2659,6 +2659,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
   }
 //error_reporting(E_ALL);
 function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo, $idNotasTipoNota) {
+	error_reporting(E_ALL);
 	
 	$Gerente = new Gerente();
 	
