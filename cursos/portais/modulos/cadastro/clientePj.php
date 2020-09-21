@@ -65,9 +65,11 @@ $senhaAcesso = $valorClientePJ[0]['senhaAcesso'];
           <input type="password" name="senhaAcesso2" id="rpassword" class="required password" value="<?php echo $senhaAcesso ?>" />
            <span class="placeholder" style="display:none;color:red;">Campo Obrigatório</span> </p>
       </div>
+      <div class="linha-inteira">
       <p>
         <button class="bBlue" onclick="postForm('form_clientePj', '<?php echo "modulos/cadastro/clientePj.php?id=$idClientePj"?>')">Salvar</button>
       </p>
+      </div>
     </form>
   </div>
 </fieldset>
