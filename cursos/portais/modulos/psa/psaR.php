@@ -1,8 +1,8 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
-
+error_reporting(E_ALL);
 $Relatorio = new Relatorio();
-$grafico = new Grafico();
+//$grafico = new Grafico();
 require_once "filtrosR.php";?>
 <div class="linha-inteira">
 <div class="esquerda">    
@@ -22,7 +22,7 @@ $final = 1;
 </div>
 
 <script>
-tabelaDataTable('tb_lista_res','simples');
+//tabelaDataTable('tb_lista_res','simples');
 
 </script>
 
