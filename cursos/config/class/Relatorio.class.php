@@ -2708,6 +2708,7 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
 	echo "teste2";
     $rsp =  $rpsa_prof->selectPsaProfessorNota($integrante, $periodo); 
 	Uteis::pr($rsp);
+	if (count($rsp) >0 ) { echo "teste5"; }
   /*  for($i=0;$i<count($rsp);$i++){
       if($retorno[$rsp[$i]['titulo']]['total']==""){
        $retorno[$rsp[$i]['titulo']]['total'] = 0; 
