@@ -127,7 +127,7 @@ grupos();
 function geraRel(){
 addItenPersonalizado('#sel_lista_padrao', '#sel_lista_padraoNome');
 	selecionaTudoSelect('sel_lista_padrao', 'sel_lista_padraoNome');
-    postForm_relatorio('img_form_Grupos', '', 'form_rel_pf', '<?php echo "modulos/psa/psaR.php"?>', '#res_rel');
+    postForm_relatorio('img_form_Grupos', '', 'form_rel_pf', '<?php echo "modulos/psa/psaR.php"?>', 'res_rel');
 }
 //ativarForm();	
 </script> 
