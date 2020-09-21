@@ -36,8 +36,8 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
     <form id="form_rel_pf" class="validate" method="post" action="" onsubmit="return false" >
     
       <!--<p><strong>Campos</strong></p>-->
-      <p><strong>Filtros &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="texto1"> Abrir/Fechar Menu </span><img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar Menu" id="img_form_Menu" 
-onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /> </strong></p>
+      <p><strong>Filtros &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--<span id="texto1"> Abrir/Fechar Menu </span><img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar Menu" id="img_form_Menu" 
+onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" />--> </strong></p>
       <div class="esquerda">
       <div style="width:100%;float:left;">  <label>Selecionados:</label>
         <img src="<?php echo CAMINHO_IMG."menos2.png"?>" name="delIten" id="delIten" title="Remover iten" onclick="addIten('#sel_lista_padrao', '#sel_lista_opcional')"/>
