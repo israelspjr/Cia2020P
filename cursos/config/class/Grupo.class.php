@@ -49,7 +49,7 @@ class Grupo extends Database {
 	function addGrupo() {
 		$sql = "INSERT INTO grupo (idGrupo, nome, inativo, dataCadastro, naoBancoHoras) VALUES ($this->idGrupo, $this->nome, $this->inativo, $this->dataCadastro, $this->naoBancoHoras)";
 		$result = $this -> query($sql, true);
-		return mysql_insert_id($this -> connect);
+		return mysqli_insert_id($this -> connect);
 	}
 
 	/**
@@ -105,9 +105,9 @@ class Grupo extends Database {
 
 		$result = $this -> query($sql);
 
-		if (mysql_num_rows($result) > 0) {
+		if (mysqli_num_rows($result) > 0) {
 
-			while ($valor = mysql_fetch_array($result)) {
+			while ($valor = mysqli_fetch_array($result)) {
 
 				$idPlanoAcaoGrupo = $valor['idPlanoAcaoGrupo'];
 				$idGrupo = $valor['idGrupo'];
@@ -181,7 +181,7 @@ class Grupo extends Database {
 
 	$result = $this -> query($sql);		
 
-		if (mysql_num_rows($result) > 0) {
+		if (mysqli_num_rows($result) > 0) {
 
 			$html = "";
 			$cont = 0;
@@ -189,7 +189,7 @@ class Grupo extends Database {
 		
 				
 	
-			while ($valor = mysql_fetch_array($result)) {
+			while ($valor = mysqli_fetch_array($result)) {
 				
 				$dataInicio = Uteis::exibirData($valor['dataInicioEstagio']);
 				$tipoCursoD = $valor['tipoCurso'];
@@ -395,7 +395,7 @@ class Grupo extends Database {
 		
 		$result = $this -> query($sql);
 //		echo $sql;
-		if (mysql_num_rows($result) > 0) {
+		if (mysqli_num_rows($result) > 0) {
 
 			$html = "";
             $cont = 0;
@@ -404,7 +404,7 @@ class Grupo extends Database {
 			$GerenteTem = new GerenteTem();
 			$PlanoAcao = new PlanoAcao();
 
-			while ($valor = mysql_fetch_array($result)) {
+			while ($valor = mysqli_fetch_array($result)) {
 
 				$idGrupo = $valor['idGrupo'];
 				$idPlanoAcaoGrupo = $valor['idPlanoAcaoGrupo'];
@@ -454,7 +454,7 @@ class Grupo extends Database {
 //		echo $sql;
 		$html = "<select id=\"idGrupo\" name=\"idGrupo\"  class=\"" . $classes . "\" >";
 		$html .= "<option value=\"\">Selecione</option>";
-		while ($valor = mysql_fetch_array($result)) {
+		while ($valor = mysqli_fetch_array($result)) {
 			$selecionado = $idAtual == $valor['idGrupo'] ? "selected=\"selected\"" : "";
 			$html .= "<option " . $selecionado . " value=\"" . $valor['idGrupo'] . "\">" . ($valor['nome']) . "</option>";
 		}
@@ -468,7 +468,7 @@ class Grupo extends Database {
 		//echo $sql;
 		$html = "<select id=\"idGrupo\" name=\"idGrupo[]\"  class=\"" . $classes . "\" multiple=\"multiple\" >
 		<option value=\"\">Todos</option>";
-		while ($valor = mysql_fetch_array($result)) {
+		while ($valor = mysqli_fetch_array($result)) {
 			$selecionado = $idAtual == $valor['idGrupo'] ? "selected=\"selected\"" : "";
 			$html .= "<option " . $selecionado . " value=\"" . $valor['idGrupo'] . "\">" . ($valor['nome']) . "</option>";
 		}
@@ -483,7 +483,7 @@ class Grupo extends Database {
 		INNER JOIN planoAcao AS PA ON PA.idPlanoAcao = PAG.planoAcao_idPlanoAcao 
 		INNER JOIN proposta AS P ON P.idProposta= PA.proposta_idProposta 
 		WHERE G.idGrupo = $id";
-		$rs = mysql_fetch_array($this -> query($sql));
+		$rs = mysqli_fetch_array($this -> query($sql));
 
 		$idIdioma = $rs['idioma_idIdioma'];
 		return ($idIdioma) ? $idIdioma : "0";
