@@ -163,13 +163,13 @@ echo $retorno['nps'];
 			</div><!--/.row-->
         </div>
 		</div>
-		
+	<hr>	
   <div class="row">
-		<div class="col-lg-12">
+		
   
    
   <div>* Este gráfico leva em consideração a data inicial de 01/09/2019 para pesquisar outro período utilize o relatório de pesquisa de satisfação. </div>
-  </div>
+  
  </div>
  
 <script>
