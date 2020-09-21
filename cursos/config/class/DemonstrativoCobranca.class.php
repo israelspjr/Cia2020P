@@ -98,7 +98,7 @@ class DemonstrativoCobranca extends Database {
         $result = $this -> query($sql, true);
         //echo $sql;
         //exit;
-        return mysql_insert_id($this -> connect);
+        return mysqli_insert_id($this -> connect);
     }
 
     /**
@@ -181,9 +181,9 @@ class DemonstrativoCobranca extends Database {
         $cont = 0;
 		$carga = "";
 		$revertido =0;
-        if (mysql_num_rows($result) > 0) {   
+        if (mysqli_num_rows($result) > 0) {   
 		
-            while ($valor = mysql_fetch_array($result)) {
+            while ($valor = mysqli_fetch_array($result)) {
 				
 				$sql2 = "SELECT  max(PAG.idPlanoAcaoGrupo) as idPlanoAcaoGrupo
 							FROM
