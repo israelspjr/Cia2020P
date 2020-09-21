@@ -175,6 +175,12 @@ $Configuracoes = new Configuracoes();
         <input type="radio" name="cor" id="cor" <?php  if ($Configuracoes->getCor() == 1) { echo 'checked=\"checked\"';} ?> /> Azul
         
       </p>
+      <p>
+        <label>Data de expiração das ocorrencias (em dias):</label>
+         <input type="text" name="dataExpira" id="dataExpira" value="<?php echo $Configuracoes->getDataExpira();?>" />
+      
+      </p>
+      
    </div>
     <div class="linha-inteira">
      <button class="button blue" onclick="postForm('form_acervo', '/cursos/configuracoes/acao.php')">Salvar</button>
