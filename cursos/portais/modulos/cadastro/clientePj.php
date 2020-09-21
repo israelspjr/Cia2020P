@@ -29,7 +29,7 @@ $senhaAcesso = $valorClientePJ[0]['senhaAcesso'];
   <div class="agrupa" id="div_form_clientePj">
     <form id="form_clientePj" class="validate" action="" onsubmit="return false" method="post" >
       <div class="esquerda">
-        <p>
+      <!--  <p>
           <label>Logomarca:</label>
           <img src="<?php echo CAMINHO_IMG?>upload_foto.png" onclick="$('#add_foto').click();" /><strong><?php echo $logo != '' ? 'TROCAR': 'ADICIONAR';?></strong>
         <div id="visualizar">
@@ -38,7 +38,7 @@ $senhaAcesso = $valorClientePJ[0]['senhaAcesso'];
           <input type="hidden" name="foto_oculta" value="<?php echo $logo?>" required="required" />
           <?php }?>
         </div>
-        </p>
+        </p>-->
         <p>
           <label>Nome fantasia:</label>
           <input type="text" name="nomeFantasia" id="nomeFantasia" value="<?php echo $nomeFantasia ?>" />
