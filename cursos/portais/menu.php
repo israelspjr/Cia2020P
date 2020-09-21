@@ -157,7 +157,7 @@
 						</a>
 					</li>		 
 						 	<li>
-						<a class="" id="perfil" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/form/clientePj.php', '#centro');">
+						<a class="" id="perfil" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/clientePj.php', '#centro');">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Dados cadastrais 
 						</a>
 					</li>
