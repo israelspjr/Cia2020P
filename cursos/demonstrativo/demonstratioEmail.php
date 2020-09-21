@@ -447,7 +447,7 @@ $temAulaDataFixa = $AulaDataFixa->ffTem_AulaDataFixaDemonstrativo($idPlanoAcaoGr
             <?php if (!isset($_GET['pdf'])) { ?>
                 <tr>
                     <th colspan="3" style="border-bottom: 1px solid #ccc;">
-                        <a target="_blank" href="http://<?php echo CAMINHO_VER_DM . 'DemostrativoEmailPdf.php?p=' . Uteis::base64_url_encode($idPlanoAcaoGrupo) . '&m=' . Uteis::base64_url_encode($mes) . '&a=' . Uteis::base64_url_encode($ano); ?>"
+                        <a target="_blank" href="https://<?php echo CAMINHO_VER_DM . 'DemostrativoEmailPdf.php?p=' . Uteis::base64_url_encode($idPlanoAcaoGrupo) . '&m=' . Uteis::base64_url_encode($mes) . '&a=' . Uteis::base64_url_encode($ano); ?>"
                            class="button blue">Gerar PDF</a>
                     </th>
                 </tr>
@@ -628,21 +628,7 @@ $temAulaDataFixa = $AulaDataFixa->ffTem_AulaDataFixaDemonstrativo($idPlanoAcaoGr
                              }
                             }
                         }else{echo "R$ ".Uteis::formatarMoeda(0);} ?>
-                    <?php /*if ($rsPlanoAcaoGrupoAjudaCusto_dia || $rsPlanoAcaoGrupoAjudaCusto_hora) {
-                        if ($rsPlanoAcaoGrupoAjudaCusto_dia) {
-                            foreach ($rsPlanoAcaoGrupoAjudaCusto_dia as $valorAjudaCusto) {
-                                echo $valorAjudaCusto['descricao'] . ": R$ " . Uteis::formatarMoeda($valorAjudaCusto['valor']) . " por dia de aula</p>";
-                            }
-                        }
-                        if ($rsPlanoAcaoGrupoAjudaCusto_hora) {
-                            foreach ($rsPlanoAcaoGrupoAjudaCusto_hora as $valorAjudaCusto) {
-                                echo $valorAjudaCusto['descricao'] . ": R$ " . Uteis::formatarMoeda($valorAjudaCusto['valor']) . " por hora de aula</p>";
-                            }
-                        }
-                    } else {
-                        echo "R$ " . Uteis::formatarMoeda(0);
-                    }*/?>
-                </td>
+                 </td>
             <tr>
                 <td>
                     <strong>Sub total</strong>:
