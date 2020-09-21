@@ -127,7 +127,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
         </div>
       </div>
       <div class="linha-inteira" >
-        <button class="bBlue" id="geraRel" onclick="postForm_relatorio('img_form_Grupos', '', 'form_rel_pf', '<?php echo "modulos/desempenho/acompanhamento.php"?>', '#res_rel')">Gerar relatório</button>
+        <button class="bBlue" id="geraRel" onclick="postForm_relatorio('img_form_Grupos', '', 'form_rel_pf', '<?php echo "modulos/desempenho/acompanhamento.php"?>', 'res_rel')">Gerar relatório</button>
       </div>
     </form>
   </div>
