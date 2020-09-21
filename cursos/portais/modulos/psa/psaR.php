@@ -1,6 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
-error_reporting(E_ALL);
+
 $Relatorio = new Relatorio();
 //$grafico = new Grafico();
 require_once "filtrosR.php";?>
