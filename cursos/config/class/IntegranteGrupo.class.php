@@ -292,8 +292,10 @@ class IntegranteGrupo extends Database {
 	}
 
 	function selectIntegranteGrupoTr_rh($caminho, $where = "",$mobile) {
+		
+		$Professor = new Professor();
 
-		$sql = " SELECT idIntegranteGrupo, planoAcaoGrupo_idPlanoAcaoGrupo, clientePf_idClientePf, dataEntrada, dataSaida 
+		$sql = " SELECT idIntegranteGrupo, planoAcaoGrupo_idPlanoAcaoGrupo, clientePf_idClientePf, dataEntrada, dataSaida, professor_idProfessor 
 		FROM integranteGrupo " . $where;
 
 		$result = $this -> query($sql);
@@ -307,6 +309,13 @@ class IntegranteGrupo extends Database {
 				$idIntegranteGrupo = $valor['idIntegranteGrupo'];
 				$idPlanoAcaoGrupo = $valor['planoAcaoGrupo_idPlanoAcaoGrupo'];
 				$nome = $this -> getNomePF($valor['idIntegranteGrupo']);
+				
+				if($nome == '') {
+				if ($valor['professor_idProfessor'] > 0) {
+						$nome =  $this -> getNomePro($valor['idIntegranteGrupo']);
+					}	
+				}
+								
 				$dataEntrada = Uteis::exibirData($valor['dataEntrada']);
 				$dataSaida = Uteis::exibirData($valor['dataSaida']);
                 $motivo = $valor['obs'];
@@ -361,21 +370,21 @@ class IntegranteGrupo extends Database {
 				
 				<td>". $motivo ."</td>";
 				
-				if ($mobile != 1) {
+			//	if ($mobile != 1) {
 				
-				$html .= "<td align=\"center\" 
-				onclick=\"abrirNivelPagina(this, '" . $caminho . "frequencia.php?id=$idIntegranteGrupo&idPlanoAcaoGrupo=$idPlanoAcaoGrupo', '', '')\" >
-					<img src=\"" . CAMINHO_IMG . "graf.png\" title=\"Frequência do aluno\" >
+			//	$html .= "<td align=\"center\" 
+			//	onclick=\"abrirNivelPagina(this, '" . $caminho . "frequencia.php?id=$idIntegranteGrupo&idPlanoAcaoGrupo=$idPlanoAcaoGrupo', '', '')\" >
+			//		<img src=\"" . CAMINHO_IMG . "graf.png\" title=\"Frequência do aluno\" >
 					
-				</td>";
-				} else {
+			//	</td>";
+			//	} else {
 				$html .= "<td align=\"center\" 
 				onclick=\"zerarCentro();carregarModulo('" . $caminho . "frequencia.php?id=$idIntegranteGrupo&idPlanoAcaoGrupo=$idPlanoAcaoGrupo', '#centro')\" >
 					<img src=\"" . CAMINHO_IMG . "graf.png\" title=\"Frequência do aluno\" >
 					
 				</td>";
 			
-				}
+		//		}
 		
 		$html .= "<td align=\"center\">".Uteis::exibirData($UltimaPsa)."</td>";
 		if ($mobile != 1) {
