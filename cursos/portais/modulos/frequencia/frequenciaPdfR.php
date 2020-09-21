@@ -15,14 +15,12 @@ $d2 = $_REQUEST['d2'];
 
 $where = " WHERE G.inativo = 0 AND CPF.inativo = 0 AND BH.credDeb is null AND GPJ.clientePj_idClientePj IN (".$_SESSION['idClientePj_SS'].") AND G.idGrupo IN (".$idGrupo.")";
 
-
-
 $where .= " AND FF.dataReferencia >= '".$d1."' 
 	 AND FF.dataReferencia <= '".$d2."' ";
 
 //$arrayRetorno = array();
 
-//require_once "filtros.php";
+//require_once "filtrosR.php";
 	
 $conteudo = $Relatorio->relatorioFrequencia($where, $tipo, true,$FME, $frequencia, $tipoR, $dInicial, $dFinal, $alunoN,1,"","", 1);
 
