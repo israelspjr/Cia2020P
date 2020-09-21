@@ -1,6 +1,7 @@
 <?php  
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 $grupo_pj = new GrupoClientePj();
+echo "teste";
 $grupo = new Grupo();
 $gerenteTem = new GerenteTem();
 $PlanoAcaoGrupo = new PlanoAcaoGrupo();

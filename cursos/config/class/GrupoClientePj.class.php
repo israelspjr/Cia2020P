@@ -49,7 +49,7 @@ class GrupoClientePj extends Database {
 	function addGrupoClientePj() {
 		$sql = "INSERT INTO grupoClientePj (grupo_idGrupo, clientePj_idClientePj, dataFim, dataCadastro) VALUES ($this->grupoIdGrupo, $this->clientePjIdClientePj, $this->dataFim, $this->dataCadastro)";
 		$result = $this -> query($sql, true);
-		return mysqlii_insert_id($this -> connect);
+		return mysqli_insert_id($this -> connect);
 	}
 
 	/**
@@ -97,9 +97,9 @@ class GrupoClientePj extends Database {
 		//exit;
 		$result = $this -> query($sql, true);
 
-		if (mysqlii_num_rows($result) > 0) {
+		if (mysqli_num_rows($result) > 0) {
 			$html = "";
-			while ($valor = mysqlii_fetch_array($result)) {
+			while ($valor = mysqli_fetch_array($result)) {
 				$html .= "<tr>";
 				$html .= "<td >" . ($valor['nome']) . "</td>";
 				$html .= "<td onclick=\"deletaRegistro('" . CAMINHO_CAD . "gerente/include/acao/grupoClientePj.php', " . $valor['idGrupoClientePj'] . ", '$caminhoAtualizar', '$ondeAtualiza')\">" . "<center><img src=\"" . CAMINHO_IMG . "excluir.png\"></center>" . "</td>";
@@ -117,7 +117,7 @@ class GrupoClientePj extends Database {
 		$result = $this -> query($sql);
 		$html = "<select id=\"idGrupoClientePj\" name=\"idGrupoClientePj\"  class=\"" . $classes . "\" >";
 		$html .= "<option value=\"\">Selecione</option>";
-		while ($valor = mysqlii_fetch_array($result)) {
+		while ($valor = mysqli_fetch_array($result)) {
 			$selecionado = $idAtual == $valor['idGrupoClientePj'] ? "selected=\"selected\"" : "";
 			$html .= "<option " . $selecionado . " value=\"" . $valor['idGrupoClientePj'] . "\">" . ($valor['idGrupoClientePj']) . "</option>";
 		}
