@@ -24,7 +24,7 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 		<div class="row">
 			<div class="col-lg-12">
             
-    		<div class="col-md-6">
+    		<div class="direita">
 				<div class="panel panel-default">
 					<div class="panel-heading">Grupos</div>
 						<div class="panel-body">
@@ -35,7 +35,7 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 				</div>
 			</div>
             
-			<div class="col-md-6">
+			<div class="esquerda">
 				<div class="panel panel-default">
 					<div class="panel-heading">Alunos</div> 
 						<div class="panel-body">
