@@ -45,9 +45,9 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 						</div>
 				</div>
 					</div><!--/.row-->
-				</div>
+				</div><hr>
 			</div>
-    <hr>
+    
 	<div class="row">
 		<div class="col-lg-12">
             
@@ -76,9 +76,9 @@ echo $retorno['professor'];
 					</div>
 				</div>
            </div>
-		   </div>
+		   </div><hr>
 	</div>
-	<hr>	   
+		   
 		   
    <div class="row">
 		<div class="col-lg-12">
@@ -109,9 +109,9 @@ echo $retorno['qualidade'];
 					</div>
 				</div>
         </div>
-            </div>
+            </div><hr>
 			</div>
-			<hr>
+			
 			
 		<div class="row">
 		<div class="col-lg-12">
@@ -142,9 +142,9 @@ echo $retorno['compromisso'];
 					</div>
 				</div>
            </div>
+		   </div><hr> 
 		   </div>
-		   </div>
-		  <hr> 
+		  
 		   
        <div class="row">
 		<div class="col-lg-12">
@@ -161,9 +161,9 @@ echo $retorno['nps'];
 					</div>
 				</div>
 			</div><!--/.row-->
-        </div>
+        </div><hr>
 		</div>
-	<hr>	
+		
   <div class="row">
 		
   
