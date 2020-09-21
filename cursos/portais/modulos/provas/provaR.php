@@ -8,7 +8,7 @@ require_once "filtrosR.php";
 ?>
 
 <div class="linha-inteira">
-	<button class="button gray" onclick="postForm('form_rel', '<?php echo CAMINHO_RELAT."prova/provaRAcao.php"?>')"> Exportar relatório</button>
+	<button class="button gray" onclick="postForm('form_rel', '<?php echo "modulos/prova/provaRAcao.php"?>')"> Exportar relatório</button>
 </div>
 
 <?php
