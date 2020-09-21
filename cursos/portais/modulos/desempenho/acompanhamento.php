@@ -15,5 +15,5 @@ echo $Relatorio->relatorioAcompanhamento($where, "", "",$mes_ini, $ano_ini, $mes
 ?>
 
 <script> 
-tabelaDataTable('tb_lista_res', 'simples');
+//tabelaDataTable('tb_lista_res', 'simples');
 </script> 
