@@ -24,7 +24,7 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 		<div class="row">
 			<div class="col-lg-12">
             
-    		<div class="direita">
+    		<div class="esquerda">
 				<div class="panel panel-default">
 					<div class="panel-heading">Grupos</div>
 						<div class="panel-body">
@@ -35,7 +35,7 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 				</div>
 			</div>
             
-			<div class="esquerda">
+			<div class="direita">
 				<div class="panel panel-default">
 					<div class="panel-heading">Alunos</div> 
 						<div class="panel-body">
@@ -51,7 +51,7 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 	<div class="row">
 		<div class="col-lg-12">
             
-  			<div class="direita">
+  			<div class="esquerda">
 				<div class="panel panel-default">
 				<div class="panel-heading">Idiomas  </div>
 				<div class="panel-body">
@@ -62,7 +62,7 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 				</div>
 			</div><!--/.row-->
 
-   			<div class="esquerda">
+   			<div class="direita">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:0px;padding-bottom:0px;    line-height: 30px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Professor*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $idProfessor, 4, $idNotasTipoNota, $quesito, 1);
