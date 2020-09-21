@@ -1,7 +1,8 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 
-$CalendarioProva = new CalendarioProva();
+$Relatorio = new Relatorio();
+//$CalendarioProva = new CalendarioProva();
 $arrayRetorno = array();
 
 require_once "filtrosR.php";
