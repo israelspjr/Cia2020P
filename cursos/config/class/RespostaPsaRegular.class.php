@@ -95,14 +95,14 @@ class RespostaPsaRegular extends Database {
 		return $this -> executeQuery($sql);
 	}
     function selectPsaRegularNota($integrante, $periodo) {
-        $sql = "SELECT SQL_CACHE 
+        $sql = "SELECT 
         pp.titulo, n.nome FROM psaIntegranteGrupo as pi
         INNER JOIN respostaPsaRegular AS r ON pi.idPsaIntegranteGrupo = r.psaIntegranteGrupo_idPsaIntegranteGrupo
         INNER JOIN psaRegular pp ON pp.idPsa = r.psaRegular_idPsa 
         INNER JOIN tipoNota AS tn ON tn.idTipoNota = pp.tipo 
         INNER JOIN notasTipoNota AS n ON n.tipoNota_idTipoNota = tn.idTipoNota AND n.idNotasTipoNota = r.notasTipoNota_idNotasTipoNota  
         WHERE pi.idPsaIntegranteGrupo = $integrante AND r.notasTipoNota_idNotasTipoNota != 19 AND pi.dataReferencia = '".$periodo."'";
-        //echo $sql;
+        echo $sql;
         return $this -> executeQuery($sql);
     }
 	/**
