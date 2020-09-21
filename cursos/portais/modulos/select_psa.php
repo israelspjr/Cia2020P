@@ -5,6 +5,7 @@ $grupo = new Grupo();
 $gerenteTem = new GerenteTem();
 $PlanoAcaoGrupo = new PlanoAcaoGrupo();
 $Relatorio = new Relatorio();
+
 $clientePj = $_POST["clientePj"];
 $gerente = $_POST['gerente'];
 $quantidade = $_POST['quantidade'];
