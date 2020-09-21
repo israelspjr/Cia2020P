@@ -494,11 +494,11 @@ $temAulaDataFixa = $AulaDataFixa -> ffTem_AulaDataFixaDemonstrativo($idPlanoAcao
     			$cont++;
     		}?>
         
-        <button class="button blue" onclick="gravaDemon()">Gravar</button>
+    <!--    <button class="button blue" onclick="gravaDemon()">Gravar</button>-->
         
       <?php }else{?>
       	
-          <button class="Bblue" onclick="imprimirDiv('#div_demonstrativoCobranca', 'Demonstrativo <?php echo "$mes - $ano"?>')" >Imprimir</button>
+     <!--     <button class="Bblue" onclick="imprimirDiv('#div_demonstrativoCobranca', 'Demonstrativo <?php echo "$mes - $ano"?>')" >Imprimir</button>-->
           <?php if ($appN == 4) {?>
         <button class="gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/demonstrativoCobranca/indexR.php', '#centro');">Fechar</button>
         <?php } else {?>
