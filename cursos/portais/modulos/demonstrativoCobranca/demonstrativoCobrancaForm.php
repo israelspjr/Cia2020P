@@ -514,9 +514,7 @@ $temAulaDataFixa = $AulaDataFixa -> ffTem_AulaDataFixaDemonstrativo($idPlanoAcao
 
         <div class="linha-inteira" align="center">
         	
-	        <img src="<?php echo CAMINHO_IMG."_logo.png"?>" />
-       		<br />
-       	<table>
+	      <table>
        	        
           <!--demonstrativo_geral-->
            <tr>

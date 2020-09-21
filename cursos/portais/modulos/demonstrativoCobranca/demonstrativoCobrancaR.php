@@ -52,15 +52,6 @@ if($clientePj !="" ):
     endif;
 endif;    
 
-//if(is_numeric($_REQUEST['idGerente'])):
-//echo $_REQUEST['idGerente'];
-/*$gerente = implode(',',$_REQUEST['idGerente']);
-if ($gerente != "-") {
-    
-$where .=" AND G.idGrupo in (select grupo_idGrupo from grupoClientePj where clientePj_idClientePj in (select clientePj_idClientePj  from gerenteTem where gerente_idGerente in($gerente) AND dataExclusao is null))";
-//endif;
-}*/
-
 $statusGrupo = $_REQUEST['statusG'];
 if($statusGrupo!="-")
 $where .=" AND G.inativo =".$statusGrupo;
