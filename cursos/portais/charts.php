@@ -21,9 +21,12 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 				
 			</div>
 		</div><!--/.row-->
-		
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-lg-12">
+            
+            
+		<div class="row">
+			<div class="col-md-6">
 				<div class="panel panel-default">
 					<div class="panel-heading">Grupos</div>
 					<div class="panel-body">
@@ -36,7 +39,7 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 		<div class="row">
 			<div class="col-md-6">
 				<div class="panel panel-default">
-					<div class="panel-heading">Alunos  <!-- <button style="    background-color: green; color: white;" disabled="disabled">Ativo</button> <button disabled="disabled" style="background-color: red; color: white;">Inativo</button>--></div>
+					<div class="panel-heading">Alunos 
 					<div class="panel-body">
                     <div class="canvasG" >
 							<canvas id="canvas2" width=250 height=250></canvas>
@@ -45,6 +48,9 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 				</div>
 			</div><!--/.row-->
             </div>
+            </div>
+            
+            
             <div class="row" style="margin-left: 0px; margin-right: 0px;">
 			<div class="col-md-6">
 				<div class="panel panel-default">
