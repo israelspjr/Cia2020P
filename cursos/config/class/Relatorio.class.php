@@ -2659,7 +2659,6 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
   }
 //error_reporting(E_ALL);
 function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo, $idNotasTipoNota) {
-	error_reporting(E_ALL);
 	
 	$Gerente = new Gerente();
 	
@@ -2706,7 +2705,6 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
     $integrante = $valor['idPsaIntegranteGrupo'];
     $periodo = $valor['dataReferencia'];    
 	$nome = $Gerente->getNomeGerente($valor['gerente_idGerente']);
-	echo "teste2";
     $rsp =  $rpsa_prof->selectPsaProfessorNota($integrante, $periodo); 
  
     for($i=0;$i<count($rsp);$i++){
@@ -2722,9 +2720,7 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
         
 	  }
      }
-	echo "teste3";
      $rsr = $rpsa_regular->selectPsaRegularNota($integrante, $periodo);
-	 echo "teste4";
      for($i=0;$i<count($rsr);$i++){
         if($retorno[$rsr[$i]['titulo']]['total']==""){      
         $retorno[$rsr[$i]['titulo']]['total'] = 0; 
@@ -2741,7 +2737,6 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
      }
 
     } 
-	Uteis::pr($retorno);
     return $retorno;
    }
    

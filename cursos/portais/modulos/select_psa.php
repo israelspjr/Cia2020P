@@ -1,11 +1,6 @@
 <?php  
-error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
-//$grupo_pj = new GrupoClientePj();
-//$grupo = new Grupo();
 
-//$gerenteTem = new GerenteTem();
-//$PlanoAcaoGrupo = new PlanoAcaoGrupo();
 $Relatorio = new Relatorio();
 
 $clientePj = $_POST["clientePj"];
@@ -26,13 +21,10 @@ if((is_numeric($clientePj)) || (is_numeric($idProfessor))){
 	$where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual."' ";
 //	echo $where;
 	$result_total =  $Relatorio->relatorioPsaConsolidado($gerente, $where, $idProfessor);
-	Uteis::pr($result_total);
-	echo "teste";
-//	$result = array();
+
 	foreach($result_total as $pergunta => $val) {
 		
 		if ($pergunta == $opcao) {
-
 	
 	foreach($val as $conceito => $respostas2) {
 		
@@ -44,8 +36,6 @@ if((is_numeric($clientePj)) || (is_numeric($idProfessor))){
 	}
 
 }
-Uteis::pr($resultado);
-//echo json_encode($result['professor']);
 $html = "";
 foreach ($resultado as $key => $value) {
 
