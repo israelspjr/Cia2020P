@@ -171,7 +171,7 @@ $Configuracoes = new Configuracoes();
       </p>
       <p>
         <label>Cores do sistema:</label>
-        <input type="radio" name="cor" id="cor" <?php  if ($Configuracoes->getCor() == 0) { echo 'checked=\"checked\"';} ?> /> Roxo
+        <input type="radio" name="cor" id="cor" <?php  if ($Configuracoes->getCor() == 0) { echo 'checked=\"checked\"';} ?> /> Vermelho
         <input type="radio" name="cor" id="cor" <?php  if ($Configuracoes->getCor() == 1) { echo 'checked=\"checked\"';} ?> /> Azul
         
       </p>
