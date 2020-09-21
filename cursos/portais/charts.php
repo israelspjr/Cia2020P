@@ -15,14 +15,6 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
     margin-right: auto;
 }
 	</style>
-<!--<link href="../portais/css/bootstrap.min.css" rel="stylesheet">
-<link href="../portais/css/datepicker3.css" rel="stylesheet">
-<link href="../portais/css/styles.css" rel="stylesheet">
-<!--<script src="../../config/js/jquery.min.js" language="javascript" type="text/javascript"></script>
-	<!--<script src="../js/chart.min.js"></script>
-<!--	<script src="../js/easypiechart.js"></script>
-	<script src="../js/easypiechart-data.js"></script>-->
-<!--<script src="../config/js/Chart.min.js"></script>	-->	
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Como está sua empresa hoje</h1>
@@ -31,9 +23,9 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 		</div><!--/.row-->
 		
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-8">
 				<div class="panel panel-default">
-					<div class="panel-heading">Grupos   <!--<button style="    background-color: green; color: white;" disabled="disabled">Ativo</button> <button disabled="disabled" style="background-color: red; color: white;">Inativo</button>--></div>
+					<div class="panel-heading">Grupos</div>
 					<div class="panel-body">
                     <div class="canvasG" >
 							<canvas id="canvas" width=250 height=250></canvas>
