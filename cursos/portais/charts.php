@@ -51,31 +51,35 @@ $where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual.
 	<div class="row">
 		<div class="col-lg-12">
             
-            <div class="row" style="margin-left: 0px; margin-right: 0px;">
-			<div class="col-md-6">
+  			<div class="col-md-6">
 				<div class="panel panel-default">
-				<div class="panel-heading">Idiomas  <!--<button style="    background-color: blue; color: white;" disabled="disabled">Inglês</button> <button disabled="disabled" style="background-color: orange; color: white;">Espanhol</button> <button disabled="disabled" style="background-color: green; color: white;">Francês</button>--></div>
-					<div class="panel-body">
-                    <div class="canvasG" >
+				<div class="panel-heading">Idiomas  </div>
+				<div class="panel-body">
+						<div class="canvasG" >
 							<canvas id="canvas3" width=250 height=250></canvas>
 						</div>
 					</div>
 				</div>
 			</div><!--/.row-->
-             <div class="row" >
-			<div class="col-md-6">
+			
+			
+   			<div class="col-md-6">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:0px;padding-bottom:0px;    line-height: 30px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Professor*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $idProfessor, 4, $idNotasTipoNota, $quesito, 1);
 echo $retorno['professor'];
 	?></div>
 					<div class="panel-body">
-                    <div class="canvasG" >
-						<canvas id="PROFESSOR"  ></canvas>
+						<div class="canvasG" >
+							<canvas id="PROFESSOR"  ></canvas>
 						</div>
 					</div>
 				</div>
            </div>
+		   </div>
+	</div>
+		   
+		   
             </div>
                        <div class="row" style="margin-left: 0px; margin-right: 0px;">
 			<div class="col-md-6">
