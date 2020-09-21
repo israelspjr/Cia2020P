@@ -2708,14 +2708,8 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
 	$nome = $Gerente->getNomeGerente($valor['gerente_idGerente']);
 	echo "teste2";
     $rsp =  $rpsa_prof->selectPsaProfessorNota($integrante, $periodo); 
-	Uteis::pr($rsp);
-	echo "<hr>";
-	Uteis::pr(count($rsp));
-	if (count($rsp) >0 ) { echo "teste5"; }
-	for($i=0;$i<count($rsp);$i++){
-		echo "okokok";	
-	}
-  /*  for($i=0;$i<count($rsp);$i++){
+ 
+    for($i=0;$i<count($rsp);$i++){
       if($retorno[$rsp[$i]['titulo']]['total']==""){
        $retorno[$rsp[$i]['titulo']]['total'] = 0; 
       }         
@@ -2727,7 +2721,7 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
         $retorno[$rsp[$i]['titulo']]['total'] +=1;
         
 	  }
-     }*/
+     }
 	echo "teste3";
      $rsr = $rpsa_regular->selectPsaRegularNota($integrante, $periodo);
 	 echo "teste4";
