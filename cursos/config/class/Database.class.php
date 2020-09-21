@@ -20,7 +20,7 @@ class Database {
 			return false;
 		} else {
 		//	$array = array_map("stripslashes", mysqli_fetch_array($result, MYSQL_ASSOC));
-		$array = mysqli_fetch_array($result, MYSQL_ASSOC);
+		$array = mysqli_fetch_array($result, MYSQLI_ASSOC);
 //		var_dump($array);
 			return $array;
 		}
