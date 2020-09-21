@@ -2701,12 +2701,13 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
     $rpsa_regular = new RespostaPsaRegular();
     
 	while($valor = mysqli_fetch_array($result)){
-		echo "teste2";
+		
     $integrante = $valor['idPsaIntegranteGrupo'];
     $periodo = $valor['dataReferencia'];    
 	$nome = $Gerente->getNomeGerente($valor['gerente_idGerente']);
+	echo "teste2";
     $rsp =  $rpsa_prof->selectPsaProfessorNota($integrante, $periodo); 
-	
+	echo "teste3";
     for($i=0;$i<count($rsp);$i++){
       if($retorno[$rsp[$i]['titulo']]['total']==""){
        $retorno[$rsp[$i]['titulo']]['total'] = 0; 
@@ -2722,7 +2723,7 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
      }
 
      $rsr = $rpsa_regular->selectPsaRegularNota($integrante, $periodo);
-	 
+	 echo "teste4";
      for($i=0;$i<count($rsr);$i++){
         if($retorno[$rsr[$i]['titulo']]['total']==""){      
         $retorno[$rsr[$i]['titulo']]['total'] = 0; 
