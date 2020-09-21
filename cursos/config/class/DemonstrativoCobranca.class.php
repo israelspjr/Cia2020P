@@ -317,7 +317,7 @@ class DemonstrativoCobranca extends Database {
    				if ($rh != 1) {
                 $onclick = " onclick=\"abrirNivelPagina(this, '" . CAMINHO_COBRANCA . "demonstrativo/include/form/demonstrativo.php?idPlanoAcaoGrupo=" . $idPlanoAcaoGrupoCheck . "&mes=" . $mes . "&ano=" . $ano . "', '$caminhoAtualizar', '$ondeAtualiza')\" ";
 				} else {
-				$onclick = " onclick=\"zerarCentro();carregarModulo('modulos/demonstrativoCobranca/form/demonstrativo.php?idPlanoAcaoGrupo=" . $idPlanoAcaoGrupoCheck . "&mes=" . $mes . "&ano=" . $ano . "', '#centro')\" ";
+				$onclick = " onclick=\"zerarCentro();carregarModulo('modulos/demonstrativoCobranca/demonstrativoForm.php?idPlanoAcaoGrupo=" . $idPlanoAcaoGrupoCheck . "&mes=" . $mes . "&ano=" . $ano . "', '#centro')\" ";
 				
 				}
 	               if (isset($rsDemonstrativoMes[0]['idPlanoAcaoGrupo'])) {
