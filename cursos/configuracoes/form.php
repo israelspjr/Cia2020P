@@ -169,6 +169,12 @@ $Configuracoes = new Configuracoes();
         <label>Senha:</label>
         <input type="text" name="emailSenha" id="emailSenha" value="<?php echo $Configuracoes->getSenhaEmail();?>" />
       </p>
+      <p>
+        <label>Cores do sistema:</label>
+        <input type="radio" name="cor" id="cor" <?php  if ($Configuracoes->getCor() == 0) { echo 'checked=\"checked\"';} ?> /> Roxo
+        <input type="radio" name="cor" id="cor" <?php  if ($Configuracoes->getCor() == 1) { echo 'checked=\"checked\"';} ?> /> Azul
+        
+      </p>
    </div>
     <div class="linha-inteira">
      <button class="button blue" onclick="postForm('form_acervo', '/cursos/configuracoes/acao.php')">Salvar</button>

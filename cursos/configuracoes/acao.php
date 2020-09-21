@@ -31,6 +31,7 @@ if($_POST['acao']=="cadastrar"){
 	 $Configuracoes->updateConfigField("senhaEmail",$_POST['emailSenha']);
 	 $Configuracoes->updateConfigField("whatsApp", $_POST['zap']);
 	 $Configuracoes->updateConfigField("emailAten", $_POST['emailAten']);
+	 $Configuracoes->updateConfigField("cor", $_POST['cor']);
 	 
 	 $arrayRetorno['mensagem'] = "Atualizado com sucesso!";
 	
