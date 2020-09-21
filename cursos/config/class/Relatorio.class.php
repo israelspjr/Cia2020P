@@ -2684,13 +2684,14 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
      $result = $this -> query($sql);
 	 Uteis::pr($result);
      $psaProfessor = new PsaProfessor();
-	 echo "teste";
+	 
     $ConceitosPsa = $psaProfessor->conceitosPsaProfessor($tipo);
     foreach($ConceitosPsa as $k => $v){
         $retorno[$v['titulo']][$v['nome']]= 0;
     }
     
-    $psaRegular = new PsaRegular();    
+    $psaRegular = new PsaRegular(); 
+	echo "teste";   
     $ConceitosPsa = $psaRegular->conceitosPsaRegular($tipo);    
     foreach($ConceitosPsa as $k => $v){
         $retorno[$v['titulo']][$v['nome']]= 0;
@@ -2701,6 +2702,7 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
     $rpsa_regular = new RespostaPsaRegular();
     
 	while($valor = mysqli_fetch_array($result)){
+		echo "teste2";
     $integrante = $valor['idPsaIntegranteGrupo'];
     $periodo = $valor['dataReferencia'];    
 	$nome = $Gerente->getNomeGerente($valor['gerente_idGerente']);
