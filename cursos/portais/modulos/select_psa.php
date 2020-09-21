@@ -1,4 +1,5 @@
 <?php  
+error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 //$grupo_pj = new GrupoClientePj();
 //$grupo = new Grupo();
