@@ -235,8 +235,12 @@ class RelatorioDesempenho extends Database {
 		
 	}
 	
-		function selectRelatorioDesempenhoTrRel($where = "", $idAcompanhamentoCurso, $idIntegranteGrupo, $mes, $Sonota, $mediaFinal,$idFolhaFrequencia, $somedia) {
-
+	function selectRelatorioDesempenhoTrRel($where = "", $idAcompanhamentoCurso, $idIntegranteGrupo, $mes, $Sonota, $mediaFinal,$idFolhaFrequencia, $somedia, $idClientePf="") {
+			$dataAtual = date("Y-mm-d");
+			$IntegranteGrupo = new IntegranteGrupo();
+			if ($idClientePf >0) {
+				$ids = $IntegranteGrupo->getidIntegranteGrupo($idClientePf,"",$dataAtual);
+			}
 		$sql = "SELECT SQL_CACHE idTipoItenRelatorioDesempenho, nome 
 			FROM tipoItenRelatorioDesempenho 
 			WHERE inativo = 0 AND (avaliacao = $mes or reavaliacao = $mes)";
@@ -246,16 +250,15 @@ class RelatorioDesempenho extends Database {
 		$html2 = array();
 		$notasSM = array();
 		
-		if (mysqli_num_rows($result) > 0) {
+		if (mysql_num_rows($result) > 0) {
 
 			$AcompanhamentoCurso = new AcompanhamentoCurso();
 
-			while ($valor = mysqli_fetch_array($result)) {
+			while ($valor = mysql_fetch_array($result)) {
 
 				$idTipoItenRelatorioDesempenho = $valor['idTipoItenRelatorioDesempenho'];
 				$nomeItem = $valor['nome'];
-                
-                
+                 
 				$html .= "<p>" . ($nomeItem) . "</p>";
                
 				$sql = "SELECT SQL_CACHE idItenRelatorioDesempenho, nome, orientacao FROM itenRelatorioDesempenho 
@@ -266,7 +269,7 @@ class RelatorioDesempenho extends Database {
 			//	$nota = 0;			
 			
 			
-				while ($valor2 = mysqli_fetch_array($result2)) {
+				while ($valor2 = mysql_fetch_array($result2)) {
 
 					$html .= "<div>";
                     
@@ -276,9 +279,11 @@ class RelatorioDesempenho extends Database {
 					$sql = "SELECT SQL_CACHE idRelatorioDesempenho, integranteGrupo_idIntegranteGrupo, itenRelatorioDesempenho_idItenRelatorioDesempenho, nota, obs 
 						FROM relatorioDesempenho 
 						WHERE itenRelatorioDesempenho_idItenRelatorioDesempenho = " . $idItenRelatorioDesempenho . " " . $where;
-						
-			//		Uteis::pr($sql);
-					$valorNota = mysqli_fetch_array($this -> query($sql));
+						if ($idClientePf != '') {
+							$where .= " AND integranteGrupo_idIntegranteGrupo in (".$ids.")";	
+						}
+	
+					$valorNota = mysql_fetch_array($this -> query($sql));
 					
 					if ($Sonota == 1) {
 					
@@ -289,13 +294,6 @@ class RelatorioDesempenho extends Database {
 					$nota = $valorNota['nota'];	
 					
 					}
-					
-				/*	if ($mediaFinal == 1) {
-						
-					$html2[] = $valorNota['nota'];		
-						
-						
-					}*/
 					
 					$totalNota += $valorNota['nota'];
 					
@@ -340,6 +338,7 @@ class RelatorioDesempenho extends Database {
 								    <label>Comentário:</label>
 								    <textarea id='obs' name='obs' style=\"width:570px; height:130px;\">$obs</textarea>
 								</p>
+
 								
 								<input name=\"idFolhaFrequencia\" id=\"idFolhaFrequencia\" 
 								type=\"hidden\" value=\"" . $idFolhaFrequencia . "\" />
@@ -356,30 +355,7 @@ class RelatorioDesempenho extends Database {
 
 			}
 		}
-		
-/*
-		if ($xy >0 ) {
-			$media1 = ($totalNota / $xy);
-			if ($somedia != 1) {
-				$html8 = $nota." média: ".$media1; 
-			} else {
-				$html8 = $media1; 
-				
-			}
-		}
-		
-		if ($mediaFinal != 1) {
-			if ($Sonota != 1) {
-		
-				return $html;
-			} else {
-		
-				return $nota;
-			}
-		} else {
-		return $html8;
-		} 
-	*/
+
 	return $notasSM;	
 	}
 	

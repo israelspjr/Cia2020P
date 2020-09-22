@@ -1709,10 +1709,10 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
 
 	  $meses = array();
   
-	  $xy = 0;
+	 // $xy = 0;
 	  		
 	  for ($x=$mes_ini;$x<($mes_fim+1);$x++) {	
-	  $mesAtual = $x;
+//	  $mesAtual = $x;
 	  
 	  if  (($x == 1) || ($x == 7)) {
 		  $habilidade = "Produção Oral";
@@ -1740,17 +1740,13 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
 		$colunas[] = "Atitude:".$habilidade."<br>Avaliado em: ".Uteis::retornaNomeMes($x);
 		if ($trazerFrequencia == 1) {
 		$colunas[] = "Frequência com Justificativa";	
+			}
 		}
-		}
-		
-
 		$meses[] = $x;
 		}
 		
 		$colunas[] = "Nota 1º Prova";
 		$colunas[] = "Nota 2º Prova";
-		
-		
 		
 	if ($mes_ini < 10) {
 			$mesIni = "0".$mes_ini;
@@ -1758,9 +1754,7 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
 			$mesIni = $mes_ini;
 		}
 		
-		$where .= " /*AND ((PAG.dataPrevisaoTerminoEstagio is null) OR (PAG.dataPrevisaoTerminoEstagio >= '".$ano_ini."-".$mesIni."-01'))*/
-		 AND ((IG.dataSaida IS NULL) OR (IG.dataSaida >= '2018-06-01'))";
-		
+		$where .= " AND ((IG.dataSaida IS NULL) OR (IG.dataSaida >= '2018-06-01'))";
 
 	$sql = "SELECT  distinct(G.idGrupo), G.nome as grupo, PA.nivelEstudo_IdNivelEstudo, PAG.idPlanoAcaoGrupo, NE.nivel,PA.idPlanoAcao ,idIntegranteGrupo, PAG.dataPrevisaoTerminoEstagio , PAG.dataInicioEstagio, IG.dataEntrada, IG.dataSaida, P.idProposta, P.idioma_idIdioma,CPF.nome, CPF.idClientePf	
 	FROM grupo as G
@@ -1774,14 +1768,14 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
 	INNER JOIN nivelEstudo AS NE on NE.idNivelEstudo = PA.nivelEstudo_IdNivelEstudo
 	INNER JOIN proposta AS P on  PA.proposta_idProposta = P.idProposta
 	 " .$where;
+	// echo $sql;
    $result = $this -> query($sql);
 	
 	 if (mysqli_num_rows($result) > 0) {
       $html .= "<tbody>";
 	  $dia = "";
 
-
-      while ($valor = mysqli_fetch_array($result)) {
+      while ($valor = mysqli_fetch_array($result)) { // Inicio loop geral
 		  
 		  $mesFim = date($ano_fim."-".$mes_fim."-t");
 		  
@@ -1790,13 +1784,13 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
 		  $idGrupo2 = $valor['idGrupo'];
 		  $valorx2 = $PlanoAcaoGrupo->getTodosPAG($idPlanoAcaoGrupo);
 		  $idIntegranteGrupo = $IntegranteGrupo->getidIntegranteGrupo("",$valorx2,$mesFim);
-		  
-	//	  Uteis::pr($idIntegranteGrupo);
+		  $nomeAluno = $valor['nome'];
+		  $idClientePf = $valor['idClientePf'];
+		  $ids = explode(",", $idIntegranteGrupo);
 		  
 		$html .= "<tr>";
 		if (!$excel) {
 		$img = 	"<img src='/cursos/images/cad.png' title='Ver grupo' onclick='abrirNivelPagina(this, \"/cursos/admin/modulos/relacionamento/grupo/cadastro.php?id=".$idPlanoAcaoGrupo."\",\"\" ,\"\" )'>";
-			
 		}
 		
 		$html .= "<td>".$img.$valor['grupo']."</td>";	
@@ -1815,8 +1809,8 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
 			
 	//		Uteis::pr( $sql2);
 			
-			if (mysqli_num_rows($rs) > 0) {
-			while ($valors = mysqli_fetch_array($rs)) {
+			if (mysqli_num_rows($rs) > 0) { //Loop dias e horarios
+			while ($valors = mysqli_fetch_array($rs)) { 
 				
 		$dia .= $AulaPermanenteGrupo->montaDias($valors['idAulaPermanenteGrupo'])."<br>";
 		
@@ -1831,7 +1825,7 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
 		$NomePro .= $onclickP." ".$Professor->getNome($idProfessor)."<br>";
 		}
 			}
-			}
+			} // fechamento Loop dias e horarios
 	
 		$html .= "<td >" .$dia . "</td>";
 		$html .= "<td >" .Uteis::exibirData($valor['dataInicioEstagio']) . "</td>";
@@ -1851,38 +1845,15 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
 		$NomePro = "";
 	
 		// Alunos
-		
-		if ($idIntegranteGrupo == '') {
-		
-		
-		$rs2 = $IntegranteGrupo->getidIntegranteGrupo("",$valor['idPlanoAcaoGrupo'],$mesFim);
-		$ids = explode(",",$rs2);
-		
-		} else {
-			
-		$ids = explode(",", $idIntegranteGrupo);
-		}
-		
+
 		$linhaProva = array();
 		$html1 = "";
 		$html3 = "";
 		$html4 = "";
 
-		foreach ($ids as $value) {
-			
-			$idClientePf = $IntegranteGrupo->getIdClientePf($value);
-			$clientePF[$idClientePf][] = $IntegranteGrupo->getNomePF($value);
-			
-		$xy++;	
+		foreach ($ids as $value) { //Verificação notas (integrantegrupo)
 		
-			$sql3 = "SELECT SQL_CACHE
-	IG.idIntegranteGrupo,
-    P.nome AS nomeProva,
-    C.dataAplicacao,
-    AVG(ICP.nota) AS notaProva,
-    PAG.idPlanoAcaoGrupo,
-	CPF.idClientePf
-FROM
+		$sql3 = "SELECT SQL_CACHE IG.idIntegranteGrupo, P.nome AS nomeProva, C.dataAplicacao, AVG(ICP.nota) AS notaProva, PAG.idPlanoAcaoGrupo, CPF.idClientePf FROM
     grupo AS G
         INNER JOIN
     planoAcaoGrupo AS PAG ON PAG.grupo_idGrupo = G.idGrupo
@@ -1908,14 +1879,14 @@ FROM
     gerenteTem AS GER ON GPJ.clientePj_idClientePj = GER.clientePj_idClientePj
         LEFT JOIN
     clientePj AS PJ ON PJ.idClientePj = GPJ.clientePj_idClientePj
-WHERE
- IG.idIntegranteGrupo = ".$value."
- GROUP BY IG.idIntegranteGrupo , P.nome
- ORDER BY C.idCalendarioProva ASC";
-// echo $sql3;
+		WHERE
+ 	IG.idIntegranteGrupo = ".$value."
+ 	GROUP BY IG.idIntegranteGrupo , P.nome
+ 	ORDER BY C.idCalendarioProva ASC";
+ //echo $sql3;
  
   $result3 = $this -> query($sql3);
-	 while ($valors = mysqli_fetch_array($result3)) {
+ 	 while ($valors = mysqli_fetch_array($result3)) {
 		 	 
      	 $html2 = "<div>";
 		 $html2 .= $valors['nomeProva']." <center>". Uteis::formatarMoeda($valors['notaProva'])."</center></div>";
@@ -1933,38 +1904,28 @@ WHERE
 		 if ($linhaProva[$value][1]) {
 	     $html3 .= "<span> ".$linhaPova[$value][1]."</span>";
 		 }
+		 
+		
+		} //FIM Verificação notas e frequencias(integrantegrupo)
+		
 	
-		}
-	
-		for  ($x=0;$x<count($meses);$x++)  {
+	foreach ($meses AS $mes) {
+		//Frequencia
+		
+		$valorPeriodo = $PeriodoAcompanhamentoCurso->selectPeriodoAcompanhamentoCurso(" WHERE mes = ".$mes." AND ano = ".$ano_ini);
 			
-			$valorPeriodo = $PeriodoAcompanhamentoCurso->selectPeriodoAcompanhamentoCurso(" WHERE mes = ".$meses[$x]." AND ano = ".$ano_ini);
+			$idPeriodoAcompanhamentoCurso = $valorPeriodo[0]['idPeriodoAcompanhamentoCurso'];
+
+			//Buscar se já existe
+			$sql4 = "SELECT SQL_CACHE idAcompanhamentoCurso, professor_idProfessor, periodoAcompanhamentoCurso_idPeriodoAcompanhamentoCurso, planoAcaoGrupo_idPlanoAcaoGrupo, obs, finalizadoParcial, finalizadoGeral, arquivado FROM acompanhamentoCurso WHERE planoAcaoGrupo_idPlanoAcaoGrupo in (".$valorx2.")  AND periodoAcompanhamentoCurso_idPeriodoAcompanhamentoCurso = ".$idPeriodoAcompanhamentoCurso. " AND (arquivado = 0 OR arquivado is null) ";
+			$rsAcomapanhamentoCurso = $this -> executeQuery($sql4); 
 			
-$idPeriodoAcompanhamentoCurso = $valorPeriodo[0]['idPeriodoAcompanhamentoCurso'];
-
-//Buscar se já existe
-$sql4 = "SELECT SQL_CACHE idAcompanhamentoCurso, professor_idProfessor, periodoAcompanhamentoCurso_idPeriodoAcompanhamentoCurso, planoAcaoGrupo_idPlanoAcaoGrupo, obs, finalizadoParcial, finalizadoGeral, arquivado FROM acompanhamentoCurso WHERE planoAcaoGrupo_idPlanoAcaoGrupo in (".$valorx2.")  AND periodoAcompanhamentoCurso_idPeriodoAcompanhamentoCurso = ".$idPeriodoAcompanhamentoCurso. " AND (arquivado = 0 OR arquivado is null) ";
-
-$rsAcomapanhamentoCurso = $this -> executeQuery($sql4);
-
-$html4 = "";
-$nota1 = "";
-$html4a = "";
-
-foreach ($ids as &$value) {
-	
-	//Pegando Frequência
+			if ($trazerFrequencia == 1) {
+			$Freq = $this->relatorioFrequencia_mensal(" WHERE CPF.idClientePf = " . $idClientePf . " AND MONTH(FF.dataReferencia) = ".$mes." AND YEAR(FF.dataReferencia) = ".$ano_ini." AND FF.finalizadaPrincipal = 1 AND BH.credDeb is null");
 			
-			$Freq = $this->relatorioFrequencia_mensal(" WHERE IG.idIntegranteGrupo = " . $value . " AND MONTH(FF.dataReferencia) = ".$meses[$x]." AND YEAR(FF.dataReferencia) = ".$ano_ini." AND FF.finalizadaPrincipal = 1 AND BH.credDeb is null");
-				
-				$AlunoFreq = 0;
-				$AlunoJust = 0;
-				$EmpresaFreq = 0;
-				$duasFolhas = 0;
-				$obs = "";
-				$frequenciaAlunos = "";
-	
-				foreach($Freq as $valorFreq) {
+			$frequenciaAlunos = "";
+			
+			foreach($Freq as $valorFreq) {
 					
 					 $horasRealizadasPeloGrupo = $valorFreq['horasRealizadasPeloGrupo'] + $valorFreq['somarCom_horasRealizadasPeloGrupo'];
 	
@@ -1996,18 +1957,18 @@ foreach ($ids as &$value) {
 				}
 				
                 $frequenciaAlunos .= "<div> " . round($AlunoPer, 2) . "%".$imagem."</div>";
+			}
 
-	$html4 .= "<div>";
-	
-	for ($y=0;$y<count($rsAcomapanhamentoCurso);$y++) {
+		// notas de desempenho
+		for ($y=0;$y<count($rsAcomapanhamentoCurso);$y++) {
 	$idAcompanhamentoCurso = $rsAcomapanhamentoCurso[$y]['idAcompanhamentoCurso'];
 	$idProfessor2 = $rsAcomapanhamentoCurso[$y]['professor_idProfessor'];
 	$nomeProf2 = $Professor->getNome($idProfessor2);
 	
-// Problema para gerar PDF
-$nota1 = $RelatorioDesempenho->selectRelatorioDesempenhoTrRel(" AND acompanhamentoCurso_idAcompanhamentoCurso = ".$idAcompanhamentoCurso." AND integranteGrupo_idIntegranteGrupo = ".$value, $idAcompanhamentoCurso, $value, $meses[$x], 1, 1);
+$nota1 = $RelatorioDesempenho->selectRelatorioDesempenhoTrRel(" AND acompanhamentoCurso_idAcompanhamentoCurso = ".$idAcompanhamentoCurso, $idAcompanhamentoCurso, $value, $mes, 1, 1, "","",$idClientePf);
 
-$valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoCurso_idAcompanhamentoCurso =".$idAcompanhamentoCurso. " AND integranteGrupo_idIntegranteGrupo = ".$value);
+$valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoCurso_idAcompanhamentoCurso =".$idAcompanhamentoCurso. " AND integranteGrupo_idIntegranteGrupo in (".$idIntegranteGrupo.")");
+
 	$obs = $valor[0]['obs'];
 	if ($obs != '') {
 		if (!$excel) {
@@ -2017,8 +1978,8 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 	} else {
 	$imagem = "";
 	}
-		
-		$style="";
+
+			$style="";
 		if ($nota1 != '') {
 			
  	// Nota de desempenho mensal
@@ -2033,30 +1994,19 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 			$style = "color:red";	
 		} else {
 			$style = "";
-		}	
-			
- $html4 .= $imagem."<span title=\"".$obs."\" style='$style';> ".$nota1[0]."</span>&nbsp;&nbsp;";
- $html4a .= $imagem."<span title=\"".$obs."\" style='$style';> ".$nota1[1]."</span>&nbsp;&nbsp;";
-	} else {
-  $html4 .= $imagem;		
-  
-	}
+			}	
+		}
 
-	}
-	$html4 .= "</div><br>";
-}
+		}
+		
+		$html .= "<td>".$imagem."<span title=\"".$obs."\" style='$style';> ".$nota1[0]."</span></td>";
+		$html .= "<td>".$imagem."<span title=\"".$obs."\" style='$style';> ".$nota1[1]."</span></td>";
 
-		$html .= "<td>".$html4."</td>";	
-		$html .= "<td>".$html4a."</td>";		
 		if ($trazerFrequencia == 1) {
-			$html .= "<td><span style='$style2'>";
-				if (($nota1[0] != '') && ($nota1[1] != '')) {
-			$html .= $frequenciaAlunos;
-				}
-			$html .=" </span></td>";		
+			$html .= "<td>".$frequenciaAlunos."</td>";
 		} 
 		
-		}
+	}
 
 		//Notas de provas
 		$html .= "<td>".$html1."</td>";
@@ -2074,12 +2024,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 	} else {
 		
 	   return $topo. $html_base . $html;	
-
 	}
-
-   
-
   }
+ 
  
    function relatorioInformacoes($where = "", $tipo, $excel = false,$mesIni, $mesFim) {
 
