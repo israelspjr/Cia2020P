@@ -215,7 +215,14 @@ $comprovante = $valorProfessor[0]['comprovante'];
 						Aceita aulas On-line</label>
 				</p>
 			</div>
-            <div id="div_lista_backgroundIdiomaProfessor" class="linha-inteira">
+        <div class="linha-inteira">
+            <p>
+				<button class="bBlue" onclick="postForm('form_professor', '<?php echo "modulos/cadastro/professorAcao.php?id=$idProfessor"?>');">
+					Salvar
+				</button>
+			</p>
+            </div>
+                <div id="div_lista_backgroundIdiomaProfessor" class="linha-inteira">
              <fieldset>
     <legend>Idioma do professor</legend>
      <?php //if($idProfessor == -1) { 
@@ -229,11 +236,6 @@ $comprovante = $valorProfessor[0]['comprovante'];
 	  ?>
       </fieldset>          
                 </div>
-            <p>
-				<button class="bBlue" onclick="postForm('form_professor', '<?php echo "modulos/cadastro/professorAcao.php?id=$idProfessor"?>');">
-					Salvar
-				</button>
-			</p>
         </form>
       
         <p>
@@ -302,7 +304,7 @@ function atualizaSotaquePorIdioma(idIdioma, idSotaqueIdiomaProfessor){
 			$('#div_SotaquePorIdioma').html(e);
 		});
 	}
-	atualizaSotaquePorIdioma( '4', '<?php echo $idSotaqueIdiomaProfessor ?>' )
+//	atualizaSotaquePorIdioma( '4', '<?php echo $idSotaqueIdiomaProfessor ?>' )
 </script>
 <?php if ($idProfessor != -1) { ?>
  <div id="div_lista_endereco">
