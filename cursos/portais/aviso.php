@@ -9,14 +9,10 @@ $TextoEmailPadrao = new TextoEmailPadrao();
 $Configuracoes = new Configuracoes();
 
 $texto = $TextoEmailPadrao->selectTextoEmailPadrao(" WHERE excluido = 0 and candidato = 1");
-Uteis::pr($texto);
 
 $config = $Configuracoes->selectConfig();
 
 ?>
-
-<!--<script src="../js/Chart.min.js"></script>
--->
 
 <style>
 .canvasG {
@@ -30,9 +26,8 @@ $config = $Configuracoes->selectConfig();
 		
 
     <fieldset>
-  <!--      <legend>ATENÇÃO!</legend>-->
         
-        <?php //if ($_SESSION['idProfessor_SS'] == -1) {
+        <?php if ($_SESSION['idProfessor_SS'] == -1) {
 		?>
 
         <p><center><strong><span style="font-size:20px">Venha trabalhar com a <?php echo $config[0]['nomeEmpresa'];?></span></strong></center></p>
@@ -47,7 +42,7 @@ $config = $Configuracoes->selectConfig();
                         </p>
 			
 			
-		<?php //} ?>
+		<?php } ?>
 			
 			
 <?php if ($_SESSION['idProfessor_SS'] != -1) { ?> 
@@ -149,7 +144,7 @@ echo $retorno['resultado'];
 				</div>
 			</div>
             </div>
-
+</div>
 <!--<legend>ÚLTIMOS AVISOS</legend>
 -->
 
