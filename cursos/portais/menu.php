@@ -184,7 +184,11 @@ function zerarCentro() {
 }
 </script>
 
-<?php if ($_SESSION['idClientePf_SS'] != 4) { ?>
+<?php 
+
+if ($appN != 2) {
+
+if ($_SESSION['idClientePf_SS'] != 4) { ?>
 <script>
   function Sub(){
     $("#submenu").toggle();
@@ -223,6 +227,8 @@ function zerarCentro() {
 </script>
 
 <?php  }
+
+			}
 
 if (($appN == 1) || ($appN == 3)) {
 	$portal = "Aluno";	
