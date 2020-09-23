@@ -215,13 +215,7 @@ $comprovante = $valorProfessor[0]['comprovante'];
 						Aceita aulas On-line</label>
 				</p>
 			</div>
-        <div class="linha-inteira">
-            <p>
-				<button class="bBlue" onclick="postForm('form_professor', '<?php echo "modulos/cadastro/professorAcao.php?id=$idProfessor"?>');">
-					Salvar
-				</button>
-			</p>
-            </div>
+             </div>
                 <div id="div_lista_backgroundIdiomaProfessor" class="linha-inteira">
              <fieldset>
     <legend>Idioma do professor</legend>
@@ -236,6 +230,13 @@ $comprovante = $valorProfessor[0]['comprovante'];
 	  ?>
       </fieldset>          
                 </div>
+        <div class="linha-inteira">
+            <p>
+				<button class="bBlue" onclick="postForm('form_professor', '<?php echo "modulos/cadastro/professorAcao.php?id=$idProfessor"?>');">
+					Salvar
+				</button>
+			</p>
+           
         </form>
       
         <p>
@@ -247,7 +248,7 @@ $comprovante = $valorProfessor[0]['comprovante'];
                   <input type="text" name="documentoUnico" id="rne" class="rne" value="<?php echo $documentoUnico?>" autocomplete="off" style="display:none"/>
 			      <input type="text" name="documentoUnico" id="passaporte" class="passaporte" value="<?php echo $documentoUnico?>" autocomplete="off" style="display:none"/>-->
 <script>
-	$(document).ready(function(){
+/*	$(document).ready(function(){
 		$('#idIdioma').change(function(){
 	//		atualizaNivelLinguisticoPorIdioma( $(this).val() );
 			atualizaSotaquePorIdioma( $(this).val() );
@@ -260,37 +261,37 @@ $('#tipoDocumentoUnico_idTipoDocumentoUnico').attr('onchange','tipoDocumentoUnic
 		
 			
 	/* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
-	$('#add_foto').on('change', function() {
+/*	$('#add_foto').on('change', function() {
 		$('#visualizarFoto').html('Enviando...');
 		/* Efetua o Upload sem dar refresh na pagina */
-		$('#form_uploadFoto').ajaxForm({
+/*		$('#form_uploadFoto').ajaxForm({
 			target : '#visualizarFoto' // o callback será no elemento com o id #visualizar
 		}).submit();
 	});
 
 	/* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
-	$('#add_file').on('change', function() {
+/*	$('#add_file').on('change', function() {
 		$('#visualizarFile').html('Enviando...');
 		/* Efetua o Upload sem dar refresh na pagina */
-		$('#form_uploadFile').ajaxForm({
+/*		$('#form_uploadFile').ajaxForm({
 			target : '#visualizarFile' // o callback será no elemento com o id #visualizar
 		}).submit();
 	});
 	
 	/* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
-$('#add_file2').on('change', function(){
+/*$('#add_file2').on('change', function(){
 	$('#visualizarFile2').html('Enviando...');
 	/* Efetua o Upload sem dar refresh na pagina */ 
-	$('#form_uploadFile2').ajaxForm({
+/*	$('#form_uploadFile2').ajaxForm({
 		target:'#visualizarFile2' // o callback será no elemento com o id #visualizar
 	}).submit();
 });
 
 /* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
-$('#add_file3').on('change', function(){
+/*$('#add_file3').on('change', function(){
 	$('#visualizarFile3').html('Enviando...');
 	/* Efetua o Upload sem dar refresh na pagina */ 
-	$('#form_uploadFile3').ajaxForm({
+/*	$('#form_uploadFile3').ajaxForm({
 		target:'#visualizarFile3' // o callback será no elemento com o id #visualizar
 	}).submit();
 });
@@ -304,7 +305,7 @@ function atualizaSotaquePorIdioma(idIdioma, idSotaqueIdiomaProfessor){
 			$('#div_SotaquePorIdioma').html(e);
 		});
 	}
-//	atualizaSotaquePorIdioma( '4', '<?php echo $idSotaqueIdiomaProfessor ?>' )
+	atualizaSotaquePorIdioma( '4', '<?php echo $idSotaqueIdiomaProfessor ?>' );*/
 </script>
 <?php if ($idProfessor != -1) { ?>
  <div id="div_lista_endereco">
