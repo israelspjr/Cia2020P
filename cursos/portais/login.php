@@ -107,7 +107,7 @@ if  (($appN == 1) || ($appN == 3)) {
 </style>
 <?php	
 } elseif ($appN == 2) {
-	$novoCadastro = " <p><a href=\"login.php?app=2&novo=1\"><button class=\"Bblue\">Não tem cadastro? Crie um agora</button></a>";
+	$novoCadastro = " <p><a href=\"recuperaSenhaFormProf.php\">Não sabe a sua senha?</a></p><p><a href=\"login.php?app=2&novo=1\"><button class=\"Bblue\">Não tem cadastro? Crie um agora</button></a>";
 ?>
 <style>
 	body{
@@ -183,7 +183,9 @@ if  (($appN == 1) || ($appN == 3)) {
             <div class="form-group">
 <p>                <button class="Bblue">Efetuar Login</button></p>
 </div>
-            <p><a href="recuperaSenhaForm.php">Não sabe a sua senha?</a></p>
+			<?php  if ($appN == 1) {?>
+            	<p><a href="recuperaSenhaForm.php">Não sabe a sua senha?</a></p>
+            <?php }?>
         </form>
         	<?php echo $novoCadastro;?> 
         				</div>
