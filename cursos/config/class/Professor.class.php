@@ -1232,7 +1232,7 @@ class Professor extends Database
 			$valorTotalAulas = Uteis::exibirMoeda($valorTotalAulas);
 			
 			if (($zerado == 0) && ($valorTotalAulas == 0)) {
-				
+				$cont--;
 			} else {
 			
 				 if ($apenasLinha !== false) {

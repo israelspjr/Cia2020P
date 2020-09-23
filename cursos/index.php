@@ -72,7 +72,7 @@ session_destroy();
       	
            <!-- COLUNA 2 -->
             	<div class="c2">
-            		<center> <a href="/cursos/mobile/professor/login.php"> <img src="images/iconprof.png" class="bot"> </a></center> 
+            		<center> <a href="/cursos/portais/login.php?app=2"> <img src="images/iconprof.png" class="bot"> </a></center> 
             	</div>
             	
            <!-- COLUNA 3 -->
@@ -94,10 +94,10 @@ session_destroy();
 		   	</div>
 
     	   	<div class="footer1C">
-		    	<center> <div class="emailIndex"> <a href="mailto:<?php echo $config[0]['emailAten'];?>"> <img src="images/email.png" class="ficons2"> <span><?php echo $config[0]['emailAten'];?></span></div></a></center> 
+		    	<center> <div class="emailIndex"> <a href="mailto:<?php echo $config[0]['emailAten'];?>"> <img src="images/email.png" class="ficons2"> <span><?php echo $config[0]['emailAten'];?></span></a></div></center> 
 	    	</div>
  
-
+</div>
    <div class="site">
 	   <a href="https://<?php echo $config[0]['siteEmp'];?>" target="_blank" >  <?php echo $config[0]['siteEmp'];?> </a> <br> <br>
    </div>
