@@ -108,11 +108,11 @@ class Login extends Database {
                 $_SESSION['idUsuario'] = $result['idProfessor'];
 				$_SESSION['appN'] = 1;
                 $Log -> Log('Login ClientePf', 0, "Login Efetuado com Sucesso usuário:".$documentoUnico." - senha:".EncryptSenha::B64_Decode($senhaAcesso),array("usuario"=>$_SESSION['usuario'],"idUsuario"=>$_SESSION['idUsuario']));
-				if ($portalUnico != 1) {
-					header('Location:/cursos/mobile/aluno/index.php');	
-				} else {
+		//		if ($portalUnico != 1) {
+		//			header('Location:/cursos/mobile/aluno/index.php');	
+		//		} else {
 					header('Location:/cursos/portais/index.php');
-				}	
+		//		}	
 				return true;
 			}
 		} 
@@ -136,7 +136,7 @@ class Login extends Database {
                 $_SESSION['usuario'] = "professor";
                 $_SESSION['idUsuario'] = $result['idProfessor'];
                 $Log -> Log('Login Professor', 0, "Login Efetuado com Sucesso usuário:".$documentoUnico." - senha:".EncryptSenha::B64_Decode($senhaAcesso),array("usuario"=>$_SESSION['usuario'],"idUsuario"=>$_SESSION['idUsuario']));
-				header('Location:/cursos/mobile/professor/index.php');	
+				header('Location:/cursos/portais/index.php');	
 				return true;			
 		}
         $Log -> Log('Login Professor', 1, "Erro ao efetuar o Login usuário:".$documentoUnico." - senha:".EncryptSenha::B64_Decode($senhaAcesso));
@@ -147,7 +147,7 @@ class Login extends Database {
 				$_SESSION['nome_SS'] = 'Novo Cadstro';
                 $_SESSION['usuario'] = "professor";
                 $_SESSION['idUsuario'] = -1;
-				header('Location:/cursos/mobile/professor/index.php');	
+				header('Location:/cursos/portais/index.php');	
 				return true;
 		}
 		return false; 
