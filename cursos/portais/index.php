@@ -7,6 +7,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 $Configuracoes = new Configuracoes();
 $FolhaFrequencia = new FolhaFrequencia();
 $NewsProfessor = new NewsProfessor();
+$Professor = new Professor();
 
 $config = $Configuracoes->selectConfig();
 $candidato = $Professor->getCandidato($_SESSION['idProfessor_SS']);

@@ -135,6 +135,7 @@ class Login extends Database {
 				$_SESSION['nome_SS'] = $result['nomeExibicao'];
                 $_SESSION['usuario'] = "professor";
                 $_SESSION['idUsuario'] = $result['idProfessor'];
+				$_SESSION['appN'] = 2;
                 $Log -> Log('Login Professor', 0, "Login Efetuado com Sucesso usuário:".$documentoUnico." - senha:".EncryptSenha::B64_Decode($senhaAcesso),array("usuario"=>$_SESSION['usuario'],"idUsuario"=>$_SESSION['idUsuario']));
 				header('Location:/cursos/portais/index.php');	
 				return true;			
@@ -147,6 +148,7 @@ class Login extends Database {
 				$_SESSION['nome_SS'] = 'Novo Cadstro';
                 $_SESSION['usuario'] = "professor";
                 $_SESSION['idUsuario'] = -1;
+				$_SESSION['appN'] = 2;
 				header('Location:/cursos/portais/index.php');	
 				return true;
 		}
