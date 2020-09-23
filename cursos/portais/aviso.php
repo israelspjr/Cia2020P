@@ -207,6 +207,7 @@ Uteis::pr($rs);
 }
 ?>
 </fieldset>
+<?php if ($candidato ==0) {?>
 <script>
 function psa2(x) {
 	 var status, clientePj, retorno, resultado, data, data2, idProfessor, total3;
@@ -335,3 +336,4 @@ psa2("QUALIDADE DA AULA");
 psa2("RESULTADO DO CURSO");
 
 </script>
+<?php } ?>
