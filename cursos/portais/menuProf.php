@@ -45,17 +45,17 @@ if ($candidato == 1) {
                 
                 <?php } ?>
             <li class="parent ">
-				<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/form/professor.php', '#centro');">
+				<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/professor.php', '#centro');">
 					<span data-toggle="collapse" href="#sub-item-2"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span><span data-toggle="collapse" href="#sub-item-2"> Dados Pessoais </span>
 				</a>
 				<ul class="children collapse" id="sub-item-2">
 					<li>
-						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/form/professor.php', '#centro');">
+						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/professor.php', '#centro');">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Cadastro
 						</a>
 					</li>
 					<li>
-						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/resourceHTML/formacaoPerfil.php', '#centro');">
+						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfil.php', '#centro');">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Perfil Pessoal
 						</a>
 					</li>
