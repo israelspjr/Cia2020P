@@ -248,7 +248,7 @@ $comprovante = $valorProfessor[0]['comprovante'];
                   <input type="text" name="documentoUnico" id="rne" class="rne" value="<?php echo $documentoUnico?>" autocomplete="off" style="display:none"/>
 			      <input type="text" name="documentoUnico" id="passaporte" class="passaporte" value="<?php echo $documentoUnico?>" autocomplete="off" style="display:none"/>-->
 <script>
-/*	$(document).ready(function(){
+	$(document).ready(function(){
 		$('#idIdioma').change(function(){
 	//		atualizaNivelLinguisticoPorIdioma( $(this).val() );
 			atualizaSotaquePorIdioma( $(this).val() );
@@ -257,7 +257,7 @@ $comprovante = $valorProfessor[0]['comprovante'];
 	
 	
 	tipoDocumentoUnico('form_professor');
-$('#tipoDocumentoUnico_idTipoDocumentoUnico').attr('onchange','tipoDocumentoUnico("form_professor")')
+	$('#tipoDocumentoUnico_idTipoDocumentoUnico').attr('onchange','tipoDocumentoUnico("form_professor")');
 		
 			
 	/* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
