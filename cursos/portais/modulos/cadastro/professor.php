@@ -159,11 +159,11 @@ $comprovante = $valorProfessor[0]['comprovante'];
 					<?php echo $Pais -> selectPaisSelect("required", $paisIdPais ? $paisIdPais : ID_PAIS); ?>
 					<span class="placeholder" style="display:none;color:red;">Campo Obrigatório</span>
 				</p>
-                       <p>
+                       <div><p>
           <label>Como Conheceu:</label>
        <?php echo $Conheceu->selectComoConheceuSelect("required",$idConheceu, " AND excluido = 0 AND (professor = 1 OR geral =1)") ?>
        <span class="placeholder" style="display:none;color:red;">Campo Obrigatório</span>
-       </p>
+       </p></div>
 			</div>
 			<div class="direita">
 				<p>
@@ -185,13 +185,13 @@ $comprovante = $valorProfessor[0]['comprovante'];
 				</p>
 				<p>
 				  <label>Senha (Mínimo de 6 caracteres):</label>
-					<input type="password" name="senhaAcesso" id="password" class="required password"  value="<?php echo $senhaAcesso?>" placeholder="Campo Obrigatório"/>
+					<input type="password" name="senhaAcesso" id="password" class="required password"  value="<?php echo $senhaAcesso?>" placeholder="Campo Obrigatório"/><br>
                      <input type="checkbox" value="1" onclick="mostraSenha(this)" /><small>mostrar a senha</small>
 					<span class="placeholder" style="display:none;color:red;">Campo Obrigatório</span>
 				</p>
 				<p>
 					<label>Confirma Senha:</label>
-					<input type="password" name="senhaAcesso2" id="rpassword" class="required password" value="<?php echo $senhaAcesso?>" placeholder="Campo Obrigatório"/>
+					<input type="password" name="senhaAcesso2" id="rpassword" class="required password" value="<?php echo $senhaAcesso?>" placeholder="Campo Obrigatório"/><br>
 					<span class="placeholder" style="display:none;color:red;">Campo Obrigatório</span>
 				</p>
 				<p>
@@ -294,7 +294,7 @@ $('#add_file3').on('change', function(){
 	}).submit();
 });
 
-ativarForm();
+//ativarForm();
 
 function atualizaSotaquePorIdioma(idIdioma, idSotaqueIdiomaProfessor){
 		if(idSotaqueIdiomaProfessor == '' || idSotaqueIdiomaProfessor == undefined) idSotaqueIdiomaProfessor = '';
