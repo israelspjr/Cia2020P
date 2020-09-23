@@ -55,7 +55,7 @@ if ($candidato == 1) {
 						</a>
 					</li>
 					<li>
-						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfil.php', '#centro');">
+						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfilProf.php', '#centro');">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Perfil Pessoal
 						</a>
 					</li>
