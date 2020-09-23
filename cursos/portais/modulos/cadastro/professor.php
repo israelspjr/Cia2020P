@@ -298,14 +298,14 @@ $('#add_file3').on('change', function(){
 
 //ativarForm();
 
-/*function atualizaSotaquePorIdioma(idIdioma, idSotaqueIdiomaProfessor){
+function atualizaSotaquePorIdioma(idIdioma, idSotaqueIdiomaProfessor){
 		if(idSotaqueIdiomaProfessor == '' || idSotaqueIdiomaProfessor == undefined) idSotaqueIdiomaProfessor = '';
 		
-		$.post('modulos/cadastro/idiomaProfessor.php', { acao:"SotaquePorIdioma", idIdioma: idIdioma, idSotaqueIdiomaProfessor: idSotaqueIdiomaProfessor}, function(e){
+		$.post('modulos/cadastro/idiomaProfessorAcao.php', { acao:"SotaquePorIdioma", idIdioma: idIdioma, idSotaqueIdiomaProfessor: idSotaqueIdiomaProfessor}, function(e){
 			$('#div_SotaquePorIdioma').html(e);
 		});
-	}
-	atualizaSotaquePorIdioma( '4', '<?php echo $idSotaqueIdiomaProfessor ?>' );*/
+	}*/
+	atualizaSotaquePorIdioma( '4', '<?php echo $idSotaqueIdiomaProfessor ?>' );
 </script>
 <?php if ($idProfessor != -1) { ?>
  <div id="div_lista_endereco">
