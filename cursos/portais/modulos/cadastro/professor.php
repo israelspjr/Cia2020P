@@ -215,12 +215,11 @@ $comprovante = $valorProfessor[0]['comprovante'];
 						Aceita aulas On-line</label>
 				</p>
 			</div>
-            <div id="div_lista_backgroundIdiomaProfessor" class="direita">
+            <div id="div_lista_backgroundIdiomaProfessor" class="linha-inteira">
              <fieldset>
     <legend>Idioma do professor</legend>
-     <?php if($idProfessor == -1) { ?>
-            <label>Idiomas:</label>
-                <?php 
+     <?php if($idProfessor == -1) { 
+	 
 				 echo $Idioma->selectIdiomaSelect("required", 4, $and);
 			  echo "<span class=\"placeholder\">Campo Obrigatório</span> ";
 			  ?>
