@@ -6,8 +6,9 @@ $Professor = new Professor();
 $Prova = new Prova();
 $Relatorio = new Relatorio();
 $TextoEmailPadrao = new TextoEmailPadrao();
+$Configuracoes = new Configuracoes();
 
-$texto = $TextoEmailPadrao->selectTextoEmailPadrao(" WHERE inativo = 0 and cadidato 1");
+$texto = $TextoEmailPadrao->selectTextoEmailPadrao(" WHERE inativo = 0 and candidato 1");
 Uteis::pr($texto);
 
 $config = $Configuracoes->selectConfig(1);
