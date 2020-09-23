@@ -139,7 +139,7 @@ class Login extends Database {
 				$_SESSION['appN'] = 2;
                 $Log -> Log('Login Professor', 0, "Login Efetuado com Sucesso usuário:".$documentoUnico." - senha:".EncryptSenha::B64_Decode($senhaAcesso),array("usuario"=>$_SESSION['usuario'],"idUsuario"=>$_SESSION['idUsuario']));
 				Uteis::pr($_SESSION);
-				header('Location:/cursos/portais/index.php');	
+			//	header('Location:/cursos/portais/index.php');	
 				return true;			
 		}
         $Log -> Log('Login Professor', 1, "Erro ao efetuar o Login usuário:".$documentoUnico." - senha:".EncryptSenha::B64_Decode($senhaAcesso));

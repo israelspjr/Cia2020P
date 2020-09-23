@@ -66,6 +66,7 @@ if ($documento != '' && $password != '') {
 		if ($documento != '' && $password != '' && $tipo != '') {
     		if (!$Login->efetuarLogin_Prof($documento, $password, $tipo, 1, 0)) {
         		Uteis::alertJava("Login ou senha inválidos.", true);
+				break;
 	    }
 	}
 }
