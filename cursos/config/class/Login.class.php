@@ -126,7 +126,7 @@ class Login extends Database {
 		if ($novo == 0) {
 		$sql = " SELECT idProfessor, nomeExibicao, documentoUnico, senha FROM professor 
 		WHERE inativo = 0 AND excluido = 0 AND tipoDocumentoUnico_idTipoDocumentoUnico = ".$tipo." AND documentoUnico = '" . $documentoUnico . "' AND senha = '" . $senhaAcesso . "' ";
-		echo $sql;
+		//echo $sql;
 		$rs = $this -> query($sql);
 
 		if ($result = mysqli_fetch_array($rs)) {			
@@ -136,10 +136,10 @@ class Login extends Database {
 				$_SESSION['nome_SS'] = $result['nomeExibicao'];
                 $_SESSION['usuario'] = "professor";
                 $_SESSION['idUsuario'] = $result['idProfessor'];
+				$_SESSION['idUnico'] = $result['idProfessor'];
 				$_SESSION['appN'] = 2;
                 $Log -> Log('Login Professor', 0, "Login Efetuado com Sucesso usuário:".$documentoUnico." - senha:".EncryptSenha::B64_Decode($senhaAcesso),array("usuario"=>$_SESSION['usuario'],"idUsuario"=>$_SESSION['idUsuario']));
-				Uteis::pr($_SESSION);
-			//	header('Location:/cursos/portais/index.php');	
+				header('Location:/cursos/portais/index.php');	
 				return true;			
 		}
         $Log -> Log('Login Professor', 1, "Erro ao efetuar o Login usuário:".$documentoUnico." - senha:".EncryptSenha::B64_Decode($senhaAcesso));
