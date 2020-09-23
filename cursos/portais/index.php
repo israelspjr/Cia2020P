@@ -134,9 +134,9 @@ if ($appN == 1) {
    
 		<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
           <?php if ($candidato == 1) {;?>
-               <li class="active" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/form/professor.php', '#centro');"><button class="Bblue">1º Passo</button></li>
-               <li class="active" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/resourceHTML/idiomaProfessor.php', '#centro');"><button class="Bblue">2º Passo</button></li>
-               <li class="active" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/resourceHTML/formacaoPerfil.php', '#centro');"><button class="Bblue">3º Passo</button></li>
+               <li class="active" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/professor.php', '#centro');"><button class="Bblue">1º Passo</button></li>
+               <li class="active" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/idiomaProfessor.php', '#centro');"><button class="Bblue">2º Passo</button></li>
+               <li class="active" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfil.php', '#centro');"><button class="Bblue">3º Passo</button></li>
          
           <?php } else {?>
 			<li class="active">Principal</li>
