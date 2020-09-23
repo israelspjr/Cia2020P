@@ -21,7 +21,12 @@ $TipoDocumentoUnico = new TipoDocumentoUnico();
  			 <center> <img src="../upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
 	</div>	
     <title><?php //echo NOME_APP ?></title>
-    
+    <style>
+	body{
+		background-image: url("../images/bcgprof.jpg");
+	}
+</style>
+<link rel="shortcut icon" href="../upload/imagem/empresa/<?php echo $config[0]['favIcon'];?>">
 </head>
 <body>
 <div id="divs_jquery"></div>
