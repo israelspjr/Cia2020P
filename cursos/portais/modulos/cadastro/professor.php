@@ -279,19 +279,19 @@ $comprovante = $valorProfessor[0]['comprovante'];
 	});
 	
 	/* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
-/*$('#add_file2').on('change', function(){
+$('#add_file2').on('change', function(){
 	$('#visualizarFile2').html('Enviando...');
 	/* Efetua o Upload sem dar refresh na pagina */ 
-/*	$('#form_uploadFile2').ajaxForm({
+	$('#form_uploadFile2').ajaxForm({
 		target:'#visualizarFile2' // o callback será no elemento com o id #visualizar
 	}).submit();
 });
 
 /* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
-/*$('#add_file3').on('change', function(){
+$('#add_file3').on('change', function(){
 	$('#visualizarFile3').html('Enviando...');
 	/* Efetua o Upload sem dar refresh na pagina */ 
-/*	$('#form_uploadFile3').ajaxForm({
+	$('#form_uploadFile3').ajaxForm({
 		target:'#visualizarFile3' // o callback será no elemento com o id #visualizar
 	}).submit();
 });
@@ -305,7 +305,7 @@ function atualizaSotaquePorIdioma(idIdioma, idSotaqueIdiomaProfessor){
 			$('#div_SotaquePorIdioma').html(e);
 		});
 	}
-	atualizaSotaquePorIdioma( '4', '<?php echo $idSotaqueIdiomaProfessor ?>' );*/
+	atualizaSotaquePorIdioma( '4', '<?php echo $idSotaqueIdiomaProfessor ?>' );
 </script>
 <?php if ($idProfessor != -1) { ?>
  <div id="div_lista_endereco">
