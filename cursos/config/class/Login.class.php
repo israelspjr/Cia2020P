@@ -125,7 +125,7 @@ class Login extends Database {
         $Log = new Log();
 		if ($novo == 0) {
 		$sql = " SELECT idProfessor, nomeExibicao, documentoUnico, senha FROM professor 
-		WHERE inativo = 0 AND excluido = 0 AND tipoDocumentoUnico_idTipoDocumentoUnico = ".$tipo." AND documentoUnico = " . $documentoUnico . " AND senha = " . $senhaAcesso . " ";
+		WHERE inativo = 0 AND excluido = 0 AND tipoDocumentoUnico_idTipoDocumentoUnico = ".$tipo." AND documentoUnico = '" . $documentoUnico . "' AND senha = '" . $senhaAcesso . "' ";
 		echo $sql;
 		$rs = $this -> query($sql);
 
