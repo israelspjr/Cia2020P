@@ -129,7 +129,7 @@ $comprovante = $valorProfessor[0]['comprovante'];
 				</p>
                 
                 <p>
-					<label>DDD: <input type="text" name="ddd" id="ddd" class="required" value="<?php echo $ddd?>" placeholder="Campo Obrigatório"/>
+					<label>DDD: <input type="text" size="5" name="ddd" id="ddd" class="required" value="<?php echo $ddd?>" placeholder="Campo Obrigatório"/>
 					Telefone: <input type="text" name="telefone" id="telefone" class="required" value="<?php echo $telefone?>" placeholder="Campo Obrigatório"/>
 				   </label>
 						<span class="placeholder" style="display:none;color:red;">Campo Obrigatório</span>
@@ -227,7 +227,7 @@ $comprovante = $valorProfessor[0]['comprovante'];
     <legend>Idioma do professor</legend>
      <?php //if($idProfessor == -1) { 
 	 
-	//			 echo $Idioma->selectIdiomaSelect("required", 4, $and);
+				 echo $Idioma->selectIdiomaSelect("required", 4, $and);
 	//		  echo "<span class=\"placeholder\">Campo Obrigatório</span> ";
 			  ?>
               <div id="div_SotaquePorIdioma"></div>
