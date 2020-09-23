@@ -28,7 +28,7 @@ $config = $Configuracoes->selectConfig();
     <fieldset>
         
         <?php if ($_SESSION['idProfessor_SS'] == -1) {
-		?>
+			$candidato = 1;	?>
 
         <p><center><strong><span style="font-size:20px">Venha trabalhar com a <?php echo $config[0]['nomeEmpresa'];?></span></strong></center></p>
 
@@ -45,7 +45,8 @@ $config = $Configuracoes->selectConfig();
 		<?php } ?>
 			
 			
-<?php if ($_SESSION['idProfessor_SS'] != -1) { ?> 
+<?php if ($_SESSION['idProfessor_SS'] != -1) { 
+			$candidato = 1; ?> 
 
 <div class="row">
 			<div class="col-lg-12">
