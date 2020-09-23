@@ -36,7 +36,7 @@ $config = $Configuracoes->selectConfig();
 
 <p>Clique no link abaixo para iniciar o seu processo de registro: </p>
 <p><strong>Não esqueça de cadastrar um email válido </strong></p>
-<p><a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/form/professor.php', '#centro');">
+<p><a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/professor.php', '#centro');">
 							<svg class="glyph stroked chevron-right" style="    width: 28px;  height: 37px;"><use xlink:href="#stroked-chevron-right"></use></svg> Cadastro
 						</a>
                         </p>
