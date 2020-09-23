@@ -304,7 +304,7 @@ function atualizaSotaquePorIdioma(idIdioma, idSotaqueIdiomaProfessor){
 		$.post('modulos/cadastro/idiomaProfessorAcao.php', { acao:"SotaquePorIdioma", idIdioma: idIdioma, idSotaqueIdiomaProfessor: idSotaqueIdiomaProfessor}, function(e){
 			$('#div_SotaquePorIdioma').html(e);
 		});
-	}*/
+	}
 	atualizaSotaquePorIdioma( '4', '<?php echo $idSotaqueIdiomaProfessor ?>' );
 </script>
 <?php if ($idProfessor != -1) { ?>
