@@ -149,7 +149,7 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 
  
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
-<?php if ($appN == 4) { 
+<?php if ($appN == 2) { 
 		 require('menuProf.php');
 } else {
 		 require('menu.php'); } ?>
