@@ -5,6 +5,7 @@ class TextoEmailPadrao extends Database {
 	var $texto;
 	var $titulo;
 	var $excluido;
+	var $candidato;
 
 	// constructor
 	function __construct() {
@@ -13,7 +14,7 @@ class TextoEmailPadrao extends Database {
 		$this -> texto = "NULL";
 		$this -> titulo = "NULL";
 		$this -> excluido = "0";
-
+		$this -> candidato = "0";
 	}
 
 	function __destruct() {
@@ -36,12 +37,16 @@ class TextoEmailPadrao extends Database {
 	function setExcluido($value) {
 		$this -> excluido = ($value) ? $this -> gravarBD($value) : "0";
 	}
+	
+	function setCandidato($value) {
+		$this -> candidato = ($value) ? $this -> gravarBD($value) : "0";
+	}
 
 	/**
 	 * addTextoEmailPadrao() Function
 	 */
 	function addTextoEmailPadrao() {
-		$sql = "INSERT INTO textoEmailPadrao (texto, titulo, excluido) VALUES ($this->texto, $this->titulo, $this->excluido)";
+		$sql = "INSERT INTO textoEmailPadrao (texto, titulo, excluido, candidato) VALUES ($this->texto, $this->titulo, $this->excluido, $this->candidato)";
 		$result = $this -> query($sql, true);
 		return mysqli_insert_id($this -> connect);
 	}
@@ -68,7 +73,7 @@ class TextoEmailPadrao extends Database {
 	 */
 	function updateTextoEmailPadrao() {
 		//, titulo = $this->titulo
-		$sql = "UPDATE textoEmailPadrao SET titulo = $this->titulo, texto = $this->texto, excluido = $this->excluido WHERE idtextoEmailPadrao = $this->idtextoEmailPadrao";
+		$sql = "UPDATE textoEmailPadrao SET titulo = $this->titulo, texto = $this->texto, excluido = $this->excluido, candidato = $this->candidato WHERE idtextoEmailPadrao = $this->idtextoEmailPadrao";
 		$result = $this -> query($sql, true);
 	}
 
@@ -76,7 +81,7 @@ class TextoEmailPadrao extends Database {
 	 * selectTextoEmailPadrao() Function
 	 */
 	function selectTextoEmailPadrao($where = "WHERE 1") {
-		$sql = "SELECT SQL_CACHE idtextoEmailPadrao, texto, titulo, excluido FROM textoEmailPadrao " . $where;
+		$sql = "SELECT SQL_CACHE idtextoEmailPadrao, texto, titulo, excluido, candidato FROM textoEmailPadrao " . $where;
 		return $this -> executeQuery($sql);
 	}
 
