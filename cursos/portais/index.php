@@ -9,6 +9,7 @@ $FolhaFrequencia = new FolhaFrequencia();
 $NewsProfessor = new NewsProfessor();
 
 $config = $Configuracoes->selectConfig();
+$candidato = $Professor->getCandidato($_SESSION['idProfessor_SS']);
 	
 if($_SESSION['logado']==""){
     session_destroy();
@@ -131,10 +132,17 @@ if ($appN == 1) {
 <ol class="breadcrumb">
    
 		<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+          <?php if ($candidato == 1) {;?>
+               <li class="active" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/form/professor.php', '#centro');"><button class="Bblue">1º Passo</button></li>
+               <li class="active" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/resourceHTML/idiomaProfessor.php', '#centro');"><button class="Bblue">2º Passo</button></li>
+               <li class="active" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/resourceHTML/formacaoPerfil.php', '#centro');"><button class="Bblue">3º Passo</button></li>
+         
+          <?php } else {?>
 			<li class="active">Principal</li>
             <li class="active"> Abrir/Fechar Menu <img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar Menu" id="img_form_Menu" 
 onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
-	</ol>
+	<?php } ?>
+    </ol>
  </div>
 </div>
 
@@ -158,7 +166,18 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 });
 </script>
 
-<?php } ?>
+<?php } elseif ($appN == 2) {	?>
+<script>
+<?php if ($candidato == 1) {; ?>
+	carregarModulo('/cursos/mobile/professor/modulos/cadastro/form/professor.php', '#centro');	 
+		 
+<?php 	 } else { ?>
+    carregarModulo('/cursos/mobile/professor/aviso.php', '#centro');
+	
+	<?php } ?>
+</script>
+<?php }?>
+
 </div>	<!--/.main-->
 
 </body>
