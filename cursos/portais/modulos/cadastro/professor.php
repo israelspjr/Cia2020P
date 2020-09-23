@@ -256,24 +256,24 @@ $comprovante = $valorProfessor[0]['comprovante'];
 	});
 	
 	
-	tipoDocumentoUnico('form_professor');
-	$('#tipoDocumentoUnico_idTipoDocumentoUnico').attr('onchange','tipoDocumentoUnico("form_professor")');
+//	tipoDocumentoUnico('form_professor');
+//	$('#tipoDocumentoUnico_idTipoDocumentoUnico').attr('onchange','tipoDocumentoUnico("form_professor")');
 		
 			
 	/* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
-/*	$('#add_foto').on('change', function() {
+	$('#add_foto').on('change', function() {
 		$('#visualizarFoto').html('Enviando...');
 		/* Efetua o Upload sem dar refresh na pagina */
-/*		$('#form_uploadFoto').ajaxForm({
+		$('#form_uploadFoto').ajaxForm({
 			target : '#visualizarFoto' // o callback será no elemento com o id #visualizar
 		}).submit();
 	});
 
 	/* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
-/*	$('#add_file').on('change', function() {
+	$('#add_file').on('change', function() {
 		$('#visualizarFile').html('Enviando...');
 		/* Efetua o Upload sem dar refresh na pagina */
-/*		$('#form_uploadFile').ajaxForm({
+		$('#form_uploadFile').ajaxForm({
 			target : '#visualizarFile' // o callback será no elemento com o id #visualizar
 		}).submit();
 	});
