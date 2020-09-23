@@ -125,7 +125,7 @@ class Login extends Database {
         $Log = new Log();
 		if ($novo == 0) {
 		$sql = " SELECT idProfessor, nomeExibicao, documentoUnico, senha FROM professor 
-		WHERE inativo = 0 AND excluido = 0 AND tipoDocumentoUnico_idTipoDocumentoUnico = ".$tipo." AND documentoUnico = " . $this -> gravarBD($documentoUnico) . " AND senha = " . $this -> gravarBD($senhaAcesso) . " ";
+		WHERE inativo = 0 AND excluido = 0 AND tipoDocumentoUnico_idTipoDocumentoUnico = ".$tipo." AND documentoUnico = " . $documentoUnico . " AND senha = " . $senhaAcesso . " ";
 		$rs = $this -> query($sql);
 
 		if ($result = mysqli_fetch_array($rs)) {			
