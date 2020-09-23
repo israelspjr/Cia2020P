@@ -149,7 +149,7 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 
  
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
-		<?php require('menu.php'); ?>
+		<?php //require('menu.php'); ?>
 </div><!--/.sidebar-->
 		
 	
@@ -170,10 +170,10 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 <?php } elseif ($appN == 2) {	?>
 <script>
 <?php if ($candidato == 1) {; ?>
-	carregarModulo('/cursos/mobile/professor/modulos/cadastro/form/professor.php', '#centro');	 
+//	carregarModulo('/cursos/mobile/professor/modulos/cadastro/form/professor.php', '#centro');	 
 		 
 <?php 	 } else { ?>
-    carregarModulo('/cursos/portais/aviso.php', '#centro');
+ //   carregarModulo('/cursos/portais/aviso.php', '#centro');
 	
 	<?php } ?>
 </script>
