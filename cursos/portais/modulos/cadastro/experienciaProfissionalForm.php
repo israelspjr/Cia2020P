@@ -42,8 +42,8 @@ if($idExperienciaProfissional!=''){
         <button class="button blue" 
         onclick="enviadoOK();postForm('form_experienciaProfissional', '<?php echo "modulos/cadastro/experienciaProfissionalAcao.php?id=$idExperienciaProfissional"?>');" >Salvar</button>
         
-             <button class="button blue" 
-        onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfil.php', '#centro');" >Fechar</button>
+             <button class="button gray" 
+        onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfilProf.php', '#centro');" >Fechar</button>
         
       </p>
     </form>
