@@ -216,7 +216,7 @@ function psa2(x) {
   gerente = 0; //$("#idGerente option:selected").val();
   quantidade = 1;
   retorno = $.ajax({
-    url:"<?php echo "modulos/select_psa.php"?>",
+    url:"<?php echo "modulos/select_psaProf.php"?>",
     type:"POST",
     datatype: "html",
     contentType: "application/x-www-form-urlencoded; charset=utf-8",
