@@ -15,7 +15,8 @@ if($_POST['acao'] == 'deletar'){
 }else{	
 	
 	$FormacaoPerfil->setClientePfIdClientePf($_POST['clientePf_idClientePf']);
-
+    $FormacaoPerfil->setProfessorIdProfessor($_POST['professor_idProfessor']);
+	
 	$FormacaoPerfil->setFormacao($_POST['formacao']);
 	$FormacaoPerfil->setCurso($_POST['curso']);
 	$FormacaoPerfil->setInstituicao($_POST['instituicao']);
@@ -29,7 +30,7 @@ if($_POST['acao'] == 'deletar'){
 		$arrayRetorno['mensagem'] = MSG_CADNEW;
 	}
 	
-	$arrayRetorno['fecharNivel'] = true;
+//	$arrayRetorno['fecharNivel'] = true;
 }
 echo json_encode($arrayRetorno);
 	

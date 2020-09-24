@@ -5,12 +5,14 @@ $FormacaoPerfil = new FormacaoPerfil();
 
 $idFormacaoPerfil = $_GET['id'];	
 $clientePfIdClientePf = $_SESSION['idClientePf_SS'];
+$professorIdProfessor = $_SESSION['idProfessor_SS'];
 
 if($idFormacaoPerfil!=''){
 	
 	$valorFormacaoperfil = $FormacaoPerfil->selectFormacaoperfil("WHERE idFormacaoPerfil=".$idFormacaoPerfil);
 	
-	$clientePfIdClientePf = $valorFormacaoperfil[0]['clientePf_idClientePf'];			
+	$clientePfIdClientePf = $valorFormacaoperfil[0]['clientePf_idClientePf'];
+	$professorIdProfessor = $valorFormacaoperfil[0]['professor_idProfessor'];			
 	$formacao = $valorFormacaoperfil[0]['formacao'];
 	$curso = $valorFormacaoperfil[0]['curso'];
 	$instituicao = $valorFormacaoperfil[0]['instituicao'];
@@ -25,6 +27,7 @@ if($idFormacaoPerfil!=''){
     <legend>Formação escolar</legend>
     <form id="form_formacaoPerfil" class="validate" method="post" onsubmit="return false" >
       <input name="clientePf_idClientePf" type="hidden" value="<?php echo $clientePfIdClientePf?>" />
+      <input name="professor_idProfessor" type="hidden" value="<?php echo $professorIdProfessor?>" />
       <p>
         <label>Formação:</label>
         <input type="text" name="formacao" id="formacao" class="required" value="<?php echo $formacao ?>" />
