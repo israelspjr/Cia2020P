@@ -78,8 +78,7 @@ if($idIdiomaProfessor!=''){
           </p>
       <!--     <div id="div_NivelLinguistico"></div>-->
           <div id="div_SotaquePorIdioma"></div>
-        </div>
-         <p>
+           <p>
             <label for="inativo">Inativo:</label>
             <input type="checkbox" name="inativo" id="inativo" value="1" <?php echo $inativo == 1 ? "checked" : "" ?>  />
           </p>
