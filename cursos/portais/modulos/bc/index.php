@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 	
 $Professor = new Professor();	
 $IdiomaProfessor = new IdiomaProfessor();
-//$Database = new Database();
+$Database = new Database();
 
 $ids = $IdiomaProfessor->selectIdiomaProfessor(" WHERE professor_idProfessor = ".$_SESSION['idProfessor_SS']);
 
@@ -16,7 +16,7 @@ $idIdioma = implode(', ',$idIdioma);
 $sql .= "SELECT A.link, A.nomeArquivo, A.categoria_idCategoria, S.valor from arquivos AS A
 INNER JOIN segmento as S on S.idSegmento = A.categoria_idCategoria 
 WHERE A.bc = 1 ORDER BY A.categoria_idCategoria, A.idArquivos  DESC";
-$result = $this-> executeQuery($sql);
+$result = $Database-> query($sql);
 
 $resultado = array();
 /*
