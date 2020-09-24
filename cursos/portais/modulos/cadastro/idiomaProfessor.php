@@ -5,7 +5,7 @@ $IdiomaProfessor = new IdiomaProfessor();
 $Idioma = new Idioma();	
 
 $idIdiomaProfessor = $_GET['id'];	
-$professor_idProfessor = $_GET['idProfessor'];	
+$professor_idProfessor = $_SESSION['idProfessor_SS'];	
 
 if($idIdiomaProfessor!=''){
 	
@@ -59,12 +59,14 @@ if($idIdiomaProfessor!=''){
           <p id="idiomaprofessor_idioma">
             <label>Idioma:</label>
             <?php 
-		  if($idIdiomaProfessor==""){	
+		  if($idIdiomaProfessor==""){
+			  if ($_SESSION['idProfessor_SS'] != -1) {	
 			  $and = " AND ( ";
 			  $and .= " 	disponivelAula = 1 AND idIdioma NOT IN (";
 			  $and .= "			SELECT idioma_idIdioma FROM idiomaProfessor AS IP WHERE IP.professor_idProfessor = ".$professor_idProfessor;
 			  $and .= " 	)";
 			  $and .= " )";
+			  }
 			  echo $Idioma->selectIdiomaSelect("required", $idIdioma, $and);
 			  echo "<span class=\"placeholder\">Campo Obrigatório</span> ";
           }else{
