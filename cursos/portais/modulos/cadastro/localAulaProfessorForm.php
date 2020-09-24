@@ -24,9 +24,9 @@ color: red;
 	
 }
 </style>
-<div class="conteudo_nivel">
+<!--<div class="conteudo_nivel">
   <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
-  <fieldset>
+  --><fieldset>
     <legend>Cadastro de locais de aula onde o professor esta disponível para dar aulas</legend>
     <form id="form_localAulaProfessor" class="validate" method="post" action="" onsubmit="return false" >
       <input type="hidden" id="acao" name="idProfessor" value="<?php echo $idProfessor?>" />
@@ -50,7 +50,7 @@ color: red;
         <button class="Bblue" onclick="enviadoOK();postForm('form_localAulaProfessor', '/cursos/portais/modulos/cadastro/localAulaProfessorAcao.php');">Salvar</button>
         
           <button class="button gray" 
-        onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/localAulaProfessor.php', '#centro');" >Fechar</button>
+        onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfilProf.php', '#centro');" >Fechar</button>
         
       </p>
     </form>
