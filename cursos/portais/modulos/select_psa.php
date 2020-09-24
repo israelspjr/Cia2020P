@@ -21,7 +21,7 @@ if((is_numeric($clientePj)) || (is_numeric($idProfessor))){
 	$where .= " AND DATE(PIG.dataReferencia) BETWEEN '2018-09-01' AND '".$dataAtual."' ";
 //	echo $where;
 	$result_total =  $Relatorio->relatorioPsaConsolidado($gerente, $where, $idProfessor);
-
+Uteis::pr($result_total);
 	foreach($result_total as $pergunta => $val) {
 		
 		if ($pergunta == $opcao) {
