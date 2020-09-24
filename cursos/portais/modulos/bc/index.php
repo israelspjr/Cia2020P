@@ -19,7 +19,7 @@ WHERE A.bc = 1 ORDER BY A.categoria_idCategoria, A.idArquivos  DESC";
 $result = $Database-> query($sql);
 
 $resultado = array();
-/*
+
 while ($row = mysqli_fetch_assoc($result)) {
 //	$resultado[$row['valor']]['nome'][] = $row['nomeArquivo'];
 	$resultado[$row['valor']]['nome'][$row['nomeArquivo']]['link']= $row['link'];
@@ -53,7 +53,7 @@ foreach ($resultado AS $key => $value) {
 	
 }
 
-*/
+
 ?>
 
 <fieldset>
