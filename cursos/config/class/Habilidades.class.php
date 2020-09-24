@@ -239,7 +239,7 @@ class Habilidades extends Database {
 
     if (mysqli_num_rows($result) > 0) {
 	
-	$html .= "<legend style=\"margin-bottom: -16px;\">Perguntas (Tipos de alunos e aulas)</legend>";
+	$html .= "<p><legend style=\"margin-bottom: -16px;\">Perguntas (Tipos de alunos e aulas)</legend></p>";
 	
 	$html .= "<table>";
 
