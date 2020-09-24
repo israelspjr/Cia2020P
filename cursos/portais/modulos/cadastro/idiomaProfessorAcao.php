@@ -26,7 +26,7 @@ if($_REQUEST['acao'] == 'NivelLinguisticoPorIdioma'){
     <?php 
     $and = " idioma_idIdioma = ".$_REQUEST['idIdioma'] ;	
     echo $SotaqueIdiomaProfessor->selectSotaqueIdiomaProfessorSelect("", $_REQUEST['idSotaqueIdiomaProfessor'], $and)?>
-    <span class="placeholder">Campo Obrigatório</span></p>
+    <br><span class="placeholder">Campo Obrigatório</span></p>
 
 <?php         
 }else{
