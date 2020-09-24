@@ -71,6 +71,7 @@ echo $retorno['professor'];
 						</div>
 					</div>
 				</div>
+      </div>
       
 			<div class="direita">
 				<div class="panel panel-default">
@@ -198,10 +199,10 @@ echo "<hr>";
 	
 }
 
-
-	
-$rs = $Prova->selectProvaTr_professor();	
+echo '<div class=\"linha-inteira\">';
+  $rs = $Prova->selectProvaTr_professor();	
 Uteis::pr($rs);
+echo '</div>';
 }
 ?>
 </fieldset>
