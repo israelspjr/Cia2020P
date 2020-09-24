@@ -199,7 +199,7 @@ echo "<hr>";
 	
 }
 
-echo '<div class=\"linha-inteira\">';
+echo '<div class=\"linha-inteira\">"<div><h3>Provas Agendadas para o proximo mês</h3></div>';
   $rs = $Prova->selectProvaTr_professor();	
 Uteis::pr($rs);
 echo '</div>';

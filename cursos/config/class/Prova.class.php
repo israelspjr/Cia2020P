@@ -462,7 +462,6 @@ class Prova extends Database {
 					
 					$result = $this -> query($sql);
 					
-					$html = "<div><h3>Provas Agendadas para o proximo mês</h3></div>";
 					$html .= "<table border='0'>";
 					
 					$style="style='padding: 7px;border: 1px solid #ccc;'";
