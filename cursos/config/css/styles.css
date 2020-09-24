@@ -643,7 +643,7 @@ scale: 1.1;
 .sidebar ul.nav ul.children li a {
 	height: 40px;
 	background: #f9f9f9;
-	color: #30a5ff!important;
+/*	color: #30a5ff!important;*/
 }
 
 .sidebar ul.nav li.current a {
