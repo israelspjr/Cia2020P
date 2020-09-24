@@ -86,7 +86,7 @@ if ($candidato == 1) {
             <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/busca/index.php', '#centro');"><svg class="glyph stroked round-coffee-mug"><use xlink:href="#stroked-round-coffee-mug"></use></svg> <blink>Vagas</blink></a></li>
                     
             
-            <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/resourceHTML/idiomaProfessor.php', '#centro');"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Idiomas</a></li>
+            <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/idiomaProfessor.php', '#centro');"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Idiomas</a></li>
             
             <?php if ($_SESSION['idProfessor_SS'] != -1) {?>
             
