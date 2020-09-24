@@ -60,7 +60,7 @@ if($idFormacaoPerfil!=''){
       <p>
         <button class="Bblue" onclick="enviadoOK();postForm('form_formacaoPerfil', '<?php echo "modulos/cadastro/formacaoPerfilAcao.php?id=$idFormacaoPerfil"?>')">Salvar</button>
         
-         <button class="gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfil.php', '#centro');">Fechar</button>
+         <button class="gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfilProf.php', '#centro');">Fechar</button>
         
       </p>
     </form>
