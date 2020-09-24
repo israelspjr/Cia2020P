@@ -13,7 +13,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
     <?php echo $MeioLocomocao->selectMeioLocomocaoCheckbox($idProfessor);?> <br />
     <div class="linha-inteira">
       <p>
-        <button class="button blue" onclick="enviadoOK();postForm('form_meioLocomocaoProfessor', '<?php echo "modulos/cadastro/meioLocomocaoProfessorAcao.php?id=$idProfessor"?>');" >Salvar</button>
+        <button class="Bblue" onclick="enviadoOK();postForm('form_meioLocomocaoProfessor', '<?php echo "modulos/cadastro/meioLocomocaoProfessorAcao.php?id=$idProfessor"?>');" >Salvar</button>
        </p>
     </div>
   </form>

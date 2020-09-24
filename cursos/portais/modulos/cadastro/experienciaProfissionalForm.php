@@ -39,7 +39,7 @@ if($idExperienciaProfissional!=''){
         <textarea name="obs" id="obs" class="" cols="40" rows="4" ><?php echo $obs?></textarea>
       </p>
       <p>
-        <button class="button blue" 
+        <button class="Bblue" 
         onclick="enviadoOK();postForm('form_experienciaProfissional', '<?php echo "modulos/cadastro/experienciaProfissionalAcao.php?id=$idExperienciaProfissional"?>');" >Salvar</button>
         
              <button class="button gray" 
