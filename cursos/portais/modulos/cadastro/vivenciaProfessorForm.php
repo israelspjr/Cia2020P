@@ -51,7 +51,7 @@ if($idVivenciaProfessor!=''){
         <button class="Bblue" onclick="enviadoOK();postForm('form_vivenciaProfessor', '<?php echo "modulos/cadastro/vivenciaProfessorAcao.php?id=$idVivenciaProfessor"?>');">
         Salvar</button>
         
-         <button class="button gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfil.php', '#centro');" >Fechar</button>
+         <button class="button gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfilProf.php', '#centro');" >Fechar</button>
         
       </p>
     </form>
