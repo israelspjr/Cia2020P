@@ -3,7 +3,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 	
 $Professor = new Professor();	
 $IdiomaProfessor = new IdiomaProfessor();
-$Database = new Database();
+//$Database = new Database();
 
 $ids = $IdiomaProfessor->selectIdiomaProfessor(" WHERE professor_idProfessor = ".$_SESSION['idProfessor_SS']);
 
@@ -19,7 +19,7 @@ $result = $Database-> query($sql);
 
 $resultado = array();
 
-while ($row = mysql_fetch_assoc($result)) {
+while ($row = mysqli_fetch_assoc($result)) {
 //	$resultado[$row['valor']]['nome'][] = $row['nomeArquivo'];
 	$resultado[$row['valor']]['nome'][$row['nomeArquivo']]['link']= $row['link'];
 
@@ -67,21 +67,12 @@ foreach ($resultado AS $key => $value) {
 		<!--			<div class="panel-heading"></div>-->
 <div class="panel-body">
 <table id="tb_lista_arquivos" class="registros" data-toggle="table" data-row-style="rowStyle">
- <!-- <thead>
-    <tr>
-       <th>Nome</th>
-    </tr>
-  </thead>-->
   <tbody>
     <?php 
 	echo $html;
 	?>
   </tbody>
- <!-- <tfoot>
-    <tr>
-       <th>Nome</th>
-    </tr>
-  </tfoot>-->
+ 
 </table>
 </div>
 </div>
