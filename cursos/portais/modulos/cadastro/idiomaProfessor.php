@@ -20,7 +20,7 @@ if($idIdiomaProfessor!=''){
 	$dataContratacao = Uteis::exibirData($valorIdiomaProfessor[0]['dataContratacao']);	
 	$dataCadastro = $valorIdiomaProfessor[0]['dataCadastro'];						
 }
-	
+	if ($idIdioma == '') $idIdioma = 4;
 ?>
 
 <!--<div class="conteudo_nivel">
@@ -74,8 +74,7 @@ if($idIdiomaProfessor!=''){
 		  }
 		 ?>
           </p>
-      <!--    <label>Atenção o nivel linguistico será validado pela companhia de idiomas</label>
-     <!--     <div id="div_NivelLinguistico"></div>-->
+      <!--     <div id="div_NivelLinguistico"></div>-->
           <div id="div_SotaquePorIdioma"></div>
         </div>
          <p>
@@ -116,5 +115,5 @@ if($idIdioma != '' ){ ?>
 	atualizaSotaquePorIdioma( '<?php echo $idIdioma ?>', '<?php echo $idSotaqueIdiomaProfessor ?>' )
 <?php }?>
 
-ativarForm();
+//ativarForm();
 </script> 
