@@ -43,18 +43,14 @@ if($idCertificacoes!=''){
         <input type="radio" name="tipo" id="tipo" value="1" <?php if ($tipo == 1) { echo "checked='checked'"; }?> /> Nacional 
         <input type="radio" name="tipo" id="tipo" value="2" <?php if ($tipo == 1) { echo "checked='checked'"; }?> /> Internacional
     
-      <!--  <input type="text" name="instituicao" id="instituicao" class="required" value="<?php echo $instituicao ?>" />
-        <span class="placeholder">Campo Obrigatório</span> </p>-->
-      <p>
+       <p>
         <label>Idioma:</label>
         <?php echo $Idioma->selectIdiomaSelect("",$idIdioma); ?>
-       <!-- <textarea name="obs" id="obs" cols="40" rows="4"><?php echo $obs ?></textarea>
-        <span class="placeholder">Campo Obrigatório</span> </p>-->
-      <p>
+       <p>
         <button class="Bblue" onclick="enviadoOK();postForm('form_Certificacoes', 'modulos/cadastro/certificacoesAcao.php?id=<?php echo $idCertificacoes?>')">Salvar</button>
-        <button class="button gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfil.php', '#centro');">Fechar</button>
+        <button class="button gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/formacaoPerfilProf.php', '#centro');">Fechar</button>
       </p>
     </form>
   </fieldset>
 </div>
-<script>ativarForm();</script> 
+<script>//ativarForm();</script> 
