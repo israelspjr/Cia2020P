@@ -1,5 +1,4 @@
 <?php
-error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 	
 $Professor = new Professor();	

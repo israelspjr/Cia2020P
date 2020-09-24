@@ -57,7 +57,7 @@ $config = $Configuracoes->selectConfig();
 
 
          <div class="row" >
-			<div class="col-md-6">
+			<div class="esquerda">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:0px;padding-bottom:0px;    line-height: 30px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Professor*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
@@ -71,10 +71,8 @@ echo $retorno['professor'];
 						</div>
 					</div>
 				</div>
-           </div>  
-           
-              <div class="row" >
-			<div class="col-md-6">
+      
+			<div class="direita">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Qualidade da aula*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
@@ -88,9 +86,8 @@ echo $retorno['qualidade'];
 				</div>
            </div>
             </div>
-            </div>
-                       <div class="row" style="margin-left: 0px; margin-right: 0px;">
-			<div class="col-md-6">
+         
+			<div class="linha-inteira">
 				<div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Resultado do curso*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
@@ -104,7 +101,7 @@ echo $retorno['resultado'];
 				</div>
 			</div><!--/.row-->     
                     <div class="row" style="margin-left: 0px; margin-right: 0px;">
-			<div class="col-md-6">
+			<div class="linha-inteira">
             <div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Comentários</strong> <br />
             
