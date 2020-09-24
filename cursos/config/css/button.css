@@ -104,3 +104,14 @@
 	background: -moz-linear-gradient(top,  #aa1317,  #ed1c24);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa1317', endColorstr='#ed1c24');
 }
+
+.bcDiv {
+	text-align:center;font-weight:bolder;    
+	background-color: #dd3a4b;;
+    color: white;
+    font-size: 27px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    margin-bottom: 13px;cursor: pointer;
+}
+	

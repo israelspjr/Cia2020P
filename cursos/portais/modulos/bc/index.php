@@ -28,12 +28,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 foreach ($resultado AS $key => $value) {
 	
-	$html .= "<div> <div style=\"text-align:center;font-weight:bolder;    background-color: #30a5ff;
-    color: white;
-    font-size: 27px;
-    text-transform: uppercase;
-    border-radius: 10px;
-    margin-bottom: 13px;cursor: pointer;\" onclick=mostrar(".$x.")>".$key."<br></div>";
+	$html .= "<div> <div class=\"bcDiv\" onclick=mostrar(".$x.")>".$key."<br></div>";
 	//echo count($value);
 	
 	$html .= "<div id=\"mostrar".$x."\" style=\"display:none\">";
