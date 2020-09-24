@@ -5,14 +5,14 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 $Professor = new Professor();	
 $IdiomaProfessor = new IdiomaProfessor();
 //$Database = new Database();
-/*
+
 $ids = $IdiomaProfessor->selectIdiomaProfessor(" WHERE professor_idProfessor = ".$_SESSION['idProfessor_SS']);
 
 for ($x=0;$x<count($ids);$x++) {
 	$idIdioma[] = $ids[$x]['idioma_idIdioma'];
 }
 $idIdioma = implode(', ',$idIdioma);
-
+/*
 $sql .= "SELECT A.link, A.nomeArquivo, A.categoria_idCategoria, S.valor from arquivos AS A
 INNER JOIN segmento as S on S.idSegmento = A.categoria_idCategoria 
 WHERE A.bc = 1 ORDER BY A.categoria_idCategoria, A.idArquivos  DESC";
@@ -59,7 +59,7 @@ foreach ($resultado AS $key => $value) {
 <fieldset>
 	<legend>Banco de Conhecimento.</legend>
      <div class="menu_interno"> <img src="<?php echo CAMINHO_IMG."novo.png"?>" title="Nova Comunicação" 
-  onclick="abrirNivelPagina(this, 'modulos/bc/comunica.php', '/cursos/portais/modulos/bc/index.php', '#centro')" /> </div>
+  onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/bc/comunica.php', '#centro');"; /> </div>
     <p>
     Olá, professor! Todos os anos oferecemos vários workshops e treinamentos para a nossa equipe e nem todos conseguem participar ou anotar tudo o que discutimos. Aqui você encontrará os arquivos de workshops passados, para que encontre muitas dicas de como enriquecer ainda mais as suas aulas.
     </p>

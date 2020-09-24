@@ -1,5 +1,5 @@
 <?php 
-require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/professor.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 	
 $Comunica = new Comunica();
 $Idioma = new Idioma();
