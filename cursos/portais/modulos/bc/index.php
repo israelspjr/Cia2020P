@@ -5,7 +5,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 $Professor = new Professor();	
 $IdiomaProfessor = new IdiomaProfessor();
 //$Database = new Database();
-
+/*
 $ids = $IdiomaProfessor->selectIdiomaProfessor(" WHERE professor_idProfessor = ".$_SESSION['idProfessor_SS']);
 
 for ($x=0;$x<count($ids);$x++) {
@@ -53,7 +53,7 @@ foreach ($resultado AS $key => $value) {
 	
 }
 
-
+*/
 ?>
 
 <fieldset>
