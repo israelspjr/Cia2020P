@@ -68,7 +68,7 @@ if($idIdiomaProfessor!=''){
 			  $and .= " )";
 			  }
 			  echo $Idioma->selectIdiomaSelect("required", $idIdioma, $and);
-			  echo "<span class=\"placeholder\">Campo Obrigatório</span> ";
+			  echo "<br><span class=\"placeholder\">Campo Obrigatório</span> ";
           }else{
           	$idiomaSelecionado =  $Idioma->selectIdioma(" WHERE idIdioma = ".$idIdioma);
 			echo "<strong>".$idiomaSelecionado[0]['idioma']."</strong>";
