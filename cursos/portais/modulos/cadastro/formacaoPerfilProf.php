@@ -8,7 +8,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
 
 <fieldset>
   <legend>Formação escolar (Inclua também os seus cursos incompletos)</legend>
-  <div class="menu_interno"> <img src="<?php echo CAMINHO_IMG."novo.png";?>" title="Novo cadastro" onclick="zerarCentro();carregarModulo('<?php echo "modulos/cadastro/form/formacaoPerfil.php?idProfessor=$idProfessor"?>',  '#centro');" /> </div>
+  <div class="menu_interno"> <img src="<?php echo CAMINHO_IMG."novo.png";?>" title="Novo cadastro" onclick="zerarCentro();carregarModulo('<?php echo "modulos/cadastro/formacaoPerfilForm.php?idProfessor=$idProfessor"?>',  '#centro');" /> </div>
   <div class="lista">
     <table id="tb_lista_formacaoPerfil" class="registros">
       <thead>
