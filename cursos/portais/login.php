@@ -17,6 +17,10 @@ $documento = $_REQUEST['documentoUnico'];
 $senha_temp = $password2;
 $CPF = $_REQUEST['cpf'];
 $appN = $_REQUEST['app'];
+$graficos = ( $_POST['graficos'] == "1" ? 1 : 0);
+if ($graficos == 1) {
+	$_SESSION['grafico'] = 1;	
+}
 //echo $appN;
 
 if ($documento == '') {
