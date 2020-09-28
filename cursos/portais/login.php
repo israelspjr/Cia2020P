@@ -59,6 +59,9 @@ if ($documento != '' && $password != '') {
 } elseif ($appN == 2) {
 	$app = "Professor";
 	
+	$novoCadastro = "<p><input type=\"checkbox\" value=\"1\" name=\"graficos\" /> Não mostrar gráficos</p>";
+	$Grafico = " <p><a href=\"recuperaSenhaFormProf.php\">Não sabe a sua senha?</a></p><p><a href=\"login.php?app=2&novo=1\"><button class=\"Bblue\">Não tem cadastro? Crie um agora</button></a>";
+	
 	$novo = $_REQUEST['novo'];
 	if  (($novo != '') || ($novo == 1)) {
 		$Login->efetuarLogin_Prof($documento, $password, $tipo, 1, 1);
@@ -107,8 +110,7 @@ if  (($appN == 1) || ($appN == 3)) {
 </style>
 <?php	
 } elseif ($appN == 2) {
-	$novoCadastro = "<p><input type=\"checkbox\" value=\"1\" name=\"graficos\" /> Não mostrar gráficos</p>";
-	$novoCadastro .= " <p><a href=\"recuperaSenhaFormProf.php\">Não sabe a sua senha?</a></p><p><a href=\"login.php?app=2&novo=1\"><button class=\"Bblue\">Não tem cadastro? Crie um agora</button></a>";
+	
 	
 ?>
 <style>
@@ -181,6 +183,7 @@ if  (($appN == 1) || ($appN == 3)) {
                 <small>mostrar a senha</small>
                 </div>
             </p>
+            <?php echo $Grafico; ?>
             <p>
             <div class="form-group">
 <p>                <button class="Bblue">Efetuar Login</button></p>
