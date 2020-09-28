@@ -162,7 +162,7 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
     <div id="centro"></div>
 
 </div><!--/.row-->
-<?php if ($appN == 4) { 
+<?php if ($appN == 4) { ?>
 
     <script>
 	$( document ).ready(function() {
