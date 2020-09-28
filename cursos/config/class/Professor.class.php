@@ -1702,7 +1702,7 @@ FROM
                 $html .= "<tr>";
                 $html .= "<td $onclick >" . $empresa . "</td>";
                 $html .= "<td  >";
-				$html .= "<center><img onclick=\"zerarPlano();carregarModulo('/cursos/mobile/professor/modulos/planoAcao/index.php?idPlanoAcao=" . $idPlanoAcao . "', '#planoAcao')\"
+				$html .= "<center><img onclick=\"zerarPlano();carregarModulo('/cursos/portais/modulos/planoAcao/index.php?idPlanoAcao=" . $idPlanoAcao . "', '#planoAcao')\"
 					src=\"" . CAMINHO_IMG . "pa.png\" title=\"Visualizar plano de ação\" />";
 			//	}
 				$html .= "Término previsto do estágio : " . Uteis::exibirData($valor['dataPrevisaoTerminoEstagio']) . "</center>
