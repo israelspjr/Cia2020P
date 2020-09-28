@@ -10,7 +10,7 @@ $valorFolhaFrequencia = $FolhaFrequencia->selectFolhaFrequencia(" WHERE idFolhaF
 $idPAG = $valorFolhaFrequencia[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
 ?>
 
-<div id="div_ff">
+<!--<div id="div_ff">
 
 <!--  <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>-->
 
@@ -21,10 +21,10 @@ $idPAG = $valorFolhaFrequencia[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
     <div id="aba_div_ff_individual" divExibir="div_ff_individualD" class="aba_interna" onclick="carregaAbaIndividualD()" style="        padding-left: 10px;
     padding-right: 10px;"><button class="Bblue">Folha individual Desktop</button></div>
     <div id="aba_div_ff_siglas" divExibir="div_ff_siglas" class="aba_interna" onclick="mudarAbasFF();" style="    float: left;"><button class="Bblue">Siglas </button></div>
-    <div style="padding-left: 10px;padding-right: 10px;"><button onclick="zerarCentro();carregarModulo('modulos/ff/resourceHTML/ff.php?id=<?php echo $idPAG?>', '#centro');" class="Bblue">Voltar</button></div>
+    <div style="padding-left: 10px;padding-right: 10px;"><button onclick="zerarCentro();carregarModulo('modulos/ff/professor/ff.php?id=<?php echo $idPAG?>', '#centro');" class="Bblue">Voltar</button></div>
   </div>
 
-  <div id="div_ff_abas" class="conteudo_nivel">
+ <!-- <div id="div_ff_abas" class="conteudo_nivel">-->
     
     <div id="div_ff_geral" class="div_aba_interna" >     
     	<?php require_once "folhaFrequencia.php" ?>
@@ -52,14 +52,14 @@ function carregaAbaIndividual(){
 	$('#div_ff_siglas').hide();
 	$('#div_ff_geral').hide();
 	$('#div_ff_individualD').hide();
-	carregarModulo('<?php echo "modulos/ff/form/diaAulaFFIndividual.php?idFolhaFrequencia=".$idFolhaFrequencia?>' , '#div_ff_individual')
+	carregarModulo('<?php echo "modulos/ff/professor/diaAulaFFIndividual.php?idFolhaFrequencia=".$idFolhaFrequencia?>' , '#div_ff_individual')
 }
 
 function carregaAbaIndividualD(){
 	$('#div_ff_siglas').hide();
 	$('#div_ff_geral').hide();
 	$('#div_ff_individual').hide();
-	carregarModulo('<?php echo "modulos/ff/form/diaAulaFFIndividualD.php?idFolhaFrequencia=".$idFolhaFrequencia?>' , '#div_ff_individualD')
+	carregarModulo('<?php echo "modulos/ff/professor/diaAulaFFIndividualD.php?idFolhaFrequencia=".$idFolhaFrequencia?>' , '#div_ff_individualD')
 }
 
 
