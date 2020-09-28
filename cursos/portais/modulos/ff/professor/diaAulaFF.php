@@ -29,8 +29,8 @@ $valorFolhaFrequencia = $FolhaFrequencia->selectFolhaFrequencia(" WHERE idFolhaF
 $diasNoMes = Uteis::totalDiasMes($mesRef, $anoRef);
 ?>
 
-<div class="conteudo_nivel">
-  <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
+<!--<div class="conteudo_nivel">
+  <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>-->
   <fieldset>
     <legend>Inserir reposição</legend>
     <form id="form_DiaAulaReposicaoBancoHoras" class="validate" method="post" action="" onsubmit="return false" >
@@ -67,7 +67,7 @@ $diasNoMes = Uteis::totalDiasMes($mesRef, $anoRef);
       </p>
     </form>
   </fieldset>
-</div>
+<!--</div>
 <script>
 //ativarForm();
-</script> 
+</script> -->
