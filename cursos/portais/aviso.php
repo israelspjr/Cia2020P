@@ -203,8 +203,16 @@ echo '<div class=\"linha-inteira\">"<div><h3>Provas Agendadas para o proximo mê
   $rs = $Prova->selectProvaTr_professor();	
 Uteis::pr($rs);
 echo '</div>';
-}
-?>
+} 
+
+if ($_SESSION['grafico'] == 1) { ?>
+<script>
+	zerarCentro();
+	carregarModulo('/cursos/mobile/professor/modulos/ff/index.php', '#centro');
+</script>		
+        
+<?php } ?>
+
 </fieldset>
 <?php if (($candidato ==0) && ($_SESSION['grafico'] != 1)) {?>
 <script>
