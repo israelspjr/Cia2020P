@@ -45,7 +45,7 @@ $config = $Configuracoes->selectConfig();
 		<?php } ?>
 			
 			
-<?php if ($_SESSION['idProfessor_SS'] != -1) { 
+<?php if (($_SESSION['idProfessor_SS'] != -1) &&  ($_SESSION['grafico'] != 1)){ 
 			$candidato = 1; ?> 
 
 <div class="row">
