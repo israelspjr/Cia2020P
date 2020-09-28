@@ -14,7 +14,7 @@ $ondeAtualiza = "#centro";
 	<legend>
 		Folha de frequência
 	</legend>
-	<?php require_once("../grupos.php");?>
+	<?php require_once("../gruposProf.php");?>
 </fieldset>
 
   
