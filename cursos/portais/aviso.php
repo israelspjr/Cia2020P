@@ -208,7 +208,7 @@ echo '</div>';
 if ($_SESSION['grafico'] == 1) { ?>
 <script>
 	zerarCentro();
-	carregarModulo('/cursos/mobile/professor/modulos/ff/index.php', '#centro');
+	carregarModulo('/cursos/portais/modulos/ff/index.php', '#centro');
 </script>		
         
 <?php } ?>
