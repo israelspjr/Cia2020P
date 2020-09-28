@@ -286,7 +286,7 @@ if ($rp[0]['dataPrevistaNova'] != '') {
 </style>
 <fieldset>
   <legend>Folha de frequência</legend>
-  <div class="menu_interno">        
+  <div class="esquerda">        
     <?php if(!$finalizar){?>
         <br />
         <p><span><button class="Bblue" onclick="zerarCentro();carregarModulo('<?php echo "modulos/ff/professor/diaAulaFF.php?idFolhaFrequencia=".$idFolhaFrequencia?>', '#centro');" >Adicionar Reposição</button></span> </p>
