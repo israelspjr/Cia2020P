@@ -26,7 +26,6 @@ if ($_SESSION['tipo'] >= 1) {
 	$ano = $dat[0];
 	$mes = $dat[1];
 }
-echo $_SESSION['grafico'];
 /*$valor = $NewsProfessor->selectNewsProfessor(" WHERE portal = 2 AND inativo = 0 AND popup = 1 ".$add. " ORDER BY idNewsProfessor DESC");
 
 foreach ($valor as $value) {
@@ -164,7 +163,7 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 
 </div><!--/.row-->
 <?php if ($appN == 4) { 
-if ($_SESSION['graficos'] != 1) {?>
+if ($_SESSION['grafico'] != 1) {?>
     <script>
 	$( document ).ready(function() {
     carregarModulo('/cursos/portais/charts.php', '#centro');
