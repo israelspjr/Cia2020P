@@ -54,7 +54,7 @@ $diasNoMes = Uteis::totalDiasMes($mesRef, $anoRef);
                 <span class="placeholder">Campo Obrigatório</span> </p>
       <p>
         <label>Total de Horas repostas:</label>
-        <input type="text" name="horasDadas" id="horasDadas" class="required hora" value="<?php echo $horaRealizada?>" />
+        <input type="time" name="horasDadas" id="horasDadas" class="required horas" value="<?php echo $horaRealizada?>" />
         <span class="placeholder">Campo Obrigatório</span> </p>
       <p>
         <label>Observação:</label>
