@@ -1202,7 +1202,7 @@ class Professor extends Database
 			 if ($apenasLinha !== false) {
                     $caminhoAtualizar .= "&ordem=" . $apenasLinha;
                 } else {
-                    $caminhoAtualizar .= "&ordem=" . ($cont++);
+                    $caminhoAtualizar .= "&ordem=" . ($cont);
                 }
 		//	$caminhoAtualizar2 = $caminhoAtualizar."&tr=1&ordem=".$x."&idProfessor=".$idProfessor;
 			$x++;
@@ -1232,9 +1232,9 @@ class Professor extends Database
 			$valorTotalAulas = Uteis::exibirMoeda($valorTotalAulas);
 			
 			if (($zerado == 0) && ($valorTotalAulas == 0)) {
-				$cont--;
+		//		$cont--;
 			} else {
-			
+				$cont++;
 				 if ($apenasLinha !== false) {
 
                     $col = array();
