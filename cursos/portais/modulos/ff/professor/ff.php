@@ -39,8 +39,8 @@ $add = "WHERE planoAcaoGrupo_idPlanoAcaoGrupo in ( ".$valorIds.")";
 			<table id="tb_lista_FolhaFrequencia" class="registros">
 				<thead>
 					<tr>
-						<th></th>
-						<th>Período</th>
+				<!--		<th></th>
+					-->	<th>Período</th>
 						<th>Finalizada</th>
 						<th>Finalizada [financeiro]</th>
 					</tr>
