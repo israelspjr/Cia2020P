@@ -63,7 +63,7 @@ $diasNoMes = Uteis::totalDiasMes($mesRef, $anoRef);
       <p>
         <button class="button blue" 
         onclick="postForm('form_DiaAulaReposicaoBancoHoras', '<?php echo  "modulos/ff/professor/diaAulaFFAcao.php?idDiaAulaFF=".$idDiaAulaFF?>')" >Salvar</button>
-        
+        <button class="button gray" onclick="zerarNotas();carregarModulo('/cursos/portais/modulos/ff/indexProf.php', '#centro');">Fechar</button>
       </p>
     </form>
   </fieldset>
