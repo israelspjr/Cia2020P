@@ -289,7 +289,7 @@ if ($rp[0]['dataPrevistaNova'] != '') {
   <div class="menu_interno">        
     <?php if(!$finalizar){?>
         <br />
-        <p><span><button class="Bblue" onclick="carregarModulo('<?php echo "modulos/ff/professor/diaAulaFF.php?idFolhaFrequencia=".$idFolhaFrequencia?>', '#reposicao');" >Adicionar Reposição</button></span> &nbsp;<button class="gray" onclick="fecharReposicao()">Fechar Reposicao</button></p>
+        <p><span><button class="Bblue" onclick="zerarCentro();carregarModulo('<?php echo "modulos/ff/professor/diaAulaFF.php?idFolhaFrequencia=".$idFolhaFrequencia?>', '#centro');" >Adicionar Reposição</button></span> &nbsp;<button class="gray" onclick="fecharReposicao()">Fechar Reposicao</button></p>
    <!--     <img src="<?php echo CAMINHO_IMG."novo.png";?>" style="    cursor: pointer;" title="Adicionar REPOSIÇÃO" -->
         
         <div id="reposicao"></div>
