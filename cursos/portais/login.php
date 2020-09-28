@@ -60,7 +60,7 @@ if ($documento != '' && $password != '') {
 	$app = "Professor";
 	
 	$novoCadastro = "<p><input type=\"checkbox\" value=\"1\" name=\"graficos\" /> Não mostrar gráficos</p>";
-	$Grafico = " <p><a href=\"recuperaSenhaFormProf.php\">Não sabe a sua senha?</a></p><p><a href=\"login.php?app=2&novo=1\"><button class=\"Bblue\">Não tem cadastro? Crie um agora</button></a>";
+	$Grafico = " <p><a href=\"recuperaSenhaFormProf.php\">Não sabe a sua senha?</a></p><p><a href=\"login.php?app=2&novo=1\"><button class=\"Bblue\">Não tem cadastro? Crie um agora</button></a></p>";
 	
 	$novo = $_REQUEST['novo'];
 	if  (($novo != '') || ($novo == 1)) {
