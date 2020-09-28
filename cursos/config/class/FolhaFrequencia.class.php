@@ -149,11 +149,12 @@ class FolhaFrequencia extends Database {
                 $onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?idFolhaFrequencia=$idFolhaFrequencia&Ndados=$Ndados', '$caminhoAtualizar', '$ondeAtualiza')\" ";
 				} else {
 				$onclick = " onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "?idFolhaFrequencia=$idFolhaFrequencia&Ndados=$Ndados', '#centro')\" ";	
+				$professor = 1;
 				}
                 $html .= "<tr>";            
-                
-                $html .= "<td >" . strtotime($value['dataReferencia']) . "</td>";
-                            
+                if ($professor != 1) {
+                	$html .= "<td >" . strtotime($value['dataReferencia']) . "</td>";
+				}
                 $html .= "<td align=\"center\" $onclick >" . $dataReferencia . "</td>";
 				if(!$idProfessor_base)
                 $html .= "<td align=\"center\" $onclick >" . $nomeProfessor . "</td>";
