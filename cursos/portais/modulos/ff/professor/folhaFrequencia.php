@@ -792,7 +792,7 @@ function avisoOff(campo){
     $('#'+campo).hide();
 }
 removerLink();
-ativarForm();
+//ativarForm();
 
 function fecharReposicao(){
 	$('#reposicao').html('');
