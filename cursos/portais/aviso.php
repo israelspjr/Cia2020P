@@ -206,7 +206,7 @@ echo '</div>';
 }
 ?>
 </fieldset>
-<?php if ($candidato ==0) {?>
+<?php if (($candidato ==0) && ($_SESSION['grafico'] != 1)) {?>
 <script>
 function psa2(x) {
 	 var status, clientePj, retorno, resultado, data, data2, idProfessor, total3;

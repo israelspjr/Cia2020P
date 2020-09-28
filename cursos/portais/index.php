@@ -163,14 +163,14 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 
 </div><!--/.row-->
 <?php if ($appN == 4) { 
-if ($_SESSION['grafico'] != 1) {?>
+
     <script>
 	$( document ).ready(function() {
     carregarModulo('/cursos/portais/charts.php', '#centro');
 });
 </script>
 
-<?php } 
+<?php  
 } elseif ($appN == 2) {	?>
 <script>
 <?php if ($candidato == 1) {; ?>
