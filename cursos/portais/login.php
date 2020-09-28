@@ -182,7 +182,7 @@ if  (($appN == 1) || ($appN == 3)) {
                 <small>mostrar a senha</small>
                 </div>
             </p>
-            <?php echo $Grafico; ?>
+            
             <p>
             <div class="form-group">
 <p>                <button class="Bblue">Efetuar Login</button></p>
