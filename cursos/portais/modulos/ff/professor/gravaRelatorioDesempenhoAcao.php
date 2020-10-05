@@ -45,8 +45,8 @@ if($nota==''){
 
 }
 
-    $arrayRetorno['ondeAtualizar'] = "#div_ff_geral";
-	$arrayRetorno['pagina'] = "modulos/ff/folhaFrequencia.php?idFolhaFrequencia=".$idFolhaFrequencia;		
+    $arrayRetorno['ondeAtualizar'] = "#centro";
+	$arrayRetorno['pagina'] = "modulos/ff/professor/folhaFrequencia_abas.php?idFolhaFrequencia=".$idFolhaFrequencia;		
 //	$arrayRetorno['fecharNivel'] = true;
 
 $arrayRetorno['mensagem'] .= $msgObs;
