@@ -301,7 +301,7 @@ function postFileForm(idForm) {
 
 function postForm(idForm, pagina, param, onde) {
 	
-
+	var submitForm;
 	var form = $('#' + idForm);
 	if (onde != undefined && onde != '') {
 		var ondeR = $('#' + onde);
@@ -313,6 +313,7 @@ function postForm(idForm, pagina, param, onde) {
 	} else {
 		submitForm = true;
 	}
+	console.log("sss"+submitForm);
 
 	if (submitForm) {
 		var parametros = form.serialize() + (param != undefined ? param : '');
