@@ -29,7 +29,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
       </thead>
       <tbody>	
         <?php 	            
-       echo $DemonstrativoPagamento->selectDemonstrativoPagamentoTr_professor(" WHERE D.professor_idProfessor = $idProfessor order by idDemonstrativoPagamento DESC", "modulos/demonstrativoPagamento/form/demonstrativoPagamento.php", "modulos/demonstrativoPagamento/index.php", "#centro",1);			
+       echo $DemonstrativoPagamento->selectDemonstrativoPagamentoTr_professor(" WHERE D.professor_idProfessor = $idProfessor order by idDemonstrativoPagamento DESC", "modulos/demonstrativoPagamento/demonstrativoPagamento.php", "modulos/demonstrativoPagamento/index.php", "#centro",1);			
 			 
         ?>
       </tbody>
