@@ -20,7 +20,6 @@ $where = " WHERE PRF.idProfessor = " . $_SESSION['idProfessor_SS'] . " AND G.ina
 	  }
 	
 $id = $_REQUEST['idGrupo'];
-Uteis::pr($id);
 $idGrupos = implode(",",$id);
 $not = implode(",",$not1); 
 
@@ -31,7 +30,6 @@ if ($idGrupos == "")  {
 }
 
 $idsClientes = $GrupoClientePj->selectGrupoClientePj(" WHERE grupo_idGrupo in (".$not.") Group By clientePj_idClientePj");
-echo $where;
 foreach($idsClientes as $valor) { 
 
 //$idClientePj = $ClientePj->getIdClientePj_porGrupo($res['idGrupo']);
