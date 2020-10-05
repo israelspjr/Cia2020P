@@ -66,7 +66,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
 			    $where = " WHERE P.idProfessor = " . $_SESSION['idProfessor_SS'] . " AND PAG.inativo = 0 AND G.inativo = 0 Order By G.nome";
 	  //AND (AGP.dataFim > CURDATE() OR AGP.dataFim IS NULL) ";
       echo $Professor -> selectGrupoProfTr($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where);
-
+	Uteis::pr($Professor->selectGrupoProfTr_query($where));
   
       foreach ($Professor->selectGrupoProfTr_query($where) as $res) {
 		echo "<option value=".$res['idGrupo'].">".$res['nome']."</option>";  
