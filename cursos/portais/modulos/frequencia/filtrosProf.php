@@ -27,7 +27,9 @@ $not = implode(",",$not1);
 if ($id == "-") {
 	$where .= " AND G.idGrupo IN (".$not.")";	
 } else {
-	$where .= " AND G.idGrupo IN (".$idGrupos.")"; 
+	if ($id != '') {
+		$where .= " AND G.idGrupo IN (".$idGrupos.")";
+	}
 }
 
 $idsClientes = $GrupoClientePj->selectGrupoClientePj(" WHERE grupo_idGrupo in (".$not.") Group By clientePj_idClientePj");
