@@ -27,7 +27,7 @@ $not = implode(",",$not1);
 if ($id == "-") {
 	$where .= " AND G.idGrupo IN (".$not.")";	
 } else {
-	if ($id != '') {
+	if (!empty($id)) {
 		$where .= " AND G.idGrupo IN (".$idGrupos.")";
 	}
 }
