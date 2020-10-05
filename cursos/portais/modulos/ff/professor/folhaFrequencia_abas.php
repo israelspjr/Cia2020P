@@ -13,7 +13,7 @@ $idPAG = $valorFolhaFrequencia[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
 <button class="Bblue" onclick="carregaGeral()">Folha geral</button>
    <button onclick="carregaAbaIndividual()"  class="Bblue">Folha individual</button>
     <button class="Bblue" onclick="carregaAbaIndividualD()">Folha individual Desktop</button>
-    <button class="Bblue">Siglas </button>
+    <button class="Bblue" onclick="siglas()">Siglas </button>
         
     <div id="div_ff_geral" class="div_aba_interna" >     
     	<?php require_once "folhaFrequencia.php" ?>
@@ -58,4 +58,13 @@ $('#div_ff_individualD').hide();
 $('#div_ff_geral').show();
 $('#div_ff_siglas').hide();
 }
+
+function siglas() {
+$('#div_ff_individual').hide();	
+$('#div_ff_individualD').hide();
+$('#div_ff_geral').hide();
+$('#div_ff_siglas').show();
+	
+}
+
 </script>
