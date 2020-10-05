@@ -6,7 +6,7 @@ $EnderecoVirtual = new EnderecoVirtual();
 $Telefone = new Telefone();
 $IdiomaProfessor = new IdiomaProfessor();
 
-$img = new Image();
+//$img = new Image();
 
 $arrayRetorno = array();
 
@@ -32,7 +32,7 @@ if($_POST['acao']=="foto"){
             /* converte o tamanho para KB */
             $tamanho = round($tamanho_imagem / 1024);
              
-            if($tamanho < 5120){ //se imagem for até 1MB envia
+            if($tamanho < 5120){ //se imagem for até 5MB envia
                 $nome_atual = md5(uniqid(time())).$ext; //nome que dará a imagem
                 $tmp = $_FILES['foto']['tmp_name']; //caminho temporário da imagem
                  
@@ -40,11 +40,11 @@ if($_POST['acao']=="foto"){
 								if(move_uploaded_file($tmp, $pasta.$nome_atual)){
 									
 									//Redimensiona novamente a imagem, mantendo a original.
-									$imgPointer = $img->prepareImage($pasta.$nome_atual);
-									$img->prepareResize($imgPointer, 100, 150);
-									$img->createThumbNail($imgPointer, $pasta."miniatura-".$nome_atual);
+							//		$imgPointer = $img->prepareImage($pasta.$nome_atual);
+							//		$img->prepareResize($imgPointer, 100, 150);
+							//		$img->createThumbNail($imgPointer, $pasta."miniatura-".$nome_atual);
 					
-                  echo "<img src='".CAMINHO_UP."imagem/foto/professor/miniatura-".$nome_atual."' /><input type=\"hidden\" name=\"foto_oculta\" value=\"".$nome_atual."\">";
+                  echo "<img src='".CAMINHO_UP."imagem/foto/professor/".$nome_atual."' /><input type=\"hidden\" name=\"foto_oculta\" value=\"".$nome_atual."\">";
 					
                 }else{
                     echo "Falha ao enviar";					
