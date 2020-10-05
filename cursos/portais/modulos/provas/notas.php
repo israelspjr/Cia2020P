@@ -148,7 +148,7 @@ $provaOral = $valorNivel[0]['provaOral'];
 
                                                             <p><label>Data:
     <input name="data" id="data<?php echo $campo?>" type="date" maxlength="10" data-id="<?php echo $idIntegranteGrupo;?>"
-                                                                       value="<?php echo Uteis::exibirData($rsNota['data'])?>" >
+                                                                       value="<?php echo $rsNota['data']?>" >
                                                             </label></p>
 															
 															<p><label>Professor:<?php echo $rsProf?><span class="placeholder"></span></label></p>
