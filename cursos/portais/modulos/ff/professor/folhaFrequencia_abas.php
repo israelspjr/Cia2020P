@@ -19,13 +19,7 @@ $idPAG = $valorFolhaFrequencia[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
     	<?php require_once "folhaFrequencia.php" ?>
     </div>
     
-    <div id="div_ff_individual" class="div_aba_interna" style="display:none;" >
-    </div>  
-    
-     <div id="div_ff_individualD" class="div_aba_interna" style="display:none;" >
-    </div>    
-    
-    <div id="div_ff_siglas" class="div_aba_interna" style="display:none;" >     
+   <div id="div_ff_siglas" class="div_aba_interna" style="display:none;" >     
     	<fieldset>
 			<legend>Descrição das siglas da folha de frequência</legend>
 			<?php echo $OcorrenciaFF->selectOcorrenciaFF_legenda();?> 

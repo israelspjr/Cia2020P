@@ -51,13 +51,7 @@ $rsIntegranteGrupo = $IntegranteGrupo->selectIntegranteGrupoFF($idPlanoAcaoGrupo
 ?>
 
 <div id="cadastro_acompanhamento" class="">
-<!--  <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
-  <div id="abas">-->
-    <div id="aba_div_acompanhamento" divExibir="div_acompanhamento" class="aba_interna ativa">Acompanhamento do curso</div>
-  </div>
- <!-- <div class="conteudo_nivel">
-    <div id="div_acompanhamento" class="div_aba_interna lista">-->
-      <div class="linha-inteira">
+     <div class="linha-inteira">
         <?php require_once 'relatorioDesempenho.php'?>
       </div>      
     </div>

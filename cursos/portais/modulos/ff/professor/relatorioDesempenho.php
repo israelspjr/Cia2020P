@@ -32,7 +32,7 @@ if($rsIntegranteGrupo){?>
       
     <?php }?>
     
-    <button class="button gray" onclick="enviadoOK();gravarNotas();zerarNotas();">Gravar notas</button>&nbsp;&nbsp;
+    <button class="bBlue" onclick="enviadoOK();gravarNotas();zerarNotas();">Gravar notas</button>&nbsp;&nbsp;
     <button class="button gray" onclick="zerarNotas()">Fechar</button>	
     
   </fieldset>
