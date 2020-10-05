@@ -369,15 +369,7 @@ class IntegranteGrupo extends Database {
 				<td>" . $dataSaida . "</td>
 				
 				<td>". $motivo ."</td>";
-				
-			//	if ($mobile != 1) {
-				
-			//	$html .= "<td align=\"center\" 
-			//	onclick=\"abrirNivelPagina(this, '" . $caminho . "frequencia.php?id=$idIntegranteGrupo&idPlanoAcaoGrupo=$idPlanoAcaoGrupo', '', '')\" >
-			//		<img src=\"" . CAMINHO_IMG . "graf.png\" title=\"Frequência do aluno\" >
-					
-			//	</td>";
-			//	} else {
+	
 				$html .= "<td align=\"center\" 
 				onclick=\"zerarCentro();carregarModulo('" . $caminho . "frequencia.php?id=$idIntegranteGrupo&idPlanoAcaoGrupo=$idPlanoAcaoGrupo', '#centro')\" >
 					<img src=\"" . CAMINHO_IMG . "graf.png\" title=\"Frequência do aluno\" >
@@ -901,7 +893,7 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 		
 		$valorx2 = implode(',', $ids);
 		
-		$sql2 = "SELECT SQL_CACHE idProfessor, nome FROM professor WHERE excluido = 0 AND inativo = 0 AND idProfessor not in (" . $valorx2 . ") ORDER BY nome";
+		$sql2 = "SELECT SQL_CACHE idProfessor, nome FROM professor WHERE excluido = 0 AND inativo = 0 AND candidato = 0 AND idProfessor not in (" . $valorx2 . ") ORDER BY nome";
 		$result2 = $this -> query($sql2);
 		while ($valor2 = mysqli_fetch_array($result2)) {
 			$selecionado = $idProfessor == $valor2['idProfessor'] ? "selected=\"selected\"" : "";
