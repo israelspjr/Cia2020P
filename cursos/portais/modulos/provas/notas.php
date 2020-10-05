@@ -50,7 +50,7 @@ $provaOral = $valorNivel[0]['provaOral'];
   	<fieldset>	
         <legend><?php echo $nomeProva;?></legend> 
         <p><label>Data da aplicação: </label> 
-        <input id="dataAplicacao" name="dataAplicacao"  class="data" value="<?php echo Uteis::exibirData($dataAplicacao)?>" /><br />
+        <input id="dataAplicacao" name="dataAplicacao"  type="date" value="<?php echo Uteis::exibirData($dataAplicacao)?>" /><br />
           <font color="#FF0000">Professor, coloque a data de aplicação após a aplicação da prova, essa data não poderá ser alterada depois. </font>   </p>   
           <p><font color="#FF0000">Professor, não utilize "." nas notas, utilize "," -> '8,7'. </font>   </p>   
         <div class="esquerda">
@@ -101,8 +101,8 @@ $provaOral = $valorNivel[0]['provaOral'];
 													WHERE calendarioProva_idCalendarioProva=".$idCalendarioProva." 
 													AND integranteGrupo_idIntegranteGrupo=".$idIntegranteGrupo." 
 													AND itenProva_idItenProva=".$idItenProva;								
-										//		    $rs = $Prova->query($sql);
-										//			$rsNota = mysqli_fetch_array($rs);
+												    $rs = $Prova->query($sql);
+													$rsNota = mysqli_fetch_array($rs);
 													
 													$aulaFixaIds = $AulaDataFixa->selectAulaDataFixa(" AND planoAcaoGrupo_idPlanoAcaoGrupo = ".$idPlanoAcaoGrupo);
 													$aulaPermanenteIds = $AulaPermanenteGrupo->selectAulaPermanenteGrupo(" WHERE planoAcaoGrupo_idPlanoAcaoGrupo = ".$idPlanoAcaoGrupo);
@@ -147,7 +147,7 @@ $provaOral = $valorNivel[0]['provaOral'];
 															</label></p>
 
                                                             <p><label>Data:
-                                                                <input name="data" id="data<?php echo $campo?>" class="data" maxlength="10" data-id="<?php echo $idIntegranteGrupo;?>" type="text"
+                                                                <input name="data" id="data<?php echo $campo?>" type="date" maxlength="10" data-id="<?php echo $idIntegranteGrupo;?>" type="text"
                                                                        value="<?php echo Uteis::exibirData($rsNota['data'])?>" >
                                                             </label></p>
 															
@@ -186,7 +186,7 @@ $provaOral = $valorNivel[0]['provaOral'];
                             
               <p><button class="button gray" onclick="notaEscrita();">Gravar notas</button>
               <?php if ($idFolhaFrequencia == '') { ?>
-              <button class="button gray" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/provas/index.php', '#centro');">Fechar</button>
+              <button class="button gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/provas/index.php', '#centro');">Fechar</button>
               <?php } else { ?>
               <button class="button gray" onclick="zerarProva();">Fechar</button>
               <?php } ?>
