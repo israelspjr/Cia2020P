@@ -50,7 +50,7 @@ $provaOral = $valorNivel[0]['provaOral'];
   	<fieldset>	
         <legend><?php echo $nomeProva;?></legend> 
         <p><label>Data da aplicação: </label> 
-        <input id="dataAplicacao" name="dataAplicacao"  type="date" value="<?php echo Uteis::exibirData($dataAplicacao)?>" /><br />
+        <input id="dataAplicacao" name="dataAplicacao"  type="date" value="<?php echo $dataAplicacao?>" /><br />
           <font color="#FF0000">Professor, coloque a data de aplicação após a aplicação da prova, essa data não poderá ser alterada depois. </font>   </p>   
           <p><font color="#FF0000">Professor, não utilize "." nas notas, utilize "," -> '8,7'. </font>   </p>   
         <div class="esquerda">

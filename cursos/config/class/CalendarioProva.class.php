@@ -99,7 +99,7 @@ class CalendarioProva extends Database {
 	function updateFieldCalendarioProva($field, $value) {
 		$value = ($value != "NULL") ? $this -> gravarBD($value) : $value;
 		$sql = "UPDATE calendarioProva SET " . $field . " = " . $value . " WHERE idCalendarioProva = $this->idCalendarioProva";
-		echo $sql;
+//		echo $sql;
 		$result = $this -> query($sql, true);
 	}
 
