@@ -86,12 +86,13 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
           <Label>Mostrar comentários? </Label>
           <input type="checkbox" value="1" id="mostrarComentarios" name="mostrarComentarios" />
           </p>
-        </div>
-        <div class="direita">
-         <p>
+                   <p>
           <Label>Mostrar PSA Pendentes </Label>
           <input type="checkbox" value="1" id="psaPendentes" name="psaPendentes" />
-          </p> </div>
+          </p>
+        </div>
+        <div class="direita">
+ </div>
       </div>
       
       <div class="linha-inteira" >
