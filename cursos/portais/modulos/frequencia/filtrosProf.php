@@ -24,12 +24,10 @@ Uteis::pr($id);
 $idGrupos = implode(",",$id);
 $not = implode(",",$not1); 
 
-if ($id == "-") {
+if ($idGrupos == "")  {
 	$where .= " AND G.idGrupo IN (".$not.")";	
 } else {
-	if (!empty($id)) {
 		$where .= " AND G.idGrupo IN (".$idGrupos.")";
-	}
 }
 
 $idsClientes = $GrupoClientePj->selectGrupoClientePj(" WHERE grupo_idGrupo in (".$not.") Group By clientePj_idClientePj");
