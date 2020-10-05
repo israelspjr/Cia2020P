@@ -101,8 +101,8 @@ $provaOral = $valorNivel[0]['provaOral'];
 													WHERE calendarioProva_idCalendarioProva=".$idCalendarioProva." 
 													AND integranteGrupo_idIntegranteGrupo=".$idIntegranteGrupo." 
 													AND itenProva_idItenProva=".$idItenProva;								
-												    $rs = $Prova->query($sql);
-													$rsNota = mysqli_fetch_array($rs);
+										//		    $rs = $Prova->query($sql);
+										//			$rsNota = mysqli_fetch_array($rs);
 													
 													$aulaFixaIds = $AulaDataFixa->selectAulaDataFixa(" AND planoAcaoGrupo_idPlanoAcaoGrupo = ".$idPlanoAcaoGrupo);
 													$aulaPermanenteIds = $AulaPermanenteGrupo->selectAulaPermanenteGrupo(" WHERE planoAcaoGrupo_idPlanoAcaoGrupo = ".$idPlanoAcaoGrupo);
