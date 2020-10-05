@@ -10,22 +10,11 @@ $valorFolhaFrequencia = $FolhaFrequencia->selectFolhaFrequencia(" WHERE idFolhaF
 $idPAG = $valorFolhaFrequencia[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
 ?>
 
-<!--<div id="div_ff">
-
-<!--  <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>-->
-
-<!--  <div id="abas">
-    <div id="aba_div_ff_geral" divExibir="div_ff_geral" style="    float: left;" >--><button class="Bblue" onclick="carregaGeral()">Folha geral</button><!--</div>
-    <div id="aba_div_ff_individual" divExibir="div_ff_individual" class="aba_interna" " style="    float: left;    padding-left: 10px;
-    padding-right: 10px;">--><button onclick="carregaAbaIndividual()"  class="Bblue">Folha individual</button><!--</div>
-    <div id="aba_div_ff_individual" divExibir="div_ff_individualD" class="aba_interna"  style="        padding-left: 10px;
-    padding-right: 10px;">--><button class="Bblue" onclick="carregaAbaIndividualD()">Folha individual Desktop</button><!--</div>
-    <div id="aba_div_ff_siglas" divExibir="div_ff_siglas" class="aba_interna" onclick="mudarAbasFF();" style="    float: left;">--><button class="Bblue">Siglas </button><!--</div>
-    <div style="padding-left: 10px;padding-right: 10px;"><button onclick="zerarCentro();carregarModulo('modulos/ff/professor/ff.php?id=<?php echo $idPAG?>', '#centro');" class="Bblue">Voltar</button></div>
-  </div>
-
- <!-- <div id="div_ff_abas" class="conteudo_nivel">-->
-    
+<button class="Bblue" onclick="carregaGeral()">Folha geral</button>
+   <button onclick="carregaAbaIndividual()"  class="Bblue">Folha individual</button>
+    <button class="Bblue" onclick="carregaAbaIndividualD()">Folha individual Desktop</button>
+    <button class="Bblue">Siglas </button>
+        
     <div id="div_ff_geral" class="div_aba_interna" >     
     	<?php require_once "folhaFrequencia.php" ?>
     </div>

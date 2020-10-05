@@ -256,34 +256,7 @@ if ($rp[0]['dataPrevistaNova'] != '') {
 	$rProva = 1;
 }
 ?>
-<style>
-/*.Bblue {
-	display: inline-block;
-    zoom: 1;
-    vertical-align: baseline;
-    margin: 0 2px;
-    outline: none;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    font: 14px/100% Arial, Helvetica, sans-serif;
-    padding: 0.5em 1.5em 0.5em;
-    text-shadow: 0 1px 1px rgba(0,0,0,.3);
-    -webkit-border-radius: .5em;
-    -moz-border-radius: .5em;
-    border-radius: .5em;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	    color: #d9eef7;
-    border: solid 1px #0076a3;
-    background: #0095cd;
-    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
-    background: -moz-linear-gradient(top, #00adee, #0078a5);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
-	
-}*/
-</style>
+
 <fieldset>
   <legend>Folha de frequência</legend>
   <div class="linha-inteira">        
@@ -344,13 +317,6 @@ if ($rp[0]['dataPrevistaNova'] != '') {
         
 				
                 foreach($rsFF_pf2 as $valorFF2){
-                    //foreach($rsFF['permanente'] as $valorPermanente){
-
-                    //INF GERAIS
-                //    $dataAtual = $valorFF["dataAtual"];
-                 //   $diaDaSemanaAtual = $valorFF["diaSemana"];
-                //    $horaInicio = $valorFF["horaInicio"];
-                //    $horaFim = $valorFF["horaFim"];
                     $horasTotal2 = $valorFF2["horasTotal"];
                     $totalHorasAulas += $horasTotal2;
 					$totalHorasProfessor += $horasTotal2;
@@ -360,18 +326,14 @@ if ($rp[0]['dataPrevistaNova'] != '') {
 						} else {
 				$rsFFP = $FolhaFrequencia->selectFF_diasHoras($idPlanoAcaoGrupo, $anoRef, $mesRef, $valorP," ",$totalHorasAulas);
 						 $rsFF_pf3 = array_merge($rsFFP['permanente'], $rsFFP['fixa']);
-
-
 				
                 foreach($rsFF_pf3 as $valorFF3){
                     $horasTotal3 = $valorFF3["horasTotal"];
      				$totalHorasProfessorA += $horasTotal3;
                 	
-				}			
+							}			
 							
 						}
-						
-		
 				}   
 				// Caso os outros professores seja muito maior que o professor atual, tenho que eliminar pelo menos uma aula para meses de 5 semanas.
 				if ($totalHorasProfessorN > $totalHorasProfessorA) {
