@@ -115,7 +115,7 @@ function grupos(){
   status = 0;
   clientePj = $( "#clientePj_idClientePj option:selected" ).val();
   retorno = $.ajax({
-    url:"<?php echo "/modulos/select_grupos.php"?>",
+    url:"<?php echo "modulos/select_grupos.php"?>",
     type:"POST",
     datatype: "html",
     contentType: "application/x-www-form-urlencoded; charset=utf-8",
