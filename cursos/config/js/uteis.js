@@ -313,9 +313,9 @@ function postForm(idForm, pagina, param, onde) {
 	} else {
 		submitForm = true;
 	}
-	console.log("sss"+submitForm);
+	//console.log("sss"+submitForm);
 
-	if (submitForm) {
+	//if (submitForm) {
 		var parametros = form.serialize() + (param != undefined ? param : '');
 		showLoad();
 		$.post(pagina, parametros, function(e) {
@@ -331,7 +331,7 @@ function postForm(idForm, pagina, param, onde) {
 		}).always(function() {
 			submitForm = false;
 		});
-	}
+	//}
 
 	return false;
 
