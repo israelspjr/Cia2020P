@@ -74,7 +74,8 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
           	    <input type="hidden" name="sel_lista_padraoNome[]" id="sel_lista_padraoNome" value="<?php echo $iten[1]?>" />  
             
             <?php }?>                 	
-     
+     </div>
+      <div class="linha-inteira">
           <p>
             <label>Data da pesquisa:</label>
             de
@@ -86,8 +87,8 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
           <Label>Mostrar comentários? </Label>
           <input type="checkbox" value="1" id="mostrarComentarios" name="mostrarComentarios" />
           </p>
-        </div>
-        <div class="direita">
+       
+       
    <!--      <p>
           <Label>Mostrar PSA Pendentes </Label>
           <input type="checkbox" value="1" id="psaPendentes" name="psaPendentes" />
