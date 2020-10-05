@@ -2,6 +2,9 @@
 <script src="<?php echo CAMINHO_CFG?>js/jquery.min.js" language="javascript" type="text/javascript"></script>
 <script src="<?php echo CAMINHO_CFG?>js/login.js" language="javascript" type="text/javascript"></script>
 
+<!-- Funções form -->
+<script src="<?php echo CAMINHO_CFG?>js/form.js" language="javascript" type="text/javascript"></script>
+
 <!-- JQuery Ui -->
 <script src="<?php echo CAMINHO_CFG?>js/jquery-ui.min.js" language="javascript" type="text/javascript"></script>
 
@@ -16,9 +19,6 @@
 <!-- Atualização para sortear data -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
 <script src="//cdn.datatables.net/plug-ins/1.10.7/sorting/datetime-moment.js"></script>
-
-<!-- Funções form -->
-<script src="<?php echo CAMINHO_CFG?>js/form.js" language="javascript" type="text/javascript"></script>
 
 <!-- Funções uteis -->
 <script src="<?php echo CAMINHO_CFG?>js/uteis.js" language="javascript" type="text/javascript"></script>
