@@ -312,7 +312,6 @@ function postForm(idForm, pagina, param, onde) {
 	} else {
 		submitForm = true;
 	}
-	//console.log("sss"+submitForm);
 
 	//if (submitForm) {
 		var parametros = form.serialize() + (param != undefined ? param : '');

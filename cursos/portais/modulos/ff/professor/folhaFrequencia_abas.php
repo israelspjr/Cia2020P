@@ -42,7 +42,7 @@ function carregaAbaIndividualD(){
 	$('#div_ff_siglas').hide();
 	$('#div_ff_geral').hide();
 	$('#div_ff_individual').hide();
-	carregarModulo('<?php echo "modulos/ff/professor/diaAulaFFIndividualD.php?idFolhaFrequencia=".$idFolhaFrequencia?>' , '#div_ff_individualD')
+	carregarModulo('<?php echo "modulos/ff/professor/diaAulaFFIndividualD.php?idFolhaFrequencia=".$idFolhaFrequencia?>' , '#centro')
 }
 
 
