@@ -10,5 +10,5 @@ $ondeAtualiza = "#centro";
 
 <fieldset>
   <legend>Banco de horas</legend>
-  <?php require_once("../grupos.php")?>
+  <?php require_once("../gruposProf.php")?>
 </fieldset>
