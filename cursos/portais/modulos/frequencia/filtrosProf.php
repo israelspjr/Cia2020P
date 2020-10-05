@@ -11,22 +11,23 @@ $where = " WHERE G.inativo = 0 AND CPF.inativo = 0 ";
 
  $where1 = " WHERE P.idProfessor = " . $_SESSION['idProfessor_SS'] . " AND PAG.inativo = 0 AND G.inativo = 0 ";
  
-/*       $not1 = array();
+      $not1 = array();
 	   $html = "";
       foreach ($Professor->selectGrupoProfTr_query($where1) as $res) {
         $not1[] = $res['idGrupo'];
 		
 		
 	  }
-	*/
+	
 $id = $_REQUEST['idGrupo'];
 Uteis::pr($id);
+$idGrupos = implode(",",$id);
 $not = implode(",",$not1); 
 
 if ($id == "-") {
 	$where .= " AND G.idGrupo IN (".$not.")";	
 } else {
-	$where .= " AND G.idGrupo =".$id; 
+	$where .= " AND G.idGrupo IN (".$idGrupos.")"; 
 }
 
 $idsClientes = $GrupoClientePj->selectGrupoClientePj(" WHERE grupo_idGrupo in (".$not.") Group By clientePj_idClientePj");
