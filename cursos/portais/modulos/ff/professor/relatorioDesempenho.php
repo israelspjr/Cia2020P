@@ -49,7 +49,6 @@ function gravarNotas(){
 	$.each(idForms_base, function(index) {       
 	 
 	  idForm = idForms_base[index][0];
-	  console.log(idForm);      
 	  nota = idForms_base[index][1];
 	  obs = idForms_base[index][2];
 	  notaNova = $('#' + idForm).find('select:first').val(); 
