@@ -306,7 +306,6 @@ function postForm(idForm, pagina, param, onde) {
 	if (onde != undefined && onde != '') {
 		var ondeR = $('#' + onde);
 	}
-	console.log(form.length);
 
 	if (form.length > 0) {
 		form.submit();
