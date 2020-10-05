@@ -20,7 +20,7 @@ if ($candidato == 1) {
 		<li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/psa/indexProf.php', '#centro');"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Pesquisa de satisfação antiga</a></li>
         <li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/novaPsa/index.php', '#centro');"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Pesquisa de satisfação nova</a></li>
 			<li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/bancoHoras/indexProf.php', '#centro');"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Banco de horas</a></li>
-			<li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/frequencia/index.php', '#centro');"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-pencil"></use></svg> Relatório de frequência</a></li>
+			<li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/frequencia/indexProf.php', '#centro');"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-pencil"></use></svg> Relatório de frequência</a></li>
             <li class="parent " <?php echo $disabled?>>
 				<a href="#">
 					<span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span><span data-toggle="collapse" href="#sub-item-1"> Financeiro </span>
