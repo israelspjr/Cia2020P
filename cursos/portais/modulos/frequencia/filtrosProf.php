@@ -7,7 +7,7 @@ $GrupoClientePj = new GrupoClientePj();
 
 $tipo = $_POST['tipoRel'];
 
-$where = " WHERE P.idProfessor = " . $_SESSION['idProfessor_SS'] . " AND G.inativo = 0 AND CPF.inativo = 0 ";
+$where = " WHERE PRF.idProfessor = " . $_SESSION['idProfessor_SS'] . " AND G.inativo = 0 AND CPF.inativo = 0 ";
 
  $where1 = " WHERE P.idProfessor = " . $_SESSION['idProfessor_SS'] . " AND PAG.inativo = 0 AND G.inativo = 0 ";
  
