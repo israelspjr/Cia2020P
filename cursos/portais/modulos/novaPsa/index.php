@@ -1,5 +1,5 @@
 <?php  
-require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portaisr.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 
 $TipoEnderecoVirtual = new TipoEnderecoVirtual();
 $PsaProfessor = new PsaProfessor();
