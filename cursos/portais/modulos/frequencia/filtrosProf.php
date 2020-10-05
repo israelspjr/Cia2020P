@@ -20,6 +20,7 @@ $where = " WHERE G.inativo = 0 AND CPF.inativo = 0 ";
 	  }
 	*/
 $id = $_REQUEST['idGrupo'];
+Uteis::pr($id);
 $not = implode(",",$not1); 
 
 if ($id == "-") {
