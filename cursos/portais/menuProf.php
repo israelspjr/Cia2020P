@@ -27,12 +27,12 @@ if ($candidato == 1) {
 				</a>
 				<ul class="children collapse" id="sub-item-1">
 					<li>
-						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/demonstrativoPagamento/index.php', '#centro');">
+						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/demonstrativoPagamento/index.php', '#centro');">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Demonstrativos
 						</a>
 					</li>
 					<li>
-						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/aulasDadas/index.php', '#centro');">
+						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/aulasDadas/index.php', '#centro');">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Aulas Dadas no mês
 						</a>
 					</li>
