@@ -112,7 +112,7 @@ $provaOral = $valorNivel[0]['provaOral'];
 													
 													$aulaPermanenteIds = implode(",",Uteis::arrayCampoEspecifico($aulaPermanenteIds,'idAulaPermanenteGrupo'));
 													$aulaPermanenteIds = $aulaPermanenteIds ? $aulaPermanenteIds : "0";
-    												$rsProf = $IntegranteGrupo->select_professoresIntegranteGrupoPsa($idIntegranteGrupo,$rsNota['professor_idProfessor'],"");
+    					$rsProf = $IntegranteGrupo->select_professoresIntegranteGrupoPsa($idIntegranteGrupo,$rsNota['professor_idProfessor'],"");
 												
 													?>
 													
@@ -147,7 +147,7 @@ $provaOral = $valorNivel[0]['provaOral'];
 															</label></p>
 
                                                             <p><label>Data:
-                                                                <input name="data" id="data<?php echo $campo?>" type="date" maxlength="10" data-id="<?php echo $idIntegranteGrupo;?>" type="text"
+    <input name="data" id="data<?php echo $campo?>" type="date" maxlength="10" data-id="<?php echo $idIntegranteGrupo;?>"
                                                                        value="<?php echo Uteis::exibirData($rsNota['data'])?>" >
                                                             </label></p>
 															
@@ -184,7 +184,7 @@ $provaOral = $valorNivel[0]['provaOral'];
 									
 							<?php }	?>
                             
-              <p><button class="button gray" onclick="notaEscrita();">Gravar notas</button>
+              <p><button class="bBlue" onclick="notaEscrita();">Gravar notas</button>
               <?php if ($idFolhaFrequencia == '') { ?>
               <button class="button gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/provas/index.php', '#centro');">Fechar</button>
               <?php } else { ?>
