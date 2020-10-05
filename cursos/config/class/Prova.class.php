@@ -373,7 +373,7 @@ class Prova extends Database {
 				$onclick2 = "onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "resourceHTML/notas.php?id=" . $valor['idCalendarioProva'] . "', '$caminhoAtualizar', '$ondeAtualiza')\"";
 				} else {
 				$onclick = " onclick=\"carregarModulo('" . $caminhoAbrir . "provas.php?id=" . $valor['idCalendarioProva'] . "&idFolhaFrequencia=".$idFolhaFrequencia."', '$ondeAtualiza')\" ";	
-				$onclick2 = "onclick=\"carregarModulo('" . $caminhoAbrir . "resourceHTML/notas.php?id=" . $valor['idCalendarioProva'] . "&idFolhaFrequencia=".$idFolhaFrequencia."','$ondeAtualiza')\"";
+				$onclick2 = "onclick=\"carregarModulo('" . $caminhoAbrir . "notas.php?id=" . $valor['idCalendarioProva'] . "&idFolhaFrequencia=".$idFolhaFrequencia."','$ondeAtualiza')\"";
 					
 				}
 
