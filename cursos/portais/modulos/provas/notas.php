@@ -103,7 +103,7 @@ $provaOral = $valorNivel[0]['provaOral'];
 													AND itenProva_idItenProva=".$idItenProva;								
 												    $rs = $Prova->query($sql);
 													$rsNota = mysqli_fetch_array($rs);
-													Uteis::pr($rsNota);
+											//		Uteis::pr($rsNota);
 													
 													$aulaFixaIds = $AulaDataFixa->selectAulaDataFixa(" AND planoAcaoGrupo_idPlanoAcaoGrupo = ".$idPlanoAcaoGrupo);
 													$aulaPermanenteIds = $AulaPermanenteGrupo->selectAulaPermanenteGrupo(" WHERE planoAcaoGrupo_idPlanoAcaoGrupo = ".$idPlanoAcaoGrupo);
@@ -118,7 +118,7 @@ $provaOral = $valorNivel[0]['provaOral'];
 													?>
 													
 													<form id="formulario_upload_nota_<?php echo $campo?>" method="post" 
-													style="display:none;" enctype="multipart/form-data" action="modulos/provas/acao/nota.php" >
+													style="display:none;" enctype="multipart/form-data" action="modulos/provas/notaAcao.php" >
                                                     
                                                     
 													
