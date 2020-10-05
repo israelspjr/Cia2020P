@@ -88,7 +88,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
             </p>
  
       <div class="linha-inteira" >
-        <button class="button blue" id="geraRel" onclick="postForm_relatorio('img_form_Grupos', 'tipoRel', 'form_rel_pf', '<?php echo "modulos/frequencia/frequenciaProf.php"?>', 'res_rel')">Gerar relatório</button>        
+        <button class="button blue" id="geraRel" onclick="fecharMenu(0);postForm_relatorio('img_form_Grupos', 'tipoRel', 'form_rel_pf', '<?php echo "modulos/frequencia/frequenciaProf.php"?>', 'res_rel')">Gerar relatório</button>        
       </div>
     </form>
   </div>
