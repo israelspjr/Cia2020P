@@ -23,7 +23,7 @@
 <script src="//cdn.datatables.net/plug-ins/1.10.7/sorting/datetime-moment.js"></script>
 
 <!-- Funções uteis -->
-<!--<script src="<?php echo CAMINHO_CFG?>js/uteis.js" language="javascript" type="text/javascript"></script>
+<script src="<?php echo CAMINHO_CFG?>js/uteis.js" language="javascript" type="text/javascript"></script>
 
 <!-- Eventos gerais-->
 <!--<script src="<?php echo CAMINHO_CFG?>js/eventos.js" language="javascript" type="text/javascript"></script>
