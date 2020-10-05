@@ -88,10 +88,10 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
           </p>
         </div>
         <div class="direita">
-         <p>
+   <!--      <p>
           <Label>Mostrar PSA Pendentes </Label>
           <input type="checkbox" value="1" id="psaPendentes" name="psaPendentes" />
-          </p> </div>
+          </p> </div>-->
       </div>
       
       <div class="linha-inteira" >
@@ -133,7 +133,7 @@ grupos();
 function geraRel(){
 addItenPersonalizado('#sel_lista_padrao', '#sel_lista_padraoNome');
 	selecionaTudoSelect('sel_lista_padrao', 'sel_lista_padraoNome');
-    postForm_relatorio('img_form_Grupos', '', 'form_rel_pf', '<?php echo "modulos/psa/psaProf.php"?>', '#res_rel');
+    postForm_relatorio('img_form_Grupos', '', 'form_rel_pf', '<?php echo "modulos/psa/psaProf.php"?>', 'res_rel');
 }
 //ativarForm();	
 </script> 
