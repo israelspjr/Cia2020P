@@ -103,6 +103,7 @@ $provaOral = $valorNivel[0]['provaOral'];
 													AND itenProva_idItenProva=".$idItenProva;								
 												    $rs = $Prova->query($sql);
 													$rsNota = mysqli_fetch_array($rs);
+													Uteis::pr($rsNota);
 													
 													$aulaFixaIds = $AulaDataFixa->selectAulaDataFixa(" AND planoAcaoGrupo_idPlanoAcaoGrupo = ".$idPlanoAcaoGrupo);
 													$aulaPermanenteIds = $AulaPermanenteGrupo->selectAulaPermanenteGrupo(" WHERE planoAcaoGrupo_idPlanoAcaoGrupo = ".$idPlanoAcaoGrupo);
