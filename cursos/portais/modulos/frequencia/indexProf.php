@@ -59,22 +59,33 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
             </label>
           </p>
         <p>
-            <label>Grupos:</label>
-            <select id="grupo_idGrupo" name="grupo_idGrupo">
-            <option value="-">Todos</option>
-            <?php 
-			    $where = " WHERE P.idProfessor = " . $_SESSION['idProfessor_SS'] . " AND PAG.inativo = 0 AND G.inativo = 0 Order By G.nome";
-	  //AND (AGP.dataFim > CURDATE() OR AGP.dataFim IS NULL) ";
-      $rs = $Professor -> selectGrupoProfTr($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where);
-	//$rs = $Professor->selectGrupoProfTr_query($where);
-  	Uteis::pr($rs);
-      foreach ($Professor->selectGrupoProfTr_query($where) as $res) {
-		echo "<option value=".$res['idGrupo'].">".$res['nome']."</option>";  
-	  }
-			?>
+       <?php $sql = " SELECT DISTINCT(G.idGrupo), G.nome AS grupo, PAG.idPlanoAcaoGrupo FROM professor AS P 
+				INNER JOIN aulaGrupoProfessor AS AGP ON AGP.professor_idProfessor = P.idProfessor
+				LEFT JOIN aulaPermanenteGrupo AS AP ON AP.idAulaPermanenteGrupo = AGP.aulaPermanenteGrupo_idAulaPermanenteGrupo
+				LEFT JOIN aulaDataFixa AS AF ON AF.idAulaDataFixa = AGP.aulaDataFixa_idAulaDataFixa
+				INNER JOIN planoAcaoGrupo AS PAG ON PAG.inativo = 0 AND 
+					(PAG.idPlanoAcaoGrupo = AP.planoAcaoGrupo_idPlanoAcaoGrupo OR PAG.idPlanoAcaoGrupo = AF.planoAcaoGrupo_idPlanoAcaoGrupo)
+				INNER JOIN grupo AS G ON G.idGrupo = PAG.grupo_idGrupo 
+				WHERE ( AGP.dataFim >= CURDATE() OR AGP.dataFim IS NULL OR AGP.dataFim = '') AND P.idProfessor = " . $_SESSION['idProfessor_SS'];
+				
+				$rsGrupos = Uteis::executarQuery($sql);
 
-            </select>
-        </p>
+				$idsGrupos = array();
+				
+				for ($x=0;$x<count($rsGrupos);$x++) {
+			
+			$idGrupos .= $rsGrupos[$x]['idGrupo'].",";
+				 
+			 }
+			 $idGrupos .= '-1';
+			 
+				?>
+				 <p>
+            <label>Grupos:</label>
+                   <?php 
+			 echo $Grupo->selectGrupoSelectMult("",""," WHERE G.idGrupo in (".$idGrupos.") ");
+			 ?>    
+            </p>
  
       <div class="linha-inteira" >
         <button class="button blue" id="geraRel" onclick="postForm_relatorio('img_form_Grupos', 'tipoRel', 'form_rel_pf', '<?php echo "modulos/frequencia/frequenciaProf.php"?>', 'res_rel')">Gerar relatório</button>        
