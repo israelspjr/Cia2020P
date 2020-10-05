@@ -7,7 +7,7 @@ $Configuracoes = new Configuracoes();
 
 $config = $Configuracoes->selectConfig();
 $idProfessor = $_SESSION['idProfessor_SS'];
-
+Uteis::pr($config);
 ?>
     
 <fieldset>
