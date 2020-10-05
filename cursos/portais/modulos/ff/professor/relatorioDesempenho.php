@@ -32,7 +32,7 @@ if($rsIntegranteGrupo){?>
       
     <?php }?>
     
-    <button class="bBlue" onclick="enviadoOK();gravarNotas();zerarNotas();">Gravar notas</button>&nbsp;&nbsp;
+    <button class="bBlue" onclick="gravarNotas();zerarNotas();">Gravar notas</button>&nbsp;&nbsp;
     <button class="button gray" onclick="zerarNotas()">Fechar</button>	
     
   </fieldset>
@@ -48,7 +48,8 @@ function gravarNotas(){
 	
 	$.each(idForms_base, function(index) {       
 	 
-	  idForm = idForms_base[index][0];      
+	  idForm = idForms_base[index][0];
+	  console.log(idForm);      
 	  nota = idForms_base[index][1];
 	  obs = idForms_base[index][2];
 	  notaNova = $('#' + idForm).find('select:first').val(); 
