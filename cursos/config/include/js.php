@@ -3,7 +3,7 @@
 <script src="<?php echo CAMINHO_CFG?>js/login.js" language="javascript" type="text/javascript"></script>
 
 <!-- Funções form -->
-<script src="<?php echo CAMINHO_CFG?>js/form.js" language="javascript" type="text/javascript"></script>
+<script src="<?php echo CAMINHO_CFG?>js/form2.js" language="javascript" type="text/javascript"></script>
 
 <!-- JQuery Ui -->
 <script src="<?php echo CAMINHO_CFG?>js/jquery-ui.min.js" language="javascript" type="text/javascript"></script>
