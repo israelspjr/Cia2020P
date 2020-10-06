@@ -56,11 +56,11 @@ if($idDisponibilidadeProfessor){
         <span class="placeholder">Campo obrigatório</span> </p>
       <p>
         <label>Hora início:</label>
-        <input type="text" name="horaInicio" id="horaInicio" class="required hora" value="<?php echo $horaInicio?>" />
+        <input type="time" name="horaInicio" id="horaInicio" class="required hora" value="<?php echo $horaInicio?>" />
         <span class="placeholder">Campo Obrigatório</span> </p>
       <p>
         <label>Hora fim:</label>
-        <input type="text" name="horaFim" id="horaFim" class="required hora" value="<?php echo $horaFim?>" />
+        <input type="time" name="horaFim" id="horaFim" class="required hora" value="<?php echo $horaFim?>" />
         <span class="placeholder">Campo Obrigatório</span> </p>
       <p>
         <label>Observação:</label>
