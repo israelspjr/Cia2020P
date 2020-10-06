@@ -68,14 +68,10 @@ if ($candidato == 1) {
 					</li>
                     
                     <?php } ?>
-		<!--	<li>
-						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/resourceHTML/localAulaProfessor.php', '#centro');">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Local de Aula
-						</a>
-					</li>-->
+
                  <?php if ($_SESSION['idProfessor_SS'] != -1) {?>    
                     <li>
-						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/form/dadosBancario.php', '#centro');">
+						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/dadosBancario.php', '#centro');">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Dados Bancários
 						</a>
 					</li>
@@ -90,10 +86,10 @@ if ($candidato == 1) {
             
             <?php if ($_SESSION['idProfessor_SS'] != -1) {?>
             
-			<li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/contrato/index.php', '#centro');"><svg class="glyph stroked app-window "><use xlink:href="#stroked-app-window"></use></svg> Contratos</a></li>
-            <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/lovemondays/index.php', '#centro');"><svg class="glyph stroked app-window content"><use xlink:href="#stroked-app-window-with-content"></use></svg> Love Mondays</a></li>
+			<li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/contrato/index.php', '#centro');"><svg class="glyph stroked app-window "><use xlink:href="#stroked-app-window"></use></svg> Contratos</a></li>
+            <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/lovemondays/index.php', '#centro');"><svg class="glyph stroked app-window content"><use xlink:href="#stroked-app-window-with-content"></use></svg> Love Mondays</a></li>
             		
-             <li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/metricas/index.php', '#centro');"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Métricas e cronogramas</a></li>
+             <li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/metricas/index.php', '#centro');"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Métricas e cronogramas</a></li>
              
              <?php } ?>
                  <li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/bc/index.php', '#centro');"><svg class="glyph stroked external hard drive"><use xlink:href="#stroked-external-hard-drive"></use></svg> Banco de conhecimento</a></li>
@@ -101,7 +97,7 @@ if ($candidato == 1) {
               <li <?php echo $disabled?>><a href="https://www.facebook.com/groups/docentesincriveis/" target="_new"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> D.I.C.A.S</a></li>
           
           	  <?php if ($_SESSION['idProfessor_SS'] != -1) {?> 
-              <li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/arquivos/index.php', '#centro');"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> VPGs Online</a></li>
+              <li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/arquivos/index.php', '#centro');"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> VPGs Online</a></li>
 			 <?php } ?>
            
 			<li role="presentation" class="divider"></li>
