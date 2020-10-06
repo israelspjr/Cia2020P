@@ -126,7 +126,7 @@ class DisponibilidadeProfessor extends Database {
 			if ($mobile != 1) {
 			$deletaDia = " onclick=\"deletaRegistro('" . $caminhoAbrir . "acao/disponibilidadeProfessorDia.php?diaSemana=" . $diaSemana . "&idProfessor=" . $idProfessor . "', '" . $idProfessor . "', '$caminhoAtualizar', '#div_disponibilidade_professor');\" ";
 			} else {
-			$deletaDia = " onclick=\"deletaRegistro('" . $caminhoAbrir . "acao/disponibilidadeProfessorDia.php?diaSemana=" . $diaSemana . "&idProfessor=" . $idProfessor . "', '" . $idProfessor . "', '$caminhoAtualizar', '#centro');\" ";				
+			$deletaDia = " onclick=\"deletaRegistro('" . $caminhoAbrir . "disponibilidadeProfessorDiaAcao.php?diaSemana=" . $diaSemana . "&idProfessor=" . $idProfessor . "', '" . $idProfessor . "', '$caminhoAtualizar', '#centro');\" ";				
 				
 			}
 			
@@ -192,7 +192,7 @@ class DisponibilidadeProfessor extends Database {
 
 						$onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "form/disponibilidadeProfessor.php?horaInicio=" . ($pxIni * 2) . "&horaFim=" . ($horaInicio * 2) . "&diaSemana=" . $diaSemana . "&idProfessor=" . $idProfessor . "', '$caminhoAtualizar', '#div_disponibilidade_professor');\" ";
 						} else {
-						$onclick = " onclick=\"zerarCentro();carrregarModulo('" . $caminhoAbrir . "form/disponibilidadeProfessor.php?horaInicio=" . ($pxIni * 2) . "&horaFim=" . ($horaInicio * 2) . "&diaSemana=" . $diaSemana . "&idProfessor=" . $idProfessor . "',  '#centro');\" ";
+						$onclick = " onclick=\"zerarCentro();carrregarModulo('" . $caminhoAbrir . "disponibilidadeProfessorForm.php?horaInicio=" . ($pxIni * 2) . "&horaFim=" . ($horaInicio * 2) . "&diaSemana=" . $diaSemana . "&idProfessor=" . $idProfessor . "',  '#centro');\" ";
 						
 							
 						}
@@ -203,7 +203,7 @@ class DisponibilidadeProfessor extends Database {
 					if ($mobile != 1) {
 					$onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "form/disponibilidadeProfessor.php?id=" . $idDisponibilidade . "', '$caminhoAtualizar', '#div_disponibilidade_professor');\" ";
 					} else {
-					$onclick = " onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "form/disponibilidadeProfessor.php?id=" . $idDisponibilidade . "',  '#centro');\" ";
+					$onclick = " onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "disponibilidadeProfessorForm.php?id=" . $idDisponibilidade . "',  '#centro');\" ";
 					
 						
 					}
@@ -216,7 +216,7 @@ class DisponibilidadeProfessor extends Database {
 					if ($mobile != 1) {
 					$onclick = " onclick=\"deletaRegistro('" . $caminhoAbrir . "acao/disponibilidadeProfessor.php', '" . $idDisponibilidade . "', '$caminhoAtualizar', '#div_disponibilidade_professor')\" ";
 					} else {
-					$onclick = " onclick=\"deletaRegistro('" . $caminhoAbrir . "acao/disponibilidadeProfessor.php', '" . $idDisponibilidade . "', '$caminhoAtualizar', '#centro')\" ";
+					$onclick = " onclick=\"deletaRegistro('" . $caminhoAbrir . "disponibilidadeProfessorAcao.php', '" . $idDisponibilidade . "', '$caminhoAtualizar', '#centro')\" ";
 					
 					}
 					$html .= "<a $onclick style=\"float:right\">x&nbsp;</a>";
@@ -245,7 +245,7 @@ class DisponibilidadeProfessor extends Database {
 				if ($mobile != 1) {
 				$onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "form/disponibilidadeProfessor.php?horaInicio=" . ($pxIni * 2) . "&horaFim=1320&diaSemana=" . $diaSemana . "&idProfessor=" . $idProfessor . "', '$caminhoAtualizar', '#div_disponibilidade_professor');\" ";
 				} else {
-				$onclick = " onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "form/disponibilidadeProfessor.php?horaInicio=" . ($pxIni * 2) . "&horaFim=1320&diaSemana=" . $diaSemana . "&idProfessor=" . $idProfessor . "',  '#centro');\" ";
+				$onclick = " onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "disponibilidadeProfessorForm.php?horaInicio=" . ($pxIni * 2) . "&horaFim=1320&diaSemana=" . $diaSemana . "&idProfessor=" . $idProfessor . "',  '#centro');\" ";
 				
 					
 				}
