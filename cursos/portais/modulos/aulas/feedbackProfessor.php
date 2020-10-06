@@ -60,7 +60,7 @@ function aguardarCarregamentoFeed(){
     <form id="form_feed_dados" class="validate" method="post" action="" onsubmit="return false" >
       <input type="hidden" id="quemAssistiu" name="quemAssistiu" value="<?php echo $_SESSION['idProfessor_SS'];?>" />
       <input type="hidden" id="id" name="id" value="<?php echo $idFeedbackProfessor?>" />
-    <div class="esquerda">
+    <div class="linha-inteira">
        <p><label>Nome do Professor ? </label>
       <?php echo $Professor->selectProfessorSelect("required", $idProfessor ," AND candidato = 0") ?></p>
       <p>
@@ -71,11 +71,7 @@ function aguardarCarregamentoFeed(){
       --><p>
        <label>Grupo:</label>
            <?php echo $Grupo->selectGrupoSelect("",$idGrupo); ?></p>
-        
-      </div>
-      <div class="direita">
-     <div><p></p></div>
-         <p>
+            <p>
       <label>Status:</label>
       <input type="radio" id="status" name="status" value="1" <?php if($status == 1) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."excelente.png"?>" title="Aula excelente"/> 
       <input type="radio" id="status" name="status" value="2" <?php if($status == 2) { echo "checked"; } ?> /> <img src="<?php echo CAMINHO_IMG."boa.png"?>" title="Aula Boa, mas pode ser melhor"/> 
@@ -87,10 +83,8 @@ function aguardarCarregamentoFeed(){
      <?php echo $TipoNota->selectNotasTipoNotaSelect("", $status2, " AND tipoNota_idTipoNota = 4 ") ?>
 
       </p>
-    
       </div>
-  <div class="linha-inteira"><p></p></div>
-      <div class="esquerda">
+         <div class="esquerda">
         
     
             <p><label>O que mais chamou sua atenção?</label>
