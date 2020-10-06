@@ -28,12 +28,12 @@ $tipoDemo = $rs[0]['tipoDemo'];
              <p>
              <div><strong>Insira sua Reclamação:</strong></div>
              </p>
-             <form name="contestando" id="contestando" target="cont" action="<?php echo "modulos/demonstrativoPagamento/disparoEmail.php"?>">
+             <form name="contestando" id="contestando" target="cont" action="">
             <textarea id="contesta" name="contesta" rows="5" cols="45">
             </textarea>
             <input type="hidden" id="idp" name="idp" value="<?php echo "$idDemonstrativoPagamento"?>" />
             <p><div>
-            <button type="submit" class="button" id="enviou" name="enviou" onclick="envioOK()">
+            <button type="submit" class="button" id="enviou" name="enviou" onclick="enviar()">
             
             Enviar
             </button>
@@ -41,10 +41,7 @@ $tipoDemo = $rs[0]['tipoDemo'];
             </form>
             </p>
             </div>
-            <iframe name="cont" id="cont" style="    display: block;
-    height: 30px;
-    width: 100%;">
-            </iframe>
+       
         </div>
         <div class="lista">
             <div class="">
@@ -73,6 +70,11 @@ $('#enviou').attr('onclick', 'aviso()');
 
 function aviso() {
 	alert("Email enviado com sucesso");
+}
+
+function enviar() {
+	postForm(this, "modulos/demonstrativoPagamento/disparoEmail.php");	
+	
 }
 
 </script>
