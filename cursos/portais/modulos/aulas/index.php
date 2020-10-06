@@ -6,7 +6,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
 ?>
 <fieldset>
   <legend>Aulas assistidas</legend>
-  <div class="menu_interno"> <img src="<?php echo CAMINHO_IMG."novo.png";?>" title="Novo cadastro" onclick="abrirNivelPagina(this, '<?php echo "modulos/aulas/feedbackProfessor.php";?>?idProfessor=<?php echo $idProfessor?>', '<?php echo "modulos/aulas/index.php?id=".$idProfessor?>', '#div_feedback_professor');" /> </div>
+  <div class="menu_interno"> <img src="<?php echo CAMINHO_IMG."novo.png";?>" title="Novo cadastro" onclick="zerarCentro();carregarModulo('<?php echo "modulos/aulas/feedbackProfessor.php";?>?idProfessor=<?php echo $idProfessor?>', '#centro');" /> </div>
   <div id="div_lista_feeds" class="lista">
 <table id="tb_lista_feedbackProfessor" class="registros">
   <thead>
