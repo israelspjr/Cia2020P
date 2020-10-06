@@ -157,14 +157,14 @@ class DemonstrativoPagamento extends Database {
 
 			while ($valor = mysqli_fetch_array($result)) {
 				
-				if ($mobile != 1) {
+		//		if ($mobile != 1) {
 
-				$onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?idDemonstrativoPagamento=" . $valor['idDemonstrativoPagamento'] . "', '$atualizar', '$onde')\" ";
-				} else {
-			$onclick = " onclick=\"zerarCentro();abrirNivelPagina(this, '" . $caminhoAbrir . "?idDemonstrativoPagamento=" . $valor['idDemonstrativoPagamento'] . "', '$atualizar', '$onde')\" ";
+		//		$onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?idDemonstrativoPagamento=" . $valor['idDemonstrativoPagamento'] . "', '$atualizar', '$onde')\" ";
+		//		} else {
+			$onclick = " onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "?idDemonstrativoPagamento=" . $valor['idDemonstrativoPagamento'] . "', '#centro')\" ";
 					
 					
-				}
+		//		}
 
 				$html .= "<tr align=\"center\">";
 				

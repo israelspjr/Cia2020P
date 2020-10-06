@@ -293,7 +293,7 @@ function relatorioFrequencia_mensal($where="", $soFinalizadasPri = false, $dem =
     INNER JOIN planoAcaoGrupo AS PAG ON PAG.grupo_idGrupo = G.idGrupo
     INNER JOIN integranteGrupo AS IG ON IG.planoAcaoGrupo_idPlanoAcaoGrupo = PAG.idPlanoAcaoGrupo";
 
-     $sql .=  " INNER JOIN clientePf AS CPF ON CPF.idClientePf = IG.clientePf_idClientePf
+     $sql .=  " LEFT JOIN clientePf AS CPF ON CPF.idClientePf = IG.clientePf_idClientePf
     INNER JOIN folhaFrequencia AS FF ON FF.planoAcaoGrupo_idPlanoAcaoGrupo = PAG.idPlanoAcaoGrupo"; 
       if( $soFinalizadasPri ){
       $sql .= " AND FF.finalizadaPrincipal = 1 ";
