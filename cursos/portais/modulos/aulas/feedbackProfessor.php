@@ -74,7 +74,7 @@ function aguardarCarregamentoFeed(){
         
       </div>
       <div class="direita">
-     <p></p>
+     <div><p></p></div>
          <p>
       <label>Status:</label>
       <input type="radio" id="status" name="status" value="1" <?php if($status == 1) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."excelente.png"?>" title="Aula excelente"/> 
