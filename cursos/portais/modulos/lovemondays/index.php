@@ -4,7 +4,7 @@
 $Configuracoes = new Configuracoes();
 
 $config = $Configuracoes->selectConfig(1);
-Uteis::pr($Configuracoes);
+Uteis::pr($Configuracoes->getNomeEmpresa());
 Uteis::pr($config);
 ?>
 <fieldset>
