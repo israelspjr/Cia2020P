@@ -4,7 +4,8 @@
 $Configuracoes = new Configuracoes();
 
 $config = $Configuracoes->selectConfig(1);
-Uteis::pr($Configuracoes['nomeEmpresa']);
+Uteis::pr($Configuracoes);
+Uteis::pr($config);
 ?>
 <fieldset>
   <legend>Love Mondays</legend>
