@@ -316,7 +316,7 @@ function relatorioFrequencia_mensal($where="", $soFinalizadasPri = false, $dem =
 	} else {
 		$sql .= " GROUP BY G.IdGrupo,CPF.idClientePf";
 	}
-	
+	echo $sql;
     return Uteis::executarQuery($sql);
 }
   

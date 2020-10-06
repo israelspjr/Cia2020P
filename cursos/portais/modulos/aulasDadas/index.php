@@ -7,9 +7,8 @@ $folha = new FolhaFrequencia();
 $mes = date('m'); //$_REQUEST['mes'];
 $ano = date("Y"); //$_REQUEST['ano'];
 $idProfessor = $_SESSION['idProfessor_SS'];
-echo $mes."<br>";
-echo $ano."<br>";
-echo $idProfessor;
+
+
 //AULAS
 $rsDemonstrativoPagamento = $DemonstrativoPagamento -> selectDemonstrativoPagamentoTr_aulasTotal($idProfessor, $mes, $ano, false);
 Uteis::pr($rsDemonstrativoPagamento);
