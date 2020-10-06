@@ -64,17 +64,17 @@ function aguardarCarregamentoFeed(){
        <p><label>Nome do Professor ? </label>
       <?php echo $Professor->selectProfessorSelect("required", $idProfessor ," AND candidato = 0") ?></p>
       <p>
-      
+       <p>
+        <label>Data da aula Assistida:</label>
+        <input type="date" name="dataAvaliada" id="dataAvaliada" class="required" value="<?php echo $dataAvaliada?>"/>
+        <!--<span class="placeholder">Campo Obrigatório</span> </p>
+      --><p>
        <label>Grupo:</label>
            <?php echo $Grupo->selectGrupoSelect("",$idGrupo); ?></p>
         
       </div>
       <div class="direita">
-      <p>
-        <label>Data da aula Assistida:</label>
-        <input type="date" name="dataAvaliada" id="dataAvaliada" class="required" value="<?php echo $dataAvaliada?>"/>
-        <!--<span class="placeholder">Campo Obrigatório</span> </p>
-      --><p>
+     <p></p>
          <p>
       <label>Status:</label>
       <input type="radio" id="status" name="status" value="1" <?php if($status == 1) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."excelente.png"?>" title="Aula excelente"/> 
