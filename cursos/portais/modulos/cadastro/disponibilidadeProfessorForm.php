@@ -25,9 +25,9 @@ if($idDisponibilidadeProfessor){
 }
 ?>
 
-<div class="conteudo_nivel">
+<!--<div class="conteudo_nivel">
   <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
-  <fieldset>
+  --><fieldset>
     <legend>Disponibilidade do professor</legend>
     <form id="form_DisponibilidadeProfessor" class="validate" method="post" action="" onsubmit="return false" >
       <input name="professor_idProfessor" id="professor_idProfessor" type="hidden" value="<?php echo $professor_idProfessor?>" />
