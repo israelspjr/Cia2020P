@@ -62,7 +62,7 @@ function aguardarCarregamentoFeed(){
       <input type="hidden" id="id" name="id" value="<?php echo $idFeedbackProfessor?>" />
     <div class="esquerda">
        <p><label>Nome do Professor ? </label>
-      <?php echo $Professor->selectProfessorSelect("required", $idProfessor ,"") ?></p>
+      <?php echo $Professor->selectProfessorSelect("required", $idProfessor ," WHERE candidato = 0") ?></p>
       <p>
       
        <label>Grupo:</label>
