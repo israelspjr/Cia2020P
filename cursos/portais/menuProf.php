@@ -62,7 +62,7 @@ if ($candidato == 1) {
                     
                     <?php if ($_SESSION['idProfessor_SS'] != -1) {?>
                     <li>
-						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/resourceHTML/disponibilidadeProfessor.php', '#centro');">
+						<a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/disponibilidadeProfessor.php', '#centro');">
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Disponibilidade
 						</a>
 					</li>
