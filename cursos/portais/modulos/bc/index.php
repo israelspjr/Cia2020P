@@ -14,7 +14,7 @@ $idIdioma = implode(', ',$idIdioma);
 
 $sql .= "SELECT A.link, A.nomeArquivo, A.categoria_idCategoria, S.valor from arquivos AS A
 INNER JOIN segmento as S on S.idSegmento = A.categoria_idCategoria 
-WHERE A.bc = 1 ORDER BY A.categoria_idCategoria, A.idArquivos  DESC";
+WHERE A.bc = 1 ORDER BY A.idArquivos, A.categoria_idCategoria  DESC";
 $result = $Database-> query($sql);
 
 $resultado = array();
