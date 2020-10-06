@@ -3,7 +3,7 @@
 
 $Configuracoes = new Configuracoes();
 
-$config = $Configuracoes->selectConfig();
+$config = $Configuracoes->selectConfig(1);
 
 ?>
 <fieldset>
