@@ -40,8 +40,8 @@ if ($candidato == 1) {
 				</ul>
 			</li>
             
-            <li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/provas/index.php', '#centro');"><svg class="glyph stroked star" ><use xlink:href="#stroked-star"></use></svg> Avaliações</a></li>
-                <li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/aulas/index.php', '#centro');"><svg class="glyph stroked camcorder" ><use xlink:href="#stroked-camcorder"></use></svg> Aulas Assistidas</a></li>
+            <li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/provas/indexProf.php', '#centro');"><svg class="glyph stroked star" ><use xlink:href="#stroked-star"></use></svg> Avaliações</a></li>
+                <li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/aulas/index.php', '#centro');"><svg class="glyph stroked camcorder" ><use xlink:href="#stroked-camcorder"></use></svg> Aulas Assistidas</a></li>
                 
                 <?php } ?>
             <li class="parent ">
