@@ -10,7 +10,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
 
 //AULAS
 $rsDemonstrativoPagamento = $DemonstrativoPagamento -> selectDemonstrativoPagamentoTr_aulasTotal($idProfessor, $mes, $ano, false);
-//Uteis::pr($rsDemonstrativoPagamento);
+Uteis::pr($rsDemonstrativoPagamento);
 $valorTotalAulas = 0;
 foreach ($rsDemonstrativoPagamento as $valorDemonstrativoPagamento) {
 	$valorTotalAulas += $valorDemonstrativoPagamento['total'];
