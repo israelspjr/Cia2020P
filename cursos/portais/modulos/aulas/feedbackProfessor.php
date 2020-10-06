@@ -61,11 +61,8 @@ function aguardarCarregamentoFeed(){
       <input type="hidden" id="quemAssistiu" name="quemAssistiu" value="<?php echo $_SESSION['idProfessor_SS'];?>" />
       <input type="hidden" id="id" name="id" value="<?php echo $idFeedbackProfessor?>" />
     <div class="esquerda">
-      <p>
-        <label>Data da aula Assistida:</label>
-        <input type="date" name="dataAvaliada" id="dataAvaliada" class="required" value="<?php echo $dataAvaliada?>"/>
-        <!--<span class="placeholder">Campo Obrigatório</span> </p>
-      --><p>
+       <p><label>Nome do Professor ? </label>
+      <?php echo $Professor->selectProfessorSelect("required", $idProfessor ,"") ?></p>
       <p>
       
        <label>Grupo:</label>
@@ -73,10 +70,12 @@ function aguardarCarregamentoFeed(){
         
       </div>
       <div class="direita">
-      <p><label>Nome do Professor ? </label>
-      <?php echo $Professor->selectProfessorSelect("required", $idProfessor ,"") ?></p>
-      
-        <p>
+      <p>
+        <label>Data da aula Assistida:</label>
+        <input type="date" name="dataAvaliada" id="dataAvaliada" class="required" value="<?php echo $dataAvaliada?>"/>
+        <!--<span class="placeholder">Campo Obrigatório</span> </p>
+      --><p>
+         <p>
       <label>Status:</label>
       <input type="radio" id="status" name="status" value="1" <?php if($status == 1) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."excelente.png"?>" title="Aula excelente"/> 
       <input type="radio" id="status" name="status" value="2" <?php if($status == 2) { echo "checked"; } ?> /> <img src="<?php echo CAMINHO_IMG."boa.png"?>" title="Aula Boa, mas pode ser melhor"/> 
