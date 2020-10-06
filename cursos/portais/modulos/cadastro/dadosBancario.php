@@ -62,7 +62,7 @@ if($idProfessor != '' && is_numeric($idProfessor)){
           <button class="Bblue" onclick="enviadoOK();postForm('form_dadosBancario', 'modulos/cadastro/dadosBancarioAcao.php');" >Salvar</button>
           
            <button class="button gray" 
-        onclick="zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/cadastro/dadosBancario.php', '#centro');" >Fechar</button>
+        onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/dadosBancario.php', '#centro');" >Fechar</button>
           
         </p>
       </div>
