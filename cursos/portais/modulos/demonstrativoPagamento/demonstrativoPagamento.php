@@ -49,8 +49,7 @@ $tipoDemo = $rs[0]['tipoDemo'];
         <div class="lista">
             <div class="">
                 <div id="demosntrativo_pagamento" class="linha-inteira">
-                    <img src="<?php echo CAMINHO_IMG."_logo.png"?>" />
-                    <?php echo $DemonstrativoPagamento -> selectDemonstrativoPagamento_imprimir($idDemonstrativoPagamento, $tipoDemo); 
+                            <?php echo $DemonstrativoPagamento -> selectDemonstrativoPagamento_imprimir($idDemonstrativoPagamento, $tipoDemo); 
                     ?>
                 </div>
             </div>
