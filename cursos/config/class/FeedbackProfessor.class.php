@@ -342,7 +342,7 @@ class FeedbackProfessor extends Database {
 				
 
 				$html .= "<tr>";
-				$html .= "<td align=\"center\" onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?id=" . $valor['idFeedbackProfessor'] . $idPai . "', '" . $caminhoAtualizar . $idPai . "', '$ondeAtualiza')\" >" . Uteis::exibirData($valor['dataAvaliada']) . "</td>
+				$html .= "<td align=\"center\" onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "?id=" . $valor['idFeedbackProfessor'] . $idPai . "', '#centro')\" >" . Uteis::exibirData($valor['dataAvaliada']) . "</td>
 				
 				<td align=\"center\"> ".$nomeGrupo."</td>
 				<td align=\"center\">".$img."</td>
@@ -364,7 +364,7 @@ class FeedbackProfessor extends Database {
 				<td>".$pergunta13."</td>*/
 		
 			$html .= "	<td align=\"center\">
-			<center><img src=\"" . CAMINHO_IMG . "excluir.png\" onclick=\"deletaRegistro('modulos/aulas/acao.php', " . $valor['idFeedbackProfessor'] . ", '$caminhoAtualizar', '$ondeAtualiza');zerarCentro();carregarModulo('/cursos/mobile/professor/modulos/aulas/index.php', '#centro');\" ></center>
+			<center><img src=\"" . CAMINHO_IMG . "excluir.png\" onclick=\"deletaRegistro('modulos/aulas/acao.php', " . $valor['idFeedbackProfessor'] . ", '$caminhoAtualizar', '$ondeAtualiza');zerarCentro();carregarModulo('/cursos/portais/modulos/aulas/index.php', '#centro');\" ></center>
 				</td>
 				
 				</tr>";
