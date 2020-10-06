@@ -73,7 +73,7 @@ $('#enviou').attr('onclick', 'enviar()');
 //}
 
 function enviar() {
-	postForm("#contestando", "modulos/demonstrativoPagamento/disparoEmail.php");	
+	postForm("contestando", "modulos/demonstrativoPagamento/disparoEmail.php");	
 	
 }
 
