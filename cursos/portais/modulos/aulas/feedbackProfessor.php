@@ -43,7 +43,7 @@ function aguardarCarregamentoFeed(){
 	}else{
 		postForm('form_feed_dados', 'modulos/aulas/acao.php');
 		zerarCentro();
-		carregarModulo('/cursos/mobile/professor/modulos/aulas/index.php', '#centro');
+		carregarModulo('/cursos/portais/modulos/aulas/index.php', '#centro');
 	}
 }
 </script>
@@ -71,18 +71,7 @@ function aguardarCarregamentoFeed(){
        <label>Grupo:</label>
            <?php echo $Grupo->selectGrupoSelect("",$idGrupo); ?>
       </p>
-      <p>
-      <label>Status:</label>
-      <input type="radio" id="status" name="status" value="1" <?php if($status == 1) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."excelente.png"?>" title="Aula excelente"/> 
-      <input type="radio" id="status" name="status" value="2" <?php if($status == 2) { echo "checked"; } ?> /> <img src="<?php echo CAMINHO_IMG."boa.png"?>" title="Aula Boa, mas pode ser melhor"/> 
-      <input type="radio" id="status" name="status" value="3" <?php if($status == 3) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."regular.png"?>" /> 
-      <input type="radio" id="status" name="status" value="4" <?php if($status == 4) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."ruim.png"?>" /> 
-     </p>
-     <p>
-     <label>Nota: </label>
-     <?php echo $TipoNota->selectNotasTipoNotaSelect("", $status2, " AND tipoNota_idTipoNota = 4 ") ?>
-
-      </p>
+    
             <p><label>O que mais chamou sua atenção?</label>
        <input type="text" id="pergunta1" name="pergunta1" value="<?php echo $pergunta1?>" style="    width: 500px;" /></p>
        
@@ -100,11 +89,25 @@ function aguardarCarregamentoFeed(){
      
       </div>
       <div class="direita">
-      <label>Nome do Professor ? </label>
-      <?php echo $Professor->selectProfessorSelect("required", $idProfessor ,"") ?>
+      <p><label>Nome do Professor ? </label>
+      <?php echo $Professor->selectProfessorSelect("required", $idProfessor ,"") ?></p>
+      
+        <p>
+      <label>Status:</label>
+      <input type="radio" id="status" name="status" value="1" <?php if($status == 1) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."excelente.png"?>" title="Aula excelente"/> 
+      <input type="radio" id="status" name="status" value="2" <?php if($status == 2) { echo "checked"; } ?> /> <img src="<?php echo CAMINHO_IMG."boa.png"?>" title="Aula Boa, mas pode ser melhor"/> 
+      <input type="radio" id="status" name="status" value="3" <?php if($status == 3) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."regular.png"?>" /> 
+      <input type="radio" id="status" name="status" value="4" <?php if($status == 4) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."ruim.png"?>" /> 
+     </p>
+     <p>
+     <label>Nota: </label>
+     <?php echo $TipoNota->selectNotasTipoNotaSelect("", $status2, " AND tipoNota_idTipoNota = 4 ") ?>
+
+      </p>
     
       </div>
-      <div class="linha-inteira">
+  
+      <div class="esquerda">
      <p><label>Alunos estavam envolvidos com a aula?</label>
        <input type="text" id="pergunta6" name="pergunta6" value="<?php echo $pergunta6?>" style="    width: 500px;"/></p>
       
