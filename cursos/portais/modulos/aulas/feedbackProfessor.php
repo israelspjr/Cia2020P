@@ -64,8 +64,8 @@ function aguardarCarregamentoFeed(){
       <p>
         <label>Data da aula Assistida:</label>
         <input type="date" name="dataAvaliada" id="dataAvaliada" class="required" value="<?php echo $dataAvaliada?>"/>
-        <span class="placeholder">Campo Obrigatório</span> </p>
-      <p>
+        <!--<span class="placeholder">Campo Obrigatório</span> </p>
+      --><p>
       <p>
       
        <label>Grupo:</label>
@@ -91,7 +91,7 @@ function aguardarCarregamentoFeed(){
     
       </div>
   <div class="linha-inteira"><p></p></div>
-      <div class="direita">
+      <div class="esquerda">
         
     
             <p><label>O que mais chamou sua atenção?</label>
