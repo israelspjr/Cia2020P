@@ -70,23 +70,7 @@ function aguardarCarregamentoFeed(){
       
        <label>Grupo:</label>
            <?php echo $Grupo->selectGrupoSelect("",$idGrupo); ?>
-      </p>
-    
-            <p><label>O que mais chamou sua atenção?</label>
-       <input type="text" id="pergunta1" name="pergunta1" value="<?php echo $pergunta1?>" style="    width: 500px;" /></p>
-       
-        <p><label>Quais técnicas ou práticas chamaram a atenção na aula assistida?</label>
-       <input type="text" id="pergunta2" name="pergunta2" value="<?php echo $pergunta2?>" style="    width: 500px;"/></p>
-     
-       <p><label>Quais atitudes positivas você conseguiu observar?</label>
-       <input type="text" id="pergunta3" name="pergunta3" value="<?php echo $pergunta3?>" style="    width: 500px;"/></p>
-     
-       <p><label>O que você faria de diferente?</label>
-       <input type="text" id="pergunta4" name="pergunta4" value="<?php echo $pergunta4?>" style="    width: 500px;"/></p>
-     
-      <p><label>Usou VPG ou algo semelhante ao VPG?</label>
-       <input type="text" id="pergunta5" name="pergunta5" value="<?php echo $pergunta5?>" style="    width: 500px;" /></p>
-     
+        
       </div>
       <div class="direita">
       <p><label>Nome do Professor ? </label>
@@ -107,7 +91,24 @@ function aguardarCarregamentoFeed(){
     
       </div>
   
-      <div class="esquerda">
+      <div class="direita">
+        </p>
+    
+            <p><label>O que mais chamou sua atenção?</label>
+       <input type="text" id="pergunta1" name="pergunta1" value="<?php echo $pergunta1?>" style="    width: 500px;" /></p>
+       
+        <p><label>Quais técnicas ou práticas chamaram a atenção na aula assistida?</label>
+       <input type="text" id="pergunta2" name="pergunta2" value="<?php echo $pergunta2?>" style="    width: 500px;"/></p>
+     
+       <p><label>Quais atitudes positivas você conseguiu observar?</label>
+       <input type="text" id="pergunta3" name="pergunta3" value="<?php echo $pergunta3?>" style="    width: 500px;"/></p>
+     
+       <p><label>O que você faria de diferente?</label>
+       <input type="text" id="pergunta4" name="pergunta4" value="<?php echo $pergunta4?>" style="    width: 500px;"/></p>
+     
+      <p><label>Usou VPG ou algo semelhante ao VPG?</label>
+       <input type="text" id="pergunta5" name="pergunta5" value="<?php echo $pergunta5?>" style="    width: 500px;" /></p>
+ 
      <p><label>Alunos estavam envolvidos com a aula?</label>
        <input type="text" id="pergunta6" name="pergunta6" value="<?php echo $pergunta6?>" style="    width: 500px;"/></p>
       
