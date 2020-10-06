@@ -65,17 +65,17 @@ if($idCalendarioProva != '' && $idCalendarioProva  > 0){
 <script>
 function atualizaIntens(idProva){
 	if( idProva ){
-		$('#itensProva').load('<?php echo "modulos/provas/itensProvaAcao.php?idProva="?>' + idProva);
+		$('#itensProva').load('<?php echo "modulos/provas/itensProva.php?idProva="?>' + idProva);
 	}
 }
 
- $(document).ready(function () {
+/* $(document).ready(function () {
             $('.datepicker').datepicker({
                 format: 'dd/mm/yyyy',                
                 language: 'pt-BR'
             });
         });
-		
+	*/	
 var dataAplicacao = $('#dataAplicacao').val(<?php echo $dataAplicacao?>);
 if (dataAplicacao != '') {
 		$('#validaP').hide();
@@ -134,7 +134,7 @@ if (r == true) {
         <div id="prevista" name="prevista" style="display:none"> 
         <p>
           <label>Nova data prevista:</label>
-           <input type="text" name="dataPrevistaNova" id="dataPrevistaNova" class="datepicker" value="<?php echo Uteis::exibirData($dataPrevistaNova)?>" />
+           <input type="datee" name="dataPrevistaNova" id="dataPrevistaNova" class="datepicker" value="<?php echo $dataPrevistaNova?>" />
           <?php //echo Uteis::exibirData($dataPrevistaNova)?></p>
           </div>
           
@@ -192,7 +192,7 @@ if (r == true) {
       </form>
   </fieldset>
 <script>
-ativarForm();
+//ativarForm();
 atualizaIntens('<?php echo $idProva?>');
 function zerarProva() {
 $('#provasF').html('');	
