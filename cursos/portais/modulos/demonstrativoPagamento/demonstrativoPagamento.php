@@ -10,9 +10,9 @@ $rs = $DemonstrativoPagamento->selectDemonstrativoPagamento("where idDemonstrati
 $tipoDemo = $rs[0]['tipoDemo'];
 ?>
 
-<div id="dadosDemonstrativo"  class="conteudo_nivel">
+<!--<div id="dadosDemonstrativo"  class="conteudo_nivel">
     <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
-    <fieldset>
+    --><fieldset>
         <legend>
             Demonstrativo
         </legend>
