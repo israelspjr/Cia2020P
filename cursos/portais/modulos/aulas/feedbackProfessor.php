@@ -69,7 +69,7 @@ function aguardarCarregamentoFeed(){
       <p>
       
        <label>Grupo:</label>
-           <?php echo $Grupo->selectGrupoSelect("",$idGrupo); ?>
+           <?php echo $Grupo->selectGrupoSelect("",$idGrupo); ?></p>
         
       </div>
       <div class="direita">
@@ -90,9 +90,9 @@ function aguardarCarregamentoFeed(){
       </p>
     
       </div>
-  
+  <div class="linha-inteira"><p></p></div>
       <div class="direita">
-        </p>
+        
     
             <p><label>O que mais chamou sua atenção?</label>
        <input type="text" id="pergunta1" name="pergunta1" value="<?php echo $pergunta1?>" style="    width: 500px;" /></p>
@@ -141,10 +141,12 @@ function aguardarCarregamentoFeed(){
   
         <button class="Bblue" onclick="aguardarCarregamentoFeed()">Salvar</button>
       </p>
+      </div>
     </form>
+    
   </fieldset>
-  </div>
-</div>
+  
+
 <script>
 function addArquivo(){
 	$('#visualizar_feed').attr({'status':'esperando'}).html('Carregando arquivo...')
