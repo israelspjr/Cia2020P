@@ -86,7 +86,7 @@ if ($candidato == 1) {
             
             <?php if ($_SESSION['idProfessor_SS'] != -1) {?>
             
-			<li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/contrato/index.php', '#centro');"><svg class="glyph stroked app-window "><use xlink:href="#stroked-app-window"></use></svg> Contratos</a></li>
+			<li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/contrato/indexProf.php', '#centro');"><svg class="glyph stroked app-window "><use xlink:href="#stroked-app-window"></use></svg> Contratos</a></li>
             <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/lovemondays/index.php', '#centro');"><svg class="glyph stroked app-window content"><use xlink:href="#stroked-app-window-with-content"></use></svg> Love Mondays</a></li>
             		
              <li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/metricas/index.php', '#centro');"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Métricas e cronogramas</a></li>
