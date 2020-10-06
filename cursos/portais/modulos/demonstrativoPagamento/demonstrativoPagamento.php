@@ -28,7 +28,7 @@ $tipoDemo = $rs[0]['tipoDemo'];
              <p>
              <div><strong>Insira sua Reclamação:</strong></div>
              </p>
-             <form name="contestando" id="contestando" target="cont" action="">
+             <form name="contestando" id="contestando" action="" onsubmit="return false">
             <textarea id="contesta" name="contesta" rows="5" cols="45">
             </textarea>
             <input type="hidden" id="idp" name="idp" value="<?php echo "$idDemonstrativoPagamento"?>" />
@@ -66,14 +66,14 @@ function contestar() {
 	
 }
 	
-$('#enviou').attr('onclick', 'aviso()');	
+$('#enviou').attr('onclick', 'enviar()');	
 
-function aviso() {
-	alert("Email enviado com sucesso");
-}
+//function aviso() {
+//	alert("Email enviado com sucesso");
+//}
 
 function enviar() {
-	postForm(this, "modulos/demonstrativoPagamento/disparoEmail.php");	
+	postForm("#contestando", "modulos/demonstrativoPagamento/disparoEmail.php");	
 	
 }
 
