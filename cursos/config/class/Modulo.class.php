@@ -60,10 +60,6 @@ class Modulo extends Database {
         $this -> inativo = ($value) ? $this -> gravarBD($value) : "0";
     }
 	
-	function setInativo($value) {
-        $this -> inativo = ($value) ? $this -> gravarBD($value) : "0";
-    }
-	
 	function setPreAluno($value) {
         $this -> preAluno = ($value) ? $this -> gravarBD($value) : "0";
     }
