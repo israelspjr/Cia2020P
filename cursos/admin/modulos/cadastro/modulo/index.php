@@ -1,6 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 $Modulo = new Modulo();
 //FILTROS
 //$status =  $_POST['status'];
