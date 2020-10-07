@@ -145,7 +145,7 @@ function carregarModulo(arquivo, destino, depoisDeCarregar) {
 		var conteudo = $('.camada[nivel=' + nivel + ']').find('.conteudo_nivel');
 		console.log(conteudo.css('z-index')); //());
 		if (conteudo.length > 0)
-			conteudo.zIndex(parseInt(conteudo.zIndex()) + 1);
+			conteudo.zIndex(conteudo.css('z-index') + 1);//parseInt(conteudo.zIndex()) + 1);
 
 		//EXECUTAR APENAS APÓS CARREGAR
 		if (depoisDeCarregar != undefined) {

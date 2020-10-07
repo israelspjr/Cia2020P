@@ -117,4 +117,4 @@ if($idModulo!='' && $idModulo>0){
   
 </div>
 
-<script>ativarForm();</script> 
+<script>//ativarForm();</script> 
