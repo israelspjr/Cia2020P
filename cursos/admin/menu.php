@@ -6,6 +6,7 @@ if( isset($_SESSION["idFuncionario_SS"]) && $_SESSION["idFuncionario_SS"] != '' 
 	<ul>
     
 	<?php $andFunc = " AND F.idFuncionario = ".$_SESSION["idFuncionario_SS"];
+	echo $andFunc;
     
     $idModulo_ultimo = array();
     $idModulo_jaFoi = array("0");
