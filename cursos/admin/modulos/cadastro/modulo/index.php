@@ -10,6 +10,8 @@ $ondeAtualiza = "#centro";
 $caminhoAtualizar = CAMINHO_CAD."modulo/index.php";
 
 ?>
+<fieldset>
+    <legend>Módulos do sistema</legend>
 <div class="menu_interno"> <img src="<?php echo CAMINHO_IMG."novo.png"?>" title="Novo Módulo" 
   onclick="abrirNivelPagina(this, '<?php echo CAMINHO_CAD."modulo/formulario.php".$param?>', '<?php echo CAMINHO_CAD."modulo/index.php"?>', '#centro')" /> </div>
   <div id="lista_funcionario" class="lista">
