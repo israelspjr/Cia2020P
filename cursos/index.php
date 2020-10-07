@@ -69,6 +69,11 @@ session_destroy();
             	<div class="c1">
             		<center> <a href="/cursos/portais/login.php?app=1"> <img src="images/icon.png" class="bot"> </a></center> 
             	</div>
+                
+            <!-- COLUNA 1 --4-->
+            	<div class="c4">
+            		<center> <a href="/cursos/portais/login.php?app=4"> <img src="images/iconrh.png" class="bot"> </a></center> 
+            	</div>     
       	
            <!-- COLUNA 2 -->
             	<div class="c2">
@@ -80,10 +85,7 @@ session_destroy();
             		<center> <a href="/cursos/admin/"> <img src="images/iconadm.png" class="bot"> </a></center> 
             	</div>
 
-           <!-- COLUNA 1 --4-->
-            	<div class="c4">
-            		<center> <a href="/cursos/portais/login.php?app=4"> <img src="images/iconrh.png" class="bot"> </a></center> 
-            	</div>
+          
  </div>
  <div style="padding-top:100px;">
  
