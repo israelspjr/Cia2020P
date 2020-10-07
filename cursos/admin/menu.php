@@ -1,7 +1,7 @@
 <?php 
 $Modulo = new Modulo();
 error_reporting(E_ALL);
-/*if( isset($_SESSION["idFuncionario_SS"]) && $_SESSION["idFuncionario_SS"] != '' ) {?>
+if( isset($_SESSION["idFuncionario_SS"]) && $_SESSION["idFuncionario_SS"] != '' ) {?>
 	
 	<ul>
     
@@ -96,7 +96,7 @@ error_reporting(E_ALL);
     
 	</ul>
   
-<?php }*/?>
+<?php }?>
 
 <div class="logoff" >
 	<small><?php echo $_SESSION['nome_SS']?>&nbsp;&nbsp;</small>
