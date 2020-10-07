@@ -7,6 +7,12 @@ class Modulo extends Database {
 	var $link;
 	var $ordem;
 	var $inativo;
+	var $admin;
+	var $aluno;
+	var $preAluno;
+	var $rh;
+	var $professor;
+	var $candidato;
 
 	// constructor
 	function __construct() {
@@ -17,6 +23,12 @@ class Modulo extends Database {
 		$this -> link = "NULL";
 		$this -> ordem = "NULL";
 		$this -> inativo = 0;
+		$this -> admin = 0;
+		$this -> aluno = 0;
+		$this -> preAluno = 0;
+		$this -> rh = 0;
+		$this -> professor = 0;
+		$this -> candidato = 0;
 	}
 
 	function __destruct() {
@@ -48,13 +60,39 @@ class Modulo extends Database {
         $this -> inativo = ($value) ? $this -> gravarBD($value) : "0";
     }
 	
+	function setInativo($value) {
+        $this -> inativo = ($value) ? $this -> gravarBD($value) : "0";
+    }
 	
-
+	function setPreAluno($value) {
+        $this -> preAluno = ($value) ? $this -> gravarBD($value) : "0";
+    }
+	
+	function setAdmin($value) {
+        $this -> admin = ($value) ? $this -> gravarBD($value) : "0";
+    }
+	
+	function setAluno($value) {
+        $this -> aluno = ($value) ? $this -> gravarBD($value) : "0";
+    }
+	
+	function setRh($value) {
+        $this -> rh = ($value) ? $this -> gravarBD($value) : "0";
+    }
+	
+	function setProfessor($value) {
+        $this -> professor = ($value) ? $this -> gravarBD($value) : "0";
+    }
+	
+	function setCandidato($value) {
+        $this -> candidato = ($value) ? $this -> gravarBD($value) : "0";
+    }
+	
 	/**
 	 * addModulo() Function
 	 */
 	function addModulo() {
-		$sql = "INSERT INTO modulo (modulo_idModulo, nome, link, ordem, inativo) VALUES ($this->moduloIdModulo, $this->nome, $this->link, $this->ordem, inativo)";
+		$sql = "INSERT INTO modulo (modulo_idModulo, nome, link, ordem, inativo, admin, aluno, preAluno, professor, candidato) VALUES ($this->moduloIdModulo, $this->nome, $this->link, $this->ordem, inativo, $this->admin, $this->aluno, $this->preAluno, $this->professor, $this->candidato)";
 		$result = $this -> query($sql, true);
 		return mysql_insert_id($this -> connect);
 	}
@@ -80,14 +118,14 @@ class Modulo extends Database {
 	 * updateModulo() Function
 	 */
 	function updateModulo() {
-		$sql = "UPDATE modulo SET modulo_idModulo = $this->moduloIdModulo, nome = $this->nome, link = $this->link, ordem = $this->ordem, inativo = $this->inativo WHERE idModulo = $this->idModulo";
+		$sql = "UPDATE modulo SET modulo_idModulo = $this->moduloIdModulo, nome = $this->nome, link = $this->link, ordem = $this->ordem, inativo = $this->inativo, admin = $this->admin, aluno = $this->aluno, preAluno = $this->preAluno, professor = $this->professor, candidato = $this->candidato WHERE idModulo = $this->idModulo";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
 	}
 
 	function selectModulo($where = "") {
 
-		$sql = "SELECT SQL_CACHE idModulo, modulo_idModulo, nome, link, ordem 
+		$sql = "SELECT SQL_CACHE idModulo, modulo_idModulo, nome, link, ordem, admin, aluno, preAluno, professor, candidato 
 		FROM modulo AS M 
 		WHERE inativo = 0 " . $where . " ORDER BY ordem, nome";
 	//	echo "<br>".$sql;
@@ -97,7 +135,7 @@ class Modulo extends Database {
 	
 	function selectModuloSimples($where = "1") {
 
-		$sql = "SELECT SQL_CACHE idModulo, modulo_idModulo, nome, link, ordem 
+		$sql = "SELECT SQL_CACHE idModulo, modulo_idModulo, nome, link, ordem, admin, aluno, preAluno, professor, candidato 
 		FROM modulo "
 		. $where . " ORDER BY ordem, nome";
 	//	echo "<br>".$sql;
@@ -107,7 +145,7 @@ class Modulo extends Database {
 
 	function selectModulo_permissao($where = "") {
 
-		$sql = "SELECT SQL_CACHE M.idModulo, M.modulo_idModulo, M.nome, M.link
+		$sql = "SELECT SQL_CACHE M.idModulo, M.modulo_idModulo, M.nome, M.link, M.ordem, M.admin, M.aluno, M.preAluno, M.professor, M.candidato
 		FROM modulo AS M
 		INNER JOIN permissaoModulo AS PM ON PM.modulo_idModulo = M.idModulo
 		INNER JOIN funcionario AS F ON F.idFuncionario = PM.funcionario_idFuncionario 
@@ -122,7 +160,7 @@ class Modulo extends Database {
 	 */
 	function selectModuloTr($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "", $idPai = "", $caminhoModulo = "") {
 		$Modulo = new Modulo();
-		$sql = "SELECT SQL_CACHE idModulo, modulo_idModulo, nome, link, ordem,inativo FROM modulo " . $where;
+		$sql = "SELECT SQL_CACHE idModulo, modulo_idModulo, nome, link, ordem, admin, aluno, preAluno, professor, candidato FROM modulo " . $where;
 		$result = $this -> query($sql);
 		if (mysql_num_rows($result) > 0) {
 			$html = "";
@@ -138,6 +176,11 @@ class Modulo extends Database {
 				$html .= "<td>" . $valor['nome'] . "</td>";
 				$html .= "<td>" . $valor['link'] . "</td>";
 				$html .= "<td>" . $valor['ordem'] . "</td>";
+				$html .= "<td>" . Uteis::exibirStatus($valor['admin']) . "</td>";
+				$html .= "<td>" . Uteis::exibirStatus($valor['aluno']) . "</td>";
+				$html .= "<td>" . Uteis::exibirStatus($valor['preAluno']) . "</td>";
+				$html .= "<td>" . Uteis::exibirStatus($valor['professor']) . "</td>";
+				$html .= "<td>" . Uteis::exibirStatus($valor['candidato']) . "</td>";
 				$html .= "<td>" .$ativo."</td>";
 				$html .= "<td onclick=\"deletaRegistro('" . CAMINHO_CAD . "modulo/grava.php', " . $valor['idModulo'] . ", '$caminhoAtualizar', '$ondeAtualiza')\">" . "<center><img src=\"" . CAMINHO_IMG . "excluir.png\"></center>" . "</td>";
 				$html .= "</tr>";
@@ -151,7 +194,7 @@ class Modulo extends Database {
 	 */
 	function selectModuloSelect($classes = "", $idAtual = 0, $where = "") {
 		
-		$sql = "SELECT SQL_CACHE idModulo, modulo_idModulo, nome, link, ordem FROM modulo " . $where;
+		$sql = "SELECT SQL_CACHE idModulo, modulo_idModulo, nome, link, ordem, admin, aluno, preAluno, professor, candidato FROM modulo " . $where;
 		$result = $this -> query($sql);
 		$html = "<select id=\"idModulo\" name=\"idModulo\"  class=\"" . $classes . "\" >";
 		$html .= "<option value=\"\">Selecione</option>";
@@ -167,7 +210,7 @@ class Modulo extends Database {
 	
 	function selectModuloSelectS($classes = "", $idAtual = 0, $where = "") {
 		$Modulo = new Modulo();
-		$sql = "SELECT SQL_CACHE idModulo, modulo_idModulo, nome, link, ordem FROM modulo " . $where;
+		$sql = "SELECT SQL_CACHE idModulo, modulo_idModulo, nome, link, ordem, admin, aluno, preAluno, professor, candidato FROM modulo " . $where;
 		$result = $this -> query($sql);
 		$html = "<select id=\"idModulo\" name=\"idModulo\"  class=\"" . $classes . "\" >";
 		$html .= "<option value=\"\">Selecione</option>";

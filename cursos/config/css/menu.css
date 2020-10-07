@@ -126,7 +126,8 @@
   padding: 10px;
 }
 #cssmenu .has-sub ul li:hover a {
-  background: #d8d8d8;
+  /*background: #d8d8d8;*/
+  background: linear-gradient(to bottom, #dd3a4b 0%, #84286B 100%);
 }
 #cssmenu .has-sub .has-sub:hover > ul {
   display: block;
@@ -138,11 +139,13 @@
   top: 0;
 }
 #cssmenu .has-sub .has-sub ul li a {
-  background: #d8d8d8;
+/*  background: #d8d8d8;*/
   border-bottom: 1px dotted #e7e7e7;
+  background: #84286B;
 }
 #cssmenu .has-sub .has-sub ul li a:hover {
-  background: #bebebe;
+  /*background: #bebebe;*/
+  background: linear-gradient(to bottom, #dd3a4b 0%, #84286B 100%);
 }
 
 #cssmenu .has-sub-indicator {
