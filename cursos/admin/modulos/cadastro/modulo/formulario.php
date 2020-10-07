@@ -41,18 +41,18 @@ if($idModulo!='' && $idModulo>0){
       </p>               
         <p>
           <label>Descrição:</label>          
-          <input type="text" name="descricao" id="descricao"  class="required" onsubmit="return false" value="<?php echo $descricao?>" />
+          <input type="text" name="descricao" id="descricao"  class="required" onsubmit="return false" value="<?php echo $descricao?>" style="width: -webkit-fill-available;" />
       <span class="placeholder">Campo Obrigatório</span>
         <!--funcao retorna descricaoModulo-->
         </p>
         <p>
         <label>Link</label>
-        <input type="text" id="link" name="link" class="required" value="<?php echo $link?>"/>
+        <input type="text" id="link" name="link" class="required" value="<?php echo $link?>" style="width: -webkit-fill-available;"/>
         <span class="placeholder">Campo Obrigatório</span>
         </p>
         <p>
         <label>Ordem</label>
-        <input type="text" id="ordem" name="ordem"  class="required" value="<?php echo $ordem?>"/>
+        <input type="text" id="ordem" name="ordem"  class="required" value="<?php echo $ordem?>" style="width: -webkit-fill-available;"/>
         <span class="placeholder">Campo Obrigatório</span>
         </p>
         
