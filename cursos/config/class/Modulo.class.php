@@ -150,7 +150,7 @@ class Modulo extends Database {
 		INNER JOIN permissaoModulo AS PM ON PM.modulo_idModulo = M.idModulo
 		INNER JOIN funcionario AS F ON F.idFuncionario = PM.funcionario_idFuncionario 
 		WHERE M.inativo = 0 " . $where . " ORDER BY ordem ASC, nome ASC";
-		//echo "<br>".$sql;
+		echo "<br>".$sql;
 
 		return $this -> executeQuery($sql);
 	}
