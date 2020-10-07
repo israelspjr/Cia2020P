@@ -1,5 +1,5 @@
 <?php 
-$Modulo = new Modulo();
+//$Modulo = new Modulo();
 error_reporting(E_ALL);
 /*if( isset($_SESSION["idFuncionario_SS"]) && $_SESSION["idFuncionario_SS"] != '' ) {?>
 	
