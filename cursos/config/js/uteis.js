@@ -143,7 +143,7 @@ function carregarModulo(arquivo, destino, depoisDeCarregar) {
 
 		//JOGAR NIVEL NA FRENTE DAS ABAS
 		var conteudo = $('.camada[nivel=' + nivel + ']').find('.conteudo_nivel');
-		console.log(conteudo.css('zindex')); //());
+		console.log(conteudo.css('z-index')); //());
 		if (conteudo.length > 0)
 			conteudo.zIndex(parseInt(conteudo.zIndex()) + 1);
 
