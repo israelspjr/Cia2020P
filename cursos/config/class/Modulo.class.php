@@ -90,7 +90,7 @@ class Modulo extends Database {
 	function addModulo() {
 		$sql = "INSERT INTO modulo (modulo_idModulo, nome, link, ordem, inativo, admin, aluno, preAluno, professor, candidato) VALUES ($this->moduloIdModulo, $this->nome, $this->link, $this->ordem, inativo, $this->admin, $this->aluno, $this->preAluno, $this->professor, $this->candidato)";
 		$result = $this -> query($sql, true);
-		return mysql_insert_id($this -> connect);
+		return mysqli_insert_id($this -> connect);
 	}
 
 	/**
@@ -146,7 +146,7 @@ class Modulo extends Database {
 		INNER JOIN permissaoModulo AS PM ON PM.modulo_idModulo = M.idModulo
 		INNER JOIN funcionario AS F ON F.idFuncionario = PM.funcionario_idFuncionario 
 		WHERE M.inativo = 0 " . $where . " ORDER BY ordem ASC, nome ASC";
-		echo "<br>".$sql;
+	//	echo "<br>".$sql;
 
 		return $this -> executeQuery($sql);
 	}
@@ -158,7 +158,7 @@ class Modulo extends Database {
 		$Modulo = new Modulo();
 		$sql = "SELECT SQL_CACHE idModulo, modulo_idModulo, nome, link, ordem, admin, aluno, preAluno, professor, candidato FROM modulo " . $where;
 		$result = $this -> query($sql);
-		if (mysql_num_rows($result) > 0) {
+		if (mysqli_num_rows($result) > 0) {
 			$html = "";
 			while ($valor = mysqli_fetch_array($result)) {
 				
