@@ -24,7 +24,6 @@ $caminhoAtualizar = CAMINHO_CAD."modulo/index.php";
           <th>Admin</th>
           <th>Aluno</th>
           <th>Pré-Aluno</th>
-          <th>Aluno</th>
           <th>Professor</th>
           <th>Candidato</th>
           <th>Status</th>
@@ -44,7 +43,6 @@ $caminhoAtualizar = CAMINHO_CAD."modulo/index.php";
           <th>Admin</th>
           <th>Aluno</th>
           <th>Pré-Aluno</th>
-          <th>Aluno</th>
           <th>Professor</th>
           <th>Candidato</th>
           <th>Status</th>
