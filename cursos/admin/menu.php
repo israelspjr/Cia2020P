@@ -1,12 +1,12 @@
 <?php 
 $Modulo = new Modulo();
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 if( isset($_SESSION["idFuncionario_SS"]) && $_SESSION["idFuncionario_SS"] != '' ) {?>
 	
 	<ul>
     
 	<?php $andFunc = " AND F.idFuncionario = ".$_SESSION["idFuncionario_SS"];
-	echo $andFunc;
+//	echo $andFunc;
     
     $idModulo_ultimo = array();
     $idModulo_jaFoi = array("0");
