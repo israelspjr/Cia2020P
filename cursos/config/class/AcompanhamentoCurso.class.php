@@ -165,7 +165,7 @@ class AcompanhamentoCurso extends Database {
 			FROM acompanhamentoCurso AS A 
 			INNER JOIN professor AS P ON P.idProfessor = A.professor_idProfessor 
 			INNER JOIN periodoAcompanhamentoCurso AS PE ON PE.idPeriodoAcompanhamentoCurso = A.periodoAcompanhamentoCurso_idPeriodoAcompanhamentoCurso" . $where;
-			echo $sql;
+	//		echo $sql;
 		$result = $this -> query($sql);
 
 		if (mysqli_num_rows($result) > 0) {

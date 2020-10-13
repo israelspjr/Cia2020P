@@ -31,7 +31,7 @@ $idClientePf = $_SESSION['idClientePf_SS'];
         <?php 
 					$caminhoAbrir = "modulos/acompanhamento/relatorioDesempenho.php";
 					$caminhoAtualizar = "modulos/acompanhamento/acompanhamento.php?idPlanoAcaoGrupo=".$idPlanoAcaoGrupo;
-					$where = " WHERE planoAcaoGrupo_idPlanoAcaoGrupo in ( ".$valorx2.") order by idAcompanhamentoCurso";
+					$where = " WHERE planoAcaoGrupo_idPlanoAcaoGrupo in ( ".$valorx2.") order by idAcompanhamentoCurso DESC";
 					
 					echo $AcompanhamentoCurso->selectAcompanhamentoCursoTr_aluno($caminhoAbrir, $caminhoAtualizar, "", $where,1, $idClientePf);
 					?>
