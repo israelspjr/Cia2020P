@@ -43,6 +43,7 @@ $grupo = $PlanoAcaoGrupo -> getNomeGrupo($idPlanoAcaoGrupo);
     </div>
   </fieldset>
 </div>
+<?php require_once ("../ff/ffPsa.php") ?>;
 <!--</div>
 </div>-->
 <script>//tabelaDataTable('tb_psa');</script> 
