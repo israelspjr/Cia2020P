@@ -17,6 +17,9 @@ $idFuncionario = $IntegranteGrupo->select_gerentePorIdCliente($_SESSION['idClien
 $email = $Funcionario->getEmail($idFuncionario);
 $nome = $Funcionario->getNome($idFuncionario);
 
+$mes = date("m");
+$ano = date("Y");
+
 
 ?>
 <div id="div_lista_psa" class="lista">
