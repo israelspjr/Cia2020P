@@ -33,7 +33,12 @@ $nome = $Funcionario->getNome($idFuncionario);
 
 $idFolhaFrequencia = $_REQUEST['idFolhaFrequencia'];
 $idProfessor = $_REQUEST['idProfessor'];
-$nomeProf = $Professor -> getNome($idProfessor);
+if ($idProfessor == '') {
+	$rs = $Professor->selectGrupoProfTr_query(" WHERE PAG.idPlanoAcaoGrupo  = ".$idPlanoAcaoGrupo);	
+	Uteis::pr($rs);
+} else {
+	$nomeProf = $Professor -> getNome($idProfessor);
+}
 $where = " WHERE CPF.idClientePf = " . $_SESSION['idClientePf_SS'] . " AND PAG.idPlanoAcaoGrupo = $idPlanoAcaoGrupo AND FF.idFolhaFrequencia = $idFolhaFrequencia ";
 
  $result = $Relatorio->relatorioFrequencia_porAula($where, false);
