@@ -39,7 +39,7 @@ $nivelTexto[$idioma]['idIntegranteGrupo'] = [$idIntegranteGrupo];
 $html = "";
 $html2 = "";
 //	Uteis::pr($nivelTexto);
-if ($grafico != 0) {
+if ($grafico != 1) {
 if ($nivelTexto[4]) { 
 //Inglês
 $html .= "<div style=\"text-align:center\">Estes são os módulos do curso de Inglês. Veja o caminho que você já percorreu e o que vai percorrer</div>";
