@@ -40,7 +40,7 @@
 <script type="text/javascript" src="<?php echo CAMINHO_CFG?>js/jsapi.js"></script>
 
 <script type="text/javascript">
-/*	$(document).ready(function(){		
+	$(document).ready(function(){		
 		eventAbas();			
 		eventFechar();			
 		eventRolarParaTopo();
@@ -48,4 +48,4 @@
 		eventFocoForm();
 		eventMostrarTitle();
 	});//.tooltip();
-*/</script>
+</script>

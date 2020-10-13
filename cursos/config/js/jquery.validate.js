@@ -66,7 +66,7 @@ function ativarForm(){
 			/* mascara data */
 			$('.data')
 			.mask('99/99/9999')
-			.datepicker({					
+			/*.datepicker({					
 				dateFormat: 'dd/mm/yy',
 				dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
 				dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
@@ -75,7 +75,7 @@ function ativarForm(){
 				monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
 				nextText: 'Próximo',
 				prevText: 'Anterior'
-			});
+			})*/;
 			
 			//min em password
 			$('.password').attr('minlength','6');
