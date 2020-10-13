@@ -31,7 +31,7 @@ $camposSelect = array("CONCAT(D.mes, D.ano) AS periodo", "(CONCAT(D.mes, '/', D.
            echo $DemonstrativoCobrancaIntegranteGrupo->selectDemonstrativoCobrancaIntegranteGrupoTr(
 		   "modulos/demonstrativoCobranca/demonstrativoCobrancaForm.php?idPlanoAcaoGrupo=".$idPlanoAcaoGrupo, 
 		   "modulos/demonstrativoCobranca/demonstrativoCobranca.php?idPlanoAcaoGrupo=$idPlanoAcaoGrupo", "",
-		   " WHERE I.clientePf_idClientePf = $idClientePf AND D.planoAcaoGrupo_idPlanoAcaoGrupo = $idPlanoAcaoGrupo ",1);			
+		   " WHERE I.clientePf_idClientePf = $idClientePf AND D.planoAcaoGrupo_idPlanoAcaoGrupo = $idPlanoAcaoGrupo ORDER BY D.idDemonstrativoCobranca DESC ",1);			
 			?>
           </tbody>
           <tfoot>

@@ -183,7 +183,7 @@ FROM
 		INNER JOIN integranteGrupo AS I ON I.idIntegranteGrupo = DI.integranteGrupo_idIntegranteGrupo
 		" . $where;
 		
-		echo $sql;
+//		echo $sql;
 		$result = $this -> query($sql);
 
 		if (mysqli_num_rows($result) > 0) {
