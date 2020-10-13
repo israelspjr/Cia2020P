@@ -32,7 +32,7 @@
 <script src="<?php echo CAMINHO_CFG?>/js/jquery.mask.min.js" type="text/javascript"></script>
 
 <!-- Validação -->
-<!--<script src="<?php echo CAMINHO_CFG?>js/jquery.validate.js" language="javascript" type="text/javascript"></script>
+<script src="<?php echo CAMINHO_CFG?>js/jquery.validate.js" language="javascript" type="text/javascript"></script>
 
 <!-- PRINT ELEMENT-->
 <script src="<?php echo CAMINHO_CFG?>js/jquery.printArea.js" language="javascript" type="text/javascript"></script>
