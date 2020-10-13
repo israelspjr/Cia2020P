@@ -35,7 +35,6 @@ $idFolhaFrequencia = $_REQUEST['idFolhaFrequencia'];
 $idProfessor = $_REQUEST['idProfessor'];
 if ($idProfessor == '') {
 	$rs = $Professor->selectGrupoProfTr_query(" WHERE PAG.idPlanoAcaoGrupo  = ".$idPlanoAcaoGrupo);	
-	Uteis::pr($rs);
 	$nomeProf = $Professor -> getNome($rs[0]['idProfessor']);
 	$idProfessor  = $rs[0]['idProfessor'];
 } else {

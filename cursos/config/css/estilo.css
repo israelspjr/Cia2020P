@@ -397,9 +397,9 @@ legend {
 }
 
 .lista{
-	width:98%;	
+	width:99%;	
 	margin-top: 10px;
-	margin-left: 1%;
+	margin-left: -1%;
 }
 
 .menu_interno{
