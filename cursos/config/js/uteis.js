@@ -143,7 +143,7 @@ function carregarModulo(arquivo, destino, depoisDeCarregar) {
 
 		//JOGAR NIVEL NA FRENTE DAS ABAS
 		var conteudo = $('.camada[nivel=' + nivel + ']').find('.conteudo_nivel');
-		console.log(conteudo.css('z-index')); //());
+	
 		if (conteudo.length > 0)
 			conteudo.css('z-index', ('z-index') + 1);//zIndex(parseInt(conteudo.zIndex()) + 1);
 
@@ -788,7 +788,7 @@ function tipoDocumentoUnico(form) {
 		});
 		documentoUnico.addClass(novaClass);
 	}
-	ativarForm();
+	//ativarForm();
 }
 
 function filtro_postForm(clicar, idForm, pagina, param, onde) {

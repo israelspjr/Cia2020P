@@ -212,7 +212,7 @@ if  (($appN == 1) || ($appN == 3)) {
 <?php  if(isset($_GET['msg'])) { ?>
       alert('- Senha alterada com sucesso!');
 <?php } ?>
-ativarForm();
+//ativarForm();
 </script>
 </body>
 </html>
