@@ -175,10 +175,6 @@ FROM
 
 	function selectDemonstrativoCobrancaIntegranteGrupoTr($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "",$mobile) {
 
-		/*INNER JOIN planoAcaoGrupo AS PAG ON PAG.idPlanoAcaoGrupo = D.planoAcaoGrupo_idPlanoAcaoGrupo
-		 INNER JOIN planoAcaoGrupoStatusCobranca AS PAGS ON PAGS.planoAcaoGrupo_idPlanoAcaoGrupo = PAG.idPlanoAcaoGrupo
-		 INNER JOIN statusCobranca AS S ON S.idStatusCobranca = PAGS.statusCobranca_idStatusCobranca*/
-
 		$sql = "SELECT SQL_CACHE D.idDemonstrativoCobranca, D.mes, D.ano, 	
 		COALESCE(DI.cursoAluno,0) AS cursoAluno, COALESCE(DI.materialAluno,0) AS materialAluno,
 		COALESCE(DI.creditoAluno,0) AS creditoAluno, COALESCE(DI.debitoAluno,0) AS debitoAluno
@@ -187,7 +183,7 @@ FROM
 		INNER JOIN integranteGrupo AS I ON I.idIntegranteGrupo = DI.integranteGrupo_idIntegranteGrupo
 		" . $where;
 		
-//		echo $sql;
+		echo $sql;
 		$result = $this -> query($sql);
 
 		if (mysqli_num_rows($result) > 0) {
