@@ -352,7 +352,7 @@ class PsaIntegranteGrupo extends Database {
 		$sql .= " WHERE IG.clientePf_idClientePf = ".$idClientePf;	
 		}
 		
-		echo $sql;
+		$sql .= " ORDER BY PSAIG.idPsaIntegranteGrupo DESC";
 		$result = $this -> query($sql);
 
 		if (mysqli_num_rows($result) > 0) {
