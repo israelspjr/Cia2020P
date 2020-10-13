@@ -3,16 +3,25 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
 
 $PsaIntegranteGrupo = new PsaIntegranteGrupo();
 $PlanoAcaoGrupo = new PlanoAcaoGrupo();
+$IntegranteGrupo = new IntegranteGrupo();
+$Funcionario = new Funcionario();
 
 $idPlanoAcaoGrupo = $_REQUEST['idPlanoAcaoGrupo'];
 
 $grupo = $PlanoAcaoGrupo -> getNomeGrupo($idPlanoAcaoGrupo);
+
+$idIntegranteGrupo = $IntegranteGrupo->getidIntegranteGrupo($_SESSION['idClientePf_SS'], $idPlanoAcaoGrupo, $dataAtual);
+
+$idFuncionario = $IntegranteGrupo->select_gerentePorIdCliente($_SESSION['idClientePf_SS'], "", "", 1);
+
+$email = $Funcionario->getEmail($idFuncionario);
+$nome = $Funcionario->getNome($idFuncionario);
+
+
 ?>
 <div id="div_lista_psa" class="lista">
-<!--<div id="div_lista_psa" class="lista">
-<div class="conteudo_nivel" style="z-index:2002;">
-  <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
-  -->
+
+
   <fieldset>
     <legend>Pesquisas de satisfação</legend>
     <p>Grupo: <strong><?php echo $grupo?></strong></p>
