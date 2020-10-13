@@ -88,9 +88,16 @@ $AlunoPer = 100;
 	
 }
 
-
 $mes = $_REQUEST['mes'];
+	if ($mes == '') {
+		$mes = date("m");		
+	}
 $ano = $_REQUEST['ano'];
+	if ($ano == '') {
+		$ano = date("Y");		
+	}
+
+
 
 $where = " WHERE folhaFrequencia_idFolhaFrequencia = $idFolhaFrequencia AND integranteGrupo_idIntegranteGrupo IN (
 	SELECT idIntegranteGrupo FROM integranteGrupo 
