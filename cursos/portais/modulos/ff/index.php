@@ -11,8 +11,9 @@ $caminhoAbrir = "modulos/ff/grupoMes.php";
 $caminhoAtualizar = "modulos/ff/index.php";
 $ondeAtualiza = "#centro";	
 
-$rs = $IntegranteGrupo->getidIntegranteGrupo($_SESSION['idClientePf_SS'],"",date("Y-m-d"));
+$grafico = $_REQUEST['grafico'];
 
+$rs = $IntegranteGrupo->getidIntegranteGrupo($_SESSION['idClientePf_SS'],"",date("Y-m-d"));
 $rs3 = explode(",",$rs);
 $nivelTexto = array();
 foreach ($rs3 as $valor) {
@@ -38,6 +39,7 @@ $nivelTexto[$idioma]['idIntegranteGrupo'] = [$idIntegranteGrupo];
 $html = "";
 $html2 = "";
 //	Uteis::pr($nivelTexto);
+if ($grafico != 0) {
 if ($nivelTexto[4]) { 
 //Inglês
 $html .= "<div style=\"text-align:center\">Estes são os módulos do curso de Inglês. Veja o caminho que você já percorreu e o que vai percorrer</div>";
@@ -1024,7 +1026,8 @@ new Chart(document.getElementById("canvas4"), {
 </script>
 
 
-<?php } ?>
+<?php } 
+} ?>
 
 <div>&nbsp;</div>
 <fieldset>

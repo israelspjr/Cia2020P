@@ -10,7 +10,7 @@
  
 <?php if ($_SESSION['idClientePf_SS'] != 4) { ?>
              <?php if ($appN != 4) { ?>
-				<li class="active"><a id="ff" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/ff/index.php', '#centro')"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Folha de frequência</a></li>
+				<li class="active"><a id="ff" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/ff/index.php?grafico=0', '#centro')"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Folha de frequência</a></li>
                  <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/acompanhamento/index.php', '#centro');"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Relatório de desempenho</a></li>
                   <li><a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/demonstrativoCobranca/index.php', '#centro');">
 <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Demonstrativos</a></li>
