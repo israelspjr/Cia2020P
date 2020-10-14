@@ -67,7 +67,7 @@ echo $retorno['professor'];
 	?></div>
 					<div class="panel-body">
                     <div class="canvasG" >
-						<canvas id="PROFESSOR"  ></canvas>
+						<canvas id="PROFESSOR"  width=250 height=250></canvas>
 						</div>
 					</div>
 				</div>
@@ -101,10 +101,12 @@ echo $retorno['resultado'];
 					</div>
 				</div>
 			</div><!--/.row-->     
+            
                     <div class="row" style="margin-left: 0px; margin-right: 0px;">
 			<div class="linha-inteira">
             <div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Comentários</strong> <br />
+                <div class="comentarios" onclick="mostrar(0)">Mostrar comentários
             
 <?php
 	$dataAtual = date("Y-m-d");
@@ -134,7 +136,9 @@ echo $retorno['resultado'];
 		  }
 	  }
 
-?>			</div>
+?>			
+				</div>
+			  </div>
 					<div class="panel-body">
               <div>
 						<?php echo $html; ?>	
