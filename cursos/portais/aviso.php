@@ -329,7 +329,7 @@ function psa2(x) {
                 labels: {
 					filter: function(legendItem, data) {
 						console.log(legendItem.index);
-						console.log(data[legendItem.index]);
+						console.log(data.datasets);
 						console.log("ok");
                 			if (legendItem.dataIndex === 0) {
                   				return false;
