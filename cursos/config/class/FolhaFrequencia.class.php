@@ -242,9 +242,9 @@ class FolhaFrequencia extends Database {
                             $jaForamInseridos[] = $valorParaProcurar;
 							
 							if ($mobile != 1) {
-                			$onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?idFolhaFrequencia=$idFolhaFrequencia&Ndados=$Ndados', '$caminhoAtualizar', '$ondeAtualiza')\" ";
-								} else {
-                            	     $onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?idPlanoAcaoGrupo=" . $idPlanoAcaoGrupo . "&idProfessor=" . $idProfessor . "&dataReferencia=" . $dataReferencia . "', '$caminhoAtualizar', '$ondeAtualiza')\" ";
+                			  	     $onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?idPlanoAcaoGrupo=" . $idPlanoAcaoGrupo . "&idProfessor=" . $idProfessor . "&dataReferencia=" . $dataReferencia . "', '$caminhoAtualizar', '$ondeAtualiza')\" ";
+							} else {
+								     $onclick = " onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "?idFolhaFrequencia=$idFolhaFrequencia&Ndados=$Ndados', '#centro')\" ";	
 							}
 							
                             $html .= "<tr>";
