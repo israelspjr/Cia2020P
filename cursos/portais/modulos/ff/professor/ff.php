@@ -24,7 +24,7 @@ $valorIds .= $valor2['idPlanoAcaoGrupo'].", ";
 
 $valorIds .= "0"; 
 
-$add = "WHERE planoAcaoGrupo_idPlanoAcaoGrupo in ( ".$valorIds.")";
+$add = "WHERE planoAcaoGrupo_idPlanoAcaoGrupo in ( ".$valorIds.") ORDER BY idFolhaFrequencia DESC";
 
 
 ?>
