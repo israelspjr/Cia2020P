@@ -324,6 +324,7 @@ function psa2(x) {
 },
             responsive: true,
             legend: {
+				display: false,
                 position: 'bottom',
                 labels: {
                     fontColor: "black",
