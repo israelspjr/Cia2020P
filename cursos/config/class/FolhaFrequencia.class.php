@@ -125,11 +125,11 @@ class FolhaFrequencia extends Database {
         $jaForamInseridos = array();
         $dataAtual = date('Y-m-d');
         if($add=="")
-        $where .= "WHERE planoAcaoGrupo_idPlanoAcaoGrupo = $idPlanoAcaoGrupo ";
+        $where .= "WHERE planoAcaoGrupo_idPlanoAcaoGrupo = $idPlanoAcaoGrupo ORDER BY dataReferencia";
         else
         $where = $add;
         if( $idProfessor_base ) $where .= " AND professor_idProfessor = $idProfessor_base";
-        $where .= " ORDER BY dataReferencia";
+      //  $where .= " ORDER BY dataReferencia";
         
         $rsFF = $this->selectFolhaFrequencia($where);
      //   Uteis::pr($rsFF);

@@ -39,9 +39,8 @@ $add = "WHERE planoAcaoGrupo_idPlanoAcaoGrupo in ( ".$valorIds.") ORDER BY idFol
 			<table id="tb_lista_FolhaFrequencia" class="registros">
 				<thead>
 					<tr>
-				<!--		<th></th>
-					-->	<th>Período</th>
-						<th>Finalizada</th>
+				<!--		<th></th>-->
+							<th>Finalizada</th>
 					</tr>
 				</thead>
 				<tbody>
