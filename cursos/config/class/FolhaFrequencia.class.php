@@ -128,9 +128,11 @@ class FolhaFrequencia extends Database {
         $where .= "WHERE planoAcaoGrupo_idPlanoAcaoGrupo = $idPlanoAcaoGrupo ";
         else
         $where = $add;
-        if( $idProfessor_base ) $where .= " AND professor_idProfessor = $idProfessor_base";
-        $where .= " ORDER BY dataReferencia DESC";
-        
+        if( $idProfessor_base ) { 
+			$where .= " AND professor_idProfessor = $idProfessor_base ORDER BY idFolhaFrequencia DESC";
+		} else {
+			$where .= " ORDER BY dataReferencia";
+		}
         $rsFF = $this->selectFolhaFrequencia($where);
      //   Uteis::pr($rsFF);
         
