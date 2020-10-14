@@ -104,9 +104,8 @@ echo $retorno['resultado'];
             
                     <div class="row" style="margin-left: 0px; margin-right: 0px;">
 			<div class="linha-inteira">
-            <div class="panel panel-default">
-				<div class="panel-heading" style="width:100%;text-align:center;"><button class="Bblue" onclick="mostrar(0)" id="buttonComent">Mostrar comentários</button> <br />
-                <div class="comentarios" id="divComenta" style="display:none;width:100%;height:100%;">
+            <button class="Bblue" onclick="mostrar(0)" id="buttonComent">Mostrar comentários</button> <br />
+                <div class="panel-body" id="divComenta" style="display:none;width:100%;height:100%;">
             
 <?php
 	$dataAtual = date("Y-m-d");
@@ -141,9 +140,7 @@ echo $retorno['resultado'];
 						</div>
 					</div>
 				</div>
-			</div>
-            </div>
-</div>
+
 <!--<legend>ÚLTIMOS AVISOS</legend>
 -->
 
