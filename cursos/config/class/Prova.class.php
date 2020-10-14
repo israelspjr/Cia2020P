@@ -462,13 +462,13 @@ class Prova extends Database {
 					
 					$result = $this -> query($sql);
 					
-					$html .= "<table border='0'>";
+					$html .= "";
 					
 					$style="style='padding: 7px;border: 1px solid #ccc;'";
 					
 					while ($valor = mysqli_fetch_array($result)) {
 				//		Uteis::pr($valor);
-						
+						$html .= "<table border='0'>";
 						$todosPAG = $PlanoAcaoGrupo->getTodosPAG($valor['idPlanoAcaoGrupo']);
 						$html .= "<tr><td $style>".$valor['nome']."</td>";
 			
@@ -493,10 +493,10 @@ class Prova extends Database {
 			$html .= "<td $style>Nova Data Prevista:</td><td $style>". Uteis::exibirData($valor2['dataPrevistaInicial'])."</td></tr>";
 		//	$html .= "<tr><td style='20px'></td></tr>";		
 		}
-						
+					$html .= "</table>";	
 					}
 					
-					$html .= "</table>";
+					
 		return $html;
 	}
 
