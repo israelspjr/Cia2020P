@@ -153,7 +153,7 @@ class FolhaFrequencia extends Database {
 				}
                 $html .= "<tr>";            
                 if ($professor != 1) {
-                	$html .= "<td >" . strtotime($value['dataReferencia']) . "</td>";
+                	$html .= "<td >" . $value['dataReferencia'] . "</td>";
 				}
                 $html .= "<td align=\"center\" $onclick >" . $dataReferencia . "</td>";
 				if(!$idProfessor_base)
