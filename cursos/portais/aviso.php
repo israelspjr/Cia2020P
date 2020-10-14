@@ -328,10 +328,10 @@ function psa2(x) {
                 position: 'bottom',
                 labels: {
 					filter: function(legendItem, data) {
-						console.log(legendItem.datasetIndex);
+						console.log(legendItem.dataIndex);
 						console.log(data);
 						console.log("ok");
-                			if (legendItem.datasetIndex === 0) {
+                			if (legendItem.dataIndex === 0) {
                   				return false;
                				}
                			return true;
