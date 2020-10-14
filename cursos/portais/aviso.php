@@ -12,8 +12,6 @@ $texto = $TextoEmailPadrao->selectTextoEmailPadrao(" WHERE excluido = 0 and cand
 
 $config = $Configuracoes->selectConfig();
 
-error_reporting(E_ALL);
-
 ?>
 
 <style>
@@ -329,10 +327,15 @@ function psa2(x) {
 				display: true,
                 position: 'bottom',
                 labels: {
-					filter: function(item, chart) {
-                    // Logic to remove a particular legend item goes here
-                    return !item.text.includes('Nota 0');
-                },
+					filter: function(item, data) {
+						console.log(item);
+						console.log("ok");
+						alert(item.text);
+                			if (item.datasetIndex == 0) {
+                  				return false;
+               				}
+               			return true;
+              		 },
                     fontColor: "black",
                     boxWidth: 20,
                     padding: 10
