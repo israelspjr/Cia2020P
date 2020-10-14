@@ -328,10 +328,7 @@ function psa2(x) {
                 position: 'bottom',
                 labels: {
 					filter: function(legendItem, data) {
-						console.log(legendItem.index);
-						console.log(data.datasets[0].data[legendItem.index]);
-						console.log("ok");
-                			if ((typeof data.datasets[0].data[legendItem.index] === 'undefined') || (legendItem.index == 0)){
+		         			if ((typeof data.datasets[0].data[legendItem.index] === 'undefined') || (legendItem.index == 0)){
                   				return false;
                				}
                			return true;
