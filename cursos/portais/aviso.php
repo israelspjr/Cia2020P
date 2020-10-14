@@ -223,7 +223,7 @@ function psa2(x) {
   idProfessor = <?php echo $_SESSION['idProfessor_SS']; ?>;
   gerente = 0; //$("#idGerente option:selected").val();
   quantidade = 1;
-  $("#centro").html("<p>Por favor espere...</p>");
+//  $("#centro").html("<p>Por favor espere...</p>");
   retorno = $.ajax({
     url:"<?php echo "modulos/select_psaProf.php"?>",
     type:"POST",
