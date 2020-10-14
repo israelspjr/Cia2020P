@@ -7,7 +7,7 @@ $idClientePf = $_SESSION['idClientePf_SS']; //$_GET['id'];
 ?>
 
 <fieldset>
-  <legend>Caracteristicas</legend>
+  <legend>Características</legend>
   <div class="menu_interno"></div>
   <form id="form_atividadeExtra" class="validate" action="" method="post" onsubmit="return false" >
     <?php echo $TipoAtividadeExtra->selectTipoatividadeextraDiv($idClientePf) ?> <br />
