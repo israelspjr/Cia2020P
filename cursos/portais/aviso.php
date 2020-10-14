@@ -228,11 +228,12 @@ function psa2(x) {
     type:"POST",
     datatype: "html",
     contentType: "application/x-www-form-urlencoded; charset=utf-8",
-    data:{status:status,idProfessor:idProfessor,gerente:gerente, quantidade:quantidade, x:x}   
-  });
-  retorno.beforeSend: function(){
+	beforeSend:function(){
            $("#centro").dialog('open').html("<p>Por favor espere...</p>");
         },
+    data:{status:status,idProfessor:idProfessor,gerente:gerente, quantidade:quantidade, x:x}   
+  });
+  
   retorno.done(function( html ) {
 	  
 	//  console.log(html);
