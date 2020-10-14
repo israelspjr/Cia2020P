@@ -350,8 +350,8 @@ function psa2(x) {
 }
 
 psa2("PROFESSOR");
-//psa2("QUALIDADE DA AULA");
-//psa2("RESULTADO DO CURSO");
+psa2("QUALIDADE DA AULA");
+psa2("RESULTADO DO CURSO");
 
 </script>
 <?php } ?>
