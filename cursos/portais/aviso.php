@@ -105,8 +105,8 @@ echo $retorno['resultado'];
                     <div class="row" style="margin-left: 0px; margin-right: 0px;">
 			<div class="linha-inteira">
             <div class="panel panel-default">
-				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Comentários</strong> <br />
-                <div class="comentarios" onclick="mostrar(0)">Mostrar comentários
+				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;"></strong><button onclick="mostrar(0)" id="buttonComent">Mostrar comentários</button> <br />
+                <div class="comentarios" id="divComenta" style="display:none;">
             
 <?php
 	$dataAtual = date("Y-m-d");
@@ -218,6 +218,18 @@ if ($_SESSION['grafico'] == 1) { ?>
 <?php } ?>
 
 </fieldset>
+<script>
+function mostrar(x) {
+		if (x == 0) {
+			$('#divComenta').show();
+			$("#buttonComent").attr("onclick","mostrar(1)");	
+		} else {
+			$('#divComenta').hide();
+			$("#buttonComent").attr("onclick","mostrar(0)");
+		}
+}
+
+</script>
 <?php if (($candidato ==0) && ($_SESSION['grafico'] != 1)) {?>
 <script>
 function psa2(x) {
