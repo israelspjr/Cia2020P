@@ -105,7 +105,7 @@ echo $retorno['resultado'];
                     <div class="row" style="margin-left: 0px; margin-right: 0px;">
 			<div class="linha-inteira">
             <div class="panel panel-default">
-				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;"></strong><button onclick="mostrar(0)" id="buttonComent">Mostrar comentários</button> <br />
+				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;"></strong><button class="Bblue" onclick="mostrar(0)" id="buttonComent">Mostrar comentários</button> <br />
                 <div class="comentarios" id="divComenta" style="display:none;">
             
 <?php
@@ -137,11 +137,7 @@ echo $retorno['resultado'];
 	  }
 
 ?>			
-				</div>
-			  </div>
-					<div class="panel-body">
-              <div>
-						<?php echo $html; ?>	
+							<?php echo $html; ?>	
 						</div>
 					</div>
 				</div>
