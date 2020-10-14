@@ -310,21 +310,21 @@ function psa2(x) {
         },
         options: {
 			tooltips: {
-  callbacks: {
-    label: function(tooltipItem, data) {
-      var dataset = data.datasets[tooltipItem.datasetIndex];
-      //get the current items value
-      var currentValue = dataset.data[tooltipItem.index];
-    //calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
-      var percentage = Math.floor(((currentValue/total) * 100)+0.5);
+  				callbacks: {
+    				label: function(tooltipItem, data) {
+      					var dataset = data.datasets[tooltipItem.datasetIndex];
+      					//get the current items value
+      					var currentValue = dataset.data[tooltipItem.index];
+    					//calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
+      					var percentage = Math.floor(((currentValue/total) * 100)+0.5);
 
-      return percentage + "%";
-    }
-  }
-},
+			      return percentage + "%";
+    			}
+  			}
+		},
             responsive: true,
             legend: {
-				display: false,
+				display: true,
                 position: 'bottom',
                 labels: {
                     fontColor: "black",
@@ -348,8 +348,8 @@ function psa2(x) {
 }
 
 psa2("PROFESSOR");
-psa2("QUALIDADE DA AULA");
-psa2("RESULTADO DO CURSO");
+//psa2("QUALIDADE DA AULA");
+//psa2("RESULTADO DO CURSO");
 
 </script>
 <?php } ?>
