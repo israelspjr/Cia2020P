@@ -177,7 +177,7 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 //	carregarModulo('/cursos/mobile/professor/modulos/cadastro/form/professor.php', '#centro');	 
 		 
 <?php 	 } else { ?>
-    $("#centro").html("Por favor aguarde carregar os gráficos!!!");
+    $("#centro").html("Por favor aguarde os gráficos estão carregando!");
     carregarModulo('/cursos/portais/aviso.php', '#centro');
 	
 	<?php } ?>
