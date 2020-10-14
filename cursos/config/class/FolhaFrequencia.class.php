@@ -76,7 +76,7 @@ class FolhaFrequencia extends Database {
     function addFolhaFrequencia() {
         $sql = "INSERT INTO folhaFrequencia (finalizadaParcial, finalizadaPrincipal, obs, planoAcaoGrupo_idPlanoAcaoGrupo, professor_idProfessor, dataReferencia, dataCadastro, dataFinalizada) VALUES ($this->finalizadaParcial, $this->finalizadaPrincipal, $this->obs, $this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->professorIdProfessor, $this->dataReferencia, $this->dataCadastro, $this->dataFinalizada)";
         $result = $this -> query($sql, true);
-        return mysql_insert_id($this -> connect);
+        return mysqli_insert_id($this -> connect);
     }
 
     /**
