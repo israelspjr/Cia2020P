@@ -196,9 +196,9 @@ echo "<hr>";
 	
 }
 
-echo '<div class=\"linha-inteira\"><div><h3>Provas Agendadas para o proximo mês</h3></div>';
+echo '<div<p>&nbsp;</p></div><div class=\"linha-inteira\"><div><h3>Avaliações de Alunos Agendadas para o proximo mês</h3></div>';
   $rs = $Prova->selectProvaTr_professor();	
-Uteis::pr($rs);
+echo $rs;
 echo '</div>';
 } 
 
