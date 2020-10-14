@@ -129,7 +129,7 @@ class FolhaFrequencia extends Database {
         else
         $where = $add;
         if( $idProfessor_base ) { 
-			$where .= " AND professor_idProfessor = $idProfessor_base ORDER BY idFolhaFrequencia DESC";
+			$where .= " AND professor_idProfessor = $idProfessor_base ORDER BY dataReferencia DESC";
 		} else {
 			$where .= " ORDER BY dataReferencia";
 		}
