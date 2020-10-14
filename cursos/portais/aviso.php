@@ -330,13 +330,13 @@ function psa2(x) {
                     fontColor: "black",
                     boxWidth: 20,
                     padding: 10,
-			filter: function(legendItem, data) {
-				console.log(legendItem.datasetIndex);
-                if (legendItem.datasetIndex === 0) {
-                  return false;
-                }
-               return true;
-               }
+					filter: function(legendItem, data) {
+						alert(legendItem.datasetIndex);
+                			if (legendItem.datasetIndex === 0) {
+                  				return false;
+               				}
+               			return true;
+              		 }
                 }
             }
         }
