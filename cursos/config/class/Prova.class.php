@@ -470,7 +470,7 @@ class Prova extends Database {
 				//		Uteis::pr($valor);
 						$html .= "<table border='0'>";
 						$todosPAG = $PlanoAcaoGrupo->getTodosPAG($valor['idPlanoAcaoGrupo']);
-						$html .= "<tr><td $style>".$valor['nome']."</td>";
+						$html .= "<tr><td $style><strong>".$valor['nome']."</strong></td>";
 			
 		$sql2 = "SELECT SQL_CACHE CP.idCalendarioProva, CP.dataPrevistaInicial, CP.dataPrevistaNova, CP.dataAplicacao, CP.validacao, P.nome, NE.nivel
 		FROM calendarioProva AS CP 
