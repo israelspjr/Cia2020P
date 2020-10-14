@@ -196,7 +196,7 @@ echo "<hr>";
 	
 }
 
-echo '<div class=\"linha-inteira\">"<div><h3>Provas Agendadas para o proximo mês</h3></div>';
+echo '<div class=\"linha-inteira\"><div><h3>Provas Agendadas para o proximo mês</h3></div>';
   $rs = $Prova->selectProvaTr_professor();	
 Uteis::pr($rs);
 echo '</div>';
@@ -215,10 +215,12 @@ if ($_SESSION['grafico'] == 1) { ?>
 function mostrar(x) {
 		if (x == 0) {
 			$('#divComenta').show();
-			$("#buttonComent").attr("onclick","mostrar(1)");	
+			$("#buttonComent").attr("onclick","mostrar(1)");
+			$("#buttonComent").html("Esconder comentários");	
 		} else {
 			$('#divComenta').hide();
 			$("#buttonComent").attr("onclick","mostrar(0)");
+			$("#buttonComent").html("Mostrar comentários");
 		}
 }
 
