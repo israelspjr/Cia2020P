@@ -42,7 +42,6 @@ $add = "WHERE planoAcaoGrupo_idPlanoAcaoGrupo in ( ".$valorIds.") ORDER BY idFol
 				<!--		<th></th>
 					-->	<th>Período</th>
 						<th>Finalizada</th>
-						<th>Finalizada [financeiro]</th>
 					</tr>
 				</thead>
 				<tbody>
