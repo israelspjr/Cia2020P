@@ -229,7 +229,7 @@ function psa2(x) {
     datatype: "html",
     contentType: "application/x-www-form-urlencoded; charset=utf-8",
 	beforeSend:function(){
-           $("#centro").dialog('open').html("<p>Por favor espere...</p>");
+           $("#centro").html("<p>Por favor espere...</p>");
         },
     data:{status:status,idProfessor:idProfessor,gerente:gerente, quantidade:quantidade, x:x}   
   });
