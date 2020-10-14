@@ -328,7 +328,7 @@ function psa2(x) {
                 position: 'bottom',
                 labels: {
 					filter: function(legendItem, data) {
-						console.log(legendItem);
+						console.log(legendItem.datasetIndex);
 						console.log(data);
 						console.log("ok");
                 			if (legendItem.datasetIndex === 0) {
