@@ -223,14 +223,15 @@ function psa2(x) {
   idProfessor = <?php echo $_SESSION['idProfessor_SS']; ?>;
   gerente = 0; //$("#idGerente option:selected").val();
   quantidade = 1;
+  $("#centro").html("<p>Por favor espere...</p>");
   retorno = $.ajax({
     url:"<?php echo "modulos/select_psaProf.php"?>",
     type:"POST",
     datatype: "html",
     contentType: "application/x-www-form-urlencoded; charset=utf-8",
-	beforeSend:function(){
-           $("#centro").html("<p>Por favor espere...</p>");
-        },
+	//beforeSend:function(){
+    //       $("#centro").html("<p>Por favor espere...</p>");
+    //    },
     data:{status:status,idProfessor:idProfessor,gerente:gerente, quantidade:quantidade, x:x}   
   });
   
