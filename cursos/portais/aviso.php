@@ -331,7 +331,7 @@ function psa2(x) {
 						console.log(legendItem.index);
 						console.log(data.datasets[0].data[legendItem.index]);
 						console.log("ok");
-                			if (data.datasets[0].data[legendItem.index] == 'undefined') {
+                			if (typeof data.datasets[0].data[legendItem.index] === 'undefined') {
                   				return false;
                				}
                			return true;
