@@ -110,7 +110,7 @@ class FolhaFrequencia extends Database {
      */
     function selectFolhaFrequencia($where = "WHERE 1") {
         $sql = "SELECT SQL_CACHE idFolhaFrequencia, finalizadaParcial, finalizadaPrincipal, obs, planoAcaoGrupo_idPlanoAcaoGrupo, professor_idProfessor, dataReferencia, dataCadastro, dataFinalizada FROM folhaFrequencia " . $where;
-        echo $sql;
+   //     echo $sql;
         //exit;
         return $this -> executeQuery($sql);
     }
@@ -129,7 +129,7 @@ class FolhaFrequencia extends Database {
         else
         $where = $add;
         if( $idProfessor_base ) $where .= " AND professor_idProfessor = $idProfessor_base";
-        $where .= " ORDER BY dataReferencia";
+        $where .= " ORDER BY dataReferencia DESC";
         
         $rsFF = $this->selectFolhaFrequencia($where);
      //   Uteis::pr($rsFF);
@@ -285,7 +285,7 @@ class FolhaFrequencia extends Database {
         else
         $where = $add;
         if( $idProfessor_base ) $where .= " AND professor_idProfessor = $idProfessor_base";
-        $where .= " ORDER BY dataReferencia DESC";
+        $where .= " ORDER BY dataReferencia";
  //      echo $where;
         $rsFF = $this->selectFolhaFrequencia($where);
  //       Uteis::pr($rsFF);
