@@ -329,10 +329,10 @@ function psa2(x) {
                     fontColor: "black",
                     boxWidth: 20,
                     padding: 20,
-					filter: function(legendItem, chartData) {
+			//		filter: function(legendItem, chartData) {
         // if no data for this dataset, do not show the legend item.
-        return chartData[legendItem.datasetIndex].data.length;
-      				}
+        console.log( chartData[legendItem.datasetIndex].data.length);
+      	//			}
                 }
             }
         }
