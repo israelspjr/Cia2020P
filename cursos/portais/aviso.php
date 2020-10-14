@@ -327,11 +327,11 @@ function psa2(x) {
 				display: true,
                 position: 'bottom',
                 labels: {
-					filter: function(item, data) {
-						console.log(item);
+					filter: function(legendItem, data) {
+						console.log(legendItem);
+						console.log(data);
 						console.log("ok");
-						alert(item.text);
-                			if (item.datasetIndex == 0) {
+                			if (legendItem.datasetIndex === 0) {
                   				return false;
                				}
                			return true;
