@@ -110,7 +110,7 @@ class FolhaFrequencia extends Database {
      */
     function selectFolhaFrequencia($where = "WHERE 1") {
         $sql = "SELECT SQL_CACHE idFolhaFrequencia, finalizadaParcial, finalizadaPrincipal, obs, planoAcaoGrupo_idPlanoAcaoGrupo, professor_idProfessor, dataReferencia, dataCadastro, dataFinalizada FROM folhaFrequencia " . $where;
- //       echo $sql;
+        echo $sql;
         //exit;
         return $this -> executeQuery($sql);
     }
@@ -125,11 +125,11 @@ class FolhaFrequencia extends Database {
         $jaForamInseridos = array();
         $dataAtual = date('Y-m-d');
         if($add=="")
-        $where .= "WHERE planoAcaoGrupo_idPlanoAcaoGrupo = $idPlanoAcaoGrupo ORDER BY dataReferencia";
+        $where .= "WHERE planoAcaoGrupo_idPlanoAcaoGrupo = $idPlanoAcaoGrupo ";
         else
         $where = $add;
         if( $idProfessor_base ) $where .= " AND professor_idProfessor = $idProfessor_base";
-      //  $where .= " ORDER BY dataReferencia";
+        $where .= " ORDER BY dataReferencia";
         
         $rsFF = $this->selectFolhaFrequencia($where);
      //   Uteis::pr($rsFF);
@@ -242,7 +242,8 @@ class FolhaFrequencia extends Database {
                             $onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?idPlanoAcaoGrupo=" . $idPlanoAcaoGrupo . "&idProfessor=" . $idProfessor . "&dataReferencia=" . $dataReferencia . "', '$caminhoAtualizar', '$ondeAtualiza')\" ";
                             
                             $html .= "<tr>";
-
+							
+							if(!$idProfessor_base)
                             $html .= "<td >" . $dataReferencia_base . "</td>";
                             
                             $html .= "<td align=\"center\" $onclick >" . $dataReferencia . " - <font color=\"#FF0000\">folha de frequência ainda não foi gerada</font></td>";
