@@ -330,6 +330,7 @@ function psa2(x) {
 					filter: function(item, data) {
 						console.log(item);
 						console.log("ok");
+						alert(item.text);
                 			if (item.datasetIndex === 0) {
                   				return false;
                				}
