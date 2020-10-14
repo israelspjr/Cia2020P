@@ -331,7 +331,8 @@ function psa2(x) {
                     boxWidth: 20,
                     padding: 10,
 					filter: function(legendItem, data) {
-						alert(legendItem.datasetIndex);
+						console.log(legendItem);
+						console.log("ok");
                 			if (legendItem.datasetIndex === 0) {
                   				return false;
                				}
