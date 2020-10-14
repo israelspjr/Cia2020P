@@ -330,10 +330,11 @@ function psa2(x) {
                     fontColor: "black",
                     boxWidth: 20,
                     padding: 10,
-			//		filter: function(legendItem, chartData) {
-        // if no data for this dataset, do not show the legend item.
-     //   console.log( chartData[legendItem.datasetIndex].data.length);
-      	//			}
+					filter: function(legendItem, chartData) {
+                		if (legendItem.datasetIndex === 0) {
+                 			 return false;
+               			}
+               	return true;
                 }
             }
         }
