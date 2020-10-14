@@ -491,9 +491,10 @@ class Prova extends Database {
 			
 			$html .= "<td $style>Data Prevista Inicial:</td><td $style>". Uteis::exibirData($valor2['dataPrevistaInicial'])."</td>";
 			$html .= "<td $style>Nova Data Prevista:</td><td $style>". Uteis::exibirData($valor2['dataPrevistaInicial'])."</td></tr>";
-		//	$html .= "<tr><td style='20px'></td></tr>";		
+				
 		}
-					$html .= "</table>";	
+					$html .= "</table>";
+					$html .= "<div><p>&nbsp;</p></div>";		
 					}
 					
 					
