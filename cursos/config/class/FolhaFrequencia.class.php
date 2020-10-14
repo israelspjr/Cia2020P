@@ -240,9 +240,13 @@ class FolhaFrequencia extends Database {
                         if ($rsIntegranteGrupo && !in_array($valorParaProcurar, $jaForamInseridos)) {
 
                             $jaForamInseridos[] = $valorParaProcurar;
-                            
-                            $onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?idPlanoAcaoGrupo=" . $idPlanoAcaoGrupo . "&idProfessor=" . $idProfessor . "&dataReferencia=" . $dataReferencia . "', '$caminhoAtualizar', '$ondeAtualiza')\" ";
-                            
+							
+							if ($mobile != 1) {
+                			$onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?idFolhaFrequencia=$idFolhaFrequencia&Ndados=$Ndados', '$caminhoAtualizar', '$ondeAtualiza')\" ";
+								} else {
+                            	     $onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?idPlanoAcaoGrupo=" . $idPlanoAcaoGrupo . "&idProfessor=" . $idProfessor . "&dataReferencia=" . $dataReferencia . "', '$caminhoAtualizar', '$ondeAtualiza')\" ";
+							}
+							
                             $html .= "<tr>";
 							
 							if(!$idProfessor_base)
