@@ -285,7 +285,7 @@ class FolhaFrequencia extends Database {
         else
         $where = $add;
         if( $idProfessor_base ) $where .= " AND professor_idProfessor = $idProfessor_base";
-        $where .= " ORDER BY dataReferencia";
+        $where .= " ORDER BY dataReferencia DESC";
  //      echo $where;
         $rsFF = $this->selectFolhaFrequencia($where);
  //       Uteis::pr($rsFF);
