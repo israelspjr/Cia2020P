@@ -1099,7 +1099,7 @@ WHERE 1
 	  
 	  if ($PDF == false) {
 	
-	$html_base = $this -> montaTb($colunas, $excel);
+	$html_base = $this -> montaTb($colunas, $excel,"",1);
 	if (!$excel )  {
        return $html_base . $html;
 	} else {
