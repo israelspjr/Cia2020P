@@ -13,7 +13,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
   <legend>Demonstrativos</legend>
   <p>Prezado(a) Professor(a) </p>
 
-<p>Finalizamos o cálculo para seu pagamento e pedimos que confira as informações do demonstrativo, com urgência.  Se você discordar do cálculo, <strong><font color="#FF0000">Clique em cima do demonstrativo para conferir e enviar a sua contestação</font></strong> ou entre em contato no email: <a href="<?php echo $config[0]['emailAten'];?>"><?php echo $config[0]['emailAten']?></a> para esclarecermos a divergência.</p>
+<p>Finalizamos o cálculo para seu pagamento e pedimos que confira as informações do demonstrativo, com urgência.  Se você discordar do cálculo, <strong><font color="#FF0000">Clique em cima do demonstrativo para conferir e enviar a sua contestação</font></strong> ou entre em contato no email: <a href="<?php echo $config[0]['emailFinancas'];?>"><?php echo $config[0]['emailFinancas']?></a> para esclarecermos a divergência.</p>
 
 <p>Se estiver tudo correto, não é necessário enviar mensagens. Seu pagamento estará disponível, na forma combinada (transferência, cheque etc), no quinto dia útil. </p>
 
