@@ -131,8 +131,12 @@ $Configuracoes = new Configuracoes();
        <input type="text" name="emailAten" id="emailAten" value="<?php echo $Configuracoes->getEmailAten();?>" />
       </p>
       <p>
-        <label>Email (Responsável Financeiro):</label>
+        <label>Email (Responsável financeiro pagamento professor):</label>
        <input type="text" name="emailFinancas" id="emailFinancas" value="<?php echo $Configuracoes->getEmailFinancas();?>" />
+      </p>
+       <p>
+        <label>Email (Responsável financeiro geral):</label>
+       <input type="text" name="emailGeral" id="emailGeral" value="<?php echo $Configuracoes->getEmailGeral();?>" />
       </p>
         <p>
         <label>WhatsApp:</label>

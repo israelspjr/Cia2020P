@@ -34,6 +34,7 @@ if($_POST['acao']=="cadastrar"){
 	 $Configuracoes->updateConfigField("cor", $_POST['cor']);
  	 $Configuracoes->updateConfigField("dataExpira", $_POST['dataExpira']);
 	 $Configuracoes->updateConfigField("emailFinancas",$_POST['emailFinancas']);
+	 $Configuracoes->updateConfigField("emailGeral",$_POST['emailGeral']);
 	 
 	 $arrayRetorno['mensagem'] = "Atualizado com sucesso!";
 	
