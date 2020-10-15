@@ -42,7 +42,7 @@
 		
 		$assunto = "Atenção professor(a) $nome inseriu novo conteúdo no banco de conhecimento - Portal do professor";
 		
-					 $paraQuem = array("nome" => "Janaina", "email" => $config[0]['emailAten'] );
+					 $paraQuem = array("nome" => $config[0]['emailAten'], "email" => $config[0]['emailAten'] );
                      $rs = Uteis::enviarEmail($assunto, $msg, $paraQuem);
  	
 		$arrayRetorno['fecharNivel'] = true;		
