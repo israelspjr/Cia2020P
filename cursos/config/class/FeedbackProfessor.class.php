@@ -296,6 +296,7 @@ class FeedbackProfessor extends Database {
 	function selectFeedbackProfessorTrProfessor($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "") {
 
 		$sql = "SELECT SQL_CACHE idFeedbackProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8 FROM feedbackProfessor " . $where;
+		echo $sql;
 		$result = $this -> query($sql);
 		$Grupo = new Grupo();
 		$Professor = new Professor();
@@ -347,9 +348,9 @@ class FeedbackProfessor extends Database {
 				<td align=\"center\"> ".$nomeGrupo."</td>
 				<td align=\"center\">".$img."</td>
 				<td align=\"center\"> ".$NotasTipoNotas->getNome($valor['status2'])."</td>
-				<td align=\"center\">".$nomeAssistido."</td>
-				<td align=\"center\">".$valor['obs']."</td>";
-			/*	<td>".$pergunta1."</td>
+				<td align=\"center\">".$nomeAssistido."</td>";
+			/*	<td align=\"center\">".$valor['obs']."</td>";
+				<td>".$pergunta1."</td>
 				<td>".$pergunta2."</td>
 				<td>".$pergunta3."</td>
 				<td>".$pergunta4."</td>
