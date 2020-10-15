@@ -6,10 +6,9 @@ $Relatorio = new Relatorio();
 require_once "filtrosProf.php";?>
 
 <style>
-/*.dataTables_wrapper {
-	height:30px;	
+#tb_lista_res1 td {
+	font-size:12px;	
 }
-*/
 
 </style>
 <?php
