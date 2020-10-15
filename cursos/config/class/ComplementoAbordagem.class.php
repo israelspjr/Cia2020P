@@ -151,7 +151,7 @@ class ComplementoAbordagem extends Database {
 	}
 	
 	$sql .= "ORDER BY nome";
-	//echo $sql;
+	echo $sql;
     $result = $this -> query($sql);
     
     $idioma = new Idioma();
