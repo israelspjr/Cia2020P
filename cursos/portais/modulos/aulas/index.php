@@ -24,7 +24,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
   </thead>
   <tbody>
     <?php 
-	echo $FeedbackProfessor->selectFeedbackProfessorTrProfessor("modulos/aulas/feedbackProfessor.php", "modulos/aulas/feedbackProfessor.php?id=".$id, "#div_feedback_professor", " WHERE quemAssistiu = ".$idProfessor. " OR professor_idAssistido = ".$idProfessor);
+	echo $FeedbackProfessor->selectFeedbackProfessorTrProfessor("modulos/aulas/feedbackProfessor.php", "modulos/aulas/feedbackProfessor.php?id=".$id, "#div_feedback_professor", " WHERE quemAssistiu = ".$idProfessor. " OR professor_idProfessor = ".$idProfessor);
 	?>
   </tbody>
   <tfoot>
