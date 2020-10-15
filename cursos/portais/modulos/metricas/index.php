@@ -20,7 +20,7 @@
   <div>
 <?php 
 
- echo $Complemento->selectAbordagemCheckbox($idPlanoAcao, 1); 
+ echo $Complemento->selectAbordagemCheckbox($idPlanoAcao, "","",1); 
 ?>
 </div>
 </div>

@@ -143,7 +143,7 @@ class ComplementoAbordagem extends Database {
 		return $html;
 	}
   
-  function selectAbordagemCheckbox($idPlanoAcao, $idIdioma, $addQuery = "",$portaP) {
+  function selectAbordagemCheckbox($idPlanoAcao, $idIdioma, $addQuery = "",$portalP) {
 
     $sql = "SELECT SQL_CACHE idComplementoAbordagem, item, padrao, nome FROM ComplementoAbordagem WHERE excluido = 0 AND inativo = 0 " . $addQuery . "";
 	if ($portalP == 1) {
