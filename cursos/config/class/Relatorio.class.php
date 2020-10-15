@@ -965,7 +965,12 @@ WHERE 1
 		  }
           $html .= "<td >" .$onclick. $valor['grupo'] .$imgCobranca. "</td>";
 		  $html .= "<td>" . $nivelAluno . "</td>";
+		    if  ($rh != 1)  {
+		     if ($portalA != 1) {
+        
 		  $html .= "<td >1" . $valor['nomeProfessor'] . "</td>";
+			 }
+		  }
 		  if (($alunoN != 1) && ($portalA != 1)) {
           
           $html .= "<td >" .$onclick2. $valor['aluno'] . "<br>.".$email."</td>";
