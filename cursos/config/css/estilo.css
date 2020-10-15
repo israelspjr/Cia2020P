@@ -389,7 +389,7 @@ legend {
 	width:100%;
 }
 .registros td{
-	padding:9px;
+	padding:6px;
 }
 .registros tr:hover, .registros tr td:hover{
 	background-color: rgba(163, 200, 238, 0.5) !important;
