@@ -1062,7 +1062,7 @@ WHERE 1
 					  $colunas = array("Grupo", "Nível", "Professor", "Data Entrada","Data Saída","Ano", "Mês", "Horas cobradas", "Horas realizadas ", "Horas assistidas aluno ", "Faltas justificadas pelo aluno ", "Presença com justificativa do aluno ", "Frequência Real ", "Banco de horas ", "Reposições ", "Horas Perdidas (CSA, GA, CEX)", "Saldo no mês"); 
 				  } else {
 					
-	 $colunas = array("Empresa3", "Grupo", "Nível", /*"Professor"*/, "Aluno", "Data Entrada", "Data Saída", "Ano", "Mês", "Horas cobradas ", "Horas realizadas ", "Horas assistidas aluno ", "Faltas justificadas pelo aluno ", "Presença com justificativa do aluno ", "Frequência Real ", "Banco de horas ", "Reposições ", "Horas Perdidas (CSA, GA, CEX)", "Saldo no mês");
+	 $colunas = array("Empresa3", "Grupo", "Nível", /*"Professor",*/ "Aluno", "Data Entrada", "Data Saída", "Ano", "Mês", "Horas cobradas ", "Horas realizadas ", "Horas assistidas aluno ", "Faltas justificadas pelo aluno ", "Presença com justificativa do aluno ", "Frequência Real ", "Banco de horas ", "Reposições ", "Horas Perdidas (CSA, GA, CEX)", "Saldo no mês");
 			//}
 				  }
 	 
