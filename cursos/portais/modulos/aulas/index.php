@@ -17,14 +17,14 @@ $idProfessor = $_SESSION['idProfessor_SS'];
       <th>Status</th>
       <th>Nota</th>
       <th>Professor Assistido</th>
-       <th>Feedback</th>
+  <!--     <th>Feedback</th>-->
       <th></th>
       
     </tr>
   </thead>
   <tbody>
     <?php 
-	echo $FeedbackProfessor->selectFeedbackProfessorTrProfessor("modulos/aulas/feedbackProfessor.php", "modulos/aulas/feedbackProfessor.php?id=".$id, "#div_feedback_professor", " WHERE quemAssistiu = ".$idProfessor);
+	echo $FeedbackProfessor->selectFeedbackProfessorTrProfessor("modulos/aulas/feedbackProfessor.php", "modulos/aulas/feedbackProfessor.php?id=".$id, "#div_feedback_professor", " WHERE quemAssistiu = ".$idProfessor. " OR professor_idAssistido = ".$idProfessor);
 	?>
   </tbody>
   <tfoot>
@@ -35,7 +35,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
       <th>Status</th>
       <th>Nota</th>
       <th>Professor Assistido</th>
-       <th>Feedback</th>
+  <!--     <th>Feedback</th>-->
  	<th></th>
      
     </tr>
