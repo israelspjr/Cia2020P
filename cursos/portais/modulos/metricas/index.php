@@ -8,9 +8,9 @@
 	
 //	$idPlanoAcao = $_GET['id'];
 
- $where = " WHERE P.idProfessor = " . $_SESSION['idProfessor_SS'] . " AND PAG.inativo = 0 AND G.inativo = 0  ORDER BY PAG.idPlanoAcaoGrupo";
+// $where = " WHERE P.idProfessor = " . $_SESSION['idProfessor_SS'] . " AND PAG.inativo = 0 AND G.inativo = 0  ORDER BY PAG.idPlanoAcaoGrupo";
 
-	$valorTotal = $Professor->selectGrupoProfTr_query($where);
+//	$valorTotal = $Professor->selectGrupoProfTr_query($where);
 //	Uteis::pr($valor);
 ?>
 <div style="padding: 15px;">
@@ -20,7 +20,7 @@
   <div>
 <?php 
 
- echo $Complemento->selectAbordagemCheckbox($idPlanoAcao); 
+ echo $Complemento->selectAbordagemCheckbox($idPlanoAcao, 1); 
 ?>
 </div>
 </div>

@@ -49,11 +49,11 @@ if($idProfessor != '' && is_numeric($idProfessor)){
           <span class="placeholder">Campo Obrigatório</span> </p>
          <p>
           <label>Favorecido:</label>
-          <input type="text" name="favorecido" id="favorecido" class="" value="<?php echo $favorecido?>" />
+          <input type="text" name="favorecido" id="favorecido" class="required" value="<?php echo $favorecido?>" />
 		 </p>
           <p>
           <label>CPF:</label>
-          <input type="text" name="cpf" id="cpf" class="" value="<?php echo $cpf?>" />
+          <input type="text" name="cpf" id="cpf" class="required" value="<?php echo $cpf?>" />
           </p> 
           
       </div>

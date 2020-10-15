@@ -93,7 +93,7 @@ if ($candidato == 1) {
              
              <?php } ?>
                  <li <?php echo $disabled?>><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/bc/index.php', '#centro');"><svg class="glyph stroked external hard drive"><use xlink:href="#stroked-external-hard-drive"></use></svg> Banco de conhecimento</a></li>
-               <li <?php echo $disabled?>><a href="https://goo.gl/forms/Fyyp82VRgFeviZzs2" target="_new"><svg class="glyph stroked two messages"><use xlink:href="#stroked-two-messages"></use></svg> Usina de Ideias</a></li>
+          <!--     <li <?php echo $disabled?>><a href="https://goo.gl/forms/Fyyp82VRgFeviZzs2" target="_new"><svg class="glyph stroked two messages"><use xlink:href="#stroked-two-messages"></use></svg> Usina de Ideias</a></li>-->
               <li <?php echo $disabled?>><a href="https://www.facebook.com/groups/docentesincriveis/" target="_new"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> D.I.C.A.S</a></li>
           
           	  <?php if ($_SESSION['idProfessor_SS'] != -1) {?> 
