@@ -150,7 +150,7 @@ class ComplementoAbordagem extends Database {
 		$sql .= " AND portalProfessor = 1";	
 	}
 	
-	$sql .= "ORDER BY nome";
+	$sql .= " ORDER BY nome";
 	echo $sql;
     $result = $this -> query($sql);
     
