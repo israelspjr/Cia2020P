@@ -14,7 +14,8 @@ require_once "filtrosProf.php";?>
 </style>
 <?php
 
-echo $Relatorio->relatorioFrequencia($where, $tipo, false, $FME, $frequencia);
+echo $Relatorio->relatorioFrequencia($where, $tipo, false, $FME, $frequencia,"","","","","","","","","","",1);
+//$where = "", $tipo, $excel = false, $FME, $frequencia, $tipoR, $d1, $d2, $alunoN,$rh,$freqReal, $portalA, $PDF = false, $d1, $d2, $portalP
 ?>
 
 <script> 

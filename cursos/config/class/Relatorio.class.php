@@ -392,7 +392,7 @@ function relatorioFrequenciaPdf($where = "", $tipo, $excel = false, $FME, $frequ
 	return $topo. $html_base.$html;  
   }
   
-  function relatorioFrequencia($where = "", $tipo, $excel = false, $FME, $frequencia, $tipoR, $d1, $d2, $alunoN,$rh,$freqReal, $portalA, $PDF = false, $d1, $d2) {
+  function relatorioFrequencia($where = "", $tipo, $excel = false, $FME, $frequencia, $tipoR, $d1, $d2, $alunoN,$rh,$freqReal, $portalA, $PDF = false, $d1, $d2, $portalP) {
 	  
     $ClientePf = new ClientePf();
 	$ClientePj = new ClientePj();
@@ -965,7 +965,7 @@ WHERE 1
 		  }
           $html .= "<td >" .$onclick. $valor['grupo'] .$imgCobranca. "</td>";
 		  $html .= "<td>" . $nivelAluno . "</td>";
-		    if  (($rh == 1) || ($portalA != 1)) {
+		    if  ($portalP != 1) {
 		  //   if ($portalA != 1) {
         
 		  $html .= "<td >1" . $valor['nomeProfessor'] . "</td>";
