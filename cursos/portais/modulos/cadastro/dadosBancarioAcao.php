@@ -38,7 +38,7 @@ if($idDadosBancarios != '' && is_numeric($idDadosBancarios)){
 		
 		$assunto = "Atenção professor(a) $nome inseriu / Atualizou os dados bancários - Portal do professor";
 		
-					 $paraQuem = array("nome" => $config[0]['emailGeral'], "email" => "israelspjr@gmail.com" );
+					 $paraQuem = array("nome" => $config[0]['emailGeral'], "email" => $config[0]['emailGeral'] );
                      $rs = Uteis::enviarEmail($assunto, $msg, $paraQuem);
  
 

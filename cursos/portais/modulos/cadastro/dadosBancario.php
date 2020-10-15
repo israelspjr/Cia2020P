@@ -26,7 +26,7 @@ if($idProfessor != '' && is_numeric($idProfessor)){
     <form id="form_dadosBancario" class="validate" method="post" action="" onsubmit="return false" >
       <input type="hidden" name="professor_idProfessor" id="professor_idProfessor" value="<?php echo $idProfessor?>" />
       <input type="hidden" name="idDadosBancarios" id="idDadosBancarios" value="<?php echo $idDadosBancarios?>" />
-      <div class="esquerda">
+      <div class="linha-inteira">
         <p>
           <label>Banco:</label>
           <input type="text" name="banco" id="banco" class="required" value="<?php echo $banco?>" />
