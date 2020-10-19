@@ -7,6 +7,7 @@ class ComplementoAbordagem extends Database {
 	var $padrao;
 	var $nome;
 	var $excluido;
+	var $portalProfessor;
 
 	// constructor
 	function __construct() {
@@ -17,7 +18,7 @@ class ComplementoAbordagem extends Database {
 		$this -> padrao = "NULL";
 		$this -> nome = "NULL";
 		$this -> excluido = "0";
-
+		$this -> portalProfessor = "0";
 	}
 
 	function __destruct() {
@@ -48,17 +49,24 @@ class ComplementoAbordagem extends Database {
 	function setExcluido($value) {
 		$this -> excluido = ($value) ? $this -> gravarBD($value) : "0";
 	}
-  function getNome(){
-    return $this->nome;
-  }
-  function getItem(){
-    return $this->item;
-  }
+	
+	function setPortalProfessor($value) {
+		$this -> portaProfessor = ($value) ? $this -> gravarBD($value) : "0";
+	}
+	
+    function getNome(){
+   	    return $this->nome;
+ 	}
+  
+    function getItem(){
+    	return $this->item;
+    }
+	
 	/**
 	 * addComplementoAbordagem() Function
 	 */
 	function addComplementoAbordagem() {
-		$sql = "INSERT INTO ComplementoAbordagem (item, inativo, padrao, nome, excluido) VALUES ($this->item, $this->inativo, $this->padrao, $this->nome, $this->excluido)";
+		$sql = "INSERT INTO complementoAbordagem (item, inativo, padrao, nome, excluido, portalProfessor) VALUES ($this->item, $this->inativo, $this->padrao, $this->nome, $this->excluido, $this->portalProfessor)";
 		$result = $this -> query($sql, true);
 		return mysqli_insert_id($this -> connect);
 	}
@@ -67,7 +75,7 @@ class ComplementoAbordagem extends Database {
 	 * deleteComplementoAbordagem() Function
 	 */
 	function deleteComplementoAbordagem() {
-		$sql = "DELETE FROM ComplementoAbordagem WHERE idComplementoAbordagem = $this->idComplementoAbordagem";
+		$sql = "DELETE FROM complementoAbordagem WHERE idComplementoAbordagem = $this->idComplementoAbordagem";
 		$result = $this -> query($sql, true);
 	}
 
@@ -76,7 +84,7 @@ class ComplementoAbordagem extends Database {
 	 */
 	function updateFieldComplementoAbordagem($field, $value) {
 		$value = ($value != "NULL") ? $this -> gravarBD($value) : $value;
-		$sql = "UPDATE ComplementoAbordagem SET " . $field . " = " . $value . " WHERE idComplementoAbordagem = $this->idComplementoAbordagem";
+		$sql = "UPDATE complementoAbordagem SET " . $field . " = " . $value . " WHERE idComplementoAbordagem = $this->idComplementoAbordagem";
 		$result = $this -> query($sql, true);
 	}
 
@@ -84,7 +92,7 @@ class ComplementoAbordagem extends Database {
 	 * updateComplementoAbordagem() Function
 	 */
 	function updateComplementoAbordagem() {
-		$sql = "UPDATE ComplementoAbordagem SET item = $this->item, inativo = $this->inativo, padrao = $this->padrao, nome = $this->nome WHERE idComplementoAbordagem = $this->idComplementoAbordagem";
+		$sql = "UPDATE complementoAbordagem SET item = $this->item, inativo = $this->inativo, padrao = $this->padrao, nome = $this->nome, portalProfessor = $this->portalProfessor WHERE idComplementoAbordagem = $this->idComplementoAbordagem";
 		$result = $this -> query($sql, true);
 	}
 
@@ -92,7 +100,7 @@ class ComplementoAbordagem extends Database {
 	 * selectComplementoAbordagem() Function
 	 */
 	function selectComplementoAbordagem($where = "WHERE 1") {
-		$sql = "SELECT SQL_CACHE idComplementoAbordagem, item, inativo, padrao, nome, excluido FROM ComplementoAbordagem " . $where;
+		$sql = "SELECT SQL_CACHE idComplementoAbordagem, item, inativo, padrao, nome, excluido, portalProfessor FROM complementoAbordagem " . $where;
     //echo $sql;
 		return $this -> executeQuery($sql);
 	}
@@ -101,7 +109,7 @@ class ComplementoAbordagem extends Database {
 	 * selectComplementoAbordagemTr() Function
 	 */
 	function selectComplementoAbordagemTr($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "", $idPai = "", $caminhoModulo = "") {
-		$sql = "SELECT SQL_CACHE idComplementoAbordagem, item, inativo, padrao, nome, excluido FROM ComplementoAbordagem " . $where;
+		$sql = "SELECT SQL_CACHE idComplementoAbordagem, item, inativo, padrao, nome, excluido, portalProfessor FROM ComplementoAbordagem " . $where;
 		$result = $this -> query($sql);
 		if (mysqli_num_rows($result) > 0) {
 			$html = "";
@@ -151,7 +159,7 @@ class ComplementoAbordagem extends Database {
 	}
 	
 	$sql .= " ORDER BY nome";
-	echo $sql;
+	//echo $sql;
     $result = $this -> query($sql);
     
     $idioma = new Idioma();
