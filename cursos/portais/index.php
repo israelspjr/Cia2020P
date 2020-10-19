@@ -146,17 +146,16 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
  </div>
 </div>
 
- 
-		
-	
-<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+<div> 
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 <?php if ($appN == 2) { 
 		 require('menuProf.php');
 } else {
 		 require('menu.php'); } ?>
 </div><!--/.sidebar-->
-
+		
+	
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 	
   	<div id="divs_jquery"></div>
     
@@ -184,7 +183,7 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 	<?php } ?>
 </script>
 <?php }?>
-
+</div>
 </div>	<!--/.main-->
 
 </body>
