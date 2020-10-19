@@ -47,7 +47,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
           </select>
           <select multiple="multiple" name="sel_lista_padraoNome[]" id="sel_lista_padraoNome" style="display:none;">          	
           </select>
-        </p>  </div>
+        </p>  
   
         <p>
           <label>Empresa:</label>  
