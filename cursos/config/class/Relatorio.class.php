@@ -1773,7 +1773,7 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
 	INNER JOIN nivelEstudo AS NE on NE.idNivelEstudo = PA.nivelEstudo_IdNivelEstudo
 	INNER JOIN proposta AS P on  PA.proposta_idProposta = P.idProposta
 	 " .$where;
-	// echo $sql;
+	 echo $sql;
    $result = $this -> query($sql);
 	
 	 if (mysqli_num_rows($result) > 0) {
