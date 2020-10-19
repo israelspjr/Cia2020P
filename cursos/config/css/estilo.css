@@ -86,11 +86,12 @@ a{color:inherit;cursor:pointer;text-decoration:none;}
 @media (min-width:1001px) { 
 .col-lg-10 {
 	max-width: 70%;
+	margin-left:45px;
 	}
 
 }
 .col-lg-10 {
-	float: right;
+	float: left;
 	margin-top: 6px;
 }
 
