@@ -250,11 +250,11 @@ class RelatorioDesempenho extends Database {
 		$html2 = array();
 		$notasSM = array();
 		
-		if (mysql_num_rows($result) > 0) {
+		if (mysqli_num_rows($result) > 0) {
 
 			$AcompanhamentoCurso = new AcompanhamentoCurso();
 
-			while ($valor = mysql_fetch_array($result)) {
+			while ($valor = mysqli_fetch_array($result)) {
 
 				$idTipoItenRelatorioDesempenho = $valor['idTipoItenRelatorioDesempenho'];
 				$nomeItem = $valor['nome'];
@@ -269,7 +269,7 @@ class RelatorioDesempenho extends Database {
 			//	$nota = 0;			
 			
 			
-				while ($valor2 = mysql_fetch_array($result2)) {
+				while ($valor2 = mysqli_fetch_array($result2)) {
 
 					$html .= "<div>";
                     
