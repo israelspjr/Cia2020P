@@ -81,8 +81,8 @@ if (isset($_REQUEST["tr"])) {
 }
 
  if($clientePj !=""):?>
-<p align="right"><img src="<?php echo CAMINHO_IMG?>email.png" title="Enviar Demonstrativo Por Empresa" 
-    onclick="zerarCentro();carregarModulo('modulos/demonstrativoCobranca/disparoEmailRH.php?idClientePj=<?php echo $clientePj?>&mes=<?php echo $mes?>&ano=<?php echo $ano?>', '#centro')" />
+<!--<p align="right"><img src="<?php echo CAMINHO_IMG?>email.png" title="Enviar Demonstrativo Por Empresa" 
+    onclick="zerarCentro();carregarModulo('modulos/demonstrativoCobranca/disparoEmailRH.php?idClientePj=<?php echo $clientePj?>&mes=<?php echo $mes?>&ano=<?php echo $ano?>', '#centro')" />-->
     <img src="<?php echo CAMINHO_IMG?>pa.png" title="Gerar PDFs de Demonstrativos Por Empresa" style="    width: 28px;"
     onclick="zerarCentro();carregarModulo('modulos/demonstrativoCobranca/gerarPdf.php?idClientePj=<?php echo $clientePj?>&mes=<?php echo $mes?>&ano=<?php echo $ano?>', '#centro')" /></p>
 <?php endif;?>
@@ -103,7 +103,7 @@ if (isset($_REQUEST["tr"])) {
   </thead>
   <tbody>
   <?php
-		echo $DemonstrativoCobranca->selectDemonstrativoCobrancaTr($mes, $ano, $caminhoAtualizar, $onde, $where, "", "", "", 1);
+		echo $DemonstrativoCobranca->selectDemonstrativoCobrancaTrRH($mes, $ano, $caminhoAtualizar, $onde, $where, "", "", "", 1);
   ?>
   </tbody>
 

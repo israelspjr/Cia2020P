@@ -37,23 +37,11 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos', true);" />
       </p>
       </div>
       <div class="direita">
-   <!--        <p>
-          <label>Empresas Ativas:</label>
-          <input type="radio" name="status" id="status" value="0" onchange="buscar();" checked="checked" >Ativo &nbsp;
-          <input type="radio" name="status" id="status" value="1" onchange="buscar();" >Inativo &nbsp;
-          <input type="radio" name="status" id="status" value="-"  onchange="buscar();" >Ambos      
-        </p>-->
-        <p>
+         <p>
             <label>Empresa:</label>
             <?php echo $ClientePj->getNome($IdClientePj);?>
           </p>
           
-       <!--    <p>
-          <label>Empresa:</label>        
-          <select id="clientePj_idClientePj" name="clientePj_idClientePj">
-            <option value="-">Empresas</option>            
-          </select>
-        </p>-->
         <p>
           <label>Grupos Ativos:</label>
           <input type="radio" name="statusG" id="statusG" value="0" onchange="grupos();" checked="checked" >Ativo &nbsp;
@@ -104,25 +92,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos', true);" />
         })
 
     });
-/*    function buscar(){
-  var status, gerente, retorno;
-  $( "#clientePj_idClientePj" ).empty();
-  $( "#clientePj_idClientePj" ).append("<option value='-'>Empresas</option>");
-  status = $("#status:checked").val();
-  gerente = $("#idGerente option:selected").val();
-  retorno = $.ajax({
- //   url:"<?php echo CAMINHO_COBRANCA."demonstrativo/select_cliente.php"?>",
-	 url:"<?php echo CAMINHO_REL."modulos/grupo/select_cliente.php"?>",
-    type:"POST",
-    datatype: "html",
-    contentType: "application/x-www-form-urlencoded; charset=utf-8",
-    data:{status:status,gerente:gerente}   
-  });
-  retorno.done(function( html ) {
-    $( "#clientePj_idClientePj" ).append( html );
-  });
-  
-}*/
+
 function grupos(){
   var status, clientePj, retorno;
   $("#grupo_idGrupo").empty();
@@ -141,9 +111,5 @@ function grupos(){
   });
   
 }
-//$('#idGerente').attr('onchange', 'buscar()');
-//$('#clientePj_idClientePj').attr('onchange','grupos()');
 grupos();
-//ativarForm();
-//buscar();
 </script>
