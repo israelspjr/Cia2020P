@@ -98,8 +98,8 @@ if (isset($_REQUEST["tr"])) {
       <th>Demostrativo</th>           
       <th>Status</th>
       <th>Data de Vencimento</th> 
-      <th>Enviar Demonstrativo</th>
-    </tr>
+   <!--   <th>Enviar Demonstrativo</th>
+    --></tr>
   </thead>
   <tbody>
   <?php
