@@ -37,9 +37,9 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
     
      
       <div class="esquerda">
-       <label>Selecionados:</label>
+     <p>  <label>Selecionados:</label>
         <img src="<?php echo CAMINHO_IMG."menos2.png"?>" name="delIten" id="delIten" title="Remover iten" onclick="addIten('#sel_lista_padrao', '#sel_lista_opcional')"/>
-        <p>
+        </p><p>
           <select multiple="multiple" name="sel_lista_padrao[]" id="sel_lista_padrao" size="10" >
           	<?php foreach($arrItens_padrao as $iten){?>
             	<option value="<?php echo $iten[0]?>" ><?php echo $iten[1]?></option>
