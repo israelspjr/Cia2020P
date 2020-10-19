@@ -35,11 +35,9 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
   <div class="agrupa" id="div_form_Grupos">
     <form id="form_rel_pf" class="validate" method="post" action="" onsubmit="return false" >
     
-      <!--<p><strong>Campos</strong></p>-->
-      <p><strong>Filtros &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--<span id="texto1"> Abrir/Fechar Menu </span><img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar Menu" id="img_form_Menu" 
-onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" />--> </strong></p>
+     
       <div class="esquerda">
-      <div style="width:100%;float:left;">  <label>Selecionados:</label>
+       <label>Selecionados:</label>
         <img src="<?php echo CAMINHO_IMG."menos2.png"?>" name="delIten" id="delIten" title="Remover iten" onclick="addIten('#sel_lista_padrao', '#sel_lista_opcional')"/>
         <p>
           <select multiple="multiple" name="sel_lista_padrao[]" id="sel_lista_padrao" size="10" >
@@ -50,9 +48,7 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" />--> </s
           <select multiple="multiple" name="sel_lista_padraoNome[]" id="sel_lista_padraoNome" style="display:none;">          	
           </select>
         </p>  </div>
-                   
-        </p> 
-         
+  
         <p>
           <label>Empresa:</label>  
           <?php echo $nomeCliente ?>       
@@ -63,6 +59,13 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" />--> </s
                  <option value="-">Grupos</option>  
             </select>
         </p>
+         <p>
+            <label>Data da pesquisa:</label><br>
+            de
+            <input type="date" name="dataReferencia" id="dataReferencia" class="required" value="2018-09-01" />
+            a
+            <input type="date" name="dataReferencia2" id="dataReferencia2" class="required" value="<?php echo $dataAtual?>" />
+          </p>
         </div>
         <div class="esquerda">
         <p>  <label>Disponiveis para selecionar:</label>
@@ -73,24 +76,18 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" />--> </s
             	<option value="<?php echo $iten[0]?>" ><?php echo $iten[1]?></option>
             <?php }?>
           </select></p>
-         <p>
-            <label>Data da pesquisa:</label><br>
-            de
-            <input type="date" name="dataReferencia" id="dataReferencia" class="required" value="2018-09-01" />
-            a
-            <input type="date" name="dataReferencia2" id="dataReferencia2" class="required" value="<?php echo $dataAtual?>" />
-          </p>
+        
           <p>
           <Label>Mostrar comentários? </Label>
           <input type="checkbox" value="1" id="mostrarComentarios" name="mostrarComentarios" />
           </p>
         </div>
-        <div class="direita">
+     <!--   <div class="direita">
          <p>
           <Label>Mostrar PSA Pendentes </Label>
           <input type="checkbox" value="1" id="psaPendentes" name="psaPendentes" />
           </p> </div>
-      </div>
+      </div>-->
       
       <div class="linha-inteira" >
         <button class="bBlue" onclick="fecharMenu(0);geraRel()">
