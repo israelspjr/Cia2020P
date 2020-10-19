@@ -397,6 +397,10 @@ legend {
 	cursor:pointer;
 }
 
+.registrosBH th {
+	padding:9px;
+}
+
 .lista{
 	width:99%;	
 	margin-top: 10px;

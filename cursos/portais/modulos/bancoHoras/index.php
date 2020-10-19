@@ -152,7 +152,7 @@ $nome = $Grupo->Getnome($idGrupo);
 <legend>Consolidado Banco de Horas</legend>
 
 <div>
-    <table id="tb_lista_bancoHoras" class="registros">
+    <table id="tb_lista_bancoHoras" class="registrosBH">
       <thead>
         <tr> 
           <th <?php echo $onclick?> title="Ver Grupo">Grupo</th>
