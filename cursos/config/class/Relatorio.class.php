@@ -1689,6 +1689,7 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
     
  
   function relatorioAcompanhamento($where = "", $tipo, $excel = false,$mes_ini, $ano_ini, $mes_fim, $ano_fim, $relatorio,$unicoAluno, $trazerFrequencia, $campos, $camposNome) {
+	  error_reporting(E_ALL);
 
 	$Grupo = new Grupo();
 	$Idioma = new Idioma();
