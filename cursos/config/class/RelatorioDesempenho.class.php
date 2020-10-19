@@ -283,7 +283,7 @@ class RelatorioDesempenho extends Database {
 							$where .= " AND integranteGrupo_idIntegranteGrupo in (".$ids.")";	
 						}
 	
-					$valorNota = mysql_fetch_array($this -> query($sql));
+					$valorNota = mysqli_fetch_array($this -> query($sql));
 					
 					if ($Sonota == 1) {
 					

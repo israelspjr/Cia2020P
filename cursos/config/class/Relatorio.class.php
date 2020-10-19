@@ -1689,7 +1689,6 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
     
  
   function relatorioAcompanhamento($where = "", $tipo, $excel = false,$mes_ini, $ano_ini, $mes_fim, $ano_fim, $relatorio,$unicoAluno, $trazerFrequencia, $campos, $camposNome) {
-	  error_reporting(E_ALL);
 
 	$Grupo = new Grupo();
 	$Idioma = new Idioma();
@@ -1782,7 +1781,7 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
 	  $dia = "";
 
       while ($valor = mysqli_fetch_array($result)) { // Inicio loop geral
-		  
+		echo "teste";  
 		  $mesFim = date($ano_fim."-".$mes_fim."-t");
 		  
 		  $idPlanoAcaoGrupo = $valor['idPlanoAcaoGrupo'];
