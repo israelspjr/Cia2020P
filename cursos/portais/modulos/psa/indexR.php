@@ -52,13 +52,14 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" />--> </s
         </p>  </div><div style="float:left;width:50%">
                      <label>Disponiveis para selecionar:</label>
         <img src="<?php echo CAMINHO_IMG."mais2.png"?>" name="delIten" id="delIten" title="Adicionar iten" onclick="addIten('#sel_lista_opcional', '#sel_lista_padrao')"/>
-        <p>
+    <!--    <p>
           <select multiple="multiple" name="sel_lista_opcional" id="sel_lista_opcional" size="10" >
             <?php foreach($arrItens_opcional as $iten){?>
             	<option value="<?php echo $iten[0]?>" ><?php echo $iten[1]?></option>
             <?php }?>
           </select>
-        </p>                </div>
+        </p> -->
+          </div>
         <p>
           <label>Empresa:</label>  
           <?php echo $nomeCliente ?>       
