@@ -519,7 +519,7 @@ class DemonstrativoCobranca extends Database {
 			//	Uteis::pr( $sql);
                 $rsStatus = Uteis::executarQuery($sql);
 				
-                $cor = $rsStatus[0]['cor'] ? $rsStatus[0]['cor'] : "";
+           //     $cor = $rsStatus[0]['cor'] ? $rsStatus[0]['cor'] : "";
 				
 				$rsStatusEncerra = $rsStatus[0]['idStatusCobranca'];
                 $status = "";
