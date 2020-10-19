@@ -1,7 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
-
-
+error_reporting(E_All);
 $Relatorio = new Relatorio();
 
 require_once "filtros.php";?>
