@@ -24,7 +24,7 @@
                 <li class="active"><a id="ff" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/charts.php', '#centro');"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Início</a></li>
                  <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/grupo/index.php', '#centro');"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Grupos</a></li>
                  </li>
-<li><a class="" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/desempenho/indexI.php', '#centro');">
+<li><a class="" href="#" onclick="zerarCentro();fecharMenu(0);carregarModulo('/cursos/portais/modulos/desempenho/indexI.php', '#centro');">
 <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Relatório de desempenho
 						</a>
 					</li>
