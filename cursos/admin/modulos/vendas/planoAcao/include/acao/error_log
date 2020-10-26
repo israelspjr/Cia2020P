@@ -1,0 +1,7 @@
+[24-Aug-2016 09:31:01] PHP Fatal error:  Call to undefined method PlanoAcao::setTipoConrato() in /home/companhiadeidiom/public_html/cursos/admin/modulos/vendas/planoAcao/include/acao/planoAcao.php on line 107
+[24-Aug-2016 09:32:11] PHP Fatal error:  Call to undefined method PlanoAcao::setTipoContato() in /home/companhiadeidiom/public_html/cursos/admin/modulos/vendas/planoAcao/include/acao/planoAcao.php on line 107
+[28-Oct-2016 11:40:34] PHP Fatal error:  Call to a member function selectFocoCursoSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/vendas/planoAcao/include/acao/planoAcao.php on line 88
+[14-Aug-2017 10:09:07] PHP Fatal error:  Call to a member function updateFieldPlanoAcaoGrupo() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/vendas/planoAcao/include/acao/planoAcao.php on line 151
+[14-Aug-2017 10:11:58] PHP Fatal error:  Call to a member function updateFieldPlanoAcaoGrupo() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/vendas/planoAcao/include/acao/planoAcao.php on line 152
+[14-Aug-2017 10:13:43] PHP Fatal error:  Call to a member function updateFieldPlanoAcaoGrupo() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/vendas/planoAcao/include/acao/planoAcao.php on line 153
+[14-Aug-2017 10:16:18] PHP Fatal error:  Call to a member function updateFieldPlanoAcaoGrupo() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/vendas/planoAcao/include/acao/planoAcao.php on line 152

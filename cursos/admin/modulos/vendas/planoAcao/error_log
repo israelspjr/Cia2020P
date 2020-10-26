@@ -1,0 +1,2 @@
+[28-Oct-2016 10:19:52] PHP Fatal error:  Call to a member function selectClientePjSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/vendas/planoAcao/include/form/planoAcao.php on line 97
+[28-Oct-2016 11:23:19] PHP Parse error:  syntax error, unexpected $end in /home/companhiadeidiom/public_html/cursos/admin/modulos/vendas/planoAcao/include/form/planoAcao.php on line 283
