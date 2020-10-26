@@ -1,8 +1,8 @@
 <?php  
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 
-$IntegranteGrupo = new IntegranteGrupo();
-$Ocorrencia = new Ocorrencia();
+//$IntegranteGrupo = new IntegranteGrupo();
+//$Ocorrencia = new Ocorrencia();
 
 $camposNome = array("Nome", "Email", "Empresa", "Nome grupo", "Nível", "Idioma", "Valor Hora", "Professor", "Telefones", "Data entrada", "Data saída", "Notas", "Motivo", "Data retorno" );
 
