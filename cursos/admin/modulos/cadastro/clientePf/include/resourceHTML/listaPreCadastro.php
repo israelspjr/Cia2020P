@@ -10,7 +10,7 @@ $ClientePj = new ClientePj();
 <div id="cadastro_listaClientepf" class="">
   <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
     <div id="abas">
- <div id="aba_cadastro_clientepf" divExibir="div_cadastro_clientepf" class="aba_interna ativa">Filtros</div>
+ <!--<div id="aba_cadastro_clientepf" divExibir="div_cadastro_clientepf" class="aba_interna ativa">Filtros</div>-->
  <div id="modulos_clientepf" class="conteudo_nivel">
     <div id="div_cadastro_clientepf" class="div_aba_interna">
 
@@ -45,7 +45,7 @@ $ClientePj = new ClientePj();
 </div>
 </form>
 <!--<button class="button blue" onclick="filtro_postForm('img_form_Grupos2', 'form_filtra_Grupos2', '/cursos/admin/modulos/cadastro/clientePf/include/resourceHTML/listaPreCadastro2.php', '', '#lista_res2')">Buscar</button>-->
-<button class="button blue" id="buscar" onclick="filtro_postForm('img_form_Grupos2', 'form_2', '/cursos/admin/modulos/cadastro/clientePf/include/resourceHTML/listaPreCadastroR.php', '', '#lista_res2')">Buscar</button>
+<button class="button blue" id="buscar" onclick="filtro_postForm('img_form_Grupos2', 'form_2', '/cursos/admin/modulos/cadastro/clientePf/include/resourceHTML/listaPreCadastroR.php', '', 'lista_res2')">Buscar</button>
 
 
 </div>
