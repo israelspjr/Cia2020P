@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     try {
       if (empty($data_array["token_rdstation"]) && !empty($rdstation_token)) { $data_array["token_rdstation"] = $rdstation_token; }
       if (empty($data_array["identificador"]) && !empty($identifier)) { $data_array["identificador"] = $identifier; }
-      if (empty($data_array["c_utmz"])) { $data_array["c_utmz"] = $_COOKIE["__utmz"]; }
+//      if (empty($data_array["c_utmz"])) { $data_array["c_utmz"] = $_COOKIE["__utmz"]; }
       unset($data_array["password"], $data_array["password_confirmation"], $data_array["senha"], 
             $data_array["confirme_senha"], $data_array["captcha"], $data_array["_wpcf7"], 
             $data_array["_wpcf7_version"], $data_array["_wpcf7_unit_tag"], $data_array["_wpnonce"], 
