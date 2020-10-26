@@ -1,10 +1,5 @@
 <?php 
 	require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
-	//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/Uteis.class.php");	
-	
-	//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/Escola.class.php");
-	//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/Idioma.class.php");
-	//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/IdiomaBackgroundPerfil.class.php");
 	
 	$Escola = new Escola();	
 	$Idioma = new Idioma();	

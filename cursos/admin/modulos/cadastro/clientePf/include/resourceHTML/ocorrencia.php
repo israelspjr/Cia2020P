@@ -3,7 +3,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 
 $idClientePf = $_GET['id'];
 $Ocorrencia = new Ocorrencia();
-
+error_reporting(E_ALL);
 ?>
 
  <div>
