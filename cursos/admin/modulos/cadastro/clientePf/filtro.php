@@ -98,7 +98,7 @@ onclick="abrirNivelPagina(this, '<?php echo CAMINHO_CAD."clientePf/cadastro.php"
       </div>
       
       <div class="linha-inteira">
-        <button class="button blue" onclick="filtro_postForm('img_form_Grupos', 'form_filtra_Grupos', '<?php echo CAMINHO_CAD."clientePf/index.php"?>', '', '#lista_res')" >Buscar</button>
+        <button class="button blue" onclick="filtro_postForm('img_form_Grupos', 'form_filtra_Grupos', '<?php echo CAMINHO_CAD."clientePf/index.php"?>', '', 'lista_res')" >Buscar</button>
       </div>
     </form>
   </div>

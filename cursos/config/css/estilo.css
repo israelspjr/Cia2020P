@@ -427,6 +427,7 @@ legend {
 	right: 1.5%;
 	top: 10px;
 	cursor: pointer;
+	z-index:22px;
 }
 
 .agrupa{
