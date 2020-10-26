@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 $idProfessor = $_GET['id'];
 
 $cadastroDeCandidato = 0;	
-error_reporting(E_ALL);
+
 ?>
 
 <div id="cadastro_professor">
