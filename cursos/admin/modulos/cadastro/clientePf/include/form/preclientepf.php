@@ -5,6 +5,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 $Funcionario = new Funcionario();
 $PreClientePf = new PreClientePf();
 $ClientePj = new ClientePj();
+$Configuracoes = new Configuracoes();
 
 $valor = $PreClientePf-> selectPreClientepf("Where idPreClientePf = ".$idClientePf);
 
@@ -13,7 +14,7 @@ $email = $valor[0]['email'];
 $idFuncionario = $valor[0]['funcionario_idFuncionario'];
 $idClientePj = $valor[0]['clientePj_idClientePj'];
 
-
+$config = $Configuracoes->selectConfig();
 
 ?>
 
@@ -63,7 +64,7 @@ var site = "Novo Aluno";
 //	console.log(tel);
 		$.ajax({
   method: "POST",
-  url: "https://www.companhiadeidiomas.net/cursos/integraRD.php",
+  url: "https://<?php echo $config[0]['site'] ?>/cursos/integraRD.php",
   data: { nome: nome, email:email, tel:tel, fonte:site }
 })
   .done(function( msg ) {
