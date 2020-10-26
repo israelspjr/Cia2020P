@@ -27,6 +27,7 @@ if(($_POST['cpf'] != '') && ($_POST['password'] != '')){
 	}
 </style>
 <script src="<?php echo CAMINHO_CFG ?>js/login.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="../upload/imagem/empresa/<?php echo $config[0]['favIcon'];?>">
 </head>
 
 <body>
