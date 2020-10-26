@@ -226,7 +226,7 @@ $cidadeIdCidade = ID_CIDADE;
 			</div>
 
 			<div class="linha-inteira">
-				<button class="button blue" id="bt" onclick="filtro_postForm('img_form_Grupos', 'form_filtra_Grupos', '<?php echo CAMINHO_CAD."professor/contratado/index.php"?>', '', '#lista_res')" >
+				<button class="button blue" id="bt" onclick="filtro_postForm('img_form_Grupos', 'form_filtra_Grupos', '<?php echo CAMINHO_CAD."professor/contratado/index.php"?>', '', 'lista_res')" >
 					Buscar
 				</button>
 			</div>

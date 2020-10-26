@@ -107,7 +107,7 @@ function enviar() {
      //           alert("Selecione um Idioma antes de prosseguir");
      //   } else {
 	
-			filtro_postForm('img_form_Grupos', 'form_filtra_Grupos', '<?php echo CAMINHO_CAD."professor/candidato/index.php"?>', '', '#lista_res')
+			filtro_postForm('img_form_Grupos', 'form_filtra_Grupos', '<?php echo CAMINHO_CAD."professor/candidato/index.php"?>', '', 'lista_res')
 	
 //		}
 }
