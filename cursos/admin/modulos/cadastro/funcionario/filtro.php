@@ -23,7 +23,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
         </p>
       </div>     
       <div class="linha-inteira">
-        <button class="button blue" id="bt" onclick="filtro_postForm('img_form_Grupos', 'form_filtra_Grupos', '<?php echo CAMINHO_CAD."funcionario/index.php"?>', '', '#lista_res')" >Buscar</button>
+        <button class="button blue" id="bt" onclick="filtro_postForm('img_form_Grupos', 'form_filtra_Grupos', '<?php echo CAMINHO_CAD."funcionario/index.php"?>', '', 'lista_res')" >Buscar</button>
       </div>
     </form>
   </div>
