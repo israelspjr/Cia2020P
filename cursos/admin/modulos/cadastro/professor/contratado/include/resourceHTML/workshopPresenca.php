@@ -5,7 +5,7 @@ $caminhoAtualizar = CAMINHO_CAD."professor/contratado/include/resourceHTML/works
 $ondeAtualiza = "#div_workshop";
 //echo $idProfessor;
 $where = " WHERE professor_idProfessor = ".$idProfessor;
-error_reporting(E_ALL);
+
 ?>
 
 <fieldset>
@@ -26,7 +26,7 @@ error_reporting(E_ALL);
         </tr>
       </thead>
       <tbody>
-        <?php //echo $Presenca->selectPresencaProfessorTr($where);?>
+        <?php echo $Presenca->selectPresencaProfessorTr($where);?>
       </tbody>
       <tfoot>
        <tr>
