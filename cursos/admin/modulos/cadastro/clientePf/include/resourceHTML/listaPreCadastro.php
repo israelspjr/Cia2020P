@@ -9,8 +9,8 @@ $ClientePj = new ClientePj();
 
 <div id="cadastro_listaClientepf" class="">
   <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
-<!--    <div id="abas">
- <div id="aba_cadastro_clientepf" divExibir="div_cadastro_clientepf" class="aba_interna ativa">Dados Pessoais</div>-->
+    <div id="abas">
+ <div id="aba_cadastro_clientepf" divExibir="div_cadastro_clientepf" class="aba_interna ativa">Filtros</div>
  <div id="modulos_clientepf" class="conteudo_nivel">
     <div id="div_cadastro_clientepf" class="div_aba_interna">
 
