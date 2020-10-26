@@ -49,8 +49,7 @@ $ClientePj = new ClientePj();
 
 </fieldset>
 </div>
-</fieldset>
-</div>
+
 
 <div id="lista_res2" class="lista"></div>
 </div>
@@ -62,5 +61,5 @@ function buscar() {
 }
 buscar();
 
-abrirFormulario('div_form_Grupos2', 'img_form_Grupos2');
+/*abrirFormulario('div_form_Grupos2', 'img_form_Grupos2');*/
 </script> 
