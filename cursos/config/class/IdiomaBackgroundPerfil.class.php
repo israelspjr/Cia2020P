@@ -49,7 +49,7 @@ class IdiomaBackgroundPerfil extends Database {
 	function addIdiomabackgroundperfil() {
 		$sql = "INSERT INTO idiomaBackgroundPerfil (clientePf_idClientePf, idioma_idIdioma, escola_idEscola, obs) VALUES ($this->clientePfIdClientePf, $this->idiomaIdIdioma, $this->escolaIdEscola, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysql_insert_id($this -> connect);
+		return mysqli_insert_id($this -> connect);
 	}
 
 	/**
@@ -98,9 +98,9 @@ class IdiomaBackgroundPerfil extends Database {
 		LEFT JOIN escola AS E on E.idEscola = IB.escola_idEscola " . $where;
 		$result = $this -> query($sql);
 
-		if (mysql_num_rows($result) > 0) {
+		if (mysqli_num_rows($result) > 0) {
 			$html = "";
-			while ($valor = mysql_fetch_array($result)) {
+			while ($valor = mysqli_fetch_array($result)) {
 				$html .= "<tr>";
 				$html .= "<td onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?id=" . $valor['idIdiomaBackgroundPerfil'] . $idPai . "', '" . $caminhoAtualizar . $idPai . "', '$ondeAtualiza')\" >" . ($valor['idioma']) . "</td>";
 				$html .= "<td>" . $valor['nome'] . "</td>";
