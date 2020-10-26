@@ -407,6 +407,12 @@ legend {
 	margin-left: -1%;
 }
 
+.lista2{
+/*	width:99%;*/	
+	margin-top: 10px;
+	/*margin-left: -1%;*/
+}
+
 .menu_interno{
 	text-align: right;
 	width: 98%;

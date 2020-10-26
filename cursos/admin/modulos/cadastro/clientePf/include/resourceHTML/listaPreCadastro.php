@@ -51,7 +51,7 @@ $ClientePj = new ClientePj();
 </div>
 
 
-<div id="lista_res2" class="lista"></div>
+<div id="lista_res2" class="lista2"></div>
 </div>
 <script> 
 tabelaDataTable('tb_lista_pre2');
