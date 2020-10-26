@@ -1,8 +1,8 @@
 <?php  
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 
-//$IntegranteGrupo = new IntegranteGrupo();
-//$Ocorrencia = new Ocorrencia();
+$IntegranteGrupo = new IntegranteGrupo();
+$Ocorrencia = new Ocorrencia();
 
 $camposNome = array("Nome", "Email", "Empresa", "Nome grupo", "Nível", "Idioma", "Valor Hora", "Professor", "Telefones", "Data entrada", "Data saída", "Notas", "Motivo", "Data retorno" );
 
@@ -16,7 +16,7 @@ Histórico de participação em grupos
 </legend>
 
 <div id="lista_clientepf" class="lista">
-  <?php //echo $IntegranteGrupo->selectIntegranteGrupoTr_historicoInd(" AND P.clientePf_idClientePf = ".$idClientePf,1,"", false,"",1,$campos,$camposNome);?>
+  <?php echo $IntegranteGrupo->selectIntegranteGrupoTr_historicoInd(" AND P.clientePf_idClientePf = ".$idClientePf,1,"", false,"",1,$campos,$camposNome);?>
 </div>
 </fieldset>
 <!--<div>-->
