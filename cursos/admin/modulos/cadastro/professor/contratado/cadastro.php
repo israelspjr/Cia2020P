@@ -100,23 +100,23 @@ $cadastroDeCandidato = 0;
     
     <div id="div_aviso_financeiro" style="display:none" class="div_aba_interna">
      <div id="div_aviso_dadosBancario">
-        <?php require_once 'include/form/dadosBancario.php';?>
+        <?php //require_once 'include/form/dadosBancario.php';?>
       </div>
       <div id="div_impostosProfessor">
-        <?php require_once 'include/form/impostosProfessor.php';?>
+        <?php //require_once 'include/form/impostosProfessor.php';?>
       </div>
       <div id="div_creditoDebitoGrupo">
-        <?php require_once "include/resourceHTML/creditoDebitoGrupo.php" ?>
+        <?php //require_once "include/resourceHTML/creditoDebitoGrupo.php" ?>
       </div>
       <div id="div_outrosServicos">
-        <?php require_once "include/resourceHTML/outrosServicos.php" ?>
+        <?php //require_once "include/resourceHTML/outrosServicos.php" ?>
       </div>
       <div id="div_valorHora">
-        <?php require_once "include/resourceHTML/valorHoraHistorico.php" ?>
+        <?php //require_once "include/resourceHTML/valorHoraHistorico.php" ?>
       </div>
     </div>
     <div id="div_demo_financeiro" style="display:none" class="div_aba_interna">
-    	<?php require_once "include/resourceHTML/demonstrativos.php" ?>
+    	<?php //require_once "include/resourceHTML/demonstrativos.php" ?>
     </div>
     <div id="div_aviso2_professor" style="display:none" class="div_aba_interna">
       <?php require_once '../include/resourceHTML/aviso.php';?>

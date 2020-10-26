@@ -26,7 +26,7 @@ error_reporting(E_ALL);
         </tr>
       </thead>
       <tbody>
-        <?php echo $Presenca->selectPresencaProfessorTr($where);?>
+        <?php //echo $Presenca->selectPresencaProfessorTr($where);?>
       </tbody>
       <tfoot>
        <tr>
