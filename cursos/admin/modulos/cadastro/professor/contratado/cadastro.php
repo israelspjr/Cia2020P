@@ -95,7 +95,7 @@ $cadastroDeCandidato = 0;
      <?php require_once 'include/resourceHTML/PermissaoAula.php';?>
     </div>-->
      <div id="div_workshop" style="display:none" class="div_aba_interna">
-        <?php require_once 'include/resourceHTML/workshopPresenca.php';?>
+        <?php //require_once 'include/resourceHTML/workshopPresenca.php';?>
       </div>
     
     <div id="div_aviso_financeiro" style="display:none" class="div_aba_interna">
@@ -119,7 +119,7 @@ $cadastroDeCandidato = 0;
     	<?php //require_once "include/resourceHTML/demonstrativos.php" ?>
     </div>
     <div id="div_aviso2_professor" style="display:none" class="div_aba_interna">
-      <?php require_once '../include/resourceHTML/aviso.php';?>
+      <?php //require_once '../include/resourceHTML/aviso.php';?>
     </div>
     <?php } ?>
   </div>
