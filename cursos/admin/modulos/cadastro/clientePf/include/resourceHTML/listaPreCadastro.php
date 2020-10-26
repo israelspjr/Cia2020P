@@ -61,4 +61,6 @@ function buscar() {
 	$('#buscar').click();	
 }
 buscar();
+
+abrirFormulario('div_form_Grupos2', 'img_form_Grupos2');
 </script> 
