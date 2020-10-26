@@ -44,7 +44,7 @@
 
 .blue {
     color: #d9eef7;
-    border: solid 1px #0076a3;
+   /* border: solid 1px #0076a3;*/
     background: #dd3a4b;
     background: -webkit-gradient(linear, left top, left bottom, from(#dd3a4b), to(#af2e3b));
     background: -moz-linear-gradient(top, #dd3a4b, #af2e3b);
