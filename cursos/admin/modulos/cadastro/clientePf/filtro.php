@@ -106,7 +106,7 @@ onclick="abrirNivelPagina(this, '<?php echo CAMINHO_CAD."clientePf/cadastro.php"
 
 <fieldset>
   <legend>Cliente pessoa física</legend>
-  <div id="lista_res" class="lista"> </div>
+  <div id="lista_res" class="lista2"> </div>
 </fieldset>
 <script>
     $(function(){
