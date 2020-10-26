@@ -120,7 +120,7 @@ class Ocorrencia extends Database {
 		
 		$Funcionario = new Funcionario();
 		
-//		$Relatorio = new Relatorio();
+		$Relatorio = new Relatorio();
 		
 //		$colunas = array("Nome", "Data de contato", "Observação", "Data de Retorno", "Status");
 		
