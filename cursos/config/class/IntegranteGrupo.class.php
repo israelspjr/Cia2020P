@@ -495,7 +495,7 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 	}
 	
 	function selectIntegranteGrupoTr_historicoInd($where = "",$podeAtualizar,$idClientePj, $excel = false, $dataSaidaFiltro, $tipo, $campos,$camposNome ) {
-		
+		error_reporting(E_ALL);
 		if ($dataSaidaFiltro == "") {
 		$dataSaidaFiltro = date("Y-m-t");	
 		}
