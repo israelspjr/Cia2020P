@@ -60,6 +60,7 @@ if($idProfessor != '' && $idProfessor  > 0){
 	$dataSegundo = Uteis::exibirData($valorProfessor[0]['dataSegundo']);
 	$rgC = $valorProfessor[0]['rgC'];
 	$comprovante = $valorProfessor[0]['comprovante'];
+	$usoImagem = $valorProfessor[0]['usoImagem'];
 }
 
 $docsObrigatorios = $cadastroDeCandidato ? "" : "required";
@@ -208,6 +209,11 @@ $docsObrigatorios = $cadastroDeCandidato ? "" : "required";
           
             <input type="checkbox" name="tambemAluno" id="tambemAluno" value="1" <?php if($tambemAluno != 0){ ?> checked="checked" <?php } ?> />
             Também é aluno
+        </p>
+         <p>
+          
+            <input type="checkbox" name="usoImagem" id="usoImagem" value="1" <?php if($usoImagem != 0){ ?> checked="checked" <?php } ?> />
+            Permite uso de imagem
         </p>
         <p>
         <label>Empresa à qual pertence:</label>

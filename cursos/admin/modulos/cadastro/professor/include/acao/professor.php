@@ -218,7 +218,9 @@ if($_POST['acao']=="foto"){
 	$terceiro = ($_POST['terceiro'] == "1") ? "1" : "0";
 	$contratado = ($_POST['contratado'] == "1") ? "1" : "0";
 	$tambemAluno = ($_POST['tambemAluno'] == "1") ? "1" : "0";
+	$usoImagem = ($_POST['usoImagem'] == "1") ? "1" : "0";
 	$clientePj_idClientePj = $_POST['clientePj_idClientePj'];
+	
 	
 	if ($contratado == 1) {
 		$candidato = 0;
