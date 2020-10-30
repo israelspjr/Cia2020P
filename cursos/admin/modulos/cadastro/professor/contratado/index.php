@@ -24,7 +24,7 @@ if( isset($_REQUEST["tr"]) ){
 $where = "";
 
 $nome = $_REQUEST['nome'];
-if ($nome != '')   $where .= " AND p.nomeExibicao like '%".$nome.".%'";
+if ($nome != '')   $where .= " AND p.nome like '%".$nome.".%'";
 
 $pais_idPais = $_POST['pais_idPais'];
 if ($pais_idPais != '') $where .= " AND P.pais_idPais = ".$pais_idPais;
@@ -131,8 +131,8 @@ if( $vet != '' ) $where .= " AND P.vetado =".$vet;
 $disp =$_POST['disp'];
 if( $disp != '' ) $where .= " AND P.indisponivel =".$disp;
 
-$nome = $_POST['nome'];
-if( $nome != '' ) $where .= " AND P.nome like '%".$nome."%'";
+//$nome = $_POST['nome'];
+//if( $nome != '' ) $where .= " AND P.nome like '%".$nome."%'";
 
 $comgrupos =  $_POST['comGrupo'];
 
