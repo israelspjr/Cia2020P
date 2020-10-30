@@ -1,6 +1,6 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/admin.php");
-
+error_reporting(E_ALL);
 $PlanoAcao = new PlanoAcao();
 
 $idPlanoAcao = $_REQUEST['id'];
