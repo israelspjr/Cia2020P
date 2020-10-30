@@ -1,0 +1,1 @@
+[11-Oct-2017 15:20:20] PHP Fatal error:  Call to a member function selectGrupoSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relacionamento/busca/avulsa/include/form/avulsa.php on line 44

@@ -1,0 +1,3 @@
+[16-Nov-2015 17:23:51] PHP Fatal error:  Call to undefined method DiasBuscaAvulsaProfessor::setAceito() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relacionamento/busca/avulsa/include/acao/motivo.php on line 17
+[16-Nov-2015 17:26:08] PHP Fatal error:  Call to undefined method DiasBuscaAvulsaProfessor::setAceito() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relacionamento/busca/avulsa/include/acao/motivo.php on line 17
+[16-Nov-2015 17:33:45] PHP Fatal error:  Call to undefined method DiasBuscaAvulsaProfessor::setAceito() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relacionamento/busca/avulsa/include/acao/motivo.php on line 17

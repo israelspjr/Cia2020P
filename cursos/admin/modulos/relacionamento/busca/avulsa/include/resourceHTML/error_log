@@ -1,0 +1,4 @@
+[29-Feb-2016 14:00:07] PHP Fatal error:  Function name must be a string in /home/companhiadeidiom/public_html/cursos/config/class/Professor.class.php on line 714
+[26-Apr-2016 13:01:13] PHP Fatal error:  Call to a member function selectUfSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relacionamento/busca/avulsa/include/form/pesquisa.php on line 118
+[10-Oct-2017 16:05:11] PHP Fatal error:  Call to a member function selectOpcaoBuscaProfessorSelecionada() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Professor.class.php on line 1152
+[10-Oct-2017 16:06:19] PHP Fatal error:  Call to a member function selectDiasBuscaAvulsaProfessor() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Professor.class.php on line 1152

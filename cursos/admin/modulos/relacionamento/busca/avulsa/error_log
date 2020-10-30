@@ -1,0 +1,1 @@
+[11-Oct-2017 15:06:17] PHP Fatal error:  Call to undefined function  executarquery() in /home/companhiadeidiom/public_html/cursos/config/class/BuscaAvulsa.class.php on line 181
