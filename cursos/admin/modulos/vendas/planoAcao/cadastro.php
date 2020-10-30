@@ -8,7 +8,6 @@ $apenasVer = $PlanoAcao -> verificaStatusAprovacao($idPlanoAcao);
 ?>
 
 <div id="cadastro_PlanoAcao" class="">
-  <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
   
   <div id="abas">
     <div id="aba_cadastro_PlanoAcao" divExibir="div_cadastro_PlanoAcao" class="aba_interna ativa">Dados principais</div>    
@@ -25,6 +24,7 @@ $apenasVer = $PlanoAcao -> verificaStatusAprovacao($idPlanoAcao);
     <?php } ?>
     
   </div>
+  <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
   
   <div id="modulos_PlanoAcao" class="conteudo_nivel">
     <div id="div_cadastro_PlanoAcao" class="div_aba_interna">    
