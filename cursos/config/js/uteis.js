@@ -340,7 +340,7 @@ function postForm2(idForm, pagina, param, onde) {
 	
 
 	var form = /*$('#' +*/ idForm/*)*/;
-	console.log(form);
+//	console.log(form);
 	if (form.length > 0) {
 		form.submit();
 	} else {

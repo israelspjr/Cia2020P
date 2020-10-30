@@ -23,6 +23,9 @@ if( isset($_REQUEST["tr"]) ){
 //FILTROS
 $where = "";
 
+$nome = $_REQUEST['nome'];
+if ($nome != '')   $where .= " AND p.nomeExibicao like '%".$nome.".%'";
+
 $pais_idPais = $_POST['pais_idPais'];
 if ($pais_idPais != '') $where .= " AND P.pais_idPais = ".$pais_idPais;
 
@@ -86,6 +89,7 @@ if ($nivelF != "-") {
 	}
 }
 
+if ($nome == '') {
 
 if( $idioma != '' ){
 
@@ -113,7 +117,7 @@ if(strlen($conteudo)){
 //Uteis::pr($idsProfessor);
 
 $merge = implode(",", $idsProfessor);
-
+}
 
 $otima = $_POST['otima'];
 if( $otima != '' ) $where .= " AND P.otimaPerformance =".$otima;
