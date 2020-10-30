@@ -190,13 +190,13 @@ if($_POST['acao']=="foto"){
 	$arrayRetorno['mensagem'] = "Cadastro arquivado com sucesso.<br /><small>Por questões de segurança o cadastro não pode ser totalmente excluído, ele será arquivado.</small>";
 		
 }else{
-	echo $idProfessor;
+
 	if($idProfessor!= "" ){
 		$verificando = $Professor->selectProfessor("WHERE documentoUnico='".$_POST['documentoUnico']."' AND idProfessor <> ".$idProfessor);
 	}else{
 		$verificando = $Professor->selectProfessor("WHERE documentoUnico='".$_POST['documentoUnico']."'");
 	}
-	Uteis::pr(count($verificando));
+	Uteis::pr(mysqli_num_rows($verificando));
 	
 	if(count($verificando) > 0){
 		$arrayRetorno['mensagem'] = "Cadastro não efetuado, documento já cadastrado.";
