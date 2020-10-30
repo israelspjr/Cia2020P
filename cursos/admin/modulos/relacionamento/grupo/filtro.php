@@ -114,7 +114,7 @@ function grupos(){
   
 }
 function Enviar(){
-    filtro_postForm('img_form_Grupos', 'form_filtra_Grupos', '<?php echo CAMINHO_REL."grupo/index.php"?>', '', '#lista_Grupos')
+    filtro_postForm('img_form_Grupos', 'form_filtra_Grupos', '<?php echo CAMINHO_REL."grupo/index.php"?>', '', 'lista_Grupos')
 }
 $('#idGerente').attr('onchange', 'buscar()');
 $('#clientePj_idClientePj').attr('onchange','grupos()');
