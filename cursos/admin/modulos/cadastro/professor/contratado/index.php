@@ -24,7 +24,7 @@ if( isset($_REQUEST["tr"]) ){
 $where = " WHERE 1";
 
 $nome = $_REQUEST['nome'];
-if ($nome != '')   $where .= " AND p.nome like '%".$nome."%'";
+if ($nome != '')   $where .= " AND P.nome like '%".$nome."%'";
 
 $pais_idPais = $_POST['pais_idPais'];
 if ($pais_idPais != '') $where .= " AND P.pais_idPais = ".$pais_idPais;
