@@ -21,7 +21,7 @@ if( isset($_REQUEST["tr"]) ){
 
 //require ("include/acao/filtro.php");
 //FILTROS
-$where = "";
+$where = " WHERE 1";
 
 $nome = $_REQUEST['nome'];
 if ($nome != '')   $where .= " AND p.nome like '%".$nome."%'";
