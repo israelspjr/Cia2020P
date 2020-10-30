@@ -231,7 +231,7 @@ if ($excluido == 1) {
 	$where .= " AND P.excluido = 0";
 }*/
 
-
+echo $where;
 $menor5grupos = isset($_REQUEST['menor5grupos'])? $_REQUEST['menor5grupos']: 0;
 $excluido = isset($_REQUEST['excluido'])? $_REQUEST['excluido']: 0;
 if ($excluido == 1) {
