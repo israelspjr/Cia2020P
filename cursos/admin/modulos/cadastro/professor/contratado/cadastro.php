@@ -8,7 +8,7 @@ $cadastroDeCandidato = 0;
 ?>
 
 <div id="cadastro_professor">
-  <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
+ 
   <div id="abas">
     <div id="aba_cadastro_professor" divExibir="div_cadastro_professor" class="aba_interna ativa">Dados pessoais</div>
     <?php if($idProfessor != "" && $idProfessor > 0){ ?>
@@ -26,6 +26,7 @@ $cadastroDeCandidato = 0;
     <div id="aba_aviso2_professor" divExibir="div_aviso2_professor" class="aba_interna">Aviso</div>
     <?php } ?>
   </div>
+   <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
   <div id="modulos_professor"  class="conteudo_nivel" >
     <div id="div_cadastro_professor" class="div_aba_interna">
       <?php require_once '../include/form/professor.php';?>
