@@ -144,7 +144,7 @@ $whereG = " AND P.dataContratacao between '".$dataContratacao1."'  AND '".$dataC
 }
 
 //  echo $where;
-
+if ($nome == '') {
 //if($comgrupos!=""){
 	
 	if ($comgrupos == 1) {
@@ -222,7 +222,7 @@ $sql .=   " and P.idProfessor in (".$merge.")";
 	
 	}
 	
-
+}
 /*$menor5grupos = isset($_REQUEST['menor5grupos'])? $_REQUEST['menor5grupos']: 0;
 $excluido = isset($_REQUEST['excluido'])? $_REQUEST['excluido']: 0;
 if ($excluido == 1) {
