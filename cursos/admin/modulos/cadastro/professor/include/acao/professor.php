@@ -196,9 +196,9 @@ if($_POST['acao']=="foto"){
 	}else{
 		$verificando = $Professor->selectProfessor("WHERE documentoUnico='".$_POST['documentoUnico']."'");
 	}
-	Uteis::pr(mysqli_num_rows($verificando));
+	//Uteis::pr(mysqli_num_rows($verificando));
 	
-	if(count($verificando) > 0){
+	if(mysqli_num_rows($verificando) > 0){
 		$arrayRetorno['mensagem'] = "Cadastro não efetuado, documento já cadastrado.";
 		echo json_encode($arrayRetorno);
 		exit;
