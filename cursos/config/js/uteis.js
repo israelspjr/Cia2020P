@@ -336,6 +336,39 @@ function postForm(idForm, pagina, param, onde) {
 
 }
 
+function postForm2(idForm, pagina, param, onde) {
+	
+
+	var form = $('#' + idForm);
+
+	if (form.length > 0) {
+		form.submit();
+	} else {
+		submitForm = true;
+	}
+
+	if (submitForm) {
+		var parametros = form.serialize() + (param != undefined ? param : '');
+		showLoad();
+		$.post(pagina, parametros, function(e) {
+			if (onde != undefined && onde != '') {
+				$(onde).html(e);
+			} else {
+				acaoJson(e);
+			}
+			fecharNivel_load();
+		}).fail(function() {
+			alerta('Erro durante o processamento');
+			fecharNivel_load();
+		}).always(function() {
+			submitForm = false;
+		});
+	}
+
+	return false;
+
+}
+
 //Atualização para sortear data
 (function($) {
  
@@ -755,7 +788,7 @@ function retornoPadrao(onde, pg) {
 
 	if (onde == 'tr') {
 
-		postForm('', pg);
+		postForm2('', pg);
 		//ATUALIZARA APENAS A LINHA
 
 	} else if (pg == 'click') {
