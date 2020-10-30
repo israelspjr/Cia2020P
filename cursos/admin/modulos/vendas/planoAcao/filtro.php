@@ -91,7 +91,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
            -->                     
       </div>
       <div class="linha-inteira">
-        <button class="button blue" onclick="filtro_postForm('img_form_Grupos', 'form_filtra_Grupos', '<?php echo CAMINHO_VENDAS."planoAcao/index.php"?>', '', '#lista_res')" >Buscar</button>
+        <button class="button blue" onclick="filtro_postForm('img_form_Grupos', 'form_filtra_Grupos', '<?php echo CAMINHO_VENDAS."planoAcao/index.php"?>', '', 'lista_res')" >Buscar</button>
       </div>
     </form>
   </div>
