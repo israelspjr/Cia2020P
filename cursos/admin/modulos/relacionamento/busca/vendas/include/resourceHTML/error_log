@@ -1,0 +1,6 @@
+[26-Apr-2016 15:08:44] PHP Fatal error:  Call to a member function selectUfSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relacionamento/busca/vendas/include/form/pesquisa.php on line 75
+[26-Apr-2016 15:08:58] PHP Fatal error:  Call to a member function selectUfSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relacionamento/busca/vendas/include/form/pesquisa.php on line 75
+[26-Apr-2016 15:10:49] PHP Fatal error:  Call to a member function selectUfSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relacionamento/busca/vendas/include/form/pesquisa.php on line 75
+[26-Apr-2016 15:12:55] PHP Fatal error:  Call to a member function selectUfSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relacionamento/busca/vendas/include/form/pesquisa.php on line 75
+[26-Apr-2016 16:24:17] PHP Fatal error:  Call to a member function selectUfSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relacionamento/busca/vendas/include/form/pesquisa.php on line 74
+[01-Aug-2016 15:59:59] PHP Fatal error:  Class 'Professor' not found in /home/companhiadeidiom/public_html/cursos/admin/modulos/relacionamento/busca/vendas/include/resourceHTML/opcao.php on line 6
