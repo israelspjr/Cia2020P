@@ -143,8 +143,9 @@ function carregarModulo(arquivo, destino, depoisDeCarregar) {
 
 		//JOGAR NIVEL NA FRENTE DAS ABAS
 		var conteudo = $('.camada[nivel=' + nivel + ']').find('.conteudo_nivel');
+	
 		if (conteudo.length > 0)
-			conteudo.zIndex(parseInt(conteudo.zIndex()) + 1);
+			conteudo.css('z-index', ('z-index') + 1);//zIndex(parseInt(conteudo.zIndex()) + 1);
 
 		//EXECUTAR APENAS APÓS CARREGAR
 		if (depoisDeCarregar != undefined) {
@@ -168,7 +169,7 @@ function viraEditor(id) {
 	    images_upload_credentials: true,
 				relative_urls : false,
 		remove_script_host : false,
-		document_base_url : "http://www.companhiadeidiomas.net/cursos/upload/outros",
+		document_base_url : "/cursos/upload/outros",
 
 		
 		file_picker_callback: function(callback, value, meta) {
@@ -206,8 +207,8 @@ function viraEditor(id) {
     { title: 'Test template 2', content: 'Test 2' }
   ],
 		content_css: [
-//    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
-//    '//www.tinymce.com/css/codepen.min.css'
+    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+    '//www.tinymce.com/css/codepen.min.css'
   ]
 	});
 	$('#' + id).hide();
@@ -246,8 +247,8 @@ function viraEditor_lacuna(id) {
     { title: 'Test template 2', content: 'Test 2' }
   ],
 		content_css: [
- //   '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
- //   '//www.tinymce.com/css/codepen.min.css'
+    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+    '//www.tinymce.com/css/codepen.min.css'
   ],
   setup : function(editor) {
 			editor.addButton('botaoLacuna', {
@@ -301,39 +302,6 @@ function postFileForm(idForm) {
 
 function postForm(idForm, pagina, param, onde) {
 	
-
-	var form = $('#' + idForm);
-
-	if (form.length > 0) {
-		form.submit();
-	} else {
-		submitForm = true;
-	}
-
-	if (submitForm) {
-		var parametros = form.serialize() + (param != undefined ? param : '');
-		showLoad();
-		$.post(pagina, parametros, function(e) {
-			if (onde != undefined && onde != '') {
-				$(onde).html(e);
-			} else {
-				acaoJson(e);
-			}
-			fecharNivel_load();
-		}).fail(function() {
-			alerta('Erro durante o processamento');
-			fecharNivel_load();
-		}).always(function() {
-			submitForm = false;
-		});
-	}
-
-	return false;
-
-}
-
-function postForm2(idForm, pagina, param, onde) {
-	
 	var submitForm;
 	var form = $('#' + idForm);
 	if (onde != undefined && onde != '') {
@@ -367,6 +335,40 @@ function postForm2(idForm, pagina, param, onde) {
 	return false;
 
 }
+
+function postForm2(idForm, pagina, param, onde) {
+	
+
+	var form = $('#' + idForm);
+
+	if (form.length > 0) {
+		form.submit();
+	} else {
+		submitForm = true;
+	}
+
+	if (submitForm) {
+		var parametros = form.serialize() + (param != undefined ? param : '');
+		showLoad();
+		$.post(pagina, parametros, function(e) {
+			if (onde != undefined && onde != '') {
+				$(onde).html(e);
+			} else {
+				acaoJson(e);
+			}
+			fecharNivel_load();
+		}).fail(function() {
+			alerta('Erro durante o processamento');
+			fecharNivel_load();
+		}).always(function() {
+			submitForm = false;
+		});
+	}
+
+	return false;
+
+}
+
 //Atualização para sortear data
 (function($) {
  
@@ -429,21 +431,14 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 	opt.bJQueryUI = true;
 	opt.bAutoWidth = true;
 	opt.aLengthMenu = [50, 100, -1],[50, 100, "Todos"];
-/*	opt.stateSave = true;*/
 	opt.pageLength = 100;
-//	opt.fixedHeader = true;
-	
+
 	if (tipo == 'simples') {
 
 		opt.bPaginate = false;
 		opt.bInfo = true;
 		opt.bFilter = true;
-	//	opt.sPaginationType = "full_numbers";
 		opt.aaSorting = [[0, 'desc']];
-	/*	opt.aoColumnDefs = [{
-			"bVisible" : false,
-			"aTargets" : [0]
-		}];*/
 		opt.pageLength = 100;
 		
 	} else if (tipo == 'ordenaColuna') {
@@ -500,28 +495,10 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 		opt.aaSorting = [[0, 'desc']];
 		opt.pageLength = 100;
 		opt.stateSave = true;
-	}/*else if (tipo == 'ordenaData') {
-
-		opt.bPaginate = false;
-//		opt.bInfo = false;
-//		opt.bFilter = false;
-/*		opt.aoColumnDefs = [{
-			"bVisible" : true,
-			"aTargets" : [0]
-		}];
-		/*opt.aoColumns = [null, null, {
-		/*	"bVisible" : false,
-			"aTargets" : [0],
-			"sType" : "custom-date"
-		}, null, null,null];*/
-
-//	} 
-	else {
+	} else {
 
 		opt.bPaginate = true;
 		opt.sPaginationType = "full_numbers";
-		//opt.processing = true;
-        //opt.serverSide = true;
 
 	}
 
@@ -618,7 +595,6 @@ function acaoJson(val) {
 
 		var jsonR = $.parseJSON(val);
 		
-
 		//EXPORTA P EXCEL 
 		if (jsonR.excel != '' && jsonR.excel != undefined) {
 			window.open('data:application/vnd.ms-excel;charset=iso-8859-1, ' + encodeURIComponent(jsonR.excel));
@@ -664,8 +640,9 @@ function acaoJson(val) {
 			novoAviso();
 
 		//ENVIA MENSAGEM
-		if (jsonR.mensagem != undefined && jsonR.mensagem != '')
+		if (jsonR.mensagem != undefined && jsonR.mensagem != '') {
 			alerta(jsonR.mensagem);
+		}
 
 		//PAGINA A SER CARREGADA
 		if (jsonR.pagina != '' && jsonR.pagina != undefined) {
@@ -706,9 +683,6 @@ function acaoJson(val) {
 					$(jsonR.elementoAtualizar[i]).html(jsonR.valor2[i]);
 			}
 		}
-
-		//ABRE UM NIVEL
-		//if(jsonR.abrirNivelPagina != undefined) abrirNivelPagina(this, jsonR.abrirNivelPagina[0], jsonR.abrirNivelPagina[1], jsonR.abrirNivelPagina[2]);
 
 		//CLICAR NA ABA OU OTROS
 		if (jsonR.mudarAba != '' && jsonR.mudarAba != undefined)
@@ -847,7 +821,7 @@ function tipoDocumentoUnico(form) {
 		});
 		documentoUnico.addClass(novaClass);
 	}
-//	ativarForm();
+	//ativarForm();
 }
 
 function filtro_postForm(clicar, idForm, pagina, param, onde) {
@@ -876,7 +850,7 @@ function postForm_relatorio(img, obrigatorio, form, pagina, onde) {
 		if ($select.length > 0) {
 			var valor = $select.find(':selected').val();
 			if (valor == '' || valor == undefined) {
-				alerta('Selecione os campos que aparecerão no reatório');
+				alerta('Selecione os campos que aparecerão no relatório');
 				return false;
 			}
 		}
@@ -999,7 +973,9 @@ $('#sidebar-collapse').hide();
 $('#img_form_Menu').attr("onclick", "fecharMenu(1)");
 //abrirFormulario('menu_area', 'img_form_Menu')";
 $('.main').css("width", "100%");
-$('.main').css("margin-left","0%");
+$('.col-lg-10').css("margin-left","15px");
+$('.col-lg-10').css("max-width","100%");
+$('.col-lg-10').css("float","none");
 $('#menu_area').show();
 	} else {
 $('#sidebar-collapse').show();	
@@ -1007,6 +983,9 @@ $('#img_form_Menu').attr("onclick", "fecharMenu(0)");
 //abrirFormulario('menu_area', 'img_form_Menu')");
 $('.main').css("width", "");
 $('.main').css("margin-left","");
+$('.col-lg-10').css("max-width","70%");
+$('.col-lg-10').css("float","right");
+
 $('#menu_area').show();
 	}
 }
