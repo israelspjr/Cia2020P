@@ -196,6 +196,7 @@ if($_POST['acao']=="foto"){
 	}else{
 		$verificando = $Professor->selectProfessor("WHERE documentoUnico='".$_POST['documentoUnico']."'");
 	}
+	Uteis::pr($verificando);
 	
 	if(count($verificando) > 0){
 		$arrayRetorno['mensagem'] = "Cadastro não efetuado, documento já cadastrado.";
