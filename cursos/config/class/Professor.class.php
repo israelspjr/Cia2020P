@@ -407,7 +407,7 @@ class Professor extends Database
     function selectProfessor($where = "WHERE 1")
     {
         $sql = "SELECT SQL_CACHE idProfessor, id_migracao, candidato, pais_idPais, nome, nomeExibicao, sexo, dataNascimento, rg, tipoDocumentoUnico_idTipoDocumentoUnico, documentoUnico, senha, obs, inativo, foto, inss, ccm, curriculum, otimaPerformance, altaPerformance, dataContratacao, vetado, indisponivel, presencial, online, tradutor, consultor, imersao, estadoCivil_idEstadoCivil, dataCadastro, excluido, indicadoPor, cidadeOrigem, naoReceberEmail, skype, deixandoGrupo, chatClub, terceiro, tipoVeto, expSkype, sobre, tambemAluno, clientePj_idClientePj, dataCapacitacao, encontro, dataSegundo, rgC, comprovante, usoImagem FROM professor " . $where;
-        echo $sql;
+    //    echo $sql;
         return $this->executeQuery($sql);
     }
 
