@@ -2224,9 +2224,10 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
     INNER JOIN grupo AS G ON PAG.grupo_idGrupo = G.idGrupo
     INNER JOIN grupoClientePj AS GCNPJ ON GCNPJ.grupo_idGrupo = G.idGrupo
     INNER JOIN gerenteTem AS GER ON GER.clientePj_idClientePj = GCNPJ.clientePj_idClientePj  AND GER.dataExclusao IS NULL
-    LEFT JOIN clientePf AS CPF ON CPF.idClientePf = IG.clientePf_idClientePf ";
+    LEFT JOIN clientePf AS CPF ON CPF.idClientePf = IG.clientePf_idClientePf 
+	LEFT JOIN professor AS P on P.idProfessor = IG.professor_idProfessor";
 	
-	  $sql = "SELECT SQL_CACHE PIG.idPsaIntegranteGrupo, PAG.idPlanoAcaoGrupo, G.nome AS Grupo, CPF.nome AS nomeAluno, PIG.dataReferencia, CPF.idClientePf";
+	  $sql = "SELECT SQL_CACHE PIG.idPsaIntegranteGrupo, PAG.idPlanoAcaoGrupo, G.nome AS Grupo, CPF.nome AS nomeAluno, PIG.dataReferencia, CPF.idClientePf, P.nome AS nomeProfessor, P.idProfessor";
 	
 	if ($idProfessor > 0) {
 	
@@ -2459,12 +2460,24 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 			  $html .= $valor['Grupo'] . "</td>";
 				  } else if ($campo == 'aluno') {
 				
-				$onclick = " onclick=\"abrirNivelPagina(this, '" . CAMINHO_CAD . "clientePf/cadastro.php?id=" . $idClientePf . "', '', '')\" ";
+				 if ($valor['nomeAluno'] != ''){
 				
-             if(!$excel) { $html .= "<td ><img src=\"".CAMINHO_IMG ."\cad.png\" $onclick>" . $valor['nomeAluno'] . "</td>"; }
-			 else {
-				$html .=  "<td>".$valor['nomeAluno']."</td>";
-			 }
+						$onclick = " onclick=\"abrirNivelPagina(this, '" . CAMINHO_CAD . "clientePf/cadastro.php?id=" . $idClientePf . "', '', '')\" ";
+				
+             				if(!$excel) { $html .= "<td ><img src=\"".CAMINHO_IMG ."\cad.png\" $onclick>" . $valor['nomeAluno'] . "</td>"; }
+			 				else {
+								$html .=  "<td>".$valor['nomeAluno']."</td>";
+			 			}
+					  } else {
+						
+						$onclick = " onclick=\"abrirNivelPagina(this, '" . CAMINHO_CAD . "professor/contratado/cadastro.php?id=" . $valor['idProfessor'] . "', '', '')\" ";
+				
+             				if(!$excel) { $html .= "<td ><img src=\"".CAMINHO_IMG ."\cad.png\" $onclick>" . $valor['nomeProfessor'] . "</td>"; }
+			 				else {
+								$html .=  "<td>".$valor['nomeProfessor']."</td>";
+			 			}	
+							
+						}
 			  } else if ($campo == 'email') {
 
               $html .= "<td >" . $email . "</td>";
