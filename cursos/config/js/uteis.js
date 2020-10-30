@@ -348,7 +348,7 @@ function postForm2(idForm, pagina, param, onde) {
 	}
 
 	if (submitForm) {
-		var parametros = form.serialize() + (param != undefined ? param : '');
+		var parametros = ""; //form.serialize() + (param != undefined ? param : '');
 		showLoad();
 		$.post(pagina, parametros, function(e) {
 			if (onde != undefined && onde != '') {
