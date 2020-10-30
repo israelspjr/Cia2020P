@@ -274,7 +274,8 @@ if($_POST['acao']=="foto"){
 	$Professor->setClientePjIdClientePj($clientePj_idClientePj);
 	$Professor->setRgC($_POST['rgC_oculto']);
 	$Professor->setComprovante($_POST['comprovante_oculto']);
-
+	$Professor->setUsoImagem($usoImagem);
+	
 	//print_r($_POST);
 	//exit;
 	if($idProfessor != "" && $idProfessor > 0 ){
