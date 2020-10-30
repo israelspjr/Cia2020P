@@ -339,7 +339,7 @@ function postForm(idForm, pagina, param, onde) {
 function postForm2(idForm, pagina, param, onde) {
 	
 
-	var form = $('#' + idForm);
+	var form = /*$('#' +*/ idForm/*)*/;
 
 	if (form.length > 0) {
 		form.submit();
