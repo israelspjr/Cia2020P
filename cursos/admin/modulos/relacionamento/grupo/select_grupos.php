@@ -82,7 +82,7 @@ FROM
     $idGrupo[$i] = $gp[$i]['grupo_idGrupo'];
   endfor;
   $idGrupos = implode(",", $idGrupo);
-  Uteis::pr($idGrupos);
+  Uteis::pr(count($idGrupos));
   if (count($idGrupos) > 0) {
  $where .= "AND G.idGrupo IN(".$idGrupos.")";
   }
