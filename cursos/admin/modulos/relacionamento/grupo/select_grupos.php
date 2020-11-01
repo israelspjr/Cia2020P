@@ -52,8 +52,6 @@ switch ($status) {
 		*/
 }
 
-
-
 if(is_numeric($clientePj)){
   $gp = $grupo_pj->selectGrupoClientePj(" WHERE clientePj_idClientePj = ".$clientePj);
   for($i=0;$i<count($gp);$i++):
@@ -84,6 +82,7 @@ FROM
     $idGrupo[$i] = $gp[$i]['grupo_idGrupo'];
   endfor;
   $idGrupos = implode(",", $idGrupo);
+  Uteis::pr($idGrupos);
   if (count($idGrupos) > 0) {
  $where .= "AND G.idGrupo IN(".$idGrupos.")";
   }
