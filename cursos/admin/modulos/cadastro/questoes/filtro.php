@@ -55,9 +55,9 @@ $FocoCurso = new FocoCurso();
 		  </p>     
            
            
-        <p>
+    <!--    <p>
          <div id="kitMaterial"></div>
-        </p>
+        </p>-->
         <p> 
         <div id="nomeMaterial"></div>
         </p> 
@@ -101,7 +101,7 @@ eventDestacar(1);
 $('#idIdioma').attr('onchange', 'buscar()');
 
 
-function atualizaKitMaterialINF(){	
+/*function atualizaKitMaterialINF(){	
 <?php if ($idIdioma == '') { ?>
 	var idIdioma = $('#idIdioma').val();
 <?php } else { ?>
@@ -122,11 +122,11 @@ function atualizaKitMaterialINF(){
 	   $("#kitMaterial").hide();
 	   $("#nomeMaterial").hide(); 
 	}	
-}
+}*/
 
 
 function Multifuncao(){
-    atualizaKitMaterialINF();
+ //   atualizaKitMaterialINF();
  //   atualizarCargaHoraria();
 }
 function kitDescricao(kit){
