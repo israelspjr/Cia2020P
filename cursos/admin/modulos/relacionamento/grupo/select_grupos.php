@@ -83,7 +83,7 @@ FROM
   endfor;
   $idGrupos = implode(",", $idGrupo);
   Uteis::pr(count($idGrupos));
-  if (count($idGrupos) > 0) {
+  if (count($idGrupos) > 1) {
  $where .= "AND G.idGrupo IN(".$idGrupos.")";
   }
 	}
