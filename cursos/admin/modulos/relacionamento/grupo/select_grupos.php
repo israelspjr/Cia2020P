@@ -89,7 +89,7 @@ FROM
   }
 	}
 }
-//echo $where;
+echo $where;
 $where .= " GROUP BY G.nome ORDER BY G.nome ASC ";
 $resp = $grupo->selectGrupo($where, " AS G");
 for($i=0;$i<count($resp);$i++):
