@@ -57,10 +57,10 @@ $FocoCurso = new FocoCurso();
            
     <!--    <p>
          <div id="kitMaterial"></div>
-        </p>-->
+        </p>
         <p> 
         <div id="nomeMaterial"></div>
-        </p> 
+        </p> -->
       
     
         
@@ -129,7 +129,7 @@ function Multifuncao(){
  //   atualizaKitMaterialINF();
  //   atualizarCargaHoraria();
 }
-function kitDescricao(kit){
+/*function kitDescricao(kit){
 <?php if ($idIdioma == '') { ?>
 	var idIdioma = $('#idIdioma').val();
 <?php } else { ?>
@@ -150,7 +150,7 @@ function kitDescricao(kit){
     $.post('<?php echo CAMINHO_VENDAS?>planoAcao/include/acao/planoAcao.php',{acao:"nomeMaterial", idIdioma:idIdioma, idNivelEstudo:idNivelEstudo, idFocoCurso:idFocoCurso, idKitMaterial:idKitMaterial}, function(e){
     $('#nomeMaterial').html(e);
     }); 
-}
+}*/
 
 function focoDoCurso(){
   var idIdioma = $('#idIdioma').val();
