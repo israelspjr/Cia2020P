@@ -305,7 +305,12 @@ function postForm(idForm, pagina, param, onde) {
 	var submitForm;
 	var form = $('#' + idForm);
 	if (onde != undefined && onde != '') {
-		var ondeR = $('#' + onde);
+		var n = onde.indexOf("#");
+		if (n > -1) {
+			var ondeR = $(onde);	
+		} else {
+			var ondeR = $('#' + onde);
+		}
 	}
 
 	if (form.length > 0) {
