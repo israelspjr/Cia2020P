@@ -82,13 +82,13 @@ FROM
     $idGrupo[$i] = $gp[$i]['grupo_idGrupo'];
   endfor;
   $idGrupos = implode(",", $idGrupo);
-  Uteis::pr(count($idGrupos));
+//  Uteis::pr(count($idGrupos));
   if (count($idGrupos) > 1) {
  $where .= "AND G.idGrupo IN(".$idGrupos.")";
   }
 	}
 }
-echo $where;
+//echo $where;
 $where .= " GROUP BY G.nome ORDER BY G.nome ASC ";
 $resp = $grupo->selectGrupo($where, " AS G");
 for($i=0;$i<count($resp);$i++):
