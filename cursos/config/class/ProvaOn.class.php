@@ -166,7 +166,7 @@ class ProvaOn extends Database {
 		    	$html .= "<td>" . $nomeIdioma . "</td>";
 				$html .= "<td>" . $NivelEstudo->getNome($valor['nivelEstudo_IdNivelEstudo']) . "</td>";
 				$html .= "<td>" . $FocoCurso->getNome($valor['focoCurso_IdFocoCurso']) . "</td>";
-				$html .= "<td>" . $nomeMaterial. "</td>";
+			//	$html .= "<td>" . $nomeMaterial. "</td>";
 				$html .= "<td>".$obs."</td>";
 				$html .= "<td>" . $inativo . "</td>";
 				$html .= "<td onclick=\"deletaRegistro('" . $caminhoModulo . "grava.php', " . $valor['idProvaOn'] . ", '$caminhoAtualizar', '$ondeAtualiza')\">" . "<center><img src=\"" . CAMINHO_IMG . "excluir.png\"></center>" . "</td>";

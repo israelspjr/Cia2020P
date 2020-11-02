@@ -18,8 +18,8 @@ $ProvaOn = new ProvaOn();
             <th>Idioma</th>
             <th>Nível</th>
             <th>Foco</th>
-            <th>Kit</th>
-           <th>Observações</th>
+      <!--      <th>Kit</th>
+          --> <th>Observações</th>
             <th>Status</th>
             <th></th>
           </tr>
@@ -43,7 +43,7 @@ $ProvaOn = new ProvaOn();
             <th>Idioma</th>
            <th>Nível</th>
             <th>Foco</th>
-            <th>Kit</th>
+         <!--   <th>Kit</th>-->
             <th>Observações</th>
             <th>Status</th>
             <th></th>
