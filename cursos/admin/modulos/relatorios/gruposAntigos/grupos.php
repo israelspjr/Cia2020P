@@ -15,6 +15,8 @@ $idProfessor = $_REQUEST['idProfessor'];
 				<th>Plano de ação</th>
 				<th>Grupo</th>
 				<th>Nível</th>
+                <th>Data</th>
+                <th>Status</th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -23,6 +25,8 @@ $idProfessor = $_REQUEST['idProfessor'];
 				<th>Plano de ação</th>
 				<th>Grupo</th>
 				<th>Nível</th>
+                 <th>Data</th>
+                <th>Status</th>
 			</tr>
 		</tfoot>
 		<tbody>
