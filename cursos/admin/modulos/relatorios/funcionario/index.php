@@ -1,7 +1,5 @@
 <?php  
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/Uteis.class.php");
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/TipoEnderecoVirtual.class.php");
 
 $TipoEnderecoVirtual = new TipoEnderecoVirtual();
 
@@ -32,7 +30,7 @@ foreach($rsTipoEnderecoVirtual as $valor) $arrItens_opcional[] = array(0 => $val
 ?>
 
 <fieldset>
-  <legend>Relatório de Cliente p. física</legend>
+  <legend>Relatório de Funcionários</legend>
   <img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar formuário" id="img_form_rel" 
 onclick="abrirFormulario('div_form_rel', 'img_form_rel');" />
   <div class="agrupa" id="div_form_rel">
