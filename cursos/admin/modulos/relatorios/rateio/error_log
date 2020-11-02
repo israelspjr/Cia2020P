@@ -1,0 +1,1 @@
+[23-Sep-2016 10:12:31] PHP Fatal error:  Call to a member function selectTipoEnderecoVirtual() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/rateio/index.php on line 36

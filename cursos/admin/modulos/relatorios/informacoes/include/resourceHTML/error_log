@@ -1,0 +1,1 @@
+[12-Feb-2016 13:28:34] PHP Fatal error:  Call to undefined method Uteis::formatarData() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1283

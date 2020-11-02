@@ -1,0 +1,2 @@
+[25-Apr-2016 09:50:03] PHP Fatal error:  Call to undefined method Relatorio::relatorioPagConsolidado() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/pagConsolidado/include/resourceHTML/pagamento.php on line 25
+[25-Apr-2016 10:43:33] PHP Fatal error:  Call to undefined method Uteis::retornaNome() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1964

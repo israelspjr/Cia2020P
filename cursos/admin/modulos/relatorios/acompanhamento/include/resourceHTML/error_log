@@ -1,0 +1,10 @@
+[27-Jan-2016 08:58:01] PHP Fatal error:  Call to undefined function  executarquery() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1102
+[16-Feb-2016 16:57:45] PHP Fatal error:  Cannot break/continue 1 level in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/acompanhamento/include/acao/filtros.php on line 37
+[17-Feb-2016 10:52:18] PHP Fatal error:  Call to a member function format() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1198
+[17-Feb-2016 12:41:25] PHP Fatal error:  Call to a member function getPAG_atual() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1141
+[26-Apr-2016 12:08:49] PHP Fatal error:  Call to undefined method Proposta::getIdIdioma() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1152
+[27-Apr-2016 09:48:03] PHP Fatal error:  Out of memory (allocated 212598784) (tried to allocate 207626241 bytes) in /home/companhiadeidiom/public_html/cursos/config/class/Uteis.class.php on line 549
+[19-May-2017 10:34:50] PHP Fatal error:  Call to a member function get_faltaJustificadaPresenca() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1585
+[19-May-2017 10:35:59] PHP Fatal error:  Call to a member function get_faltaJustificadaPresenca() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1586
+[19-May-2017 10:36:26] PHP Fatal error:  Call to a member function get_faltaJustificadaPresenca() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1586
+[19-May-2017 10:37:01] PHP Fatal error:  Call to a member function get_faltaJustificadaPresenca() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1586

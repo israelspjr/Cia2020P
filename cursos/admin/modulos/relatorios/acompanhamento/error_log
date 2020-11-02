@@ -1,0 +1,1 @@
+[22-Jan-2016 11:28:52] PHP Fatal error:  Call to a member function selectGerenteSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/acompanhamento/index.php on line 37

@@ -1,0 +1,9 @@
+[25-Sep-2015 08:59:14] PHP Fatal error:  Call to undefined method BancoHoras::selectBancoHoras_qtdHorasOpcao() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1787
+[25-Sep-2015 08:59:26] PHP Fatal error:  Call to undefined method BancoHoras::selectBancoHoras_qtdHorasOpcao() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1787
+[25-Sep-2015 10:45:13] PHP Fatal error:  Call to undefined method BancoHoras::selectBancoHoras_qtdHorasOpcao() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1787
+[25-Sep-2015 10:49:41] PHP Fatal error:  Call to undefined method BancoHoras::selectBancoHoras_qtdHorasOpcao() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1787
+[25-Sep-2015 10:56:42] PHP Fatal error:  Call to undefined method BancoHoras::selectBancoHoras_qtdHorasOpcao() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1787
+[29-Sep-2015 15:43:23] PHP Fatal error:  Call to a member function getPAG_total() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/banco/include/resourceHTML/banco.php on line 12
+[30-Sep-2015 12:29:31] PHP Fatal error:  Cannot use [] for reading in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/banco/include/resourceHTML/banco.php on line 26
+[12-Nov-2015 16:30:20] PHP Fatal error:  Cannot break/continue 1 level in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/banco/include/resourceHTML/banco.php on line 38
+[07-Nov-2016 16:50:53] PHP Fatal error:  Using $this when not in object context in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/banco/include/acao/filtros.php on line 75

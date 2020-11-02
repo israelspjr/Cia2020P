@@ -1,0 +1,2 @@
+[09-Mar-2016 09:54:33] PHP Fatal error:  Using $this when not in object context in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/banco/include/acao/banco.php on line 157
+[27-Jul-2016 10:03:46] PHP Fatal error:  Call to a member function selectAulaGrupoProfessor_periodo() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/banco/include/acao/filtros.php on line 49

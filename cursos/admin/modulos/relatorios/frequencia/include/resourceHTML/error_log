@@ -1,0 +1,44 @@
+[12-Nov-2015 16:51:34] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (01-011-2015) at position 0 (0): Unexpected character' in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php:33
+Stack trace:
+#0 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php(33): DateTime->__construct('01-011-2015')
+#1 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/resourceHTML/frequencia.php(6): require_once('/home/companhia...')
+#2 {main}
+  thrown in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php on line 33
+[12-Nov-2015 16:51:38] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (01-011-2015) at position 0 (0): Unexpected character' in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php:33
+Stack trace:
+#0 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php(33): DateTime->__construct('01-011-2015')
+#1 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/resourceHTML/frequencia.php(6): require_once('/home/companhia...')
+#2 {main}
+  thrown in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php on line 33
+[13-Nov-2015 15:46:14] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (01-010-2015) at position 0 (0): Unexpected character' in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php:33
+Stack trace:
+#0 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php(33): DateTime->__construct('01-010-2015')
+#1 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/resourceHTML/frequencia.php(6): require_once('/home/companhia...')
+#2 {main}
+  thrown in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php on line 33
+[16-Nov-2015 09:28:44] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (01-011-2015) at position 0 (0): Unexpected character' in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php:33
+Stack trace:
+#0 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php(33): DateTime->__construct('01-011-2015')
+#1 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/resourceHTML/frequencia.php(6): require_once('/home/companhia...')
+#2 {main}
+  thrown in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php on line 33
+[16-Nov-2015 09:29:11] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (01-011-2015) at position 0 (0): Unexpected character' in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php:33
+Stack trace:
+#0 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php(33): DateTime->__construct('01-011-2015')
+#1 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/resourceHTML/frequencia.php(6): require_once('/home/companhia...')
+#2 {main}
+  thrown in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php on line 33
+[16-Nov-2015 09:29:21] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (01-011-2015) at position 0 (0): Unexpected character' in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php:33
+Stack trace:
+#0 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php(33): DateTime->__construct('01-011-2015')
+#1 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/resourceHTML/frequencia.php(6): require_once('/home/companhia...')
+#2 {main}
+  thrown in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php on line 33
+[16-Nov-2015 09:45:44] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (01-011-2015) at position 0 (0): Unexpected character' in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php:35
+Stack trace:
+#0 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php(35): DateTime->__construct('01-011-2015')
+#1 /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/resourceHTML/frequencia.php(6): require_once('/home/companhia...')
+#2 {main}
+  thrown in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/include/acao/filtros.php on line 35
+[25-May-2016 14:48:23] PHP Fatal error:  Call to a member function getEmail() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 307
+[22-Sep-2016 15:03:37] PHP Fatal error:  Call to undefined method Uteis::query() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 339

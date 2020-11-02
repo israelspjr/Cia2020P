@@ -1,0 +1,5 @@
+[07-Nov-2016 10:04:20] PHP Fatal error:  Call to undefined method Relatorio::relatorioReversaoPsa() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/reversaoPsa/include/resourceHTML/reversaoPsa.php on line 13
+[07-Nov-2016 10:05:15] PHP Fatal error:  Call to undefined method Relatorio::relatorioReversaoPsa() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/reversaoPsa/include/resourceHTML/reversaoPsa.php on line 13
+[07-Nov-2016 10:29:08] PHP Fatal error:  Call to undefined method Relatorio::relatorioReversaoPsa() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/reversaoPsa/include/resourceHTML/reversaoPsa.php on line 13
+[06-Dec-2016 11:16:17] PHP Fatal error:  Call to a member function getnome() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 2469
+[08-Mar-2017 11:15:58] PHP Fatal error:  Class 'RelatorioNovo' not found in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/reversaoPsa/include/resourceHTML/reversaoPsa.php on line 4

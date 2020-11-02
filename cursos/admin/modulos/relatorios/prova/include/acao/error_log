@@ -1,0 +1,7 @@
+[03-Jun-2016 17:14:37] PHP Fatal error:  Call to undefined method Relatorio::relatorioProva() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/prova/include/acao/prova.php on line 13
+[03-Jun-2016 17:18:16] PHP Fatal error:  Call to undefined method Relatorio::relatorioProva() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/prova/include/acao/prova.php on line 13
+[24-Aug-2016 15:40:29] PHP Fatal error:  Call to undefined method Relatorio::relatorioProva() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/prova/include/acao/prova.php on line 13
+[24-Aug-2016 16:03:10] PHP Fatal error:  Call to undefined method Relatorio::relatorioProva() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/prova/include/acao/prova.php on line 13
+[25-Aug-2016 16:37:17] PHP Fatal error:  Call to undefined method Relatorio::relatorioProva() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/prova/include/acao/prova.php on line 13
+[26-Oct-2016 07:50:45] PHP Fatal error:  Call to undefined method Relatorio::relatorioProva() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/prova/include/acao/prova.php on line 13
+[26-Oct-2016 08:58:35] PHP Fatal error:  Call to undefined method Relatorio::relatorioProva() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/prova/include/acao/prova.php on line 13

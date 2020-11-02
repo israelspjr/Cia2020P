@@ -1,0 +1,5 @@
+[03-May-2016 15:53:22] PHP Fatal error:  Call to undefined method BancoHoras::selectBancoHoras_qtdHorasOpcao() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 3301
+[04-May-2016 10:43:51] PHP Fatal error:  Call to a member function selectGerenteTemBH() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/empresa/index.php on line 17
+[04-May-2016 11:58:30] PHP Fatal error:  Call to undefined method Uteis::rs() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 3268
+[04-May-2016 19:27:25] PHP Fatal error:  Using $this when not in object context in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/empresa/index.php on line 44
+[04-May-2016 19:27:59] PHP Fatal error:  Call to undefined method Uteis::executeQuery() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/empresa/index.php on line 44

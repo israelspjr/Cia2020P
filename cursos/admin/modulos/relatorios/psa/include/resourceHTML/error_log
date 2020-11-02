@@ -1,0 +1,6 @@
+[15-Feb-2016 14:49:10] PHP Parse error:  syntax error, unexpected $end, expecting T_STRING or T_VARIABLE or '$' in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1695
+[10-Mar-2016 16:03:58] PHP Fatal error:  Call to undefined method Relatorio::relatorioPsaPendentes() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/psa/include/resourceHTML/psa.php on line 19
+[10-Mar-2016 16:51:32] PHP Fatal error:  Call to undefined method ClientePf::getEmails() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1551
+[10-Mar-2016 17:21:42] PHP Fatal error:  Call to undefined function  data() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1520
+[01-Jul-2016 10:40:49] PHP Fatal error:  Class 'Relatorio' not found in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/psa/include/resourceHTML/psa.php on line 4
+[05-Sep-2016 11:24:52] PHP Fatal error:  Call to a member function selectIntegranteGrupo() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1600

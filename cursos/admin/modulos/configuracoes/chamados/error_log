@@ -1,0 +1,2 @@
+[04-Nov-2015 09:08:44] PHP Fatal error:  Call to undefined method Chamados::montaTb() in /home/companhiadeidiom/public_html/cursos/config/class/Chamados.class.php on line 194
+[16-Feb-2016 11:39:35] PHP Fatal error:  Call to a member function selectFuncionarioSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/configuracoes/chamados/filtro.php on line 54

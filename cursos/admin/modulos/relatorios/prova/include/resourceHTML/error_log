@@ -1,0 +1,7 @@
+[11-May-2016 15:59:10] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 753
+[03-Nov-2016 16:58:33] PHP Fatal error:  Call to a member function AcompanhamentoPorKit() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 941
+[03-Nov-2016 18:29:19] PHP Fatal error:  Call to a member function selectPlanoAcaoGrupo() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 957
+[03-Nov-2016 18:30:07] PHP Fatal error:  Call to a member function selectPlanoAcao() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 959
+[09-May-2017 10:32:31] PHP Fatal error:  Call to undefined function  aulagrupoprofessor() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1028
+[09-May-2017 10:33:42] PHP Fatal error:  Call to a member function getNome() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1091
+[09-May-2017 10:34:52] PHP Fatal error:  Call to a member function getNome() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1092

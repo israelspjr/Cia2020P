@@ -1,0 +1,20 @@
+[14-Sep-2017 16:55:03] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 16:55:35] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 16:55:49] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 16:56:01] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 16:56:58] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:12:19] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:12:48] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:16:11] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:19:44] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:19:50] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:19:57] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:21:54] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:24:58] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:25:11] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:25:59] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:27:01] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:27:13] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[14-Sep-2017 17:27:19] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioCredDeb() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/index.php on line 80
+[15-Sep-2017 10:13:50] PHP Fatal error:  Call to a member function montaTb() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/RelatorioNovo.class.php on line 571
+[15-Sep-2017 10:31:53] PHP Fatal error:  Call to a member function selectGerenteTem() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/credDeb/credDebExcel.php on line 27

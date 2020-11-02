@@ -1,0 +1,3 @@
+[04-Dec-2015 15:48:27] PHP Fatal error:  Call to a member function selectAlunosEmpresa() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/index.php on line 70
+[04-Dec-2015 15:49:56] PHP Fatal error:  Call to a member function selectAlunosEmpresa() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/index.php on line 70
+[04-Dec-2015 16:05:42] PHP Fatal error:  Call to a member function selectGerenteSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/frequencia/index.php on line 59

@@ -1,0 +1,3 @@
+[22-Aug-2017 11:35:19] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioGaCsa() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/gaCsa/index.php on line 64
+[22-Aug-2017 13:26:27] PHP Fatal error:  Call to a member function montaTb() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/RelatorioNovo.class.php on line 496
+[01-Dec-2017 18:59:47] PHP Fatal error:  Call to a member function selectProva() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/RelatorioNovo.class.php on line 492

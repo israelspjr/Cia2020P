@@ -1,0 +1,1 @@
+[19-May-2016 10:31:38] PHP Fatal error:  Call to undefined method Uteis::executeQuery() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/professor/include/acao/filtros.php on line 34

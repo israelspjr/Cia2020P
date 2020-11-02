@@ -1,0 +1,6 @@
+[23-Sep-2016 09:43:55] PHP Fatal error:  Call to undefined method Relatorio::relatorioRateio() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/rateio/include/resourceHTML/rateio.php on line 17
+[23-Sep-2016 10:54:33] PHP Fatal error:  Call to a member function selectCalendarioProva() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1752
+[04-Nov-2016 14:22:08] PHP Fatal error:  Class 'ClientePf' not found in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 1716
+[08-Jan-2018 15:21:31] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioFrequencia_mensal() in /home/companhiadeidiom/public_html/cursos/config/class/RelatorioNovo.class.php on line 113
+[09-Jan-2018 15:30:57] PHP Fatal error:  Call to a member function selectPeriodoAcompanhamentoCurso() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/RelatorioNovo.class.php on line 140
+[09-Jan-2018 15:33:42] PHP Fatal error:  Call to a member function selectPeriodoAcompanhamentoCurso() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/RelatorioNovo.class.php on line 140

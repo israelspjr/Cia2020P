@@ -1,0 +1,6 @@
+[20-Jul-2016 09:35:48] PHP Fatal error:  Call to undefined method Relatorio::relatorioPagAulas() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/pagAulas/include/resourceHTML/pagAulas.php on line 26
+[20-Jul-2016 11:27:07] PHP Fatal error:  Call to undefined method Uteis::exibirHora() in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 2763
+[05-Apr-2017 09:54:36] PHP Fatal error:  Call to a member function getIdIdioma() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 3162
+[05-Apr-2017 15:19:48] PHP Fatal error:  Call to a member function getIdIdioma() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Relatorio.class.php on line 3162
+[25-Aug-2017 14:57:47] PHP Parse error:  syntax error, unexpected ',' in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/pagAulas/include/resourceHTML/pagAulas.php on line 26
+[25-Aug-2017 14:57:51] PHP Parse error:  syntax error, unexpected ',' in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/pagAulas/include/resourceHTML/pagAulas.php on line 26

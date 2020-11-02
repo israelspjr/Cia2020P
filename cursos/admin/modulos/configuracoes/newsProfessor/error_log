@@ -1,0 +1,4 @@
+[05-Nov-2015 16:20:30] PHP Fatal error:  Call to a member function selectTipoAtividadeExtraSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/configuracoes/newsProfessor/formulario.php on line 38
+[05-Nov-2015 16:20:36] PHP Fatal error:  Call to a member function selectTipoAtividadeExtraSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/configuracoes/newsProfessor/formulario.php on line 38
+[05-Nov-2015 16:21:14] PHP Fatal error:  Call to a member function selectTipoAtividadeExtraSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/configuracoes/newsProfessor/formulario.php on line 38
+[05-Nov-2015 16:21:22] PHP Fatal error:  Call to a member function selectTipoAtividadeExtraSelect() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/configuracoes/newsProfessor/formulario.php on line 38

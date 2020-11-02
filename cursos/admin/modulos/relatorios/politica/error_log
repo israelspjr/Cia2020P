@@ -1,0 +1,1 @@
+[20-Sep-2017 13:35:19] PHP Fatal error:  Call to undefined method RelatorioNovo::relatorioPolitica() in /home/companhiadeidiom/public_html/cursos/admin/modulos/relatorios/politica/index.php on line 14
