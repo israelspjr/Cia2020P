@@ -129,7 +129,7 @@ class ProvaOn extends Database {
 		$Idioma = new Idioma();
 		$FocoCurso = new FocoCurso();
 		$NivelEstudo = new NivelEstudo();
-		$KitMaterial = new KitMaterial();
+	//	$KitMaterial = new KitMaterial();
 		
 		$sql = "SELECT SQL_CACHE idProvaOn, nome, ordem, obs, inativo, excluido, idioma_IdIdioma, focoCurso_IdFocoCurso, nivelEstudo_IdNivelEstudo, kitMaterial_IdKitMaterial FROM provaOn " . $where;
 	//	echo $sql;
@@ -159,7 +159,7 @@ class ProvaOn extends Database {
   $sql .= " INNER JOIN materialDidatico AS MD ON MD.idMaterialDidatico = MDINF.materialDidatico_idMaterialDidatico";
   $sql .= " WHERE K.idKitMaterial = ".$valor['kitMaterial_IdKitMaterial'];
   
-  				$nomeMaterial = $KitMaterial->selectKitMaterialDescricao($sql);
+  		//		$nomeMaterial = $KitMaterial->selectKitMaterialDescricao($sql);
 	
 				$html .= "<td>" . $idProva . "</td>";
 				$html .= "<td class=\"link\" onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?id=" . $valor['idProvaOn'] . $idPai . "', '" . $caminhoAtualizar . $idPai . "', '$ondeAtualiza')\" >" . $nome . "</td>";
