@@ -1,0 +1,1 @@
+[10-Feb-2017 14:36:23] PHP Fatal error:  Call to undefined method Habilidades::setIdHabilidades() in /home/companhiadeidiom/public_html/cursos/admin/modulos/cadastro/habilidades/include/acao/habilidades.php on line 7
