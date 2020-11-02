@@ -1,0 +1,2 @@
+[09-Nov-2015 10:01:14] PHP Fatal error:  Call to undefined method DemonstrativoPagamento::relatorioDemonstrativoPagamentoTr() in /home/companhiadeidiom/public_html/cursos/admin/modulos/pagamento/baixa/include/acao/baixaExcel.php on line 24
+[09-Nov-2015 10:04:20] PHP Fatal error:  Call to undefined method DemonstrativoPagamento::relatorioDemonstrativoPagamentoTr() in /home/companhiadeidiom/public_html/cursos/admin/modulos/pagamento/baixa/include/acao/baixaExcel.php on line 24
