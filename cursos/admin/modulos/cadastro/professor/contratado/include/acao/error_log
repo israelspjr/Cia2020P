@@ -1,1 +1,0 @@
-[03-Apr-2017 11:19:09] PHP Fatal error:  Call to a member function setWorkshop_idWorkshop() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/cadastro/professor/contratado/include/acao/inscricao.php on line 16

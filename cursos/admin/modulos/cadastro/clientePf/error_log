@@ -1,7 +1,0 @@
-[14-Mar-2016 13:05:16] PHP Fatal error:  Call to a member function selectIntegranteGrupoTr_historico() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/cadastro/clientePf/include/resourceHTML/historico.php on line 21
-[15-Mar-2016 09:43:52] PHP Fatal error:  Call to a member function montaTb() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Ocorrencia.class.php on line 160
-[15-Mar-2016 09:44:58] PHP Fatal error:  Call to a member function montaTb() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/Ocorrencia.class.php on line 160
-[15-Mar-2016 12:18:27] PHP Fatal error:  Function name must be a string in /home/companhiadeidiom/public_html/cursos/config/class/IntegranteGrupo.class.php on line 370
-[19-Apr-2017 12:06:54] PHP Parse error:  syntax error, unexpected ';' in /home/companhiadeidiom/public_html/cursos/admin/modulos/cadastro/clientePf/include/resourceHTML/historico.php on line 16
-[25-Sep-2017 11:26:33] PHP Fatal error:  Call to a member function selectOcorrenciaTr() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/cadastro/clientePf/include/resourceHTML/aviso.php on line 40
-[27-Sep-2017 12:07:07] PHP Fatal error:  Call to a member function selectFechamentoGrupo() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/ClientePf.class.php on line 414

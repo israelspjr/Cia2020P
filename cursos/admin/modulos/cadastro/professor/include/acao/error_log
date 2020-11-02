@@ -1,4 +1,0 @@
-[03-Dec-2015 09:05:59] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 30528 bytes) in /home/companhiadeidiom/public_html/cursos/config/class/Image.class.php on line 324
-[03-Dec-2015 09:44:15] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 30528 bytes) in /home/companhiadeidiom/public_html/cursos/config/class/Image.class.php on line 324
-[18-Apr-2016 10:48:23] PHP Fatal error:  Call to undefined method DisponibilidadeProfessor::setDataDisponibilidade() in /home/companhiadeidiom/public_html/cursos/admin/modulos/cadastro/professor/include/acao/disponibilidadeProfessor.php on line 58
-[07-Mar-2017 10:07:40] PHP Fatal error:  Call to a member function selectAtividadeextraprofessor() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/cadastro/professor/include/acao/opcaoHabilidadesProfessor.php on line 15
