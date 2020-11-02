@@ -1,0 +1,7 @@
+[13-Mar-2017 10:28:50] PHP Fatal error:  Call to undefined method DemonstrativoCobranca::executarQuery() in /home/companhiadeidiom/public_html/cursos/config/class/DemonstrativoCobranca.class.php on line 249
+[13-Mar-2017 10:29:16] PHP Fatal error:  Call to undefined method DemonstrativoCobranca::executaQuery() in /home/companhiadeidiom/public_html/cursos/config/class/DemonstrativoCobranca.class.php on line 249
+[18-Apr-2017 14:24:10] PHP Fatal error:  Call to a member function getNome() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/cobranca/demonstrativo/include/resourceHTML/gerarPdf.php on line 294
+[18-Apr-2017 15:43:25] PHP Fatal error:  Using $this when not in object context in /home/companhiadeidiom/public_html/cursos/admin/modulos/cobranca/demonstrativo/include/resourceHTML/gerarPdf.php on line 101
+[18-Apr-2017 15:44:09] PHP Fatal error:  Call to undefined method Uteis::executeQuery() in /home/companhiadeidiom/public_html/cursos/admin/modulos/cobranca/demonstrativo/include/resourceHTML/gerarPdf.php on line 101
+[28-Aug-2017 13:32:28] PHP Fatal error:  Call to a member function getPAG_total() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/DemonstrativoCobranca.class.php on line 360
+[28-Aug-2017 13:32:59] PHP Fatal error:  Call to a member function getPAG_total() on a non-object in /home/companhiadeidiom/public_html/cursos/config/class/DemonstrativoCobranca.class.php on line 360

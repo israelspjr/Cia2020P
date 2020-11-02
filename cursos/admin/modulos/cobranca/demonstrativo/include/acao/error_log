@@ -1,0 +1,2 @@
+[20-Jan-2017 19:22:32] PHP Fatal error:  Call to a member function setIdDemonstrativoCobranca() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/cobranca/demonstrativo/include/acao/demonstrativo.php on line 34
+[18-Apr-2017 15:02:32] PHP Fatal error:  Call to a member function selectGrupoClientePj() on a non-object in /home/companhiadeidiom/public_html/cursos/admin/modulos/cobranca/demonstrativo/include/acao/disparoEmailRH.php on line 45
