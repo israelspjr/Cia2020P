@@ -181,5 +181,5 @@ function idioma() {
 
 $('#kitMaterial').attr('onchange', 'kitDescricao();');
 $('#IdNivelEstudo').attr('onchange', 'atualizaKitMaterialINF();');
-kitDescricao(<?= $idKitMaterial?>);
+//kitDescricao(<?= $idKitMaterial?>);
 </script>
