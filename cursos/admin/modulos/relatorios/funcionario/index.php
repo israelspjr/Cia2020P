@@ -61,8 +61,6 @@ onclick="abrirFormulario('div_form_rel', 'img_form_rel');" />
           </select>
         </p>
       </div>
-      
-      <p><strong>Filtros</strong></p>
       <div class="linha-inteira">
         <div class="esquerda">
           
