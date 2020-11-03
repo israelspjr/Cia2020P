@@ -283,7 +283,7 @@ class AulaPermanenteGrupo extends Database {
 
                 //HITORICO DE PROFESSORES
                 $html .= "<td align=\"center\" onclick=\"abrirNivelPagina(this, '" . CAMINHO_REL . "grupo/include/resourceHTML/aulaGrupoProfessor_historico.php?idAulaPermanenteGrupo=" . $idAulaPermanenteGrupo . "', '$caminhoAtualizar', '#div_aulaPermanenteGrupo');\" >
-                    <img src=\"" . CAMINHO_IMG . "pasta16.png\" title=\"HITORICO DE PROFESSORES\">
+                    <img src=\"" . CAMINHO_IMG . "pasta16.png\" title=\"Histórico DE PROFESSORES\">
                 </td>";
 
                 //EXCLUIR
