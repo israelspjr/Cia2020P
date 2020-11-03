@@ -2,7 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 
 $idPlanoAcaoGrupo = $_GET['id'];
-
+error_reporting(E_ALL);
 ?>
 
 <div id="cadastro_Grupo" class="">
