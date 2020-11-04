@@ -63,10 +63,11 @@ $idPlanoAcaoGrupo = $_GET['id'];
         <div id="div_fechamentoGrupo"> 
         	<?php require_once "include/resourceHTML/planoAcaoGrupoNaoFaturar.php" ?>
         </div>
-        <div id="div_downsell" class="linha-inteira"> 
+       
+        </div>
+         <div id="div_downsell" class="linha-inteira"> 
 		<?php require_once "include/resourceHTML/downsell.php" ?>
       </div>
-        </div>
         <div id="div_todasSubvencao" class="linha-inteira">
         	<?php require_once "include/resourceHTML/subvencaoGrupo.php" ?>
         </div>
