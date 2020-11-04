@@ -66,4 +66,4 @@ $where = " WHERE planoAcaoGrupo_idPlanoAcaoGrupo = " . $idPlanoAcaoGrupo;
     </table>
   </div>
 </fieldset>
-<script>tabelaDataTable('tb_lista_downsell');</script> 
+<script>tabelaDataTable('tb_lista_downsell', 'ordenaColuna_simples');</script> 

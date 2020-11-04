@@ -51,6 +51,7 @@ $idPlanoAcaoGrupo = $_GET['id'];
         <div id="div_produtoAdicionalPlanoAcaoGrupo">
           <?php require_once "include/resourceHTML/produtoAdicionalPlanoAcaoGrupo.php" ?>
         </div>
+        <p>&nbsp;</p>
          <div id="div_planoAcaoGrupoAjudaCusto">
           <?php require_once "include/resourceHTML/planoAcaoGrupoAjudaCusto.php" ?>
         </div>
