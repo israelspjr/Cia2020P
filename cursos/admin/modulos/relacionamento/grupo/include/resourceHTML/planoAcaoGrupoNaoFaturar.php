@@ -53,4 +53,4 @@ $where = " WHERE dataExcluido IS NULL AND planoAcaoGrupo_idPlanoAcaoGrupo = " . 
     </table>
   </div>
 </fieldset>
-<script>tabelaDataTable('tb_lista_fechamentoGrupo');</script> 
+<script>tabelaDataTable('tb_lista_fechamentoGrupo', 'ordenaColuna_simples');</script> 
