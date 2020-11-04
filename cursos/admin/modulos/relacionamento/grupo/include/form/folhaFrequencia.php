@@ -23,7 +23,7 @@ $MaterialPlano = new MaterialDidaticPlanoAcao();
 $Relatorio = new Relatorio();
 $AulaGrupoProfessor = new AulaGrupoProfessor();
 $FechamentoGrupo = new FechamentoGrupo();
-
+error_reporting(E_ALL);
 //INSERÇÃO/CARREGAMENTO DA FF
 $idFolhaFrequencia = $_REQUEST['idFolhaFrequencia'];
 $totalHorasAulas = 0;
