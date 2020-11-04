@@ -47,6 +47,7 @@ $idPlanoAcaoGrupo = $_GET['id'];
         <div id="div_valorHoraGrupo" >
           <?php require_once "include/resourceHTML/valorHoraGrupo.php" ?>
         </div>
+        <p>&nbsp;</p>
         <div id="div_produtoAdicionalPlanoAcaoGrupo">
           <?php require_once "include/resourceHTML/produtoAdicionalPlanoAcaoGrupo.php" ?>
         </div>
@@ -60,6 +61,7 @@ $idPlanoAcaoGrupo = $_GET['id'];
         <div id="div_creditoDebitoGrupo" >
           <?php require_once "include/resourceHTML/creditoDebitoGrupo.php" ?>
         </div>
+        <p>&nbsp;</p>
         <div id="div_fechamentoGrupo"> 
         	<?php require_once "include/resourceHTML/planoAcaoGrupoNaoFaturar.php" ?>
         </div>
