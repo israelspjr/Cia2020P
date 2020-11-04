@@ -67,5 +67,5 @@ $where = " WHERE financeiro = 1 AND (planoAcaoGrupo_idPlanoAcaoGrupo in (".$valo
   </div>
 </fieldset>
 <script>
-tabelaDataTable('tb_lista_anotacoes_financeiras', 'ordenaColuna');
+tabelaDataTable('tb_lista_anotacoes_financeiras', 'ordenaColuna_simples');
 </script> 

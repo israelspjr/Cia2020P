@@ -1,10 +1,5 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/Uteis.class.php");
-
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/ValorHoraGrupo.class.php");	
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/Modalidade.class.php");	
-
 
 $Modalidade= new Modalidade();
 $ValorHoraGrupo = new ValorHoraGrupo();
