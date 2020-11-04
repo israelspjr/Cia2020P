@@ -17,13 +17,13 @@ $AcompanhamentoCurso = new AcompanhamentoCurso();
 $PeriodoAcompanhamento = new PeriodoAcompanhamentoCurso();
 $RelatorioDesempenho = new RelatorioDesempenho();
 $IntegranteGrupo = new IntegranteGrupo();
-//$KitMaterial = new KitMaterial();
+$KitMaterial = new KitMaterial();
 $Montado = new MaterialMontadoPlanoAcao();
 $MaterialPlano = new MaterialDidaticPlanoAcao();
 $Relatorio = new Relatorio();
 $AulaGrupoProfessor = new AulaGrupoProfessor();
 $FechamentoGrupo = new FechamentoGrupo();
-error_reporting(E_ALL);
+
 //INSERÇÃO/CARREGAMENTO DA FF
 $idFolhaFrequencia = $_REQUEST['idFolhaFrequencia'];
 $totalHorasAulas = 0;
