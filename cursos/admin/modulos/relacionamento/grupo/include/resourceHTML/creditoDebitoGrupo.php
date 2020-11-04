@@ -62,5 +62,5 @@ $valorx3 = implode(', ',$valorXx);
 		</table>
 	</div>
 </fieldset>
-<script>tabelaDataTable('tb_lista_creditoDebitoGrupo', 'simples');</script>
+<script>tabelaDataTable('tb_lista_creditoDebitoGrupo', 'ordenaColuna_simples');</script>
 
