@@ -1,5 +1,4 @@
 <?php
-
 class Database {
 
 	// class attributes
@@ -16,7 +15,8 @@ class Database {
 		//if( $this->connect ) mysql_close($this->connect);
 	}
 	
-//	function connect($database = false) {
+	function connect($database = false) {
+	echo "teste";
 //	    $Log = new Log();
 
 //		return mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
@@ -32,7 +32,7 @@ class Database {
     //        mysql_set_charset('utf8');
 	//	}
 
-//	}
+	}
 
 	function fetchArray($result) {
 		if (!$result) {
