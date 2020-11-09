@@ -1,6 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
-
+error_reporting(E_ALL);
 $arrayRetorno = array();
 $Proposta = new Proposta();
 $PlanoAcaoGrupo = new PlanoAcaoGrupo();
@@ -183,7 +183,7 @@ $KitMaterial = new KitMaterial();
 			
 			//Avisar Luanda
 			
-			if ($idGrupo == '') {
+	/*		if ($idGrupo == '') {
 		
 		$assunto = "Novo Plano de ação criado, verificar professor!";
 		$msg = "Plano de ação número: ".$idPlanoAcao;
@@ -191,7 +191,7 @@ $KitMaterial = new KitMaterial();
 		
 		$rs =  Uteis::enviarEmail($assunto, $msg, $paraQuem, "", $copia, $bcopia);
 		
-			}
+			}*/
 		
 					
 			
