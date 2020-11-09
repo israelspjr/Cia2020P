@@ -16,10 +16,10 @@ class Database {
 		//if( $this->connect ) mysql_close($this->connect);
 	}
 	
-	function connect($database = false) {
-	    $Log = new Log();
+//	function connect($database = false) {
+//	    $Log = new Log();
 
-		return mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+//		return mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 	//	Uteis::pr($this->connect);
 
 //		if (!$this -> connect){
@@ -32,7 +32,7 @@ class Database {
     //        mysql_set_charset('utf8');
 	//	}
 
-	}
+//	}
 
 	function fetchArray($result) {
 		if (!$result) {
