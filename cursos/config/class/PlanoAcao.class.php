@@ -163,7 +163,8 @@ class PlanoAcao extends Database {
 	//	echo $sql;
         $result = $this -> query($sql, true);
 		echo "teste";
-		echo mysqli_insert_id($this -> connect);
+		$link = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+		echo mysqli_insert_id($link);
         return mysqli_insert_id($this -> connect);
     }
 
