@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 $arrayRetorno = array();
 $Proposta = new Proposta();
 $PlanoAcaoGrupo = new PlanoAcaoGrupo();
-echo DATABASE_SERVER;
+
 
 if($_POST['acao'] == 'atualizaKitMaterialINF'){ 
 
