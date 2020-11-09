@@ -160,8 +160,9 @@ class PlanoAcao extends Database {
      */
     function addPlanoAcao() {
         $sql = "INSERT INTO planoAcao (proposta_idProposta, grupo_idGrupo, focoCurso_idFocoCurso, expectativaInicio_idExpectativaInicio, dataExpectativaInicio, nivelEstudo_IdNivelEstudo, horasPrograma, abordagemCurso, finalizado, kitMaterial_idKitMaterial, statusAprovacao_idStatusAprovacao, dataCadastro, dataExclusao, dataAprovacao, mesReferenciaMudanca, anoReferenciaMudanca, tipoContrato, tipoCurso, tipoAval, tipoMaterial, dataContrato) VALUES ($this->propostaIdProposta, $this->grupoIdGrupo, $this->focoCursoIdFocoCurso, $this->expectativaInicioIdExpectativaInicio, $this->dataExpectativaInicio, $this->nivelEstudoIdNivelEstudo, $this->horasPrograma, $this->abordagemCurso, $this->finalizado, $this->kitMaterialIdKitMaterial, $this->statusAprovacaoIdStatusAprovacao, $this->dataCadastro, $this->dataExclusao, $this->dataAprovacao, $this->mesReferenciaMudanca, $this->anoReferenciaMudanca, $this->tipoContrato, $this->tipoCurso, $this->tipoAval, $this->tipoMaterial, $this->dataContrato)";
-	//	echo $sql;
+		echo $sql;
         $result = $this -> query($sql, true);
+		echo mysqli_insert_id($this -> connect);
         return mysqli_insert_id($this -> connect);
     }
 
