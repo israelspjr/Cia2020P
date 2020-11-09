@@ -14,6 +14,23 @@ class Database {
 	function __destruct() {
 		//if( $this->connect ) mysql_close($this->connect);
 	}
+	
+	function connect($database = false) {
+	    $Log = new Log();
+
+		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+
+		if (!$this -> connect){
+            $mensagemErro = mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
+      //      $Log->Log("Erro ao conctar db", 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));
+        }
+
+	//	if ($database) {
+	//		$this -> selectDb($database);
+    //        mysql_set_charset('utf8');
+	//	}
+
+	}
 
 	function fetchArray($result) {
 		if (!$result) {
