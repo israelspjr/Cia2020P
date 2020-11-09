@@ -41,7 +41,7 @@ class PlanoAcao extends Database {
         $this -> finalizado = "NULL";
         $this -> kitMaterialIdKitMaterial = "NULL";
         $this -> statusAprovacaoIdStatusAprovacao = "NULL";
-        $this -> dataCadastro = "'" . date('Y-m-d H:i:s') . "'";
+        $this -> dataCadastro = "'" . date('Y-m-d') . "'";
         $this -> dataExclusao = "NULL";
         $this -> dataAprovacao = "NULL";
         $this -> mesReferenciaMudanca = "NULL";
