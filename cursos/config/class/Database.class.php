@@ -37,15 +37,15 @@ class Database {
 
 	function query($sql, $log = true) {
 		
-	     $link = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);	
+	 //    $link = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);	
 
 	//echo $sql;
 	//   $Log = new Log();
-	    mysqli_set_charset( $link, 'utf8');
+	    mysqli_set_charset( $this->connect, 'utf8');
 	      
-		if (!($query = mysqli_query($link, $sql))){        
+		if (!($query = mysqli_query($this->connect, $sql))){        
 		  $mensagemErro = $sql;
-		  $acao = "Erro Ao executar acao: ".mysqli_errno($link) . ": " . mysqli_error($link);
+		  $acao = "Erro Ao executar acao: ".mysqli_errno($this->connect) . ": " . mysqli_error($this->connect);
 		  
 //		  echo $acao;
 	//	  $Log->Log($acao, 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'], $_SESSION['idUsuario'])); 
