@@ -118,8 +118,6 @@ $KitMaterial = new KitMaterial();
 		
 }else{
 	
-	//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/PlanoAcao.class.php");
-	error_reporting(E_ALL);
 	$idPlanoAcao = $_REQUEST['id'];	
 
 	$PlanoAcao = new PlanoAcao();		

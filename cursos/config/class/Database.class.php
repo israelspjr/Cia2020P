@@ -22,27 +22,6 @@ class Database {
             $mensagemErro = mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
       //      $Log->Log("Erro ao conctar db", 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));
         }
-		
-		if ($this -> connect){
-            $mensagemErro = mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
-      //      $Log->Log("Erro ao conctar db", 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));
-        }
-	//echo "teste";
-//	    $Log = new Log();
-
-//		return mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
-	//	Uteis::pr($this->connect);
-
-//		if (!$this -> connect){
-  //          $mensagemErro = mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
-      //      $Log->Log("Erro ao conctar db", 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));
-    //    }
-
-	//	if ($database) {
-	//		$this -> selectDb($database);
-    //        mysql_set_charset('utf8');
-	//	}
-
 	}
 
 	function fetchArray($result) {
