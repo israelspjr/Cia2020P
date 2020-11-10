@@ -22,6 +22,11 @@ class Database {
             $mensagemErro = mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
       //      $Log->Log("Erro ao conctar db", 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));
         }
+		
+		if ($this -> connect){
+            $mensagemErro = mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
+      //      $Log->Log("Erro ao conctar db", 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));
+        }
 	//echo "teste";
 //	    $Log = new Log();
 
