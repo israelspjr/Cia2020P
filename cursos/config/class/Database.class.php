@@ -16,7 +16,7 @@ class Database {
 	}
 	
 	function connect($database = false) {
-		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS);
+		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 		
 		if (!$this -> connect){
             $mensagemErro = mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
