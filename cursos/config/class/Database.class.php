@@ -6,7 +6,7 @@ class Database {
 
 	// constructor
 	function __construct() {
-	//	$this -> connect(DATABASE_DB);        
+		$this -> connect();        
 		
 	}
 
