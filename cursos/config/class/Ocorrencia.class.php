@@ -1,5 +1,7 @@
 <?php
+error_reporting(E_All);
 class Ocorrencia extends Database {
+	
 	// class attributes
 	var $idOcorrencia;
 	var $clientePf_idClientePf;
@@ -133,9 +135,9 @@ class Ocorrencia extends Database {
 		INNER JOIN clientePf AS PF ON PF.idClientePf = T.clientePf_idClientePf " . $where;
 		
 		echo $sql;
-		
-		$result = $this -> query($sql);
 		echo "teste";
+		$result = $this -> query($sql);
+		echo "teste2";
 		Uteis::pr($result);
 		
 		 $html .= "<tbody>";
