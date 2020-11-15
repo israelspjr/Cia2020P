@@ -98,7 +98,7 @@ class DiaFolhaPonto extends Database {
 		$sql = "INSERT INTO `diaFolhaPonto` (`idDiaFolhaPonto`, `folhaPonto_idFolhaPonto`,
 `dia`, `diaDaSemana`, `entrada`, `saidaAlmoco`, `voltaAlmoco`, `saida`, `creditos`, `debitos`, `ocorrenciaFP`,`obs`, `banco`) VALUES ($this->idDiaFolhaPonto , $this->folhaPontoIdFolhaPonto, $this->dia , $this->diaDaSemana, $this->entrada, $this->saidaAlmoco, $this->voltaAlmoco, $this->saida, $this->creditos, $this->debitos,$this->ocorrenciaFP,$this->obs, $this->banco);
 ";
-	//	echo $sql;
+		echo $sql;
 		$result = $this -> query($sql);
 		return mysqli_insert_id($this -> connect);
 	}
