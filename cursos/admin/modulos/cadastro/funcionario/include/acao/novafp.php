@@ -1,6 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
-
+error_reporting(E_ALL);
 $FolhaPonto = new FolhaPonto();
 $DiaFolhaPonto = new DiaFolhaPonto();
 
@@ -22,6 +22,7 @@ $arrayRetorno = array();
 		
 		//Inserindo os dias na Folha de Ponto
 		$dias = cal_days_in_month(CAL_GREGORIAN, $mes , $ano); 
+		
 		
 		// Array com os dias da semana
 		$diasemana = array('Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado');
