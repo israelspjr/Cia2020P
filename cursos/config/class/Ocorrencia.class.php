@@ -123,8 +123,7 @@ class Ocorrencia extends Database {
 		$Funcionario = new Funcionario();
 		
 		$Relatorio = new Relatorio();
-		error_reporting(E_ALL);
-		
+			
 //		$colunas = array("Nome", "Data de contato", "Observação", "Data de Retorno", "Status");
 		
 		if ($excel == true) {
@@ -135,20 +134,12 @@ class Ocorrencia extends Database {
 		FROM ocorrencia AS T 
 		INNER JOIN clientePf AS PF ON PF.idClientePf = T.clientePf_idClientePf " . $where;
 		
-		echo $sql;
-		echo "teste";
 		$result = $this -> query($sql);
-		echo "teste2";
-		Uteis::pr($result);
-		
+			
 		 $html .= "<tbody>";
 
 		if (mysqli_num_rows($result) > 0) {
-			
-			echo "teste";
-
-		//	$html = "";
-
+	
 			while ($valor = mysqli_fetch_array($result)) {
 
 				$idOcorrencia = $valor['idOcorrencia'];
