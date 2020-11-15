@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_All);
+
 class Ocorrencia extends Database {
 	
 	// class attributes
@@ -123,6 +123,7 @@ class Ocorrencia extends Database {
 		$Funcionario = new Funcionario();
 		
 		$Relatorio = new Relatorio();
+		error_reporting(E_All);
 		
 //		$colunas = array("Nome", "Data de contato", "Observação", "Data de Retorno", "Status");
 		
