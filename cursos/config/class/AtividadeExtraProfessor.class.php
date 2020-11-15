@@ -88,7 +88,7 @@ class AtividadeExtraProfessor extends Database {
 	function selectAtividadeextraprofessorCheckbox($id, $origem = "") {
 		$sql = "SELECT SQL_CACHE idAtividadeExtraProfessor, nome, ativar FROM atividadeExtraProfessor 
 		WHERE inativo = 0 AND tipoAtividadeExtraProfessor_idTipoAtividadeExtraProfessor = " . $this -> tipoAtividadeExtraProfessorIdTipoAtividadeExtraProfessor;
-		echo $sql;
+	//	echo $sql;
 		$result = $this -> query($sql);
 
 		if (mysqli_num_rows($result) > 0) {
