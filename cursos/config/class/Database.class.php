@@ -51,7 +51,7 @@ class Database {
    
 	//	$this->connect = $link;
 		return $query;
-//	 	 mysqli_close($this->connect);	
+	 	 mysqli_close($link);	
 	}
 
 	function mostraErr($sql = "", $soEmail = false) {
