@@ -135,6 +135,7 @@ class Ocorrencia extends Database {
 		echo $sql;
 
 		$result = $this -> query($sql);
+		Uteis::pr($result);
 		
 		 $html .= "<tbody>";
 
