@@ -7,7 +7,8 @@ class Database {
 
 	// constructor
 	function __construct() {
-		$this -> connect();        
+		$this->connect = "";
+	//	$this -> connect();        
 	}
 
 	// constructor
@@ -15,7 +16,7 @@ class Database {
 		//if( $this->connect ) mysql_close($this->connect);
 	}
 	
-	function connect($database = false) {
+/*	function connect($database = false) {
 	//	 unset($this -> connect);
 	//	 mysqli_close($this -> connect);
 		 if (!$this->connect) {
@@ -27,7 +28,7 @@ class Database {
 		}
 		
 	}
-
+*/
 	function fetchArray($result) {
 		if (!$result) {
 			return false;
@@ -48,10 +49,9 @@ class Database {
 		  $acao = "Erro Ao executar acao: ".mysqli_errno($this->connect) . ": " . mysqli_error($this->connect);
 	
 	        }
-			
-			Uteis::pr($query);
-   
-	//	$this->connect = $link;
+	 
+		$this->connect = $link;
+		Uteis::pr($this-connect);
 		return $query;
 	 	 mysqli_close($link);	
 	}
