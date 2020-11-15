@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 class Database {
 
 	// class attributes
@@ -16,8 +16,8 @@ class Database {
 	}
 	
 	function connect($database = false) {
-		 unset($this -> connect);
-		 mysqli_close($this -> connect);
+	//	 unset($this -> connect);
+	//	 mysqli_close($this -> connect);
 		 if (!$this->connect) {
 	   //  	$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 		 }
@@ -51,7 +51,7 @@ class Database {
    
 
 		return $query;
-	 	 mysqli_close($this->connect);	
+//	 	 mysqli_close($this->connect);	
 	}
 
 	function mostraErr($sql = "", $soEmail = false) {
