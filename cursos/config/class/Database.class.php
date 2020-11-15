@@ -7,6 +7,7 @@ class Database {
 
 	// constructor
 	function __construct() {
+		mysqli_close($this->connect);
 		$this -> connect();        
 	}
 
@@ -22,7 +23,7 @@ class Database {
     		printf("Connect failed: %s\n", mysqli_connect_error());
     		//exit();
 		}
-		mysqli_close($this->connect);
+		
 	}
 
 	function fetchArray($result) {
