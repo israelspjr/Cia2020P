@@ -52,7 +52,7 @@ class Database {
 	 	if ($query == 1) {
 			$this->connect = mysqli_insert_id($link);
 		}
-		Uteis::pr($this-connect);
+	//	Uteis::pr($this-connect);
 		return $query;
 	 	 mysqli_close($link);	
 	}
