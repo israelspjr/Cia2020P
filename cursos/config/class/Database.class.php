@@ -16,7 +16,7 @@ class Database {
 	}
 	
 	function connect($database = false) {
-		
+		if( $this->connect ) mysqli_close($this->connect);
 		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 		
 		if (!$this -> connect){
@@ -83,6 +83,7 @@ class Database {
 				}
 			}
 		mysqli_free_result($result);
+		mysqli_close($this->connect);
        	return $array;
 	}
 
