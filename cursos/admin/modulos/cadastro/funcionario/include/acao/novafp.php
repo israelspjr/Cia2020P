@@ -1,6 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
-error_reporting(E_ALL);
+
 $FolhaPonto = new FolhaPonto();
 $DiaFolhaPonto = new DiaFolhaPonto();
 
