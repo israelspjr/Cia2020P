@@ -108,7 +108,6 @@ class TipoAtividadeExtraProfessor extends Database {
 
 		$sql = "SELECT SQL_CACHE idTipoAtividadeExtraProfessor, nome FROM tipoAtividadeExtraProfessor WHERE inativo = 0 AND excluido = 0 ";
 		$result = $this -> query($sql);
-		echo $sql;
 		
 		if (mysqli_num_rows($result) > 0) {
 			$html = "";

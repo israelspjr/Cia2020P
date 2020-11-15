@@ -1,13 +1,12 @@
 <?php
 	require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");  
-	error_reporting(E_ALL);
+
 	$TipoAtividadeExtraProfessor = new TipoAtividadeExtraProfessor();
 	
 	$idClientePf = $_GET['id'];
 	if ($idClientePf == '') {
 		$idClientePf = $_GET['idClientePf'];
 	}
-	echo $idClientePf;
 ?>
 
 <fieldset>
