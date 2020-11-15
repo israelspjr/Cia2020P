@@ -123,7 +123,7 @@ class Ocorrencia extends Database {
 		$Funcionario = new Funcionario();
 		
 		$Relatorio = new Relatorio();
-		error_reporting(E_All);
+		error_reporting(E_ALL);
 		
 //		$colunas = array("Nome", "Data de contato", "Observação", "Data de Retorno", "Status");
 		

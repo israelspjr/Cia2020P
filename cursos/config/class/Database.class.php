@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_All);
+error_reporting(E_ALL);
 class Database {
 
 	// class attributes
