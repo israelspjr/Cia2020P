@@ -16,6 +16,7 @@ class Database {
 	}
 	
 	function connect($database = false) {
+		
 		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 		
 		if (!$this -> connect){
@@ -43,6 +44,7 @@ class Database {
 	        }
      
 		return $query;
+		mysqli_close($this->connect);
 
 	}
 
