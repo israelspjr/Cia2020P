@@ -7,6 +7,7 @@
 	if ($idClientePf == '') {
 		$idClientePf = $_GET['idClientePf'];
 	}
+	echo $idClientePf;
 ?>
 
 <fieldset>
