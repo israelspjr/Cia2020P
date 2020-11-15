@@ -89,7 +89,7 @@ class FolhaPonto extends Database {
         $sql = "INSERT INTO folhaPonto (finalizada, obs, funcionario_idFuncionario,  dataReferencia, dataCadastro, dataFinalizada, saldoInicial, tipoSaldoInicial, saldoFinal, tipoSaldoFinal) VALUES ($this->finalizada, $this->obs, $this->funcionarioIdFuncionario, $this->dataReferencia, $this->dataCadastro, $this->dataFinalizada, $this->saldoInicial, $this->tipoSaldoInicial, $this->saldoFinal, $this->tipoSaldoFinal)";
 	//	echo $sql;
         $result = $this -> query($sql, true);
-        return mysqli_insert_id($this -> connect);
+        return $this -> connect;
     }
 
     /**
