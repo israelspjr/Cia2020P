@@ -51,7 +51,7 @@ class Database {
 	        }
 	 
 		$this->connect = $link;
-		Uteis::pr($this-connect);
+	//	Uteis::pr($this-connect);
 		return $query;
 	 	 mysqli_close($link);	
 	}
