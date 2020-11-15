@@ -132,7 +132,7 @@ class Ocorrencia extends Database {
 		FROM ocorrencia AS T 
 		INNER JOIN clientePf AS PF ON PF.idClientePf = T.clientePf_idClientePf " . $where;
 		
-	//	echo $sql;
+		echo $sql;
 
 		$result = $this -> query($sql);
 		
