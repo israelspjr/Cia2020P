@@ -39,10 +39,11 @@ class Database {
 	}
 
 	function query($sql, $log = true) {
-	    mysqli_set_charset( $this->connect, 'utf8');
-		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
-	      
-		if (!($query = mysqli_query($this->connect, $sql))){        
+	    unset($link);
+		$link = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+	     mysqli_set_charset( $link, 'utf8');
+		  
+		if (!($query = mysqli_query($link, $sql))){        
 		  $mensagemErro = $sql;
 		  $acao = "Erro Ao executar acao: ".mysqli_errno($this->connect) . ": " . mysqli_error($this->connect);
 	
