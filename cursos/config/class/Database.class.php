@@ -50,7 +50,7 @@ class Database {
 	
 	        }
 	 	if ($query == 1) {
-			$this->connect = $link;
+		//	$this->connect = $link;
 		}
 	//	Uteis::pr($this-connect);
 		return $query;
