@@ -19,7 +19,7 @@ class Database {
 		 unset($this -> connect);
 		 mysqli_close($this -> connect);
 		 if (!$this->connect) {
-	     	$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+	   //  	$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 		 }
 		if (mysqli_connect_errno()) {
     		printf("Connect failed: %s\n", mysqli_connect_error());
@@ -40,6 +40,7 @@ class Database {
 
 	function query($sql, $log = true) {
 	    mysqli_set_charset( $this->connect, 'utf8');
+		$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 	      
 		if (!($query = mysqli_query($this->connect, $sql))){        
 		  $mensagemErro = $sql;
