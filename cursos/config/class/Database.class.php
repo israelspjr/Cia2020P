@@ -16,7 +16,7 @@ class Database {
 	}
 	
 	function connect($database = false) {
-		 
+		 unset($this -> connect);
 		 if (!$this->connect) {
 	     	$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
 		 }
