@@ -49,7 +49,7 @@ class Database {
 	
 	        }
    
-
+		$this->connect = $link;
 		return $query;
 //	 	 mysqli_close($this->connect);	
 	}
