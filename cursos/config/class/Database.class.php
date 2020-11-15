@@ -83,7 +83,7 @@ class Database {
 				}
 			}
 		mysqli_free_result($result);
-		mysqli_close($this->connect);
+	//	mysqli_close($this->connect);
        	return $array;
 	}
 
