@@ -12,6 +12,8 @@ $arrayRetorno = array();
 	$ano = $_REQUEST['ano'];
 	
 	$rs = $FolhaPonto->selectFolhaPonto(" WHERE funcionario_idFuncionario = $idFuncionario AND dataReferencia = '$ano-$mes-01' ");
+	
+	Uteis::pr($rs);
 			
 	if( !$rs ){
 		
@@ -19,10 +21,11 @@ $arrayRetorno = array();
 		$FolhaPonto->setDataReferencia("$ano-$mes-01");
 			
 		$idFP = $FolhaPonto->addFolhaPonto();
+		echo $idFP;
 		
 		//Inserindo os dias na Folha de Ponto
 		$dias = cal_days_in_month(CAL_GREGORIAN, $mes , $ano); 
-		
+		Uteis::pr($dias);
 		
 		// Array com os dias da semana
 		$diasemana = array('Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado');
