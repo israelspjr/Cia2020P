@@ -2,6 +2,9 @@
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 
 $idClientePf = $_GET['id'];
+if ($idClientePf == '') {
+	$idClientePf = $_GET['idClientePf'];
+}
 $Ocorrencia = new Ocorrencia();
 
 ?>
