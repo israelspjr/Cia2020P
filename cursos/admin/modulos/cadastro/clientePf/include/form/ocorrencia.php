@@ -5,6 +5,11 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 $Ocorrencia = new Ocorrencia();
 $Funcionario = new Funcionario();
 
+$idClientePf = $_GET['id'];
+if ($idClientePf == '') {
+	$idClientePf = $_GET['idClientePf'];
+}
+
 $funcionario_idFuncionario = $_SESSION['idUsuario'];
 
 $idOcorrencia = $_REQUEST['idOcorrencia'];
@@ -17,7 +22,7 @@ if($idOcorrencia != '' && $idOcorrencia  > 0){
 	$dataContato = $valor[0]['dataContato'];
 	$dataRetorno = $valor[0]['dataRetorno'];
 	$statusO = $valor[0]['status'];
-	echo $status0;
+//	echo $status0;
 	$outro = $valor[0]['outro'];
 	
 	
@@ -44,12 +49,7 @@ if ($dataContato == '') {
       <option value="1" <?php if ($statusO == 1) {?> selected="selected" <?php } ?>>Continuar contato</option>
       <option value="2" <?php if ($statusO == 2) {?> selected="selected" <?php } ?>>Não tem interesse</option>
       <option value="3" <?php if ($statusO == 3) {?> selected="selected" <?php } ?>>Tem interesse em promoções</option>
-   <!--   <option value="4" <?php if ($sistema == 4) {?> selected="selected" <?php } ?>>Profcerto</option>
-      <option value="5" <?php if ($sistema == 5) {?> selected="selected" <?php } ?>>Outros Sites</option>
-      <option value="6" <?php if ($sistema == 6) {?> selected="selected" <?php } ?>>Hardware</option>
-      <option value="7" <?php if ($sistema == 7) {?> selected="selected" <?php } ?>>Servidores</option>
-      <option value="8" <?php if ($sistema == 8) {?> selected="selected" <?php } ?>>Emails</option>-->
-      </select>
+     </select>
      
                      <span class="placeholder">Campo Obrigatório</span> </p>
                 
