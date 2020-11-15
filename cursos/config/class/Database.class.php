@@ -84,8 +84,8 @@ class Database {
 					$array[$key] = $row;
 				}
 			}
-	//	mysqli_free_result($result);
-		mysqli_close($this->connect);
+		mysqli_free_result($result);
+	//	mysqli_close($this->connect);
        	return $array;
 	}
 
