@@ -33,6 +33,7 @@ class Database {
      		$array = mysqli_fetch_array($result, MYSQLI_ASSOC);
 			return $array;
 		}
+		mysqli_close($this->connect);
 	}
 
 	function query($sql, $log = true) {
@@ -43,10 +44,10 @@ class Database {
 		  $acao = "Erro Ao executar acao: ".mysqli_errno($this->connect) . ": " . mysqli_error($this->connect);
 	
 	        }
-     
-		return $query;
-		mysqli_close($this->connect);
+    	 mysqli_close($this->connect);
 
+		return $query;
+		
 	}
 
 	function mostraErr($sql = "", $soEmail = false) {
@@ -83,8 +84,8 @@ class Database {
 					$array[$key] = $row;
 				}
 			}
-		mysqli_free_result($result);
-	//	mysqli_close($this->connect);
+	//	mysqli_free_result($result);
+		mysqli_close($this->connect);
        	return $array;
 	}
 
