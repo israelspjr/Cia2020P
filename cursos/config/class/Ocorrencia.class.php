@@ -133,8 +133,9 @@ class Ocorrencia extends Database {
 		INNER JOIN clientePf AS PF ON PF.idClientePf = T.clientePf_idClientePf " . $where;
 		
 		echo $sql;
-
+		
 		$result = $this -> query($sql);
+		echo "teste";
 		Uteis::pr($result);
 		
 		 $html .= "<tbody>";
