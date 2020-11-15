@@ -7,7 +7,6 @@ class Database {
 
 	// constructor
 	function __construct() {
-		mysqli_close($this->connect);
 		$this -> connect();        
 	}
 
@@ -17,10 +16,10 @@ class Database {
 	}
 	
 	function connect($database = false) {
-		 mysqli_set_charset( $this->connect, 'utf8');
 		 
-	     $this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
-	
+		 if (!$this->connect) {
+	     	$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+		 }
 		if (mysqli_connect_errno()) {
     		printf("Connect failed: %s\n", mysqli_connect_error());
     		//exit();
@@ -39,17 +38,17 @@ class Database {
 	}
 
 	function query($sql, $log = true) {
-	    
+	    mysqli_set_charset( $this->connect, 'utf8');
 	      
 		if (!($query = mysqli_query($this->connect, $sql))){        
 		  $mensagemErro = $sql;
 		  $acao = "Erro Ao executar acao: ".mysqli_errno($this->connect) . ": " . mysqli_error($this->connect);
 	
 	        }
-   // 	 mysqli_close($this->connect);
+   
 
 		return $query;
-		
+	 	 mysqli_close($this->connect);	
 	}
 
 	function mostraErr($sql = "", $soEmail = false) {
