@@ -49,8 +49,9 @@ class Database {
 		  $acao = "Erro Ao executar acao: ".mysqli_errno($this->connect) . ": " . mysqli_error($this->connect);
 	
 	        }
-	 
-		$this->connect = $link;
+	 	if ($query == 1) {
+			$this->connect = $link;
+		}
 	//	Uteis::pr($this-connect);
 		return $query;
 	 	 mysqli_close($link);	
