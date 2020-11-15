@@ -1,11 +1,13 @@
 <?php 
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 
+$Ocorrencia = new Ocorrencia();
+
 $idClientePf = $_GET['id'];
 if ($idClientePf == '') {
 	$idClientePf = $_GET['idClientePf'];
 }
-$Ocorrencia = new Ocorrencia();
+
 
 ?>
 
@@ -36,8 +38,6 @@ Follow-UP
 		$caminhoAtualizar=  CAMINHO_CAD."clientePf/include/resourceHTML/ocorrencia.php?id=".$idClientePf;
 		$ondeAtualiza= "#div_ocorrencia";
 //		$caminhoModulo = CAMINHO_CAD."clientePf/include/";	
-	  
-	  
 	  
 	  echo $Ocorrencia->selectOcorrenciaTr($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, " AND T.clientePf_idClientePf = ".$idClientePf);?>
       
