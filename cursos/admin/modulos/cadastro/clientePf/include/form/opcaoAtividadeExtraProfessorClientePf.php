@@ -1,12 +1,12 @@
 <?php
 	require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");  
-	//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/Uteis.class.php");	
-		  	
-	//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/TipoAtividadeExtraProfessor.class.php");
 	
 	$TipoAtividadeExtraProfessor = new TipoAtividadeExtraProfessor();
 	
 	$idClientePf = $_GET['id'];
+	if ($idClientePf == '') {
+		$idClientePf = $_GET['idClientePf'];
+	}
 ?>
 
 <fieldset>
