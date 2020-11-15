@@ -16,13 +16,13 @@ class Database {
 	}
 	
 	function connect($database = false) {
-		if ($this -> connect === false) {
-			$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+				$this -> connect = mysqli_connect(DATABASE_SERVER, DATABASE_USER, DATABASE_PASS, DATABASE_DB);
+	
+		if (mysqli_connect_errno()) {
+    		printf("Connect failed: %s\n", mysqli_connect_error());
+    		//exit();
 		}
-		if (!$this -> connect){
-            $mensagemErro = mysqli_errno($this -> connect) . ": " . mysqli_error($this -> connect);
-      //      $Log->Log("Erro ao conctar db", 1, $mensagemErro, array('usuario'=>$_SESSION['usuario'],$_SESSION['idUsuario']));
-        }
+		mysqli_close($this->connect);
 	}
 
 	function fetchArray($result) {
