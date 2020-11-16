@@ -344,7 +344,23 @@ function postForm(idForm, pagina, param, onde) {
 		});
 	//}
 	} else {
-		submitForm = true;		
+		submitForm = true;	
+		
+		var parametros = (param != undefined ? param : '');
+		showLoad();
+		$.post(pagina, parametros, function(e) {
+			if (ondeR != undefined && ondeR != '') {
+				$(ondeR).html(e);
+			} else {
+				acaoJson(e);
+			}
+			fecharNivel_load();
+		}).fail(function() {
+			alerta('Erro durante o processamento');
+			fecharNivel_load();
+		}).always(function() {
+			submitForm = false;
+		});	
 	}
 	return false;
 
