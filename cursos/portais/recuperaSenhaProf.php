@@ -27,7 +27,7 @@ if (isset($_POST)){
         }
     } 
 		$arrayRetorno['mensagem'] = "Senha alterada com sucesso! Cliquem voltar para fazer o login";
-//}
+}
 
 //$arrayRetorno['ondeAtualizar'] = "#centro";
 //$arrayRetorno['pagina'] = "login.php?app=2";	
