@@ -1,13 +1,12 @@
 <?php
-
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 
 $arrayRetorno = array();
 if (isset($_POST)){
-    $doc = mysqli_real_escape_string($_POST['documentoUnico']);
-    $nasc = mysqli_real_escape_string($_POST['nasc']);
-    $senha = mysqli_real_escape_string($_POST['password']);
+    $doc = $_POST['documentoUnico'];
+    $nasc = $_POST['nasc'];
+    $senha = $_POST['password'];
 
     if (isset($doc) AND isset($nasc) AND isset($senha)){
         $data = Uteis::gravarData($nasc);
