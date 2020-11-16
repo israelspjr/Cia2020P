@@ -2,7 +2,7 @@
 $pgprof = true;
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 
-$msg = 0;
+$arrayRetorno = array();
 if (isset($_POST)){
     $doc = mysql_real_escape_string($_POST['documentoUnico']);
     $nasc = mysql_real_escape_string($_POST['nasc']);
@@ -25,7 +25,13 @@ if (isset($_POST)){
             $msg = 1;
         }
     }
+		$arrayRetorno['mensagem'] = "Senha alterada com sucesso!";
 }
-$redirectUrl = "login.php?app=2";
+
+$arrayRetorno['ondeAtualizar'] = "#centro";
+$arrayRetorno['pagina'] = "login.php?app=2";	
+echo json_encode($arrayRetorno);
+
+//$redirectUrl = "login.php?app=2";
 //$reditectUrl = ($msg==1)? 'login.php?msg=1' : 'recuperaSenhaForm.php?msg=1';
-header('location: '.$reditectUrl);
+//header('location: '.$reditectUrl);
