@@ -303,11 +303,7 @@ function postFileForm(idForm) {
 function postForm(idForm, pagina, param, onde) {
 	
 	var submitForm;
-	if (idForm) {
-		var form = $('#' + idForm);
-	//} else {
-	//	var form = "";	
-	//}
+	
 	if (onde != undefined && onde != '') {
 		var n = onde.indexOf("#");
 		if (n > -1) {
@@ -316,6 +312,13 @@ function postForm(idForm, pagina, param, onde) {
 			var ondeR = $('#' + onde);
 		}
 	}
+	
+	if (idForm) {
+		var form = $('#' + idForm);
+	//} else {
+	//	var form = "";	
+	//}
+	
 
 	if (form.length > 0) {
 		form.submit();
