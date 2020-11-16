@@ -135,12 +135,12 @@ class Funcionario extends Database {
 	function addFuncionario() {
 		$sql = "INSERT INTO funcionario (estadoCivil_idEstadoCivil, pais_idPais, nome, nomeExibicao, sexo, dataNascimento, rg, tipoDocumentoUnico_idTipoDocumentoUnico, documentoUnico, senhaAcesso, obs, inativo, foto, cargo, admicao, demicao, excluido, horasTrabalho) VALUES ($this->estadoCivilIdEstadoCivil, $this->paisIdPais, $this->nome, $this->nomeExibicao, $this->sexo, $this->dataNascimento, $this->rg, $this->tipoDocumentoUnicoIdTipoDocumentoUnico, $this->documentoUnico, $this->senhaAcesso, $this->obs, $this->inativo, $this->foto, $this->cargo, $this->admicao, $this->demicao, $this->excluido,$this->horasTrabalho)";
 		$result = $this -> query($sql, true);
-		return mysql_insert_id($this -> connect);
+		return $this -> connect;
 	}
   function addFuncionario_M() {
     $sql = "INSERT INTO funcionario (idFuncionario, estadoCivil_idEstadoCivil, pais_idPais, nome, nomeExibicao, sexo, dataNascimento, rg, tipoDocumentoUnico_idTipoDocumentoUnico, documentoUnico, senhaAcesso, obs, inativo, foto, cargo, admicao, demicao, excluido, horasTrabalho) VALUES ($this->idFuncionario, $this->estadoCivilIdEstadoCivil, $this->paisIdPais, $this->nome, $this->nomeExibicao, $this->sexo, $this->dataNascimento, $this->rg, $this->tipoDocumentoUnicoIdTipoDocumentoUnico, $this->documentoUnico, $this->senhaAcesso, $this->obs, $this->inativo, $this->foto, $this->cargo, $this->admicao, $this->demicao, $this->excluido, $this->horasTrabalho)";
     $result = $this -> query($sql, true);
-    return mysql_insert_id($this -> connect);
+    return $this -> connect;
   }
 
 	/**
@@ -250,11 +250,7 @@ class Funcionario extends Database {
 		$sql = "SELECT SQL_CACHE idFuncionario, nome, inativo, cargo FROM funcionario ";
 		$sql .= " WHERE inativo = 0 AND excluido = 0 " . $and . " ORDER BY nome";
 		$result = $this -> query($sql);
-		//echo $sql; 
-		//exit;
-	//	$html = "<input type=\"checkbox\" id=\"idFuncionario\" name=\"idFuncionario[]\"  class=\"" . $classes . "\" >";
-//		$html .= "<option value=\"\">Selecione</option>";
-		while ($valor = mysqli_fetch_array($result)) {
+    	while ($valor = mysqli_fetch_array($result)) {
 			
 			$rs = $PermissaoModulo->selectPermissaoModulo(" WHERE funcionario_idFuncionario = ".$valor['idFuncionario']." AND modulo_idModulo = ".$idAtual);
 			

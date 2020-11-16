@@ -55,7 +55,7 @@ class PlanoAcaoGrupoStatusCobranca extends Database {
 	function addPlanoAcaoGrupoStatusCobranca() {
 		$sql = "INSERT INTO planoAcaoGrupoStatusCobranca (statusCobranca_idStatusCobranca, planoAcaoGrupo_idPlanoAcaoGrupo, mes, ano, dataCadastro) VALUES ($this->statusCobrancaIdStatusCobranca, $this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->mes, $this->ano, $this->dataCadastro)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

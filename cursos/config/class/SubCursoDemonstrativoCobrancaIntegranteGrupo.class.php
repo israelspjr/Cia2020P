@@ -62,7 +62,7 @@ class SubCursoDemonstrativoCobrancaIntegranteGrupo extends Database {
 		$sql = "INSERT INTO subCurso_demonstrativoCobrancaIntegranteGrupo (demonstrativoCobrancaIntegranteGrupo_id, dataInicio, dataFim, percentual, teto, quemPaga) VALUES ($this->demonstrativoCobrancaIntegranteGrupoId, $this->dataInicio, $this->dataFim, $this->percentual, $this->teto, $this->quemPaga)";
 		$result = $this -> query($sql, true);
 		//echo "$sql";
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -73,7 +73,7 @@ class SubvencaoMaterialGrupo extends Database {
 	function addSubvencaoMaterialGrupo() {
 		$sql = "INSERT INTO subvencaoMaterialGrupo (integranteGrupo_idIntegranteGrupo, subvencao, teto, quemPaga, dataInicio, dataFim, dataCadastro, obs) VALUES ($this->integranteGrupoIdIntegranteGrupo, $this->subvencao, $this->teto, $this->quemPaga, $this->dataInicio, $this->dataFim, $this->dataCadastro, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

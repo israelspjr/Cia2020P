@@ -67,7 +67,7 @@ class FormacaoPerfil extends Database {
 	function addFormacaoperfil() {
 		$sql = "INSERT INTO formacaoPerfil (professor_idProfessor, clientePf_idClientePf, formacao, curso, instituicao, obs, finalizado) VALUES ($this->professorIdProfessor, $this->clientePfIdClientePf, $this->formacao, $this->curso, $this->instituicao, $this->obs, $this->finalizado)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

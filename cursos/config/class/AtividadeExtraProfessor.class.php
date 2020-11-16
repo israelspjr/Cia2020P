@@ -49,7 +49,7 @@ class AtividadeExtraProfessor extends Database {
 	function addAtividadeextraprofessor() {
 		$sql = "INSERT INTO atividadeExtraProfessor (tipoAtividadeExtraProfessor_idTipoAtividadeExtraProfessor, nome, inativo, ativar) VALUES ($this->tipoAtividadeExtraProfessorIdTipoAtividadeExtraProfessor, $this->nome, $this->inativo, $this->ativar)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

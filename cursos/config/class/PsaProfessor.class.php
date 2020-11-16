@@ -67,7 +67,7 @@ class PsaProfessor extends Database {
 	function addPsaProfessor() {
 		$sql = "INSERT INTO psaProfessor (tipo, titulo, pergunta, obs, inativo, dataCadastro, excluido) VALUES ($this->tipo, $this->titulo, $this->pergunta, $this->obs, $this->inativo, '" . date('Y-m-y H:i:s') . "', $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

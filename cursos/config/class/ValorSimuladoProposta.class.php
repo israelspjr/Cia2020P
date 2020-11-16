@@ -43,12 +43,12 @@ class ValorSimuladoProposta extends Database {
 	function addValorSimuladoProposta() {
 		$sql = "INSERT INTO valorSimuladoProposta (proposta_idProposta, nome, escolhido) VALUES ($this->propostaIdProposta, $this->nome, $this->escolhido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
   function inserirValorSimuladoProposta() {
     $sql = "INSERT INTO valorSimuladoProposta (idValorSimuladoProposta, proposta_idProposta, nome, escolhido) VALUES ($this->idValorSimuladoProposta, $this->propostaIdProposta, $this->nome, $this->escolhido)";
     $result = $this -> query($sql, true);
-    return mysqli_insert_id($this -> connect);
+    return $this -> connect;
   }
 
 	/**

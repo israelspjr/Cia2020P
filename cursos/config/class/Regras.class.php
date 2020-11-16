@@ -91,7 +91,7 @@ class Regras extends Database {
 		$sql = "INSERT INTO regras (id_migracao, tituloRegra, regra, inativo, padrao, dataCadastro, excluido, tipoCursoIdCurso, B2B, B2C, planoAcao_idPlanoAcao) VALUES ($this->id_migracao, $this->tituloRegra, $this->regra, $this->inativo, $this->padrao, '" . date('Y-m-y H:i:s') . "', $this->excluido, $this->tipoCursoIdCurso, $this->B2B, $this->B2C, $this->planoAcaoIdPlanoAcao)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

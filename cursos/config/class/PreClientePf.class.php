@@ -65,7 +65,7 @@ class PreClientePf extends Database {
 		$sql = "INSERT INTO preClientePf (nome, email, dataCadastro, jaRealizado, funcionario_idFuncionario, clientePj_idClientePj) VALUES ($this->nome, $this->email, $this->dataCadastro, $this->jaRealizado, $this->funcionarioIdFuncionario, $this->clientePjIdClientePj)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

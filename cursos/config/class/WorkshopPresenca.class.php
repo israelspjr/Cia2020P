@@ -116,7 +116,7 @@ class WorkshopPresenca extends Database{
     $sql = "INSERT INTO presenca (workshop_idWorkshop, professor_idProfessor, funcionario_idFuncionario, dataInscricao, confirmacao, dataConfirmacao, falta, justificativa, duracao, aprovado) VALUES ($this->workshop_idWorkshop, $this->professor_idProfessor, $this->funcionario_idFuncionario, $this->dataInscricao, $this->confirmacao, $this->dataConfirmacao, $this->falta, $this->justificativa, $this->duracao, $this->aprovado)";
 //	echo $sql;
     $result = $this -> query($sql, true);
-    return mysqli_insert_id($this -> connect);
+    return $this -> connect;
   }
 
   /**

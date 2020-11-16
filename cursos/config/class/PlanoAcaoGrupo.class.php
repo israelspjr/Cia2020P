@@ -81,7 +81,7 @@ class PlanoAcaoGrupo extends Database {
 		$sql = "INSERT INTO planoAcaoGrupo (planoAcao_idPlanoAcao, grupo_idGrupo, dataCadastro, dataInicioEstagio, dataPrevisaoTerminoEstagio, inativo, categoria, nivelEstudo_IdNivelEstudo) VALUES ($this->planoAcaoIdPlanoAcao, $this->grupoIdGrupo, $this->dataCadastro, $this->dataInicioEstagio, $this->dataPrevisaoTerminoEstagio, $this->inativo, $this->categoria, $this->nivelEstudoIdNivelEstudo)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

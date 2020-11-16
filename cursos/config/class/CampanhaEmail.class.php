@@ -91,7 +91,7 @@ class CampanhaEmail extends Database {
 		$sql = "INSERT INTO `campanhaEmail`(`titulo`, `texto`, `dataCadastro`, `dataEnvio`, `inativo`, `assunto`, `nomeEnvio`, `clientePj_idClientePj`, `clientePf_idClientePf`, `horaEnvio`, `emailEnvio`) VALUES ($this->titulo, $this->texto, $this->dataCadastro, $this->dataEnvio, $this->inativo, $this->assunto, $this->nomeEnvio, $this->clientePjIdClientePj, $this->clientePfIdClientePf, $this->horaEnvio, $this->emailEnvio)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

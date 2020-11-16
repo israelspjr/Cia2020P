@@ -67,7 +67,7 @@ class EncomendaMaterialGrupo extends Database {
 	function addEncomendaMaterialGrupo() {
 		$sql = "INSERT INTO encomendaMaterialGrupo (integranteGrupo_idIntegranteGrupo, materialDidatico_idMaterialDidatico, planoAcaoGrupoMaterialMontado_idPlanoAcaoGrupoMaterialMontado, valor, parcelas, dataPrimeiraCobranca, dataPrevisaoEntregaMaterial) VALUES ($this->integranteGrupoIdIntegranteGrupo, $this->materialDidaticoIdMaterialDidatico, $this->planoAcaoGrupoMaterialMontadoIdPlanoAcaoGrupoMaterialMontado, $this->valor, $this->parcelas, $this->dataPrimeiraCobranca, $this->dataPrevisaoEntregaMaterial)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

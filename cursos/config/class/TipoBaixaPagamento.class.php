@@ -54,7 +54,7 @@ class TipoBaixaPagamento extends Database {
 	function addTipoBaixaPagamento() {
 		$sql = "INSERT INTO tipoBaixaPagamento (nome, inativo, dataCadastro, excluido) VALUES ($this->nome, $this->inativo, '" . date('Y-m-y H:i:s') . "', $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

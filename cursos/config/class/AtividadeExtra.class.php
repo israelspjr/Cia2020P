@@ -54,7 +54,7 @@ class AtividadeExtra extends Database {
 	function addAtividadeExtra() {
 		$sql = "INSERT INTO atividadeExtra (tipoAtividadeExtra_idTipoAtividadeExtra, nome, inativo, excluido, ativar) VALUES ($this->tipoAtividadeExtraIdTipoAtividadeExtra, $this->nome, $this->inativo, $this->excluido, $this->ativar)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

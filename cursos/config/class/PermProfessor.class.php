@@ -42,7 +42,7 @@ class PermProfessor extends Database {
 	function addPerm() {
 	    $sql = "INSERT INTO perProfGroup (professor_IdProfessor, grupo_IdGrupo, perAtivo) VALUES ($this->professorIdProfessor, $this->grupoIdGrupo, $this->perAtivo)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

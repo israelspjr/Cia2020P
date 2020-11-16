@@ -91,7 +91,7 @@ class ValorSimuladoPlanoAcao extends Database {
     function addValorSimuladoPlanoAcao() {
         $sql = "INSERT INTO valorSimuladoPlanoAcao (planoAcao_idPlanoAcao, valorHora, valorDescontoHora, validadeDesconto, horasPorAula, frequenciaSemanalAula, cargaHorariaFixaMensal, horaNaoGeraFf, obs, tipo, modalidade_idModalidade) VALUES ($this->planoAcaoIdPlanoAcao, $this->valorHora, $this->valorDescontoHora, $this->validadeDesconto, $this->horasPorAula, $this->frequenciaSemanalAula, $this->cargaHorariaFixaMensal, $this->horaNaoGeraFf, $this->obs, $this->tipo, $this->modalidadeIdModalidade)";
         $result = $this -> query($sql, true);
-        return mysqli_insert_id($this -> connect);
+        return $this -> connect;
     }
 
     /**

@@ -49,7 +49,7 @@ class TipoQualidadeComunicacao extends Database {
 	function addTipoQualidadeComunicacao() {
 		$sql = "INSERT INTO tipoQualidadeComunicacao (idioma_idIdioma, nome, inativo, excluido) VALUES ($this->idiomaIdIdioma, $this->nome, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

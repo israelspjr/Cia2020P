@@ -63,7 +63,7 @@ class Resposta extends Database {
 VALUES ($this->questaoIdQuestao, $this->correta,  $this->ordem, $this->resposta, $this->inativo, $this->respostaAssociada)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

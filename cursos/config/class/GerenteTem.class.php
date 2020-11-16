@@ -55,7 +55,7 @@ class GerenteTem extends Database {
 	function addGerenteTem() {
 		$sql = "INSERT INTO gerenteTem (gerente_idGerente, clientePj_idClientePj, grupo_idGrupo, dataCadastro, dataExclusao) VALUES ($this->gerenteIdGerente, $this->clientePjIdClientePj, $this->grupoIdGrupo, $this->dataCadastro, $this->dataExclusao)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

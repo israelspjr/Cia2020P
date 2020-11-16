@@ -147,7 +147,7 @@ class ClientePj extends Database {
 		$sql = "INSERT INTO clientePj (clientePj_idClientePj, id_migracao, tipoCliente_idTipoCliente, razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, logo, senhaAcesso, inativo, frequenciaMinimaExigida, faltaJustificadaPresenca, obs, dataCadastro, dataContratacao, excluido, intGrupo, empresaIndica, potencial, conheceu) VALUES ($this->clientePjIdClientePj, $this->id_migracao, $this->tipoClienteIdTipoCliente, $this->razaoSocial, $this->nomeFantasia, $this->cnpj, $this->inscricaoEstadual, $this->logo, $this->senhaAcesso, $this->inativo, $this->frequenciaMinimaExigida, $this->faltaJustificadaPresenca, $this->obs, $this->dataCadastro, $this->dataContratacao, $this->excluido, $this->intGrupo, $this->empresaIndica, $this->potencial, $this->conheceu)";
 		//echo "$sql";exit;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

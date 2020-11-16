@@ -79,7 +79,7 @@ class CertificadoCurso extends Database {
 		$sql = "INSERT INTO certificadoCurso (titulo, conteudo, inativo, dataCadastro, excluido, nivel, area, certificacao, formacao) VALUES ($this->titulo, $this->conteudo, $this->inativo, '" . date('Y-m-y H:i:s') . "', $this->excluido, $this->nivel, $this->area, $this->certificacao, $this->formacao)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

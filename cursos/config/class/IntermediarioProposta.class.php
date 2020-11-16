@@ -55,7 +55,7 @@ class IntermediarioProposta extends Database {
 	function addIntermediarioProposta() {
 		$sql = "INSERT INTO intermediarioProposta (clientePf_idClientePf, proposta_idProposta, statusAprovacao_idStatusAprovacao, dataCadastro, linkVisualizacao) VALUES ($this->clientePfIdClientePf, $this->propostaIdProposta, $this->statusAprovacaoIdStatusAprovacao, $this->dataCadastro, $this->linkVisualizacao)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

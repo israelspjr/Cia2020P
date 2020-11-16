@@ -38,7 +38,7 @@ class TipoQuestao extends Database {
 		$sql = "INSERT INTO `tipoQuestao`(`descricao`,`inativo`) VALUES ($this->descricao, $this->inativo)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -97,7 +97,7 @@ class Representante extends Database {
 	function addRepresentante() {
 		$sql = "INSERT INTO representante (clientePf_idClientePf, funcionario_idFuncionario, professor_idProfessor, dataCadastro, inativo, funcionario_idFuncionario_QuemCadastrou, senhaAcesso, obs, campo, campo2, opcao, opcao2) VALUES ($this->clientePfIdClientePf, $this->funcionarioIdFuncionario, $this->professorIdProfessor, $this->dataCadastro, $this->inativo, $this->funcionarioIdFuncionarioQuemCadastrou, $this->senhaAcesso, $this->obs, $this->campo, $this->campo2, $this->opcao, $this->opcao2)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

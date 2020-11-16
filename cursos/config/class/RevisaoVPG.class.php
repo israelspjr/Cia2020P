@@ -49,7 +49,7 @@ class RevisaoVPG extends Database {
 	function addRevisaoVPG() {
 		$sql = "INSERT INTO revisaoVPG (acompanhamentoCurso_idAcompanhamentoCurso, anexo, data, obs) VALUES ($this->acompanhamentoCursoIdAcompanhamentoCurso, $this->anexo, $this->data, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -61,7 +61,7 @@ class ProcessoSeletivoProfessorComEtapas extends Database {
 	function addProcessoSeletivoProfessorComEtapas() {
 		$sql = "INSERT INTO processoSeletivoProfessorComEtapas (processoSeletivoProfessor_idProcessoSeletivoProfessor, etapasProcessoSeletivoProf_idEtapasProcessoSeletivoProf, status, dataReferencia, dataCadastro, obs) VALUES ($this->processoSeletivoProfessorIdProcessoSeletivoProfessor, $this->etapasProcessoSeletivoProfIdEtapasProcessoSeletivoProf, $this->status, $this->dataReferencia, $this->dataCadastro, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

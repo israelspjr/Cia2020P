@@ -99,7 +99,7 @@ class CreditoDebitoGrupo extends Database {
 		$sql = "INSERT INTO creditoDebitoGrupo (planoAcaoGrupo_idPlanoAcaoGrupo, professor_idProfessor, tipo, valor, mes, ano, obs, dataCadastro, excluido, quem, premiacao, grupo_idGrupo) VALUES ($this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->professorIdProfessor, $this->tipo, $this->valor, $this->mes, $this->ano, $this->obs, $this->dataCadastro, $this->excluido, $this->quem, $this->premiacao, grupo_idGrupo = $this->grupo_idGrupo)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

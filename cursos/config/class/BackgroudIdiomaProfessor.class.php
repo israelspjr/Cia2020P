@@ -55,7 +55,7 @@ class BackgroudIdiomaProfessor extends Database {
 	function addBackgroudIdiomaProfessor() {
 		$sql = "INSERT INTO backgroudIdiomaProfessor (idiomaProfessor_idIdiomaProfessor, escola_idEscola, comentario1, comentario2, obs) VALUES ($this->idiomaProfessorIdIdiomaProfessor, $this->escolaIdEscola, $this->comentario1, $this->comentario2, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -37,7 +37,7 @@ class FechamentoGrupoItenMotivoFechamento extends Database {
 	function addFechamentoGrupoItenMotivoFechamento() {
 		$sql = "INSERT INTO fechamentoGrupo_ItenMotivoFechamento (itenMotivoFechamento_idItenMotivoFechamento, fechamentoGrupo_idFechamentoGrupo) VALUES ($this->itenMotivoFechamentoIdItenMotivoFechamento, $this->fechamentoGrupoIdFechamentoGrupo)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

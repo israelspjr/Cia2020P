@@ -49,7 +49,7 @@ class TipoContatoProposta extends Database {
 	function addTipoContatoProposta() {
 		$sql = "INSERT INTO tipoContatoProposta (migracao_id, tipo, inativo, excluido) VALUES ($this->migracao_id, $this->tipo, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -34,7 +34,7 @@ class Setor extends Database {
 	function addSetor() {
 		$sql = "INSERT INTO setor (nome, excluido) VALUES ($this->nome, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id();
+		return $this -> connect;
 	}
 
 	function deleteSetor() {

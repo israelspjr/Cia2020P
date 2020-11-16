@@ -98,7 +98,7 @@ class ValorHoraGrupo extends Database {
 		$sql = "INSERT INTO valorHoraGrupo (planoAcaoGrupo_idPlanoAcaoGrupo, modalidade_idModalidade, valorHora, cargaHorariaFixaMensal, valorDescontoHora, validadeDesconto, previsaoReajuste, dataInicio, dataFim, dataCadastro, naoPagarProfessor, valorHoraProfessor) VALUES ($this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->modalidadeIdModalidade, $this->valorHora, $this->cargaHorariaFixaMensal, $this->valorDescontoHora, $this->validadeDesconto, $this->previsaoReajuste, $this->dataInicio, $this->dataFim, $this->dataCadastro, $this->naoPagarProfessor, $this->valorHoraProfessor)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

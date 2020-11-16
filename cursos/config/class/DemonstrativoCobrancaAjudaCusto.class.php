@@ -47,7 +47,7 @@ class DemonstrativoCobrancaAjudaCusto extends Database {
 	function addDemonstrativoCobrancaAjudaCusto() {
 		$sql = "INSERT INTO demonstrativoCobrancaAjudaCusto (demonstrativoCobranca_idDemonstrativoCobranca, valor, porDia, descricao) VALUES ($this->demonstrativoCobrancaIdDemonstrativoCobranca, $this->valor, $this->porDia, $this->descricao)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id();
+		return $this-> connect;
 	}
 
 	function deleteDemonstrativoCobrancaAjudaCusto($or = "") {

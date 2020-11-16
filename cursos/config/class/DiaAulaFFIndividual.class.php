@@ -62,7 +62,7 @@ class DiaAulaFFIndividual extends Database {
 			
 			$sql = "INSERT INTO diaAulaFFIndividual (diaAulaFF_idDiaAulaFF, integranteGrupo_idIntegranteGrupo, horaRealizadaAluno, faltaJustificada, obsFaltaJustificada, obs) VALUES ($this->diaAulaFFIdDiaAulaFF, $this->integranteGrupoIdIntegranteGrupo, $this->horaRealizadaAluno, $this->faltaJustificada, $this->obsFaltaJustificada, $this->obs)";
 			$result = $this -> query($sql, true);
-			return mysqli_insert_id($this -> connect);
+			return $this -> connect;
 			
 		}else{
 				

@@ -71,7 +71,7 @@ class ItemCalendarioProva extends Database {
 	function addItemCalendarioProva() {
 		$sql = "INSERT INTO itemCalendarioProva (calendarioProva_idCalendarioProva, itenProva_idItenProva, integranteGrupo_idIntegranteGrupo, nota, data, anexo, obs, professor_idProfessor) VALUES ($this->calendarioProvaIdCalendarioProva, $this->itenProvaIdItenProva, $this->integranteGrupoIdIntegranteGrupo, $this->nota, $this->data, $this->anexo, $this->obs, $this->professorIdProfessor)";
 		$result = $this->query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -110,7 +110,7 @@ class DadosBancarios extends Database {
 	function addDadosBancarios() {
 		$sql = "INSERT INTO dadosBancarios (professor_idProfessor, banco, agencia, tipo, numero, dataCadastro, favorecido, cobrarDoc, valor, dataInicio, dataFim, retiraCheque, obs, cpf) VALUES ($this->professorIdProfessor, $this->banco, $this->agencia, $this->tipo, $this->numero, $this->dataCadastro, $this->favorecido, $this->cobrarDoc, $this->valor, $this->dataInicio, $this->dataFim, $this->retiraCheque, $this->obs, $this->cpf)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

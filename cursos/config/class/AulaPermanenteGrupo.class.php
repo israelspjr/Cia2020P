@@ -94,13 +94,13 @@ class AulaPermanenteGrupo extends Database {
         $sql = "INSERT INTO aulaPermanenteGrupo (planoAcaoGrupo_idPlanoAcaoGrupo, diaSemana, horaInicio, horaFim, obs, dataInicio, dataFim, dataCadastro, localAula_idLocalAula, endereco_idEndereco, inativo) VALUES ($this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->diaSemana, $this->horaInicio, $this->horaFim, $this->obs, $this->dataInicio, $this->dataFim, $this->dataCadastro, $this->localAulaIdLocalAula, $this->enderecoIdEndereco, $this->inativo)";
 //		echo $sql;
         $result = $this -> query($sql, true);
-        return mysqli_insert_id($this -> connect);
+        return $this -> connect;
     }
 
  function Migracao() {
     $sql = "INSERT INTO aulaPermanenteGrupo (idAulaPermanenteGrupo, planoAcaoGrupo_idPlanoAcaoGrupo, diaSemana, horaInicio, horaFim, obs, dataInicio, dataFim, dataCadastro, localAula_idLocalAula, endereco_idEndereco, inativo) VALUES ($this->idAulaPermanenteGrupo, $this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->diaSemana, $this->horaInicio, $this->horaFim, $this->obs, $this->dataInicio, $this->dataFim, $this->dataCadastro, $this->localAulaIdLocalAula, $this->enderecoIdEndereco, $this->inativo)";
     $result = $this -> query($sql, true);
-    return mysqli_insert_id($this -> connect);
+    return $this -> connect;
   }
 
     /**

@@ -43,7 +43,7 @@ class EtapasProcessoSeletivoProfessor extends Database {
 	function addEtapasProcessoSeletivoProfessor() {
 		$sql = "INSERT INTO etapasProcessoSeletivoProfessor (nome, inativo, excluido) VALUES ($this->nome, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

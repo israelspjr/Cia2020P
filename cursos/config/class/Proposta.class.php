@@ -92,12 +92,12 @@ class Proposta extends Database {
 		$sql = "INSERT INTO proposta (dataCadastro, dataExclusao, dataAprovacao, clientePj_idClientePj, idioma_idIdioma, obs, tipoContato_idTipoContato, gestor_idGestor, representante_idRepresentante, statusAprovacao_idStatusAprovacao, comoConheceu_idComoConheceu) VALUES ($this->dataCadastro, $this->dataExclusao, $this->dataAprovacao, $this->clientePjIdClientePj, $this->idiomaIdIdioma, $this->obs, $this->tipoContatoIdTipoContato, $this->gestorIdGestor, $this->representanteIdRepresentante, $this->statusAprovacaoIdStatusAprovacao, $this->comoConheceuIdComoConheceu)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
   function insertProposta() {
     $sql = "INSERT INTO proposta (idProposta, dataCadastro, dataExclusao, dataAprovacao, clientePj_idClientePj, idioma_idIdioma, obs, tipoContato_idTipoContato, gestor_idGestor, representante_idRepresentante, statusAprovacao_idStatusAprovacao, comoConheceu_idComoConheceu) VALUES ($this->idProposta, $this->dataCadastro, $this->dataExclusao, $this->dataAprovacao, $this->clientePjIdClientePj, $this->idiomaIdIdioma, $this->obs, $this->tipoContatoIdTipoContato, $this->gestorIdGestor, $this->representanteIdRepresentante, $this->statusAprovacaoIdStatusAprovacao, $this->comoConheceuIdComoConheceu)";
     $result = $this -> query($sql, true);
-    return mysqli_insert_id($this -> connect);
+    return $this -> connect;
   }
 	function updateFieldProposta($field, $value) {
 		$value = ($value != "NULL") ? $this -> gravarBD($value) : $value;

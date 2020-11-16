@@ -43,7 +43,7 @@ class EtapaValidacaoBuscaOpcaoBuscaProfessorSelecionada extends Database {
 	function addEtapaValidacaoBuscaOpcaoBuscaProfessorSelecionada() {
 		$sql = "INSERT INTO etapaValidacaoBuscaOpcaoBuscaProfessorSelecionada (etapaValidacaoBusca_idEtapaValidacaoBusca, opcaoBuscaProfessorSelecionada_idOpcaoBuscaProfessorSelecionada, concluida) VALUES ($this->etapaValidacaoBuscaIdEtapaValidacaoBusca, $this->opcaoBuscaProfessorSelecionadaIdOpcaoBuscaProfessorSelecionada, $this->concluida)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -43,7 +43,7 @@ class Pais extends Database {
 	function addPais() {
 		$sql = "INSERT INTO pais (pais, nacionalidade, inativo) VALUES ($this->pais, $this->nacionalidade, $this->inativo)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

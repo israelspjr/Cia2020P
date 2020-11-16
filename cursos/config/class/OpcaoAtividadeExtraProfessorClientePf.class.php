@@ -39,7 +39,7 @@ class OpcaoAtividadeExtraProfessorClientePf extends Database {
 	function addOpcaoatividadeextraprofessorclientepf() {
 		$sql = "INSERT INTO opcaoAtividadeExtraProfessorClientePf (clientePf_idClientePf, atividadeExtraProfessor_idAtividadeExtraProfessor, obs) VALUES ($this->clientePfIdClientePf, $this->atividadeExtraProfessorIdAtividadeExtraProfessor, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

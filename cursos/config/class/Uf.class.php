@@ -35,7 +35,7 @@ class Uf extends Database {
 	function addUf() {
 		$sql = "INSERT INTO uf (idUF, uf, nome) VALUES ($this->idUf, $this->uf, $this->ufNome)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

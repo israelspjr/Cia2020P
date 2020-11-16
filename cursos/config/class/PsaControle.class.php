@@ -56,7 +56,7 @@ class PsaControle extends Database {
 		$sql = "INSERT INTO psaControle (clientePf_idClientePf, dataPsa, ativo, tipoPsa, excluido) VALUES ($this->clientePfIdClientePf, $this->dataPsa, $this->ativo, $this->tipoPsa, $this->excluido)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

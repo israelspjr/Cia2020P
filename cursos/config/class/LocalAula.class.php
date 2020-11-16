@@ -37,7 +37,7 @@ class LocalAula extends Database {
 	function addLocalAula() {
 		$sql = "INSERT INTO localAula (local, inativo) VALUES ($this->local, $this->inativo)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

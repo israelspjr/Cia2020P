@@ -94,7 +94,7 @@ function __construct(){
   function addBiblioteca(){
     $sql = "INSERT INTO Biblioteca (idAcervo, idProfessor, idFuncionario_emp, idFuncionario_dev, dataEmprestimo, dataDevolucao, inativo) VALUES ($this->idAcervo, $this->idProfessor, $this->idFuncionario_emp, $this->idFuncionario_dev, $this->dataEmprestimo, $this->dataDevolucao, $this->inativo)";
     $result = $this -> query($sql, true);
-    return mysqli_insert_id($this -> connect);
+    return $this -> connect;
   }
 
   function deleteBiblioteca(){

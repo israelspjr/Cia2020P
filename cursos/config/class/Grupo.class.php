@@ -49,7 +49,7 @@ class Grupo extends Database {
 	function addGrupo() {
 		$sql = "INSERT INTO grupo (idGrupo, nome, inativo, dataCadastro, naoBancoHoras) VALUES ($this->idGrupo, $this->nome, $this->inativo, $this->dataCadastro, $this->naoBancoHoras)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

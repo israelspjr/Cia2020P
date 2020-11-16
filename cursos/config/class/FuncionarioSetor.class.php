@@ -34,7 +34,7 @@ class FuncionarioSetor extends Database {
 	function addFuncionarioSetor() {
 		$sql = "INSERT INTO funcionarioSetor (funcionario_idFuncionario, setor_idSetor) VALUES ($this->funcionarioIdFuncionario, $this->setorIdSetor)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id();
+		return $this -> connect;
 	}
 
 	function deleteFuncionarioSetor() {

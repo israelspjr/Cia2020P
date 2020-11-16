@@ -61,7 +61,7 @@ class RelacionamentoINF extends Database {
 	function addRelacionamentoINF() {
 		$sql = "INSERT INTO relacionamentoINF (idioma_idIdioma, nivelEstudo_IdNivelEstudo, focoCurso_idFocoCurso, cargaHoraria, inativo, excluido) VALUES ($this->idiomaIdIdioma, $this->nivelEstudoIdNivelEstudo, $this->focoCursoIdFocoCurso, $this->cargaHoraria, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

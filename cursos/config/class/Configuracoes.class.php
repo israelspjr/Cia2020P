@@ -231,7 +231,7 @@ class Configuracoes extends Database{
     $sql = "INSERT INTO configuracoes (INSERT INTO `configuracoes` (`nomeEmpresa`, `logo`, `whatsApp`, `email`, `site`, `rodape`, `cabecalho`, `smtp`, `seguranca`, `porta`, `emailEnvio`, `senhaEmail`, `favIcon`, `marca`, `emailAten`, `siteEmp`, `cor`, `dataExpira`, `emailFinancas` , `emailGeral`)
 				VALUES ($this->nomeEmpresa, $this->logo, $this->whatsApp, $this->email, $this->site, $this->rodape, $this>cabecalho, $this>smtp, $this>seguranca, $this>porta, $this>emailEnvio, $this>senhaEmail, $this>favIcon, $this>marca, $this>emailAten, $this>siteEmp, $this>cor, $this>dataExpira, $this->emailFinancas, $this->emailGeral)";
     $result = $this -> query($sql, true);
-    return mysql_insert_id($this -> connect);
+    return $this -> connect;
   }
   
   //Delete Config

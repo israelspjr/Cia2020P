@@ -69,7 +69,7 @@ class Comunica extends Database {
 		$sql = "INSERT INTO arquivos (idioma_idIdioma, link, ativo, nomeArquivo, bc, professor, categoria_idCategoria) VALUES ($this->idiomaIdIdioma, $this->link,  $this->inativo, $this->nomeArquivo, $this->bc, $this->professor, $this->categoriaIdCategoria)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

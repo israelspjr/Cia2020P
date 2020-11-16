@@ -49,7 +49,7 @@ class PermissaoModulo extends Database {
 	function addPermissaoModulo() {
 		$sql = "INSERT INTO permissaoModulo (modulo_idModulo, funcionario_idFuncionario, dataCadastro, excluido) VALUES ($this->moduloIdModulo, $this->funcionarioIdFuncionario, $this->dataCadastro, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

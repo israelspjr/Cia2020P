@@ -79,7 +79,7 @@ class BuscaProfessor extends Database {
 	function addBuscaProfessor() {
 		$sql = "INSERT INTO buscaProfessor (aulaPermanenteGrupo_idAulaPermanenteGrupo, aulaDataFixa_idAulaDataFixa, obs, urgente, dataApartir, finalizada, excluida, origem, tipoBusca_idTipoBusca) VALUES ($this->aulaPermanenteGrupoIdAulaPermanenteGrupo, $this->aulaDataFixaIdAulaDataFixa, $this->obs, $this->urgente, $this->dataApartir, $this->finalizada, $this->excluida, $this->origem, $this->tipoBuscaIdTipoBusca)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

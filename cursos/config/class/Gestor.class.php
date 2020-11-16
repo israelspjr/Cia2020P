@@ -75,7 +75,7 @@ class Gestor extends Database {
 	function addGestor() {
 		$sql = "INSERT INTO gestor (clientePf_idClientePf, funcionario_idFuncionario, professor_idProfessor, dataCadastro, inativo, funcionario_idFuncionario_QuemCadastrou, senhaAcesso, obs) VALUES ($this->clientePfIdClientePf, $this->funcionarioIdFuncionario, $this->professorIdProfessor, $this->dataCadastro, $this->inativo, $this->funcionarioIdFuncionarioQuemCadastrou, $this->senhaAcesso, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

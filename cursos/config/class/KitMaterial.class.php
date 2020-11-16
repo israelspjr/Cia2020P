@@ -55,7 +55,7 @@ class KitMaterial extends Database {
 	function addKitMaterial() {
 		$sql = "INSERT INTO kitMaterial (nome, obs, dataCadastro, inativo, excluido) VALUES ($this->nome, $this->obs, '" . date('Y-m-y H:i:s') . "', $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

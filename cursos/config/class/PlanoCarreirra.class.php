@@ -55,7 +55,7 @@ class PlanoCarreirra extends Database {
 	function addPlanoCarreirra() {
 		$sql = "INSERT INTO planoCarreirra (descricao, plano, inativo, dataCadastro, excluido) VALUES ($this->descricao, $this->plano, $this->inativo, '" . date('Y-m-y H:i:s') . "', $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

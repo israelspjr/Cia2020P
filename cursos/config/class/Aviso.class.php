@@ -102,7 +102,7 @@ class Aviso extends Database {
 	//	echo $sql;
 	//	if( !EMPRESA ){
 			$result = $this -> query($sql, true);
-			return mysql_insert_id($this -> connect);
+			return $this -> connect;
 	//	}
 	}
 

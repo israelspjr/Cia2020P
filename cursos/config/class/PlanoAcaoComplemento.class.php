@@ -49,7 +49,7 @@ class PlanoAcaoComplemento extends Database {
 	function addPlanoAcaoComplemento() {
 		$sql = "INSERT INTO planoAcaoComplemento (planoAcao_idPlanoAcao, complementoAbordagem_idComplementoAbordagem, conteudo, ordem) VALUES ($this->planoAcao_idPlanoAcao, $this->ComplementoAbordagemIdComplementoAbordagem, $this->conteudo, $this->ordem)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

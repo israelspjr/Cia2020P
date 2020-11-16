@@ -67,7 +67,7 @@ class DisponibilidadeProfessor extends Database {
 	function addDisponibilidadeProfessor() {
 		$sql = "INSERT INTO disponibilidadeProfessor (professor_idProfessor, statusAgenda_idStatusAgenda, horaInicio, horaFim, diaSemana, obs, dataDisponibilidade) VALUES ($this->professorIdProfessor, $this->statusAgendaIdStatusAgenda, $this->horaInicio, $this->horaFim, $this->diaSemana, $this->obs, $this->dataDisponibilidade)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

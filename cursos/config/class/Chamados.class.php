@@ -86,7 +86,7 @@ class Chamados extends Database {
 		$sql = "INSERT INTO chamados (funcionario_idFuncionario, solicitacao, tipoUrgencia, dataSolucao, testado, finalizado, sistema, setor_idSetor, descartado) VALUES ($this->funcionario_idFuncionario, $this->solicitacao, $this->tipoUrgencia,  $this->dataSolucao, $this->testado, $this->finalizado, $this->sistema, $this->setor_idSetor, $this->descartado)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

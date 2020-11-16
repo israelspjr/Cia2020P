@@ -37,7 +37,7 @@ class TipoDocumentoUnico extends Database {
 	function addTipodocumentounico() {
 		$sql = "INSERT INTO tipodocumentounico (valor, inativo) VALUES ($this->valor, $this->inativo)";
 		$result = $this -> query($sql, true);
-		return mysql_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

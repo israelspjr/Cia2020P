@@ -63,7 +63,7 @@ class PsaIntegranteGrupo extends Database {
 			VALUES ($this->integranteGrupoIdIntegranteGrupo, $this->dataReferencia, $this->dataCadastro, $this->obs, $this->finalizado, $this->desistirPsa)";
 		$result = $this -> query($sql, true);
 
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	function deletePsaIntegranteGrupo(){

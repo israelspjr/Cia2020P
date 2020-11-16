@@ -55,7 +55,7 @@ class FocoCursoIdioma extends Database {
 	function addFocoCursoIdioma() {
 		$sql = "INSERT INTO focoCursoIdioma (focoCurso_idFocoCurso, idioma_idIdioma, inativo, dataCadastro, excluido) VALUES ($this->focoCursoIdFocoCurso, $this->idiomaIdIdioma, $this->inativo, '" . date('Y-m-y H:i:s') . "', $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

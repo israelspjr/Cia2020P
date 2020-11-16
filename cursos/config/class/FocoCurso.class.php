@@ -49,7 +49,7 @@ class FocoCurso extends Database {
 	function addFocoCurso() {
 		$sql = "INSERT INTO focoCurso (foco, obs, inativo, excluido) VALUES ($this->foco, $this->obs, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

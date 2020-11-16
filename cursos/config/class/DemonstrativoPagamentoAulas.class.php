@@ -67,7 +67,7 @@ class DemonstrativoPagamentoAulas extends Database {
 		//echo "$sql";
 		//exit;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 	
 	function deleteDemonstrativoPagamentoAulas($or = "") {

@@ -73,7 +73,7 @@ class DiasBuscaAvulsa extends Database {
 	function addDiasBuscaAvulsa() {
 		$sql = "INSERT INTO diasBuscaAvulsa (buscaAvulsa_idBuscaAvulsa, tipo, horaInicio, horaFim, dataAula, diaSemanaAula, obs, excluida) VALUES ($this->buscaAvulsaIdBuscaAvulsa, $this->tipo, $this->horaInicio, $this->horaFim, $this->dataAula, $this->diaSemanaAula, $this->obs, $this->excluida)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

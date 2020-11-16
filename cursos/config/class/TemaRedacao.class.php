@@ -61,7 +61,7 @@ class TemaRedacao extends Database {
 	function addTemaRedacao() {
 		$sql = "INSERT INTO temaRedacao (idioma_idIdioma, titulo, tema, dataCadastro, inativo, nivelEstudo_idNivelEstudo) VALUES ($this->idiomaIdIdioma, $this->titulo, $this->tema, $this->dataCadastro, $this->inativo, $this->nivelEstudoIdNivelEstudo)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

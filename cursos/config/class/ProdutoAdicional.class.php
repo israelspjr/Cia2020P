@@ -88,7 +88,7 @@ class ProdutoAdicional extends Database {
 	function addProdutoAdicional() {
 		$sql = "INSERT INTO produtoAdicional (nome, descricao, valor, inativo, excluido, porHora) VALUES ($this->nome, $this->descricao, $this->valor, $this->inativo, $this->excluido, $this->porHora)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

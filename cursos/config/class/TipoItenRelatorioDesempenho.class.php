@@ -52,7 +52,7 @@ class TipoItenRelatorioDesempenho extends Database {
 	function addTipoItenRelatorioDesempenho() {
 		$sql = "INSERT INTO tipoItenRelatorioDesempenho (nome, inativo, excluido, avaliacao, reavaliacao) VALUES ($this->nome, $this->inativo, $this->excluido, $this->avaliacao, $this->reavaliacao)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

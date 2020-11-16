@@ -91,7 +91,7 @@ class Telefone extends Database {
 	function addTelefone() {
 		$sql = "INSERT INTO telefone (clientePj_idClientePj, clientePf_idClientePf, funcionario_idFuncionario, professor_idProfessor, contatoAdicional_idContatoAdicional, ddd, numero, operadoraCelular_idOperadoraCelular, obs, dataCadastro, descricaoTelefone_idDescricaoTelefone) VALUES ($this->clientePjIdClientePj, $this->clientePfIdClientePf, $this->funcionarioIdFuncionario, $this->professorIdProfessor, $this->contatoAdicionalIdContatoAdicional, $this->ddd, $this->numero, $this->operadoraCelularIdOperadoraCelular, $this->obs, $this->dataCadastro, $this->descricaoTelefoneIdDescricaoTelefone)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

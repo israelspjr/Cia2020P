@@ -68,7 +68,7 @@ class EnderecoVirtual extends Database {
     $sql = "INSERT INTO enderecoVirtual (professor_idProfessor, clientePf_idClientePf, funcionario_idFuncionario, contatoAdicional_idContatoAdicional, tipoEnderecoVirtual_idTipoEnderecoVirtual, valor, ePrinc) VALUES ($this->professorIdProfessor, $this->clientePfIdClientePf, $this->funcionarioIdFuncionario, $this->contatoAdicionalIdContatoAdicional, $this->tipoEnderecoVirtual_idTipoEnderecoVirtual, $this->valor, $this->ePrinc)";
 //	echo $sql;
     $result = $this -> query($sql, true);
-    return mysqli_insert_id($this -> connect);
+    return $this -> connect;
   }
 
   /**

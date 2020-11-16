@@ -37,7 +37,7 @@ class ProdutoAdicionalItemValorSimuladoProposta extends Database {
 	function addProdutoAdicionalItemValorSimuladoProposta() {
 		$sql = "INSERT INTO produtoAdicionalItemValorSimuladoProposta (produtoAdicional_idProdutoAdicional, itemValorSimuladoProposta_idItemValorSimuladoProposta) VALUES ($this->produtoAdicionalIdProdutoAdicional, $this->itemValorSimuladoPropostaIdItemValorSimuladoProposta)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

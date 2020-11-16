@@ -44,7 +44,7 @@ class PlanoAcaoRegras extends Database {
 		$sql = "INSERT INTO planoAcaoRegras (planoAcao_idPlanoAcao, regras_idRegras, dataCadastro) VALUES ($this->planoAcaoIdPlanoAcao, $this->regrasIdRegras, $this->dataCadastro)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -367,7 +367,7 @@ class Professor extends Database
         $sql = "INSERT INTO professor (id_migracao, candidato, pais_idPais, nome, nomeExibicao, sexo, dataNascimento, rg, tipoDocumentoUnico_idTipoDocumentoUnico, documentoUnico, senha, obs, inativo, foto, inss, ccm, curriculum, otimaPerformance, altaPerformance, dataContratacao, vetado, indisponivel, presencial, online, tradutor, consultor, imersao, estadoCivil_idEstadoCivil, dataCadastro, excluido, indicadoPor, cidadeOrigem, naoReceberEmail, skype, deixandoGrupo, chatClub, terceiro, tipoVeto, expSkype, sobre, tambemAluno, clientePj_idClientePj, dataCapacitacao, encontro, dataSegundo, rgC, comprovante, usoImagem) VALUES ($this->id_migracao, $this->candidato, $this->paisIdPais, $this->nome, $this->nomeExibicao, $this->sexo, $this->dataNascimento, $this->rg, $this->tipoDocumentoUnicoIdTipoDocumentoUnico, $this->documentoUnico, $this->senha, $this->obs, $this->inativo, $this->foto, $this->inss, $this->ccm, $this->curriculum, $this->otimaPerformance, $this->altaPerformance, $this->dataContratacao, $this->vetado, $this->indisponivel, $this->presencial, $this->online, $this->tradutor, $this->consultor, $this->imersao, $this->estadoCivilIdEstadoCivil, $this->dataCadastro, $this->excluido, $this->indicadoPor, $this->cidadeOrigem, $this->naoReceberEmail, $this->skype, $this->deixandoGrupo, $this->chatClub, $this->terceiro, $this->tipoVeto, $this->expSkype, $this->sobre, $this->tambemAluno, $this->clientePjIdClientePj, $this->dataCapacitacao, $this->encontro, $this->dataSegundo, $this->rgC, $this->comprovante, $this->usoImagem)";
 //		echo $sql;
         $result = $this->query($sql, true);
-        return mysqli_insert_id($this->connect);
+        return $this->connect;
     }
 
     /**

@@ -85,7 +85,7 @@ class Contrato extends Database {
 		$sql = "INSERT INTO contrato (professor_idProfessor, clientePf_idClientePf, clientePj_idClientePj, funcionario_idFuncionario, planoAcaoGrupo_idPlanoAcaoGrupo, contrato, obs,dataCadastro, naoMostrar, planoAcao_idPlanoAcao) VALUES ($this->professorIdProfessor, $this->clientePfIdClientePf,  $this->clientePjIdClientePj, $this->funcionarioIdFuncionario, $this->planoAcaoGrupoIdPranoAcaoGrupo, $this->contrato, $this->obs, '" . date('Y-m-d H:i:s') . "', $this->naoMostrar, $this->planoAcaoIdPlanoAcao )";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

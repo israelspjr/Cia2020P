@@ -49,7 +49,7 @@ class QualidadeComunicacaoPlanoAcao extends Database {
 	function addQualidadeComunicacaoPlanoAcao() {
 		$sql = "INSERT INTO qualidadeComunicacaoPlanoAcao (integrantesPlanoAcao_idIntegrantesPlanoAcao, itenQualidadeComunicacao_idItenQualidadeComunicacao, dataCadastro, excluido) VALUES ($this->integrantesPlanoAcaoIdIntegrantesPlanoAcao, $this->itenQualidadeComunicacaoIdItenQualidadeComunicacao, '" . date('Y-m-y H:i:s') . "', $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

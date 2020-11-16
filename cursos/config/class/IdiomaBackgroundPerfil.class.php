@@ -49,7 +49,7 @@ class IdiomaBackgroundPerfil extends Database {
 	function addIdiomabackgroundperfil() {
 		$sql = "INSERT INTO idiomaBackgroundPerfil (clientePf_idClientePf, idioma_idIdioma, escola_idEscola, obs) VALUES ($this->clientePfIdClientePf, $this->idiomaIdIdioma, $this->escolaIdEscola, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

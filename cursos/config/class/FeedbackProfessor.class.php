@@ -159,7 +159,7 @@ class FeedbackProfessor extends Database {
 		$sql = "INSERT INTO feedbackProfessor (professor_idProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10, pergunta11, pergunta12, pergunta13 ) VALUES ($this->professorIdProfessor, $this->anexo, $this->obs, $this->dataAvaliada, $this->grupoIdGrupo, $this->status, $this->quemAssistiu, $this->status2, $this->professorIdAssistido, $this->pergunta1, $this->pergunta2, $this->pergunta3, $this->pergunta4, $this->pergunta5, $this->pergunta6, $this->pergunta7, $this->pergunta8, $this->pergunta9, $this->pergunta10, $this->pergunta11, $this->pergunta12, $this->pergunta13)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

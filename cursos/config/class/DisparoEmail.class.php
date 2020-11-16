@@ -120,7 +120,7 @@ class DisparoEmail extends Database {
 		$this->anexo, $this->campanhaEmailIdCampanhaEmail)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	function deleteDisparoEmail() {

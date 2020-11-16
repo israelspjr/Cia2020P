@@ -305,7 +305,7 @@ class ClientePf extends Database {
 
         $sql = "INSERT INTO clientePf (id_migracao, tipoCliente_idTipoCliente, nome, nomeExibicao, sexo, dataNascimento, estadoCivil_idEstadoCivil, pais_idPais, inativo, foto, cargo, clientePj_idClientePj, naoReceberEmail, tipoDocumentoUnico_idTipoDocumentoUnico, documentoUnico, senhaAcesso, obs, rg, dataCadastro, excluido,motivo,dataRetorno, inativaPsa, dataInativar, rf, subEmpresa, cc, politica, politicaA, dataPolitica, area, conheceu, categoria, alunoIndica, influencia, poder,clientePj_idClientePj2) VALUES ($this->id_migracao, $this->tipoClienteIdTipoCliente, $this->nome, $this->nomeExibicao, $this->sexo, $this->dataNascimento, $this->estadoCivilIdEstadoCivil, $this->paisIdPais, $this->inativo, $this->foto, $this->cargo, $this->clientePjIdClientePj, $this->naoReceberEmail, $this->tipoDocumentoUnicoIdTipoDocumentoUnico, $this->documentoUnico, $this->senhaAcesso, $this->obs, $this->rg, $this->dataCadastro, $this->excluido,$this->motivo,$this->dataRetorno, $this->inativaPsa, $this->dataInativar, $this->rf, $this->subEmpresa, $this->cc, $this->politica, $this->politicaA, $this->dataPolitica, $this->area, $this->conheceu, $this->categoria, $this->alunoIndica, $this->influencia, $this->poder, $this->clientePjIdClientePj2)";
         $result = $this -> query($sql, true);
-        return mysqli_insert_id($this -> connect);
+        return $this -> connect;
     }
 
     /**

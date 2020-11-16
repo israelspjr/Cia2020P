@@ -44,7 +44,7 @@ class VpgPlanoAcao extends Database {
 		$sql = "INSERT INTO vpgPlanoAcao (integrantePlanoAcao_idIntegrantePlanoAcao, valor, tipo) VALUES ($this->integrantePlanoAcaoIdIntegrantePlanoAcao, $this->valor, $this->tipo)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

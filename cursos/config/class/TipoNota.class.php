@@ -54,7 +54,7 @@ class TipoNota extends Database {
 	function addTipoNota() {
 		$sql = "INSERT INTO tipoNota (nome, descricao, inativo, excluido, descritiva) VALUES ($this->nome, $this->descricao, $this->inativo, $this->excluido, $this->descritiva)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

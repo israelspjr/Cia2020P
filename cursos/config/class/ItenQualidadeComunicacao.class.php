@@ -55,7 +55,7 @@ class ItenQualidadeComunicacao extends Database {
 	function addItenQualidadeComunicacao() {
 		$sql = "INSERT INTO itenQualidadeComunicacao (tipoQualidadeComunicacao_idTipoQualidadeComunicacao, nome, descricao, inativo, excluido) VALUES ($this->tipoQualidadeComunicacaoIdTipoQualidadeComunicacao, $this->nome, $this->descricao, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

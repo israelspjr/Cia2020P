@@ -37,13 +37,13 @@ class EstadoCivil extends Database {
 	function addEstadocivil() {
 		$sql = "INSERT INTO estadoCivil (valor, inativo) VALUES ($this->valor, $this->inativo)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	function addEstadocivil_M() {
     $sql = "INSERT INTO estadoCivil (idEstadoCivil, valor, inativo) VALUES ($this->idEstadoCivil, $this->valor, $this->inativo)";
     $result = $this -> query($sql, true);
-    return mysqli_insert_id($this -> connect);
+    return $this -> connect;
   }
 
 	/**

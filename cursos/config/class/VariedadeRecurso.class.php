@@ -55,7 +55,7 @@ class VariedadeRecurso extends Database {
 	function addVariedadeRecurso() {
 		$sql = "INSERT INTO variedadeRecurso (acompanhamentoCurso_idAcompanhamentoCurso, tipoVariedadeRecurso_idTipoVariedadeRecurso, titulo, dataAplicacao, obs) VALUES ($this->acompanhamentoCursoIdAcompanhamentoCurso, $this->tipoVariedadeRecursoIdTipoVariedadeRecurso, $this->titulo, $this->dataAplicacao, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

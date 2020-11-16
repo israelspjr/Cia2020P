@@ -61,7 +61,7 @@ class VivenciaProfessor extends Database {
 		$sql = "INSERT INTO vivenciaProfessor (pais_idPais, professor_idProfessor, obs, dataPartida, dataRetorno, atividade) VALUES ($this->paisIdPais, $this->professorIdProfessor, $this->obs, $this->dataPartida, $this->dataRetorno, $this->atividade)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

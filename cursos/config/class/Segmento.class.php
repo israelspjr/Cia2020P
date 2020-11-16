@@ -49,15 +49,9 @@ class Segmento extends Database {
 	function addSegmento() {
 		$sql = "INSERT INTO segmento (valor, inativo, sistema, bc) VALUES ($this->valor, $this->inativo, $this->sistema, $this->bc)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
-/*	function addEstadocivil_M() {
-    $sql = "INSERT INTO estadoCivil (idEstadoCivil, valor, inativo) VALUES ($this->idEstadoCivil, $this->valor, $this->inativo)";
-    $result = $this -> query($sql, true);
-    return mysqli_insert_id($this -> connect);
-  }
-*/
 	/**
 	 * deleteEstadocivil() Function
 	 */

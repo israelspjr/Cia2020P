@@ -61,7 +61,7 @@ class OpcaoBuscaProfessorSelecionada extends Database {
 	function addOpcaoBuscaProfessorSelecionada() {
 		$sql = "INSERT INTO opcaoBuscaProfessorSelecionada (buscaProfessor_idBuscaProfessor, professor_idProfessor, aceito, obs, motivo, valorHora) VALUES ($this->buscaProfessorIdBuscaProfessor, $this->professorIdProfessor, $this->aceito, $this->obs, $this->motivo, $this->valorHora)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	//	 * deleteOpcaoBuscaProfessorSelecionada() Function

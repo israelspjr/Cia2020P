@@ -55,7 +55,7 @@ class ZonaAtendimentoCidade extends Database {
 	function addZonaAtendimentoCidade() {
 		$sql = "INSERT INTO zonaAtendimentoCidade (cidade_idCidade, pais_idPais, zona, inativo, excluido) VALUES ($this->cidadeIdCidade, $this->paisIdPais, $this->zona, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

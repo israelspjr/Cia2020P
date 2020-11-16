@@ -49,7 +49,7 @@ class SubvencaoMaterialPlanoAcao extends Database {
 	function addSubvencaoMaterialPlanoAcao() {
 		$sql = "INSERT INTO subvencaoMaterialPlanoAcao (integrantePlanoAcao_idIntegrantePlanoAcao, subvencao, teto, quemPaga) VALUES ($this->integrantePlanoAcaoIdIntegrantePlanoAcao, $this->subvencao, $this->teto, $this->quemPaga)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

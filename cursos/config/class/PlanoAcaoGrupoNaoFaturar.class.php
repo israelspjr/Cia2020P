@@ -43,7 +43,7 @@ class PlanoAcaoGrupoNaoFaturar extends Database {
 		$sql = "INSERT INTO planoAcaoGrupoNaoFaturar (planoAcaoGrupo_idPlanoAcaoGrupo, data, dataExcluido, dataCadastro) 
 		VALUES ($this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->data, $this->dataExcluido, $this->dataCadastro)";
 		$result = $this -> query($sql);
-		return mysqli_insert_id();
+		return $this->connect;
 	}
 
 	function deletePlanoAcaoGrupoNaoFaturar() {

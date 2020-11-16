@@ -70,7 +70,7 @@ class DemonstrativoCobrancaValorHora extends Database {
 		$sql = "INSERT INTO demonstrativoCobrancaValorHora (demonstrativoCobranca_idDemonstrativoCobranca, valor, valorDesconto, validadeDesconto, dataInicio, dataFim, dataCadastro) VALUES ($this->demonstrativoCobrancaIdDemonstrativoCobranca, $this->valor, $this->valorDesconto, $this->validadeDesconto, $this->dataInicio, $this->dataFim, $this->dataCadastro)";
 		$result = $this -> query($sql, true);
 		//echo "//$sql";exit;
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

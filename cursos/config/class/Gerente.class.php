@@ -55,7 +55,7 @@ class Gerente extends Database {
 	function addGerente() {
 		$sql = "INSERT INTO gerente (funcionario_idFuncionario, cor, dataCadastro, inativo, obs) VALUES ($this->funcionarioIdFuncionario, $this->cor, $this->dataCadastro, $this->inativo, $this->obs)";
 		$result = $this->query($sql, true);
-		return mysqli_insert_id($this->connect);
+		return $this->connect;
 	}
 
 	/**

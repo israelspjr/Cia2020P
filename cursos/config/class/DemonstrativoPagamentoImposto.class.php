@@ -49,7 +49,7 @@ class DemonstrativoPagamentoImposto extends Database {
 	function addDemonstrativoPagamentoImposto() {
 		$sql = "INSERT INTO demonstrativoPagamentoImposto (demonstrativoPagamento_idDemonstrativoPagamento, tipoImpostoProfessor_idTipoImpostoProfessor, valor, dataCadastro) VALUES ($this->demonstrativoPagamentoIdDemonstrativoPagamento, $this->tipoImpostoProfessorIdTipoImpostoProfessor, $this->valor, $this->dataCadastro)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

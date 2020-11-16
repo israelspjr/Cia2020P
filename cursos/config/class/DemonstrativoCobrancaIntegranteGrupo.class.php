@@ -102,7 +102,7 @@ class DemonstrativoCobrancaIntegranteGrupo extends Database {
 	function addDemonstrativoCobrancaIntegranteGrupo() {
 		$sql = "INSERT INTO demonstrativoCobrancaIntegranteGrupo (demonstrativoCobranca_idDemonstrativoCobranca, integranteGrupo_idIntegranteGrupo, cursoEmpresa, materialEmpresa, creditoEmpresa, debitoEmpresa, cursoAluno, materialAluno, creditoAluno, debitoAluno, dataCadastro, obs) VALUES ($this->demonstrativoCobrancaIdDemonstrativoCobranca, $this->integranteGrupoIdIntegranteGrupo, $this->cursoEmpresa, $this->materialEmpresa, $this->creditoEmpresa, $this->debitoEmpresa, $this->cursoAluno, $this->materialAluno, $this->creditoAluno, $this->debitoAluno, $this->dataCadastro, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

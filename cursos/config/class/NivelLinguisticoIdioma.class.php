@@ -49,7 +49,7 @@ class NivelLinguisticoIdioma extends Database {
 	function addNivelLinguisticoIdioma() {
 		$sql = "INSERT INTO nivelLinguisticoIdioma (nivelLinguistico_idNivelLinguistico, idioma_idIdioma, inativo, excluido) VALUES ($this->nivelLinguisticoIdNivelLinguistico, $this->idiomaIdIdioma, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

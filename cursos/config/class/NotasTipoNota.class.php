@@ -49,7 +49,7 @@ class NotasTipoNota extends Database {
 	function addNotasTipoNota() {
 		$sql = "INSERT INTO notasTipoNota (tipoNota_idTipoNota, nome, inativo, excluido) VALUES ($this->tipoNotaIdTipoNota, $this->nome, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

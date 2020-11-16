@@ -43,7 +43,7 @@ class EtapaValidacaoBusca extends Database {
 	function addEtapaValidacaoBusca() {
 		$sql = "INSERT INTO etapaValidacaoBusca (etapa, inativo, excluido) VALUES ($this->etapa, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

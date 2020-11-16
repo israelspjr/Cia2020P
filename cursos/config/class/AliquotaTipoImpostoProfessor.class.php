@@ -77,7 +77,7 @@ class AliquotaTipoImpostoProfessor extends Database {
 	function addAliquotaTipoImpostoProfessor() {
 		$sql = "INSERT INTO aliquotaTipoImpostoProfessor (tipoImpostoProfessor_idTipoImpostoProfessor, de, ate, porcentagem, parcelaDedutiva, valorMaximo, inativo, dataCadastro, excluido) VALUES ($this->tipoImpostoProfessorIdTipoImpostoProfessor, $this->de, $this->ate, $this->porcentagem, $this->parcelaDedutiva, $this->valorMaximo, $this->inativo, $this->dataCadastro, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

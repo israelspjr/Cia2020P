@@ -93,7 +93,7 @@ class ItemValorSimuladoProposta extends Database {
 	function addItemValorSimuladoProposta() {
 		$sql = "INSERT INTO itemValorSimuladoProposta (idItemValorSimuladoProposta, valorSimuladoProposta_idValorSimuladoProposta, valor, valorDescontoHora, validadeDesconto, horasPorAula, frequenciaSemanalAula, cargaHorariaFixaMensal, horaNaoGeraFf, obs, tipo, modalidade_idModalidade) VALUES ($this->idItemValorSimuladoProposta, $this->valorSimuladoPropostaIdValorSimuladoProposta, $this->valor, $this->valorDescontoHora, $this->validadeDesconto, $this->horasPorAula, $this->frequenciaSemanalAula, $this->cargaHorariaFixaMensal, $this->horaNaoGeraFf, $this->obs, $this->tipo, $this->modalidadeIdModalidade)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

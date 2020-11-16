@@ -56,7 +56,7 @@ class Habilidades extends Database {
 		$sql = "INSERT INTO habilidades (descricao, inativo, habilidade_idHabilidade, pergunta, tipo) VALUES ($this->descricao, $this->inativo, $this->habilidadeIdHabilidade, $this->pergunta, $this->tipo)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

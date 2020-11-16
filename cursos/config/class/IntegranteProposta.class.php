@@ -55,7 +55,7 @@ class IntegranteProposta extends Database {
 	function addIntegranteProposta() {
 		$sql = "INSERT INTO integranteProposta (proposta_idProposta, clientePf_idClientePf, dataCadastro, linkVisualizacao, statusAprovacao_idStatusAprovacao) VALUES ($this->propostaIdProposta, $this->clientePfIdClientePf, $this->dataCadastro, $this->linkVisualizacao, $this->statusAprovacaoIdStatusAprovacao)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

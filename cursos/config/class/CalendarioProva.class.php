@@ -81,7 +81,7 @@ class CalendarioProva extends Database {
 	function addCalendarioProva() {
 		$sql = "INSERT INTO calendarioProva (planoAcaoGrupo_idPlanoAcaoGrupo, prova_idProva, dataPrevistaInicial, dataPrevistaNova, dataAplicacao, obs, validacao, provaOn, codLiberacao) VALUES ($this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->provaIdProva, $this->dataPrevistaInicial, $this->dataPrevistaNova, $this->dataAplicacao, $this->obs, $this->validacao, $this->provaOn, $this->codLiberacao)";
 		$result = $this -> query($sql, true);
-		return mysql_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	function deleteCalendarioProva($and = "") {
@@ -127,9 +127,9 @@ class CalendarioProva extends Database {
 	function selectCalendarioProvaTr($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "", $idPai = "", $caminhoModulo = "") {
 		$sql = "SELECT SQL_CACHE idCalendarioProva, planoAcaoGrupo_idPlanoAcaoGrupo, prova_idProva, dataPrevistaInicial, dataPrevistaNova, dataAplicacao, obs, validacao, provaOn, codLiberacao FROM calendarioProva " . $where;
 		$result = $this -> query($sql);
-		if (mysql_num_rows($result) > 0) {
+		if (mysqli_num_rows($result) > 0) {
 			$html = "";
-			while ($valor = mysql_fetch_array($result)) {
+			while ($valor = mysqli_fetch_array($result)) {
 				$html .= "<tr>";
 
 				$html .= "<td onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?id=" . $valor['idCalendarioProva'] . $idPai . "', '" . $caminhoAtualizar . $idPai . "', '$ondeAtualiza')\" >" . $valor['idCalendarioProva'] . "</td>";
@@ -156,7 +156,7 @@ class CalendarioProva extends Database {
 		$result = $this -> query($sql);
 		$html = "<select id=\"idCalendarioProva\" name=\"idCalendarioProva\"  class=\"" . $classes . "\" >";
 		$html .= "<option value=\"\">Selecione</option>";
-		while ($valor = mysql_fetch_array($result)) {
+		while ($valor = mysqli_fetch_array($result)) {
 			$selecionado = $idAtual == $valor['idCalendarioProva'] ? "selected=\"selected\"" : "";
 			$html .= "<option " . $selecionado . " value=\"" . $valor['idCalendarioProva'] . "\">" . ($valor['idCalendarioProva']) . "</option>";
 		}

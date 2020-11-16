@@ -116,7 +116,7 @@ class BancoHorasAulasRepostas extends Database {
 		$sql = "INSERT INTO bancoHorasAulasRepostas (diaAulaFF_idDiaAulaFF, horasRepostas, bancoHoras_IdBancoHoras, ativo, excluido, professor_idProfessor, totalReposto, dataReferenciaFinal, ocorrenciaExpirada, finalizado, idDiaAulaFFR, somaReposicao, horaSobra, planoAcaoGrupo_idPlanoAcaoGrupo, reposicaoFinalizada) VALUES ($this->diaAulaFFIdDiaAulaFF, $this->horasRepostas, $this->bancoHorasIdBancoHoras, $this->ativo, $this->excluido, $this->professoridProfessor, $this->totalReposto, $this->dataReferenciaFinal, $this->ocorrenciaExpirada, $this->finalizado, $this->idDiaAulaFFR, $this->somaReposicao, $this->horaSobra, $this->planoAcaoGrupoidPlanoAcaoGrupo, $this->reposicaoFinalizada)";
 		$result = $this -> query($sql, true);
 	//	echo "<hr>".$sql."<hr>";
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

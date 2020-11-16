@@ -42,7 +42,7 @@ class Cidade extends Database {
 	function addCidade() {
 		$sql = "INSERT INTO cidade (idCidade, uf_idUf, cidade, inativo) VALUES ($this->idCidade, $this->ufIdUf, $this->cidade, $this->inativo)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

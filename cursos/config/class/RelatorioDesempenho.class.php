@@ -55,7 +55,7 @@ class RelatorioDesempenho extends Database {
 	function addRelatorioDesempenho() {
 		$sql = "INSERT INTO relatorioDesempenho (integranteGrupo_idIntegranteGrupo, acompanhamentoCurso_idAcompanhamentoCurso, itenRelatorioDesempenho_idItenRelatorioDesempenho, nota, obs) VALUES ($this->integranteGrupoIdIntegranteGrupo, $this->acompanhamentoCursoIdAcompanhamentoCurso, $this->itenRelatorioDesempenhoIdItenRelatorioDesempenho, $this->nota, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

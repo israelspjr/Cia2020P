@@ -98,7 +98,7 @@ class DemonstrativoCobranca extends Database {
         $result = $this -> query($sql, true);
         //echo $sql;
         //exit;
-        return mysqli_insert_id($this -> connect);
+        return $this -> connect;
     }
 
     /**

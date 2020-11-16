@@ -69,7 +69,7 @@ class AcompanhamentoCurso extends Database {
 		$sql = "INSERT INTO acompanhamentoCurso (professor_idProfessor, periodoAcompanhamentoCurso_idPeriodoAcompanhamentoCurso, planoAcaoGrupo_idPlanoAcaoGrupo, obs, finalizadoParcial, finalizadoGeral, arquivado) VALUES ($this->professorIdProfessor, $this->periodoAcompanhamentoCursoIdPeriodoAcompanhamentoCurso, $this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->obs, $this->finalizadoParcial, $this->finalizadoGeral, $this->arquivado)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -43,7 +43,7 @@ class DemonstrativoCobrancaProfessor extends Database {
 	function addDemonstrativoCobrancaProfessor() {
 		$sql = "INSERT INTO demonstrativoCobrancaProfessor (demonstrativoCobranca_idDemonstrativoCobranca, professor_idProfessor, dataCadastro) VALUES ($this->demonstrativoCobrancaIdDemonstrativoCobranca, $this->professorIdProfessor, $this->dataCadastro)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

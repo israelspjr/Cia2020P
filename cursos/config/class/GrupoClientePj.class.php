@@ -49,7 +49,7 @@ class GrupoClientePj extends Database {
 	function addGrupoClientePj() {
 		$sql = "INSERT INTO grupoClientePj (grupo_idGrupo, clientePj_idClientePj, dataFim, dataCadastro) VALUES ($this->grupoIdGrupo, $this->clientePjIdClientePj, $this->dataFim, $this->dataCadastro)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -38,7 +38,7 @@ class LocalAulaProfessor extends Database {
 		$sql = "INSERT INTO localAulaProfessor (professor_idProfessor, zonaAtendimentoCidade_idZonaAtendimentoCidade) VALUES ($this->professorIdProfessor, $this->zonaAtendimentoCidadeIdZonaAtendimentoCidade)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

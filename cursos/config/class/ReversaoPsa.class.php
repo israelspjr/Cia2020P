@@ -42,7 +42,7 @@ class ReversaoPsa extends Database {
 		$sql = "INSERT INTO reversaoPsa (idPsaNegativa, idPsaRevertidaCod, inativo) VALUES ($this->idPsaNegativa, $this->idPsaRevertidaCod, $this->inativo)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 

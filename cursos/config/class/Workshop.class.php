@@ -90,7 +90,7 @@ class Workshop extends Database{
   function addWorkShop(){
     $sql = "INSERT INTO workshop (tema, dataEvento, vagas, inicio, termino, finalizado, excluido) VALUES ($this->tema, $this->dataEvento, $this->vagas, $this->inicio, $this->termino, $this->finalizado, $this->excluido)";
     $result = $this -> query($sql, true);
-    return mysqli_insert_id($this -> connect);
+    return $this -> connect;
   }
 
   function deleteWorkShop(){

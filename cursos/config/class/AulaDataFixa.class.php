@@ -85,14 +85,14 @@ class AulaDataFixa extends Database {
       
         $sql = "INSERT INTO aulaDataFixa (planoAcaoGrupo_idPlanoAcaoGrupo, dataAula, horaInicio, horaFim, obs, dataCadastro, localAula_idLocalAula, endereco_idEndereco, excluido, addFrom) VALUES ($this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->dataAula, $this->horaInicio, $this->horaFim, $this->obs, $this->dataCadastro, $this->localAulaIdLocalAula, $this->enderecoIdEndereco, $this->excluido, $this->addFrom)";
         $result = $this -> query($sql, true);
-        return mysqli_insert_id($this -> connect);
+        return $this -> connect;
     }
 
     function Migracao() {
       
         $sql = "INSERT INTO aulaDataFixa (idAulaDataFixa, planoAcaoGrupo_idPlanoAcaoGrupo, dataAula, horaInicio, horaFim, obs, dataCadastro, localAula_idLocalAula, endereco_idEndereco, excluido, addFrom) VALUES ($this->idAulaDataFixa, $this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->dataAula, $this->horaInicio, $this->horaFim, $this->obs, $this->dataCadastro, $this->localAulaIdLocalAula, $this->enderecoIdEndereco, $this->excluido, $this->addFrom)";
         $result = $this -> query($sql, true);
-        return mysqli_insert_id($this -> connect);
+        return $this -> connect;
     }
     
     /**

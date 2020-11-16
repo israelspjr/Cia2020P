@@ -49,7 +49,7 @@ class EncomendaMaterialPagamentoParcela extends Database {
 	function addEncomendaMaterialPagamentoParcela() {
 		$sql = "INSERT INTO encomendaMaterialPagamentoParcela (encomendaMaterialGrupo_idEncomendaMaterialGrupo, parcela, quitada, dataReferencia) VALUES ($this->encomendaMaterialGrupoIdEncomendaMaterialGrupo, $this->parcela, $this->quitada, $this->dataReferencia)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

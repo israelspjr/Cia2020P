@@ -67,7 +67,7 @@ class PlanoAcaoGrupoMaterialMontado extends Database {
 	function addPlanoAcaoGrupoMaterialMontado() {
 		$sql = "INSERT INTO planoAcaoGrupoMaterialMontado (planoAcaoGrupo_idPlanoAcaoGrupo, nome, preco, obs, dataInicio, dataFim, dataCadastro) VALUES ($this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->nome, $this->preco, $this->obs, $this->dataInicio, $this->dataFim, $this->dataCadastro)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -70,7 +70,7 @@ class Ocorrencia extends Database {
 		$sql = "INSERT INTO ocorrencia (clientePf_idClientePf, dataContato, observacao, dataRetorno, status, funcionario_idFuncionario, outro) VALUES ($this->clientePf_idClientePf, $this->dataContato, $this->observacao, $this->dataRetorno, $this->status, $this->funcionarioIdFuncionario, $this->outro )";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -91,7 +91,7 @@ class MaterialDidatico extends Database {
 	function addMaterialDidatico() {
 		$sql = "INSERT INTO materialDidatico (editoraMaterialDidatico_idEditoraMaterialDidatico, materialDidaticoTipo_idMaterialDidaticoTipo, idioma_idIdioma, isbn, valor, opcional, dataCadastro, obs, inativo, nome, excluido) VALUES ($this->editoraMaterialDidaticoIdEditoraMaterialDidatico, $this->materialDidaticoTipoIdMaterialDidaticoTipo, $this->idiomaIdIdioma, $this->isbn, $this->valor, $this->opcional, '" . date('Y-m-y H:i:s') . "', $this->obs, $this->inativo, $this->nome, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -55,7 +55,7 @@ class FechamentoGrupo extends Database {
 	function addFechamentoGrupo() {
 		$sql = "INSERT INTO fechamentoGrupo (planoAcaoGrupo_idPlanoAcaoGrupo, dataFechamento, obs, inativo, tipo) VALUES ($this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->dataFechamento, $this->obs, $this->inativo, $this->tipo)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

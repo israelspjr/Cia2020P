@@ -54,7 +54,7 @@ class StatusCobranca extends Database {
 	function addStatusCobranca() {
 		$sql = "INSERT INTO statusCobranca (status, cor, inativo, dataCadastro, excluido) VALUES ($this->status, $this->cor, $this->inativo, $this->dataCadastro, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

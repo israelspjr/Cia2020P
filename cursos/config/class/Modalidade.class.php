@@ -49,7 +49,7 @@ class Modalidade extends Database {
 	function addModalidade() {
 		$sql = "INSERT INTO modalidade (migracao_id, nome, inativo, excluido) VALUES ($this->migracao_id, $this->nome, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

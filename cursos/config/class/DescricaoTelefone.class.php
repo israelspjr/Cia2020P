@@ -43,7 +43,7 @@ class DescricaoTelefone extends Database {
 	function addDescricaoTelefone() {
 		$sql = "INSERT INTO descricaoTelefone (nome, inativo, excluido) VALUES ($this->nome, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

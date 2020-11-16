@@ -36,7 +36,7 @@ class TipoCurso extends Database {
 	function addTipoCurso() {
 		$sql = "INSERT INTO tipoCurso (nome, inativo) VALUES ($this->nome, $this->inativo)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

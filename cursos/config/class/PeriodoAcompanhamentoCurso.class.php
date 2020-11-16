@@ -43,7 +43,7 @@ class PeriodoAcompanhamentoCurso extends Database {
 	function addPeriodoAcompanhamentoCurso() {
 		$sql = "INSERT INTO periodoAcompanhamentoCurso (mes, ano, excluido) VALUES ($this->mes, $this->ano, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -79,7 +79,7 @@ class RegistroDeAnotacoes extends Database {
 		$sql = "INSERT INTO registroDeAnotacoes (proposta_idProposta, planoAcao_idPlanoAcao, planoAcaoGrupo_idPlanoAcaoGrupo, titulo, anotacao, dataCadastro, dataNovoContato, financeiro, clientePj_idClientePj) VALUES ($this->propostaIdProposta, $this->planoAcaoIdPlanoAcao, $this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->titulo, $this->anotacao, $this->dataCadastro, $this->dataNovoContato, $this->financeiro, $this->clientePjIdClientePj)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

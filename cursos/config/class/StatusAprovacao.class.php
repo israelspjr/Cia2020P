@@ -37,7 +37,7 @@ class StatusAprovacao extends Database {
 	function addStatusAprovacao() {
 		$sql = "INSERT INTO statusAprovacao (status, inativo) VALUES ($this->status, $this->inativo)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -49,7 +49,7 @@ class MaterialMontadoPlanoAcao extends Database {
 	function addMaterialMontadoPlanoAcao() {
 		$sql = "INSERT INTO materialMontadoPlanoAcao (planoAcao_idPlanoAcao, nome, preco, obs) VALUES ($this->planoAcaoIdPlanoAcao, $this->nome, $this->preco, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

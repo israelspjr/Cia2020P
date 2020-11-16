@@ -56,7 +56,7 @@ class ProvaOnQuestoes extends Database {
 		$sql = "INSERT INTO provaOnQuestoes (provaOn_idProvaOn, questao_idQuestao, inativo, excluido, ordem) VALUES ($this->provasOnIdProvaOn, $this->questaoIdQuestao, $this->inativo, $this->excluido, $this->ordem)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

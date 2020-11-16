@@ -79,7 +79,7 @@ class IdiomaProfessor extends Database {
 	function addIdiomaProfessor() {
 		$sql = "INSERT INTO idiomaProfessor (professor_idProfessor, idioma_idIdioma, sotaqueIdiomaProfessor_idSotaqueIdiomaProfessor, nivelLinguistico_idNivelLinguistico, dataContratacao, dataCadastro, inativo, obs, nivelF) VALUES ($this->professorIdProfessor, $this->idiomaIdIdioma, $this->sotaqueIdiomaProfessorIdSotaqueIdiomaProfessor, $this->nivelLinguisticoIdNivelLinguistico, $this->dataContratacao, $this->dataCadastro, $this->inativo, $this->obs, $this->nivelF)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

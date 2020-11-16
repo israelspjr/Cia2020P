@@ -56,7 +56,7 @@ class EmailsMkt extends Database {
 		$sql = "INSERT INTO emailsMkt (clientePj_idClientePj, nome, valor, inativo, segmento_idSegmento) VALUES ($this->clientePjIdClientePj, $this->nome, $this->valor, $this->inativo, $this->segmentoIdSegmento)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 

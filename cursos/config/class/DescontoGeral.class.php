@@ -53,7 +53,7 @@ class DescontoGeral extends Database {
 	function addDescontoGeral() {
 		$sql = "INSERT INTO descontoGeral (descricao, valor, dataCadastro, inativo) VALUES ($this->descricao, $this->valor, $this->dataCadastro, $this->inativo)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

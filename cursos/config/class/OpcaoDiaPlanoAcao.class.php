@@ -73,7 +73,7 @@ class OpcaoDiaPlanoAcao extends Database {
 	function addOpcaoDiaPlanoAcao() {
 		$sql = "INSERT INTO opcaoDiaPlanoAcao (opcaoDia_idOpcao, horaInicio, horaFim, dataAula, diaSemana, localAula_idLocalAula, endereco_idEndereco, dataCadastro) VALUES ($this->opcaoDiaIdOpcao, $this->horaInicio, $this->horaFim, $this->dataAula, $this->diaSemana, $this->localAulaIdLocalAula, $this->enderecoIdEndereco, $this->dataCadastro)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

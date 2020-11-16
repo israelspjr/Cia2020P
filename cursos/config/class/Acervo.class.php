@@ -75,7 +75,7 @@ class Acervo extends Database{
   function addAcervo(){
     $sql = "INSERT INTO Acervo (materialDidatico_idMaterialDidatico, disponivel, emprestados, inativo, excluido) VALUES ($this->idMaterialAcervo, $this->disponivelAcervo, $this->emprestadosAcervo, $this->inativo, $this->excluidoAcervo)";
     $result = $this -> query($sql, true);
-    return mysqli_insert_id($this -> connect);
+    return $this -> connect;
   }
   
   //Delete Acervo

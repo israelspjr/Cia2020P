@@ -61,7 +61,7 @@ class ModalidadeIdioma extends Database {
 	function addModalidadeIdioma() {
 		$sql = "INSERT INTO modalidadeIdioma (modalidade_idModalidade, idioma_idIdioma, valorHoraPadrao, inativo, obs, excluido) VALUES ($this->modalidadeIdModalidade, $this->idiomaIdIdioma, $this->valorHoraPadrao, $this->inativo, $this->obs, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

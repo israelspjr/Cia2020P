@@ -86,12 +86,10 @@ class PlanoAcaoGrupoAjudaCusto extends Database {
 		$sql = "INSERT INTO planoAcaoGrupoAjudaCusto (planoAcaoGrupo_idPlanoAcaoGrupo, professor_idProfessor, mesIni, mesFim, anoIni, anoFim, valor, porDia, descricao, cobrarAluno) 
 		VALUES ($this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->professorIdProfessor, $this->mesIni, $this->mesFim, $this->anoIni, $this->anoFim, $this->valor, $this->porDia, $this->descricao, $this->cobrarAluno)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id();
+		return $this->connect;
 	}
 
 	function deletePlanoAcaoGrupoAjudaCusto() {
-		//$sql = "DELETE FROM planoAcaoGrupoAjudaCusto WHERE idPlanoAcaoGrupoAjudaCusto = $this->idPlanoAcaoGrupoAjudaCusto";
-		//$result = $this->query($sql, true);
 		$this -> updateFieldPlanoAcaoGrupoAjudaCusto("excluido", "1");
 	}
 

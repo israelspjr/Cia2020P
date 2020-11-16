@@ -67,7 +67,7 @@ class MaterialDidaticoINF extends Database {
 	function addMaterialDidaticoINF() {
 		$sql = "INSERT INTO materialDidaticoINF (relacionamentoINF_idRelacionamentoINF, materialDidatico_idMaterialDidatico, unidadeInicial, unidadeFinal, inativo, obs, excluido) VALUES ($this->relacionamentoINFIdRelacionamentoINF, $this->materialDidaticoIdMaterialDidatico, $this->unidadeInicial, $this->unidadeFinal, $this->inativo, $this->obs, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -61,7 +61,7 @@ class ProvaINF extends Database {
 	function addProvaINF() {
 		$sql = "INSERT INTO provaINF (prova_idProva, relacionamentoINF_idRelacionamentoINF, unidade, obs, inativo, excluido) VALUES ($this->provaIdProva, $this->relacionamentoINFIdRelacionamentoINF, $this->unidade, $this->obs, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

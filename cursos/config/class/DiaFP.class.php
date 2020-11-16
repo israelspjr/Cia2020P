@@ -84,7 +84,7 @@ class DiaFP extends Database {
 ";
 	//	echo $sql;
 		$result = $this -> query($sql);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	function deleteDiaFP() {

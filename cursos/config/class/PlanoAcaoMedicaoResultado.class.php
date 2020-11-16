@@ -44,7 +44,7 @@ class PlanoAcaoMedicaoResultado extends Database {
 	function addPlanoAcaoMedicaoResultado() {
 		$sql = "INSERT INTO planoAcaoMedicaoResultado (planoAcao_idPlanoAcao, medicaoResultado_idMedicaoResultado, quantidade) VALUES ($this->planoAcaoIdPlanoAcao, $this->medicaoResultadoIdMedicaoResultado, $this->quantidade)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

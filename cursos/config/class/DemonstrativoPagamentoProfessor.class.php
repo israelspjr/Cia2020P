@@ -97,7 +97,7 @@ class DemonstrativoPagamentoProfessor extends Database {
 	function addDemonstrativoPagamentoProfessor() {
 		$sql = "INSERT INTO demonstrativoPagamentoProfessor (professor_idProfessor, mes, ano, html, debitos, creditos, aulas, impostos, total, dataGerado, tipoPagamento_idTipoPagamento, dataPagamento) VALUES ($this->professorIdProfessor, $this->mes, $this->ano, $this->html, $this->debitos, $this->creditos, $this->aulas, $this->impostos, $this->total, $this->dataGerado, $this->tipoPagamentoIdTipoPagamento, $this->dataPagamento)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

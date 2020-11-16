@@ -53,7 +53,7 @@ class TipoImpostoProfessor extends Database {
 		$sql = "INSERT INTO tipoImpostoProfessor (nome, sigla, inativo, excluido, tipoImpostoProfessor_idTipoImpostoProfessor) 
 		VALUES ($this->nome, $this->sigla, $this->inativo, $this->excluido, $this->tipoImpostoProfessorIdTipoImpostoProfessor)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	function deleteTipoImpostoProfessor() {

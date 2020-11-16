@@ -86,7 +86,7 @@ class AulaGrupoProfessor extends Database {
 		$sql = "INSERT INTO aulaGrupoProfessor (aulaPermanenteGrupo_idAulaPermanenteGrupo, aulaDataFixa_idAulaDataFixa, professor_idProfessor, dataInicio, dataFim, dataCadastro, tipoAulaGrupoProfessor_idTipoAulaGrupoProfessor, motivo, plano, subMotivo) VALUES ($this->aulaPermanenteGrupoIdAulaPermanenteGrupo, $this->aulaDataFixaIdAulaDataFixa, $this->professorIdProfessor, $this->dataInicio, $this->dataFim, $this->dataCadastro, $this->tipoAulaGrupoProfessorIdTipoAulaGrupoProfessor, $this->motivo, $this->plano, $this->subMotivo)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

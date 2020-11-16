@@ -49,7 +49,7 @@ class NivelEstudo extends Database {
 	function addNivelEstudo() {
 		$sql = "INSERT INTO nivelEstudo (nivel, inativo, dataCadastro, excluido) VALUES ($this->nivel, $this->inativo, '" . date('Y-m-y H:i:s') . "', $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

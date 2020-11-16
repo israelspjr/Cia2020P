@@ -68,7 +68,7 @@ class ComoConheceu extends Database {
 		$sql = "INSERT INTO comoConheceu (id_migracao, comoConheceu, inativo, excluido,aluno,professor,geral) VALUES ($this->id_migracao, $this->comoConheceu, $this->inativo, $this->excluido, $this->aluno, $this->professor, $this->geral)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

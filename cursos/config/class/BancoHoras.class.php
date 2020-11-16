@@ -69,7 +69,7 @@ class BancoHoras extends Database {
 		$sql = "INSERT INTO bancoHoras (diaAulaFF_idDiaAulaFF, horas, dataCadastro, dataExpira, obs, professor_NomeProfessorRep, credDeb) VALUES ($this->diaAulaFFIdDiaAulaFF, $this->horas, $this->dataCadastro, $this->dataExpira, $this->obs, $this->professorNomeProfessorRep, $this->credDeb)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

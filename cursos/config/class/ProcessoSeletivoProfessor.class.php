@@ -429,7 +429,7 @@ class ProcessoSeletivoProfessor extends Database {
 		$sql = "INSERT INTO processoSeletivoProfessor (professor_idProfessor, idioma_idIdioma, dataReferencia, obs, notaTeste, regiaoAtende, contratoAssinado, integracao, assistiu, trilha, analiseFinal, dataContrato, dataTrilha, dataIntegracao, comportamental, pedagogico, linguistico, finalT, dataNivel, idNivel, vpgV, vpgP, vpgG, avaliador, idSotaque, oralFinal, avaliadorC, dataC, analiseC, perfilG, pc2, pc3, pc4, pc5, pc6, pc7, pc8, pc9, pc10, pc11, pc12, pc13, pc14, pc15, pc16, pc17, pc18, pc19, avaliadorP, dataP, analiseP, pp1, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10, pp11, pp12, pp13, pp14, nivelF) VALUES ($this->professorIdProfessor, $this->idiomaIdIdioma, $this->dataReferencia, $this->obs, $this->notaTeste, $this->regiaoAtende, $this->contratoAssinado, $this->integracao, $this->assistiu, $this->trilha, $this->analiseFinal, $this->dataContrato, $this->dataTrilha, $this->dataIntegracao, $this->comportamental, $this->pedagogico, $this->linguistico, $this->finalT, $this->dataNivel, $this->idNivel, $this->vpgV, $this->vpgP, $this->vpgG, $this->avaliador, $this->idSotaque, $this->oralFinal, $this->avaliadorC, $this->dataC, $this->analiseC, $this->perfilG, $this->pc2, $this->pc3, $this->pc4, $this->pc5, $this->pc6, $this->pc7, $this->pc8, $this->pc9, $this>pc10, $this->pc11, $this->pc12, $this->pc13, $this->pc14, $this->pc15, $this->pc16, $this->pc17, $this->pc18, $this->pc19, $this->avaliadorP, $this->dataP, $this->analiseP, $this->pp1, $this->pp2, $this->pp3, $this->pp4, $this->pp5, $this->pp6, $this->pp7, $this->pp8, $this->pp9, $this->pp10, $this->pp11, $this->pp12, $this->pp13, $this->pp14, $this->nivelF)";
 
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 	
 	function addProcessoSeletivoProfessor2() {
@@ -438,7 +438,7 @@ class ProcessoSeletivoProfessor extends Database {
 	//	echo $sql2;
 		
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

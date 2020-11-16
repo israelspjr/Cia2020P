@@ -62,7 +62,7 @@ class RespostaPsaProfessor extends Database {
 		$sql = "INSERT INTO respostaPsaProfessor (psaIntegranteGrupo_idPsaIntegranteGrupo, psaProfessor_idPsaProfessor, professor_idProfessor, notasTipoNota_idNotasTipoNota, obs, dataCadastro) VALUES ($this->psaIntegranteGrupoIdPsaIntegranteGrupo, $this->psaProfessorIdPsaProfessor, $this->professorIdProfessor, $this->notasTipoNotaIdNotasTipoNota, $this->obs, $this->dataCadastro)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

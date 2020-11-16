@@ -49,7 +49,7 @@ class ExperienciaProfissional extends Database {
 	function addExperienciaProfissional() {
 		$sql = "INSERT INTO experienciaProfissional (professor_idProfessor, empresa, funcao, obs) VALUES ($this->professorIdProfessor, $this->empresa, $this->funcao, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

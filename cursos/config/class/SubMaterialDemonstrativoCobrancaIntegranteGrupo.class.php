@@ -61,7 +61,7 @@ class SubMaterialDemonstrativoCobrancaIntegranteGrupo extends Database {
 	function addSubMaterialDemonstrativoCobrancaIntegranteGrupo() {
 		$sql = "INSERT INTO subMaterial_demonstrativoCobrancaIntegranteGrupo (demonstrativoCobrancaIntegranteGrupo_id, dataInicio, dataFim, percentual, teto, quemPaga) VALUES ($this->demonstrativoCobrancaIntegranteGrupoId, $this->dataInicio, $this->dataFim, $this->percentual, $this->teto, $this->quemPaga)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

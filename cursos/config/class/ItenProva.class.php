@@ -48,7 +48,7 @@ class ItenProva extends Database {
 	function addItenProva() {
 		$sql = "INSERT INTO itenProva (prova_idProva, nome, inativo, excluido) VALUES ($this->provaIdProva, $this->nome, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

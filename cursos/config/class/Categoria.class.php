@@ -39,7 +39,7 @@ class Categoria extends Database {
 VALUES ($this->valor, $this->inativo)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

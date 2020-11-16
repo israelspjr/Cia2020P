@@ -140,21 +140,19 @@ class Endereco extends Database {
 //		echo $sql;
 
 		$result = $this -> query($sql, true);
-		$idEnderecoUltimo = mysqli_insert_id();
+		$idEnderecoUltimo = $this -> connect;
 
 		if ($this -> principal == 1) {
-			$this -> atualizarEnderecoPrincipal(mysqli_insert_id($this -> connect));
+			$this -> atualizarEnderecoPrincipal(($this -> connect));
 		}
 		
-		return $idEnderecoUltimo;//mysqli_insert_id($this -> connect);
+		return $idEnderecoUltimo;//($this -> connect);
 	}
 
 	/**
 	 * deleteEndereco() Function
 	 */
 	function deleteEndereco() {
-		//$sql = "DELETE FROM endereco WHERE idEndereco = $this->idEndereco";
-		//$result = $this->query($sql, true);
 		$this -> updateFieldEndereco("excluido", "1");
 	}
 
@@ -376,19 +374,6 @@ class Endereco extends Database {
 	}
 
     function selectEnderecoSelectPlanoAcaoGrupoEmp($classes = "", $idAtual = 0, $idPlanoAcaoGrupo) {
-	//	$sql = "SELECT SQL_CACHE E.idEndereco FROM endereco AS E WHERE E.excluido = 0 ";
-/*
-        $sql = "SELECT D.idEndereco from planoAcaoGrupo AS A
-        INNER JOIN planoAcao AS B
-        INNER JOIN proposta AS C
-        INNER JOIN endereco AS D
-        WHERE A.planoAcao_idPlanoAcao = B.idPlanoAcao
-        AND B.proposta_idProposta = C.idProposta
-        AND C.clientePj_idClientePj = D.clientePj_idClientePj
-        AND D.excluido <> 1
-        AND A.idPlanoAcaoGrupo = " . $idPlanoAcaoGrupo;
-	echo $sql;
-	*/
 		$sql = "SELECT E.idEndereco FROM planoAcaoGrupo AS P
 		INNER JOIN grupoClientePj AS GCP on GCP.grupo_idGrupo = P.grupo_idGrupo
 		INNER JOIN endereco AS E on E.clientePj_idClientePj = GCP.clientePj_idClientePj

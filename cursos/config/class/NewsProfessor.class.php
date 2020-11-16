@@ -69,7 +69,7 @@ class NewsProfessor extends Database {
 	function addNewsProfessor() {
 		$sql = "INSERT INTO newsProfessor (link, portal, grupo, inativo, news, popup, dataCadastro ) VALUES ($this->link, $this->portal, $this->grupo, $this->inativo, $this->news, $this->popup, $this->dataCadastro)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

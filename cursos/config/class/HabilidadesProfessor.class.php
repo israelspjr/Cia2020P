@@ -62,7 +62,7 @@ class HabilidadesProfessor extends Database {
 		$sql = "INSERT INTO habilidadesProfessor (idHabilidade, idProfessor, obs, anos, escolas, resposta) VALUES ($this->idHabilidade, $this->idProfessor, $this->obs, $this->anos, $this->escolas, $this->resposta)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
-		return mysql_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

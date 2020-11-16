@@ -49,7 +49,7 @@ class SotaqueIdiomaProfessor extends Database {
 	function addSotaqueIdiomaProfessor() {
 		$sql = "INSERT INTO sotaqueIdiomaProfessor (idioma_idIdioma, valor, inativo, excluido) VALUES ($this->idiomaIdIdioma, $this->valor, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -50,7 +50,7 @@ class RespostaAluno extends Database {
 		$sql = "INSERT INTO respostaAluno (integranteGrupo_idIntegranteGrupo, calendarioProva_idCalendarioProva, questao_idQuestao, resposta) VALUES ($this->integranteGrupoIdIntegranteGrupo, $this->calendarioProvaIdCalendarioProva, $this->questaoIdQuestao, $this->resposta)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

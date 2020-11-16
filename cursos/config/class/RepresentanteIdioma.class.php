@@ -43,7 +43,7 @@ class RepresentanteIdioma extends Database {
 	function addRepresentanteIdioma() {
 		$sql = "INSERT INTO representanteIdioma (dataCadastro, representante_idRepresentante, idioma_idIdioma) VALUES ($this->dataCadastro, $this->representanteIdRepresentante, $this->idiomaIdIdioma)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

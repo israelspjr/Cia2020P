@@ -57,7 +57,7 @@ class Certificacoes extends Database {
 		$sql = "INSERT INTO certificacoes (professor_idProfessor, certificado, ano, tipo, idioma_idIdioma) VALUES ($this->professorIdProfessor, $this->certificado, $this->ano, $this->tipo, $this->idiomaIdIdioma)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

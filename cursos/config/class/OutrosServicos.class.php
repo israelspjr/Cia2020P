@@ -77,7 +77,7 @@ class OutrosServicos extends Database {
 	function addOutrosServicos() {
 		$sql = "INSERT INTO outrosServicos (professor_IdProfessor, tipo, valor, mes, ano, obs, dataCadastro, impostos) VALUES ($this->professorIdProfessor, $this->tipo, $this->valor, $this->mes, $this->ano, $this->obs, $this->dataCadastro, $this->impostos)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

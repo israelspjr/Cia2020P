@@ -41,7 +41,7 @@ class ItenMotivoFechamento extends Database {
 	function addItenMotivoFechamento() {
 		$sql = "INSERT INTO itenMotivoFechamento (iten, inativo, excluido) VALUES ($this->iten, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

@@ -43,7 +43,7 @@ class Escola extends Database {
 	function addEscola() {
 		$sql = "INSERT INTO escola (nome, inativo, excluido) VALUES ($this->nome, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

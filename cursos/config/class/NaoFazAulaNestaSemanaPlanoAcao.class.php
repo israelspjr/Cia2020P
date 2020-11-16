@@ -37,7 +37,7 @@ class NaoFazAulaNestaSemanaPlanoAcao extends Database {
 	function addNaoFazAulaNestaSemanaPlanoAcao() {
 		$sql = "INSERT INTO naoFazAulaNestaSemanaPlanoAcao (valorSimuladoPlanoAcao_idValorSimuladoPlanoAcao, semana) VALUES ($this->valorSimuladoPlanoAcaoIdValorSimuladoPlanoAcao, $this->semana)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

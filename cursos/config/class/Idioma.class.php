@@ -61,13 +61,13 @@ class Idioma extends Database {
 	function addIdioma() {
 		$sql = "INSERT INTO idioma (idioma, icon, inativo, disponivelAula, dataCadastro, linkTeste) VALUES ($this->idioma, $this->icon, $this->inativo, $this->disponivelAula, $this->dataCadastro, $this->linkTeste)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 	
 	function addIdioma_M() {
     	$sql = "INSERT INTO idioma (idIdioma, idioma, icon, inativo, disponivelAula, dataCadastro, linkTeste) VALUES ($this->idIdioma, $this->idioma, $this->icon, $this->inativo, $this->disponivelAula, $this->dataCadastro, $this->linkTeste)";
     	$result = $this -> query($sql, true);
-    	return mysqli_insert_id($this -> connect);
+    	return $this -> connect;
   }
 
 	/**

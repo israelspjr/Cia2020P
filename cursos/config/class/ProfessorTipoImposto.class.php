@@ -49,7 +49,7 @@ class ProfessorTipoImposto extends Database {
 	function addProfessorTipoImposto() {
 		$sql = "INSERT INTO professorTipoImposto (professor_idProfessor, TipoImpostoProfessor_idTipoImpostoProfessor, inativo, dataCadastro) VALUES ($this->professorIdProfessor, $this->tipoImpostoProfessorIdTipoImpostoProfessor, $this->inativo, $this->dataCadastro)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

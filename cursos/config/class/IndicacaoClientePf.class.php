@@ -94,7 +94,7 @@ class IndicacaoClientePf extends Database {
 		$sql = "INSERT INTO indicacaoClientePf (clientePf_idClientePf, clientePf_idClientePfIndicado, clientePj_idClientePjIndicado, produtoIdProduto, obs, interno, externo, clientePj_idClientePj, potencial, influencia, dataCadastro) VALUES ($this->clientePfIdClientePf, $this->clientePfIdClientePfIndicado, $this->clientePjIdClientePjIndicado, $this->produtoIdProduto, $this->obs, $this->interno, $this->externo, $this->clientePjIdClientePj, $this->potencial, $this->influencia, $this->dataCadastro)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

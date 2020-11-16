@@ -93,7 +93,7 @@ class IntegranteGrupo extends Database {
 		VALUES ($this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->clientePfIdClientePf, $this->envioPsa, $this->dataEntrada, $this->dataSaida, $this->dataSaidaDemonstrativo, $this->dataCadastro, $this->obs, $this->dataRetorno, $this->professorIdProfessor)";
 		//echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

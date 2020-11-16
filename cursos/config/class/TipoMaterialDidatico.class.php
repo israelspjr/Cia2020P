@@ -43,7 +43,7 @@ class TipoMaterialDidatico extends Database {
 	function addTipoMaterialDidatico() {
 		$sql = "INSERT INTO tipoMaterialDidatico (tipo, inativo, excluido) VALUES ($this->tipo, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

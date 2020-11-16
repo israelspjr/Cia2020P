@@ -90,7 +90,7 @@ class Modulo extends Database {
 	function addModulo() {
 		$sql = "INSERT INTO modulo (modulo_idModulo, nome, link, ordem, inativo, admin, aluno, preAluno, professor, candidato) VALUES ($this->moduloIdModulo, $this->nome, $this->link, $this->ordem, inativo, $this->admin, $this->aluno, $this->preAluno, $this->professor, $this->candidato)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

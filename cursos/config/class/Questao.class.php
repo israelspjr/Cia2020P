@@ -136,7 +136,7 @@ class Questao extends Database {
 VALUES ($this->nivelEstudoIdNivelEstudo, $this->titulo,  $this->enunciado, $this->imagem, $this->inativo, $this->dataCadastro, $this->questaoIdQuestao, $this->tipoQuestaoIdTipoQuestao, $this->idiomaIdIdioma, $this->categoria, $this->subCategoria, $this->tempo, $this->audio, $this->idFocoCurso, $this->idKitMaterial, $this->audio2, $this->audio3, $this->audio4)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

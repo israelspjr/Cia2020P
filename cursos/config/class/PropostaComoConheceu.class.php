@@ -37,7 +37,7 @@ class PropostaComoConheceu extends Database {
 	function addPropostaComoConheceu() {
 		$sql = "INSERT INTO propostaComoConheceu (proposta_idProposta, comoConheceu_idComoConheceu) VALUES ($this->propostaIdProposta, $this->comoConheceuIdComoConheceu)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

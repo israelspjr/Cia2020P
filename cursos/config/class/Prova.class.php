@@ -49,7 +49,7 @@ class Prova extends Database {
 	function addProva() {
 		$sql = "INSERT INTO prova (nome, ordem, obs, inativo) VALUES ($this->nome, $this->ordem, $this->obs, $this->inativo)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

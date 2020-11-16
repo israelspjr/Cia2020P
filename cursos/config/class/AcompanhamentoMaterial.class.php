@@ -64,7 +64,7 @@ class AcompanhamentoMaterial extends Database {
 	function addAcompanhamentoMaterial() {
 		$sql = "INSERT INTO acompanhamentoMaterial (folhaFrequencia_idFolhaFrequencia, kitMaterial_idKitMaterial, materialMontadoPlanoAcao_idMaterialMontadoPlanoAcao, materialDidaticPlanoAcao_idMaterialDidaticPlanoAcao, unidade, dataCadastro, obs) VALUES ($this->folhaFrequencia_idFolhaFrequencia, $this->kitMaterial_idKitMaterial, $this->materialMontadoPlanoAcao_idMaterialMontadoPlanoAcao, $this->materialDidaticPlanoAcao_idMaterialDidaticPlanoAcao, $this->unidade, $this->dataCadastro, $this->obs)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

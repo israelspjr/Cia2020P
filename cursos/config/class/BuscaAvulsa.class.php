@@ -108,7 +108,7 @@ class BuscaAvulsa extends Database {
 	function addBuscaAvulsa() {
 		$sql = "INSERT INTO buscaAvulsa (idioma_idIdioma, clientePj_idClientePj, alunoobs, endereco_idEndereco, obs, dataApartir, excluida, urgente, finalizada, grupo_idGrupo, portalP, status, gerente_idGerente, valorHoraAluno) VALUES ($this->idiomaIdIdioma, $this->clientePjIdClientePj, $this->setAlunoObs, $this->enderecoIdEndereco, $this->obs, $this->dataApartir, $this->excluida, $this->urgente, $this->finalizada, $this->grupoIdGrupo, $this->portalP, $this->status, $this->gerenteIdGerente, $this->valorHoraAluno)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

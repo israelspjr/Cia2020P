@@ -90,7 +90,7 @@ class OcorrenciaFF extends Database {
 	function addOcorrenciaFF() {
 		$sql = "INSERT INTO ocorrenciaFF (sigla, decricaoSigla, obs, inativa, pagarProfessor, reporAula, pagarReposicao, professorVe, adminVe, expira, excluido) VALUES ($this->sigla, $this->decricaoSigla, $this->obs, $this->inativa, $this->pagarProfessor, $this->reporAula, $this->pagarReposicao, $this->professorVe, $this->adminVe, $this->expira, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

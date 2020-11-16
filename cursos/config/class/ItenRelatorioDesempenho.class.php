@@ -54,7 +54,7 @@ class ItenRelatorioDesempenho extends Database {
 	function addItenRelatorioDesempenho() {
 		$sql = "INSERT INTO itenRelatorioDesempenho (nome, inativo, tipoItenRelatorioDesempenho_idTipoItenRelatorioDesempenho, excluido, orientacao) VALUES ($this->nome, $this->inativo, $this->tipoItenRelatorioDesempenhoIdTipoItenRelatorioDesempenho, $this->excluido, $this->orientacao)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

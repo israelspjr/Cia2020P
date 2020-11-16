@@ -46,7 +46,7 @@ class SubCategoria extends Database {
 VALUES ($this->valor, $this->inativo, $this->categoriaIdCategoria)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

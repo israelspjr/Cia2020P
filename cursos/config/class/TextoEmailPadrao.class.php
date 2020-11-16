@@ -48,7 +48,7 @@ class TextoEmailPadrao extends Database {
 	function addTextoEmailPadrao() {
 		$sql = "INSERT INTO textoEmailPadrao (texto, titulo, excluido, candidato) VALUES ($this->texto, $this->titulo, $this->excluido, $this->candidato)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

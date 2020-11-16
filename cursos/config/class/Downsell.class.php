@@ -87,7 +87,7 @@ class Downsell extends Database {
 		$sql = "INSERT INTO downsell (tipo, dataInicio, dataTermino, descricao, inativo, dataCadastro, planoAcaoGrupo_idPlanoAcaoGrupo, upselling, cargaAntiga, cargaNova) VALUES ($this->tipo, $this->dataInicio, $this->dataTermino, $this->descricao, $this->inativo, $this->dataCadastro, $this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->upselling, $this->cargaAntiga, $this->cargaNova)";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**

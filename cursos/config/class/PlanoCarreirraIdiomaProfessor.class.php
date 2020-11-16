@@ -73,7 +73,7 @@ class PlanoCarreirraIdiomaProfessor extends Database {
 				$sql = "INSERT INTO planoCarreirraIdiomaProfessor (idiomaProfessor_idIdiomaProfessor, planoCarreirra_idPlanoCarreira, mesIni, anoIni, mesFim, anoFim, dataCadastro) 
 				VALUES ($this->idiomaProfessorIdIdiomaProfessor, $this->planoCarreirraIdPlanoCarreira, $this->mesIni, $this->anoIni, $this->mesFim, $this->anoFim, $this->dataCadastro)";
 				$result = $this -> query($sql, true);
-				return mysqli_insert_id($this -> connect);
+				return $this -> connect;
 			}
 		}else{
 			return "Defina inicio e fim.";

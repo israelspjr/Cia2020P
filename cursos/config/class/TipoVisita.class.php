@@ -43,7 +43,7 @@ class TipoVisita extends Database {
 	function addTipoVisita() {
 		$sql = "INSERT INTO tipoVisita (tipo, inativo, excluido) VALUES ($this->tipo, $this->inativo, $this->excluido)";
 		$result = $this -> query($sql, true);
-		return mysqli_insert_id($this -> connect);
+		return $this -> connect;
 	}
 
 	/**
