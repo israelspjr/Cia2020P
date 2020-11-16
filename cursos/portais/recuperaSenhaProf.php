@@ -1,9 +1,10 @@
 <?php
-error_reporting(E_ALL);
+
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
+error_reporting(E_ALL);
 
 $arrayRetorno = array();
-if (isset($_POST)){
+/*if (isset($_POST)){
     $doc = mysql_real_escape_string($_POST['documentoUnico']);
     $nasc = mysql_real_escape_string($_POST['nasc']);
     $senha = mysql_real_escape_string($_POST['password']);
@@ -24,9 +25,9 @@ if (isset($_POST)){
             //$emails = $Professor->getEmail($idProfessor, 1);
             $msg = 1;
         }
-    }
+    } */
 		$arrayRetorno['mensagem'] = "Senha alterada com sucesso!";
-}
+//}
 
 $arrayRetorno['ondeAtualizar'] = "#centro";
 $arrayRetorno['pagina'] = "login.php?app=2";	
