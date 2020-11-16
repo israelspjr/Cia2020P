@@ -1,6 +1,6 @@
 <?php
 $pgprof = true;
-require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/professor.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 
 $msg = 0;
 if (isset($_POST)){
