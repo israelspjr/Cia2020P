@@ -4,10 +4,10 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 error_reporting(E_ALL);
 
 $arrayRetorno = array();
-/*if (isset($_POST)){
-    $doc = mysql_real_escape_string($_POST['documentoUnico']);
-    $nasc = mysql_real_escape_string($_POST['nasc']);
-    $senha = mysql_real_escape_string($_POST['password']);
+if (isset($_POST)){
+    $doc = mysqli_real_escape_string($_POST['documentoUnico']);
+    $nasc = mysqli_real_escape_string($_POST['nasc']);
+    $senha = mysqli_real_escape_string($_POST['password']);
 
     if (isset($doc) AND isset($nasc) AND isset($senha)){
         $data = Uteis::gravarData($nasc);
@@ -25,12 +25,12 @@ $arrayRetorno = array();
             //$emails = $Professor->getEmail($idProfessor, 1);
             $msg = 1;
         }
-    } */
-		$arrayRetorno['mensagem'] = "Senha alterada com sucesso!";
+    } 
+		$arrayRetorno['mensagem'] = "Senha alterada com sucesso! Cliquem voltar para fazer o login";
 //}
 
-$arrayRetorno['ondeAtualizar'] = "#centro";
-$arrayRetorno['pagina'] = "login.php?app=2";	
+//$arrayRetorno['ondeAtualizar'] = "#centro";
+//$arrayRetorno['pagina'] = "login.php?app=2";	
 echo json_encode($arrayRetorno);
 
 //$redirectUrl = "login.php?app=2";
