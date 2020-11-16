@@ -64,7 +64,7 @@ $TipoDocumentoUnico = new TipoDocumentoUnico();
       <p><div class="form-group">
         <button class="button blue submit">Gravar nova senha</button></div>
         </p>
-        <p><a href="login.php">Voltar ao Login!</a></p>
+        <p><a href="login.php?app=2">Voltar ao Login!</a></p>
     </form>
     <script type="text/javascript">
         $('#documentoUnico').focus();
