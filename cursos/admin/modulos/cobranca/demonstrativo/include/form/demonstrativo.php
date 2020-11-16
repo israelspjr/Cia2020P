@@ -266,7 +266,7 @@ if($rsDemonstrativo){
 	//VALOR HORA / CURSO							
 	if( $rsTotalFF ){
 		$arrDiasJaFoi = array();
-        var_dump($rsTotalFF);
+  //      var_dump($rsTotalFF);
 		foreach($rsTotalFF as $valorFF){
 				
 				$horas = $valorFF['horasTotal'];
@@ -489,6 +489,8 @@ $temAulaDataFixa = $AulaDataFixa -> ffTem_AulaDataFixaDemonstrativo($idPlanoAcao
 <div class="conteudo_nivel">
   <div id="fechar_nivel" class="fechar" onclick="fecharNivel()"></div>
   <fieldset>
+  <form id="demo" onSubmit="return false" action="" method="_POST">
+  
     <legend>Demonstrativo de cobrança</legend>
     <style media="all">
         #demonstrativo_geral, #demonstrativo_sub, tr,td,th{
@@ -1065,7 +1067,7 @@ async function gravaDemon(){
   });
 	*/
 //	alert(a);
-	postForm('', '<?php echo CAMINHO_COBRANCA."demonstrativo/include/acao/demonstrativo.php"?>', '<?php echo $param?>' );
+	postForm('demo', '<?php echo CAMINHO_COBRANCA."demonstrativo/include/acao/demonstrativo.php"?>', '<?php echo $param?>' );
 	await sleep(1000);
 	gravarObs();
 }
