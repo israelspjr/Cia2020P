@@ -18,16 +18,6 @@ $valorX[] = $valor['idPlanoAcaoGrupo'];
 
 $valorx2 = implode(', ',$valorX);
 
-/*$ValorIntegrante = $IntegranteGrupo->selectIntegranteGrupo(" WHERE planoAcaoGrupo_idPlanoAcaoGrupo in (".$valorx2.")");
-
-foreach($ValorIntegrante AS $valor) {
-$valorXx[] = $valor['idIntegranteGrupo'];		
-}
-
-$valorx3 = implode(', ',$valorXx);
-*/
-//Uteis::pr($valorx3);
-
 
 ?>
 <fieldset>

@@ -17,14 +17,7 @@ $valorX[] = $valor['idPlanoAcaoGrupo'];
 }
 
 $valorx2 = implode(', ',$valorX);
-/*
-$ValorIntegrante = $IntegranteGrupo->selectIntegranteGrupo(" WHERE planoAcaoGrupo_idPlanoAcaoGrupo in (".$valorx2.")");
 
-foreach($ValorIntegrante AS $valor) {
-$valorXx[] = $valor['idIntegranteGrupo'];		
-}
-
-$valorx3 = implode(', ',$valorXx);*/
 ?>
 
 <fieldset>
@@ -41,7 +34,7 @@ $valorx3 = implode(', ',$valorXx);*/
 					<th></th>
 					<th>Valor hora</th>
 					<th>Carga horária fixa</th>
-					<th>Desconto/Validade</th>
+					<th>Desconto/ Validade</th>
 					<th>Inicio</th>
 					<th>Fim</th>
                     <th>Previsão de Reajuste</th>
@@ -65,7 +58,7 @@ $valorx3 = implode(', ',$valorXx);*/
 					<th></th>
 					<th>Valor hora</th>
 					<th>Carga horária fixa</th>
-					<th>Desconto/Validade</th>
+					<th>Desconto/ Validade</th>
 					<th>Inicio</th>
 					<th>Fim</th>
                     <th>Previsão de Reajuste</th>

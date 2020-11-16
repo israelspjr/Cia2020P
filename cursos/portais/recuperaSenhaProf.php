@@ -25,7 +25,7 @@ if (isset($_POST)){
             $msg = 1;
         }
     } 
-		$arrayRetorno['mensagem'] = "Senha alterada com sucesso! Cliquem voltar para fazer o login";
+		$arrayRetorno['mensagem'] = "Senha alterada com sucesso! Clique voltar para fazer o login";
 }
 
 //$arrayRetorno['ondeAtualizar'] = "#centro";
