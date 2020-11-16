@@ -303,11 +303,11 @@ function postFileForm(idForm) {
 function postForm(idForm, pagina, param, onde) {
 	
 	var submitForm;
-	if (idForm) {
+	//if (idForm) {
 		var form = $('#' + idForm);
-	} else {
-		var form = "";	
-	}
+	//} else {
+	//	var form = "";	
+	//}
 	if (onde != undefined && onde != '') {
 		var n = onde.indexOf("#");
 		if (n > -1) {
@@ -323,7 +323,7 @@ function postForm(idForm, pagina, param, onde) {
 		submitForm = true;
 	}
 
-	if (submitForm) {
+	//if (submitForm) {
 		var parametros = form.serialize() + (param != undefined ? param : '');
 		showLoad();
 		$.post(pagina, parametros, function(e) {
@@ -339,7 +339,7 @@ function postForm(idForm, pagina, param, onde) {
 		}).always(function() {
 			submitForm = false;
 		});
-	}
+	//}
 
 	return false;
 
