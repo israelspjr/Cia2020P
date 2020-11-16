@@ -35,7 +35,7 @@ $TipoDocumentoUnico = new TipoDocumentoUnico();
 		<div style="width:100%;    padding: 10px;">
 			<div class="login-panel panel panel-default">
             <div class="panel-body">
-    <form id="login" class="validate" action="recuperaSenhaProf.php" method="post" >
+    <form id="login" class="validate" action="" method="post" onsubmit="return false">
       <p><strong>Área do professor</strong></p> 
       <p><div class="form-group">
                 <label>Documento:</label>
@@ -62,7 +62,7 @@ $TipoDocumentoUnico = new TipoDocumentoUnico();
         <input type="checkbox" value="1" onclick="mostraSenha(this)" /><small>mostrar a senha</small>
         </div></p>
       <p><div class="form-group">
-        <button class="button blue submit">Gravar nova senha</button></div>
+        <button class="button blue submit" onclick="postForm('login','recuperaSenhaProf.php');">Gravar nova senha</button></div>
         </p>
         <p><a href="login.php?app=2">Voltar ao Login!</a></p>
     </form>
