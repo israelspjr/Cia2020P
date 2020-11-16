@@ -120,9 +120,9 @@ class FechamentoGrupo extends Database {
 
 				$html .= "<tr>
 				
-				<td $onclick >" . $dataFechamento . "</td>
+				<td $onclick style=\"text-align:center;\">" . $dataFechamento . "</td>
 				
-				<td $onclick >" . $this -> retornaTipo($tipo) . "</td>";				
+				<td $onclick style=\"text-align:center;\">" . $this -> retornaTipo($tipo) . "</td>";				
 				
 				if ($soexibir == 0) {
 				
