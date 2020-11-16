@@ -26,5 +26,6 @@ if (isset($_POST)){
         }
     }
 }
-$reditectUrl = ($msg==1)? 'login.php?msg=1' : 'recuperaSenhaForm.php?msg=1';
+$redirectUrl = "login.php?app=2";
+//$reditectUrl = ($msg==1)? 'login.php?msg=1' : 'recuperaSenhaForm.php?msg=1';
 header('location: '.$reditectUrl);
