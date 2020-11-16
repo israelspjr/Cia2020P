@@ -305,6 +305,8 @@ function postForm(idForm, pagina, param, onde) {
 	var submitForm;
 	if (idForm) {
 		var form = $('#' + idForm);
+	} else {
+		var form = "";	
 	}
 	if (onde != undefined && onde != '') {
 		var n = onde.indexOf("#");
