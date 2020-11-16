@@ -38,19 +38,20 @@ $where = " WHERE dataExcluido IS NULL AND planoAcaoGrupo_idPlanoAcaoGrupo = " . 
           <th></th>
         </tr>
       </thead>
-      <tfoot>
+         <tbody>
+        <?php 
+	echo $FechamentoGrupo->selectFechamentoGrupoTr(CAMINHO_REL."grupo/include/form/fechamentoGrupo.php", CAMINHO_REL."grupo/include/resourceHTML/planoAcaoGrupoNaoFaturar.php?id=".$idPlanoAcaoGrupo, "#div_fechamentoGrupo", "WHERE planoAcaoGrupo_idPlanoAcaoGrupo in (".$valorx2.") AND tipo IS NOT NULL ORDER BY idFechamentoGrupo DESC");
+	?>
+      </tbody>
+       <tfoot>
         <tr>
           <th>Data</th>
           <th>Tipo</th>
           <th></th>
         </tr>
       </tfoot>
-      <tbody>
-        <?php 
-	echo $FechamentoGrupo->selectFechamentoGrupoTr(CAMINHO_REL."grupo/include/form/fechamentoGrupo.php", CAMINHO_REL."grupo/include/resourceHTML/planoAcaoGrupoNaoFaturar.php?id=".$idPlanoAcaoGrupo, "#div_fechamentoGrupo", "WHERE planoAcaoGrupo_idPlanoAcaoGrupo in (".$valorx2.") AND tipo IS NOT NULL ORDER BY idFechamentoGrupo DESC");
-	?>
-      </tbody>
+
     </table>
   </div>
 </fieldset>
-<script>tabelaDataTable('tb_lista_fechamentoGrupo', 'ordenaColuna_simples');</script> 
+<script>tabelaDataTable('tb_lista_fechamentoGrupo', 'ordenaColuna');</script> 
