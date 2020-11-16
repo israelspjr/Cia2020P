@@ -303,7 +303,9 @@ function postFileForm(idForm) {
 function postForm(idForm, pagina, param, onde) {
 	
 	var submitForm;
-	var form = $('#' + idForm);
+	if (idForm) {
+		var form = $('#' + idForm);
+	}
 	if (onde != undefined && onde != '') {
 		var n = onde.indexOf("#");
 		if (n > -1) {
