@@ -114,6 +114,7 @@ class FechamentoGrupo extends Database {
 				$idFechamentoGrupo = $valor['idFechamentoGrupo'];
 				//$idPlanoAcaoGrupo = $valor['planoAcaoGrupo_idPlanoAcaoGrupo'];
 				$dataFechamento = Uteis::exibirData($valor['dataFechamento']);
+				echo $dataFechamento;
 				$tipo = $valor['tipo'];
 
 				$onclick = "onclick=\"abrirNivelPagina(this, '$caminhoAbrir?id=$idFechamentoGrupo', '$caminhoAtualizar', '$ondeAtualiza')\"";
