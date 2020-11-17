@@ -118,23 +118,13 @@ if($idPlanoAcaoGrupo != '' && is_numeric($idPlanoAcaoGrupo)){
       
      <p>
         <label>Motivo:</label>
-        <textarea  name="motivo" id="motivo" value="<?php  echo $motivo?>" />
+        <textarea  name="motivo" id="motivo" value="<?php  echo $motivo?>" /></textarea>
       </p>
      
       
     </div>
     <div class="direita">
-  <!--      <p>
-        <label>Categoria:</label>
-        
-        <input type="checkbox" id="sem_estrela" <?php if (in_array("0", $cat)) {echo  "checked"; } ?> />
-        <img src="<?php echo CAMINHO_IMG."estrela_branco.gif"?>"> Grupo sem nehuma estrela<br>
-        <input type="checkbox" name="categoria[]" id="estrela_1" value="1" <?php if (in_array("1", $cat)) {echo  "checked"; }?> /><img src="<?php echo CAMINHO_IMG."estrela.gif"?>"> é aluno há mais de 3 anos(Lealdade)<br>
-        <input type="checkbox" name="categoria[]" id="estrela_2" value="2" <?php if (in_array("2", $cat)) {echo  "checked"; }?> /><img src="<?php echo CAMINHO_IMG."estrela.gif"?>"> ele ou alguém de seu grupo indica alunos (registrar quem indica) ou é RH (PROMOTOR)<br>
-        <input type="checkbox" name="categoria[]" id="estrela_3" value="3" <?php if (in_array("3", $cat)) {echo  "checked"; }?> /><img src="<?php echo CAMINHO_IMG."estrela.gif"?>"> há um mínimo de três grupos nessa empresa (PROPAGAÇÃO DA MARCA)<br>
-        <input type="checkbox" name="categoria[]" id="estrela_4" value="4" <?php if (in_array("4", $cat)) {echo  "checked"; }?> /><img src="<?php echo CAMINHO_IMG."estrela.gif"?>"> paga valor máximo atual e/ou realiza mais de três horas semanais (LUCRO)<br>
-        <input type="checkbox" name="categoria[]" id="estrela_5" value="5" <?php if (in_array("5", $cat)) {echo  "checked"; }?> /><img src="<?php echo CAMINHO_IMG."estrela.gif"?>"> tem aulas individuais (ALUNO É FORMADOR DE OPINIÃO,TEM PODER)<br>
-      </p>-->
+ 
     </div>
     <div class="linha-inteira">
     <p>
