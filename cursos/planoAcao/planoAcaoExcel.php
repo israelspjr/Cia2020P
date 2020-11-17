@@ -1,10 +1,7 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/planoAcao.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/demonstrativo.php");
 
 $PlanoAcao = new PlanoAcao();
-//require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/css.php");
-//require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/js.php");
-
 
 		$idPlanoAcao = ($_REQUEST['idPlanoAcao']);
 		$idIntegrantePlanoAcao = ($_REQUEST['integrante']);
