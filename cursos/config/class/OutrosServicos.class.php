@@ -166,6 +166,8 @@ class OutrosServicos extends Database {
 				$html .= "<tr align=\"center\">";
 
 				$onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoModulo . "/include/form/outrosServicos.php?id=" . $valor['idOutrosServicos'] . $idPai . "', '" . $caminhoAtualizar . $idPai . "', '$ondeAtualiza')\" ";
+				
+				$html .= "<td $onclick >" . $valor['idOutrosServicos'] . "</td>";
 
 				$html .= "<td $onclick >" . $tipoNome . "</td>";
 

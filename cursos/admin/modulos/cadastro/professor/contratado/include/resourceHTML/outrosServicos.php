@@ -15,6 +15,7 @@ $idProfessor = $_GET['id'];
 		<table id="tb_lista_outrosServicos" class="registros">
 			<thead>
 				<tr>
+                <th>ID</th>
 					<th>Tipo</th>
 					<th>Valor</th>
 					<th>Mes/Ano</th>
@@ -30,6 +31,7 @@ $idProfessor = $_GET['id'];
 			</tbody>
 			<tfoot>
 				<tr>
+                <th>ID</th>
 					<th>Tipo</th>
 					<th>Valor</th>
 					<th>Mes/Ano</th>
