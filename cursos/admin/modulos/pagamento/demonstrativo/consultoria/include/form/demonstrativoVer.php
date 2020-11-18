@@ -1,10 +1,11 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/admin.php");
 
-
+$Configuracoes = new Configuracoes();
 $DemonstrativoPagamento = new DemonstrativoPagamento();
 
 $idDemonstrativoPagamento = $_REQUEST['id'];
+$config = $Configuracoes->selectConfig();
 ?>
 
 <div id="dadosDemonstrativo"  class="conteudo_nivel">
@@ -25,7 +26,7 @@ $idDemonstrativoPagamento = $_REQUEST['id'];
         <div class="lista">
             <div class="">
                 <div id="demosntrativo_pagamento" class="linha-inteira">
-                    <img src="<?php echo CAMINHO_IMG."_logo.png"?>" />
+                    <img src="upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/>
                     <?php 
                     $tipodemo = 2;
                     echo $DemonstrativoPagamento -> selectDemonstrativoPagamento_imprimir($idDemonstrativoPagamento, $tipodemo); 
