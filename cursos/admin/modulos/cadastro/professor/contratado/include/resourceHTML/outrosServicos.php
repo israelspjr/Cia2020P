@@ -41,5 +41,5 @@ $idProfessor = $_GET['id'];
 		</table>
 	</div>
 </fieldset>
-<script>tabelaDataTable('tb_lista_outrosServicos', 'ordenaColuna_simples');</script>
+<script>tabelaDataTable('tb_lista_outrosServicos', 'simples');</script>
 
