@@ -120,7 +120,7 @@ class OutrosServicos extends Database {
 	 */
 	function selectOutrosServicosTr($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "", $idPai = "", $caminhoModulo = "") {
 
-		$sql = "SELECT SQL_CACHE idOutrosServicos, professor_idProfessor, tipo, valor, mes, ano, obs, dataCadastro, impostos FROM outrosServicos " . $where;
+		$sql = "SELECT SQL_CACHE idOutrosServicos, professor_idProfessor, tipo, valor, mes, ano, obs, dataCadastro, impostos FROM outrosServicos " . $where." ORDER BY idOutrosServicos desc";
 	//	Uteis::pr($sql);
 		$result = $this -> query($sql);
 
