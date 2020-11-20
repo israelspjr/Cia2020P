@@ -8,7 +8,7 @@ $img = new Image();
 $arrayRetorno = array();
 
 $idFuncionario = $_REQUEST['id'];
-echo $idFuncionario;
+//echo $idFuncionario;
 
 if($_POST['acao']=="foto"){
 	/* formatos de imagem permitidos */
@@ -70,7 +70,7 @@ if($_POST['acao']=="foto"){
 	
 	$inativo = ( $_POST['inativo'] == "1" ? 1 : 0);
 
-	if($idFuncionario!= "" ){
+/*	if($idFuncionario!= "" ){
 		$verificando = $Funcionario->selectFuncionario("WHERE documentoUnico='".$_POST['documentoUnico']."' AND idFuncionario <> ".$idFuncionario);
 	}else{
 		$verificando = $Funcionario->selectFuncionario("WHERE documentoUnico='".$_POST['documentoUnico']."'");
@@ -80,7 +80,7 @@ if($_POST['acao']=="foto"){
 		echo json_encode($arrayRetorno);
 		exit;
 	}
-	
+*/	
 	$Funcionario->setIdFuncionario($idFuncionario);		
 	$Funcionario->setEstadoCivilIdEstadoCivil($_POST['estadoCivil_idEstadoCivil']);
 	$Funcionario->setPaisIdPais($_POST['pais_idPais']);
