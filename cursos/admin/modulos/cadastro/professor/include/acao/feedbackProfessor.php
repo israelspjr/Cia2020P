@@ -69,7 +69,7 @@ if($_POST['acao']=="deletar"){
 	$FeedbackProfessor->setDataAvaliada(Uteis::gravarData($_POST['dataAvaliada']));
 	$FeedbackProfessor->setGrupoIdGrupo($_POST['idGrupo']);
 	$FeedbackProfessor->setStatus($_POST['status']);
-	$FeedbackProfessor->setStatus2($_POST['idNotasTipoNota']);
+	$FeedbackProfessor->setStatus2($_POST['status2']);
 	$FeedbackProfessor->setQuemAssistiu($_POST['quemAssistiu']);
 	$FeedbackProfessor->setPergunta1($_POST['pergunta1']);
 	$FeedbackProfessor->setPergunta2($_POST['pergunta2']);
