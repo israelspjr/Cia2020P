@@ -263,7 +263,7 @@ class FeedbackProfessor extends Database {
 				
 				<td align=\"center\"> ".$nomeGrupo."</td>
 				<td align=\"center\">".$img."</td>
-				<td align=\"center\"> ".$NotasTipoNotas->getNome($valor['status2'])."</td>
+				<td align=\"center\"> ".$valor['status2']."</td>
 				<td align=\"center\">".$nomeProfessor."</td>";
 			/*	<td align=\"center\">".$valor['obs']."</td>";
 			/*	<td>".$pergunta1."</td>
