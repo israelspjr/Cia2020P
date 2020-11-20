@@ -109,8 +109,8 @@ class ComplementoAbordagem extends Database {
 	 * selectComplementoAbordagemTr() Function
 	 */
 	function selectComplementoAbordagemTr($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "", $idPai = "", $caminhoModulo = "") {
-		$sql = "SELECT SQL_CACHE idComplementoAbordagem, item, inativo, padrao, nome, excluido, portalProfessor FROM complementoAbordagem " . $where;
-		echo $sql;
+		$sql = "SELECT SQL_CACHE idComplementoAbordagem, item, inativo, padrao, nome, excluido, portalProfessor FROM ComplementoAbordagem " . $where;
+	//	echo $sql;
 		$result = $this -> query($sql);
 		if (mysqli_num_rows($result) > 0) {
 			$html = "";
