@@ -76,7 +76,8 @@ function aguardarCarregamentoFeed(){
      </p>
      <p>
      <label>Nota: </label>
-     <?php echo $TipoNota->selectNotasTipoNotaSelect("", $status2, " AND tipoNota_idTipoNota = 4 ") ?>
+     <input type="text" id="status2" name="status2" value="<?php echo $status2?>" style="    width: 500px;" /></p>
+     <?php //echo $TipoNota->selectNotasTipoNotaSelect("", $status2, " AND tipoNota_idTipoNota = 4 ") ?>
      </p>
      
          <p><label>Quem Assistiu ? </label>
