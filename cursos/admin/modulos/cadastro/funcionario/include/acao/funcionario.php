@@ -8,6 +8,7 @@ $img = new Image();
 $arrayRetorno = array();
 
 $idFuncionario = $_REQUEST['id'];
+echo $idFuncionario;
 
 if($_POST['acao']=="foto"){
 	/* formatos de imagem permitidos */
