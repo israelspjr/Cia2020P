@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/planoAcao.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/demonstrativo.php");
 
 $IntegrantePlanoAcao = new IntegrantePlanoAcao();
 ?>
