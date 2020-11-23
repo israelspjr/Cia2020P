@@ -92,7 +92,7 @@ if( $_POST['check_disparoEmail_integrantePlanoAcao']) {
 		
         $conteudo_final = $PlanoAcao->ImprimePlanoAcao(3, $id); //file_get_contents("https://".CAMINHO_VER_PA."index.php?".$linkVisualizacao);       
         $conteudoLink =  $style. "<br>".$conteudo2.$conteudo3."<br />".$conteudo. "<br />".$conteudo_final.$conteudo3;   
-		$conteudoLink2 =  $conteudo2.$conteudo3."<br />".$conteudo. "<br />".$conteudo_final.$conteudo3;  
+	//	$conteudoLink2 =  $conteudo2.$conteudo3."<br />".$conteudo. "<br />".$conteudo_final.$conteudo3;  
         
    //     $assunto = "Plano de ação número ".$idPlanoAcao;
         $email = $ClientePf->getEmail($idClientePf);
@@ -103,7 +103,7 @@ if( $_POST['check_disparoEmail_integrantePlanoAcao']) {
         
         //GRAVA DISPARO             
         $DisparoEmail->setDestino($email);      
-        $DisparoEmail->setConteudoEmail($conteudoLink2);                                 
+     //   $DisparoEmail->setConteudoEmail($conteudoLink2);                                 
         $DisparoEmail->addDisparoEmail();               
         $ver = Uteis::enviarEmail($assunto, $conteudoLink, $paraQuem, "", $copia, $bcopia);
 	
@@ -124,7 +124,7 @@ if( $_POST['check_disparoEmail_contatoAdd']) {
 		
         $conteudo_final = $PlanoAcao->ImprimePlanoAcao(3, $id); //file_get_contents("https://".CAMINHO_VER_PA."index.php?".$linkVisualizacao);       
         $conteudoLink =  $style. "<br>".$conteudo2.$conteudo3."<br />".$conteudo. "<br />".$conteudo_final.$conteudo3;   
-		$conteudoLink2 =  $conteudo2.$conteudo3."<br />".$conteudo. "<br />".$conteudo_final.$conteudo3;  
+	//	$conteudoLink2 =  $conteudo2.$conteudo3."<br />".$conteudo. "<br />".$conteudo_final.$conteudo3;  
                          
    //     $assunto = "Plano de ação número ".$idPlanoAcao;
         $email = $Contato->getEmail($idContatoAdicional);
@@ -135,7 +135,7 @@ if( $_POST['check_disparoEmail_contatoAdd']) {
         
         //GRAVA DISPARO             
         $DisparoEmail->setDestino($email);      
-        $DisparoEmail->setConteudoEmail($conteudoLink2);                                 
+   //     $DisparoEmail->setConteudoEmail($conteudoLink2);                                 
         $DisparoEmail->addDisparoEmail();               
         $ver = Uteis::enviarEmail($assunto, $conteudoLink, $paraQuem, "", $copia, $bcopia);        
     } 
