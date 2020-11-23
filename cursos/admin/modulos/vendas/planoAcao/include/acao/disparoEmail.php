@@ -52,7 +52,7 @@ $style = '<script>
 }	
 </script>';
 	
-$assunto = "Plano de Ação:". $id;  //";$_POST['assunto'];
+$assunto = "Plano de Ação:". $idPlanoAcao;  //";$_POST['assunto'];
 $cc = $_POST['copia'];
 $bcc = $_POST['copiaOculta'];
 $arquivo = "";//sem arquivo por enqunto
@@ -92,7 +92,7 @@ if( $_POST['check_disparoEmail_integrantePlanoAcao']) {
 		
         $conteudo_final = $PlanoAcao->ImprimePlanoAcao(3, $id); //file_get_contents("https://".CAMINHO_VER_PA."index.php?".$linkVisualizacao);       
         $conteudoLink =  $style. "<br>".$conteudo2.$conteudo3."<br />".$conteudo. "<br />".$conteudo_final.$conteudo3;   
-	//	$conteudoLink2 =  $conteudo2.$conteudo3."<br />".$conteudo. "<br />".$conteudo_final.$conteudo3;  
+		$conteudoLink2 =  $conteudo2.$conteudo3."<br />".$conteudo. "<br />".$conteudo_final.$conteudo3;  
         
    //     $assunto = "Plano de ação número ".$idPlanoAcao;
         $email = $ClientePf->getEmail($idClientePf);
