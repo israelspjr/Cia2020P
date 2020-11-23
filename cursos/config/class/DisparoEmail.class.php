@@ -118,7 +118,7 @@ class DisparoEmail extends Database {
 		VALUES ($this->propostaIdProposta, $this->planoAcaoIdPlanoAcao, $this->integranteGrupoIdIntegranteGrupo, $this->integranteGrupoIdIntegranteGrupoPsa, $this->acompanhamentoCursoIdAcompanhamentoCurso, 
 		$this->planoAcaoGrupoIdPlanoAcaoGrupo, $this->certificadoCursoIntegranteGrupoId, $this->funcionario_idFuncionario, $this->clientePJ_idClientePj, $this->destino, $this->copia, $this->copiaOculta, $this->assunto, $this->conteudoEmail, 
 		$this->anexo, $this->campanhaEmailIdCampanhaEmail)";
-//		echo $sql;
+		echo $sql;
 		$result = $this -> query($sql, true);
 		return $this -> connect;
 	}
