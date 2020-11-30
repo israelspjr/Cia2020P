@@ -220,9 +220,6 @@ $docsObrigatorios = $cadastroDeCandidato ? "" : "required";
         <label>Empresa à qual pertence:</label>
         <?php echo $ClientePj->selectClientePjSelect($clientePjIdClientePj, ""," AND inativo = 0");?>
         </p>
-         <p><input type="checkbox" name="mei" id="mei" value="1" <?php if($mei != 0){ ?> checked="checked" <?php } ?> /> Professor MEI
-            
-  		</p>
       </div>
       <div class="direita">
      
@@ -284,7 +281,11 @@ $docsObrigatorios = $cadastroDeCandidato ? "" : "required";
           <label>INSS:</label>
           <input type="text" name="inss" id="inss" class="" value="<?php echo $inss?>" />
           <span class="placeholder">Campo Obrigatório</span> </p>
-       
+    
+     <p><input type="checkbox" name="mei" id="mei" value="1" <?php if($mei != 0){ ?> checked="checked" <?php } ?> /> Professor MEI
+            
+  		</p>
+           
         
       	<p>
           <label>Senha:</label>
