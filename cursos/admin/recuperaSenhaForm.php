@@ -72,7 +72,7 @@ $TipoDocumentoUnico = new TipoDocumentoUnico();
             </div>
         </p>
         
-      <p>
+      <p><div class="form-group">
         <button class="button blue submit" onclick="postForm('login','recuperaSenha.php');">Gravar nova senha</button></div>
         <p><a href="login.php">Voltar ao Login!</a></p>
       </p>
