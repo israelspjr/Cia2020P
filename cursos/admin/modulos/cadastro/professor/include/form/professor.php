@@ -220,11 +220,12 @@ $docsObrigatorios = $cadastroDeCandidato ? "" : "required";
         <label>Empresa à qual pertence:</label>
         <?php echo $ClientePj->selectClientePjSelect($clientePjIdClientePj, ""," AND inativo = 0");?>
         </p>
-      </div>
-      <div class="direita">
-      <p><label>Professor MEI:</label>
+         <p><label>Professor MEI:</label>
             <input type="checkbox" name="mei" id="mei" value="1" <?php if($mei != 0){ ?> checked="checked" <?php } ?> />
   		</p>
+      </div>
+      <div class="direita">
+     
         <p>
           <label>Currículo:
           <img src="<?php echo CAMINHO_IMG?>upload_file.png" onclick="$('#add_file').click();" title="Anexar novo" /> Clique em Salvar após enviar o Currículo</label>
