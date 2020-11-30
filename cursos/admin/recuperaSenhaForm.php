@@ -41,7 +41,7 @@ $TipoDocumentoUnico = new TipoDocumentoUnico();
 				<!--<div class="panel-heading">Log in</div>-->
 				<div class="panel-body">
     <form id="login" class="validate" action="recuperaSenha.php" method="post" >
-      <p><strong>Área do aluno</strong></p> 
+      <p><strong>Área Administrativa</strong></p> 
       <p><div class="form-group">
                 <label>Documento:</label>
                 <?php //echo $TipoDocumentoUnico->selectTipoDocumentoUnicoSelect($teraDocumentoUnico, 1); //$tipoDocumentoUnicoIdTipoDocumentoUnico);?>
