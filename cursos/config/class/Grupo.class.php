@@ -273,7 +273,7 @@ class Grupo extends Database {
 				$rs = $IntegranteGrupo->getidIntegranteGrupoProf("",$idPlanoAcaoGrupo, $dataFim);
 		//		Uteis::pr($rs);
 				if($rs) {
-				//$alunos = "";
+				$alunos = "";
 				$rs2 = explode(",", $rs);
 				$totalAlunos = 0;
 				foreach ($rs2 as $valor2) {
