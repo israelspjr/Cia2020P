@@ -3,9 +3,9 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 error_reporting(E_ALL);
 $msg = 0;
 if(isset($_POST)){
-    $doc = mysql_real_escape_string($_POST['documentoUnico']);
-    $nasc = mysql_real_escape_string($_POST['nasc']);
-    $senha = mysql_real_escape_string($_POST['password']);
+    $doc = $_POST['documentoUnico'];
+    $nasc = $_POST['nasc'];
+    $senha = $_POST['password'];
 
     if (isset($doc) AND isset($nasc) AND isset($senha)){
         $data = Uteis::gravarData($nasc);
