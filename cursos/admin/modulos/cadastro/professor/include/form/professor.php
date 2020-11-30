@@ -61,6 +61,7 @@ if($idProfessor != '' && $idProfessor  > 0){
 	$rgC = $valorProfessor[0]['rgC'];
 	$comprovante = $valorProfessor[0]['comprovante'];
 	$usoImagem = $valorProfessor[0]['usoImagem'];
+	$mei = $valorProfessor[0]['mei'];
 }
 
 $docsObrigatorios = $cadastroDeCandidato ? "" : "required";
@@ -221,6 +222,9 @@ $docsObrigatorios = $cadastroDeCandidato ? "" : "required";
         </p>
       </div>
       <div class="direita">
+      <p><label>Professor MEI:</label>
+            <input type="checkbox" name="mei" id="mei" value="1" <?php if($mei != 0){ ?> checked="checked" <?php } ?> />
+  		</p>
         <p>
           <label>Currículo:
           <img src="<?php echo CAMINHO_IMG?>upload_file.png" onclick="$('#add_file').click();" title="Anexar novo" /> Clique em Salvar após enviar o Currículo</label>
