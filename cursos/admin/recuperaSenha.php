@@ -1,6 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 $msg = 0;
 if(isset($_POST)){
     $doc = $_POST['documentoUnico'];
