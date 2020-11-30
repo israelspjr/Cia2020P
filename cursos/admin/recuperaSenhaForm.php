@@ -1,5 +1,5 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/admin.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
 
@@ -25,7 +25,7 @@ $TipoDocumentoUnico = new TipoDocumentoUnico();
 
 <style>
 	body{
-		background-image: url("../images/bcgaluno2.jpg");
+		background-image: url("../images/bcgrhg.jpg");
 	}
 </style>
 <link rel="shortcut icon" href="../upload/imagem/empresa/<?php echo $config[0]['favIcon'];?>">
