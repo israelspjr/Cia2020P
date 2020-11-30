@@ -66,14 +66,13 @@ if(($_POST['cpf'] != '') && ($_POST['password'] != '')){
         <button class="button blue submit">Efetuar Login</button>
         </div>
       </p>
-      <p onClick="confirmar();"  class="onlink" >Não sabe a sua senha?</p> 
-      <!--mensagem(); enviarSenha(redefSenha(),'#cpf', 'admin')"-->
+        <p><a href="recuperaSenhaForm.php">Não sabe a sua senha?</a></p>
     </form>
      			</div>
 		</div><!-- /.col-->
 	</div><!-- /.row -->
     <script>
-	function confirmar() {
+/*	function confirmar() {
 	var r = confirm("Tem certeza que deseja resetar a senha e receber no seu email? ");
 	if(r == true) {
 		mensagem();
@@ -85,11 +84,23 @@ if(($_POST['cpf'] != '') && ($_POST['password'] != '')){
 	alert("Sua senha foi enviada para o e-mail cadastrado.");
 		
 	}
-	$('#documento').focus();</script> 
+	$('#documento').focus();
+	*/</script> 
   </div>
 </div>
 </body>
 </html>
-<script>
-	ativarForm();
+<script type="text/javascript">
+     function mensagem() {
+                alert("Sua senha foi enviada para o e-mail cadastrado.");
+            }
+
+     $('#documentoUnico').focus();
+     tipoDocumentoUnico("login");
+     $('#tipoDocumentoUnico_idTipoDocumentoUnico').attr('onchange', 'tipoDocumentoUnico("login")')
+
+<?php if(isset($_GET['msg'])) { ?>
+      alert('- Senha alterada com sucesso!');
+<?php } ?>
+ativarForm();
 </script>
