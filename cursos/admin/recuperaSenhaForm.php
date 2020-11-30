@@ -40,7 +40,7 @@ $TipoDocumentoUnico = new TipoDocumentoUnico();
 			<div class="login-panel panel panel-default">
 				<!--<div class="panel-heading">Log in</div>-->
 				<div class="panel-body">
-    <form id="login" class="validate" action="recuperaSenha.php" method="post" >
+    <form id="login" class="validate" action="" method="post" onsubmit="return false">
       <p><strong>Área Administrativa</strong></p> 
       <p><div class="form-group">
                 <label>Documento:</label>
@@ -73,18 +73,17 @@ $TipoDocumentoUnico = new TipoDocumentoUnico();
         </p>
         
       <p>
-        <button class="bBlue">Enviar dados</button>
+        <button class="button blue submit" onclick="postForm('login','recuperaSenha.php');">Gravar nova senha</button></div>
         <p><a href="login.php">Voltar ao Login!</a></p>
       </p>
     </form>
-    <script>
-	function mensagem() {
-	    alert("Sua senha foi enviada para o e-mail cadastrado.");
-	}
-	$('#documentoUnico').focus();
-    <?php if(isset($_GET['msg'])) { ?>
-        alert('- Nrº do Documento ou Data de Nascimento inválidos!');
-    <?php } ?>
+   <script type="text/javascript">
+        $('#documentoUnico').focus();
+	    tipoDocumentoUnico("login");
+        $('#tipoDocumentoUnico_idTipoDocumentoUnico').attr('onchange','tipoDocumentoUnico("login")')
+        <?php if(isset($_GET['msg'])) { ?>
+            alert('- Nrº do Documento ou Data de Nascimento inválidos!');
+        <?php } ?>
     </script>
   </div>
 </div>
