@@ -220,6 +220,7 @@ if($_POST['acao']=="foto"){
 	$contratado = ($_POST['contratado'] == "1") ? "1" : "0";
 	$tambemAluno = ($_POST['tambemAluno'] == "1") ? "1" : "0";
 	$usoImagem = ($_POST['usoImagem'] == "1") ? "1" : "0";
+	$mei = ($_POST['mei'] == "1") ? "1" : "0";
 	$clientePj_idClientePj = $_POST['clientePj_idClientePj'];
 	
 	
@@ -275,6 +276,7 @@ if($_POST['acao']=="foto"){
 	$Professor->setRgC($_POST['rgC_oculto']);
 	$Professor->setComprovante($_POST['comprovante_oculto']);
 	$Professor->setUsoImagem($usoImagem);
+	$Professor->setMei($mei);
 	
 	//print_r($_POST);
 	//exit;

@@ -51,6 +51,7 @@ class Professor extends Database
 	var $comprovante;
 	var $rgC;
 	var $usoImagem;
+	var $mei;
 
     // constructor
     function __construct()
@@ -105,6 +106,7 @@ class Professor extends Database
 		$this->comprovante = "NULL";
 		$this->rgC = "NULL";
 		$this->usoImagem = "0";
+		$this->mei = "0";
     }
 
     function __destruct()
@@ -358,13 +360,18 @@ class Professor extends Database
         $this->usoImagem = ($value) ? $this->gravarBD($value) : "0";
     }
 
+	function setMei($value)
+    {
+        $this->mei = ($value) ? $this->gravarBD($value) : "0";
+    }
+
 
     /**
      * addProfessor() Function
      */
     function addProfessor()
     {
-        $sql = "INSERT INTO professor (id_migracao, candidato, pais_idPais, nome, nomeExibicao, sexo, dataNascimento, rg, tipoDocumentoUnico_idTipoDocumentoUnico, documentoUnico, senha, obs, inativo, foto, inss, ccm, curriculum, otimaPerformance, altaPerformance, dataContratacao, vetado, indisponivel, presencial, online, tradutor, consultor, imersao, estadoCivil_idEstadoCivil, dataCadastro, excluido, indicadoPor, cidadeOrigem, naoReceberEmail, skype, deixandoGrupo, chatClub, terceiro, tipoVeto, expSkype, sobre, tambemAluno, clientePj_idClientePj, dataCapacitacao, encontro, dataSegundo, rgC, comprovante, usoImagem) VALUES ($this->id_migracao, $this->candidato, $this->paisIdPais, $this->nome, $this->nomeExibicao, $this->sexo, $this->dataNascimento, $this->rg, $this->tipoDocumentoUnicoIdTipoDocumentoUnico, $this->documentoUnico, $this->senha, $this->obs, $this->inativo, $this->foto, $this->inss, $this->ccm, $this->curriculum, $this->otimaPerformance, $this->altaPerformance, $this->dataContratacao, $this->vetado, $this->indisponivel, $this->presencial, $this->online, $this->tradutor, $this->consultor, $this->imersao, $this->estadoCivilIdEstadoCivil, $this->dataCadastro, $this->excluido, $this->indicadoPor, $this->cidadeOrigem, $this->naoReceberEmail, $this->skype, $this->deixandoGrupo, $this->chatClub, $this->terceiro, $this->tipoVeto, $this->expSkype, $this->sobre, $this->tambemAluno, $this->clientePjIdClientePj, $this->dataCapacitacao, $this->encontro, $this->dataSegundo, $this->rgC, $this->comprovante, $this->usoImagem)";
+        $sql = "INSERT INTO professor (id_migracao, candidato, pais_idPais, nome, nomeExibicao, sexo, dataNascimento, rg, tipoDocumentoUnico_idTipoDocumentoUnico, documentoUnico, senha, obs, inativo, foto, inss, ccm, curriculum, otimaPerformance, altaPerformance, dataContratacao, vetado, indisponivel, presencial, online, tradutor, consultor, imersao, estadoCivil_idEstadoCivil, dataCadastro, excluido, indicadoPor, cidadeOrigem, naoReceberEmail, skype, deixandoGrupo, chatClub, terceiro, tipoVeto, expSkype, sobre, tambemAluno, clientePj_idClientePj, dataCapacitacao, encontro, dataSegundo, rgC, comprovante, usoImagem, mei) VALUES ($this->id_migracao, $this->candidato, $this->paisIdPais, $this->nome, $this->nomeExibicao, $this->sexo, $this->dataNascimento, $this->rg, $this->tipoDocumentoUnicoIdTipoDocumentoUnico, $this->documentoUnico, $this->senha, $this->obs, $this->inativo, $this->foto, $this->inss, $this->ccm, $this->curriculum, $this->otimaPerformance, $this->altaPerformance, $this->dataContratacao, $this->vetado, $this->indisponivel, $this->presencial, $this->online, $this->tradutor, $this->consultor, $this->imersao, $this->estadoCivilIdEstadoCivil, $this->dataCadastro, $this->excluido, $this->indicadoPor, $this->cidadeOrigem, $this->naoReceberEmail, $this->skype, $this->deixandoGrupo, $this->chatClub, $this->terceiro, $this->tipoVeto, $this->expSkype, $this->sobre, $this->tambemAluno, $this->clientePjIdClientePj, $this->dataCapacitacao, $this->encontro, $this->dataSegundo, $this->rgC, $this->comprovante, $this->usoImagem, $this->mei)";
 //		echo $sql;
         $result = $this->query($sql, true);
         return $this->connect;
@@ -396,7 +403,7 @@ class Professor extends Database
      */
     function updateProfessor()
     {
-        $sql = "UPDATE professor SET id_migracao = $this->id_migracao, candidato = $this->candidato, pais_idPais = $this->paisIdPais, nome = $this->nome, nomeExibicao = $this->nomeExibicao, sexo = $this->sexo, dataNascimento = $this->dataNascimento, rg = $this->rg, tipoDocumentoUnico_idTipoDocumentoUnico = $this->tipoDocumentoUnicoIdTipoDocumentoUnico, documentoUnico = $this->documentoUnico, senha = $this->senha, obs = $this->obs, inativo = $this->inativo, foto = $this->foto, inss = $this->inss, ccm = $this->ccm, curriculum = $this->curriculum, otimaPerformance = $this->otimaPerformance, altaPerformance = $this->altaPerformance, dataContratacao = $this->dataContratacao, vetado = $this->vetado, indisponivel = $this->indisponivel, presencial = $this->presencial, online = $this->online, tradutor = $this->tradutor, consultor = $this->consultor, imersao = $this->imersao, estadoCivil_idEstadoCivil = $this->estadoCivilIdEstadoCivil, excluido = $this->excluido, indicadoPor = $this->indicadoPor, cidadeOrigem = $this->cidadeOrigem, naoReceberEmail = $this->naoReceberEmail, skype = $this->skype, deixandoGrupo = $this->deixandoGrupo, chatClub = $this->chatClub, terceiro = $this->terceiro, tipoVeto = $this->tipoVeto, expSkype = $this->expSkype, sobre = $this->sobre, tambemAluno = $this->tambemAluno, clientePj_idClientePj = $this->clientePjIdClientePj, dataCapacitacao = $this->dataCapacitacao, encontro = $this->encontro, dataSegundo = $this->dataSegundo, rgC = $this->rgC, comprovante = $this->comprovante , usoImagem = $this->usoImagem WHERE idProfessor = $this->idProfessor";
+        $sql = "UPDATE professor SET id_migracao = $this->id_migracao, candidato = $this->candidato, pais_idPais = $this->paisIdPais, nome = $this->nome, nomeExibicao = $this->nomeExibicao, sexo = $this->sexo, dataNascimento = $this->dataNascimento, rg = $this->rg, tipoDocumentoUnico_idTipoDocumentoUnico = $this->tipoDocumentoUnicoIdTipoDocumentoUnico, documentoUnico = $this->documentoUnico, senha = $this->senha, obs = $this->obs, inativo = $this->inativo, foto = $this->foto, inss = $this->inss, ccm = $this->ccm, curriculum = $this->curriculum, otimaPerformance = $this->otimaPerformance, altaPerformance = $this->altaPerformance, dataContratacao = $this->dataContratacao, vetado = $this->vetado, indisponivel = $this->indisponivel, presencial = $this->presencial, online = $this->online, tradutor = $this->tradutor, consultor = $this->consultor, imersao = $this->imersao, estadoCivil_idEstadoCivil = $this->estadoCivilIdEstadoCivil, excluido = $this->excluido, indicadoPor = $this->indicadoPor, cidadeOrigem = $this->cidadeOrigem, naoReceberEmail = $this->naoReceberEmail, skype = $this->skype, deixandoGrupo = $this->deixandoGrupo, chatClub = $this->chatClub, terceiro = $this->terceiro, tipoVeto = $this->tipoVeto, expSkype = $this->expSkype, sobre = $this->sobre, tambemAluno = $this->tambemAluno, clientePj_idClientePj = $this->clientePjIdClientePj, dataCapacitacao = $this->dataCapacitacao, encontro = $this->encontro, dataSegundo = $this->dataSegundo, rgC = $this->rgC, comprovante = $this->comprovante , usoImagem = $this->usoImagem, mei = $this->mei WHERE idProfessor = $this->idProfessor";
 	//	echo $sql;
         $result = $this->query($sql, true);
     }
@@ -406,7 +413,7 @@ class Professor extends Database
      */
     function selectProfessor($where = "WHERE 1")
     {
-        $sql = "SELECT SQL_CACHE idProfessor, id_migracao, candidato, pais_idPais, nome, nomeExibicao, sexo, dataNascimento, rg, tipoDocumentoUnico_idTipoDocumentoUnico, documentoUnico, senha, obs, inativo, foto, inss, ccm, curriculum, otimaPerformance, altaPerformance, dataContratacao, vetado, indisponivel, presencial, online, tradutor, consultor, imersao, estadoCivil_idEstadoCivil, dataCadastro, excluido, indicadoPor, cidadeOrigem, naoReceberEmail, skype, deixandoGrupo, chatClub, terceiro, tipoVeto, expSkype, sobre, tambemAluno, clientePj_idClientePj, dataCapacitacao, encontro, dataSegundo, rgC, comprovante, usoImagem FROM professor " . $where;
+        $sql = "SELECT SQL_CACHE idProfessor, id_migracao, candidato, pais_idPais, nome, nomeExibicao, sexo, dataNascimento, rg, tipoDocumentoUnico_idTipoDocumentoUnico, documentoUnico, senha, obs, inativo, foto, inss, ccm, curriculum, otimaPerformance, altaPerformance, dataContratacao, vetado, indisponivel, presencial, online, tradutor, consultor, imersao, estadoCivil_idEstadoCivil, dataCadastro, excluido, indicadoPor, cidadeOrigem, naoReceberEmail, skype, deixandoGrupo, chatClub, terceiro, tipoVeto, expSkype, sobre, tambemAluno, clientePj_idClientePj, dataCapacitacao, encontro, dataSegundo, rgC, comprovante, usoImagem, mei FROM professor " . $where;
     //    echo $sql;
         return $this->executeQuery($sql);
     }
