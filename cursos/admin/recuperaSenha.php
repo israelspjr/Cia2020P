@@ -1,5 +1,4 @@
 <?php
-$pgaluno = true;
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 
 $msg = 0;
@@ -12,17 +11,17 @@ if(isset($_POST)){
         $data = Uteis::gravarData($nasc);
         $senhaAcesso = EncryptSenha::B64_Encode($senha);
 
-        $Funcionario = new Funcinario();
+        $Funcionario = new Funcionario();
         $rs = $Funcionario->selectFuncionario(" WHERE documentoUnico = '".$doc."' AND dataNascimento='".$data."'");
         if($rs){
             $idFuncionario = $rs[0]["idFuncionario"];
             $nome = $rs[0]["nome"];
-            $ClientePf->setIdClientePf($idClientePf);
-            $ClientePf->updateFieldClientepf("SenhaAcesso", $senhaAcesso);
+            $Funcionario->setIdFuncionario($idFuncionario);
+            $Funcionario->updateFieldFuncionario("SenhaAcesso", $senhaAcesso);
             //$emails = $ClientePf->getEmail($idClientePf, 1);
             $msg = 1;
         }
-        var_dump($rs);
+ //       var_dump($rs);
     }
 	$arrayRetorno['mensagem'] = "Senha alterada com sucesso! Clique voltar para fazer o login";
 }
