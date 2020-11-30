@@ -25,7 +25,7 @@ $TipoDocumentoUnico = new TipoDocumentoUnico();
 
 <style>
 	body{
-		background-image: url("../images/bcgrhg.jpg");
+		background-image: url("../images/bcgrh.jpg");
 	}
 </style>
 <link rel="shortcut icon" href="../upload/imagem/empresa/<?php echo $config[0]['favIcon'];?>">
