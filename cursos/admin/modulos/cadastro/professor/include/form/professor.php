@@ -220,8 +220,8 @@ $docsObrigatorios = $cadastroDeCandidato ? "" : "required";
         <label>Empresa à qual pertence:</label>
         <?php echo $ClientePj->selectClientePjSelect($clientePjIdClientePj, ""," AND inativo = 0");?>
         </p>
-         <p><label>Professor MEI:</label>
-            <input type="checkbox" name="mei" id="mei" value="1" <?php if($mei != 0){ ?> checked="checked" <?php } ?> />
+         <p><input type="checkbox" name="mei" id="mei" value="1" <?php if($mei != 0){ ?> checked="checked" <?php } ?> /> Professor MEI
+            
   		</p>
       </div>
       <div class="direita">
