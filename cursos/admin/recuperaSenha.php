@@ -24,6 +24,8 @@ if(isset($_POST)){
         }
         var_dump($rs);
     }
+	$arrayRetorno['mensagem'] = "Senha alterada com sucesso! Clique voltar para fazer o login";
 }
-$reditectUrl = ($msg==1)? 'login.php?msg=1' : 'recuperaSenhaForm.php?msg=1';
-header('location: '.$reditectUrl);
+//$reditectUrl = ($msg==1)? 'login.php?msg=1' : 'recuperaSenhaForm.php?msg=1';
+//header('location: '.$reditectUrl);
+echo json_encode($arrayRetorno);
