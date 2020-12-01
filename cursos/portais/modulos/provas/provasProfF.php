@@ -30,7 +30,7 @@ if($idCalendarioProva != '' && $idCalendarioProva  > 0){
 
 //	$data = date('d/m/Y', strtotime("-1 month",strtotime($data))); 
 	$mesFuturo = date('Y-m-d', strtotime("+1 month",strtotime($data))); 
-	echo $mesFuturo;
+//	echo $mesFuturo;
 
 			$vr = explode("-", $dataValidacao);
 			Uteis::pr($vr);
@@ -47,7 +47,7 @@ if($idCalendarioProva != '' && $idCalendarioProva  > 0){
 		$validado = 0;	
 			
 		}
-		echo $validado;
+//		echo $validado;
 	
 	if (($dataPrevistaInicial >= $data) && ($dataPrevistaInicial <= $mesFuturo)) {
 		echo "<script> var perguntar = 1</script>";
@@ -65,7 +65,7 @@ if($idCalendarioProva != '' && $idCalendarioProva  > 0){
 ?>
 
 <script>
-alert(perguntar);
+//alert(perguntar);
 function atualizaIntens(idProva){
 	if( idProva ){
 		$('#itensProva').load('<?php echo "modulos/provas/itensProva.php?idProva="?>' + idProva);
@@ -229,5 +229,6 @@ alert("Verifique a observação (Não pode ficar vazia) e a nova data de aplica�
 	postForm('form_CalendarioProva', '<?php echo "modulos/provas/provasAcao.php?id=$idCalendarioProva"?>');	
 		
 	}
+	zerarProva();
 }
 </script> 
