@@ -134,11 +134,12 @@ if (r == true) {
           <label>Data prevista:</label>
           <?php echo Uteis::exibirData($dataPrevistaInicial)?></p>
        
+       <p>
+          <label>Nova data prevista: <?php if ($dataPrevistaNova != '') {echo Uteis::exibirData($dataPrevistaNova); }?></label>
         <div id="prevista" name="prevista" style="display:none"> 
-        <p>
-          <label>Nova data prevista:</label>
+        
            <input type="datee" name="dataPrevistaNova" id="dataPrevistaNova" class="datepicker" value="<?php echo $dataPrevistaNova?>" />
-          <?php //echo Uteis::exibirData($dataPrevistaNova)?></p>
+          </p>
           </div>
           
           <?php if ($dataAplicacao != '') { ?>
