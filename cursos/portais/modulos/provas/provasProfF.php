@@ -30,6 +30,7 @@ if($idCalendarioProva != '' && $idCalendarioProva  > 0){
 
 //	$data = date('d/m/Y', strtotime("-1 month",strtotime($data))); 
 	$mesFuturo = date('Y-m-d', strtotime("+1 month",strtotime($data))); 
+	echo $mesFuturo;
 
 			$vr = explode("-", $dataValidacao);
 //			Uteis::pr($vr);
@@ -184,14 +185,16 @@ if (r == true) {
     
 
 </div>
+<div class="linha-inteira">
    <p>
           <button class="Bblue" onclick="salvar();">Salvar</button>&nbsp;&nbsp;
           <button class="button gray" onclick="zerarProva();">Fechar </button> <!-- ;carregarModulo('/cursos/mobile/professor/modulos/provas/index.php', '#centro');">Fechar</button>-->
           
         </p>
-        </p>
+     </div>
       </form>
   </fieldset>
+ 
 <script>
 //ativarForm();
 atualizaIntens('<?php echo $idProva?>');

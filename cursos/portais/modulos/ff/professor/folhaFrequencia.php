@@ -257,7 +257,7 @@ if ($rp[0]['dataPrevistaNova'] != '') {
 	$rProva = 1;
 }
 
-echo $dataProva;
+//echo $dataProva;
 ?>
 
 <fieldset>
