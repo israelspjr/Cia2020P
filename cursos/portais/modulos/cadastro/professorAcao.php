@@ -199,6 +199,7 @@ if($_POST['acao']=="foto"){
 	}
 	
 	if( strlen($_POST['documentoUnico']) === 11 ) {
+		echo "teste";
 		$doc = Uteis::formatar_CPF_CNPJ($_POST['documentoUnico']);
 	} else {
 		$doc = $_POST['documentoUnico'];
