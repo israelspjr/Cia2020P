@@ -159,7 +159,7 @@ if (r == true) {
         </div>
         <div id="obsP" name="obsP">
         <p>
-          <p><label>Por favor, informe aqui os motivos para o atraso na data para aplicação desta prova:</label></p>
+          <p><label>Por favor, informe aqui os motivos para o atraso na data para aplicação desta prova - Clique em Salvar caso não tenha nenhum motivo:</label></p>
           <textarea name="obs" id="obs" class="" cols="40" rows="4"><?php echo $obs?></textarea>
        <!--   <span class="placeholder">Campo Obrigatório</span> </p>-->
         </p>
