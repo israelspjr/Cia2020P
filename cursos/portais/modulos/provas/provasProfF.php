@@ -33,7 +33,7 @@ if($idCalendarioProva != '' && $idCalendarioProva  > 0){
 //	echo $mesFuturo;
 
 			$vr = explode("-", $dataValidacao);
-			Uteis::pr($vr);
+	//		Uteis::pr($vr);
 		$anoV = $vr[0];
 		$mesV = $vr[1];	
 //		echo $mesV;
