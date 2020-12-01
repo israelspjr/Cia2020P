@@ -256,6 +256,8 @@ if ($rp[0]['dataPrevistaNova'] != '') {
 } else {
 	$rProva = 1;
 }
+
+echo $dataProva;
 ?>
 
 <fieldset>
@@ -616,7 +618,7 @@ $plan = $MaterialPlano->AcompanhamentoMaterialPlano($idPlanoAcaoGrupo, $idFolhaF
 <div id="div_provas_grupo2">
 <?php //require_once("provasF.php"); ?>
 <fieldset>
-  <legend>Provas</legend>
+  <legend>Avaliações</legend>
   
    <div class="lista">
     <table id="tb_lista_prova2" class="registros">
