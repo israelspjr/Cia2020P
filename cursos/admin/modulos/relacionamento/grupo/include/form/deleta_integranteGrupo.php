@@ -3,6 +3,10 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 
 $IntengranteGrupo = new IntegranteGrupo();
 $ClientePf = new ClientePf();
+$Configuracoes = new Configuracoes();
+ini_set("display_errors", 1);
+
+$config = $Configuracoes->selectConfig();
 
 $idIntegranteGrupo = $_REQUEST['id'];
 
@@ -91,7 +95,7 @@ var site = "Aluno inativado";
 //	console.log(tel);
 		$.ajax({
   method: "POST",
-  url: "https://www.companhiadeidiomas.net/cursos/integraRD.php",
+  url: "<?php echo 'https://'.$config[0]['siteEmp'];?>/cursos/integraRD.php",
   data: { nome: nome, email:email, tel:tel, fonte:site }
 })
   .done(function( msg ) {
