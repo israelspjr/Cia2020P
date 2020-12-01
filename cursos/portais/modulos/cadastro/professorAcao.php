@@ -199,12 +199,12 @@ if($_POST['acao']=="foto"){
 	}
 	
 	if( strlen($_POST['documentoUnico']) == 11 ) {
-		echo "teste";
+//	echo "teste";
 		$doc = Uteis::formatar_CPF_CNPJ($_POST['documentoUnico']);
 	} else {
 		$doc = $_POST['documentoUnico'];
 	}
-	echo $doc;
+//	echo $doc;
 	
 	$inativo = ($_POST['inativo'] == "1") ? "1" : "0";
 	$otimaPerformance = ($_POST['otimaPerformance'] == "1") ? "1" : "0";
@@ -309,6 +309,14 @@ if($_POST['acao']=="foto"){
 		
 	} else {
 		
+	if( strlen($_POST['documentoUnico']) == 11 ) {
+	//	echo "teste";
+		$doc = Uteis::formatar_CPF_CNPJ($_POST['documentoUnico']);
+	} else {
+		$doc = $_POST['documentoUnico'];
+	}
+//	echo $doc;
+		
 	$Professor->setIdProfessor($idProfessor);
 		
 	$Professor->updateFieldProfessor("foto", $_POST['foto_oculta']);
@@ -320,7 +328,7 @@ if($_POST['acao']=="foto"){
 	$Professor->updateFieldProfessor("pais_idPais", $_POST['pais_idPais']);
 	$Professor->updateFieldProfessor("rg", $_POST['rg']);
 	$Professor->updateFieldProfessor("tipoDocumentoUnico_idTipoDocumentoUnico", $_POST['tipoDocumentoUnico_idTipoDocumentoUnico']);
-	$Professor->updateFieldProfessor("documentoUnico", $_POST['documentoUnico']);
+	$Professor->updateFieldProfessor("documentoUnico", $doc);
     $senha = EncryptSenha::B64_Encode($_POST['senhaAcesso']);
 	$Professor->updateFieldProfessor("senha", $senha);
 	$Professor->updateFieldProfessor("ccm", $_POST['ccm']);
