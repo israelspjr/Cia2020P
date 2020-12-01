@@ -187,6 +187,8 @@ if($_POST['acao']=="foto"){
 	 exit;
 
 }else{
+	
+	if ($_SESSION['idProfessor_SS'] == -1) {
 		
 	$verificando = $Professor->selectProfessor("WHERE documentoUnico = '".$_POST['documentoUnico']."' AND idProfessor <> ".$idProfessor);
 	
@@ -196,7 +198,7 @@ if($_POST['acao']=="foto"){
 		exit;
 	}
 	
-	if ($_SESSION['idProfessor_SS'] == -1) {
+	
 
 
 	$inativo = ($_POST['inativo'] == "1") ? "1" : "0";
