@@ -204,6 +204,7 @@ if($_POST['acao']=="foto"){
 	} else {
 		$doc = $_POST['documentoUnico'];
 	}
+	echo $doc;
 	
 	$inativo = ($_POST['inativo'] == "1") ? "1" : "0";
 	$otimaPerformance = ($_POST['otimaPerformance'] == "1") ? "1" : "0";
