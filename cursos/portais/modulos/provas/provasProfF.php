@@ -63,7 +63,9 @@ if($idCalendarioProva != '' && $idCalendarioProva  > 0){
 	
 }	
 ?>
+
 <script>
+alert(perguntar);
 function atualizaIntens(idProva){
 	if( idProva ){
 		$('#itensProva').load('<?php echo "modulos/provas/itensProva.php?idProva="?>' + idProva);
