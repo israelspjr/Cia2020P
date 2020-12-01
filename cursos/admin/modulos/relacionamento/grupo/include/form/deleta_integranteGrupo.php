@@ -95,7 +95,7 @@ var site = "Aluno inativado";
 //	console.log(tel);
 		$.ajax({
   method: "POST",
-  url: "<?php echo 'https://'.$config[0]['siteEmp'];?>/cursos/integraRD.php",
+  url: "<?php echo 'https://'.$config[0]['site'];?>/cursos/integraRD.php",
   data: { nome: nome, email:email, tel:tel, fonte:site }
 })
   .done(function( msg ) {
