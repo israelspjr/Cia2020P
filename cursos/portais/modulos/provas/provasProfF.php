@@ -170,7 +170,7 @@ if (r == true) {
       <div id="itensProva" class="tab2"></div>
       </p>
       
-        <p>
+  <!--      <p>
         <label for="inativo"><strong>Prova on-line</strong></label>
         <input type="checkbox" name="provaOn" id="provaOn" disabled="disabled" value="1" <?php if($provaOn != 0){ ?> checked="checked" <?php } ?> />
       </p>
@@ -178,6 +178,7 @@ if (r == true) {
       <p><Label><strong>Código de liberação da prova:</strong></Label><p style="font-size:18px;    display: block;"><?php echo $codLiberacao?></p>
       Caso não tenha nenhum clique no botão salvar para gerar um novo código. (Somente para Prova on-line)
       <input type="hidden" name="codLiberacao" id="codLiberacao" value="<?php echo $codLiberacao?>" />
+    -->
     </div>
     
     
@@ -196,6 +197,8 @@ if (r == true) {
 atualizaIntens('<?php echo $idProva?>');
 function zerarProva() {
 $('#provasF').html('');	
+zerarCentro();
+carregarModulo('modulos/ff/professor/folhaFrequencia_abas.php?idFolhaFrequencia=<?php echo $idFolhaFrequencia?>&Ndados=', '#centro')
 }
 function salvar() {
 	
