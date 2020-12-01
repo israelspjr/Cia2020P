@@ -425,6 +425,7 @@ function relatorioFrequenciaPdf($where = "", $tipo, $excel = false, $FME, $frequ
 		  $idClientepf = $valor['idClientePf'];
 		  
 		  $email = $ClientePf->getEmail($idClientepf, 1);
+		  Uteis::pr($email);
 	
 	      $html .= "<tr>";
 		  if ($portalA != 1) {
