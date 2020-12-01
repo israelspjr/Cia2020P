@@ -425,7 +425,7 @@ function relatorioFrequenciaPdf($where = "", $tipo, $excel = false, $FME, $frequ
 		  $idClientepf = $valor['idClientePf'];
 		  
 		  $email = $ClientePf->getEmail($idClientepf, 1);
-		  Uteis::pr($email);
+	//	  Uteis::pr($email);
 	
 	      $html .= "<tr>";
 		  if ($portalA != 1) {
@@ -499,7 +499,7 @@ function relatorioFrequenciaPdf($where = "", $tipo, $excel = false, $FME, $frequ
 		  		}
 		  }
   	
-		  $email = $ClientePf->getEmail($idClientepf);
+		  $email = $ClientePf->getEmail($idClientepf,1);
 		  $idClientePj = $valor['idClientePj'];
           $horasProgramadas = $valor['horasProgramadas'];
 		  $cargaFixa = $valor['cargaHorariaFixa'];
