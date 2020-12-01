@@ -964,7 +964,7 @@ WHERE 1
 		    if  ($portalP != 1) {
 		  //   if ($portalA != 1) {
         
-		  $html .= "<td >1" . $valor['nomeProfessor'] . "</td>";
+		  $html .= "<td >" . $valor['nomeProfessor'] . "</td>";
 		//	 }
 		  }
 		  if (($alunoN != 1) && ($portalA != 1)) {
