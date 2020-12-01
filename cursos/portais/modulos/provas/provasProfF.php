@@ -47,7 +47,7 @@ if($idCalendarioProva != '' && $idCalendarioProva  > 0){
 		$validado = 0;	
 			
 		}
-		
+		echo $validado;
 	
 	if (($dataPrevistaInicial >= $data) && ($dataPrevistaInicial <= $mesFuturo)) {
 		echo "<script> var perguntar = 1</script>";
