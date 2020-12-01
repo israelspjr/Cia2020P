@@ -40,7 +40,7 @@ if($_REQUEST['acao']=="deletar"){
 		INNER JOIN folhaFrequencia AS FF ON FF.idFolhaFrequencia = DF.folhaFrequencia_idFolhaFrequencia AND ( FF.finalizadaParcial = 1 OR FF.finalizadaPrincipal = 1)
 		WHERE DFI.integranteGrupo_idIntegranteGrupo = $idIntegranteGrupo AND dataAula >= '$dataSaida'";
 		//echo $sql;
-		$result = mysql_num_rows($IntegranteGrupo->query($sql));
+		$result = mysqli_num_rows($IntegranteGrupo->query($sql));
 
         //if( $result ){
         //	$arrayRetorno['mensagem'] = "Não é possível excluir nessa data.<br /><small>
