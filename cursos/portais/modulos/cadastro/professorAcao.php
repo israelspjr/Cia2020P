@@ -198,9 +198,12 @@ if($_POST['acao']=="foto"){
 		exit;
 	}
 	
+	if( strlen($_POST['documentoUnico']) === 11 ) {
+		$doc = Uteis::formatar_CPF_CNPJ($_POST['documentoUnico']);
+	} else {
+		$doc = $_POST['documentoUnico'];
+	}
 	
-
-
 	$inativo = ($_POST['inativo'] == "1") ? "1" : "0";
 	$otimaPerformance = ($_POST['otimaPerformance'] == "1") ? "1" : "0";
 	$altaPerformance = ($_POST['altaPerformance'] == "1") ? "1" : "0";
@@ -226,7 +229,7 @@ if($_POST['acao']=="foto"){
 	$Professor->setPaisIdPais($_POST['pais_idPais']);			
 	$Professor->setRg($_POST['rg']);		
 	$Professor->setTipoDocumentoUnicoIdTipoDocumentoUnico($_POST['tipoDocumentoUnico_idTipoDocumentoUnico']);
-	$Professor->setDocumentoUnico($_POST['documentoUnico']);		
+	$Professor->setDocumentoUnico($doc);		
 	$Professor->setSenha($_POST['senhaAcesso']);		
 	$Professor->setObs($_POST['obs']);
 	$Professor->setCcm($_POST['ccm']);									
@@ -296,7 +299,7 @@ if($_POST['acao']=="foto"){
         $_SESSION['usuario'] = "professor";
         $_SESSION['idUsuario'] = $idProfessor;
 				 
-        $arrayRetorno['pagina'] = '/cursos/mobile/professor/index.html';
+ //       $arrayRetorno['pagina'] = '/cursos/mobile/professor/index.html';
   		$arrayRetorno['ondeAtualizar'] = "#centro";
 				
 	
@@ -324,7 +327,7 @@ if($_POST['acao']=="foto"){
     $Professor->updateFieldProfessor("online", $_POST['online']);
 	$Professor->updateFieldProfessor("indicadoPor", $_POST['idComoConheceu']);
 	
-    $arrayRetorno['pagina'] = '/cursos/mobile/professor/index.html';
+ //   $arrayRetorno['pagina'] = '/cursos/mobile/professor/index.html';
  	$arrayRetorno['ondeAtualizar'] = "#centro";
 	$arrayRetorno['mensagem'] = "Cadastro atualizado com sucesso";
 	}
