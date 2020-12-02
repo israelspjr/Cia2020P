@@ -497,14 +497,16 @@ $texto2 = (int) $texto2;
 	
 	$msg .= "<p>Para acessar a folha de frequência é necessário o seu CPF e uma senha. Caso não saiba sua senha, entre em contato com o seu coordenador pedagógico por e-mail (" .$NomeGerente."-<a href=\"mailto:".$EmailGerente."\">".$EmailGerente."</a>) ou whatsapp."; 
  
-    $msg .= "<p><a href=https://".$config[0]['site']."/cursos/portais/login.php?idPlanoAcaoGrupo=".$idPlanoAcaoGrupo."&mes=".$mes."&ano=".$ano."&".$tipo."=".$ValorTipo."&password=".EncryptSenha::B64_Decode($senhaAcesso)."&tipo=1&idIntegranteGrupo=".$idIntegranteGrupo."&idFolhaFrequencia=".$idFolhaFrequencia.">      Sim</a></p>	
-          <p><a href=https://".$config[0]['site']."/cursos/mobile/aluno/login.php?idPlanoAcaoGrupo=".$idPlanoAcaoGrupo."&mes=".$mes."&ano=".$ano."&".$tipo."=".$ValorTipo."&password=".EncryptSenha::B64_Decode($senhaAcesso)."&tipo=2&idIntegranteGrupo=".$idIntegranteGrupo."&idFolhaFrequencia=".$idFolhaFrequencia."&idProfessor=".$idProfessor."&mes=".$mes."&ano=".$ano.">    Não </a></p>";
+    $msg .= "<p><a href='https://".$config[0]['site']."/cursos/portais/login.php?app=1&idPlanoAcaoGrupo=".$idPlanoAcaoGrupo."&mes=".$mes."&ano=".$ano."&".$tipo."=".$ValorTipo."&password=".EncryptSenha::B64_Decode($senhaAcesso)."&tipo=1&idIntegranteGrupo=".$idIntegranteGrupo."&idFolhaFrequencia=".$idFolhaFrequencia."'>      Sim</a></p>	
+          <p><a href='https://".$config[0]['site']."/cursos/portais/login.php?app=1&idPlanoAcaoGrupo=".$idPlanoAcaoGrupo."&mes=".$mes."&ano=".$ano."&".$tipo."=".$ValorTipo."&password=".EncryptSenha::B64_Decode($senhaAcesso)."&tipo=2&idIntegranteGrupo=".$idIntegranteGrupo."&idFolhaFrequencia=".$idFolhaFrequencia."&idProfessor=".$idProfessor."&mes=".$mes."&ano=".$ano."'>    Não </a></p>";
 
-			$msg .= "Para acessar o portal do aluno <a href=https://".$config[0]['site']."/cursos/portais/login.php?mes=".$mes."&ano=".$ano."&".$tipo."=".$ValorTipo."&password=".EncryptSenha::B64_Decode($senhaAcesso).">clique aqui</a><p> A equipe da ".$config[0]['nomeEmpresa'].".</p>Atenciosamente,</p>";
+			$msg8 = "<p>Para acessar o portal do aluno <a href='https://".$config[0]['site']."/cursos/portais/login.php?app=1&mes=".$mes."&ano=".$ano."&".$tipo."=".$ValorTipo."&password=".EncryptSenha::B64_Decode($senhaAcesso)."'>clique aqui</a><p> A equipe da ".$config[0]['nomeEmpresa'].".</p>Atenciosamente,</p>";
           
             $assunto = "Preenchimento de folha de frequência";
 			
 			$mensagemCompleta = $msg . $msg2 .$msg3. $msg4 .$msg5 .$msg6 .$msg7;
+			
+			$mensagemCompleta .= $msg8;
 			
 			$mensagemCompleta .= "<p>Um abraço <br>
 					Coordenação Pedagógica<br>";
