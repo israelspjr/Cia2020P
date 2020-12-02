@@ -27,7 +27,7 @@ if ($_SESSION['tipo'] >= 1) {
 	$mes = $dat[1];
 }
 
-//var_dump($_SESSION);
+var_dump($_SESSION);
 /*$valor = $NewsProfessor->selectNewsProfessor(" WHERE portal = 2 AND inativo = 0 AND popup = 1 ".$add. " ORDER BY idNewsProfessor DESC");
 
 foreach ($valor as $value) {
