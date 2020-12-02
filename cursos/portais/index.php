@@ -187,6 +187,7 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 <?php }?>
 
 <?php if ($_SESSION['idFolhaFrequencia'] > 0) { 
+	$idFolhaFrequencia = $_SESSION['idFolhaFrequencia'];
 	$rs = $FolhaFrequencia->selectFolhaFrequencia(" WHERE idFolhaFrequencia = ".$idFolhaFrequencia);
 	$idPlanoAcaoGrupo = $rs[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
 	$idProfessor = $rs[0]['professor_idProfessor'];
