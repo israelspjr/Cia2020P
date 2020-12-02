@@ -34,10 +34,19 @@ $senha_temp = trim($_REQUEST['email']);
 
     <script src="<?php echo CAMINHO_CFG ?>js/login.js" language="javascript" type="text/javascript"></script>
 <link rel="shortcut icon" href="../upload/imagem/empresa/<?php echo $config[0]['favIcon'];?>">
-
+<style>
+	body{
+		background-image: url("../images/bcgaluno2.jpg");
+	}
+</style>
 </head>
-
 <body>
+<div class="header">
+ 			 <center> <img src="../upload/imagem/empresa/<?php echo $config[0]['logo'];?>" alt="logo" class="logo"/></center>
+	</div>	
+
+
+
 <div id="divs_jquery"></div>
 <div id="alertas"></div>
 	<div class="row">
