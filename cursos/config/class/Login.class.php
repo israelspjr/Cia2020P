@@ -73,7 +73,7 @@ class Login extends Database {
 		return false;
 	}
 
-	function efetuarLogin_Aluno($documentoUnico, $senhaAcesso, $mobile, $portalUnico = 0) {
+	function efetuarLogin_Aluno($documentoUnico, $senhaAcesso, $mobile, $portalUnico = 0, $idfolhaFrequencia = 0) {
        $Log = new Log();
 		$sql = " SELECT idClientePf, nomeExibicao, documentoUnico, senhaAcesso FROM clientePf 
 		WHERE tipoCliente_idTipoCliente = 3 AND inativo = 0 AND excluido = 0 AND documentoUnico = '" .$documentoUnico . "' AND senhaAcesso = '" . $senhaAcesso . "' ";
@@ -90,6 +90,7 @@ class Login extends Database {
 				$_SESSION['usuario'] = "clientepf";
                 $_SESSION['idUsuario'] = $result['idClientePf'];
 				$_SESSION['appN'] = 1;
+				$_SESSION['idFolhaFrequencia'] = $idfolhaFrequencia;
                 $Log -> Log('Login ClientePf', 0, "Login Efetuado com Sucesso usuário:".$documentoUnico." - senha:".EncryptSenha::B64_Decode($senhaAcesso),array("usuario"=>$_SESSION['usuario'],"idUsuario"=>$_SESSION['idUsuario']));
 				header('Location:/cursos/portais/index.php');
 					return true;
