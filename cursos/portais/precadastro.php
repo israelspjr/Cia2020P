@@ -1,8 +1,13 @@
 <?php
 error_reporting(E_ALL);
 $pgaluno = true;
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js_area.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/cursos/config/portais.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
+
+$Configuracoes = new Configuracoes();
+
+$config = $Configuracoes->selectConfig();
 
 $documento = $_REQUEST['nome'];
 $password = $_REQUEST['password'];
@@ -26,19 +31,9 @@ $senha_temp = trim($_REQUEST['email']);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo NOME_APP ?></title>
     
-<link href="../css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/datepicker3.css" rel="stylesheet">
-<link href="../css/styles.css" rel="stylesheet">
 
-<?php
-//	require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/css_area.php");
-?>
-
-<?php
-//	require_once ($_SERVER['DOCUMENT_ROOT'] . CAMINHO_CFG . "include/js_area.php");
-?>
-<script src="<?php echo CAMINHO_CFG?>js/login.js" language="javascript" type="text/javascript"></script>
-<script src="../js/bootstrap-datepicker.pt-BR.js" language="javascript" type="text/javascript"></script>
+    <script src="<?php echo CAMINHO_CFG ?>js/login.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="../upload/imagem/empresa/<?php echo $config[0]['favIcon'];?>">
 
 </head>
 
