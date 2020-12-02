@@ -18,7 +18,7 @@ $senha_temp = $password2;
 $CPF = $_REQUEST['cpf'];
 $appN = $_REQUEST['app'];
 $graficos = ( $_POST['graficos'] == "1" ? 1 : 0);
-$idFolhaFrequencia = $_REQUEST['idFolhaFrequencia'];
+$idFolhaFrequencia = $_GET['idFolhaFrequencia'];
 
 if ($graficos == 1) {
 	$_SESSION['grafico'] = 1;	

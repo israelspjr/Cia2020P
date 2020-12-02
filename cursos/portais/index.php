@@ -185,6 +185,16 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 	<?php } ?>
 </script>
 <?php }?>
+
+<?php if ($_SESION['idFolhaFrequencia'] > 0) { ?>
+<script>
+//Trazer FF para contestação
+zerarCentro();
+carregarModulo('modulos/ff/ff.php?idPlanoAcaoGrupo=&idFolhaFrequencia=<?php echo $idFolhaFrequencia?>&idProfessor=&mes=&amp;ano=', '#centro');
+
+</script>
+
+<? }?>
 </div>
 </div>	<!--/.main-->
 
