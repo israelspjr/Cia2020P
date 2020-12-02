@@ -32,7 +32,7 @@ if($nota==''){
 	}else{
 		
 		$RelatorioDesempenho->setIdRelatorioDesempenho($idRelatorioDesempenho);
-        $RelatorioDesempenho->updateFieldRelatorioDesempenho('obs',$obs);
+        $RelatorioDesempenho->updateFieldRelatorioDesempenho('obs','"'.$obs.'"');
 		$RelatorioDesempenho->updateFieldRelatorioDesempenho('nota',$nota);
 		
 	}
