@@ -10,7 +10,7 @@ $idRelatorioDesempenho = $_REQUEST['idRelatorioDesempenho'];
 $idItenRelatorioDesempenho = $_REQUEST['idItenRelatorioDesempenho'];
 $idIntegranteGrupo = $_REQUEST['idIntegranteGrupo'];
 $idAcompanhamentoCurso = $_REQUEST['idAcompanhamentoCurso'];
-$obs = $_REQUEST['obs'];
+$obs = str_replace("'","´",$_REQUEST['obs']);
 
 $msgObs = "<br /><small>".$IntegranteGrupo->getNomePF($idIntegranteGrupo)." - ".$ItenRelatorioDesempenho->getNome($idItenRelatorioDesempenho)."</small>";
 
@@ -32,7 +32,7 @@ if($nota==''){
 	}else{
 		
 		$RelatorioDesempenho->setIdRelatorioDesempenho($idRelatorioDesempenho);
-        $RelatorioDesempenho->updateFieldRelatorioDesempenho('obs','"'.$obs.'"');
+        $RelatorioDesempenho->updateFieldRelatorioDesempenho('obs',$obs);
 		$RelatorioDesempenho->updateFieldRelatorioDesempenho('nota',$nota);
 		
 	}
