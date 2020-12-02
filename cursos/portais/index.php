@@ -186,11 +186,23 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 </script>
 <?php }?>
 
-<?php if ($_SESSION['idFolhaFrequencia'] > 0) { ?>
+<?php if ($_SESSION['idFolhaFrequencia'] > 0) { 
+	$rs = $FolhaFrequencia->selectFolhaFrequencia(" WHERE idFolhaFrequencia = ".$idFolhaFrequencia);
+	$idPlanoAcaoGrupo = $rs[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
+	$idProfessor = $rs[0]['professor_idProfessor'];
+
+	$dat = explode("-",$rs[0]['dataReferencia']);
+
+	$ano = $dat[0];
+	$mes = $dat[1];
+
+
+
+?>
 <script>
 //Trazer FF para contestação
 zerarCentro();
-carregarModulo('modulos/ff/ff.php?idPlanoAcaoGrupo=&idFolhaFrequencia=<?php echo $idFolhaFrequencia?>&idProfessor=&mes=&amp;ano=', '#centro');
+carregarModulo('modulos/ff/ff.php?idPlanoAcaoGrupo=<?php echo $idPlanoAcaoGrupo?>&idFolhaFrequencia=<?php echo $idFolhaFrequencia?>&idProfessor=<?php echo $idProfessor?>&mes=<?php echo $mes?>&ano=<?php echo $ano?>', '#centro');
 
 </script>
 
