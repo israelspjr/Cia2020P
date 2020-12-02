@@ -174,7 +174,13 @@
 			<?php } ?>
            <li ><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/aviso/aviso.php', '#centro');" ><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg>Meus avisos</a></li>
 			<li role="presentation" class="divider"></li>
-            <?php } ?>
+            <?php } else { ?>
+             	<li>
+						<a class="" id="perfil" href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/clientepf.php', '#centro');">
+							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Perfil 
+						</a>
+					</li>
+                    <?php } ?>
 			<li><a href="logoff.php"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Sair</a></li>
 		</ul>
       
