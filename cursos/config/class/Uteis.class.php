@@ -153,6 +153,9 @@ if ($config[0]['seguranca'] == '') {
 	  
 	$Configuracoes = new Configuracoes();
 	$config = $Configuracoes->selectConfig();
+	
+	$cabecalho = $config[0]['cabecalho'];
+	echo $cabecalho;
 
     $mensagem_final = "
 		<html>
@@ -227,7 +230,7 @@ if ($config[0]['seguranca'] == '') {
 								<tbody>
 									<tr>
 										<td style=\"text-align: center\"> 
-											<img src=\"".CAMINHO_IMG3.$config[0]['cabecalho']."\" width=\"650\"/>
+											<img src=\"".CAMINHO_IMG3.$cabecalho."\" width=\"650\"/>
 										</td>
 									</tr>
 								</tbody>
