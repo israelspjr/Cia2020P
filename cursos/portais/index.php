@@ -186,7 +186,7 @@ onclick="fecharMenu(0);abrirFormulario('menu_area', 'img_form_Menu');" /></li>
 </script>
 <?php }?>
 
-<?php if ($_SESION['idFolhaFrequencia'] > 0) { ?>
+<?php if ($_SESSION['idFolhaFrequencia'] > 0) { ?>
 <script>
 //Trazer FF para contestação
 zerarCentro();
