@@ -72,6 +72,7 @@ class RelatorioDesempenho extends Database {
 	function updateFieldRelatorioDesempenho($field, $value) {
 		$value = ($value != "NULL") ? $this -> gravarBD($value) : $value;
 		$sql = "UPDATE relatorioDesempenho SET " . $field . " = " . $value . " WHERE idRelatorioDesempenho = $this->idRelatorioDesempenho";
+		echo $sql;
 		$result = $this -> query($sql, true);
 	}
 

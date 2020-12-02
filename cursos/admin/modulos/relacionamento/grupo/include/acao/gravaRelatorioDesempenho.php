@@ -1,9 +1,5 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/Uteis.class.php");
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/RelatorioDesempenho.class.php");
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/IntegranteGrupo.class.php");
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/ItenRelatorioDesempenho.class.php");
 
 $RelatorioDesempenho = new RelatorioDesempenho();
 $IntegranteGrupo = new IntegranteGrupo();
