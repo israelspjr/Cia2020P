@@ -57,7 +57,7 @@ if ($responderPsa == 1) {
 if ($documento != '' && $password != '') {
 //	echo $documento;
 //	echo $password;
-	if (!$Login -> efetuarLogin_Aluno($documento, $password, 1, 1)) {		
+	if (!$Login -> efetuarLogin_Aluno($documento, $password, 1, 1, $idFolhaFrequencia)) {		
 		Uteis::alertJava("Login ou senha inválidos.", true);
 	}
 }
