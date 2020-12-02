@@ -457,6 +457,8 @@ $texto2 = (int) $texto2;
 		$msg5 .= $TextoEmailPadrao->getTexto("28");	
 		
 		$msg5 .= "<p>Estamos aqui para ajudar você nesta jornada da fluência. <br>Fale agora com seu coordenador pedagógico:<br>" .$NomeGerente."<a href=\"mailto:".$EmailGerente.">".$EmailGerente."</a></p>";
+		
+		$msg5 .= "<p></p>";
 
 //		$msg5 .= "<p>Quer saber mais?  Veja estas dicas, <a href=\"https://www.companhiadeidiomas.com.br/category/apdrendendo-a-aprender/\">clique aqui</a></p>";  
 			
