@@ -6,11 +6,13 @@ $Funcionario = new Funcionario();
 $arrayRetorno = array();
 $GerenteTem = new GerenteTem();
 $Gerente = new Gerente();
+$Configuracoes = new Configuracoes();
 
 //$idFuncionario = $_REQUEST['idFuncionario'];
 $nome = $_REQUEST['nomeExibicao'];
 $email = $_REQUEST['email'];
 $idClientePj = $_REQUEST['clientePj_idClientePj'];
+$config = $Configuracoes->selectConfig();
 
 
 $valorGerenteTem = $GerenteTem->selectGerenteTem(" WHERE clientePj_idClientePj = ".$idClientePj." AND dataExclusao IS NULL");
@@ -29,7 +31,7 @@ $valorGerenteTem = $GerenteTem->selectGerenteTem(" WHERE clientePj_idClientePj =
 	
 	$conteudo = "Nome: ".$nome."<br> Email: ".$email;
 	
-	$conteudo = "Para acessar o portal do aluno, utilize o link abaixo: <p> <a href=\"https://www.companhiadeidiomas.net/cursos/portais/precadastro.php?nomeExibicao=".$nome."&email=".$email."\">Clique aqui para acessar o sistema e terminar o seu cadastro</a></p>";
+	$conteudo = "Para acessar o portal do aluno, utilize o link abaixo: <p> <a href=\"https://". $config[0]['siteEmp']."/cursos/portais/precadastro.php?nomeExibicao=".$nome."&email=".$email."\">Clique aqui para acessar o sistema e terminar o seu cadastro</a></p>";
 	
 		$paraQuem = array("nome" => $nome, "email" => $email);
 		$paraQuem3 = array("nome" => $nomeF, "email" => $emailF);
