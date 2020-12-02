@@ -180,6 +180,8 @@
 							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Perfil 
 						</a>
 					</li>
+                    <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/opcaoAtividadeExtraClientePf.php', '#centro');"><svg class="glyph stroked external hard drive"><use xlink:href="#stroked-external-hard-drive"></use></svg> Perfil idioma</a></li>
+                      <li><a href="#" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/opcaoAtividadeExtraProfessorClientePf.php', '#centro');"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Perfil professor</a></li>
                     <?php } ?>
 			<li><a href="logoff.php"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Sair</a></li>
 		</ul>
