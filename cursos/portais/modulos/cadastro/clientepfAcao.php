@@ -151,6 +151,13 @@ if($_POST['acao']=="foto"){
 	
   } else {
 	  
+	  if( strlen($_POST['documentoUnico']) == 11 ) {
+		$doc = Uteis::formatar_CPF_CNPJ($_POST['documentoUnico']);  
+		  
+	  } else {
+		$doc = $_POST['documentoUnico'];  
+	  }
+	  
 	$ClientePf->setRg($_POST['rg']);
 	$ClientePf->setNome($_POST['nomeExibicao']);
 	$ClientePf->setNomeExibicao($_POST['nomeExibicao']);
@@ -161,7 +168,7 @@ if($_POST['acao']=="foto"){
 	$ClientePf->setPaisIdPais($_POST['pais_idPais']);
 	$ClientePf->setCargo($_POST['cargo']);
 	$ClientePf->setTipoDocumentoUnicoIdTipoDocumentoUnico($_POST['tipoDocumentoUnico_idTipoDocumentoUnico']);
-	$ClientePf->setDocumentoUnico($_POST['documentoUnico']);
+	$ClientePf->setDocumentoUnico($doc);
 	$ClientePf->setSenhaAcesso($_POST['senhaAcesso']);
 	$ClientePf->setClientePjIdClientePj($_POST['clientePj_idClientePj']);
 	$ClientePf->setRf($_POST['rf']);
