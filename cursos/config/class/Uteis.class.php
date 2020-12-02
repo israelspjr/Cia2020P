@@ -155,7 +155,7 @@ if ($config[0]['seguranca'] == '') {
 	$config = $Configuracoes->selectConfig();
 	
 	$cabecalho = $config[0]['cabecalho'];
-	echo $cabecalho;
+//	echo $cabecalho;
 
     $mensagem_final = "
 		<html>
