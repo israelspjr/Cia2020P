@@ -184,7 +184,7 @@ if($_POST['acao']=="foto"){
 	$idClientePf = $ClientePf->addClientepf();
 // Adicionando no RdStation
 ?>	
-	<script type='text/javascript'>
+<!--	<script type='text/javascript'>
 	function rdStation() {
 
 var nome = <?php echo $_POST['nomeExibicao'];?> 
@@ -203,7 +203,7 @@ var site = 'Novo Aluno';
    console.log( "Data Saved: " + msg );
   });
 	}
- rsStation();
+ rsStation();-->
  </script> 
 <?php		
 	//Adicionado Endereço
