@@ -29,7 +29,7 @@ $senha_temp = trim($_REQUEST['email']);
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo NOME_APP ?></title>
+    <title>Pré Cadastro de Aluno</title>
     
 
     <script src="<?php echo CAMINHO_CFG ?>js/login.js" language="javascript" type="text/javascript"></script>
