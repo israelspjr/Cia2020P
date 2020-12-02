@@ -31,7 +31,7 @@ $valorGerenteTem = $GerenteTem->selectGerenteTem(" WHERE clientePj_idClientePj =
 	
 	$conteudo = "Nome: ".$nome."<br> Email: ".$email;
 	
-	$conteudo = "Para acessar o portal do aluno, utilize o link abaixo: <p> <a href=\"https://". $config[0]['siteEmp']."/cursos/portais/precadastro.php?nomeExibicao=".$nome."&email=".$email."\">Clique aqui para acessar o sistema e terminar o seu cadastro</a></p>";
+	$conteudo = "Para acessar o portal do aluno, utilize o link abaixo: <p> <a href=\"https://". $config[0]['site']."/cursos/portais/precadastro.php?nomeExibicao=".$nome."&email=".$email."\">Clique aqui para acessar o sistema e terminar o seu cadastro</a></p>";
 	
 		$paraQuem = array("nome" => $nome, "email" => $email);
 		$paraQuem3 = array("nome" => $nomeF, "email" => $emailF);
