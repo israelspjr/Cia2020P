@@ -11,7 +11,7 @@ $idItenRelatorioDesempenho = $_REQUEST['idItenRelatorioDesempenho'];
 $idIntegranteGrupo = $_REQUEST['idIntegranteGrupo'];
 $idAcompanhamentoCurso = $_REQUEST['idAcompanhamentoCurso'];
 $idFolhaFrequencia = $_REQUEST['idFolhaFrequencia'];
-$obs = $_REQUEST['obs'];
+$obs = str_replace("'","´",$_REQUEST['obs']);
 
 $msgObs = "<br /><small>".$IntegranteGrupo->getNomePF($idIntegranteGrupo)." - ".$ItenRelatorioDesempenho->getNome($idItenRelatorioDesempenho)."</small>";
 
