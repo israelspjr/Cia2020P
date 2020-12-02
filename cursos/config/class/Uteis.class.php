@@ -152,7 +152,7 @@ if ($config[0]['seguranca'] == '') {
   static function montarEmail($mensagem = "", $assunto = "") {
 	  
 	$Configuracoes = new Configuracoes();
-	$config = $Configuracoes->selectConfig(1);
+	$config = $Configuracoes->selectConfig();
 
     $mensagem_final = "
 		<html>
