@@ -21,6 +21,7 @@ if($idProfessor != '' && is_numeric($idProfessor)){
 	$retiraCheque = $valor[0]['retiraCheque'];
 	$obs = $valor[0]['obs'];
 	$cpf = $valor[0]['cpf'];
+	$pix = $valor[0]['pix'];
 }
 ?>
 <fieldset>
@@ -58,6 +59,10 @@ if($idProfessor != '' && is_numeric($idProfessor)){
          <p>
           <label>CPF:</label>
           <input type="text" name="cpf" id="cpf" value="<?php echo $cpf?>" />
+         </p>
+         <p>
+          <label>PIX:</label>
+          <input type="text" name="pix" id="pix" value="<?php echo $pix?>" />
          </p>
         </div>
         <div class="direita">

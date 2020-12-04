@@ -18,6 +18,7 @@ $dataFim = $_POST['dataFim'];
 $retiraCheque = $_POST['retiraCheque'];
 $obs = $_POST['obs'];
 $cpf = $_POST['cpf'];
+$pix = $_POST['pix'];
 
 
 $DadosBancarios->setProfessorIdProfessor($idProfessor);
@@ -28,6 +29,7 @@ $DadosBancarios->setNumero($numero);
 $DadosBancarios->setFavorecido($favorecido);
 $DadosBancarios->setObs($obs);
 $DadosBancarios->setCpf($cpf);
+$DadosBancarios->setPIX($pix);
 
 if ($retiraCheque == 'on') {
 	$retiraCheque = 1;

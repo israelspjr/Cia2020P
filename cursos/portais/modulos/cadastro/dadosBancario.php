@@ -16,6 +16,7 @@ if($idProfessor != '' && is_numeric($idProfessor)){
 	$numero= $valor[0]['numero'];
 	$favorecido = $valor[0]['favorecido'];
 	$cpf = $valor[0]['cpf'];
+	$pix = $valor[0]['pix'];
 }
 	
 ?>
@@ -55,7 +56,10 @@ if($idProfessor != '' && is_numeric($idProfessor)){
           <label>CPF:</label>
           <input type="text" name="cpf" id="cpf" class="required" value="<?php echo $cpf?>" />
           </p> 
-          
+          <p>
+          <label>PIX:</label>
+          <input type="text" name="pix" id="pix" value="<?php echo $pix?>" />
+         </p>
       </div>
       <div class="linha-inteira">
         <p>

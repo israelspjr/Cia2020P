@@ -15,6 +15,7 @@ $numero=  $_POST['numero'];
 $idDadosBancarios=  $_POST['idDadosBancarios'];	
 $favorecido = $_POST['favorecido'];	
 $cpf = $_POST['cpf'];	
+$pix = $_POST['pix'];
 
 $nome = $Professor->getNome($idProfessor);
 
@@ -25,6 +26,7 @@ $DadosBancarios->setTipo($tipo);
 $DadosBancarios->setNumero($numero);
 $DadosBancarios->setFavorecido($favorecido);
 $DadosBancarios->setCpf($cpf);
+$DadosBancarios->setPIX($pix);
 
 if($idDadosBancarios != '' && is_numeric($idDadosBancarios)){
 	$DadosBancarios->updateDadosBancarios();

@@ -16,6 +16,7 @@ class DadosBancarios extends Database {
 	var $retiraCheque;
 	var $obs;
 	var $cpf;
+	var $pix;
 	
 
 	// constructor
@@ -36,6 +37,7 @@ class DadosBancarios extends Database {
 		$this -> retiraCheque = "NULL";
 		$this -> obs = "NULL";
 		$this -> cpf = "NULL";
+		$this -> pix = "NULL";
 
 	}
 
@@ -103,12 +105,16 @@ class DadosBancarios extends Database {
 	function setCpf($value) {
 		$this -> cpf = ($value) ? $this -> gravarBD($value) : "NULL";
 	}
+	
+	function setPix($value) {
+		$this -> pix = ($value) ? $this -> gravarBD($value) : "NULL";
+	}
 
 	/**
 	 * addDadosBancarios() Function
 	 */
 	function addDadosBancarios() {
-		$sql = "INSERT INTO dadosBancarios (professor_idProfessor, banco, agencia, tipo, numero, dataCadastro, favorecido, cobrarDoc, valor, dataInicio, dataFim, retiraCheque, obs, cpf) VALUES ($this->professorIdProfessor, $this->banco, $this->agencia, $this->tipo, $this->numero, $this->dataCadastro, $this->favorecido, $this->cobrarDoc, $this->valor, $this->dataInicio, $this->dataFim, $this->retiraCheque, $this->obs, $this->cpf)";
+		$sql = "INSERT INTO dadosBancarios (professor_idProfessor, banco, agencia, tipo, numero, dataCadastro, favorecido, cobrarDoc, valor, dataInicio, dataFim, retiraCheque, obs, cpf, pix) VALUES ($this->professorIdProfessor, $this->banco, $this->agencia, $this->tipo, $this->numero, $this->dataCadastro, $this->favorecido, $this->cobrarDoc, $this->valor, $this->dataInicio, $this->dataFim, $this->retiraCheque, $this->obs, $this->cpf, $this->pix)";
 		$result = $this -> query($sql, true);
 		return $this -> connect;
 	}
@@ -134,7 +140,7 @@ class DadosBancarios extends Database {
 	 * updateDadosBancarios() Function
 	 */
 	function updateDadosBancarios() {
-		$sql = "UPDATE dadosBancarios SET banco = $this->banco, agencia = $this->agencia, tipo = $this->tipo, numero = $this->numero, favorecido = $this->favorecido, cobrarDoc = $this->cobrarDoc, valor = $this->valor, dataInicio = $this->dataInicio, dataFim = $this->dataFim, retiraCheque = $this->retiraCheque, obs = $this->obs, cpf = $this->cpf  WHERE professor_idProfessor = $this->professorIdProfessor";
+		$sql = "UPDATE dadosBancarios SET banco = $this->banco, agencia = $this->agencia, tipo = $this->tipo, numero = $this->numero, favorecido = $this->favorecido, cobrarDoc = $this->cobrarDoc, valor = $this->valor, dataInicio = $this->dataInicio, dataFim = $this->dataFim, retiraCheque = $this->retiraCheque, obs = $this->obs, cpf = $this->cpf, pix = $this->pix  WHERE professor_idProfessor = $this->professorIdProfessor";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
 	}
@@ -143,7 +149,7 @@ class DadosBancarios extends Database {
 	 * selectDadosBancarios() Function
 	 */
 	function selectDadosBancarios($where = "WHERE 1") {
-		$sql = "SELECT SQL_CACHE idDadosBancarios, professor_idProfessor, banco, agencia, tipo, numero, dataCadastro, favorecido, cobrarDoc, valor, dataInicio, dataFim, retiraCheque, obs, cpf FROM dadosBancarios " . $where;
+		$sql = "SELECT SQL_CACHE idDadosBancarios, professor_idProfessor, banco, agencia, tipo, numero, dataCadastro, favorecido, cobrarDoc, valor, dataInicio, dataFim, retiraCheque, obs, cpf, pix FROM dadosBancarios " . $where;
 		return $this -> executeQuery($sql);
 	}
 
@@ -151,7 +157,7 @@ class DadosBancarios extends Database {
 	 * selectDadosBancariosTr() Function
 	 */
 	function selectDadosBancariosTr($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "", $idPai = "", $caminhoModulo = "") {
-		$sql = "SELECT SQL_CACHE idDadosBancarios, professor_idProfessor, banco, agencia, tipo, numero, dataCadastro, favorecido, cobrarDoc, valor, dataInicio, dataFim, retiraCheque, obs, cpf FROM dadosBancarios " . $where;
+		$sql = "SELECT SQL_CACHE idDadosBancarios, professor_idProfessor, banco, agencia, tipo, numero, dataCadastro, favorecido, cobrarDoc, valor, dataInicio, dataFim, retiraCheque, obs, cpf, pix FROM dadosBancarios " . $where;
 		$result = $this -> query($sql);
 		if (mysqli_num_rows($result) > 0) {
 			$html = "";
