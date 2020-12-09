@@ -223,6 +223,10 @@ if($idFolhaPonto){
 					  if ($valor['ocorrenciaFP'] == 3) {
 					  
 					  	  $saldoParcial -= $horasTrabalhadas;
+						echo $x."-";
+			 			echo $saldoParcial;
+			 			echo "<br>";
+						  
 					  } 
 				 //     } else {
 				//		   $saldoParcial += $horasTrabalhadas; 
@@ -233,9 +237,7 @@ if($idFolhaPonto){
 		//	  $saldoParcial = 0;
 		//	  $saldoParcial += $saldoParcial;
 				  $saldoInicial = $saldoInicial + $saldoParcial;
-		echo $x."-";
-			 echo $saldoParcial;
-			 echo "<br>";
+		
 			 
 		//	 if ($x == 19) {
 		//		break;  
