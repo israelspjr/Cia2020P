@@ -126,7 +126,7 @@ if($idFolhaPonto){
 					$class2 = 'background-color: rgb(112 200 214 / 50%)';
 					if (($valor['ocorrenciaFP'] == 8) || ($valor['ocorrenciaFP'] == 9)){
 						$horasOcorrencia = 	$horasTNeutra;
-						echo $horasOcorrencia;
+					//	echo $horasOcorrencia;
 					}
 					if ($valor['ocorrenciaFP'] == 3) {
 						$horasOcorrencia = -1*$horasTNeutra;
@@ -204,7 +204,7 @@ if($idFolhaPonto){
 				   if ($valor['ocorrenciaFP'] != 3) {
 				  	    $horasTrabalhadas = $saldoDia - $horasTNeutra + $horasOcorrencia; 
 				   }
-		//		   echo  "HT".$horasTrabalhadas;
+				   echo  "HT".$horasTrabalhadas;
 			 		
 			  }
 		//	  echo $horasTrabalhadas;
