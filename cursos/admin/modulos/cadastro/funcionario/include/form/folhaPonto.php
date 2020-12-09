@@ -204,6 +204,10 @@ if($idFolhaPonto){
 				   if ($valor['ocorrenciaFP'] != 3) {
 				  	    $horasTrabalhadas = $saldoDia - $horasTNeutra + $horasOcorrencia; 
 				   }
+				   
+				   if ($valor['ocorrenciaFP'] == 8) {
+				  	    $horasTrabalhadas =  $horasOcorrencia - $horasTNeutra; 
+				   }
 				   echo  "HT".$horasTrabalhadas;
 			 		
 			  }
