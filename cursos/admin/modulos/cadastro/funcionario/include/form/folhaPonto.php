@@ -235,6 +235,7 @@ if($idFolhaPonto){
 				  $saldoInicial = $saldoInicial + $saldoParcial;
 		echo $x."-";
 			 echo $saldoInicial;
+			 echo "<br>";
 			 
 		//	 if ($x == 19) {
 		//		break;  
