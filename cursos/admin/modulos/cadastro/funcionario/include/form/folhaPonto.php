@@ -205,7 +205,7 @@ if($idFolhaPonto){
 				  	    $horasTrabalhadas = $saldoDia - $horasTNeutra + $horasOcorrencia; 
 				   }
 				   
-				   echo  "HT".$horasTrabalhadas;
+			//	   echo  "HT".$horasTrabalhadas;
 			 		
 			  }
 		//	  echo $horasTrabalhadas;
@@ -234,7 +234,7 @@ if($idFolhaPonto){
 		//	  $saldoParcial += $saldoParcial;
 				  $saldoInicial = $saldoInicial + $saldoParcial;
 		echo $x."-";
-			 echo $saldoInicial;
+			 echo $saldoParcial;
 			 echo "<br>";
 			 
 		//	 if ($x == 19) {
