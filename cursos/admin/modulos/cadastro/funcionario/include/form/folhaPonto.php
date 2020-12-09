@@ -222,7 +222,7 @@ if($idFolhaPonto){
 			  } else {
 					  if ($valor['ocorrenciaFP'] == 3) {
 					  
-					  	  $saldoParcial -= $horasTrabalhadas;
+					  	  $saldoParcial -= $horasOcorrencia; //$horasTrabalhadas;
 						echo $x."-";
 			 			echo $saldoParcial. " ocorrencia:".$horasOcorrencia." horasTrabalha:".$horasTrabalhadas;
 			 			echo "<br>";
