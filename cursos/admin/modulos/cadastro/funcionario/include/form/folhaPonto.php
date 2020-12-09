@@ -224,7 +224,7 @@ if($idFolhaPonto){
 					  
 					  	  $saldoParcial -= $horasTrabalhadas;
 						echo $x."-";
-			 			echo $saldoParcial;
+			 			echo $saldoParcial. " ocorrencia:".$horasOcorrencia." horasTrabalha:".$horasTrabalhadas;
 			 			echo "<br>";
 						  
 					  } 
