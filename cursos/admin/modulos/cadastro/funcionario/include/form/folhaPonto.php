@@ -126,6 +126,7 @@ if($idFolhaPonto){
 					$class2 = 'background-color: rgb(112 200 214 / 50%)';
 					if (($valor['ocorrenciaFP'] == 8) || ($valor['ocorrenciaFP'] == 9)){
 						$horasOcorrencia = 	$horasTNeutra;
+						echo $horasOcorrencia;
 					}
 					if ($valor['ocorrenciaFP'] == 3) {
 						$horasOcorrencia = -1*$horasTNeutra;
