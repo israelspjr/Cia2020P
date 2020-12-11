@@ -151,7 +151,7 @@ class ValorSimuladoPlanoAcao extends Database {
 
     function selectValorSimuladoPlanoAcaoTr($where = "", $apenasVer) {
         $sql = "SELECT SQL_CACHE idValorSimuladoPlanoAcao, planoAcao_idPlanoAcao, valorHora, valorDescontoHora, validadeDesconto, horasPorAula, frequenciaSemanalAula, cargaHorariaFixaMensal, horaNaoGeraFf, obs, tipo FROM valorSimuladoPlanoAcao " . $where;
-        echo $sql;
+    //    echo $sql;
         $result = $this -> query($sql);
 
         if (mysqli_num_rows($result) > 0) {
@@ -184,8 +184,7 @@ class ValorSimuladoPlanoAcao extends Database {
                 $semanas = $NaoFazAulaNestaSemanaPlanoAcao -> selectNaoFazAulaNestaSemanaPlanoAcao(" WHERE valorSimuladoPlanoAcao_idValorSimuladoPlanoAcao = " . $valor['idValorSimuladoPlanoAcao']);
 				
                 $semanas = Uteis::arrayCampoEspecifico($semanas, 'semana');
-				Uteis::pr($semanas);
-				
+					
                 if ($semanas && $semanas[0] > 0) {
                     $freq .= " <font color=\"#FF0000\">(não fará aula na " . implode("ª, ", $semanas) . "ª semana de cada mês)</font>";
                 }
@@ -214,6 +213,7 @@ class ValorSimuladoPlanoAcao extends Database {
                 $html .= "<td>" . $tipoDescricao . "</td>";
 
                 $valorTotal = $this -> calculoValorSimuladoPlanoAcao($valor['idValorSimuladoPlanoAcao']);
+				Uteis::pr($valorTotal);
 
                 if ($tipo == 'R')
                     $totalDescricao = "R$ " . $valorTotal . " por mês";
@@ -377,7 +377,7 @@ class ValorSimuladoPlanoAcao extends Database {
             $semanasNaoFaz = $NaoFazAulaNestaSemanaPlanoAcao -> selectNaoFazAulaNestaSemanaPlanoAcao(" WHERE valorSimuladoPlanoAcao_idValorSimuladoPlanoAcao = " . $id);
             $semanasNaoFaz = count($semanasNaoFaz, 0);
 
-            $semanasNoMes = 4 - $semanasNaoFaz;
+            $semanasNoMes = 5 - $semanasNaoFaz;
 
             $horasTotais = (($frequenciaSemanalAula * $semanasNoMes) * ($horasPorAula / 60));
 
