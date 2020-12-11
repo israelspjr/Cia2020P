@@ -375,6 +375,7 @@ class ValorSimuladoPlanoAcao extends Database {
             $semanasNaoFaz = count($semanasNaoFaz, 0);
 			
 			$dat = date("Y-m-d");
+			echo $dat;
 			$dayofweek = date('w', strtotime($dat));
 			$dat2 = date("Y-m-01");
 			$dayofweekS = date('w', strtotime($dat2));
