@@ -198,9 +198,7 @@ class ValorSimuladoPlanoAcao extends Database {
 				$somaProdutosAdicionais = $this -> somaProdutosAdicionaisHora($valor['idValorSimuladoPlanoAcao']);
                 $padicional = $somaProdutosAdicionais ? "R$ " . Uteis::formatarMoeda($somaProdutosAdicionais) : "";
                 $html .= "<td $onclick >" . $padicional . "</td>";
-				
-				
-
+	
                 $tipo = ($valor['tipo']);
 
                 if ($tipo == 'R')
@@ -213,8 +211,7 @@ class ValorSimuladoPlanoAcao extends Database {
                 $html .= "<td>" . $tipoDescricao . "</td>";
 
                 $valorTotal = $this -> calculoValorSimuladoPlanoAcao($valor['idValorSimuladoPlanoAcao']);
-				Uteis::pr($valorTotal);
-
+	
                 if ($tipo == 'R')
                     $totalDescricao = "R$ " . $valorTotal . " por mês";
                 else if ($tipo == 'T' || $tipo == 'E')
@@ -376,6 +373,10 @@ class ValorSimuladoPlanoAcao extends Database {
             $NaoFazAulaNestaSemanaPlanoAcao = new NaoFazAulaNestaSemanaPlanoAcao();
             $semanasNaoFaz = $NaoFazAulaNestaSemanaPlanoAcao -> selectNaoFazAulaNestaSemanaPlanoAcao(" WHERE valorSimuladoPlanoAcao_idValorSimuladoPlanoAcao = " . $id);
             $semanasNaoFaz = count($semanasNaoFaz, 0);
+			
+			$dat = date("Y-m-d");
+			
+			$numSemanas = Uteis::verificarNumSemana($dat);
 
             $semanasNoMes = 5 - $semanasNaoFaz;
 
