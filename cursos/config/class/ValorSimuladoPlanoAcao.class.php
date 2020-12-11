@@ -382,7 +382,7 @@ class ValorSimuladoPlanoAcao extends Database {
 			echo $dat2;
 			$dayofweekS = date('w', strtotime($dat2));
 			echo $dayofweekS;
-			$numSemanas = Uteis::verificarNumSemana($dat, $dayofweek, $dayofweekS);
+			$numSemanas = Uteis::verificarNumSemana($dat, $dat, $dat2);
 			
 			Uteis::pr($numSemanas);
 
