@@ -375,10 +375,10 @@ class ValorSimuladoPlanoAcao extends Database {
             $semanasNaoFaz = count($semanasNaoFaz, 0);
 			
 			$dat = date("Y-m-t");
-			echo $dat;
+	//		echo $dat;
 			$numSemanas = Uteis::getWeeks($dat, "sunday");
 			
-			Uteis::pr($numSemanas);
+//			Uteis::pr($numSemanas);
 
             $semanasNoMes = 5 - $semanasNaoFaz;
 
