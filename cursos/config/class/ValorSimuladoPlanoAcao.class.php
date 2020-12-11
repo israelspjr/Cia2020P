@@ -151,7 +151,7 @@ class ValorSimuladoPlanoAcao extends Database {
 
     function selectValorSimuladoPlanoAcaoTr($where = "", $apenasVer) {
         $sql = "SELECT SQL_CACHE idValorSimuladoPlanoAcao, planoAcao_idPlanoAcao, valorHora, valorDescontoHora, validadeDesconto, horasPorAula, frequenciaSemanalAula, cargaHorariaFixaMensal, horaNaoGeraFf, obs, tipo FROM valorSimuladoPlanoAcao " . $where;
-        //echo $sql;
+        echo $sql;
         $result = $this -> query($sql);
 
         if (mysqli_num_rows($result) > 0) {
