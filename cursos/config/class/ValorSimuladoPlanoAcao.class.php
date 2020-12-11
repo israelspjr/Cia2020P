@@ -377,6 +377,7 @@ class ValorSimuladoPlanoAcao extends Database {
 			$dat = date("Y-m-d");
 			echo $dat;
 			$dayofweek = date('w', strtotime($dat));
+			echo $dayofweek;
 			$dat2 = date("Y-m-01");
 			$dayofweekS = date('w', strtotime($dat2));
 			echo $dayofweekS;
