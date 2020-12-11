@@ -377,6 +377,7 @@ class ValorSimuladoPlanoAcao extends Database {
 			$dat = date("Y-m-d");
 			
 			$numSemanas = Uteis::verificarNumSemana($dat);
+			Uteis::pr($numSemanas);
 
             $semanasNoMes = 5 - $semanasNaoFaz;
 
