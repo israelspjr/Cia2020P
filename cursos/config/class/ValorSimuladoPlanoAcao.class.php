@@ -374,8 +374,8 @@ class ValorSimuladoPlanoAcao extends Database {
             $semanasNaoFaz = $NaoFazAulaNestaSemanaPlanoAcao -> selectNaoFazAulaNestaSemanaPlanoAcao(" WHERE valorSimuladoPlanoAcao_idValorSimuladoPlanoAcao = " . $id);
             $semanasNaoFaz = count($semanasNaoFaz, 0);
 			
-			$dat = date("Y-m-31");
-			$numSemanas = Uteis::getWeeks($dat, "friday");
+			$dat = date("Y-m-t");
+			$numSemanas = Uteis::getWeeks($dat);
 			
 			Uteis::pr($numSemanas);
 
