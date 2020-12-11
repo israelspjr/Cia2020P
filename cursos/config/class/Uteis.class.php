@@ -585,6 +585,7 @@ if ($config[0]['seguranca'] == '') {
       $mesInicial = date("m", strtotime($data));
       $inicio = ($diaDaSemanaAtual < $diaDaSemana_InicioMes) ? 0 : 1;
       for ($s = $inicio; $s <= 5; $s++) {
+		  echo $s."<br>";
         $data = date("Y-m-d", strtotime("-7 days", strtotime($data)));
         if (date("m", strtotime($data)) != $mesInicial) {
           //$semanaAtual = "<br>$dataIni # ".$s;
