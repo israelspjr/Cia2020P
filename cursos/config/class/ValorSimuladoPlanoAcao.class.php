@@ -186,7 +186,7 @@ class ValorSimuladoPlanoAcao extends Database {
                 $semanas = Uteis::arrayCampoEspecifico($semanas, 'semana');
 				Uteis::pr($semanas);
 				
-                if ($semanas && $semanas[0] != "0") {
+                if ($semanas && $semanas[0] > 0) {
                     $freq .= " <font color=\"#FF0000\">(não fará aula na " . implode("ª, ", $semanas) . "ª semana de cada mês)</font>";
                 }
 
