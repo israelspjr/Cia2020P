@@ -182,6 +182,7 @@ class ValorSimuladoPlanoAcao extends Database {
 
                 $freq = $valor['frequenciaSemanalAula'] ? $valor['frequenciaSemanalAula'] . " vez(es) na semana" : "";
                 $semanas = $NaoFazAulaNestaSemanaPlanoAcao -> selectNaoFazAulaNestaSemanaPlanoAcao(" WHERE valorSimuladoPlanoAcao_idValorSimuladoPlanoAcao = " . $valor['idValorSimuladoPlanoAcao']);
+				Uteis::pr($semanas);
                 $semanas = Uteis::arrayCampoEspecifico($semanas, 'semana');
 
                 if ($semanas && $semanas[0] != "0") {
