@@ -10,6 +10,7 @@ $Funcionario = new Funcionario();
 
 		$idPlanoAcao = $_REQUEST['idPlanoAcao'];
    		$idIntegrantePlanoAcao = $_REQUEST['integrante'];
+		echo $idIntegrantePlanoAcao;
 
  $IntegrantePlanoAcao->setIdIntegrantePlanoAcao($idIntegrantePlanoAcao);
  
