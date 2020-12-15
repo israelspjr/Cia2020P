@@ -14,13 +14,13 @@ $valorPlano = $PlanoAcao->selectPlanoAcao(" WHERE idPlanoAcao = ".$idPlanoAcao);
 $idProposta = $valorPlano[0]['proposta_idProposta'];
 $idClientePj = $Proposta->get_clientePj_idClientePJ($idProposta);
 $valorGerente = $GerenteTem->selectGerenteTem(" WHERE clientePj_idClientePj = ".$idClientePj." AND dataExclusao IS NULL");
-Uteis::pr($valorGerente);
+//Uteis::pr($valorGerente);
 $idGerente = $valorGerente[0]['gerente_idGerente'];
 $valorGerente = $Gerente->selectGerente(" WHERE idGerente = ".$idGerente);
-Uteis::pr($valorGerente);
+//Uteis::pr($valorGerente);
 $idFuncionario = $valorGerente[0]['funcionario_idFuncionario'];
-	
-echo $idFuncionario;
+$email = $Funcionario->getEmail($idFuncionario);	
+echo $email;
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
