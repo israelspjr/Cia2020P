@@ -2,6 +2,15 @@
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/demonstrativo.php");
 
 $IntegrantePlanoAcao = new IntegrantePlanoAcao();
+$PlanoAcao = new PlanoAcao();
+$Proposta = new Proposta();
+
+		$idPlanoAcao = $_REQUEST['idPlanoAcao'];
+ 
+$valorPlano = $PlanoAcao->selectPlanoAcao(" WHERE idPlanoAcao = ".$idPlanoAcao);
+$idProposta = $valorPlano[0]['proposta_idProposta'];
+$idClientePj = $Proposta->get_clientePj_idClientePJ($idProposta);
+echo $idClientePj;
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -9,7 +18,7 @@ $IntegrantePlanoAcao = new IntegrantePlanoAcao();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title><?php echo NOME_APP?></title>
+<title>Plano de Ação</title>
 
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/css.php");
@@ -29,8 +38,8 @@ require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/js.php");
 		$idIntegrantePlanoAcao = $_REQUEST['integrante'];
                 
 		$IntegrantePlanoAcao->setIdIntegrantePlanoAcao($idIntegrantePlanoAcao);
-		$IntegrantePlanoAcao->updateFieldIntegrantePlanoAcao("aprovacaoAluno", $data);
-		$IntegrantePlanoAcao->updateFieldIntegrantePlanoAcao("statusAprovacao", 1);
+	//	$IntegrantePlanoAcao->updateFieldIntegrantePlanoAcao("aprovacaoAluno", $data);
+	//	$IntegrantePlanoAcao->updateFieldIntegrantePlanoAcao("statusAprovacao", 1);
 		
 		echo "<div style=\"text-align:center\">Obrigado pelo aceite, já pode fechar essa janela!</div>";
 		?>
