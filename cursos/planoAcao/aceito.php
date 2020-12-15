@@ -13,8 +13,8 @@ $Funcionario = new Funcionario();
 $valorPlano = $PlanoAcao->selectPlanoAcao(" WHERE idPlanoAcao = ".$idPlanoAcao);
 $idProposta = $valorPlano[0]['proposta_idProposta'];
 $idClientePj = $Proposta->get_clientePj_idClientePJ($idProposta);
-$idGerente = $GerenteTem->selectGerenteTem(" WHERE clientePj_idClientePj = ".$idClientePj." AND dataExclusao IS NULL");
-
+$valorGerente = $GerenteTem->selectGerenteTem(" WHERE clientePj_idClientePj = ".$idClientePj." AND dataExclusao IS NULL");
+$idGerente = $valorGerente[0]['idGerente'];
 $valorGerente = $Gerente->selectGerente(" WHERE idGerente = ".$idGerente);
 Uteis::pr($valorGerente);
 $idFuncionario = $valorGerente[0]['funcionario_idFuncionario'];
