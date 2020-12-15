@@ -11,8 +11,10 @@ $Funcionario = new Funcionario();
 		$idPlanoAcao = $_REQUEST['idPlanoAcao'];
    		$idIntegrantePlanoAcao = $_REQUEST['integrante'];
 
-$valorIntegrante = $IntegrantePlanoAcao->selectIntegrantePlanoAcao(" WHERE idIntegrantePlanoAcao = ".$idIntegrantePlanoAcao);
-Uteis::pr($valorIntegrante); 
+ $IntegrantePlanoAcao->setIdIntegrantePlanoAcao($idIntegrantePlanoAcao);
+ 
+ $nomeIntegrante = $IntegrantePlanoAcao->nomeIntegrantePlanoAcao();
+Uteis::pr($nomeIntegrante); 
  
 $valorPlano = $PlanoAcao->selectPlanoAcao(" WHERE idPlanoAcao = ".$idPlanoAcao);
 $idProposta = $valorPlano[0]['proposta_idProposta'];
@@ -57,7 +59,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].CAMINHO_CFG."include/js.php");
 		
 //		$idPlanoAcao = $_REQUEST['idPlanoAcao'];
                 
-		$IntegrantePlanoAcao->setIdIntegrantePlanoAcao($idIntegrantePlanoAcao);
+//		$IntegrantePlanoAcao->setIdIntegrantePlanoAcao($idIntegrantePlanoAcao);
 	//	$IntegrantePlanoAcao->updateFieldIntegrantePlanoAcao("aprovacaoAluno", $data);
 	//	$IntegrantePlanoAcao->updateFieldIntegrantePlanoAcao("statusAprovacao", 1);
 		
