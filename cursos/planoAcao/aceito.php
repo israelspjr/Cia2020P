@@ -16,6 +16,7 @@ $idClientePj = $Proposta->get_clientePj_idClientePJ($idProposta);
 $idGerente = $GerenteTem->selectGerenteTem(" WHERE clientePj_idClientePj = ".$idClientePj." AND dataExclusao IS NULL");
 
 $valorGerente = $Gerente->selectGerente(" WHERE idGerente = ".$idGerente);
+Uteis::pr($valorGerente);
 $idFuncionario = $valorGerente[0]['funcionario_idFuncionario'];
 	
 echo $idFuncionario;
