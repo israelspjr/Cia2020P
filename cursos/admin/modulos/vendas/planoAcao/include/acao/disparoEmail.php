@@ -88,7 +88,7 @@ if( $_POST['check_disparoEmail_integrantePlanoAcao']) {
         $idClientePf = $valorIntegrantePlanoAcao[0]['clientePf_idClientePf'];
 		$conteudo2 = "<a href='https://".$config[0]['site']."/cursos/planoAcao/index.php?".$linkVisualizacao."\"' target=\"_blank\"'>Visualizar no navegador</a>";
 		$conteudo3 ='<div style="width:70%;text-align:center;margin-right:auto;margin-left:auto;font-size:16px;font-weight:bold;">"Declaro que li e estou de acordo com todas as informações e regras contidas neste Plano de Ação": ';
-		$conteudo3 .= '<a href="https://'.$config[0]['site'].'/cursos/planoAcao/aceito.php?idPlanoAcao='.$idPlanoAcao.'&area=3&integrante='.$id.'"><button class=\"button blue\">Aceito </button></a><br></div>';
+		$conteudo3 .= '<a href="https://'.$config[0]['site'].'/cursos/planoAcao/aceito.php?idPlanoAcao='.$idPlanoAcao.'&area=3&integrante='.$id.'">Aceito </a></div>';
 		
         $conteudo_final = $PlanoAcao->ImprimePlanoAcao(3, $id); //file_get_contents("https://".CAMINHO_VER_PA."index.php?".$linkVisualizacao);       
         $conteudoLink =  $style. "<br>".$conteudo2.$conteudo3."<br />".$conteudo. "<br />".$conteudo_final.$conteudo3;   
@@ -120,7 +120,7 @@ if( $_POST['check_disparoEmail_contatoAdd']) {
         $linkVisualizacao = $valorIntegrantePlanoAcao[0]['linkVisualizacao'];
         $idClientePf = $valorIntegrantePlanoAcao[0]['clientePf_idClientePf'];    
 		$conteudo2 = "<a href='https://".$config[0]['site']."/cursos/planoAcao/index.php?".$linkVisualizacao."\"' target=\"_blank\"'>Visualizar no navegador</a>";    
-			$conteudo3 ='<div style="width:70%;text-align:center;margin-right:auto;margin-left:auto;font-size:16px;font-weight:bold;">"Declaro que li e estou de acordo com todas as informações e regras contidas neste Plano de Ação": <a href=\'https://'.$config[0]['site'].'/cursos/planoAcao/aceito.php?idPlanoAcao='.$idPlanoAcao.'&area=3&integrante='.$id.'"><button class=\"button blue\">Aceito </button></a><br></div>';
+			$conteudo3 ='<div style="width:70%;text-align:center;margin-right:auto;margin-left:auto;font-size:16px;font-weight:bold;">"Declaro que li e estou de acordo com todas as informações e regras contidas neste Plano de Ação": <a href=\'https://'.$config[0]['site'].'/cursos/planoAcao/aceito.php?idPlanoAcao='.$idPlanoAcao.'&area=3&integrante='.$id.'">Aceito </a></div>';
 		
         $conteudo_final = $PlanoAcao->ImprimePlanoAcao(3, $id); //file_get_contents("https://".CAMINHO_VER_PA."index.php?".$linkVisualizacao);       
         $conteudoLink =  $style. "<br>".$conteudo2.$conteudo3."<br />".$conteudo. "<br />".$conteudo_final.$conteudo3;   
