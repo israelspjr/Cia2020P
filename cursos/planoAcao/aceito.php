@@ -33,7 +33,7 @@ $idFuncionario = $valorGerente[0]['funcionario_idFuncionario'];
 $email = $Funcionario->getEmail($idFuncionario);	
 //echo $email;
 
-		$paraQuem = array("nome" => $email, "email" => "israel@companhiadeidiomas.com.br"); //$email);
+		$paraQuem = array("nome" => $email, "email" => $email);
 		$assunto = "Aluno aceitou a PA";
 		$conteudo_final = "Nome do aluno: ".$nomeCliente."<br>PA: ".$idPlanoAcao;
 		Uteis::enviarEmail($assunto, $conteudo_final, $paraQuem, $arquivo, $copia, $bcopia, 1); 
