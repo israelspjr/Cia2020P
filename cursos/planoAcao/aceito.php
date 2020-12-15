@@ -19,7 +19,7 @@ $ClientePf = new ClientePf();
 //Uteis::pr($valorIntegrante); 
 $idClientePf = $valorIntegrante[0]['clientePf_idClientePf'];
 $nomeCliente = $ClientePf->getNome($idClientePf);
- Uteis::pr($nomeCliente);
+// Uteis::pr($nomeCliente);
  
 $valorPlano = $PlanoAcao->selectPlanoAcao(" WHERE idPlanoAcao = ".$idPlanoAcao);
 $idProposta = $valorPlano[0]['proposta_idProposta'];
