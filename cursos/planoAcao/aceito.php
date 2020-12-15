@@ -5,15 +5,20 @@ $IntegrantePlanoAcao = new IntegrantePlanoAcao();
 $PlanoAcao = new PlanoAcao();
 $Proposta = new Proposta();
 $GerenteTem = new GerenteTem();
+$Gerente = new Gerente();
+$Funcionario = new Funcionario();
 
 		$idPlanoAcao = $_REQUEST['idPlanoAcao'];
  
 $valorPlano = $PlanoAcao->selectPlanoAcao(" WHERE idPlanoAcao = ".$idPlanoAcao);
 $idProposta = $valorPlano[0]['proposta_idProposta'];
 $idClientePj = $Proposta->get_clientePj_idClientePJ($idProposta);
-$idGerente = $GerenteTem->selectGerenteTem(" WHERE clientePj_idClientePj = ".$idClientePj." AND dataExclusao IS NOT NULL");
+$idGerente = $GerenteTem->selectGerenteTem(" WHERE clientePj_idClientePj = ".$idClientePj." AND dataExclusao IS NULL");
 
-echo $idGerente;
+$valorGerente = $Gerente->selectGerente(" WHERE idGerente = ".$idGerente);
+$idFuncionario = $valorGerente[0]['funcionario_idFuncionario'];
+	
+echo $idFuncionario;
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
