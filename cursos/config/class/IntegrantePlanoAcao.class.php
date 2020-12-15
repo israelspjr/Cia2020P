@@ -137,6 +137,7 @@ class IntegrantePlanoAcao extends Database {
 	 */
 	function selectIntegrantePlanoAcao($where = "WHERE 1") {
 		$sql = "SELECT SQL_CACHE idIntegrantePlanoAcao, planoAcao_idPlanoAcao, Nivel_IdNivel, clientePf_idClientePf, statusAprovacao_idStatusAprovacao, obsDiagnosticoNivel, linkVisualizacao, aprovacaoAluno, statusAprovacao, professor_idProfessor FROM integrantePlanoAcao " . $where;
+		echo $sql;
 		return $this -> executeQuery($sql);
 	}
 
