@@ -88,7 +88,7 @@ class Gerente extends Database {
 	 */
 	function selectGerente($where = "WHERE 1") {
 		$sql = "SELECT SQL_CACHE idGerente, funcionario_idFuncionario, cor, dataCadastro, inativo, obs FROM gerente ".$where;
-		echo $sql;
+//		echo $sql;
 		$result = $this->query($sql);
 		for ($i = 0; $i < $this->numRows($result); $i++) {
             $array[$i] = $this->fetchArray($result);
