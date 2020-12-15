@@ -4,13 +4,16 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/demonstrativo.php");
 $IntegrantePlanoAcao = new IntegrantePlanoAcao();
 $PlanoAcao = new PlanoAcao();
 $Proposta = new Proposta();
+$GerenteTem = new GerenteTem();
 
 		$idPlanoAcao = $_REQUEST['idPlanoAcao'];
  
 $valorPlano = $PlanoAcao->selectPlanoAcao(" WHERE idPlanoAcao = ".$idPlanoAcao);
 $idProposta = $valorPlano[0]['proposta_idProposta'];
 $idClientePj = $Proposta->get_clientePj_idClientePJ($idProposta);
-echo $idClientePj;
+$idGerente = $GerenteTem->selectGerenteTem(" WHERE clientePj_idClientePj = ".$idClientePj." AND dataExclusao IS NOT NULL");
+
+echo $idGerente;
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
