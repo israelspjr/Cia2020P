@@ -7,6 +7,7 @@ $Proposta = new Proposta();
 $GerenteTem = new GerenteTem();
 $Gerente = new Gerente();
 $Funcionario = new Funcionario();
+$ClientePf = new ClientePf();
 
 		$idPlanoAcao = $_REQUEST['idPlanoAcao'];
    		$idIntegrantePlanoAcao = $_REQUEST['integrante'];
@@ -15,7 +16,10 @@ $Funcionario = new Funcionario();
  $valorIntegrante = $IntegrantePlanoAcao->selectIntegrantePlanoAcao(" WHERE idIntegrantePlanoAcao = ".$idIntegrantePlanoAcao);
  
 // $nomeIntegrante = $IntegrantePlanoAcao->nomeIntegrantePlanoAcao();
-Uteis::pr($valorIntegrante); 
+//Uteis::pr($valorIntegrante); 
+$idClientePf = $valorIntegrante[0]['clientePf_idClientePf'];
+$nomeCliente = $ClientePf->getNome($idClientePf);
+ Uteis::pr($nomeCliente);
  
 $valorPlano = $PlanoAcao->selectPlanoAcao(" WHERE idPlanoAcao = ".$idPlanoAcao);
 $idProposta = $valorPlano[0]['proposta_idProposta'];
