@@ -10,12 +10,12 @@ $Funcionario = new Funcionario();
 
 		$idPlanoAcao = $_REQUEST['idPlanoAcao'];
    		$idIntegrantePlanoAcao = $_REQUEST['integrante'];
-		echo $idIntegrantePlanoAcao;
+//		echo $idIntegrantePlanoAcao;
 
- $IntegrantePlanoAcao->setIdIntegrantePlanoAcao($idIntegrantePlanoAcao);
+ $valorIntegrante = $IntegrantePlanoAcao->selectIntegrantePlanoAcao(" WHERE idIntegrantePlanoAcao = ".$idIntegrantePlanoAcao);
  
- $nomeIntegrante = $IntegrantePlanoAcao->nomeIntegrantePlanoAcao();
-Uteis::pr($nomeIntegrante); 
+// $nomeIntegrante = $IntegrantePlanoAcao->nomeIntegrantePlanoAcao();
+Uteis::pr($valorIntegrante); 
  
 $valorPlano = $PlanoAcao->selectPlanoAcao(" WHERE idPlanoAcao = ".$idPlanoAcao);
 $idProposta = $valorPlano[0]['proposta_idProposta'];
