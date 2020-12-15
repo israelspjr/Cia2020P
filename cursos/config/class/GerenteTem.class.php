@@ -88,7 +88,7 @@ class GerenteTem extends Database {
 	 */
 	function selectGerenteTem($where = "WHERE 1") {
 		$sql = "SELECT SQL_CACHE idGgerenteTem, gerente_idGerente, clientePj_idClientePj, grupo_idGrupo, dataCadastro, dataExclusao FROM gerenteTem " . $where;
-	//	echo $sql;
+		echo $sql;
 		return $this -> executeQuery($sql);
 	}
 	
