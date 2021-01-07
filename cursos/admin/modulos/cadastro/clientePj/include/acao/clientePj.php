@@ -72,7 +72,7 @@ if($_POST['acao']=="foto"){
 	}else{
 		$verificando = $ClientePj->selectClientePj("WHERE cnpj='".$_POST['cnpj']."'");
 	}
-	if(count($verificando) > 0){
+	if($verificando > 0){
 		$arrayRetorno['mensagem'] = "Cadastro não efetuado, documento já cadastrado.";
 		echo json_encode($arrayRetorno);
 		exit;
