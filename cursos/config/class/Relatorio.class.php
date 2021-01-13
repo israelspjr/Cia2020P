@@ -2105,7 +2105,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 	
 		if ($idProfessor >0) {
 			 $professor = explode("-", $Professor->getNome($idProfessor));
-		  $nomePro = $professor[0]."<br>";
+		  $nomePro = $professor[0];
 	//	$NomePro = $nomeProfessor2
 		}
 		 	}
@@ -2340,8 +2340,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 				  $nomeProfessor = "";
 				  
                    for ($i = 0; $i < $colspan[$valorPsaProfessor['titulo']]; $i++) {
-					   
-					   $nomeProfessor = $professor->getNome($rs[$i]['professor_idProfessor']);
+					   	 $professor = explode("-", $professor->getNome($rs[$i]['professor_idProfessor']));
+		  				 $nomeProfessor = $professor[0];
+					//   $nomeProfessor = );
 					   if ($nomeProfessor == '') {
 						$nomeProfessor = $nomeProfessor2;   
 						   
@@ -2487,7 +2488,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 				
              				if(!$excel) { $html .= "<td ><img src=\"".CAMINHO_IMG ."\cad.png\" $onclick>" . $valor['nomeProfessor'] . "</td>"; }
 			 				else {
-								$html .=  "<td>".$valor['nomeProfessor']."</td>";
+									 $professor = explode("-", $valor['nomeProfessor']);
+		  				 $nomeProfessor = $professor[0]."<br>";
+								$html .=  "<td>".$nomeProfessor."</td>";
 			 			}	
 							
 						}
@@ -2760,7 +2763,10 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
 	$colunas[] = "Total";
 	
     	while ($valor = mysqli_fetch_array($result2)) {
-			$html .= "<tr><td>".$valor['nomeProf']."</td>";
+			 $professor = explode("-", $valor['nomeProf']);
+		  				 $nomeProfessor = $professor[0];
+			
+			$html .= "<tr><td>".$nomeProfessor."</td>";
 	
 				for ($x=0;$x<count($meses);$x++) {
 					$sql3 = "SELECT SQL_CACHE D.idDemonstrativoPagamento, D.professor_idProfessor, D.mes, D.ano, D.tipoPagamento_idTipoPagamento, D.total, D.tipoDemo
@@ -2847,7 +2853,9 @@ $style=" style=\"text-decoration:underline;\"";
 } else {
 $style="";	
 }
-	$html .= "<td  $style> $onclick" . $valor['nomeProf'] ." ". $TextoFinanceiro."<br>".$valor['documentoUnico']." </td>";
+	 $professor = explode("-", $valor['nomeProf']);
+		  				 $nomeProfessor = $professor[0];
+	$html .= "<td  $style> $onclick" . $nomeProfessor ." ". $TextoFinanceiro."<br>".$valor['documentoUnico']." </td>";
 	$html .= "<td >".$dadosB."</td>";
 			
 		$html2 = "";
@@ -3285,7 +3293,9 @@ $sql .= " AND (D.mes = $mes AND D.ano = $ano) group by D.idDemonstrativoCobranca
 
  while ($valorDemonstrativoPagamento = mysqli_fetch_array($result)) {
 	
-	$nome = $Professor->getNome($idProfessor);
+	//$nome = ;
+	 $professor = explode("-", $Professor->getNome($idProfessor));
+		  				 $nome = $professor[0];
 	$idPlanoAcaoGrupo = $valorDemonstrativoPagamento['planoAcaoGrupo_idPlanoAcaoGrupo'];
 	$valorDesconto = $valorDemonstrativoPagamento['valorDesconto'];
 	$validadeDesconto = $valorDemonstrativoPagamento['validadeDesconto'];
@@ -3393,8 +3403,9 @@ $sql .= " AND (D.mes = $mes AND D.ano = $ano) group by D.idDemonstrativoCobranca
 	 $margem2 = "";
 		
 	while ($valorProfessores2 = mysqli_fetch_array($result7)) {
-		
-		$professorNomes2 .= $Professor->getNome($valorProfessores2['idProfessor'])."</br>";
+		$professor = explode("-", $Professor->getNome($valorProfessores2['idProfessor']));
+		  			//	 $nome = $professor[0];
+		$professorNomes2 .= $professor[0]."</br>";
 		
 		if ($valorProfessores2['plano'] == '') {
 		
@@ -3431,8 +3442,9 @@ $sql .= " AND (D.mes = $mes AND D.ano = $ano) group by D.idDemonstrativoCobranca
 	$margem = "";
 		
 	while ($valorProfessores = mysqli_fetch_array($result6)) {
-		
-		$professorNomes .= $Professor->getNome($valorProfessores['idProfessor'])."</br>";
+		$professor = explode("-", $Professor->getNome($valorProfessores2['idProfessor']));
+		  			//	 $nome = $professor[0];
+		$professorNomes .= $professor[0]; //$Professor->getNome($valorProfessores['idProfessor'])."</br>";
 		
 		if ($valorProfessores['plano'] == '') {
 		
@@ -4167,11 +4179,15 @@ foreach($rs as $valor) {
 
           foreach ($campos as $campo) {
 
-            if ($campo == "nome")
-              $html .= "<td >" . $valor['nome'] . "</td>";
-            elseif ($campo == "nomeExibicao")
-              $html .= "<td >" . $valor['nomeExibicao'] . "</td>";
-            elseif ($campo == "candidato")
+            if ($campo == "nome") {
+			$professor = explode("-", $valor['nome']);
+		  				 $nome = $professor[0];
+              $html .= "<td >" . $nome . "</td>";
+			} elseif ($campo == "nomeExibicao") {
+				$professor = explode("-", $valor['nome']);
+		  				 $nome = $professor[0];
+              $html .= "<td >" . $nome . "</td>";
+			} elseif ($campo == "candidato")
               $html .= "<td >" . Uteis::exibirStatus(!$valor['candidato'], !$excel) . "</td>";
             elseif ($campo == "sexo")
               $html .= "<td >" . Uteis::exibirSexo($valor['sexo']) . "</td>";
@@ -4931,8 +4947,9 @@ $sql3 .= " AND ((AGP.dataFim >= '".$dataReferencia."' AND AGP.dataFim <= '".$dat
 	// Professores
 	
 	  while ($valor3 = mysqli_fetch_array($result3)) {
-		  
-		$html2 .= "<div>".$valor3['nomeExibicao']."</div>";	
+		  $professor = explode("-", $valor['nome']);
+		  				 $nome = $professor[0];
+		$html2 .= "<div>".$nome."</div>";	
 				
 			  
 			  $idProfessor = $valor3['idProfessor'];
