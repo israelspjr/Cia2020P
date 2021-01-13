@@ -146,6 +146,7 @@ $docsObrigatorios = $cadastroDeCandidato ? "" : "required";
             <option <?php if($sexo ==""){ ?> selected="selected" <?php } ?>  value="">Selecione</option>
             <option <?php if($sexo == "M"){ ?> selected="selected" <?php } ?>  value="M">Masculino</option>
             <option <?php if($sexo == "F"){ ?> selected="selected" <?php } ?>  value="F">Feminino</option>
+            <option <?php if($sexo == "O"){ ?> selected="selected" <?php } ?>  value="O">Outro</option>
           </select>
           <span class="placeholder">Campo Obrigatório</span> </p>
         <p>
