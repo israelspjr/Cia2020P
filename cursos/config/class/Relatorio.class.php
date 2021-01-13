@@ -425,6 +425,8 @@ function relatorioFrequenciaPdf($where = "", $tipo, $excel = false, $FME, $frequ
 		  $idClientepf = $valor['idClientePf'];
 		  
 		  $email = $ClientePf->getEmail($idClientepf, 1);
+		  $professor = explode("-", $valor['nomeProfessor']);
+		  $nomeProfessor = $professor[0];
 	//	  Uteis::pr($email);
 	
 	      $html .= "<tr>";
@@ -433,7 +435,7 @@ function relatorioFrequenciaPdf($where = "", $tipo, $excel = false, $FME, $frequ
           
 		  }
 		  $html .= "<td >" . $valor['grupo'] ."</td>"; 
-          $html .= "<td >" . $valor['nomeProfessor'] . "</td>";
+          $html .= "<td >" . $nomeProfessor . "</td>";
 		  if ($portalA != 1) {
           $html .= "<td >" .$onclick. $valor['aluno'] .  "<br>.".$email."</td>";
 		  }
@@ -727,7 +729,9 @@ WHERE 1
 		  }
           $html .= "<td >" . $onclick.$valor['grupo'] . $imgCobranca. "<br>.".$email."</td>";
 		  $html .= "<td>" . $nivelAluno . "</td>";
-          $html .= "<td >" . $valor['nomeProfessor'] . "</td>";
+		   $professor = explode("-", $valor['nomeProfessor']);
+		  $nomeProfessor = $professor[0];
+          $html .= "<td >" . $nomeProfessor . "</td>";
           $html .= "<td >" . $onclick2.$valor['aluno'] . "</td>";
 		  $html .= "<td>" . $dataEntrada."</td>";
 		  $html .= "<td>" . $dataSaida."</td>";
@@ -806,7 +810,9 @@ WHERE 1
 		  }
           $html .= "<td >" . $onclick.$valor['grupo'] . $imgCobranca. "<br>.".$email."</td>";
 		  $html .= "<td>" . $nivelAluno . "</td>";
-          $html .= "<td >" . $valor['nomeProfessor'] . "</td>";
+		   $professor = explode("-", $valor['nomeProfessor']);
+		  $nomeProfessor = $professor[0];
+          $html .= "<td >" . $nomeProfessor . "</td>";
           $html .= "<td >" . $onclick2.$valor['aluno'] . "</td>";
 		  $html .= "<td>" . $dataEntrada."</td>";
 		  $html .= "<td>" . $dataSaida."</td>";
@@ -885,7 +891,9 @@ WHERE 1
 		  }
           $html .= "<td >" . $onclick.$valor['grupo'] . $imgCobranca."</td>";
 		  $html .= "<td>" . $nivelAluno . "</td>";
-          $html .= "<td >" . $valor['nomeProfessor'] . "</td>";
+		   $professor = explode("-", $valor['nomeProfessor']);
+		  $nomeProfessor = $professor[0];
+          $html .= "<td >" . $nomeProfessor . "</td>";
           $html .= "<td >" . $onclick2. $valor['aluno'] . "<br>.".$email."</td>";
 		  $html .= "<td>" . $dataEntrada."</td>";
 		  $html .= "<td>" . $dataSaida."</td>";
@@ -964,8 +972,9 @@ WHERE 1
 		  $html .= "<td>" . $nivelAluno . "</td>";
 		    if  ($portalP != 1) {
 		  //   if ($portalA != 1) {
-        
-		  $html .= "<td >" . $valor['nomeProfessor'] . "</td>";
+         $professor = explode("-", $valor['nomeProfessor']);
+		  $nomeProfessor = $professor[0];
+		  $html .= "<td >" . $nomeProfessor . "</td>";
 		//	 }
 		  }
 		  if (($alunoN != 1) && ($portalA != 1)) {
@@ -1323,8 +1332,10 @@ $sql .=	" AND C.dataAplicacao is not null ";
 		  } else if ($campo == 'nomeProfessor') {
  
 		  $nomeProfessor = $Professor->getNome($valor['professor_idProfessor']);
+		   $professor = explode("-", $nomeProfessor);
+		  $nomeProfessor2 = $professor[0];
 		  	  
-          $html .= "<td >" . $nomeProfessor . "</td>";
+          $html .= "<td >" . $nomeProfessor2 . "</td>";
 		  } else if ($campo == 'material') {
 
 
@@ -1490,8 +1501,9 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
 		$nomeProfessor .= $Professor->getNome($VP)."<br>";
 		}
 			
-			
-          $html .= "<td > º " . $nomeProfessor . "</td>";
+			  $professor = explode("-", $nomeProfessor);
+		  $nomeProfessor2 = $professor[0];
+          $html .= "<td > º " . $nomeProfessor2 . "</td>";
 				} else if ($campo == 'material') {
 					$valorFF = $FolhaFrequencia->selectFolhaFrequencia(" WHERE planoAcaoGrupo_idPlanoAcaoGrupo = ".$valor['idPlanoAcaoGrupo']." AND finalizadaParcial = 1 order BY idFolhaFrequencia DESC");
 
@@ -1824,7 +1836,9 @@ $sql .=	" AND C.dataAplicacao is null $sqlextra ORDER BY G.nome ASC";
 		if (!$excel) {
 		$onclickP = "<img src='/cursos/images/cad.png' title='Ver Professor' onclick=\"abrirNivelPagina(this, '" . CAMINHO_CAD . "professor/contratado/cadastro.php?id=" . $idProfessor . "', '', '$onde')\"> ";
 		}
-		$NomePro .= $onclickP." ".$Professor->getNome($idProfessor)."<br>";
+		  $professor = explode("-", $Professor->getNome($idProfessor));
+		  $nomeProfessor2 = $professor[0];
+		$NomePro .= $onclickP." ".$nomeProfessor2 ."<br>";
 		}
 			}
 			} // fechamento Loop dias e horarios
@@ -2090,7 +2104,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 		$idProfessor = $valorProfessor[0]['professor_idProfessor'];
 	
 		if ($idProfessor >0) {
-		$NomePro = $Professor->getNome($idProfessor)."<br>";
+			 $professor = explode("-", $Professor->getNome($idProfessor));
+		  $nomePro = $professor[0]."<br>";
+	//	$NomePro = $nomeProfessor2
 		}
 		 	}
 
