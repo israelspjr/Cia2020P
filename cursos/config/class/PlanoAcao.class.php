@@ -1008,7 +1008,7 @@ class PlanoAcao extends Database {
                                 $quemPaga = $valorSubvencaoCursoPlanoAcao['quemPaga'] == "A" ? "Aluno" : "Empresa";
                                 $subvencao = $valorSubvencaoCursoPlanoAcao['subvencao'];
 								
-								if ($quemPaga == "A") {
+								if ($quemPaga == "Aluno") {
 									$valorAluno = "- R$". Uteis::formatarMoeda(($valorPorIntegrante /100 )* $subvencao);	
 								}
 
