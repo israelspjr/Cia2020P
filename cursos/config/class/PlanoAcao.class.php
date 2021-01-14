@@ -985,13 +985,10 @@ class PlanoAcao extends Database {
                 $ValorSimuladoPlanoAcao -> setPlanoAcaoIdPlanoAcao($idPlanoAcao);
                 $html .= $ValorSimuladoPlanoAcao -> listaValorSimuladoPlanoAcao();
 				$valorTotalS = $ValorSimuladoPlanoAcao -> listaValorSimuladoPlanoAcao(true);
-				Uteis::pr(count($rsIntegrantes));
-				Uteis::pr($valorTotalS);
 				
 		        if ($rsIntegrantes) {
 					$valorPorIntegrante = $valorTotalS/count($rsIntegrantes);
-                			Uteis::pr($valorPorIntegrante);
-				    foreach ($rsIntegrantes as $valorIntegrantes) {
+          		    foreach ($rsIntegrantes as $valorIntegrantes) {
 
                         $idIntegrantePlanoAcao = $valorIntegrantes['idIntegrantePlanoAcao'];
                         $nomeCliente = $valorIntegrantes['nomeCliente'];
