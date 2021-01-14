@@ -1011,7 +1011,7 @@ class PlanoAcao extends Database {
                                 $quemPaga = $valorSubvencaoCursoPlanoAcao['quemPaga'] == "A" ? "Aluno" : "Empresa";
                                 $subvencao = $valorSubvencaoCursoPlanoAcao['subvencao'];
 
-                                $html .= "<p class=\"tab1\">Subvenção de <strong>" . Uteis::formatarMoeda($subvencao) . " % - ". Uteis::formatarMoeda($valorPorIntegrante * $subvencao)."</strong> ";
+                                $html .= "<p class=\"tab1\">Subvenção de <strong>" . Uteis::formatarMoeda($subvencao) . " % - R$". Uteis::formatarMoeda(($valorPorIntegrante /100 )* $subvencao)."</strong> ";
 
                                 if ($teto)
                                     $html .= "com teto de <strong>R$ " . Uteis::formatarMoeda($teto) . "</strong>";
