@@ -984,7 +984,10 @@ class PlanoAcao extends Database {
                 $html .= "<p><strong>Valores simulados</strong>: <span style=\"color:red;\"> (Este valor pode variar de acordo com a quantidade de aulas em cada mês.)</span></p>";
                 $ValorSimuladoPlanoAcao -> setPlanoAcaoIdPlanoAcao($idPlanoAcao);
                 $html .= $ValorSimuladoPlanoAcao -> listaValorSimuladoPlanoAcao();
+				$valorTotalS = $ValorSimuladoPlanoAcao -> listaValorSimuladoPlanoAcao(true);
 				Uteis::pr(count($rsIntegrantes));
+				Uteis::pr($valorTotalS);
+				
 
                 if ($rsIntegrantes) {
                     foreach ($rsIntegrantes as $valorIntegrantes) {

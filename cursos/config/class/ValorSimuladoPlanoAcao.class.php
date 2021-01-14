@@ -233,7 +233,7 @@ class ValorSimuladoPlanoAcao extends Database {
         return $html;
     }
 
-    function listaValorSimuladoPlanoAcao() {
+    function listaValorSimuladoPlanoAcao($soValor = false) {
 
         $ProdutoAdicionalValorSimuladoPlanoAcao = new ProdutoAdicionalValorSimuladoPlanoAcao();
         $ProdutoAdicional = new ProdutoAdicional();
@@ -329,14 +329,18 @@ class ValorSimuladoPlanoAcao extends Database {
 
             if ($total)
                 $html .= "TOTAL FIXO: R$ " . Uteis::formatarMoeda($total);
-
+				$html2 = $total;
             if  (($totalMes) && ($row == 1)) {
                 $html .= "TOTAL POR MÊS: R$ " . Uteis::formatarMoeda($totalMes);
+				$html2 = $totalMes;
 			}
 
             $html .= "</strong></p>";
 
         }
+		if ($soValor == true) {
+				$html = $html2;	
+		}
 
         return $html;
 
