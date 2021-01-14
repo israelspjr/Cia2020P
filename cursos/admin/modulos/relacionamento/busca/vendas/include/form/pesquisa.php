@@ -84,7 +84,8 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
         
             <div id="div-zona"> </div>
             
-                      Pesquisar por Bairro / Cidade moradia do professor:
+            OU<br>
+            Pesquisar por Bairro / Cidade moradia do professor (desmarque o checkbox de local de aula para usar esse filtro):
           <?php
 		  $sql = "SELECT distinct(E.bairro),  C.cidade, C.idCidade, P.idProfessor, P.inativo FROM endereco as E
 INNER JOIN cidade AS C on E.cidade_idCidade = C.idCidade
