@@ -988,9 +988,10 @@ class PlanoAcao extends Database {
 				Uteis::pr(count($rsIntegrantes));
 				Uteis::pr($valorTotalS);
 				
-
-                if ($rsIntegrantes) {
-                    foreach ($rsIntegrantes as $valorIntegrantes) {
+		        if ($rsIntegrantes) {
+					$valorPorIntegrante = $valorTotalS/count($rsIntegrantes);
+                			Uteis::pr($valorPorIntegrante);
+				    foreach ($rsIntegrantes as $valorIntegrantes) {
 
                         $idIntegrantePlanoAcao = $valorIntegrantes['idIntegrantePlanoAcao'];
                         $nomeCliente = $valorIntegrantes['nomeCliente'];
