@@ -152,7 +152,7 @@ class ComplementoAbordagem extends Database {
 		return $html;
 	}
   
-  function selectAbordagemCheckbox($idPlanoAcao, $idIdioma, $addQuery = "",$portalP) {
+  function selectAbordagemCheckbox($idPlanoAcao, $idIdioma, $addQuery = "",$portalP, $div = "") {
 
     $sql = "SELECT SQL_CACHE idComplementoAbordagem, item, padrao, nome FROM ComplementoAbordagem WHERE excluido = 0 AND inativo = 0 " . $addQuery . "";
 	if ($portalP == 1) {
@@ -183,7 +183,7 @@ class ComplementoAbordagem extends Database {
 
         $html .= "<div  >";
 
-        $html .= "<img id=\"img_abordagem_" . $valor['idComplementoAbordagem'] . "\" src=\"" . CAMINHO_IMG . ($checked == "" ? "mais" : "menos") . ".png\" onclick=\"abrirFormulario2('div_abordagem_" . $valor['idComplementoAbordagem'] . "', 'img_abordagem_" . $valor['idComplementoAbordagem'] . "')\" style=\"float:left; margin-right:10px;\" />";
+        $html .= "<img id=\"".$div."img_abordagem_" . $valor['idComplementoAbordagem'] . "\" src=\"" . CAMINHO_IMG . ($checked == "" ? "mais" : "menos") . ".png\" onclick=\"abrirFormulario('".$div."div_abordagem_" . $valor['idComplementoAbordagem'] . "', '".$div."img_abordagem_" . $valor['idComplementoAbordagem'] . "')\" style=\"float:left; margin-right:10px;\" />";
 
         $html .= "<label for=\"check_abordagem_" . $valor['idComplementoAbordagem'] . "\">";
 
@@ -193,7 +193,7 @@ class ComplementoAbordagem extends Database {
 
         $html .= "</label>";
 
-        $html .= "<div id=\"div_abordagem_" . $valor['idComplementoAbordagem'] . "\" style=\"display:" . ($checked == "" ? "none" : "block") . "; padding:1em; text-align:justify;\" >" . $valor['item'] . "</div></div><br/><br/>";
+        $html .= "<div id=\"".$div."div_abordagem_" . $valor['idComplementoAbordagem'] . "\" style=\"display:" . ($checked == "" ? "none" : "block") . "; padding:1em; text-align:justify;\" >" . $valor['item'] . "</div></div><br/><br/>";
       }
     }
     return $html;

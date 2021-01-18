@@ -7,7 +7,7 @@
 <fieldset>
   <legend>Complemento de Abordagem</legend>
  <form id="form_Abordagem"  class="validate" action="" method="post"  enctype="multipart/form-data" onsubmit="return false" >
-     <?php echo $Complemento->selectAbordagemCheckbox($idPlanoAcao); ?> 
+     <?php echo $Complemento->selectAbordagemCheckbox($idPlanoAcao, "", "", "", "d"); ?> 
     <br />
     <div class="linha-inteira">
       <p>
@@ -17,32 +17,6 @@
   </form>
 </fieldset>
 <script>
-function abrirFormulario2(div, img, apenasFecha) {
-	
-	var obj_div = $('#' + div);
-	console.log(obj_div);
-	console.log((obj_div.css('display')));
-	if ((obj_div).css('display') == 'block') {
-		obj_div.hide();
-	} else {
-		obj_div.show();
-	}
-		
-	/*
-	if (img != undefined && img != '')
-		var obj_img = $('#' + img);
-
-	if (obj_div.css('display') == "block") {
-		if (obj_img != undefined)
-			obj_img.attr('src', caminhoImg + 'mais.png');
-		obj_div.hide();
-	} else {
-		if (obj_img != undefined)
-			obj_img.attr('src', caminhoImg + 'menos.png');
-		obj_div.show();
-	}*/
-}
-
 
 ativarForm();
 
