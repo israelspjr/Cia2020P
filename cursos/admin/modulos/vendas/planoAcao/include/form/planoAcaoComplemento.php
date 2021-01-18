@@ -26,11 +26,11 @@ function abrirFormulario2(div, img, apenasFecha) {
 	if (obj_div.css('display') == "block") {
 		if (obj_img != undefined)
 			obj_img.attr('src', caminhoImg + 'mais.png');
-		obj_div.slideUp();
+		obj_div.hide();
 	} else {
 		if (obj_img != undefined)
 			obj_img.attr('src', caminhoImg + 'menos.png');
-		obj_div.slideDown();
+		obj_div.show();
 	}
 }
 
