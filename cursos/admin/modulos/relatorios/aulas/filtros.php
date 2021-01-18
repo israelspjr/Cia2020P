@@ -46,6 +46,6 @@ if ($idProfessor != '') {
 }
 
 
-echo $where;
+//echo $where;
 ?>
 
