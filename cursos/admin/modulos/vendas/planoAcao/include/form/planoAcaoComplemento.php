@@ -17,7 +17,8 @@
   </form>
 </fieldset>
 <script>
-function abrirFormulario(div, img, apenasFecha) {
+function abrirFormulario2(div, img, apenasFecha) {
+	alert("a");
 	var obj_div = $('#' + div);
 	if (img != undefined && img != '')
 		var obj_img = $('#' + img);
