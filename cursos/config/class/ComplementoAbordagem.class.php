@@ -183,7 +183,7 @@ class ComplementoAbordagem extends Database {
 
         $html .= "<div  >";
 
-        $html .= "<img id=\"img_abordagem_" . $valor['idComplementoAbordagem'] . "\" src=\"" . CAMINHO_IMG . ($checked == "" ? "mais" : "menos") . ".png\" onclick=\"abrirFormulario('div_abordagem_" . $valor['idComplementoAbordagem'] . "', 'img_abordagem_" . $valor['idComplementoAbordagem'] . "')\" style=\"float:left; margin-right:10px;\" />";
+        $html .= "<img id=\"img_abordagem_" . $valor['idComplementoAbordagem'] . "\" src=\"" . CAMINHO_IMG . ($checked == "" ? "mais" : "menos") . ".png\" onclick=\"abrirFormulario2('div_abordagem_" . $valor['idComplementoAbordagem'] . "', 'img_abordagem_" . $valor['idComplementoAbordagem'] . "')\" style=\"float:left; margin-right:10px;\" />";
 
         $html .= "<label for=\"check_abordagem_" . $valor['idComplementoAbordagem'] . "\">";
 
