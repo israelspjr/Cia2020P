@@ -1664,7 +1664,7 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor) {
 		$Grupo = new Grupo();
 		$Professor = new Professor();
 		
-		$NotasTipoNotas = new NotasTipoNota();
+	//	$NotasTipoNotas = new NotasTipoNota();
 
 		if (mysqli_num_rows($result) > 0) {
 
@@ -1735,7 +1735,7 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor) {
 				} else if ($campo == 'status') {
 					$html .= "<td align=\"center\">".$img."</td>";
 				} else if ($campo == 'nota') {
-					$html .= "<td align=\"center\"> ".$NotasTipoNotas->getNome($valor['status2'])."</td>";
+					$html .= "<td align=\"center\"> ".$valor['status2']."</td>";
 				} else if ($campo == 'professorAssistido') {
 					$html .= "<td align=\"center\">".$nomeProfessorAssistiu."</td>";
 				} else if ($campo == 'quemAssistiu') {
