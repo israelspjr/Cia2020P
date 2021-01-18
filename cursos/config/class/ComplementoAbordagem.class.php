@@ -66,7 +66,7 @@ class ComplementoAbordagem extends Database {
 	 * addComplementoAbordagem() Function
 	 */
 	function addComplementoAbordagem() {
-		$sql = "INSERT INTO complementoAbordagem (item, inativo, padrao, nome, excluido, portalProfessor) VALUES ($this->item, $this->inativo, $this->padrao, $this->nome, $this->excluido, $this->portalProfessor)";
+		$sql = "INSERT INTO ComplementoAbordagem (item, inativo, padrao, nome, excluido, portalProfessor) VALUES ($this->item, $this->inativo, $this->padrao, $this->nome, $this->excluido, $this->portalProfessor)";
 		echo $sql;
 		$result = $this -> query($sql, true);
 		return $this -> connect;
@@ -76,7 +76,7 @@ class ComplementoAbordagem extends Database {
 	 * deleteComplementoAbordagem() Function
 	 */
 	function deleteComplementoAbordagem() {
-		$sql = "DELETE FROM complementoAbordagem WHERE idComplementoAbordagem = $this->idComplementoAbordagem";
+		$sql = "DELETE FROM ComplementoAbordagem WHERE idComplementoAbordagem = $this->idComplementoAbordagem";
 		$result = $this -> query($sql, true);
 	}
 
@@ -85,7 +85,7 @@ class ComplementoAbordagem extends Database {
 	 */
 	function updateFieldComplementoAbordagem($field, $value) {
 		$value = ($value != "NULL") ? $this -> gravarBD($value) : $value;
-		$sql = "UPDATE complementoAbordagem SET " . $field . " = " . $value . " WHERE idComplementoAbordagem = $this->idComplementoAbordagem";
+		$sql = "UPDATE ComplementoAbordagem SET " . $field . " = " . $value . " WHERE idComplementoAbordagem = $this->idComplementoAbordagem";
 		$result = $this -> query($sql, true);
 	}
 
@@ -93,7 +93,7 @@ class ComplementoAbordagem extends Database {
 	 * updateComplementoAbordagem() Function
 	 */
 	function updateComplementoAbordagem() {
-		$sql = "UPDATE complementoAbordagem SET item = $this->item, inativo = $this->inativo, padrao = $this->padrao, nome = $this->nome, portalProfessor = $this->portalProfessor WHERE idComplementoAbordagem = $this->idComplementoAbordagem";
+		$sql = "UPDATE ComplementoAbordagem SET item = $this->item, inativo = $this->inativo, padrao = $this->padrao, nome = $this->nome, portalProfessor = $this->portalProfessor WHERE idComplementoAbordagem = $this->idComplementoAbordagem";
 		$result = $this -> query($sql, true);
 	}
 
@@ -101,7 +101,7 @@ class ComplementoAbordagem extends Database {
 	 * selectComplementoAbordagem() Function
 	 */
 	function selectComplementoAbordagem($where = "WHERE 1") {
-		$sql = "SELECT SQL_CACHE idComplementoAbordagem, item, inativo, padrao, nome, excluido, portalProfessor FROM complementoAbordagem " . $where;
+		$sql = "SELECT SQL_CACHE idComplementoAbordagem, item, inativo, padrao, nome, excluido, portalProfessor FROM ComplementoAbordagem " . $where;
     echo $sql;
 		return $this -> executeQuery($sql);
 	}
