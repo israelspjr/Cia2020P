@@ -17,6 +17,22 @@
   </form>
 </fieldset>
 <script>
+function abrirFormulario(div, img, apenasFecha) {
+	var obj_div = $('#' + div);
+	if (img != undefined && img != '')
+		var obj_img = $('#' + img);
+
+	if (obj_div.css('display') == "block") {
+		if (obj_img != undefined)
+			obj_img.attr('src', caminhoImg + 'mais.png');
+		obj_div.slideUp();
+	} else {
+		if (obj_img != undefined)
+			obj_img.attr('src', caminhoImg + 'menos.png');
+		obj_div.slideDown();
+	}
+}
+
 
 ativarForm();
 
