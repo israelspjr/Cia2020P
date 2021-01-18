@@ -12,6 +12,7 @@ $Abordagem = new ComplementoAbordagem();
 $PlanoAcaoComplemento->deletePlanoAcaoComplemento(" OR ( planoAcao_idPlanoAcao = ".$idPlanoAcao.")");
 
 $valoresAbordagem = $Abordagem->selectComplementoAbordagem(" WHERE inativo = 0 ");
+Uteis::pr($valoresAbordagem);
 
 for ($row = 0; $row < count($valoresAbordagem); $row++){
   $idField = $valoresAbordagem[$row]['idComplementoAbordagem'];    
