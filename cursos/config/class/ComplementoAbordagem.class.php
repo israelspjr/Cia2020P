@@ -102,7 +102,7 @@ class ComplementoAbordagem extends Database {
 	 */
 	function selectComplementoAbordagem($where = "WHERE 1") {
 		$sql = "SELECT SQL_CACHE idComplementoAbordagem, item, inativo, padrao, nome, excluido, portalProfessor FROM complementoAbordagem " . $where;
-    //echo $sql;
+    echo $sql;
 		return $this -> executeQuery($sql);
 	}
 
