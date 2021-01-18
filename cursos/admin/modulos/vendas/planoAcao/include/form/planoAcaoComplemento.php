@@ -20,6 +20,13 @@
 function abrirFormulario2(div, img, apenasFecha) {
 	alert("a");
 	var obj_div = $('#' + div);
+	if ((obj_div).css('display') == 'block') {
+		obj_div.hide();
+	} else {
+		obj_div.show();
+	}
+		
+	/*
 	if (img != undefined && img != '')
 		var obj_img = $('#' + img);
 
@@ -31,7 +38,7 @@ function abrirFormulario2(div, img, apenasFecha) {
 		if (obj_img != undefined)
 			obj_img.attr('src', caminhoImg + 'menos.png');
 		obj_div.show();
-	}
+	}*/
 }
 
 
