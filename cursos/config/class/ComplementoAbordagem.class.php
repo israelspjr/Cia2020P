@@ -67,7 +67,7 @@ class ComplementoAbordagem extends Database {
 	 */
 	function addComplementoAbordagem() {
 		$sql = "INSERT INTO ComplementoAbordagem (item, inativo, padrao, nome, excluido, portalProfessor) VALUES ($this->item, $this->inativo, $this->padrao, $this->nome, $this->excluido, $this->portalProfessor)";
-		echo $sql;
+	//	echo $sql;
 		$result = $this -> query($sql, true);
 		return $this -> connect;
 	}
@@ -102,7 +102,7 @@ class ComplementoAbordagem extends Database {
 	 */
 	function selectComplementoAbordagem($where = "WHERE 1") {
 		$sql = "SELECT SQL_CACHE idComplementoAbordagem, item, inativo, padrao, nome, excluido, portalProfessor FROM ComplementoAbordagem " . $where;
-    echo $sql;
+   // echo $sql;
 		return $this -> executeQuery($sql);
 	}
 
