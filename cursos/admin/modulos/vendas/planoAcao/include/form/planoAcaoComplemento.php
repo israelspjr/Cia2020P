@@ -21,6 +21,7 @@ function abrirFormulario2(div, img, apenasFecha) {
 	
 	var obj_div = $('#' + div);
 	console.log(obj_div);
+	console.log((obj_div.css('display')));
 	if ((obj_div).css('display') == 'block') {
 		obj_div.hide();
 	} else {
