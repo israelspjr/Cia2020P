@@ -18,8 +18,9 @@
 </fieldset>
 <script>
 function abrirFormulario2(div, img, apenasFecha) {
-	alert("a");
+	
 	var obj_div = $('#' + div);
+	console.log(obj_div);
 	if ((obj_div).css('display') == 'block') {
 		obj_div.hide();
 	} else {
