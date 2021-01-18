@@ -15,7 +15,7 @@ $valoresAbordagem = $Abordagem->selectComplementoAbordagem(" WHERE inativo = 0 "
 
 for ($row = 0; $row < count($valoresAbordagem); $row++){
   $idField = $valoresAbordagem[$row]['idComplementoAbordagem'];    
-  $field = $_POST["check_abordagem_".$idField];
+  $field = $_POST["dcheck_abordagem_".$idField];
     
   // INSERE AS OPÇOES MARCADAS    
   if($field==1){
