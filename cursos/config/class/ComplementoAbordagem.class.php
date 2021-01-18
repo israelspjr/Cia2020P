@@ -67,6 +67,7 @@ class ComplementoAbordagem extends Database {
 	 */
 	function addComplementoAbordagem() {
 		$sql = "INSERT INTO complementoAbordagem (item, inativo, padrao, nome, excluido, portalProfessor) VALUES ($this->item, $this->inativo, $this->padrao, $this->nome, $this->excluido, $this->portalProfessor)";
+		echo $sql;
 		$result = $this -> query($sql, true);
 		return $this -> connect;
 	}
