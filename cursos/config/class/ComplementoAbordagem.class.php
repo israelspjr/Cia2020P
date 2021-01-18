@@ -187,7 +187,7 @@ class ComplementoAbordagem extends Database {
 
         $html .= "<label for=\"check_abordagem_" . $valor['idComplementoAbordagem'] . "\">";
 
-        $html .= "<input type=\"checkbox\" id=\"check_abordagem_" . $valor['idComplementoAbordagem'] . "\" name=\"check_abordagem_" . $valor['idComplementoAbordagem'] . "\" $checked value=\"1\" />";
+        $html .= "<input type=\"checkbox\" id=\"".$div."check_abordagem_" . $valor['idComplementoAbordagem'] . "\" name=\"".$div."check_abordagem_" . $valor['idComplementoAbordagem'] . "\" $checked value=\"1\" />";
 
         $html .= "<strong>" . strtoupper($valor['nome']) . "</strong> ";
 
