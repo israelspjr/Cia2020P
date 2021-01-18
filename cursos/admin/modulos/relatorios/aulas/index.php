@@ -109,7 +109,21 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
      </p>
      <p>
      <label>Nota: </label>
-     <?php echo $NotasTipoNota->selectNotasTipoNotaSelect("", $status2, " AND tipoNota_idTipoNota = 4 ") ?>
+     <select id="idNotasTipoNota" name="idNotasTipoNota" class="">
+     	<option value="">Selecione</option>
+     	<option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <!--<option value="18">Prefiro Não Avaliar</option>-->
+     </select>
+     <?php //echo $NotasTipoNota->selectNotasTipoNotaSelect("", $status2, " AND tipoNota_idTipoNota = 4 ") ?>
 
             </div>
             
