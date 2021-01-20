@@ -173,7 +173,7 @@ class IdiomaProfessor extends Database {
 		return $html;
 	}
 	
-	function selectIdiomaProfessorContratadoTr_professor($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "", $idPai = "", $sole = 0) {
+	function selectIdiomaProfessorContratadoTr_professor($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "", $idPai = "", $sole) {
 		
 		$ProcessoSeletivoProfessor = new ProcessoSeletivoProfessor();
 		
@@ -225,11 +225,11 @@ FROM
 				$html .= "<td>".$rs[0]['notaTeste']."</td>";
 				$html .= "<td align=\"center\">" . Uteis::exibirStatus(!$valor['inativo']) . "</td>";
 
-				if (($valor['inativo'] == 0) && ($sole == 0)){
-					$html .= "<td onclick=\"zerarCentro();deletaRegistro('modulos/cadastro/acao/idiomaProfessor.php', " . $valor['idIdiomaProfessor'] . ", '$caminhoAtualizar', '#centro')\">" . "<center><img src=\"" . CAMINHO_IMG . "excluir.png\"></center>" . "</td>";
-				} else {
+		//		if (($valor['inativo'] == 0) && ($sole == 0)){
+		//			$html .= "<td onclick=\"zerarCentro();deletaRegistro('modulos/cadastro/acao/idiomaProfessor.php', " . $valor['idIdiomaProfessor'] . ", '$caminhoAtualizar', '#centro')\">" . "<center><img src=\"" . CAMINHO_IMG . "excluir.png\"></center>" . "</td>";
+		//		} else {
 					$html .= "<td></td>";
-				}
+		//		}
 				$html .= "</tr>";
 			}
 		}
