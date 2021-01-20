@@ -12,7 +12,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
 	</legend>
 	<div class="menu_interno">
   <!--  <p><span style="color:red;">Não esqueça de cadastrar um email válido</span></p>-->
-		<img src="<?php echo CAMINHO_IMG . "novo.png"; ?>" title="Novo cadastro" onclick="zerarCentro();carregarModulo( 'modulos/cadastro/resourceHTML/idiomaProfessorForm.php?id=<?php echo $idProfessor?>', '#centro');" />
+		<img src="<?php echo CAMINHO_IMG . "novo.png"; ?>" title="Novo cadastro" onclick="zerarCentro();carregarModulo( '/cursos/portais/modulos/cadastro/idiomaProfessor.php?id=<?php echo $idProfessor?>', '#centro');" />
 	</div>
 	<div class="lista">
 		<table id="tb_lista_idiomaProfessor" class="registros">
@@ -29,7 +29,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
 			</thead>
 			<tbody>
 				<?php
-				echo $IdiomaProfessor -> selectIdiomaProfessorContratadoTr_professor("modulos/cadastro/form/idiomaProfessor.php", "modulos/cadastro/resourceHTML/idiomaProfessor.php?id=" . $idProfessor, "#centro", "WHERE IP.professor_idProfessor = " . $idProfessor." AND EV.ePrinc = 1 GROUP BY idIdiomaProfessor", "&idProfessor=" . $idProfessor);
+				echo $IdiomaProfessor -> selectIdiomaProfessorContratadoTr_professor("", "modulos/cadastro/resourceHTML/idiomaProfessor.php?id=" . $idProfessor, "#centro", "WHERE IP.professor_idProfessor = " . $idProfessor." AND EV.ePrinc = 1 GROUP BY idIdiomaProfessor", "&idProfessor=" . $idProfessor);
 				?>
 	
 		</table>
