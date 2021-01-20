@@ -12,7 +12,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
 	</legend>
 	<div class="menu_interno">
  
-		<img src="<?php echo CAMINHO_IMG . "novo.png"; ?>" title="Novo cadastro" onclick="zerarCentro();carregarModulo( '/cursos/portais/modulos/cadastro/idiomaProfessor.php?id=<?php echo $idProfessor?>', '#centro');" />
+		<img src="<?php echo CAMINHO_IMG . "novo.png"; ?>" title="Novo cadastro" onclick="zerarCentro();carregarModulo( '/cursos/portais/modulos/cadastro/idiomaProfessorForm.php?id=<?php echo $idProfessor?>', '#centro');" />
 	</div>
 	<div class="lista">
 		<table id="tb_lista_idiomaProfessor" class="registros">
