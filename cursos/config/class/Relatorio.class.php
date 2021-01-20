@@ -2447,6 +2447,18 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 						} elseif ($rs[0]['psaRegular_idPsa'] == 11) {
 							$totalCompromisso += $valorAtual;	
 							$qtdeCompromisso++;
+						} } elseif ($rs[0]['psaRegular_idPsa'] == 12) {
+							$divulgacao += $valorAtual;	
+							$qtdeDivulgacao++;
+						} elseif ($rs[0]['psaRegular_idPsa'] == 13) {
+							$aulasAoVivo += $valorAtual;
+							$qtdeAulasAoVivo++;
+						} elseif ($rs[0]['psaRegular_idPsa'] == 14) {
+							$suporteAAprendizagem += $valorAtual;	
+							$qtdeSuporteAAprendizagem++;
+						} elseif ($rs[0]['psaRegular_idPsa'] == 15) {
+							$seuSucesso += $valorAtual;	
+							$qtdeSeuSucesso++;
 						}
 					}
 					
@@ -2506,6 +2518,56 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 				  } else if ($campo == 'PROFESSOR') {
 			 
 			  $html .= $html2; //Conceito Professor
+				  } else if ($campo == 'seuEngajamento') {
+	  				   if ($excel == false) {
+	                      $marcar = ($notas[11]['obs']!='') ? "<img src=\"".CAMINHO_IMG."pendente.png\">":"";
+					  } 
+	
+					   if ($mostrarComentarios == 0) { 
+							 $html .= "<td title=\"".$notas[11]['obs']."\" ".$notas[11]['cor'].">".$notas[11]['valor'].$marcar. "</td>";                  
+					 } else {
+					 		 $html .= "<td ".$notas[11]['cor'].">".$notas[11]['valor'].$marcar. "<br>".$notas[11]['obs']. "</td>";                  
+					 }
+				  } else if ($campo == 'divulgacao') {
+	  				   if ($excel == false) {
+	                      $marcar = ($notas[12]['obs']!='') ? "<img src=\"".CAMINHO_IMG."pendente.png\">":"";
+					  } 
+	
+					   if ($mostrarComentarios == 0) { 
+							 $html .= "<td title=\"".$notas[12]['obs']."\" ".$notas[12]['cor'].">".$notas[12]['valor'].$marcar. "</td>";                  
+					 } else {
+					 		 $html .= "<td ".$notas[12]['cor'].">".$notas[12]['valor'].$marcar. "<br>".$notas[12]['obs']. "</td>";                  
+					 }
+				  } else if ($campo == 'aulasAoVivo') {
+	  				   if ($excel == false) {
+	                      $marcar = ($notas[13]['obs']!='') ? "<img src=\"".CAMINHO_IMG."pendente.png\">":"";
+					  } 
+	
+					   if ($mostrarComentarios == 0) { 
+							 $html .= "<td title=\"".$notas[13]['obs']."\" ".$notas[13]['cor'].">".$notas[13]['valor'].$marcar. "</td>";                  
+					 } else {
+					 		 $html .= "<td ".$notas[13]['cor'].">".$notas[13]['valor'].$marcar. "<br>".$notas[13]['obs']. "</td>";                  
+					 }
+				  } else if ($campo == 'suporteAAprendizagem') {
+	  				   if ($excel == false) {
+	                      $marcar = ($notas[14]['obs']!='') ? "<img src=\"".CAMINHO_IMG."pendente.png\">":"";
+					  } 
+	
+					   if ($mostrarComentarios == 0) { 
+							 $html .= "<td title=\"".$notas[14]['obs']."\" ".$notas[14]['cor'].">".$notas[14]['valor'].$marcar. "</td>";                  
+					 } else {
+					 		 $html .= "<td ".$notas[14]['cor'].">".$notas[14]['valor'].$marcar. "<br>".$notas[14]['obs']. "</td>";                  
+					 }
+				  } else if ($campo == 'seuSucesso') {
+	  				   if ($excel == false) {
+	                      $marcar = ($notas[15]['obs']!='') ? "<img src=\"".CAMINHO_IMG."pendente.png\">":"";
+					  } 
+	
+					   if ($mostrarComentarios == 0) { 
+							 $html .= "<td title=\"".$notas[15]['obs']."\" ".$notas[15]['cor'].">".$notas[15]['valor'].$marcar. "</td>";                  
+					 } else {
+					 		 $html .= "<td ".$notas[15]['cor'].">".$notas[15]['valor'].$marcar. "<br>".$notas[15]['obs']. "</td>";                  
+					 }
 				  } else if ($campo == 'GESTÃO DE CURSOS') {
 					   if ($excel == false) {
 	                      $marcar = ($notas[2]['obs']!='') ? "<img src=\"".CAMINHO_IMG."pendente.png\">":"";
@@ -2566,17 +2628,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					 } else {
 					 		 $html .= "<td ".$notas[10]['cor'].">".$notas[10]['valor'].$marcar. "<br>".$notas[10]['obs']. "</td>";                  
 					 }
-				  } else if ($campo == 'compromisso') {
-	  				   if ($excel == false) {
-	                      $marcar = ($notas[11]['obs']!='') ? "<img src=\"".CAMINHO_IMG."pendente.png\">":"";
-					  } 
-	
-					   if ($mostrarComentarios == 0) { 
-							 $html .= "<td title=\"".$notas[11]['obs']."\" ".$notas[11]['cor'].">".$notas[11]['valor'].$marcar. "</td>";                  
-					 } else {
-					 		 $html .= "<td ".$notas[11]['cor'].">".$notas[11]['valor'].$marcar. "<br>".$notas[11]['obs']. "</td>";                  
-					 }
-				  } else if (($campo == 'NPS - Net Promoter Score') || ($campo == 'nps')) {
+				  }  else if (($campo == 'NPS - Net Promoter Score') || ($campo == 'nps')) {
 	  				   if ($excel == false) {
 	                      $marcar = ($notas[7]['obs']!='') ? "<img src=\"".CAMINHO_IMG."pendente.png\">":"";
 					  } 
