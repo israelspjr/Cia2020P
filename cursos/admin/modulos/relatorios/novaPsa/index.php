@@ -24,6 +24,11 @@ $arrItens_padrao[] = array(0 => "qualidadeAula", 1 => "QUALIDADE DA AULA");
 $arrItens_padrao[] = array(0 => "resultadoCurso", 1 => "RESULTADO DO CURSO");
 $arrItens_padrao[] = array(0 => "compromisso", 1 => "COMPROMISSO COM O APRENDIZADO");
 $arrItens_padrao[] = array(0 => "nps", 1 => "NPS - Net Promoter Score");
+$arrItens_padrao[] = array(0 => "seuEngajamento", 1 => "SEU ENGAJAMENTO");
+$arrItens_padrao[] = array(0 => "divulgacao", 1 => "DIVULGAÇÃO");
+$arrItens_padrao[] = array(0 => "aulasAoVivo", 1 => "AULAS AO VIVO");
+$arrItens_padrao[] = array(0 => "suporteAAprendizagem", 1 => "SUPORTE À APRENDIZAGEM");
+$arrItens_padrao[] = array(0 => "seuSucesso", 1 => "SEU SUCESSO");
 
 //OPCIONAIS
 $arrItens_opcional[] = array(0 => "email", 1 => "E-mail");
