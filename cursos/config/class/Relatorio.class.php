@@ -2447,7 +2447,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 						} elseif ($rs[0]['psaRegular_idPsa'] == 11) {
 							$totalCompromisso += $valorAtual;	
 							$qtdeCompromisso++;
-						} } elseif ($rs[0]['psaRegular_idPsa'] == 12) {
+						} elseif ($rs[0]['psaRegular_idPsa'] == 12) {
 							$divulgacao += $valorAtual;	
 							$qtdeDivulgacao++;
 						} elseif ($rs[0]['psaRegular_idPsa'] == 13) {
