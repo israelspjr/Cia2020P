@@ -29,7 +29,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
 			</thead>
 			<tbody>
 				<?php
-				echo $IdiomaProfessor -> selectIdiomaProfessorContratadoTr_professor("", "modulos/cadastro/resourceHTML/idiomaProfessor.php?id=" . $idProfessor, "#centro", "WHERE IP.professor_idProfessor = " . $idProfessor." AND EV.ePrinc = 1 GROUP BY idIdiomaProfessor", "&idProfessor=" . $idProfessor);
+				echo $IdiomaProfessor -> selectIdiomaProfessorContratadoTr_professor("", "modulos/cadastro/resourceHTML/idiomaProfessor.php?id=" . $idProfessor, "#centro", "WHERE IP.professor_idProfessor = " . $idProfessor." AND EV.ePrinc = 1 GROUP BY idIdiomaProfessor", "&idProfessor=" . $idProfessor, 0);
 				?>
 	
 		</table>
