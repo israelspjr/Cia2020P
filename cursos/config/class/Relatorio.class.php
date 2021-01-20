@@ -2448,16 +2448,16 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 							$totalCompromisso += $valorAtual;	
 							$qtdeCompromisso++;
 						} elseif ($rs[0]['psaRegular_idPsa'] == 12) {
-							$divulgacao += $valorAtual;	
+							$totalDivulgacao += $valorAtual;	
 							$qtdeDivulgacao++;
 						} elseif ($rs[0]['psaRegular_idPsa'] == 13) {
-							$aulasAoVivo += $valorAtual;
+							$totalAulasAoVivo += $valorAtual;
 							$qtdeAulasAoVivo++;
 						} elseif ($rs[0]['psaRegular_idPsa'] == 14) {
-							$suporteAAprendizagem += $valorAtual;	
+							$totalSuporteAAprendizagem += $valorAtual;	
 							$qtdeSuporteAAprendizagem++;
 						} elseif ($rs[0]['psaRegular_idPsa'] == 15) {
-							$seuSucesso += $valorAtual;	
+							$totalSeuSucesso += $valorAtual;	
 							$qtdeSeuSucesso++;
 						}
 					}
@@ -2652,6 +2652,36 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 	   $media = round($totalNotas / $totalProfessor,2);
 	   if(!$excel) {
 	$retorno['professor'] =  "Soma notas Professor:". $totalNotas." Quantidade: ".$totalProfessor. " <strong>Média: ".$media."</strong>";
+	
+	if ($totalCompromisso > 0) {
+		$mediaCompromisso = round($totalCompromisso / $qtdeCompromisso, 2);
+	$retorno['compromisso'] = "<br>Soma notas Seu Engajamento:". $totalCompromisso." Quantidade: ".$qtdeCompromisso. " <strong>Média: ".$mediaCompromisso."</strong>";	
+		
+	}
+	
+	if ($totalDivulgacao > 0) {
+		$mediaDivulgacao = round($totalDivulgacao / $qtdeDivulgacao, 2);
+	$retorno['divulgacao'] = "<br>Soma notas Divulgação:". $totalDivulgação." Quantidade: ".$qtdeDivulgacao. " <strong>Média: ".$mediaDivulgacao."</strong>";	
+		
+	}
+	
+	if ($totalAulasAoVivo > 0) {
+		$mediaAulasAoVivo = round($totalAulasAoVivo / $qtdeAulasAoVivo, 2);
+	$retorno['aulasAoVivo'] = "<br>Soma notas Aulas Ao Vivo:". $totalAulasAoVivo." Quantidade: ".$qtdeAulasAoVivo. " <strong>Média: ".$mediaAulasAoVivo."</strong>";	
+		
+	}
+	
+	if ($totalSuporteAAprendizagem > 0) {
+		$mediaSuporteAAprendizagem = round($totalSuporteAAprendizagem / $qtdeSuporteAAprendizagem, 2);
+	$retorno['suporteAAprendizagem'] = "<br>Soma notas Suporte a aprendizagem:". $totalSuporteAAprendizagem." Quantidade: ".$qtdeSuporteAAprendizagem. " <strong>Média: ".$mediaSuporteAAprendizagem."</strong>";	
+		
+	}
+	
+	if ($totalSeuSucesso > 0) {
+		$mediaSeuSucesso = round($totalSeuSucesso / $qtdeSuporteAAprendizagem, 2);
+	$retorno['seuSucesso'] = "<br>Soma notas Seu sucesso:". $totalSeuSucesso." Quantidade: ".$qtdeSeuSucesso. " <strong>Média: ".$mediaSeuSucesso."</strong>";	
+		
+	}
 	if ($totalGestao > 0) {
 		$mediaGestao = round($totalGestao / $qtdeGestao,2);
 	$retorno['gestao'] = "<br>Soma notas Gestão:". $totalGestao." Quantidade: ".$qtdeGestao. " <strong>Média: ".$mediaGestao."</strong>";	
@@ -2665,12 +2695,6 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 	if ($totalResultado > 0) {
 		$mediaResultado = round($totalResultado / $qtdeResultado, 2);
 	$retorno['resultado'] = "<br>Soma notas Resultado:". $totalResultado." Quantidade: ".$qtdeResultado. " <strong>Média: ".$mediaResultado."</strong>";	
-		
-	}
-		
-	if ($totalCompromisso > 0) {
-		$mediaCompromisso = round($totalCompromisso / $qtdeCompromisso, 2);
-	$retorno['compromisso'] = "<br>Soma notas Compromisso:". $totalCompromisso." Quantidade: ".$qtdeCompromisso. " <strong>Média: ".$mediaCompromisso."</strong>";	
 		
 	}
 		
