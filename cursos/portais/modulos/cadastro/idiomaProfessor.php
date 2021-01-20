@@ -11,7 +11,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
 		Idiomas do professor
 	</legend>
 	<div class="menu_interno">
-  <!--  <p><span style="color:red;">Não esqueça de cadastrar um email válido</span></p>-->
+ 
 		<img src="<?php echo CAMINHO_IMG . "novo.png"; ?>" title="Novo cadastro" onclick="zerarCentro();carregarModulo( '/cursos/portais/modulos/cadastro/idiomaProfessor.php?id=<?php echo $idProfessor?>', '#centro');" />
 	</div>
 	<div class="lista">
