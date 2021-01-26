@@ -69,9 +69,9 @@ $idPlanoAcaoGrupo = $valor[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
 		</fieldset>
 	</div>
 </div>
-<script>tabelaDataTable('tb_lista_psa', 'ordenaColuna');
+<script>//tabelaDataTable('tb_lista_psa', 'ordenaColuna');
 $(document).ready( function() {
-  $('#tb_lista_demonstrativoPagamento2').dataTable( {
+  $('#tb_lista_psa').dataTable( {
 	 	"aLengthMenu" : [[50, 100, -1],[50, 100, "Todos"]],
 		 "oLanguage" : {
 		
