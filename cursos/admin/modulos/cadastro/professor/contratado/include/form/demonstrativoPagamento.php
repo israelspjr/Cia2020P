@@ -45,13 +45,13 @@ $tipoDemo = $rs[0]['tipoDemo'];
             </iframe>-->
         </div>
         <div class="lista">
-        <!--    <div class="">
+            <div class="">
                 <div id="demosntrativo_pagamento" class="linha-inteira">
-                    <img src="<?php echo CAMINHO_IMG."_logo.png"?>" />
+                  <!--  <img src="<?php echo CAMINHO_IMG."_logo.png"?>" />-->
                     <?php echo $DemonstrativoPagamento -> selectDemonstrativoPagamento_imprimir($idDemonstrativoPagamento, $tipoDemo); 
                     ?>
                 </div>
-            </div>-->
+            </div>
         </div>
     </fieldset>
 </div>
