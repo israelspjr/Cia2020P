@@ -36,7 +36,7 @@ ativarForm();
 
 $(document).ready( function() {
   $('#tb_lista_demonstrativoPagamento2').dataTable( {
-	 	"aLengthMenu" : [[25, 50, 100, -1],[25, 50, 100, "Todos"]],
+	 	"aLengthMenu" : [[50, 100, -1],[50, 100, "Todos"]],
 		 "oLanguage" : {
 		
 		"sSearch":       "Buscar:",
