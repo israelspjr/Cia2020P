@@ -197,7 +197,7 @@ class PsaIntegranteGrupo extends Database {
 				$html .= "<tr>";
 
 				//PARA ORDENAR
-				$html .= "<td>". $dataReferencia . "</td>";
+				$html .= "<td>". $idPsaIntegranteGrupo . "</td>";
 
 				$onclick = " onclick=\"abrirNivelPagina(this, '" . CAMINHO_REL . "grupo/include/form/psa.php?id=" . $idPsaIntegranteGrupo . "&idIntegranteGrupo=" . $idIntegranteGrupo . "', '$camAtu', '$ondeAtu')\" ";
 
