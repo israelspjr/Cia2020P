@@ -69,8 +69,8 @@ $idPlanoAcaoGrupo = $valor[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
 		</fieldset>
 	</div>
 </div>
-<script>tabelaDataTable('tb_lista_psa', 'ordenaColuna');
-/*$(document).ready( function() {
+<script>//tabelaDataTable('tb_lista_psa', 'ordenaColuna');
+$(document).ready( function() {
   $('#tb_lista_psa').dataTable( {
 	 	"aLengthMenu" : [[50, 100, -1],[50, 100, "Todos"]],
 		 "oLanguage" : {
@@ -91,10 +91,10 @@ $idPlanoAcaoGrupo = $valor[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
 		"bInfo": true,
 		"bJQueryUI" : true,
         "aoColumns" : [ 
-					 { "sType": "custom-date" }, null, null, null, null ]
+					 { "sType": "custom-date" }, null, null, null, null, null, null, null ]
   } );
 } );
-*/
+
 
 
 
