@@ -90,7 +90,7 @@ $(document).ready( function() {
         "sPaginationType" : "full_numbers", 
 		"bInfo": true,
 		"bJQueryUI" : true,
-        "aoColumns" : [ null,
+        "aoColumns" : [ 
 					 { "sType": "custom-date" }, null, null, null, null ]
   } );
 } );
