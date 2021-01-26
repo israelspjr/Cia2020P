@@ -91,7 +91,7 @@ $(document).ready( function() {
 		"bInfo": true,
 		"bJQueryUI" : true,
         "aoColumns" : [ 
-					 { "sType": "custom-date" }, null, null, null, null, null, null, null ]
+					 { "sType": "numeric" }, null, null, null, null, null, null, null ]
   } );
 } );
 
