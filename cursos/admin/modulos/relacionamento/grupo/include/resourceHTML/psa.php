@@ -69,4 +69,33 @@ $idPlanoAcaoGrupo = $valor[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
 		</fieldset>
 	</div>
 </div>
-<script>tabelaDataTable('tb_lista_psa', 'ordenaColuna');</script>
+<script>tabelaDataTable('tb_lista_psa', 'ordenaColuna');
+$(document).ready( function() {
+  $('#tb_lista_demonstrativoPagamento2').dataTable( {
+	 	"aLengthMenu" : [[50, 100, -1],[50, 100, "Todos"]],
+		 "oLanguage" : {
+		
+		"sSearch":       "Buscar:",
+	    "sZeroRecords":  "Não foram encontrados resultados",
+        "sInfo":         "Mostrando de _START_ até _END_ de _TOTAL_ Registros",
+		"sLengthMenu":   "_MENU_ Registros",
+		 "sInfoFiltered": "(filtrado de _MAX_ Total de Registros)",
+		 "sInfoEmpty":    "Mostrando de 0 até 0 de 0 Registros" ,
+		 "oPaginate": {
+        "sFirst":    "&lt;&lt;",
+        "sPrevious": "&lt;",
+        "sNext":     "&gt;",
+        "sLast":     "&gt;&gt;"
+    }},
+        "sPaginationType" : "full_numbers", 
+		"bInfo": true,
+		"bJQueryUI" : true,
+        "aoColumns" : [ 
+					 { "sType": "custom-date" }, null, null, null, null, null ]
+  } );
+} );
+
+
+
+
+</script>
