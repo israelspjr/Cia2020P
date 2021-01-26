@@ -142,7 +142,7 @@ class DemonstrativoPagamento extends Database {
 		executeQuery($sql);
 	}
 
-	function selectDemonstrativoPagamentoTr_professor($where = "", $caminhoAbrir, $atualizar, $onde, $mobile) {
+	function selectDemonstrativoPagamentoTr_professor($where = "", $caminhoAbrir, $atualizar, $onde, $mobile, $admin) {
 
 		$sql = "SELECT SQL_CACHE D.idDemonstrativoPagamento, D.mes, D.ano, D.dataBaixa, (D.total - COALESCE(D2.total, 0)) AS total
 		FROM demonstrativoPagamento AS D 
@@ -157,14 +157,14 @@ class DemonstrativoPagamento extends Database {
 
 			while ($valor = mysqli_fetch_array($result)) {
 				
-		//		if ($mobile != 1) {
+				if ($admin == 1) {
 
-		//		$onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?idDemonstrativoPagamento=" . $valor['idDemonstrativoPagamento'] . "', '$atualizar', '$onde')\" ";
-		//		} else {
+				$onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?idDemonstrativoPagamento=" . $valor['idDemonstrativoPagamento'] . "', '$atualizar', '$onde')\" ";
+				} else {
 			$onclick = " onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "?idDemonstrativoPagamento=" . $valor['idDemonstrativoPagamento'] . "', '#centro')\" ";
 					
 					
-		//		}
+				}
 
 				$html .= "<tr align=\"center\">";
 				

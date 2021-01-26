@@ -21,7 +21,7 @@ $DemonstrativoPagamento = new DemonstrativoPagamento();
       </thead>
       <tbody>	
         <?php 	            
-       echo $DemonstrativoPagamento->selectDemonstrativoPagamentoTr_professor(" WHERE D.professor_idProfessor = $idProfessor order by idDemonstrativoPagamento DESC", CAMINHO_CAD."professor/contratado/include/form/demonstrativoPagamento.php", "",""); //CAMINHO_MODULO."demonstrativoPagamento/index.php", "#centro");			
+       echo $DemonstrativoPagamento->selectDemonstrativoPagamentoTr_professor(" WHERE D.professor_idProfessor = $idProfessor order by idDemonstrativoPagamento DESC", CAMINHO_CAD."professor/contratado/include/form/demonstrativoPagamento.php", "","", 1); //CAMINHO_MODULO."demonstrativoPagamento/index.php", "#centro");			
 			 
         ?>
       </tbody>
