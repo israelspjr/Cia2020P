@@ -32,8 +32,8 @@ $DemonstrativoPagamento = new DemonstrativoPagamento();
 
 <script>
 ativarForm();
-tabelaDataTable('tb_lista_demonstrativoPagamento2', 'simples');
-/*
+//tabelaDataTable('tb_lista_demonstrativoPagamento2', 'simples');
+
 $(document).ready( function() {
   $('#tb_lista_demonstrativoPagamento2').dataTable( {
 	 	"aLengthMenu" : [[25, 50, 100, -1],[25, 50, 100, "Todos"]],
@@ -55,10 +55,10 @@ $(document).ready( function() {
 		"bInfo": true,
 		"bJQueryUI" : true,
         "aoColumns" : [ 
-					 { "sType": "custom-date" }, null ]
+					 { "sType": "custom-date" }, null, null ]
   } );
 } );
-*/
+
 
 
 </script>
