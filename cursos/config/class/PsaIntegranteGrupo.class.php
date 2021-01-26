@@ -173,7 +173,7 @@ class PsaIntegranteGrupo extends Database {
 			
 		$sql .= " WHERE IG.clientePf_idClientePf = ".$idClientePf;	
 		}
-		$sql .= " AND PAG.idPlanoAcaoGrupo in (".$todosPAG.")";
+		$sql .= " AND PAG.idPlanoAcaoGrupo in (".$todosPAG.") ORDER BY idPsaIntegranteGrupo DESC";
 		
 	//	echo $sql;
 		
