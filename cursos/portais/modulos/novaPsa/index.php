@@ -10,6 +10,8 @@ $Grupo = new Grupo();
 
 //$nomeCliente = $ClientePj->getNome($_SESSION['idClientePj_SS']);
 
+$dataAtual = date("Y-m-d");
+
 $arrItens = array();
 
 //PADRÃO
@@ -80,7 +82,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
             de
             <input type="date" name="dataReferencia" id="dataReferencia" class="data" value="2020-01-01"/> <!--01/09/2018" />-->
             a
-            <input type="date" name="dataReferencia2" id="dataReferencia2" class="data" value=""  />
+            <input type="date" name="dataReferencia2" id="dataReferencia2" class="data" value="<?php echo $dataAtual;?>"  />
           </p>
           <p>
           <Label>Mostrar comentários? </Label>
