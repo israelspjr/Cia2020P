@@ -24,8 +24,17 @@ foreach($rsPsaProfessor as $valor) $arrItens_padrao[] = array(0 => $valor['titul
 
 $rsPsaRegular = $PsaRegular->selectPsaRegular(" WHERE excluido = 0 AND inativo = 0 ");
 Uteis::pr($rsPsaRegular);
-foreach($rsPsaRegular as $valor) $arrItens_padrao[] = array(0 => $valor['titulo'], 1 => $valor['titulo']);
-
+//foreach($rsPsaRegular as $valor) $arrItens_padrao[] = array(0 => $valor['titulo'], 1 => $valor['titulo']);
+$arrItens_padrao[] = array(0 => "seuEngajamento", 1 => "SEU ENGAJAMENTO");
+$arrItens_padrao[] = array(0 => "divulgacao", 1 => "DIVULGAÇÃO");
+$arrItens_padrao[] = array(0 => "aulasAoVivo", 1 => "AULAS AO VIVO");
+$arrItens_padrao[] = array(0 => "suporteAAprendizagem", 1 => "SUPORTE À APRENDIZAGEM");
+$arrItens_padrao[] = array(0 => "seuSucesso", 1 => "SEU SUCESSO");
+$arrItens_padrao[] = array(0 => "gestaoCurso", 1 => "GESTÃO DO CURSO");
+$arrItens_padrao[] = array(0 => "qualidadeAula", 1 => "QUALIDADE DA AULA");
+$arrItens_padrao[] = array(0 => "resultadoCurso", 1 => "RESULTADO DO CURSO");
+$arrItens_padrao[] = array(0 => "compromisso", 1 => "COMPROMISSO COM O APRENDIZADO");
+$arrItens_padrao[] = array(0 => "nps", 1 => "NPS - Net Promoter Score");
 ?>
 
 <fieldset>
