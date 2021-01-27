@@ -2257,7 +2257,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 	
 	$sql .=  $sql_corpo . $where.$gerente;
 	
-	echo $sql;
+//	echo $sql;
 	
     $result = $this -> query($sql);
 
@@ -2282,7 +2282,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 		  $sql .= " PIG.idPsaIntegranteGrupo IN ( $sql_id ) AND R.psaProfessor_idPsaProfessor = " . $valorPsaProfessor['idPsaProfessor'] . " 
           GROUP BY PIG.idPsaIntegranteGrupo
         ) AS total";
-//		echo $sql;
+		echo $sql;
        $rs = Uteis::executarQuery($sql);
         $colspan[$valorPsaProfessor['titulo']] = $rs[0]['total'];
       }
