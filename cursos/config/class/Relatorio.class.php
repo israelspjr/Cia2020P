@@ -2338,7 +2338,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					}
 	
 	              $rs = Uteis::executarQuery($sql);
-				  Uteis::pr($rs);
+				//  Uteis::pr($rs);
 				  $nomeProfessor = "";
 				  
                    for ($i = 0; $i < $colspan[$valorPsaProfessor['titulo']]; $i++) {
@@ -2479,7 +2479,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 						
 				if ($campos) {
 	          $html .= "<tr>";
-		//	  echo "id:".$idProfessor;
+		Uteis::pr($campos);
 			  foreach ($campos as $campo) {
 				  	if ($campo == 'grupo') {
 
