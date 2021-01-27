@@ -17,7 +17,7 @@ $arrItens = array();
 //PADRÃO
 $arrItens_padrao[] = array(0 => "aluno", 1 => "Aluno");
 $arrItens_padrao[] = array(0 => "dataReferencia", 1 => "Data da pesquisa");
-$arrItens_padrao[] = array(0 => "nomeProfessor", 1 => "Nome Professor");
+//$arrItens_padrao[] = array(0 => "nomeProfessor", 1 => "Nome Professor");
 
 $rsPsaProfessor = $PsaProfessor->selectPsaProfessor(" WHERE excluido = 0 AND inativo = 0 ");
 foreach($rsPsaProfessor as $valor) $arrItens_padrao[] = array(0 => $valor['titulo'], 1 => $valor['titulo']);
