@@ -2477,6 +2477,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 						
 				if ($campos) {
 	          $html .= "<tr>";
+			  echo "id:".$idProfessor;
 			  foreach ($campos as $campo) {
 				  if ($idProfessor == 0) { 
 				  	if ($campo == 'grupo') {
