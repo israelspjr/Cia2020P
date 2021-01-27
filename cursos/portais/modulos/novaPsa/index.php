@@ -23,7 +23,7 @@ $rsPsaProfessor = $PsaProfessor->selectPsaProfessor(" WHERE excluido = 0 AND ina
 foreach($rsPsaProfessor as $valor) $arrItens_padrao[] = array(0 => $valor['titulo'], 1 => $valor['titulo']);
 
 $rsPsaRegular = $PsaRegular->selectPsaRegular(" WHERE excluido = 0 AND inativo = 0 ");
-Uteis::pr($rsPsaRegular);
+//Uteis::pr($rsPsaRegular);
 //foreach($rsPsaRegular as $valor) $arrItens_padrao[] = array(0 => $valor['titulo'], 1 => $valor['titulo']);
 $arrItens_padrao[] = array(0 => "seuEngajamento", 1 => "SEU ENGAJAMENTO");
 $arrItens_padrao[] = array(0 => "divulgacao", 1 => "DIVULGAÇÃO");

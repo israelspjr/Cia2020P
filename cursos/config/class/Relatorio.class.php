@@ -2479,7 +2479,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 						
 				if ($campos) {
 	          $html .= "<tr>";
-		Uteis::pr($campos);
+	//	Uteis::pr($campos);
 			  foreach ($campos as $campo) {
 				  	if ($campo == 'grupo') {
 
