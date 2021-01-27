@@ -78,7 +78,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
           <p>
             <label>Data da pesquisa:</label>
             de
-            <input type="date" name="dataReferencia" id="dataReferencia" class="data" value="01/09/2018" />
+            <input type="date" name="dataReferencia" id="dataReferencia" class="data" value="2018-09-01"/> <!--01/09/2018" />-->
             a
             <input type="date" name="dataReferencia2" id="dataReferencia2" class="data" value=""  />
           </p>
