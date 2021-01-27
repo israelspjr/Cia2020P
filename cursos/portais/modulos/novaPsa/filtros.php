@@ -4,8 +4,8 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 //MONTA CAMPO
 $campos = $_POST['sel_lista_padrao'];
 $camposNome = $_POST['sel_lista_padraoNome'];
-array_unshift($campos,"Grupos");
-array_unshift($camposNome,"Grupos");
+array_unshift($campos,"grupo");
+array_unshift($camposNome,"Grupo");
 
 
  $rs = count($_POST['idGrupo']);

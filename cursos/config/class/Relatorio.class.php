@@ -2477,16 +2477,14 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 						
 				if ($campos) {
 	          $html .= "<tr>";
-			  echo "id:".$idProfessor;
+		//	  echo "id:".$idProfessor;
 			  foreach ($campos as $campo) {
-				  if ($idProfessor == 0) { 
 				  	if ($campo == 'grupo') {
 
               $html .= "<td >";
 			if (!$excel)  $html .= "  <img src='/cursos/images/cad.png' title='Ver grupo' onclick='abrirNivelPagina(this, \"/cursos/admin/modulos/relacionamento/grupo/cadastro.php?id=".$valor['idPlanoAcaoGrupo']."\",\"\" ,\"\" )'>";
 			  
 			  $html .= $valor['Grupo'] . "</td>";
-				  	}
 				  } else if ($campo == 'aluno') {
 				
 				 if ($valor['nomeAluno'] != ''){
