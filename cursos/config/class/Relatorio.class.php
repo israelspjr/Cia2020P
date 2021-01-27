@@ -2282,7 +2282,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 		  $sql .= " PIG.idPsaIntegranteGrupo IN ( $sql_id ) AND R.psaProfessor_idPsaProfessor = " . $valorPsaProfessor['idPsaProfessor'] . " 
           GROUP BY PIG.idPsaIntegranteGrupo
         ) AS total";
-		echo $sql;
+//		echo $sql;
        $rs = Uteis::executarQuery($sql);
         $colspan[$valorPsaProfessor['titulo']] = $rs[0]['total'];
       }
@@ -2338,6 +2338,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					}
 	
 	              $rs = Uteis::executarQuery($sql);
+				  Uteis::pr($rs);
 				  $nomeProfessor = "";
 				  
                    for ($i = 0; $i < $colspan[$valorPsaProfessor['titulo']]; $i++) {
