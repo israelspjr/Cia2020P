@@ -19,20 +19,20 @@ $arrItens_padrao[] = array(0 => "nomeProfessor", 1 => "Nome Professor");
 
 $rsPsaProfessor = $PsaProfessor->selectPsaProfessor(" WHERE excluido = 0 AND inativo = 0 AND tipo = 4");
 foreach($rsPsaProfessor as $valor) $arrItens_opcional[] = array(0 => $valor['titulo'], 1 => $valor['titulo']);
-$arrItens_padrao[] = array(0 => "seuEngajamento", 1 => "SEU ENGAJAMENTO");
-$arrItens_padrao[] = array(0 => "divulgacao", 1 => "DIVULGAÇÃO");
-$arrItens_padrao[] = array(0 => "aulasAoVivo", 1 => "AULAS AO VIVO");
-$arrItens_padrao[] = array(0 => "suporteAAprendizagem", 1 => "SUPORTE À APRENDIZAGEM");
-$arrItens_padrao[] = array(0 => "seuSucesso", 1 => "SEU SUCESSO");
-$arrItens_padrao[] = array(0 => "gestaoCurso", 1 => "GESTÃO DO CURSO");
+$arrItens_padrao[] = array(0 => "seuEngajamento", 1 => "Seu Engajamento");
+$arrItens_padrao[] = array(0 => "divulgacao", 1 => "Divulgação");
+$arrItens_padrao[] = array(0 => "aulasAoVivo", 1 => "Aulas Ao Vivo");
+$arrItens_padrao[] = array(0 => "suporteAAprendizagem", 1 => "Suporte à Aprendizagem");
+$arrItens_padrao[] = array(0 => "seuSucesso", 1 => "Seu Sucesso");
+$arrItens_padrao[] = array(0 => "gestaoCurso", 1 => "Gestão do Curso");
 $arrItens_padrao[] = array(0 => "nps", 1 => "NPS - Net Promoter Score");
 
 
 //OPCIONAIS
 $arrItens_opcional[] = array(0 => "email", 1 => "E-mail");
-$arrItens_opcional[] = array(0 => "qualidadeAula", 1 => "QUALIDADE DA AULA");
-$arrItens_opcional[] = array(0 => "resultadoCurso", 1 => "RESULTADO DO CURSO");
-$arrItens_opcional[] = array(0 => "compromisso", 1 => "COMPROMISSO COM O APRENDIZADO");
+$arrItens_opcional[] = array(0 => "qualidadeAula", 1 => "Qualidade da Aula");
+$arrItens_opcional[] = array(0 => "resultadoCurso", 1 => "Resultado do Curso");
+$arrItens_opcional[] = array(0 => "compromisso", 1 => "Compromisso com o Aprendizado");
 
 ?>
 
