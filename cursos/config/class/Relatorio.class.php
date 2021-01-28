@@ -2288,7 +2288,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
       }
  
     $PsaRegular = new PsaRegular();
-    $rsPsaRegular = $PsaRegular -> selectPsaRegular(" WHERE (excluido = 0 AND inativo = 0 AND tipo = ".$tipo.") OR (idPsa in (7,9, 10) ORDER BY ordem ");
+    $rsPsaRegular = $PsaRegular -> selectPsaRegular(" WHERE (excluido = 0 AND inativo = 0 AND tipo = ".$tipo.") OR (idPsa in (7,9, 10)) ORDER BY ordem ");
 		
 	$valorPsa = array();
     foreach ($rsPsaRegular as $valorPsaRegular) {
