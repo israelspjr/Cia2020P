@@ -72,7 +72,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
          <p>
             <label>Período de ACES respondidas (Não inclui ACES pendentes):</label>
             de
-            <input type="text" name="dataReferencia" id="dataReferencia" class="data" value="2018-09-01" />
+            <input type="text" name="dataReferencia" id="dataReferencia" class="data" value="01/09/2018" />
             a
             <input type="text" name="dataReferencia2" id="dataReferencia2" class="data" value="" />
           </p>
