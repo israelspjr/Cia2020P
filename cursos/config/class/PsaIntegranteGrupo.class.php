@@ -293,7 +293,7 @@ class PsaIntegranteGrupo extends Database {
 			$html .= "</div> <div class=\"linha-inteira\">&nbsp;</div>";
 		}
 
-		$rs = $PsaRegular -> selectPsaRegular(" WHERE inativo = 0 AND tipo = 4 ORDER BY idPSA DESC");
+		$rs = $PsaRegular -> selectPsaRegular(" WHERE inativo = 0 AND (tipo = 4 OR tipo = 2) ORDER BY idPSA DESC");
 		if ($rs) {
 			$html .= "<p><strong>Gerais:</strong></p>
 			<div class=\"linha-inteira\">";
