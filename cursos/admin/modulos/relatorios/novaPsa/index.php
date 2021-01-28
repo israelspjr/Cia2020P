@@ -37,7 +37,7 @@ $arrItens_opcional[] = array(0 => "email", 1 => "E-mail");
 ?>
 
 <fieldset>
-  <legend>Relatório de PSA Novo</legend>
+  <legend>Relatório ACES</legend>
   <img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar formuário" id="img_form_Grupos" 
 onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
   <div class="agrupa" id="div_form_Grupos">
@@ -70,7 +70,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
             </select>
         </p> 
          <p>
-            <label>Período de PSA respondida (Não inclui PSA pendentes):</label>
+            <label>Período de ACES respondidas (Não inclui ACES pendentes):</label>
             de
             <input type="text" name="dataReferencia" id="dataReferencia" class="data" value="01/09/2018" />
             a

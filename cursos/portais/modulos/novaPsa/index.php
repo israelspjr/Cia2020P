@@ -99,7 +99,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
           <input type="checkbox" value="1" id="mostrarComentarios" name="mostrarComentarios" />
           </p>
                    <p>
-          <Label>Mostrar PSA Pendentes </Label>
+          <Label>Mostrar ACES Pendentes </Label>
           <input type="checkbox" value="1" id="psaPendentes" name="psaPendentes" />
           </p>
         </div>
