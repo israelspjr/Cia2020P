@@ -2263,7 +2263,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 
     //CARREGA DADOS DE TABELAS RELACIONADAS DE FORMA DINAMICA (de acordo com a parametrização do sistema)
     $PsaProfessor = new PsaProfessor();
-    $rsPsaProfessor = $PsaProfessor -> selectPsaProfessor(" WHERE excluido = 0 AND inativo = 0 AND tipo = ".$tipo);
+    $rsPsaProfessor = $PsaProfessor -> selectPsaProfessor(" WHERE excluido = 0 /*AND inativo = 0*/ AND tipo = ".$tipo);
 //	Uteis::pr($rsPsaProfessor);
 
 	$totalNotas = 0;
