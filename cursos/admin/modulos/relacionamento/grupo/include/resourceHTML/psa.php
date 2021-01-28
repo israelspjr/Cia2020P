@@ -18,10 +18,10 @@ $idPlanoAcaoGrupo = $valor[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
 		<div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
 		<fieldset>
 			<legend>
-				Pequisa de satisfação
+				ACES
 			</legend>
             <p>
-             <label>Prazo de envio de PSA em dias:</label>
+             <label>Prazo de envio de ACES em dias:</label>
              <form id="form_Psa_aluno" class="validate" method="post" action="" onsubmit="return false">
               <input type="hidden" name="acao" id="acao"  value="atualizarPsa"/>
               <input type="hidden" name="idIntegranteGrupo" id="idIntegrantegrupo"  value="<?php echo $idIntegranteGrupo?>"/>

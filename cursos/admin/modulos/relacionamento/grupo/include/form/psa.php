@@ -21,7 +21,7 @@ if($idPsaIntegranteGrupo != '' && $idPsaIntegranteGrupo  > 0){
 <div class="conteudo_nivel">
   <div id="fechar_nivel" class="fechar" onclick="fecharNivel();" title="Fechar"></div>
   <fieldset>
-    <legend>Pesquisa de satisfação </legend>
+    <legend>ACES </legend>
     <form id="form_psa" class="validate" action="" method="post" onsubmit="return false" >
       <input type="hidden" name="idIntegranteGrupo" id="idIntegranteGrupo" value="<?php echo $idIntegranteGrupo ?>" />
       <input type="hidden" name="idPsaIntegranteGrupo" id="idPsaIntegranteGrupo" value="<?php echo $idPsaIntegranteGrupo ?>" />

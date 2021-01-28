@@ -302,7 +302,7 @@ class PsaIntegranteGrupo extends Database {
 				
 				<label for=\"check_PsaRegular_" . $valor['idPsa'] . "\">
 				
-				<input type=\"checkbox\" id=\"check_PsaRegular_" . $valor['idPsa'] . "\" name=\"check_PsaRegular[]\" value=\"" .$valor['idPsa']. "\" checked=\"checked\" />" . $valor['pergunta'] . "</label>
+				<input type=\"checkbox\" id=\"check_PsaRegular_" . $valor['idPsa'] . "\" name=\"check_PsaRegular[]\" value=\"" .$valor['idPsa']. "\" checked=\"checked\" />" . $valor['titulo'] ."<br>". $valor['pergunta'] . "</label>
 				<input type=\"hidden\" id=\"nota_" . $valor['idPsa'] . "\" name=\"nota[".$valor['idPsa']."]\" value=\"".$valor['tipo']."\">
 				</div>";
 			}
