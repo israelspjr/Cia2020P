@@ -29,21 +29,21 @@ if($idGerentes!="-"){
 }
 
 $dataReferencia1 = $_POST['dataReferencia'];
-//$dataReferencia1a = strtotime(str_replace('/', '-', $dataReferencia1)); 
+$dataReferencia1a = strtotime(str_replace('/', '-', $dataReferencia1)); 
 
-//$dataIni = "01/03/2015";
-//$dataIni = strtotime(str_replace('/', '-', $dataIni)); 
+$dataIni = "01/03/2015";
+$dataIni = strtotime(str_replace('/', '-', $dataIni)); 
 
-//if($dataReferencia1a == "" || ($dataReferencia1a < $dataIni))
-//    $dataReferencia = "01/03/2015";
-//else    
+if($dataReferencia1a == "" || ($dataReferencia1a < $dataIni))
+    $dataReferencia = "01/03/2015";
+else    
     $dataReferencia = $dataReferencia1;
 	
 	
 $dataReferencia2 = $_POST['dataReferencia2'];	
 
 
-//$dataReferencia2a = strtotime(str_replace('/', '-', $dataReferencia2)); 
+$dataReferencia2a = strtotime(str_replace('/', '-', $dataReferencia2)); 
 
     
 if($dataReferencia2a == "" || ($dataReferencia2a < $dataIni))   { 
@@ -78,6 +78,6 @@ $quesito = $_REQUEST['quesito'];
 		}
 	}
 
-echo $where . $gerente;
+//echo $where . $gerente;
 ?>
 
