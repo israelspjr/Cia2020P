@@ -23,7 +23,7 @@ $arrItens_padrao[] = array(0 => "observacoes", 1 => "Observações");
 ?>
 
 <fieldset>
-  <legend>Relatório de PSA Pendentes</legend>
+  <legend>Relatório de ACES Pendentes</legend>
   <img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar formuário" id="img_form_Grupos" 
 onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
   <div class="agrupa" id="div_form_Grupos">

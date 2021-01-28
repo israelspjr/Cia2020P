@@ -23,7 +23,7 @@ $arrItens_padrao[] = array(0 => "acao", 1 => "Ação");
    <input type="hidden" name="statusG" id="statusG" value="0" onchange="grupos();" checked="checked" >
     
 <fieldset>
-  <legend>Relatório de Reversão de PSA</legend>
+  <legend>Relatório de Reversão ACES</legend>
   <img src="<?php echo CAMINHO_IMG."menos.png"?>" title="Abrir/Fechar formuário" id="img_form_Grupos" 
 onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
   <div class="agrupa" id="div_form_Grupos">
