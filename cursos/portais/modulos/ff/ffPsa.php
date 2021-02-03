@@ -249,37 +249,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
               <textarea id="obsR" name="obsR" class=""></textarea></p> 
                    
            </div>
-      
-		      
-      <div id="5">
-      <hr>
-      	<p><strong>NPS - NET PROMOTER SCORE</strong></p>					
-				<p><strong>Considerando apenas a qualidade da Companhia de Idiomas, qual a probabilidade de você nos indicar a um amigo, se tivesse a oportunidade?</strong></p>
-				
-   <!--     <div class="tab2">-->
-        <input type="hidden" name="iten5" value="NPS" />
-				          
-             <p>
-              <label>Resposta:</label>
-               <select id="idNotasTipoNotaN" name="idNotasTipoNotaN" class="">
-               		<option value="">Selecione</option>
-                    <option value="8">1</option>
-                    <option value="9">2</option>
-                    <option value="10">3</option>
-                    <option value="11">4</option>
-                    <option value="12">5</option>
-                    <option value="13">6</option>
-                    <option value="14">7</option>
-                    <option value="15">8</option>
-                    <option value="16">9</option>
-                    <option value="17">10</option>
-                    <option value="18">Prefiro Não Avaliar</option>
-               </select> 
-             
-              <p><label>Observação:</label>
-              <textarea id="obsN" name="obsN" class=""></textarea></p> 
-       	</div>
-        
+       
          <div id="6">
       <hr>
       	<p><strong>SEU ENGAJAMENTO</strong></p>					
@@ -364,6 +334,35 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
              
               <p><label>Observação:</label>
               <textarea id="obsComp" name="obsSeuSucesso" class=""></textarea></p> 
+       	</div>
+        
+           <div id="5">
+      <hr>
+      	<p><strong>NPS - NET PROMOTER SCORE</strong></p>					
+				<p><strong>Considerando apenas a qualidade da Companhia de Idiomas, qual a probabilidade de você nos indicar a um amigo, se tivesse a oportunidade?</strong></p>
+				
+   <!--     <div class="tab2">-->
+        <input type="hidden" name="iten5" value="NPS" />
+				          
+             <p>
+              <label>Resposta:</label>
+               <select id="idNotasTipoNotaN" name="idNotasTipoNotaN" class="">
+               		<option value="">Selecione</option>
+                    <option value="8">1</option>
+                    <option value="9">2</option>
+                    <option value="10">3</option>
+                    <option value="11">4</option>
+                    <option value="12">5</option>
+                    <option value="13">6</option>
+                    <option value="14">7</option>
+                    <option value="15">8</option>
+                    <option value="16">9</option>
+                    <option value="17">10</option>
+                    <option value="18">Prefiro Não Avaliar</option>
+               </select> 
+             
+              <p><label>Observação:</label>
+              <textarea id="obsN" name="obsN" class=""></textarea></p> 
        	</div>
     
       <p align="center"><button class="Bblue" onclick="enviadoPsa();postForm('form_PSA', '<?php echo "modulos/ff/enviaPSA.php"?>', '')">Finalizar pesquisa de satisfação</button></p>
