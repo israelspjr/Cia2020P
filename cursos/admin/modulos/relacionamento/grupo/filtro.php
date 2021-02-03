@@ -120,6 +120,6 @@ $('#idGerente').attr('onchange', 'buscar()');
 $('#clientePj_idClientePj').attr('onchange','grupos()');
 $('#grupo_idGrupo').attr('onchange','Enviar()');
 buscar();
-grupos();
+//grupos();
 ativarForm();
 </script>
