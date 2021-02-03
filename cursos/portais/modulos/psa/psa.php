@@ -43,11 +43,8 @@ $nome = $Funcionario->getNome($idFuncionario);
 				$caminhoAtualizar =  "modulos/psa/psa.php?idPlanoAcaoGrupo=$idPlanoAcaoGrupo";
 				$ondeAtualiza = "";
 
-	//	$sql = "SELECT idIntegranteGrupo, dataEntrada, envioPsa FROM integranteGrupo WHERE clientePf_idClientePf = ". $_SESSION['idClientePf_SS']. " AND planoAcaoGrupo_idPlanoAcaoGrupo = ".$idPlanoAcaoGrupo;
-	//	$rs = Uteis::executarQuery($sql);
-	//	$idIntegranteGrupo = $rs[0]['idIntegranteGrupo'];
-	echo $PsaIntegranteGrupo -> selectPsaIntegranteAlunoTr("", 1,1, $_SESSION['idClientePf_SS']);
-//selectPsaIntegranteGrupoTr
+				echo $PsaIntegranteGrupo -> selectPsaIntegranteAlunoTr("", 1,1, $_SESSION['idClientePf_SS']);
+
 	?>
         </tbody>
       </table>
@@ -55,6 +52,5 @@ $nome = $Funcionario->getNome($idFuncionario);
   </fieldset>
 </div>
 <?php require_once ("../ff/ffPsa.php") ?>;
-<!--</div>
-</div>-->
+
 <script>//tabelaDataTable('tb_psa');</script> 

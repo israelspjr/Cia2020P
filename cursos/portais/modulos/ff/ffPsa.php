@@ -113,7 +113,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
 ?>
 
   <fieldset>  
-  <center><legend>Pesquisa de satisfação</legend></center>
+  <center><legend>ACES</legend></center>
   
           <form id="form_PSA" class="validate psa" action="" method="POST" onsubmit="return false">                        
             <input type="hidden" name="idGrupo" value="<?php echo $idGrupo?>">
@@ -125,7 +125,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
             <input type="hidden" name="idProfessor" value="<?php echo $idProfessor?>" />
             <input type="hidden" name="idIntegranteGrupo" value="<?php echo $idIntegranteGrupo?>" />
       
-        <div id="1">    
+   <!--     <div id="1">    
         
         <p><strong>PROFESSOR</strong></p>					
         <p><strong>Avalie seu dinamismo, pontualidade, foco no resultado, preparação das aulas, nível linguístico e cultural etc</strong></p>
@@ -152,12 +152,12 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
             
                         
             <p><label>Professor :</label>
-      <?php echo $IntegranteGrupo->select_professoresIntegranteGrupoPsa($idIntegranteGrupo, $professor_idProfessor, "")?> <!--"required")?>
+      <?php //echo $IntegranteGrupo->select_professoresIntegranteGrupoPsa($idIntegranteGrupo, $professor_idProfessor, "")?> <!--"required")?>
            <!-- <span class="placeholder">Campo obrigatório</span></p>-->
-           </p>
+     <!--      </p>
             <p><label>Observação:</label><textarea id="obsP" name="obsP"></textarea></p>              
 	
-          </div>
+          </div>-->
 				        
    
    <div id="2">
@@ -192,11 +192,11 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
 		      
    <div id="3">
       
-      	<p><strong>QUALIDADE DA AULA</strong></p>					
-				<p><strong>Avalie a qualidade de sua aula em relação à abordagem dos livros e áudios do curso, variedade de atividades/recursos extras, utilização do formulário VPG, revisões de conteúdo etc.</strong></p>
+      	<p><strong>DIVULGAÇÃO</strong></p>					
+				<p><strong>Você autoriza a Companhia de Idiomas a divulgar sua opinião nas redes sociais e site institucional?</strong></p>
 				
       <!--  <div class="tab2">-->
-        <input type="hidden" name="iten3" value="Qualidade" />
+        <input type="hidden" name="iten3" value="Divulgacao" />
 				          
              <p>
               <label>Resposta:</label>
@@ -222,11 +222,11 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
 		      
       <div id="4">
       
-      	<p><strong>RESULTADO DO CURSO</strong></p>					
-				<p><strong>Avalie a contribuição do professor para que tenha um resultado positivo no curso</strong></p>
+      	<p><strong>AULAS AO VIVO</strong></p>					
+				<p><strong>Aula ao Vivo (qualidade da aula; conhecimento, técnicas e interação do professor; recursos utilizados em aula)</strong></p>
 				
      <!--   <div class="tab2">-->
-        <input type="hidden" name="iten4" value="Resultado" />
+        <input type="hidden" name="iten4" value="AulasAoVivo" />
 				          
              <p>
               <label>Resposta:</label>
@@ -282,7 +282,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
         
          <div id="6">
       
-      	<p><strong>COMPROMISSO COM O CURSO</strong></p>					
+      	<p><strong>SEU ENGAJAMENTO</strong></p>					
 				<p><strong>Faça uma autoavaliação do seu comprometimento com o seu desenvolvimento no idioma (realização de tarefas fora da sala de aula indicadas pelo professor, busca de conteúdos de seu interesse, etc)</strong></p>
 				
    <!--     <div class="tab2">-->
@@ -308,6 +308,63 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
               <p><label>Observação:</label>
               <textarea id="obsComp" name="obsComp" class=""></textarea></p> 
        	</div>
+        
+          <div id="7">
+      
+      	<p><strong>SUPORTE À APRENDIZAGEM</strong></p>					
+				<p><strong>Suporte à Aprendizagem (conteúdos e fóruns do AVA - ambiente virtual de aprendizagem, grupo no whatsapp, aprendizado colaborativo via fóruns etc)</strong></p>
+				
+   <!--     <div class="tab2">-->
+        <input type="hidden" name="iten6" value="suporteAAprendizagem" />
+				          
+              <p>
+              <label>Resposta:</label>
+               <select id="idNotasTipoNotaComp" name="idNotasTipoNotaSuporte" class="">
+               		<option value="">Selecione</option>
+                    <option value="8">1</option>
+                    <option value="9">2</option>
+                    <option value="10">3</option>
+                    <option value="11">4</option>
+                    <option value="12">5</option>
+                    <option value="13">6</option>
+                    <option value="14">7</option>
+                    <option value="15">8</option>
+                    <option value="16">9</option>
+                    <option value="17">10</option>
+                    <option value="18">Prefiro Não Avaliar</option>
+               </select> 
+             
+              <p><label>Observação:</label>
+              <textarea id="obsComp" name="obsSuporte" class=""></textarea></p> 
+       	</div>
+          <div id="8">
+      
+      	<p><strong>SEU SUCESSO</strong></p>					
+				<p><strong>Quanto as Aulas ao Vivo e o Suporte à Aprendizagem contribuem para seus resultados de fluência?</strong></p>
+				
+   <!--     <div class="tab2">-->
+        <input type="hidden" name="iten6" value="seuSucesso" />
+				          
+              <p>
+              <label>Resposta:</label>
+               <select id="idNotasTipoNotaComp" name="idNotasTipoNotaSeuSucesso" class="">
+               		<option value="">Selecione</option>
+                    <option value="8">1</option>
+                    <option value="9">2</option>
+                    <option value="10">3</option>
+                    <option value="11">4</option>
+                    <option value="12">5</option>
+                    <option value="13">6</option>
+                    <option value="14">7</option>
+                    <option value="15">8</option>
+                    <option value="16">9</option>
+                    <option value="17">10</option>
+                    <option value="18">Prefiro Não Avaliar</option>
+               </select> 
+             
+              <p><label>Observação:</label>
+              <textarea id="obsComp" name="obsSeuSucesso" class=""></textarea></p> 
+       	</div>
     
       <p align="center"><button class="Bblue" onclick="enviadoPsa();postForm('form_PSA', '<?php echo "modulos/ff/enviaPSA.php"?>', '')">Finalizar pesquisa de satisfação</button></p>
       
@@ -319,9 +376,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
         
     </form>
       </div>
-   <!--   <div class="modal-footer">
-        <button type="button" class="button gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/ff/index.php', '#centro')">Fechar</button>
-       </div>-->
+
     </div>
   </div>
 </div>
@@ -338,14 +393,13 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
 	$('#4').hide();
 	$('#5').hide();
 	$('#6').hide();
+	$('#7').hide();
+	$('#8').hide();
 	
 		var x = Math.floor((Math.random() * 6) + 1);	
 	$('#'+x+'').show();	
 	}
 		
-//	PsaRand();	
-		
-	//$('#exampleModal2').modal('show');
 	
 	function enviadoPsa() {
 		alert("Pesquisa enviada com sucesso!");	
