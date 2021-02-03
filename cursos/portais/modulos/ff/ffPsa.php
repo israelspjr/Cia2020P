@@ -191,7 +191,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
       
 		      
    <div id="3">
-      
+      <hr>
       	<p><strong>DIVULGAÇÃO</strong></p>					
 				<p><strong>Você autoriza a Companhia de Idiomas a divulgar sua opinião nas redes sociais e site institucional?</strong></p>
 				
@@ -202,9 +202,9 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
               <label>Resposta:</label>
                <select id="idNotasTipoNotaA" name="idNotasTipoNotaA" class="">
                		<option value="">Selecione</option>
-                    <option value="8">1</option>
-                    <option value="9">2</option>
-                    <option value="10">3</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Nao">Não</option>
+                   <!-- <option value="10">3</option>
                     <option value="11">4</option>
                     <option value="12">5</option>
                     <option value="13">6</option>
@@ -212,7 +212,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
                     <option value="15">8</option>
                     <option value="16">9</option>
                     <option value="17">10</option>
-                    <option value="18">Prefiro Não Avaliar</option>
+                    <option value="18">Prefiro Não Avaliar</option>-->
                 </select> 
              
               <p><label>Observação:</label>
@@ -221,7 +221,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
       
 		      
       <div id="4">
-      
+      <hr>
       	<p><strong>AULAS AO VIVO</strong></p>					
 				<p><strong>Aula ao Vivo (qualidade da aula; conhecimento, técnicas e interação do professor; recursos utilizados em aula)</strong></p>
 				
@@ -252,7 +252,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
       
 		      
       <div id="5">
-      
+      <hr>
       	<p><strong>NPS - NET PROMOTER SCORE</strong></p>					
 				<p><strong>Considerando apenas a qualidade da Companhia de Idiomas, qual a probabilidade de você nos indicar a um amigo, se tivesse a oportunidade?</strong></p>
 				
@@ -281,7 +281,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
        	</div>
         
          <div id="6">
-      
+      <hr>
       	<p><strong>SEU ENGAJAMENTO</strong></p>					
 				<p><strong>Faça uma autoavaliação do seu comprometimento com o seu desenvolvimento no idioma (realização de tarefas fora da sala de aula indicadas pelo professor, busca de conteúdos de seu interesse, etc)</strong></p>
 				
@@ -310,7 +310,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
        	</div>
         
           <div id="7">
-      
+      <hr>
       	<p><strong>SUPORTE À APRENDIZAGEM</strong></p>					
 				<p><strong>Suporte à Aprendizagem (conteúdos e fóruns do AVA - ambiente virtual de aprendizagem, grupo no whatsapp, aprendizado colaborativo via fóruns etc)</strong></p>
 				
@@ -338,7 +338,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
               <textarea id="obsComp" name="obsSuporte" class=""></textarea></p> 
        	</div>
           <div id="8">
-      
+      <hr>
       	<p><strong>SEU SUCESSO</strong></p>					
 				<p><strong>Quanto as Aulas ao Vivo e o Suporte à Aprendizagem contribuem para seus resultados de fluência?</strong></p>
 				
