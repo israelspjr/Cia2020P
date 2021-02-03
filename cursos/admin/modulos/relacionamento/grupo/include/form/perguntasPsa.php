@@ -15,7 +15,7 @@ $idPlanoAcaoGrupo = $_GET['idPlanoAcaoGrupo'];
 $where = " WHERE psaIntegranteGrupo_idPsaIntegranteGrupo = ".$idPsaIntegranteGrupo." AND pp.inativo = 0 AND pp.excluido = 0 ORDER BY pp.idPsaProfessor ASC";
 $respostasProfessor = $RespostaPsaProfessor->selectRespostaPsaProfessor($where);
 
-$where = " WHERE psaIntegranteGrupo_idPsaIntegranteGrupo = ".$idPsaIntegranteGrupo." AND pp.inativo = 0 AND pp.excluido = 0 ORDER BY pp.idPsa ASC ";
+$where = " WHERE psaIntegranteGrupo_idPsaIntegranteGrupo = ".$idPsaIntegranteGrupo."  AND pp.excluido = 0 ORDER BY pp.idPsa ASC ";
 $respostasRegular = $RespostaPsaRegular->selectRespostaPsaRegular($where);
 Uteis::pr($respostasRegular);
 $rsPsaIntegranteGrupo = $PsaIntegranteGrupo->selectPsaIntegranteGrupo(" WHERE idPsaIntegranteGrupo = ".$idPsaIntegranteGrupo);
