@@ -81,7 +81,7 @@ class DisponibilidadeProfessor extends Database {
 	function deleteDisponibilidadeProfessorTotal($professor_idProfessor, $and) {
 		if ($professor_idProfessor != null) 
 		$sql = "DELETE FROM disponibilidadeProfessor WHERE professor_idProfessor = ".$professor_idProfessor. $and;
-	//	echo $sql;
+		echo $sql;
 		$result = $this -> query($sql, true);
 	}
 
