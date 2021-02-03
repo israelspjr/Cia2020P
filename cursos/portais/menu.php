@@ -125,7 +125,7 @@
 		}
 		
 		?>
-        <li style="display:none;" ><a id="psa" onclick="abrirNivelPagina(this, 'modulos/psa/form/perguntasPsa.php?id=<?php echo $idPsaIntegranteGrupo ?>&idIntegranteGrupo=<?php echo $idIntegranteGrupo ?>&idPlanoAcaoGrupo=<?php echo $_SESSION['idPlanoAcaoGrupo']?>', 'modulos/psa/index.php', '#centro');" >PSA</a></li>
+        <li style="display:none;" ><a id="psa" onclick="abrirNivelPagina(this, 'modulos/psa/form/perguntasPsa.php?id=<?php echo $idPsaIntegranteGrupo ?>&idIntegranteGrupo=<?php echo $idIntegranteGrupo ?>&idPlanoAcaoGrupo=<?php echo $_SESSION['idPlanoAcaoGrupo']?>', 'modulos/psa/index.php', '#centro');" >ACES</a></li>
         <?php	} 
 		
 					}?>                    
