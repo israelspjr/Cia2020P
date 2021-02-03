@@ -38,7 +38,7 @@
                     <?php if ($appN == 4) { ?>  
                     		<li>
 						<a class="" href="#" onclick="zerarCentro();fecharMenu(0);carregarModulo('/cursos/portais/modulos/psa/indexR.php', '#centro');">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Pesquisa de satisfação
+							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> ACES
 						</a>
 					</li>
                     
