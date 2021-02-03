@@ -15,9 +15,9 @@ $arrayRetorno = array();
 if($_REQUEST['acao']=="deletar"){
 		
 	$and = " AND diaSemana = ".$idDiaSemana;	
-	echo $and;
+//	echo $and;
 		
-	$DisponibilidadeProfessor->deleteDisponibilidadeProfessorTotal($id, $and);
+	$DisponibilidadeProfessor->deleteDisponibilidadeProfessorTotal($idProfessor, $and);
 	
 	$arrayRetorno['mensagem'] = MSG_CADDEL;
 //	$arrayRetorno['fecharNivel'] = true;
