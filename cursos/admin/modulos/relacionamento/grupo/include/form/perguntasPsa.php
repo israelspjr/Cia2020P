@@ -17,7 +17,7 @@ $respostasProfessor = $RespostaPsaProfessor->selectRespostaPsaProfessor($where);
 
 $where = " WHERE psaIntegranteGrupo_idPsaIntegranteGrupo = ".$idPsaIntegranteGrupo." AND pp.inativo = 0 AND pp.excluido = 0 ORDER BY pp.idPsa ASC ";
 $respostasRegular = $RespostaPsaRegular->selectRespostaPsaRegular($where);
-
+Uteis::pr($respostasRegular);
 $rsPsaIntegranteGrupo = $PsaIntegranteGrupo->selectPsaIntegranteGrupo(" WHERE idPsaIntegranteGrupo = ".$idPsaIntegranteGrupo);
 $finalizado = $rsPsaIntegranteGrupo[0]['finalizado'];
 $dataReferencia = Uteis::exibirData($rsPsaIntegranteGrupo[0]['dataReferencia']);
@@ -29,7 +29,7 @@ $dataReferencia = Uteis::exibirData($rsPsaIntegranteGrupo[0]['dataReferencia']);
   
   <fieldset>
   
-  <legend>Pesquisa de satisfação</legend>
+  <legend>ACES</legend>
   
   <?php 
   if($respostasProfessor){ 
