@@ -161,7 +161,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
 				        
    
    <div id="2">
-      
+      <!-- OK -->
       	<p><strong>GESTÃO DE CURSOS</strong></p>					
 				<p><strong>Avalie a gestão de seu curso pelas diversas áreas da Companhia de Idiomas (aulas assistidas, avaliações orais por Skype, seleção de material, esclarecimentos de dúvidas quanto à frequência e notas, boletos e etc)</strong></p>
 
@@ -191,6 +191,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
       
 		      
    <div id="3">
+   <!-- OK -->
       <hr>
       	<p><strong>DIVULGAÇÃO</strong></p>					
 				<p><strong>Você autoriza a Companhia de Idiomas a divulgar sua opinião nas redes sociais e site institucional?</strong></p>
@@ -202,8 +203,8 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
               <label>Resposta:</label>
                <select id="idNotasTipoNotaA" name="idNotasTipoNotaA" class="">
                		<option value="">Selecione</option>
-                    <option value="Sim">Sim</option>
-                    <option value="Nao">Não</option>
+                    <option value="1">Sim</option>
+                    <option value="2">Não</option>
                    <!-- <option value="10">3</option>
                     <option value="11">4</option>
                     <option value="12">5</option>

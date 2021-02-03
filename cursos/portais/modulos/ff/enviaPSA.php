@@ -132,18 +132,18 @@ $obsA = $_REQUEST['obsA'];
 
 if ($idNotasTipoNotaA != '') {
 	
-	$RespostaPsaRegular->setPsaRegularIdPsa(9);
+	$RespostaPsaRegular->setPsaRegularIdPsa(12);
 	$RespostaPsaRegular->setNotasTipoNotaIdNotasTipoNota($idNotasTipoNotaA);
 	$RespostaPsaRegular->setObs($obsA);
 	
 	
-	if ($idNotasTipoNotaA == 8) {
-		$nota = "1";
+	if ($idNotasTipoNotaA == 1) {
+		$nota = "Sim";
 		
-	} elseif($idNotasTipoNotaA == 9) {
-		$nota = "2";
+	} elseif($idNotasTipoNotaA == 2) {
+		$nota = "Não";
 	  	
-	} elseif($idNotasTipoNotaA == 10) {
+	} /*elseif($idNotasTipoNotaA == 10) {
 		$nota = "3";
 		
 	} elseif($idNotasTipoNotaA == 11) {
@@ -170,9 +170,9 @@ if ($idNotasTipoNotaA != '') {
 	} elseif($idNotasTipoNotaA == 18) {
 		$nota = "Prefiro não avaliar";
 		
-	}
+	}*/
 	
-$html = "<p>Item Avaliado = QUALIDADE DA AULA</p>";
+$html = "<p>Item Avaliado = Divulgação</p>";
 $html .= "<p>Nota:".$nota."</p>";
 $html .= "<p>Obs:".$obsA."</p>";
 
