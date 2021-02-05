@@ -29,6 +29,20 @@ $idIntegranteGrupo = $_REQUEST['idIntegranteGrupo'];
 $idNotasTipoNotaP = $_REQUEST['idNotasTipoNotaP'];
 $obsP = $_REQUEST['obsP'];
 
+	// Gerar PSA no sistema
+	
+	$year = date("Y");
+	$mes = date("m");
+	$dia = date("d");
+	
+	$PsaIntegranteGrupo->setIntegranteGrupoIdIntegranteGrupo($idIntegranteGrupo);
+	$PsaIntegranteGrupo->setDataReferencia($year."-".$mes."-".$dia);
+	$PsaIntegranteGrupo->setObs("Aces Portal Aluno");
+	$PsaIntegranteGrupo->setFinalizado(1);	
+	$PsaIntegranteGrupo->setDesistirPsa(0);
+	
+	$idPsa = $PsaIntegranteGrupo->addPsaIntegranteGrupo();
+
 if ($idNotasTipoNotaP != '') {
 	
 	
@@ -71,6 +85,9 @@ $html = "<p>Item Avaliado = Professor</p>";
 $html .= "<p>Professor: ".$Professor->getNome($_REQUEST['idProfessor']);
 $html .= "<p>Nota:".$nota."</p>";
 $html .= "<p>Obs:".$obsP."</p>";
+
+		$RespostaPsaRegular->setPsaIntegranteGrupoIdPsaIntegranteGrupo($idPsa);
+		$RespostaPsaRegular->addRespostaPsaRegular();
 
 }
 
@@ -120,9 +137,12 @@ if ($idNotasTipoNotaC != '') {
 		
 	}
 	
-$html = "<p>Item Avaliado = GESTÃO DE CURSOS</p>";
-$html .= "<p>Nota:".$nota."</p>";
-$html .= "<p>Obs:".$obsC."</p>";
+	$html = "<p>Item Avaliado = GESTÃO DE CURSOS</p>";
+	$html .= "<p>Nota:".$nota."</p>";
+	$html .= "<p>Obs:".$obsC."</p>";
+
+	$RespostaPsaRegular->setPsaIntegranteGrupoIdPsaIntegranteGrupo($idPsa);
+	$RespostaPsaRegular->addRespostaPsaRegular();
 
 }
 
@@ -143,38 +163,15 @@ if ($idNotasTipoNotaA != '') {
 	} elseif($idNotasTipoNotaA == 2) {
 		$nota = "Não";
 	  	
-	} /*elseif($idNotasTipoNotaA == 10) {
-		$nota = "3";
-		
-	} elseif($idNotasTipoNotaA == 11) {
-		$nota = "4";
-		
-	} elseif($idNotasTipoNotaA == 12) {
-		$nota = "5";
-		
-	} elseif($idNotasTipoNotaA == 13) {
-		$nota = "6";
-		
-	} elseif($idNotasTipoNotaA == 14) {
-		$nota = "7";
-		
-	} elseif($idNotasTipoNotaA == 15) {
-		$nota = "8";
-		
-	} elseif($idNotasTipoNotaA == 16) {
-		$nota = "9";
-		
-	} elseif($idNotasTipoNotaA == 17) {
-		$nota = "10";
-		
-	} elseif($idNotasTipoNotaA == 18) {
-		$nota = "Prefiro não avaliar";
-		
-	}*/
+	}
 	
-$html = "<p>Item Avaliado = Divulgação</p>";
-$html .= "<p>Nota:".$nota."</p>";
-$html .= "<p>Obs:".$obsA."</p>";
+	
+	$html2 = "<p>Item Avaliado = Divulgação</p>";
+	$html2 .= "<p>Nota:".$nota."</p>";
+	$html2 .= "<p>Obs:".$obsA."</p>";
+
+	$RespostaPsaRegular->setPsaIntegranteGrupoIdPsaIntegranteGrupo($idPsa);
+	$RespostaPsaRegular->addRespostaPsaRegular();
 
 }
 
@@ -223,20 +220,18 @@ if ($idNotasTipoNotaR != '') {
 		
 	}
 	
+	$html3 = "<p>Item Avaliado = AULAS AO VIVO</p>";
+	$html3 .= "<p>Nota:".$nota."</p>";
+	$html3 .= "<p>Obs:".$obsR."</p>";
 	
-	
-$html = "<p>Item Avaliado = AULAS AO VIVO</p>";
-$html .= "<p>Nota:".$nota."</p>";
-$html .= "<p>Obs:".$obsR."</p>";
+	$RespostaPsaRegular->setPsaIntegranteGrupoIdPsaIntegranteGrupo($idPsa);
+	$RespostaPsaRegular->addRespostaPsaRegular();
 
 }
 
 
 $idNotasTipoNotaN = $_REQUEST['idNotasTipoNotaN'];
 $obsN = $_REQUEST['obsN'];
-
-
-	
 
 if ($idNotasTipoNotaN != '') {
 	
@@ -279,12 +274,12 @@ $RespostaPsaRegular->setObs($obsN);
 		
 	}
 	
-	
-	
-	
-$html = "<p>Item Avaliado = NPS - NET PROMOTER SCORE</p>";
-$html .= "<p>Nota: ".$nota."</p>";
-$html .= "<p>Obs: ".$obsN."</p>";
+	$html4 = "<p>Item Avaliado = NPS - NET PROMOTER SCORE</p>";
+	$html4 .= "<p>Nota: ".$nota."</p>";
+	$html4 .= "<p>Obs: ".$obsN."</p>";
+
+	$RespostaPsaRegular->setPsaIntegranteGrupoIdPsaIntegranteGrupo($idPsa);
+	$RespostaPsaRegular->addRespostaPsaRegular();
 
 }
 
@@ -333,12 +328,12 @@ if ($idNotasTipoNotaComp != '') {
 		
 	}
 	
+	$html5 = "<p>Item Avaliado = SEU ENGAJAMENTO</p>";
+	$html5 .= "<p>Nota: ".$nota."</p>";
+	$html5 .= "<p>Obs: ".$obsComp."</p>";
 	
-	
-	
-$html = "<p>Item Avaliado = SEU ENGAJAMENTO</p>";
-$html .= "<p>Nota: ".$nota."</p>";
-$html .= "<p>Obs: ".$obsComp."</p>";
+	$RespostaPsaRegular->setPsaIntegranteGrupoIdPsaIntegranteGrupo($idPsa);
+	$RespostaPsaRegular->addRespostaPsaRegular();
 
 }
 
@@ -349,34 +344,17 @@ $html .= "<p>Obs: ".$obsComp."</p>";
 	<p>Aluno: $nomeAluno.</p>";
 
 	//COMUNICA O GERENTE SOBRE A FINALIZAÇÃO DA PSA
-
 		
-	$msg = $msg_base.$html;
+	$msg = $msg_base.$html.$html2.$html3.$html4.$html5;
 	
-	
-  	$paraQuem2 = array("nome"=> $gerente, "email" => $email);
+  	$paraQuem2 = array("nome"=> $gerente, "email" => "israel@companhiadeidiomas.com.br"); //$email);
 
 	$rs = Uteis::enviarEmail($assunto, $msg, $paraQuem2, "");
-	
-	
-	// Gerar PSA no sistema
-	
-	$year = date("Y");
-	$mes = date("m");
-	$dia = date("d");
-	
-	$PsaIntegranteGrupo->setIntegranteGrupoIdIntegranteGrupo($idIntegranteGrupo);
-	$PsaIntegranteGrupo->setDataReferencia($year."-".$mes."-".$dia);
-	$PsaIntegranteGrupo->setObs("Psa Dinamica");
-	$PsaIntegranteGrupo->setFinalizado(1);	
-	$PsaIntegranteGrupo->setDesistirPsa(0);
-	
-	$idPsa = $PsaIntegranteGrupo->addPsaIntegranteGrupo();
 	
 	// Cadastrar resultado
 	
 	//nota Professor
-	if ($idNotasTipoNotaP != '') {
+/*	if ($idNotasTipoNotaP != '') {
 		$RespostaPsaProfessor->setPsaIntegranteGrupoIdPsaIntegranteGrupo($idPsa);	
 		$RespostaPsaProfessor->setPsaProfessorIdPsaProfessor(2);	
 		$RespostaPsaProfessor->setProfessorIdProfessor($_REQUEST['idProfessor']);			
@@ -384,11 +362,10 @@ $html .= "<p>Obs: ".$obsComp."</p>";
 		$RespostaPsaProfessor->setObs($obsP);			
 	//nota Regular
 	} else  {
-		$RespostaPsaRegular->setPsaIntegranteGrupoIdPsaIntegranteGrupo($idPsa);
-		$RespostaPsaRegular->addRespostaPsaRegular();
+		
 	}
 	
-	
+	*/
 	
   
   $arrayRetorno['mensagem'] = "ACES enviada com sucesso, obrigado.";
