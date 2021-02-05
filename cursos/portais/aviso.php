@@ -105,7 +105,7 @@ echo $retorno['resultado'];
 				<div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Aulas ao Vivo*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
-echo $retorno['resultado'];
+echo $retorno['aulasAoVivo'];
 	?></div>
 					<div class="panel-body">
                     <div class="canvasG">
@@ -119,11 +119,11 @@ echo $retorno['resultado'];
 				<div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Suporte à Aprendizagem*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
-echo $retorno['resultado'];
+echo $retorno['suporteAAprendizagem'];
 	?></div>
 					<div class="panel-body">
                     <div class="canvasG">
-							<canvas id="SUPORTE À APRENDIZAGEM" width=250 height=250></canvas>
+							<canvas id="SUPORTE A APRENDIZAGEM" width=250 height=250></canvas>
 						</div>
 					</div>
 				</div>
@@ -132,7 +132,7 @@ echo $retorno['resultado'];
 				<div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Seu sucesso*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
-echo $retorno['resultado'];
+echo $retorno['seuSucesso'];
 	?></div>
 					<div class="panel-body">
                     <div class="canvasG">
@@ -145,7 +145,7 @@ echo $retorno['resultado'];
 				<div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Seu engajamento*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
-echo $retorno['resultado'];
+echo $retorno['compromisso'];
 	?></div>
 					<div class="panel-body">
                     <div class="canvasG">
@@ -414,6 +414,11 @@ function psa2(x) {
 psa2("PROFESSOR");
 psa2("QUALIDADE DA AULA");
 psa2("RESULTADO DO CURSO");
+psa2("AULAS AO VIVO");
+psa2("SUPORTE A APRENDIZAGEM");
+psa2("SEU SUCESSO");
+psa2("SEU ENGAJAMENTO");
+
 
 </script>
 <?php } ?>
