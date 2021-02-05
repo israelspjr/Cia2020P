@@ -70,7 +70,7 @@ echo $retorno['professor'];
 	?></div>
 					<div class="panel-body">
 						<div class="canvasG" >
-							<canvas id="PROFESSOR"  ></canvas>
+							<canvas id="PROFESSOR"  width=250 height=250></canvas>
 						</div>
 					</div>
 				</div>
