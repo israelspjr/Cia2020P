@@ -88,7 +88,7 @@ echo $retorno['qualidade'];
            </div>
             </div>
          
-			<div class="linha-inteira">
+			<div class="esquerda">
 				<div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Resultado do curso*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
@@ -101,7 +101,7 @@ echo $retorno['resultado'];
 					</div>
 				</div>
 			</div><!--/.row-->  
-            <div class="linha-inteira">
+            <div class="direita">
 				<div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Aulas ao Vivo*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
@@ -115,7 +115,7 @@ echo $retorno['resultado'];
 				</div>
 			</div><!--/.row-->    
             
-             <div class="linha-inteira">
+             <div class="esquerda">
 				<div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Suporte à Aprendizagem*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
@@ -128,7 +128,7 @@ echo $retorno['resultado'];
 					</div>
 				</div>
 			</div><!--/.row-->   
-               <div class="linha-inteira">
+               <div class="direita">
 				<div class="panel panel-default">
 				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Seu sucesso*</strong> <br />
 	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
