@@ -222,6 +222,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
       
 		      
       <div id="4">
+      <!-- OK -->
       <hr>
       	<p><strong>AULAS AO VIVO</strong></p>					
 				<p><strong>Aula ao Vivo (qualidade da aula; conhecimento, técnicas e interação do professor; recursos utilizados em aula)</strong></p>
@@ -252,6 +253,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
            </div>
        
          <div id="6">
+         <!-- OK -->
       <hr>
       	<p><strong>SEU ENGAJAMENTO</strong></p>					
 				<p><strong>Faça uma autoavaliação do seu comprometimento com o seu desenvolvimento no idioma (realização de tarefas fora da sala de aula indicadas pelo professor, busca de conteúdos de seu interesse, etc)</strong></p>
@@ -366,7 +368,7 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
               <textarea id="obsN" name="obsN" class=""></textarea></p> 
        	</div>
     
-      <p align="center"><button class="Bblue" onclick="enviadoPsa();postForm('form_PSA', '<?php echo "modulos/ff/enviaPSA.php"?>', '')">Finalizar pesquisa de satisfação</button></p>
+      <p align="center"><button class="Bblue" onclick="postForm('form_PSA', '<?php echo "modulos/ff/enviaPSA.php"?>', '')">Finalizar pesquisa de satisfação</button></p>
       
       
   </fieldset>
@@ -401,11 +403,11 @@ $rsContestacaoFF = $ContestacaoFF -> selectContestacaoFF($where);
 	}
 		
 	
-	function enviadoPsa() {
-		alert("Pesquisa enviada com sucesso!");	
+//	function enviadoPsa() {
+//		alert("Pesquisa enviada com sucesso!");	
 	//		$('#exampleModal2').modal('hide');
 		
-	}
+//	}
 		
   </script>
 <?php }?>

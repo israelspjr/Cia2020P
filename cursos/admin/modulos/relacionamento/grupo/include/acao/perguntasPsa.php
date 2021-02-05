@@ -1,10 +1,6 @@
 <?php 
 
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/Uteis.class.php");
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/RespostaPsaRegular.class.php");
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/RespostaPsaProfessor.class.php");
-//require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/class/PsaIntegranteGrupo.class.php");	
 
 $RespostaPsaProfessor = new RespostaPsaProfessor();
 $RespostaPsaRegular = new RespostaPsaRegular();	

@@ -166,10 +166,10 @@ $dataReferencia = Uteis::exibirData($rsPsaIntegranteGrupo[0]['dataReferencia']);
     
     	<p><button class="button gray" onclick="gravarRespostas()">Gravar respostas</button></p>
     
-      <p><button class="button blue" onclick="postForm('', '<?php echo CAMINHO_REL."grupo/include/acao/perguntasPsa.php"?>', '<?php echo "idPlanoAcaoGrupo=".$idPlanoAcaoGrupo."&idPsaIntegranteGrupo=".$idPsaIntegranteGrupo."&dataReferencia=".$dataReferencia."&acao=finalizar"?>')">Finalizar pesquisa de satisfação</button></p>
+      <p><button class="button blue" onclick="postForm('', '<?php echo CAMINHO_REL."grupo/include/acao/perguntasPsa.php"?>', '<?php echo "idPlanoAcaoGrupo=".$idPlanoAcaoGrupo."&idPsaIntegranteGrupo=".$idPsaIntegranteGrupo."&dataReferencia=".$dataReferencia."&acao=finalizar"?>')">Finalizar ACES</button></p>
       
     <?php }else{ ?>    
-      <p><button class="button blue" onclick="postForm('', '<?php echo CAMINHO_REL."grupo/include/acao/perguntasPsa.php"?>', '<?php echo "idPlanoAcaoGrupo=".$idPlanoAcaoGrupo."&idPsaIntegranteGrupo=".$idPsaIntegranteGrupo."&dataReferencia=".$dataReferencia."&acao=desfinalizar"?>')">Desfinalizar pesquisa de satisfação</button></p>
+      <p><button class="button blue" onclick="postForm('', '<?php echo CAMINHO_REL."grupo/include/acao/perguntasPsa.php"?>', '<?php echo "idPlanoAcaoGrupo=".$idPlanoAcaoGrupo."&idPsaIntegranteGrupo=".$idPsaIntegranteGrupo."&dataReferencia=".$dataReferencia."&acao=desfinalizar"?>')">Desfinalizar ACES</button></p>
   <?php }
     }?>
   
