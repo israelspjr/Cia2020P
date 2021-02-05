@@ -18,7 +18,7 @@ $arrItens_padrao[] = array(0 => "nomeProfessor", 1 => "Nome Professor");
 $rsPsaProfessor = $PsaProfessor->selectPsaProfessor(" WHERE excluido = 0 AND inativo = 0 AND tipo = 1");
 foreach($rsPsaProfessor as $valor) $arrItens_padrao[] = array(0 => $valor['titulo'], 1 => $valor['titulo']);
 
-$rsPsaRegular = $PsaRegular->selectPsaRegular(" WHERE (excluido = 0 AND inativo = 0 AND tipo = 1) OR (idPsa = 7) ");
+$rsPsaRegular = $PsaRegular->selectPsaRegular(" WHERE (excluido = 0 AND inativo = 0 AND tipo = 4) OR (idPsa = 7) ");
 foreach($rsPsaRegular as $valor) $arrItens_padrao[] = array(0 => $valor['titulo'], 1 => $valor['titulo']);
 
 
