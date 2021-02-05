@@ -347,7 +347,7 @@ if ($idNotasTipoNotaComp != '') {
 		
 	$msg = $msg_base.$html.$html2.$html3.$html4.$html5;
 	
-  	$paraQuem2 = array("nome"=> $gerente, "email" => "israel@companhiadeidiomas.com.br"); //$email);
+  	$paraQuem2 = array("nome"=> $gerente, "email" => $email);
 
 	$rs = Uteis::enviarEmail($assunto, $msg, $paraQuem2, "");
 	
