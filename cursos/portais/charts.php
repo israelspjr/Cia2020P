@@ -127,12 +127,64 @@ echo $retorno['resultado'];
 					</div>
 				</div>
 			</div><!--/.row-->
-   
-			<div class="esquerda">
+   			  <div class="direita">
+				<div class="panel panel-default">
+				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Aulas ao Vivo*</strong> <br />
+	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
+echo $retorno['aulasAoVivo'];
+	?></div>
+					<div class="panel-body">
+                    <div class="canvasG">
+							<canvas id="AULAS AO VIVO" width=250 height=250></canvas>
+						</div>
+					</div>
+				</div>
+			</div><!--/.row-->    
+            
+             <div class="esquerda">
+				<div class="panel panel-default">
+				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Suporte à Aprendizagem*</strong> <br />
+	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
+echo $retorno['suporteAAprendizagem'];
+	?></div>
+					<div class="panel-body">
+                    <div class="canvasG">
+							<canvas id="SUPORTE A APRENDIZAGEM" width=250 height=250></canvas>
+						</div>
+					</div>
+				</div>
+			</div><!--/.row-->   
+               <div class="direita">
+				<div class="panel panel-default">
+				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Seu sucesso*</strong> <br />
+	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
+echo $retorno['seuSucesso'];
+	?></div>
+					<div class="panel-body">
+                    <div class="canvasG">
+							<canvas id="SEU SUCESSO" width=250 height=250></canvas>
+						</div>
+					</div>
+				</div>
+			</div><!--/.row-->
+               <div class="linha-inteira">
+				<div class="panel panel-default">
+				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Seu engajamento*</strong> <br />
+	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
+echo $retorno['compromisso'];
+	?></div>
+					<div class="panel-body">
+                    <div class="canvasG">
+							<canvas id="SEU ENGAJAMENTO" width=250 height=250></canvas>
+						</div>
+					</div>
+				</div>
+			</div><!--/.row-->
+		<!--	<div class="esquerda">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 15px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Compromisso com o aprendizado*</strong> <br />
-	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $idProfessor, 4, $idNotasTipoNota, $quesito, 1);
-echo $retorno['compromisso'];
+	<?php //$retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $idProfessor, 4, $idNotasTipoNota, $quesito, 1);
+//echo $retorno['compromisso'];
 	?></div>
 					<div class="panel-body">
                     <div class="canvasG">
@@ -143,7 +195,7 @@ echo $retorno['compromisso'];
            </div>
 		   </div><hr> 
 		   </div>
-		  
+		  -->
 		   
        <div class="row">
 		<div class="col-lg-12">
@@ -390,7 +442,11 @@ psa2("PROFESSOR");
 psa2("GESTÃO DO CURSO");
 psa2("QUALIDADE DA AULA");
 psa2("RESULTADO DO CURSO");
-psa2("COMPROMISSO COM O APRENDIZADO");
+//psa2("COMPROMISSO COM O APRENDIZADO");
+psa2("AULAS AO VIVO");
+psa2("SUPORTE A APRENDIZAGEM");
+psa2("SEU SUCESSO");
+psa2("SEU ENGAJAMENTO");
 psa2("NPS - Net Promoter Score");
 </script>	
 
