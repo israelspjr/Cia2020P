@@ -100,7 +100,61 @@ echo $retorno['resultado'];
 						</div>
 					</div>
 				</div>
-			</div><!--/.row-->     
+			</div><!--/.row-->  
+            <div class="linha-inteira">
+				<div class="panel panel-default">
+				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Aulas ao Vivo*</strong> <br />
+	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
+echo $retorno['resultado'];
+	?></div>
+					<div class="panel-body">
+                    <div class="canvasG">
+							<canvas id="AULAS AO VIVO" width=250 height=250></canvas>
+						</div>
+					</div>
+				</div>
+			</div><!--/.row-->    
+            
+             <div class="linha-inteira">
+				<div class="panel panel-default">
+				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Suporte à Aprendizagem*</strong> <br />
+	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
+echo $retorno['resultado'];
+	?></div>
+					<div class="panel-body">
+                    <div class="canvasG">
+							<canvas id="SUPORTE À APRENDIZAGEM" width=250 height=250></canvas>
+						</div>
+					</div>
+				</div>
+			</div><!--/.row-->   
+               <div class="linha-inteira">
+				<div class="panel panel-default">
+				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Seu sucesso*</strong> <br />
+	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
+echo $retorno['resultado'];
+	?></div>
+					<div class="panel-body">
+                    <div class="canvasG">
+							<canvas id="SEU SUCESSO" width=250 height=250></canvas>
+						</div>
+					</div>
+				</div>
+			</div><!--/.row-->
+               <div class="linha-inteira">
+				<div class="panel panel-default">
+				<div class="panel-heading" style="padding-top:8px;padding-bottom:0px;    line-height: 16px;text-align: center;">Pesquisa de Satisfação de aluno: <strong>Seu engajamento*</strong> <br />
+	<?php $retorno = $Relatorio->relatorioPsa($gerente, $where, $campos, $camposNome, "", $mostrarComentarios, $_SESSION['idProfessor_SS'], 4, $idNotasTipoNota, $quesito, 1);
+echo $retorno['resultado'];
+	?></div>
+					<div class="panel-body">
+                    <div class="canvasG">
+							<canvas id="SEU ENGAJAMENTO" width=250 height=250></canvas>
+						</div>
+					</div>
+				</div>
+			</div><!--/.row-->
+                 
             
                     <div class="row" style="margin-left: 0px; margin-right: 0px;">
 			<div class="linha-inteira">
