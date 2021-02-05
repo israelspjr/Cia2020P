@@ -183,7 +183,7 @@ $obsR = $_REQUEST['obsR'];
 
 if ($idNotasTipoNotaR != '') {
 	
-	$RespostaPsaRegular->setPsaRegularIdPsa(10);
+	$RespostaPsaRegular->setPsaRegularIdPsa(13);
 	$RespostaPsaRegular->setNotasTipoNotaIdNotasTipoNota($idNotasTipoNotaR);
 	$RespostaPsaRegular->setObs($obsR);
 	
@@ -225,7 +225,7 @@ if ($idNotasTipoNotaR != '') {
 	
 	
 	
-$html = "<p>Item Avaliado = RESULTADO DO CURSO</p>";
+$html = "<p>Item Avaliado = AULAS AO VIVO</p>";
 $html .= "<p>Nota:".$nota."</p>";
 $html .= "<p>Obs:".$obsR."</p>";
 
@@ -336,14 +336,14 @@ if ($idNotasTipoNotaComp != '') {
 	
 	
 	
-$html = "<p>Item Avaliado = Compromisso com o Curso</p>";
+$html = "<p>Item Avaliado = SEU ENGAJAMENTO</p>";
 $html .= "<p>Nota: ".$nota."</p>";
 $html .= "<p>Obs: ".$obsComp."</p>";
 
 }
 
 
-	$assunto = "Resposta Dinamica de PSA portal do Aluno";
+	$assunto = "Resposta Dinamica de ACES portal do Aluno";
 	$msg_base = "<p>Período: $mes/$ano</p>
 	<p>Grupo: $nomeGrupo.</p>
 	<p>Aluno: $nomeAluno.</p>";
@@ -391,7 +391,7 @@ $html .= "<p>Obs: ".$obsComp."</p>";
 	
 	
   
-  $arrayRetorno['mensagem'] = "Pesquisa enviada com sucesso, obrigado.";
+  $arrayRetorno['mensagem'] = "ACES enviada com sucesso, obrigado.";
 
 $arrayRetorno['fecharNivel'] = true;
 

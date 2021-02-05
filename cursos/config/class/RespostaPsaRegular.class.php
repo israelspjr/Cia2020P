@@ -91,7 +91,7 @@ class RespostaPsaRegular extends Database {
 		$sql = "SELECT SQL_CACHE 
 		r.idRespostaPsaRegular, r.psaIntegranteGrupo_idPsaIntegranteGrupo, r.psaRegular_idPsa, r.notasTipoNota_idNotasTipoNota, r.obs, r.dataCadastro, pp.titulo, pp.pergunta, pp.tipo 
 		FROM respostaPsaRegular AS r INNER JOIN psaRegular pp ON pp.idPsa = r.psaRegular_idPsa " . $where;
-		echo $sql;
+		//echo $sql;
 		return $this -> executeQuery($sql);
 	}
     function selectPsaRegularNota($integrante, $periodo) {
