@@ -23,7 +23,9 @@ class FeedbackProfessor extends Database {
 	var $pergunta10;
 	var $pergunta11;
 	var $pergunta12;
-	var $pergunta13;		
+	var $pergunta13;
+	var $pergunta14;
+	var $pergunta15;		
 
 	// constructor
 	function __construct() {
@@ -50,7 +52,9 @@ class FeedbackProfessor extends Database {
 		$this -> pergunta10 = "NULL";
 		$this -> pergunta11 = "NULL";
 		$this -> pergunta12 = "NULL";		
-		$this -> pergunta13 = "NULL";		
+		$this -> pergunta13 = "NULL";
+		$this -> pergunta14 = "NULL";
+		$this -> pergunta15 = "NULL";		
 
 	}
 
@@ -151,12 +155,20 @@ class FeedbackProfessor extends Database {
 		$this -> pergunta13 = ($value) ? $this -> gravarBD($value) : "NULL";
 	}
 	
+	function setPergunta14($value) {
+		$this -> pergunta14 = ($value) ? $this -> gravarBD($value) : "NULL";
+	}
+	
+	function setPergunta15($value) {
+		$this -> pergunta15 = ($value) ? $this -> gravarBD($value) : "NULL";
+	}
+	
 
 	/**
 	 * addFeedbackProfessor() Function
 	 */
 	function addFeedbackProfessor() {
-		$sql = "INSERT INTO feedbackProfessor (professor_idProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10, pergunta11, pergunta12, pergunta13 ) VALUES ($this->professorIdProfessor, $this->anexo, $this->obs, $this->dataAvaliada, $this->grupoIdGrupo, $this->status, $this->quemAssistiu, $this->status2, $this->professorIdAssistido, $this->pergunta1, $this->pergunta2, $this->pergunta3, $this->pergunta4, $this->pergunta5, $this->pergunta6, $this->pergunta7, $this->pergunta8, $this->pergunta9, $this->pergunta10, $this->pergunta11, $this->pergunta12, $this->pergunta13)";
+		$sql = "INSERT INTO feedbackProfessor (professor_idProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10, pergunta11, pergunta12, pergunta13, pergunta14, pergunta15 ) VALUES ($this->professorIdProfessor, $this->anexo, $this->obs, $this->dataAvaliada, $this->grupoIdGrupo, $this->status, $this->quemAssistiu, $this->status2, $this->professorIdAssistido, $this->pergunta1, $this->pergunta2, $this->pergunta3, $this->pergunta4, $this->pergunta5, $this->pergunta6, $this->pergunta7, $this->pergunta8, $this->pergunta9, $this->pergunta10, $this->pergunta11, $this->pergunta12, $this->pergunta13, $this->pergunta14, $this->pergunta15)";
 //		echo $sql;
 		$result = $this -> query($sql, true);
 		return $this -> connect;
@@ -183,7 +195,7 @@ class FeedbackProfessor extends Database {
 	 * updateFeedbackProfessor() Function
 	 */
 	function updateFeedbackProfessor() {
-		$sql = "UPDATE feedbackProfessor SET professor_idProfessor = $this->professorIdProfessor, anexo = $this->anexo, obs = $this->obs, dataAvaliada = $this->dataAvaliada, grupo_idGrupo = $this->grupoIdGrupo, status = $this->status, quemAssistiu = $this->quemAssistiu, status2 = $this->status2, professor_idAssistido = $this->professorIdAssistido, pergunta1 = $this->pergunta1, pergunta2 = $this->pergunta2, pergunta3 = $this->pergunta3, pergunta4 = $this->pergunta4, pergunta5 = $this->pergunta5, pergunta6 = $this->pergunta6, pergunta7 = $this->pergunta7, pergunta8 = $this->pergunta8, pergunta9 = $this->pergunta9, pergunta10 = $this->pergunta10, pergunta11 = $this->pergunta11, pergunta12 = $this->pergunta12, pergunta13 = $this->pergunta13 WHERE idFeedbackProfessor = $this->idFeedbackProfessor";
+		$sql = "UPDATE feedbackProfessor SET professor_idProfessor = $this->professorIdProfessor, anexo = $this->anexo, obs = $this->obs, dataAvaliada = $this->dataAvaliada, grupo_idGrupo = $this->grupoIdGrupo, status = $this->status, quemAssistiu = $this->quemAssistiu, status2 = $this->status2, professor_idAssistido = $this->professorIdAssistido, pergunta1 = $this->pergunta1, pergunta2 = $this->pergunta2, pergunta3 = $this->pergunta3, pergunta4 = $this->pergunta4, pergunta5 = $this->pergunta5, pergunta6 = $this->pergunta6, pergunta7 = $this->pergunta7, pergunta8 = $this->pergunta8, pergunta9 = $this->pergunta9, pergunta10 = $this->pergunta10, pergunta11 = $this->pergunta11, pergunta12 = $this->pergunta12, pergunta13 = $this->pergunta13, pergunta14 = $this->pergunta14, pergunta15 = $this->pergunta15 WHERE idFeedbackProfessor = $this->idFeedbackProfessor";
 	//	echo $sql;
 		$result = $this -> query($sql, true);
 	}
@@ -192,7 +204,7 @@ class FeedbackProfessor extends Database {
 	 * selectFeedbackProfessor() Function
 	 */
 	function selectFeedbackProfessor($where = "WHERE 1") {
-		$sql = "SELECT SQL_CACHE idFeedbackProfessor, professor_idProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10, pergunta11, pergunta12, pergunta13 FROM feedbackProfessor " . $where;
+		$sql = "SELECT SQL_CACHE idFeedbackProfessor, professor_idProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10, pergunta11, pergunta12, pergunta13, pergunta14, pergunta15 FROM feedbackProfessor " . $where;
 		return $this -> executeQuery($sql);
 	}
 
@@ -202,7 +214,7 @@ class FeedbackProfessor extends Database {
 
 	function selectFeedbackProfessorTr($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "") {
 
-		$sql = "SELECT SQL_CACHE idFeedbackProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10, pergunta11, pergunta12, pergunta13 FROM feedbackProfessor " . $where;
+		$sql = "SELECT SQL_CACHE idFeedbackProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10, pergunta11, pergunta12, pergunta13, pergunta14, pergunta15 FROM feedbackProfessor " . $where;
 		$result = $this -> query($sql);
 		$Grupo = new Grupo();
 		$Professor = new Professor();
@@ -231,8 +243,8 @@ class FeedbackProfessor extends Database {
 				$pergunta11 = $valor['pergunta11'];
 				$pergunta12 = $valor['pergunta12'];
 				$pergunta13 = $valor['pergunta13'];
-
-				
+				$pergunta14 = $valor['pergunta14'];
+				$pergunta15 = $valor['pergunta15'];
 				
 				$idProfessor = $valor['quemAssistiu'];
 				
@@ -295,7 +307,7 @@ class FeedbackProfessor extends Database {
 	
 	function selectFeedbackProfessorTrProfessor($caminhoAbrir, $caminhoAtualizar, $ondeAtualiza, $where = "") {
 
-		$sql = "SELECT SQL_CACHE idFeedbackProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8 FROM feedbackProfessor " . $where;
+		$sql = "SELECT SQL_CACHE idFeedbackProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10, pergunta11, pergunta12, pergunta13, pergunta14, pergunta15 FROM feedbackProfessor " . $where;
 	//	echo $sql;
 		$result = $this -> query($sql);
 		$Grupo = new Grupo();
@@ -326,6 +338,8 @@ class FeedbackProfessor extends Database {
 				$pergunta11 = $valor['pergunta11'];
 				$pergunta12 = $valor['pergunta12'];
 				$pergunta13 = $valor['pergunta13'];
+				$pergunta14 = $valor['pergunta14'];
+				$pergunta15 = $valor['pergunta15'];
 		
 				if ($status == 1) {
 					$img = "<img src=\"".CAMINHO_IMG."excelente.png\" title=\" Aula excelente\" />";
