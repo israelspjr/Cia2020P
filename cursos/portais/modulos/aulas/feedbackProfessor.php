@@ -32,7 +32,9 @@ if( $idFeedbackProfessor ){
 	$pergunta10 = $valor[0]['pergunta10'];
 	$pergunta11 = $valor[0]['pergunta11'];
 	$pergunta12 = $valor[0]['pergunta12'];
-	$pergunta13 = $valor[0]['pergunta13'];		
+	$pergunta13 = $valor[0]['pergunta13'];	
+	$pergunta14 = $valor[0]['pergunta14'];	
+	$pergunta15 = $valor[0]['pergunta15'];		
 }
 
 ?>
@@ -98,6 +100,9 @@ function aguardarCarregamentoFeed(){
      
        <p><label>O que você faria de diferente?</label>
        <input type="text" id="pergunta4" name="pergunta4" value="<?php echo $pergunta4?>" style="    width: 500px;"/></p>
+       
+        <p><label>A aula foi invertida? Se sim, você percebeu que o aluno ou grupo se preparou para a aula?</label>
+       <input type="text" id="pergunta15" name="pergunta15" value="<?php echo $pergunta4?>" style="    width: 500px;"/></p>
      
       <p><label>Usou VPG ou algo semelhante ao VPG?</label>
        <input type="text" id="pergunta5" name="pergunta5" value="<?php echo $pergunta5?>" style="    width: 500px;" /></p>
@@ -122,9 +127,13 @@ function aguardarCarregamentoFeed(){
 
       <p><label>Professor está usando o idioma-alvo durante toda a aula? Caso não, em que momentos ele usa o português?</label>
       <input type="text" id="pergunta8" name="pergunta12" value="<?php echo $pergunta12?>" style="    width: 500px;"/></p>
+      
+         <p><label>Caso a aula seja em grupo, foi possível perceber algum desnível entre os alunos? </label>
+       <input type="text" id="pergunta14" name="pergunta14" value="<?php echo $pergunta14?>" style="    width: 500px;"/></p>
 
-      <p><label>O material está adequado ao nível dos alunos? Há desnível grande entre eles?</label>
+  <!--    <p><label>O material está adequado ao nível dos alunos? Há desnível grande entre eles?</label>
        <input type="text" id="pergunta8" name="pergunta13" value="<?php echo $pergunta13?>" style="    width: 500px;"/></p>
+   -->
       <p>
       
           <p>

@@ -84,7 +84,9 @@ if($_POST['acao']=="deletar"){
 	$FeedbackProfessor->setPergunta10($_POST['pergunta10']);
 	$FeedbackProfessor->setPergunta11($_POST['pergunta11']);
 	$FeedbackProfessor->setPergunta12($_POST['pergunta12']);
-	$FeedbackProfessor->setPergunta13($_POST['pergunta13']);			
+	$FeedbackProfessor->setPergunta13($_POST['pergunta13']);	
+	$FeedbackProfessor->setPergunta14($_POST['pergunta14']);
+	$FeedbackProfessor->setPergunta15($_POST['pergunta15']);		
 
 	
 	

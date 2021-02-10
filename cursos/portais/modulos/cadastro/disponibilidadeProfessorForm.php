@@ -4,6 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 $DisponibilidadeProfessor = new DisponibilidadeProfessor();
 
 $idDisponibilidadeProfessor = $_REQUEST['id'];
+
 	
 if($idDisponibilidadeProfessor){
 	
@@ -70,7 +71,7 @@ if($idDisponibilidadeProfessor){
       <div class="linha-inteira">
         <p>
           <button class="bBlue" 
-          onclick="enviadoOK();postForm('form_DisponibilidadeProfessor', '<?php echo "modulos/cadastro/disponibilidadeProfessorAcao.php?id=$idDisponibilidadeProfessor"?>')">Salvar</button>
+          onclick="postForm('form_DisponibilidadeProfessor', '<?php echo "modulos/cadastro/disponibilidadeProfessorAcao.php?id=$idDisponibilidadeProfessor"?>')">Salvar</button>
            <button class="button gray" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/cadastro/disponibilidadeProfessor.php', '#centro');">Fechar</button>
           
         </p>
