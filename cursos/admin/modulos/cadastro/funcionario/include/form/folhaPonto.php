@@ -336,11 +336,11 @@ if($idFolhaPonto){
   
      	<button class="button gray" onclick="gravar()" >Gravar</button>
         
-        <?php if( $_SESSION['idFuncionario_SS'] == 33 ) {?>
+        <?php //if( $_SESSION['idFuncionario_SS'] == 33 ) {?>
                
 	    	<button class="button blue" onclick="finalizarProfessor('1');" >Finalizar</button>
         
-        <?php } ?>
+        <?php //} ?>
       </div>
         </div>
         <div class="esquerda">
