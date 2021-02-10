@@ -18,9 +18,14 @@ if($idFolhaPonto){
 	$saldoInicial =  $valorFolhaPonto[0]['saldoInicial'];
 	
 	$tipoSaldoInicial =$valorFolhaPonto[0]['tipoSaldoInicial'];
+	if ($tipoSaldoInicial == 1) {
+		$saldoInicial = -1 * $saldoInicial;	
+	}
+
 	echo $saldoInicial;
 	echo "<hr>";
 	echo $tipoSaldoInicial;
+		
 //	$saldoFinal = $valorFolhaPonto[0]['saldoFinal'];
 //	$tipoSaldoFinal = $valorFolhaPonto[0]['tipoSaldoFinal'];
 
