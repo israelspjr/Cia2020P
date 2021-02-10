@@ -192,7 +192,7 @@ class DisponibilidadeProfessor extends Database {
 
 						$onclick = " onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "form/disponibilidadeProfessor.php?horaInicio=" . ($pxIni * 2) . "&horaFim=" . ($horaInicio * 2) . "&diaSemana=" . $diaSemana . "&idProfessor=" . $idProfessor . "', '$caminhoAtualizar', '#div_disponibilidade_professor');\" ";
 						} else {
-						$onclick = " onclick=\"zerarCentro();carrregarModulo('" . $caminhoAbrir . "disponibilidadeProfessorForm.php?horaInicio=" . ($pxIni * 2) . "&horaFim=" . ($horaInicio * 2) . "&diaSemana=" . $diaSemana . "&idProfessor=" . $idProfessor . "',  '#centro');\" ";
+						$onclick = " onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "disponibilidadeProfessorForm.php?horaInicio=" . ($pxIni * 2) . "&horaFim=" . ($horaInicio * 2) . "&diaSemana=" . $diaSemana . "&idProfessor=" . $idProfessor . "',  '#centro');\" ";
 						
 							
 						}
