@@ -18,6 +18,9 @@ if($idFolhaPonto){
 	$saldoInicial =  $valorFolhaPonto[0]['saldoInicial'];
 	
 	$tipoSaldoInicial =$valorFolhaPonto[0]['tipoSaldoInicial'];
+	echo $saldoInicial;
+	echo "<hr>";
+	echo $tipoSaldoInicial;
 //	$saldoFinal = $valorFolhaPonto[0]['saldoFinal'];
 //	$tipoSaldoFinal = $valorFolhaPonto[0]['tipoSaldoFinal'];
 
