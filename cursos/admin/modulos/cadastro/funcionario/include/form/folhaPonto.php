@@ -344,11 +344,11 @@ if($idFolhaPonto){
   
      	<button class="button gray" onclick="gravar()" >Gravar</button>
         
-        <?php //if( $_SESSION['idFuncionario_SS'] == 33 ) {?>
+        <?php if( $_SESSION['idFuncionario_SS'] == 33 ) {?>
                
 	    	<button class="button blue" onclick="finalizarProfessor('1');" >Finalizar</button>
         
-        <?php //} ?>
+        <?php } ?>
       </div>
         </div>
         <div class="esquerda">
@@ -359,9 +359,9 @@ if($idFolhaPonto){
          Tipo de Saldo: <?php if($tipoSaldoFinal ==0) { echo "Crédito"; } else { echo "Débito"; } ?>
          
 		 
-		 <?php //if( $_SESSION['idFuncionario_SS'] == 33 ) {?>
+		 <?php if( $_SESSION['idFuncionario_SS'] == 33 ) {?>
     		<button class="button blue" onclick="finalizarProfessor('0');" >Desfinalizar</button>
-        <?php //} ?>
+        <?php } ?>
         <div style="float: right;"><label>Data de Finalização pelo Fincanceiro: </label><?php echo "<strong>".Uteis::exibirData($dataFinalizada)."</strong><br>"; ?></div>
         
     <?php }?>
