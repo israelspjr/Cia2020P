@@ -25,10 +25,16 @@ $arrItens_padrao[] = array(0 => "pergunta5", 1 => "Usou VPG ou algo semelhante a
 $arrItens_padrao[] = array(0 => "pergunta6", 1 => "Alunos estavam envolvidos com a aula?");
 $arrItens_padrao[] = array(0 => "pergunta7", 1 => "A aula foi dinâmica e alegre?");
 $arrItens_padrao[] = array(0 => "pergunta8", 1 => "Prof usou diferentes recursos?");
+$arrItens_padrao[] = array(0 => "pergunta9", 1 => "A aula começou e terminou no horário?");
+$arrItens_padrao[] = array(0 => "pergunta10", 1 => "Como é o TTT (Teacher Talking Time)? Alto demais ou adequado dentro da proporção ideal de 70 (alunos)/30 (professor)?");
+$arrItens_padrao[] = array(0 => "pergunta11", 1 => "Como o professor trabalha a correção dos alunos?"); 
+$arrItens_padrao[] = array(0 => "pergunta12", 1 => "Professor está usando o idioma-alvo durante toda a aula? Caso não, em que momentos ele usa o português?"); 
+$arrItens_padrao[] = array(0 => "pergunta14", 1 => "Caso a aula seja em grupo, foi possível perceber algum desnível entre os alunos?"); 
+$arrItens_padrao[] = array(0 => "pergunta15", 1 => "A aula foi invertida? Se sim, você percebeu que o aluno ou grupo se preparou para a aula?");
 
 
 $arrItens_opcional[] = array(0 => "feedback", 1 => "Feedback");
-
+$arrItens_opcional[] = array(0 => "pergunta13", 1 => "O material está adequado ao nível dos alunos? Há desnível grande entre eles?"); 
 ?>
 
 <fieldset>
