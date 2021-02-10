@@ -1659,7 +1659,7 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor) {
 	  $Relatorio = new Relatorio();
 
 			$sql = "SELECT SQL_CACHE idFeedbackProfessor, professor_idProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10, pergunta11, pergunta12, pergunta13, pergunta14, pergunta15 FROM feedbackProfessor " . $where;
-			echo $sql;
+	//		echo $sql;
 		$result = $this -> query($sql);
 		$Grupo = new Grupo();
 		$Professor = new Professor();
@@ -1860,7 +1860,6 @@ WHERE
 				}
 			}
 		}
-	  
 	 $html_base = $Relatorio -> montaTb_avancado($campos, $camposNome, $excel, $colspan, $head);
      return $html_base . $html;	  
   }
