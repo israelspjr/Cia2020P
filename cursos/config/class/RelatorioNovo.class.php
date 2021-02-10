@@ -1658,8 +1658,8 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor) {
 	//	$campos2 = $campos;
 	  $Relatorio = new Relatorio();
 
-			$sql = "SELECT SQL_CACHE idFeedbackProfessor, professor_idProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8 FROM feedbackProfessor " . $where;
-		//	echo $sql;
+			$sql = "SELECT SQL_CACHE idFeedbackProfessor, professor_idProfessor, anexo, obs, dataAvaliada, grupo_idGrupo, status, quemAssistiu, status2, professor_idAssistido, pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10, pergunta11, pergunta12, pergunta13, pergunta14, pergunta15 FROM feedbackProfessor " . $where;
+			echo $sql;
 		$result = $this -> query($sql);
 		$Grupo = new Grupo();
 		$Professor = new Professor();
@@ -1684,6 +1684,15 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor) {
 				$pergunta6 = $valor['pergunta6'];
 				$pergunta7 = $valor['pergunta7'];
 				$pergunta8 = $valor['pergunta8'];
+				$pergunta9 = $valor['pergunta9'];
+				$pergunta10 = $valor['pergunta10'];
+				$pergunta11 = $valor['pergunta11'];
+				$pergunta12 = $valor['pergunta12'];
+				$pergunta13 = $valor['pergunta13'];
+				$pergunta14 = $valor['pergunta14'];
+				$pergunta15 = $valor['pergunta15'];
+				
+				
 		
 				$idProfessor = $valor['quemAssistiu'];
 				$nomeProfessorAssistiu = $Professor->getNome($valor['professor_idProfessor']);
@@ -1758,7 +1767,21 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor) {
 					$html .= "<td>".$pergunta7."</td>";
 				} else if ($campo == 'pergunta8') {
 					$html .= "<td>".$pergunta8."</td>";
-				}
+				} else if ($campo == 'pergunta9') {
+					$html .= "<td>".$pergunta9."</td>";
+				} else if ($campo == 'pergunta10') {
+					$html .= "<td>".$pergunta10."</td>";
+				} else if ($campo == 'pergunta11') {
+					$html .= "<td>".$pergunta11."</td>";
+				} else if ($campo == 'pergunta12') {
+					$html .= "<td>".$pergunta12."</td>";
+				} else if ($campo == 'pergunta13') {
+					$html .= "<td>".$pergunta13."</td>";
+				} else if ($campo == 'pergunta14') {
+					$html .= "<td>".$pergunta14."</td>";
+				} else if ($campo == 'pergunta15') {
+					$html .= "<td>".$pergunta15."</td>";
+				} 
 					
 					}
 				
