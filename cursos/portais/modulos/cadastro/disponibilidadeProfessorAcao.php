@@ -64,9 +64,12 @@ if($_POST['acao']=="deletar"){
 				$arrayRetorno['mensagem'] = MSG_CADNEW;	
 			}
 			
-			$arrayRetorno['fecharNivel'] = true;
+		//	$arrayRetorno['fecharNivel'] = true;
 		}
 	}
+		$arrayRetorno['ondeAtualizar'] = "#centro";
+		$arrayRetorno['pagina'] = "modulos/cadastro/disponibilidadeProfessor.php";	
+	
 }
 
 echo json_encode($arrayRetorno);
