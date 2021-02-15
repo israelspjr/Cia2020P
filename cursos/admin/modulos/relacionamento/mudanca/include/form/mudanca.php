@@ -211,7 +211,7 @@ function atualizaKitMaterialINF(){
 	var idKitMaterial = '<?php echo $idKitMaterial?>';
 	var idIdioma = '<?php echo $idIdioma?>';
 	var idNivelEstudo = $('#IdNivelEstudo').val();
-	var idFocoCurso = $('#idFocoCurso').val();
+	var idFocoCurso = $('#idFocoCursoIdioma').val();
 	if(idFocoCurso != 1){
 	   $("#kitMaterial").show();
        $("#nomeMaterial").show();     
@@ -228,7 +228,7 @@ function atualizaKitMaterialINF(){
 function atualizarCargaHoraria(){
 	var idIdioma = '<?php echo $idIdioma?>';
 	var idNivelEstudo = $('#IdNivelEstudo').val();
-	var idFocoCurso = $('#idFocoCurso').val();
+	var idFocoCurso = $('#idFocoCursoIdioma').val();
 
 	$.post('<?php echo CAMINHO_VENDAS?>planoAcao/include/acao/planoAcao.php',{acao:"atualizarCargaHoraria", idIdioma:idIdioma, idNivelEstudo:idNivelEstudo, idFocoCurso:idFocoCurso}, function(e){	
 		acaoJson(e)
@@ -290,7 +290,7 @@ $("#idKitMaterial option:selected").each(function() {
   });
   var idIdioma = '<?php echo $idIdioma?>';
   var idNivelEstudo = $('#IdNivelEstudo').val();
-  var idFocoCurso = $('#idFocoCurso').val();
+  var idFocoCurso = $('#idFocoCursoIdioma').val();
   if(kit==""){  
   $("#idKitMaterial option:selected").each(function() {
       idKitMaterial = $(this).val();
