@@ -215,7 +215,7 @@ function atualizaKitMaterialINF(){
 	if(idFocoCurso != 1){
 	   $("#kitMaterial").show();
        $("#nomeMaterial").show();     
-	$.post('<?php echo CAMINHO_VENDAS?>planoAcao/include/acao/planoAcao.php',{acao:"atualizaKitMaterialINF", idIdioma:idIdioma, idNivelEstudo:idNivelEstudo, idFocoCurso:idFocoCurso, idKitMaterial:idKitMaterial}, function(e){
+	$.post('<?php echo CAMINHO_VENDAS?>planoAcao/include/acao/planoAcao.php',{acao:"atualizaKitMaterialINF", idIdioma:idIdioma, idNivelEstudo:idNivelEstudo, idFocoCurso:idFocoCurso}, function(e){
 		$('#div_form_PlanoAcao #kitMaterial').html(e);
 	});
 	}else{
