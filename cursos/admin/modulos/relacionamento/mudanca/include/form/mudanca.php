@@ -125,11 +125,12 @@ $tipoHora = strlen($horasPrograma) == 6 ? "checked" : "";
 <input type="radio" name="tipoMaterial" id="tipoMaterial" class="required" value="1" <?php if($tipoMaterial == 1) { echo "checked= 'checked'"; } ?> /  />NÃO <br />      	
 </p>
         <p>
-          <label>Foco do curso:</label>
+       <div id="focoDoCurso">   <label>Foco do curso:</label>
           <?php $sql = " INNER JOIN focoCursoIdioma AS FI ON FI.focoCurso_idFocoCurso = F.idFocoCurso
     INNER JOIN idioma AS I ON I.idIdioma = FI.idioma_idIdioma AND I.idIdioma = ".$idIdioma;		
     echo $FocoCurso->selectFocoCursoSelect("required inf", $idFocoCurso, $sql) ?>
           <span class="placeholder">Campo obrigatório</span></p>
+          </div>
          <p>  
         <div id="kitMaterial"></div>
         </p>
@@ -197,10 +198,11 @@ $tipoHora = strlen($horasPrograma) == 6 ? "checked" : "";
 <script>
 
 function focoDoCurso(){
+	$('#focoDoCurso').html('');	
   var idIdioma = $('#idIdioma').val();
 
     $.post('<?php echo CAMINHO_VENDAS?>planoAcao/include/acao/planoAcao.php',{acao:"focoDoCurso", idIdioma:idIdioma}, function(e){
-    $('#div_form_PlanoAcao #focoDoCurso').html(e);
+    $('#focoDoCurso').html(e);
     }); 
 //   Multifuncao();
 }
