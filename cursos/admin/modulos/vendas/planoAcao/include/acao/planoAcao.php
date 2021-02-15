@@ -25,7 +25,7 @@ if($_POST['acao'] == 'atualizaKitMaterialINF'){
         AND INF.nivelEstudo_IdNivelEstudo = ".$idNivelEstudo."
         AND INF.focoCurso_idFocoCurso = ".$idFocoCurso."
         AND MD.inativo = 0 AND MD.excluido = 0
-AND INF.idioma_idIdioma = ".$idIdioma."";
+		AND INF.idioma_idIdioma = ".$idIdioma."";
 
 	$rs = $MaterialDidatico->selectJoin($sql);
     foreach ($rs as $valor) {
