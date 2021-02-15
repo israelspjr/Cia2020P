@@ -69,6 +69,7 @@ $tipoHora = strlen($horasPrograma) == 6 ? "checked" : "";
       <input type="hidden" name="grupo_idGrupo" id="grupo_idGrupo" value="<?php echo $idGrupo ?>" />
       <input type="hidden" name="idAnterior" id="idAnterior" value="<?php echo $idAnterior ?>" />
       <input type="hidden" name="proposta_idProposta" id="proposta_idProposta" value="<?php echo $proposta_idProposta ?>" />
+      <input type="hidden" name="idIdioma" id="idIdioma" value="<?php echo $idIdioma?>" />
       <input type="hidden" name="acao" id="acao" value="gerar" />
       <div class="esquerda"> <?php echo "<p>Id: <strong>".($idPlanoAcao ? $idPlanoAcao : "NOVO")."</strong></p>" ?>
         <?php if( !$idPlanoAcao ){?>
