@@ -17,7 +17,7 @@ $where = " WHERE dataExcluido IS NULL AND planoAcaoGrupo_idPlanoAcaoGrupo = " . 
 	</legend>
 <!--  <div class="menu_interno"><img src="<?php echo CAMINHO_IMG."novo.png";?>" title="cadastrar anotação" onclick="abrirNivelPagina(this, '<?php echo CAMINHO_REL."grupo/include/form/fechamentoGrupo.php?idPlanoAcaoGrupo=$idPlanoAcaoGrupo"?>', '<?php echo CAMINHO_REL."grupo/include/resourceHTML/fechamentoGrupo.php?id=".$idPlanoAcaoGrupo?>', '#div_fechamentoGrupo');" /></div>-->
   <div id="div_lista_fechamentoGrupo" class="lista">
-    <table id="tb_lista_fechamentoGrupo2" class="registros">
+    <table id="tb_lista_fechamentoGrupo3" class="registros">
       <thead>
         <tr>
           <th>Data</th>
@@ -40,4 +40,4 @@ $where = " WHERE dataExcluido IS NULL AND planoAcaoGrupo_idPlanoAcaoGrupo = " . 
     </table>
   </div>
 </fieldset>
-<script>tabelaDataTable('tb_lista_fechamentoGrupo2');</script> 
+<script>tabelaDataTable('tb_lista_fechamentoGrupo3');</script> 
