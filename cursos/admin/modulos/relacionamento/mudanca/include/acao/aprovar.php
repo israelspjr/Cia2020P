@@ -44,7 +44,7 @@ $ano = date('Y');
 
 	$PlanoAcao->setPropostaIdProposta($_POST['proposta_idProposta']);
 	$PlanoAcao->setGrupoIdGrupo($_POST['grupo_idGrupo']);		
-	$PlanoAcao->setFocoCursoIdFocoCurso($_POST['idFocoCurso']);
+	$PlanoAcao->setFocoCursoIdFocoCurso($_POST['idFocoCursoIdioma']);
 	$PlanoAcao->setNivelEstudoIdNivelEstudo($IdNivelEstudo);
 	$PlanoAcao->setKitMaterialIdKitMaterial($_POST['idKitMaterial']);
 	$PlanoAcao->setExpectativaInicioIdExpectativaInicio($_POST['idExpectativaInicio']);
