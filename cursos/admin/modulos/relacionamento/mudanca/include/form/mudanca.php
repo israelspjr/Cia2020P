@@ -201,7 +201,7 @@ function focoDoCurso(){
     $.post('<?php echo CAMINHO_VENDAS?>planoAcao/include/acao/planoAcao.php',{acao:"focoDoCurso", idIdioma:idIdioma}, function(e){
     $('#div_form_PlanoAcao #focoDoCurso').html(e);
     }); 
-   Multifuncao();
+//   Multifuncao();
 }
 
 function atualizaKitMaterialINF(){	
