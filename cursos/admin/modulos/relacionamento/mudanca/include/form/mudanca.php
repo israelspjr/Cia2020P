@@ -232,7 +232,7 @@ function atualizarCargaHoraria(){
 
 	$.post('<?php echo CAMINHO_VENDAS?>planoAcao/include/acao/planoAcao.php',{acao:"atualizarCargaHoraria", idIdioma:idIdioma, idNivelEstudo:idNivelEstudo, idFocoCurso:idFocoCurso}, function(e){	
 		acaoJson(e)
-		$('#div_form_PlanoAcao #kitMaterial').html(e);
+//		$('#div_form_PlanoAcao #kitMaterial').html(e);
 	});
 }
 
