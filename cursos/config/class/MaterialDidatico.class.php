@@ -247,7 +247,7 @@ class MaterialDidatico extends Database {
 		INNER JOIN
     relacionamentoINF AS INF ON MDINF.relacionamentoINF_idRelacionamentoINF = INF.idRelacionamentoINF
 		".$where;
-		echo $sql;
+	//	echo $sql;
 		return Uteis::executarQuery($sql);
 	}
 	
