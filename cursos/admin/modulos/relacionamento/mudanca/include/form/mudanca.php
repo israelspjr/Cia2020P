@@ -194,6 +194,16 @@ $tipoHora = strlen($horasPrograma) == 6 ? "checked" : "";
 </fieldset>
 
 <script>
+
+function focoDoCurso(){
+  var idIdioma = $('#idIdioma').val();
+
+    $.post('<?php echo CAMINHO_VENDAS?>planoAcao/include/acao/planoAcao.php',{acao:"focoDoCurso", idIdioma:idIdioma}, function(e){
+    $('#div_form_PlanoAcao #focoDoCurso').html(e);
+    }); 
+   Multifuncao();
+}
+
 function atualizaKitMaterialINF(){	
 	var idKitMaterial = '<?php echo $idKitMaterial?>';
 	var idIdioma = '<?php echo $idIdioma?>';
@@ -254,7 +264,8 @@ viraEditor('abordagemCurso');
 */
 
 function Multifuncao(){
- //   atualizaKitMaterialINF();
+	focoDoCurso();
+    atualizaKitMaterialINF();
     atualizarCargaHoraria();
 }
 
