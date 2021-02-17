@@ -814,7 +814,7 @@ class Professor extends Database
 		LEFT JOIN processoSeletivoProfessor AS PS ON PS.professor_idProfessor = ". $idProfessor."
 		WHERE P.excluido = 0 ";
 		
-		echo $sql2;
+	//	echo $sql2;
 		
 		if ($idIdioma != '') {
 			$sql2 .= " AND PS.idioma_idIdioma = ".$idIdioma;
