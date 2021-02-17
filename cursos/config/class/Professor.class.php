@@ -831,7 +831,7 @@ class Professor extends Database
 				//Analise Final
 				$analiseFinal = $valor2['analiseFinal'];
 				
-				$onclickF = "onclick=\"abrirNivelPagina(this, '" . CAMINHO_CAD . "professor/candidato/analiseFinal.php?id=" . $idProfessor . "', '', '')\" ";
+				$onclickF = "onclick=\"abrirNivelPagina(this, '" . CAMINHO_CAD . "professor/candidato/analiseFinal.php?id=" . $idProfessor . "', '" . $caminhoAtualizar . "', 'tr')\" ";
 				
 			}
 		}
