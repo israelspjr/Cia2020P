@@ -257,6 +257,7 @@ $terceiro = isset($_REQUEST['terceiro'])? $_REQUEST['terceiro']: 0;
           <th>Email</th>
           <th>Skype</th>
           <th>Grupos</th>
+          <th>Análise Final</th>
           <th>Status</th>
           <th>Obs</th>
         </tr>
@@ -274,6 +275,7 @@ $terceiro = isset($_REQUEST['terceiro'])? $_REQUEST['terceiro']: 0;
           <th>Email</th>
           <th>Skype</th>
           <th>Grupos</th>
+          <th>Análise Final</th>
           <th>Status</th>
           <th>Obs</th>
         </tr>

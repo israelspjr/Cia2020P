@@ -804,6 +804,37 @@ class Professor extends Database
                         $skype .= " <div class=\"destacaLinha\">" . $valorSkype['valor'] . "</div>";
                     }
                 }
+				
+				
+				// Analise final
+				if ($idIdioma != '') {
+			$and = ", PS.idioma_idIdioma ";	
+		}
+        $sql2 = "SELECT SQL_CACHE P.idProfessor, P.nome, P.presencial, P.online, P.indicadoPor, P.documentoUnico, P.dataCadastro, PS.idProcessoSeletivoProfessor, PS.regiaoAtende, PS.notaTeste, PS.contratoAssinado, PS.dataContrato, PS.integracao, PS.assistiu, PS.trilha, PS.dataTrilha, PS.dataIntegracao, PS.analiseFinal, PS.dataNivel, PS.idNivel, PS.oralFinal, PS.analiseC, PS.dataC, PS.dataP, PS.analiseP ".$and. " FROM professor AS P
+		LEFT JOIN processoSeletivoProfessor AS PS ON PS.professor_idProfessor = ". $idProfessor."
+		WHERE P.excluido = 0 ";
+		
+		echo $sql2;
+		
+		if ($idIdioma != '') {
+			$sql2 .= " AND PS.idioma_idIdioma = ".$idIdioma;
+		}
+		$sql2 .= " GROUP BY idProfessor";
+
+        $result2 = $this->query($sql2);
+		
+//		Uteis::pr($result);
+
+        if (mysqli_num_rows($result2) > 0) {
+
+            while ($valor2 = mysqli_fetch_array($result2)) {
+				//Analise Final
+				$analiseFinal = $valor2['analiseFinal'];
+				
+				$onclickF = "onclick=\"abrirNivelPagina(this, '" . CAMINHO_CAD . "professor/candidato/analiseFinal.php?id=" . $idProfessor . "', '" . $caminhoAtualizar . "?tr=1&idProfessor=" . $idProfessor . "&ordem=" . ($cont - 1) . "', 'tr')\" ";
+				
+			}
+		}
 
                 if ($apenasLinha !== false) {
 
@@ -816,6 +847,7 @@ class Professor extends Database
                     $col[] = $emails;
                     $col[] = $skype;
                     $col[] = $grupos;
+					$col[] = "<img src=\"" . CAMINHO_IMG . "editar.png\"/>".Uteis::exibirStatusA($analiseFinal);
                     $col[] = $ativo;
                     $col[] = $delete . $obs;
 
@@ -837,6 +869,8 @@ class Professor extends Database
                     $htmlver .= "<td>" . $skype . "</td>";
                     //GRUPOS
                     $htmlver .= "<td >" . $grupos . "</td>";
+					//Analise Final
+                    $htmlver .= "<td $onclickF><img src=\"" . CAMINHO_IMG . "editar.png\"/>" . Uteis::exibirStatusA($analiseFinal) . "</td>";
                     //STATUS
                     $htmlver .= "<td onclick >" . $ativo . "</td>";
                     $htmlver .= "<td >" . $delete . $obs . "</td>";
