@@ -309,7 +309,7 @@ $terceiro = isset($_REQUEST['terceiro'])? $_REQUEST['terceiro']: 0;
 		"bInfo": true,
 //		"order": [[1, "asc"]],
 		"bJQueryUI" : true,
-        "aoColumns" : [  null,  null, null, null, null, null, null, null, null ]
+        "aoColumns" : [  null,  null, null, null, null, null, null, null, null, null ]
   } );
 } );
 
