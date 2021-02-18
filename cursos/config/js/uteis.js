@@ -462,7 +462,7 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 	opt.bAutoWidth = true;
 	opt.aLengthMenu = [50, 100, -1],[50, 100, "Todos"];
 	opt.pageLength = 100;
-	opt.fixedHeader: true;
+	opt.fixedHeader = true;
 
 	if (tipo == 'simples') {
 
