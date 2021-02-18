@@ -2378,9 +2378,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 							 $html2P .= "<td ".$cor.">" .$nomeProfessor. "</td>";  
 							 
 							 if ($mostrarComentarios == 0) {                   
-                      $html2 .= "<center><td title=".$rs[$i]['obs']." ".$cor.">" . $valorAtual.$marcar. "</td></center>";
+                      $html2 .= "<td title=".$rs[$i]['obs']." ".$cor."><center>" . $valorAtual.$marcar. "</center></td>";
 					  } else {
-					  $html2 .= "<center><td ".$cor."><div style=\"width:168px;\" >" . $valorAtual.$marcar. "<br>".$rs[$i]['obs']."</div></td></center>";
+					  $html2 .= "<td ".$cor."><div style=\"width:168px;\" ><center>" . $valorAtual.$marcar. "<br>".$rs[$i]['obs']."</div></center></td>";
 					  }
 						
 						} else {
@@ -2393,9 +2393,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 							 $html2P .= "<td ".$cor.">" .$nomeProfessor. "</td>";  
 							 
 							  if ($mostrarComentarios == 0) {                   
-                      $html2 .= "<center><td title=\"".$rs[$i]['obs']."\" ".$cor.">" . $valorAtual.$marcar. "</td></center>";
+                      $html2 .= "<td title=\"".$rs[$i]['obs']."\" ".$cor."><center>" . $valorAtual.$marcar. "</center></td>";
 					  } else {
-					  $html2 .= "<center><td ".$cor."><div style=\"width:168px;\" >" . $valorAtual.$marcar. "<br>".$rs[$i]['obs']."</div></td></center>";
+					  $html2 .= "<center><td ".$cor."><div style=\"width:168px;\" ><center>" . $valorAtual.$marcar. "<br>".$rs[$i]['obs']."</div></center></td>";
 					  }
 						   
 					   }
@@ -2519,9 +2519,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 	
 					   if ($mostrarComentarios == 0) { 
-							 $html .= "<center><td title=".$notas[11]['obs']." ".$notas[11]['cor'].">".$notas[11]['valor'].$marcar. "</td></center>";                  
+							 $html .= "<td title=".$notas[11]['obs']." ".$notas[11]['cor']."><center>".$notas[11]['valor'].$marcar. "</center></td>";                  
 					 } else {
-					 		 $html .= "<center><td ".$notas[11]['cor'].">".$notas[11]['valor'].$marcar. "<br>".$notas[11]['obs']. "</td></center>";                  
+					 		 $html .= "<td ".$notas[11]['cor']."><center>".$notas[11]['valor'].$marcar. "<br>".$notas[11]['obs']. "</center></td>";                  
 					 }
 				  } else if ($campo == 'divulgacao') {
 	  				   if ($excel == false) {
@@ -2529,9 +2529,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 	
 					   if ($mostrarComentarios == 0) { 
-							 $html .= "<center><td title=\"".$notas[12]['obs']."\" ".$notas[12]['cor'].">".$notas[12]['valor'].$marcar. "</td></center>";                  
+							 $html .= "<td title=\"".$notas[12]['obs']."\" ".$notas[12]['cor']."><center>".$notas[12]['valor'].$marcar. "</center></td>";                  
 					 } else {
-					 		 $html .= "<center><td ".$notas[12]['cor'].">".$notas[12]['valor'].$marcar. "<br>".$notas[12]['obs']. "</td></center>";                  
+					 		 $html .= "<td ".$notas[12]['cor']."><center>".$notas[12]['valor'].$marcar. "<br>".$notas[12]['obs']. "</center></td>";                  
 					 }
 				  } else if ($campo == 'aulasAoVivo') {
 	  				   if ($excel == false) {
@@ -2539,9 +2539,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 	
 					   if ($mostrarComentarios == 0) { 
-							 $html .= "<center><td title=\"".$notas[13]['obs']."\" ".$notas[13]['cor'].">".$notas[13]['valor'].$marcar. "</td></center>";                  
+							 $html .= "<td title=\"".$notas[13]['obs']."\" ".$notas[13]['cor']."><center>".$notas[13]['valor'].$marcar. "</center></td>";                  
 					 } else {
-					 		 $html .= "<center><td ".$notas[13]['cor'].">".$notas[13]['valor'].$marcar. "<br>".$notas[13]['obs']. "</td></center>";                  
+					 		 $html .= "<td ".$notas[13]['cor']."><center>".$notas[13]['valor'].$marcar. "<br>".$notas[13]['obs']. "</center></td>";                  
 					 }
 				  } else if ($campo == 'suporteAAprendizagem') {
 	  				   if ($excel == false) {
@@ -2549,9 +2549,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 	
 					   if ($mostrarComentarios == 0) { 
-							 $html .= "<center><td title=\"".$notas[14]['obs']."\" ".$notas[14]['cor'].">".$notas[14]['valor'].$marcar. "</td></center>";                  
+							 $html .= "<td title=\"".$notas[14]['obs']."\" ".$notas[14]['cor']."><center>".$notas[14]['valor'].$marcar. "</center></td>";                  
 					 } else {
-					 		 $html .= "<center><td ".$notas[14]['cor'].">".$notas[14]['valor'].$marcar. "<br>".$notas[14]['obs']. "</td></center>";                  
+					 		 $html .= "<td ".$notas[14]['cor']."><center>".$notas[14]['valor'].$marcar. "<br>".$notas[14]['obs']. "</center></td>";                  
 					 }
 				  } else if ($campo == 'seuSucesso') {
 	  				   if ($excel == false) {
@@ -2559,9 +2559,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 	
 					   if ($mostrarComentarios == 0) { 
-							 $html .= "<center><td title=\"".$notas[15]['obs']."\" ".$notas[15]['cor'].">".$notas[15]['valor'].$marcar. "</td></center>";                  
+							 $html .= "<td title=\"".$notas[15]['obs']."\" ".$notas[15]['cor']."><center>".$notas[15]['valor'].$marcar. "</center></td>";                  
 					 } else {
-					 		 $html .= "<center><td ".$notas[15]['cor'].">".$notas[15]['valor'].$marcar. "<br>".$notas[15]['obs']. "</td></center>";                  
+					 		 $html .= "<td ".$notas[15]['cor']."><center>".$notas[15]['valor'].$marcar. "<br>".$notas[15]['obs']. "</center></td>";                  
 					 }
 				  } else if ($campo == 'GESTÃO DE CURSOS') {
 					   if ($excel == false) {
@@ -2569,9 +2569,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 					  
 		  			 if ($mostrarComentarios == 0) { 
-							 $html .= "<center><td title=\"".$notas[2]['obs']."\" ".$notas[2]['cor'].">".$notas[2]['valor'].$marcar. "</td></center>";                  
+							 $html .= "<td title=\"".$notas[2]['obs']."\" ".$notas[2]['cor']."><center>".$notas[2]['valor'].$marcar. "</center></td>";                  
 					 } else {
-					 		 $html .= "<center><td ".$notas[2]['cor'].">".$notas[2]['valor'].$marcar. "<br>".$notas[2]['obs']. "</td></center>";                  
+					 		 $html .= "<td ".$notas[2]['cor']."><center>".$notas[2]['valor'].$marcar. "<br>".$notas[2]['obs']. "</center></td>";                  
 					 }
 				  } else if ($campo == 'gestaoCurso') {
 					   if ($excel == false) {
@@ -2579,9 +2579,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 					  
 		  			 if ($mostrarComentarios == 0) { 
-							 $html .= "<center><td title=\"".$notas[8]['obs']."\" ".$notas[8]['cor'].">".$notas[8]['valor'].$marcar. "</td></center>";                  
+							 $html .= "<td title=\"".$notas[8]['obs']."\" ".$notas[8]['cor']."><center>".$notas[8]['valor'].$marcar. "</center></td>";                  
 					 } else {
-					 		 $html .= "<center><td ".$notas[8]['cor'].">".$notas[8]['valor'].$marcar. "<br>".$notas[8]['obs']. "</td></center>";                  
+					 		 $html .= "<td ".$notas[8]['cor']."><center>".$notas[8]['valor'].$marcar. "<br>".$notas[8]['obs']. "</center></td>";                  
 					 }
 				  } else if ($campo == 'QUALIDADE DA AULA') {
 	  				   if ($excel == false) {
@@ -2589,9 +2589,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 	
 					   if ($mostrarComentarios == 0) { 
-							 $html .= "<center><td title=\"".$notas[4]['obs']."\" ".$notas[4]['cor'].">".$notas[4]['valor'].$marcar. "</td></center>";                  
+							 $html .= "<td title=\"".$notas[4]['obs']."\" ".$notas[4]['cor']."><center>".$notas[4]['valor'].$marcar. "</center></td>";                  
 					 } else {
-					 		 $html .= "<center><td ".$notas[4]['cor'].">".$notas[4]['valor'].$marcar. "<br>".$notas[4]['obs']. "</td></center>";                  
+					 		 $html .= "<td ".$notas[4]['cor']."><center>".$notas[4]['valor'].$marcar. "<br>".$notas[4]['obs']. "</center></td>";                  
 					 }
 				  } else if ($campo == 'qualidadeAula') {
 	  				   if ($excel == false) {
@@ -2599,9 +2599,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 	
 					   if ($mostrarComentarios == 0) { 
-							 $html .= "<center><td title=\"".$notas[9]['obs']."\" ".$notas[9]['cor'].">".$notas[9]['valor'].$marcar. "</td></center>";                  
+							 $html .= "<td title=\"".$notas[9]['obs']."\" ".$notas[9]['cor']."><center>".$notas[9]['valor'].$marcar. "</center></td>";                  
 					 } else {
-					 		 $html .= "<center><td ".$notas[9]['cor'].">".$notas[9]['valor'].$marcar. "<br>".$notas[9]['obs']. "</td></center>";                  
+					 		 $html .= "<td ".$notas[9]['cor']."><center>".$notas[9]['valor'].$marcar. "<br>".$notas[9]['obs']. "</center></td>";                  
 					 }
 				  } else if ($campo == 'RESULTADO DO CURSO') {
 	  				   if ($excel == false) {
@@ -2609,9 +2609,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 	
 					   if ($mostrarComentarios == 0) { 
-							 $html .= "<center><td title=\"".$notas[5]['obs']."\" ".$notas[5]['cor'].">".$notas[5]['valor'].$marcar. "</td></center>";                  
+							 $html .= "<td title=\"".$notas[5]['obs']."\" ".$notas[5]['cor']."><center>".$notas[5]['valor'].$marcar. "</center></td>";                  
 					 } else {
-					 		 $html .= "<center><td ".$notas[5]['cor'].">".$notas[5]['valor'].$marcar. "<br>".$notas[5]['obs']. "</td></center>";                  
+					 		 $html .= "<td ".$notas[5]['cor']."><center>".$notas[5]['valor'].$marcar. "<br>".$notas[5]['obs']. "</center></td>";                  
 					 }
 				  } else if ($campo == 'resultadoCurso') {
 	  				   if ($excel == false) {
