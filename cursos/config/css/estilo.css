@@ -31,6 +31,12 @@ del {	text-decoration: line-through;}
 table {	border-collapse: collapse;	border-spacing: 0;}
 a{color:inherit;cursor:pointer;text-decoration:none;}
 
+#tb_lista_res {
+ 		position: fixed;
+        top: 3em;
+        right: 2em;
+        z-index: 100;	
+}
 
 /* Botão do menu*/
 @media (min-width: 768px) {
