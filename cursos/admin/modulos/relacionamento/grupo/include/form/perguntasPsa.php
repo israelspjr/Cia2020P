@@ -17,7 +17,7 @@ $respostasProfessor = $RespostaPsaProfessor->selectRespostaPsaProfessor($where);
 
 $where = " WHERE psaIntegranteGrupo_idPsaIntegranteGrupo = ".$idPsaIntegranteGrupo."  AND pp.excluido = 0 ORDER BY pp.idPsa ASC ";
 $respostasRegular = $RespostaPsaRegular->selectRespostaPsaRegular($where);
-Uteis::pr($respostasRegular);
+//Uteis::pr($respostasRegular);
 $rsPsaIntegranteGrupo = $PsaIntegranteGrupo->selectPsaIntegranteGrupo(" WHERE idPsaIntegranteGrupo = ".$idPsaIntegranteGrupo);
 $finalizado = $rsPsaIntegranteGrupo[0]['finalizado'];
 $dataReferencia = Uteis::exibirData($rsPsaIntegranteGrupo[0]['dataReferencia']);
@@ -98,8 +98,8 @@ $dataReferencia = Uteis::exibirData($rsPsaIntegranteGrupo[0]['dataReferencia']);
 
   
   $nps = $respostasRegular[0];
-  unset($respostasRegular[0]);
-  $respostasRegular[5] = $nps;
+// unset($respostasRegular[0]);
+//  $respostasRegular[5] = $nps;
   
   if($respostasRegular){ 
 	  foreach($respostasRegular as $valor){
