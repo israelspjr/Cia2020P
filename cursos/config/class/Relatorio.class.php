@@ -2378,7 +2378,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 							 $html2P .= "<td ".$cor.">" .$nomeProfessor. "</td>";  
 							 
 							 if ($mostrarComentarios == 0) {                   
-                      $html2 .= "<td title=\"".$rs[$i]['obs']."\" ".$cor.">" . $valorAtual.$marcar. "</td>";
+                      $html2 .= "<td title=".$rs[$i]['obs']." ".$cor.">" . $valorAtual.$marcar. "</td>";
 					  } else {
 					  $html2 .= "<td ".$cor."><div style=\"width:168px;\" >" . $valorAtual.$marcar. "<br>".$rs[$i]['obs']."</div></td>";
 					  }
@@ -2527,7 +2527,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 	
 					   if ($mostrarComentarios == 0) { 
-							 $html .= "<td title=\"".$notas[11]['obs']."\" ".$notas[11]['cor'].">".$notas[11]['valor'].$marcar. "</td>";                  
+							 $html .= "<td title=".$notas[11]['obs']." ".$notas[11]['cor'].">".$notas[11]['valor'].$marcar. "</td>";                  
 					 } else {
 					 		 $html .= "<td ".$notas[11]['cor'].">".$notas[11]['valor'].$marcar. "<br>".$notas[11]['obs']. "</td>";                  
 					 }
