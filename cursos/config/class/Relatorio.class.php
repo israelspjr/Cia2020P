@@ -2619,9 +2619,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 	
 					   if ($mostrarComentarios == 0) { 
-							 $html .= "<center><td title=\"".$notas[10]['obs']."\" ".$notas[10]['cor'].">".$notas[10]['valor'].$marcar. "</td></center>";                  
+							 $html .= "<td title=\"".$notas[10]['obs']."\" ".$notas[10]['cor']."><center>".$notas[10]['valor'].$marcar. "</center></td>";                  
 					 } else {
-					 		 $html .= "<center><td ".$notas[10]['cor'].">".$notas[10]['valor'].$marcar. "<br>".$notas[10]['obs']. "</td></center>";                  
+					 		 $html .= "<td ".$notas[10]['cor']."><center>".$notas[10]['valor'].$marcar. "<br>".$notas[10]['obs']. "</center></td>";                  
 					 }
 				  }  else if (($campo == 'NPS - Net Promoter Score') || ($campo == 'nps')) {
 	  				   if ($excel == false) {
@@ -2629,9 +2629,9 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
 					  } 
 	
 					   if ($mostrarComentarios == 0) { 
-							 $html .= "<center><td title=\"".$notas[7]['obs']."\" ".$notas[7]['cor'].">".$notas[7]['valor'].$marcar. "</td></center>";                  
+							 $html .= "<td title=\"".$notas[7]['obs']."\" ".$notas[7]['cor']."><center>".$notas[7]['valor'].$marcar. "</center></td>";                  
 					 } else {
-					 		 $html .= "<center><td ".$notas[7]['cor'].">".$notas[7]['valor'].$marcar. "<br>".$notas[7]['obs']. "</td></center>";                  
+					 		 $html .= "<td ".$notas[7]['cor']."><center>".$notas[7]['valor'].$marcar. "<br>".$notas[7]['obs']. "</center></td>";                  
 					 }
 				  } 
 			  	}
