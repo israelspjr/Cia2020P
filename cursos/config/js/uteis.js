@@ -447,7 +447,7 @@ function postForm2(idForm, pagina, param, onde) {
 
 function tabelaDataTable(idTable, tipo, optAdd) {
 	
-	$('.fixedHeader-floating').hide();
+	
 
 	var opt;
 	if ( typeof optAdd == 'object') {
@@ -487,6 +487,7 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 			"aTargets" : [0]
 		}];
 		opt.fixedHeader = false;
+		$('.fixedHeader-floating').hide();
 
 	} else if (tipo == 'ordenaColuna_psa') {
 
@@ -499,7 +500,8 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 			"aTargets" : [0]
 		}];	
 		opt.fixedHeader = false;
-
+		$('.fixedHeader-floating').hide();
+		
 	}else if (tipo == 'ordenaColuna_simples') {
 
 		opt.bPaginate = false;
@@ -511,7 +513,8 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 			"aTargets" : [0]
 		}];
 		opt.fixedHeader = false;
-
+		$('.fixedHeader-floating').hide();
+		
 	} else if (tipo == 'config') {
 
 		opt.bPaginate = true;
@@ -521,13 +524,15 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 			"aTargets" : [0]
 		}];
 		opt.fixedHeader = false;
-
+		$('.fixedHeader-floating').hide();
+		
 	}else if (tipo == 'colspan'){
 		opt.bPaginate = false;
 		opt.bInfo = false;
 		opt.bFilter = false;
 		orderCellsTop = true;
 		opt.fixedHeader = false;
+		$('.fixedHeader-floating').hide();
 		
 	} else if(tipo == 'fixo') {
 		opt.bPaginate = false;
@@ -537,12 +542,13 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 		opt.pageLength = 100;
 		opt.stateSave = true;
 		opt.fixedHeader = false;
+		$('.fixedHeader-floating').hide();
 	} else {
 
 		opt.bPaginate = true;
 		opt.sPaginationType = "full_numbers";
 		opt.fixedHeader = false;
-
+		$('.fixedHeader-floating').hide();
 	}
 
 	var $table = $('#' + idTable);
