@@ -34,6 +34,7 @@ a{color:inherit;cursor:pointer;text-decoration:none;}
 .fixedHeader-floating {
  		position: fixed;
         top: 10px;
+		display:none;
     /*    right: 2em;
         z-index: 100;	*/
 }

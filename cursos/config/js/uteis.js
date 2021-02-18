@@ -475,6 +475,8 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 		opt.pageLength = 100;
 		opt.fixedHeader = true;
 		
+		$('.fixedHeader-floating').show();
+		
 	} else if (tipo == 'ordenaColuna') {
 
 		opt.bPaginate = true;
