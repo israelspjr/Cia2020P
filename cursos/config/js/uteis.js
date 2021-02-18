@@ -471,9 +471,9 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 		opt.bFilter = true;
 		opt.aaSorting = [[0, 'desc']];
 		opt.pageLength = 100;
-		opt.fixedHeader = true;
+	//	opt.fixedHeader = true;
 		
-		$('.fixedHeader-floating').show();
+	//	$('.fixedHeader-floating').show();
 		
 	} else if (tipo == 'ordenaColuna') {
 
@@ -484,9 +484,9 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 			"bVisible" : false,
 			"aTargets" : [0]
 		}];
-		opt.fixedHeader = false;
-		opt.fixedHeader.disable();
-		$('.fixedHeader-floating').hide();
+	//	opt.fixedHeader = false;
+	//	opt.fixedHeader.disable();
+	//	$('.fixedHeader-floating').hide();
 
 	} else if (tipo == 'ordenaColuna_psa') {
 
@@ -498,9 +498,9 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 			"bVisible" : false,
 			"aTargets" : [0]
 		}];	
-		opt.fixedHeader = false;
-		$('.fixedHeader-floating').hide();
-		opt.fixedHeader.disable();
+	//	opt.fixedHeader = false;
+	///	$('.fixedHeader-floating').hide();
+	//	opt.fixedHeader.disable();
 		
 	}else if (tipo == 'ordenaColuna_simples') {
 
@@ -512,9 +512,9 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 			"bVisible" : false,
 			"aTargets" : [0]
 		}];
-		opt.fixedHeader = false;
-		$('.fixedHeader-floating').hide();
-		opt.fixedHeader.disable();
+	//	opt.fixedHeader = false;
+	//	$('.fixedHeader-floating').hide();
+	//	opt.fixedHeader.disable();
 		
 	} else if (tipo == 'config') {
 
@@ -524,18 +524,18 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 			"bVisible" : false,
 			"aTargets" : [0]
 		}];
-		opt.fixedHeader = false;
-		$('.fixedHeader-floating').hide();
-		opt.fixedHeader.disable();
+	//	opt.fixedHeader = false;
+	//	$('.fixedHeader-floating').hide();
+	//	opt.fixedHeader.disable();
 		
 	}else if (tipo == 'colspan'){
 		opt.bPaginate = false;
 		opt.bInfo = false;
 		opt.bFilter = false;
 		orderCellsTop = true;
-		opt.fixedHeader = false;
-		$('.fixedHeader-floating').hide();
-		opt.fixedHeader.disable();
+	//	opt.fixedHeader = false;
+	//	$('.fixedHeader-floating').hide();
+	//	opt.fixedHeader.disable();
 		
 	} else if(tipo == 'fixo') {
 		opt.bPaginate = false;
@@ -544,17 +544,17 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 		opt.aaSorting = [[0, 'desc']];
 		opt.pageLength = 100;
 		opt.stateSave = true;
-		opt.fixedHeader = false;
-		$('.fixedHeader-floating').hide();
-		opt.fixedHeader.disable();
+	//	opt.fixedHeader = false;
+	//	$('.fixedHeader-floating').hide();
+	//	opt.fixedHeader.disable();
 		
 	} else {
 
 		opt.bPaginate = true;
 		opt.sPaginationType = "full_numbers";
-		opt.fixedHeader = false;
-		$('.fixedHeader-floating').hide();
-		opt.fixedHeader.disable();
+	//	opt.fixedHeader = false;
+	//	$('.fixedHeader-floating').hide();
+	//	opt.fixedHeader.disable();
 	}
 
 	var $table = $('#' + idTable);
