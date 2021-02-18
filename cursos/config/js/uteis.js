@@ -464,7 +464,7 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 	opt.bAutoWidth = true;
 	opt.aLengthMenu = [50, 100, -1],[50, 100, "Todos"];
 	opt.pageLength = 100;
-	opt.fixedHeader = true;
+	
 
 	if (tipo == 'simples') {
 
@@ -473,6 +473,7 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 		opt.bFilter = true;
 		opt.aaSorting = [[0, 'desc']];
 		opt.pageLength = 100;
+		opt.fixedHeader = true;
 		
 	} else if (tipo == 'ordenaColuna') {
 
@@ -483,6 +484,7 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 			"bVisible" : false,
 			"aTargets" : [0]
 		}];
+		opt.fixedHeader = false;
 
 	} else if (tipo == 'ordenaColuna_psa') {
 
@@ -494,6 +496,7 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 			"bVisible" : false,
 			"aTargets" : [0]
 		}];	
+		opt.fixedHeader = false;
 
 	}else if (tipo == 'ordenaColuna_simples') {
 
@@ -505,6 +508,7 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 			"bVisible" : false,
 			"aTargets" : [0]
 		}];
+		opt.fixedHeader = false;
 
 	} else if (tipo == 'config') {
 
@@ -514,12 +518,14 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 			"bVisible" : false,
 			"aTargets" : [0]
 		}];
+		opt.fixedHeader = false;
 
 	}else if (tipo == 'colspan'){
 		opt.bPaginate = false;
 		opt.bInfo = false;
 		opt.bFilter = false;
 		orderCellsTop = true;
+		opt.fixedHeader = false;
 		
 	} else if(tipo == 'fixo') {
 		opt.bPaginate = false;
@@ -528,10 +534,12 @@ function tabelaDataTable(idTable, tipo, optAdd) {
 		opt.aaSorting = [[0, 'desc']];
 		opt.pageLength = 100;
 		opt.stateSave = true;
+		opt.fixedHeader = false;
 	} else {
 
 		opt.bPaginate = true;
 		opt.sPaginationType = "full_numbers";
+		opt.fixedHeader = false;
 
 	}
 
