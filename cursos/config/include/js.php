@@ -15,8 +15,9 @@
 
 <!-- data Tables 
 <script src="<?php echo CAMINHO_CFG?>js/jquery.dataTables.min.js" language="javascript" type="text/javascript" ></script>-->
-<!--<script src="<?php echo CAMINHO_CFG?>js/dataTables.fixedHeader.min.js" language="javascript" type="text/javascript" ></script>-->
 <script src="<?php echo CAMINHO_CFG?>DataTables/datatables.js" language="javascript" type="text/javascript" ></script>
+<script src="<?php echo CAMINHO_CFG?>js/dataTables.fixedHeader.min.js" language="javascript" type="text/javascript" ></script>
+
 
 <!-- Atualização para sortear data -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
