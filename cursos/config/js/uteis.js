@@ -446,6 +446,8 @@ function postForm2(idForm, pagina, param, onde) {
 
 
 function tabelaDataTable(idTable, tipo, optAdd) {
+	
+	$('.fixedHeader-floating').hide();
 
 	var opt;
 	if ( typeof optAdd == 'object') {
