@@ -144,8 +144,10 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
 
 function fnc() {
  //$( function() {
-    $( ".data" ).datepicker();
- // } );
+    $( ".data" ).datepicker({
+    	format: 'dd/mm/yyyy',                
+    	language: 'pt-BR'
+});
 }
   
 function buscar(){
