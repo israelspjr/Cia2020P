@@ -47,6 +47,5 @@
 		eventValidateForm();
 		eventFocoForm();
 		eventMostrarTitle();
-		fnc();
 	});//.tooltip();
 </script>
