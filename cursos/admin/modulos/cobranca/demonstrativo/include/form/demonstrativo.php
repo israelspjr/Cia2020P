@@ -656,11 +656,10 @@ Uteis::pr($temAulaDataFixa);
                              ?>
                              <?php
                                foreach($temAulaDataFixa as $ad => $valor):
-							   Uteis::pr($valor['dataAula']);
-                                   $semana = new DateTime($valor['dataAula']);
+					              $semana = new DateTime($valor['dataAula']);
 								   Uteis::pr($semana->format('N'));
                              ?>
-                             <strong><?=Uteis::exibirDiaSemana($semana->format('N'));?></strong> - <?=Uteis::exibirHoras($valor['horaInicio']);?> as <?=Uteis::exibirHoras($valor['horaFim']);?>(Aula Agendada)<br />
+                             <strong><?=Uteis::exibirDiaSemana($semana->format('N')+1);?></strong> - <?=Uteis::exibirHoras($valor['horaInicio']);?> as <?=Uteis::exibirHoras($valor['horaFim']);?>(Aula Agendada)<br />
                             <?php
                              endforeach;
                              ?>                             
