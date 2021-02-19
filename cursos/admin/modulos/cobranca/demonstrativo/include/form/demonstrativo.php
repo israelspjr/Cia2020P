@@ -483,6 +483,7 @@ sort($totalDias);
 
 $temAulaPermanenteGrupo = $AulaPermanenteGrupo -> ffTem_AulaPermanenteGrupoDemonstrativo($idPlanoAcaoGrupo, $ano, $mes);
 $temAulaDataFixa = $AulaDataFixa -> ffTem_AulaDataFixaDemonstrativo($idPlanoAcaoGrupo, $ano, $mes);
+Uteis::pr($temAulaDataFixa);
 //Uteis::pr($temAulaPermanenteGrupo);
 ?>
 
