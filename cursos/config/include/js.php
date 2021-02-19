@@ -1,14 +1,13 @@
 <!-- JQuery -->
 <script src="<?php echo CAMINHO_CFG?>js/jquery.js" language="javascript" type="text/javascript"></script>
 
+<!-- JQuery Ui -->
+<script src="<?php echo CAMINHO_CFG?>js/jquery-ui.js" language="javascript" type="text/javascript"></script>
+
 <!-- Funções form -->
 <script src="<?php echo CAMINHO_CFG?>js/form2.js" language="javascript" type="text/javascript"></script>
 
 <script src="<?php echo CAMINHO_CFG?>js/login.js" language="javascript" type="text/javascript"></script>
-
-
-<!-- JQuery Ui -->
-<script src="<?php echo CAMINHO_CFG?>js/jquery-ui.js" language="javascript" type="text/javascript"></script>
 
 <!-- Editor -->
 <script src="<?php echo CAMINHO_CFG?>js/tinymce/tinymce.min.js" language="javascript" type="text/javascript" ></script>
