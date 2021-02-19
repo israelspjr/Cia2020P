@@ -126,6 +126,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
         </div>
         <div class="direita">
             </div>
+      <button class="button blue" onclick="fnc()">Teste</button>
       </div>
       
       <div class="linha-inteira" >
@@ -140,6 +141,13 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
   <div id="res_rel" class="lista" ></div>
 </fieldset>
 <script> 
+
+function fnc() {
+ //$( function() {
+    $( ".data" ).datepicker();
+ // } );
+}
+  
 function buscar(){
   var status, gerente, retorno;
   $( "#clientePj_idClientePj" ).empty();
@@ -256,7 +264,5 @@ function geraRel(){
 }
 ativarForm();	
 
- $( function() {
-    $( ".data" ).datepicker();
-  } );
+
 </script> 
