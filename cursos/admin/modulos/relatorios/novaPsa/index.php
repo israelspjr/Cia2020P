@@ -256,5 +256,6 @@ function geraRel(){
 }
 ativarForm();	
 
-
+$('data').datepicker({
+});
 </script> 
