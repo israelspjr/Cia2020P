@@ -24,7 +24,7 @@ require ("filtro.php");
 $arrayRetorno = array();
 
 
-$arrayRetorno['excel'] = $Professor->selectProfessorContratadoTr($where, false, $comgrupos, $menor5grupos, 1);
+$arrayRetorno['excel'] = $Professor->selectProfessorContratadoTr($where, false, $comgrupos, $menor5grupos, true);
 
 echo json_encode($arrayRetorno);
 

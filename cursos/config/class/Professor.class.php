@@ -890,7 +890,7 @@ class Professor extends Database
 		
 		if ($excel) {
 						
-						$colunas = array("Nome", "Idioma", "Nivel", "Telefone", "Email", "Skype", "Grupos", "Inativo", "Obs");
+						$colunas = array("Nome", "Idioma", "Nivel", "Telefone", "Email", "Skype", "Grupos", "Analise Final", "Status", "Obs");
 						$html_base = $Relatorio -> montaTb($colunas, $excel);
 
     					$html2 = $html_base . $html;
