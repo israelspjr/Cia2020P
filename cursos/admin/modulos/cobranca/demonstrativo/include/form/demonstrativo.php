@@ -483,7 +483,7 @@ sort($totalDias);
 
 $temAulaPermanenteGrupo = $AulaPermanenteGrupo -> ffTem_AulaPermanenteGrupoDemonstrativo($idPlanoAcaoGrupo, $ano, $mes);
 $temAulaDataFixa = $AulaDataFixa -> ffTem_AulaDataFixaDemonstrativo($idPlanoAcaoGrupo, $ano, $mes);
-Uteis::pr($temAulaDataFixa);
+//Uteis::pr($temAulaDataFixa);
 //Uteis::pr($temAulaPermanenteGrupo);
 ?>
 
@@ -657,8 +657,7 @@ Uteis::pr($temAulaDataFixa);
                              <?php
                                foreach($temAulaDataFixa as $ad => $valor):
 					              $semana = new DateTime($valor['dataAula']);
-								   Uteis::pr($semana->format('N'));
-                             ?>
+				              ?>
                              <strong><?=Uteis::exibirDiaSemana($semana->format('N')+1);?></strong> - <?=Uteis::exibirHoras($valor['horaInicio']);?> as <?=Uteis::exibirHoras($valor['horaFim']);?>(Aula Agendada)<br />
                             <?php
                              endforeach;
