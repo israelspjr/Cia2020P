@@ -8,7 +8,7 @@
 
 
 <!-- JQuery Ui -->
-<!--<script src="<?php echo CAMINHO_CFG?>js/jquery-ui.min.js" language="javascript" type="text/javascript"></script>
+<script src="<?php echo CAMINHO_CFG?>js/jquery-ui.min.js" language="javascript" type="text/javascript"></script>
 
 <!-- Editor -->
 <script src="<?php echo CAMINHO_CFG?>js/tinymce/tinymce.min.js" language="javascript" type="text/javascript" ></script>
