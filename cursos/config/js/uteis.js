@@ -399,6 +399,13 @@ function postForm2(idForm, pagina, param, onde) {
 
 }
 
+//Datepicker
+
+(function($) {
+	$( ".data" ).datepicker();
+}(jQuery));	
+
+
 //Atualização para sortear data
 (function($) {
  
@@ -1095,3 +1102,4 @@ function Descripta(dados){
 	}	
 	return mensx;
 }
+
