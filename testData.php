@@ -19,6 +19,8 @@
 <body>
  
 <p>Date: <input type="text" id="datepicker" class="data"></p>
+
+<p>Date2: <input type="text" id="datepicker2" class="data"></p>
  
  
 </body>
