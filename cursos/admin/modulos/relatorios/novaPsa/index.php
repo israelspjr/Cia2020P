@@ -123,10 +123,7 @@ onclick="abrirFormulario('div_form_Grupos', 'img_form_Grupos');" />
           <Label>Mostrar comentários? </Label>
           <input type="checkbox" value="1" id="mostrarComentarios" name="mostrarComentarios" />
           </p>
-        </div>
-        <div class="direita">
-            </div>
-      <button class="button blue" onclick="fnc()">Teste</button>
+        </div>    
       </div>
       
       <div class="linha-inteira" >
