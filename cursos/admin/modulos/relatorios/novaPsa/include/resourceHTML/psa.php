@@ -126,7 +126,7 @@ $y++;
 	}
 	
 ?>
-   <tr><td>Média</td><td></td><td></td></tr>
+   <tr><td>Média</td><td></td><td><?php echo $val['total'];?></td></tr>
 </tbody>
 </table>
 </td>
