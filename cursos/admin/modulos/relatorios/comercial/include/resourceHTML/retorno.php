@@ -79,7 +79,7 @@ $dataReferenciaFinal = date("Y-m-d", strtotime("-1 days", strtotime("+1 months",
 
 $where .= " AND (".$valorCriterio." between '".$dataInicio ."' AND '".$dataReferenciaFinal."' )";
 
-$where .= " ORDER BY dataRetorno ";
+
 //	}
 }
 //echo $where;
@@ -93,9 +93,11 @@ $idIdioma = $_REQUEST['idIdioma'];
 $IdNivelEstudo = $_REQUEST['IdNivelEstudo'];
 if($IdNivelEstudo != "-"){
 	if($IdNivelEstudo != "") {
-			$where .= "PAG.nivelEstudo_IdNivelEstudo = ".$IdNivelEstudo;
+			$where .= " AND PAG.nivelEstudo_IdNivelEstudo = ".$IdNivelEstudo;
 	}
 }
+
+$where .= " ORDER BY dataRetorno ";
 /*
 $grupo_idGrupo = $_POST['grupo_idGrupo'];
 if($grupo_idGrupo != "-"){
