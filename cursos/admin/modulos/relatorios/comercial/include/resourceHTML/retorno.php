@@ -88,12 +88,16 @@ $where .= " AND (".$valorCriterio." between '".$dataInicio ."' AND '".$dataRefer
 //}
 
 $idIdioma = $_REQUEST['idIdioma'];
-
+if($idIdioma != "-"){
+	if($idIdioma != "") {
+		$where .= " AND PA.idioma_idIdioma = ".$idIdioma;
+	}
+}
 
 $IdNivelEstudo = $_REQUEST['IdNivelEstudo'];
 if($IdNivelEstudo != "-"){
 	if($IdNivelEstudo != "") {
-			$where .= " AND PAG.nivelEstudo_IdNivelEstudo = ".$IdNivelEstudo;
+		$where .= " AND PAG.nivelEstudo_IdNivelEstudo = ".$IdNivelEstudo;
 	}
 }
 
