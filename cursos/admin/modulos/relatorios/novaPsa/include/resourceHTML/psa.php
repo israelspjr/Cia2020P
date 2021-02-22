@@ -42,7 +42,7 @@ $cont = 1;
 $y = 1;
   foreach($result_total as $pergunta => $val) {          
 $gerentes = "";
-Uteis::pr($val);
+//Uteis::pr($val);
 ?>
 
 <div id="pergunta_<?=$pergunta?>" style="width:100%;">
@@ -69,7 +69,7 @@ $i=0;
 foreach($val as $conceito => $respostas) {
 
 	if (is_array($respostas)) {
-//	Uteis::pr($respostas);
+	Uteis::pr($respostas);
 	$gerentes .= '<div id="pergunta_'.$conceito.'" style="">
 <table id="Gerentes_'.$y.'">
 <thead>
