@@ -88,6 +88,7 @@ $gerentes .= '<tr>
 $x++;  
 	}
 $html .= '</tbody>
+<tr><td>Média</td><td></td><td></td></tr>
 </table>
 </div>   ';
 } else {
