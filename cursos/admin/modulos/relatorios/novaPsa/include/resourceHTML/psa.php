@@ -69,7 +69,7 @@ $i=0;
 foreach($val as $conceito => $respostas) {
 
 	if (is_array($respostas)) {
-	Uteis::pr($respostas);
+	
 	$gerentes .= '<div id="pergunta_'.$conceito.'" style="">
 <table id="Gerentes_'.$y.'">
 <thead>
@@ -83,6 +83,7 @@ foreach($val as $conceito => $respostas) {
 <tbody>  ';
 $x = 0;
 foreach($respostas as $conceito2 => $respostas2) {
+Uteis::pr($respostas2);
 $gerentes .= '<tr>
 <td align="center">'.$conceito2.'</td><td align="center">'.$respostas2.'</td><td align="center">'.round((($respostas2*100)/$respostas['total']),2)."%".'</td>
 </tr>'; 
