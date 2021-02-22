@@ -87,7 +87,7 @@ foreach($respostas as $conceito2 => $respostas2) {
 Uteis::pr($conceito2."-".$respostas2);
 $notasGerais += $conceito2 * $respostas2;
 echo "<hr>";
-echo "notas:".$notasTotais;
+echo "notas:".$notasGerais;
 $gerentes .= '<tr>
 <td align="center">'.$conceito2.'</td><td align="center">'.$respostas2.'</td><td align="center">'.round((($respostas2*100)/$respostas['total']),2)."%".'</td>
 </tr>'; 
