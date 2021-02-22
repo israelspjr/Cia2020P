@@ -125,8 +125,13 @@ $i++;
 $y++;	
 	}
 	
+$mediaTotal = ($conceito * $respostas); 
+
+
 ?>
-   <tr><td>Média</td><td></td><td><?php echo $val['total'];?></td></tr>
+
+
+   <tr><td>Média</td><td></td><?php echo $mediaTotal;?><td><?php echo $val['total'];?></td></tr>
 </tbody>
 </table>
 </td>
