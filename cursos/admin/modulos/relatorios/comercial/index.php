@@ -143,7 +143,7 @@ onclick="abrirNivelPagina(this, '<?php echo CAMINHO_CAD."clientePf/cadastro.php"
         </p>
           <p>
           <label>Nível de Estudo</label>
-    <?php echo $NivelEstudo->selectNivelEstudo();?>
+    <?php echo $NivelEstudo->selectNivelEstudoSelect();?>
         </p>
         
         
