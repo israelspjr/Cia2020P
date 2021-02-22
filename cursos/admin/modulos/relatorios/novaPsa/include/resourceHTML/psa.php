@@ -125,7 +125,7 @@ $i++;
 $y++;	
 	}
 	
-$mediaTotal = ($conceito * $respostas); 
+//$mediaTotal = ($conceito * $respostas); 
 
 
 ?>
