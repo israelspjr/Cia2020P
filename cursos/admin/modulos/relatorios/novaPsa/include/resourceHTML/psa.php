@@ -132,8 +132,9 @@ $i++;
 $y++;	
 	}
 	
-//Uteis::pr( $respostas); 
-
+if ($val['total'] > 0) {	
+	$mediaTotal = $notasGerais / $val['total'];
+}
 
 ?>
 
