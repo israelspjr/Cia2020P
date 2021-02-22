@@ -2,6 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 
 $Idioma = new Idioma();
+$NivelEstudo = new NivelEstudo();
 
 //$TipoCliente = new TipoCliente();
 
@@ -140,6 +141,12 @@ onclick="abrirNivelPagina(this, '<?php echo CAMINHO_CAD."clientePf/cadastro.php"
           <label>Idiomas</label>
     <?php echo $Idioma->selectIdiomaSelect();?>
         </p>
+          <p>
+          <label>Nível de Estudo</label>
+    <?php echo $NivelEstudo->selectNivelEstudo();?>
+        </p>
+        
+        
         
       </div>
       
