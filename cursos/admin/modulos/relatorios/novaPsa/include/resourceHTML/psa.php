@@ -82,9 +82,10 @@ foreach($val as $conceito => $respostas) {
 </thead>
 <tbody>  ';
 $x = 0;
+$notasGerais = 0;
 foreach($respostas as $conceito2 => $respostas2) {
 Uteis::pr($conceito2."-".$respostas2);
-$notasTotais = $conceito2 * $respostas2;
+$notasGerais += $conceito2 * $respostas2;
 echo "<hr>";
 Uteis::pr($notasTotais);
 $gerentes .= '<tr>
