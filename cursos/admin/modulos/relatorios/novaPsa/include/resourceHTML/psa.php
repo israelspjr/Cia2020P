@@ -125,7 +125,7 @@ $i++;
 $y++;	
 	}
 	
-$mediaTotal = $respostas; 
+echo $respostas; 
 
 
 ?>
