@@ -83,7 +83,7 @@ foreach($val as $conceito => $respostas) {
 <tbody>  ';
 $x = 0;
 foreach($respostas as $conceito2 => $respostas2) {
-Uteis::pr($conceitos2."-".$respostas2);
+Uteis::pr($conceito2."-".$respostas2);
 $gerentes .= '<tr>
 <td align="center">'.$conceito2.'</td><td align="center">'.$respostas2.'</td><td align="center">'.round((($respostas2*100)/$respostas['total']),2)."%".'</td>
 </tr>'; 
