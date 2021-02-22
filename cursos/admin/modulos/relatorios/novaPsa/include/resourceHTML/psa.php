@@ -137,7 +137,7 @@ if ($val['total'] > 0) {
 ?>
 
 
-   <tr><td>Média</td><td><?php echo round($mediaTotal,2);?></td><td><?php echo $notasGerais;?></td></tr>
+   <tr><td>Média - (<?php echo $notasGerais;?>)</td><td><?php echo round($mediaTotal,2);?></td><td></td></tr>
 </tbody>
 </table>
 </td>
