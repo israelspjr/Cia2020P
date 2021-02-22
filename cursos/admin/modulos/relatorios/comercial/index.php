@@ -1,6 +1,8 @@
 <?php  
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/admin.php");
 
+$Idiomas = new Idiomas();
+
 //$TipoCliente = new TipoCliente();
 
 $mes = date('m');
@@ -135,8 +137,10 @@ onclick="abrirNivelPagina(this, '<?php echo CAMINHO_CAD."clientePf/cadastro.php"
       <input type="radio" name="area" id="area" value="1" />Coordenação
       </p>    
           <p>
-    <!--      <input name="pendentes" type="checkbox" id="pendentes" />Pendentes para inativar-->
+          <label>Idiomas</label>
+    <?php echo $Idiomas->selectIdiomaSelect();?>
         </p>
+        
       </div>
       
       <div class="linha-inteira">
