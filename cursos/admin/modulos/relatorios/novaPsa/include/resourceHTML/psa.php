@@ -65,6 +65,7 @@ if($pergunta == "NPS - Net Promoter Score"){
     $final = 12; //count($val);
 }
 $i=0;
+$notasGerais = 0;
 //sort($val);
 foreach($val as $conceito => $respostas) {
 
@@ -82,7 +83,7 @@ foreach($val as $conceito => $respostas) {
 </thead>
 <tbody>  ';
 $x = 0;
-$notasGerais = 0;
+
 foreach($respostas as $conceito2 => $respostas2) {
 Uteis::pr((int)$conceito2."-".(int)$respostas2);
 $notasGerais += $conceito2 * $respostas2;
