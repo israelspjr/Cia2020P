@@ -85,10 +85,8 @@ foreach($val as $conceito => $respostas) {
 $x = 0;
 
 foreach($respostas as $conceito2 => $respostas2) {
-Uteis::pr((int)$conceito2."-".(int)$respostas2);
+//Uteis::pr((int)$conceito2."-".(int)$respostas2);
 $notasGerais += $conceito2 * $respostas2;
-echo "<hr>";
-echo "notas:".$notasGerais;
 $gerentes .= '<tr>
 <td align="center">'.$conceito2.'</td><td align="center">'.$respostas2.'</td><td align="center">'.round((($respostas2*100)/$respostas['total']),2)."%".'</td>
 </tr>'; 
@@ -135,11 +133,11 @@ $y++;
 if ($val['total'] > 0) {	
 	$mediaTotal = $notasGerais / $val['total'];
 }
-echo $mediaTotal;
+
 ?>
 
 
-   <tr><td>Média</td><td><?php echo round($mediaTotal,2);?>%</td><td></td></tr>
+   <tr><td>Média</td><td><?php echo round($mediaTotal,2);?></td><td></td></tr>
 </tbody>
 </table>
 </td>
