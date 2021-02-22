@@ -139,7 +139,7 @@ echo $mediaTotal;
 ?>
 
 
-   <tr><td>Média</td><td></td><?php echo $mediaTotal;?><td><?php echo $val['total'];?></td></tr>
+   <tr><td>Média</td><td><?php echo round($mediaTotal,2);?>%</td><td></td></tr>
 </tbody>
 </table>
 </td>
