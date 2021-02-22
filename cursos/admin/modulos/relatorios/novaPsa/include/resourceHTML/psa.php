@@ -125,7 +125,7 @@ $i++;
 $y++;	
 	}
 	
-echo $respostas; 
+Uteis::pr( $respostas); 
 
 
 ?>
