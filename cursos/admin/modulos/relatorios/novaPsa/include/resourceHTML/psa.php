@@ -135,7 +135,7 @@ $y++;
 if ($val['total'] > 0) {	
 	$mediaTotal = $notasGerais / $val['total'];
 }
-
+echo $mediaTotal;
 ?>
 
 
