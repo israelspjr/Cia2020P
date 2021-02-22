@@ -87,6 +87,15 @@ $where .= " ORDER BY dataRetorno ";
 //if($IdClientePj!= "") $where .= " AND PF.clientePj_idClientePj = ".$IdClientePj; 
 //}
 
+$idIdioma = $_REQUEST['idIdioma'];
+
+
+$IdNivelEstudo = $_REQUEST['IdNivelEstudo'];
+if($IdNivelEstudo != "-"){
+	if($IdNivelEstudo != "") {
+			$where .= "PAG.nivelEstudo_IdNivelEstudo = ".$IdNivelEstudo;
+	}
+}
 /*
 $grupo_idGrupo = $_POST['grupo_idGrupo'];
 if($grupo_idGrupo != "-"){

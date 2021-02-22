@@ -511,13 +511,13 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 		$Ocorrencia = new Ocorrencia();
 		$Relatorio = new Relatorio();
 				
-		$sql = "SELECT SQL_CACHE P.idIntegranteGrupo, P.planoAcaoGrupo_idPlanoAcaoGrupo, P.clientePf_idClientePf, P.dataEntrada, P.dataSaida, P.obs, P.dataSaidaDemonstrativo, P.dataRetorno  FROM integranteGrupo AS P
-		INNER JOIN clientePf as CPF on CPF.idClientePf = P.clientePf_idClientePf";
+		$sql = "SELECT SQL_CACHE P.idIntegranteGrupo, P.planoAcaoGrupo_idPlanoAcaoGrupo, P.clientePf_idClientePf, P.dataEntrada, P.dataSaida, P.obs, P.dataSaidaDemonstrativo, P.dataRetorno, PAG.nivelEstudo_IdNivelEstudo  FROM integranteGrupo AS P
+		INNER JOIN clientePf as CPF on CPF.idClientePf = P.clientePf_idClientePf
+		INNER JOIN planoAcaoGrupo as PAG on PAG.idPlanoAcaoGrupo = P.planoAcaoGrupo_idPlanoAcaoGrupo";
 		
 		if (($idClientePj != '') && ($idClientePj >0 )){
 			
-		$sql .= " INNER JOIN planoAcaoGrupo as PAG on PAG.idPlanoAcaoGrupo = P.planoAcaoGrupo_idPlanoAcaoGrupo
-		INNER JOIN grupoClientePj as GP on GP.grupo_idGrupo = PAG.grupo_idGrupo
+		$sql .= " INNER JOIN grupoClientePj as GP on GP.grupo_idGrupo = PAG.grupo_idGrupo
 		where GP.clientePj_idClientePj = ".$idClientePj . $where;	
 		
 		} else {
