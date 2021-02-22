@@ -90,7 +90,7 @@ $where .= " AND (".$valorCriterio." between '".$dataInicio ."' AND '".$dataRefer
 $idIdioma = $_REQUEST['idIdioma'];
 if($idIdioma != "-"){
 	if($idIdioma != "") {
-		$where .= " AND PA.idioma_idIdioma = ".$idIdioma;
+		$where .= " AND PR.idioma_idIdioma = ".$idIdioma;
 	}
 }
 
