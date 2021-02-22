@@ -2786,9 +2786,9 @@ function relatorioPsaConsolidado($gerente = "", $where = "", $idProfessor, $tipo
             $retorno[$rsr[$i]['titulo']]['total'] +=1;
         
 	   }
-	  Uteis::pr($retorno);
+	  
      }
-
+		Uteis::pr($retorno);
     } 
     return $retorno;
    }
