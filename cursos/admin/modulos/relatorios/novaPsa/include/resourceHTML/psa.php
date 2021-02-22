@@ -33,7 +33,7 @@ tabelaDataTable('tb_lista_res','simples');
 
 <?php
 $result_total =  $Relatorio->relatorioPsaConsolidado($gerente, $where, $idProfessor, 4);
-Uteis::pr($result_total);
+
 
 ?>
 <div style="width:100%">
@@ -42,6 +42,7 @@ $cont = 1;
 $y = 1;
   foreach($result_total as $pergunta => $val) {          
 $gerentes = "";
+Uteis::pr($val);
 ?>
 
 <div id="pergunta_<?=$pergunta?>" style="width:100%;">
