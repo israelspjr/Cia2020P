@@ -524,6 +524,7 @@ where integranteGrupo_idIntegranteGrupo = ".$valor['idIntegranteGrupo'];
 		
 		$sql .=  $where;
 		}
+		echo $sql;
 			$result = $this -> query($sql);
 
 		if (mysqli_num_rows($result) > 0) {
