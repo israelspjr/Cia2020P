@@ -33,7 +33,7 @@ if ($grupoClt != '-') {
 		$where .= " 
      		INNER JOIN valorHoraGrupo AS VHG on VHG.planoAcaoGrupo_idPlanoAcaoGrupo = PAG.idPlanoAcaoGrupo
           	WHERE VHG.valorHora IS NOT NULL
-               AND PAG.inativo = 0";	
+            /*  AND PAG.inativo = 0*/";	
 }
 
 
