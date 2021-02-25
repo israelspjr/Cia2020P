@@ -3338,7 +3338,7 @@ $sql .= $where;
 
 $sql .= " AND (D.mes = $mes AND D.ano = $ano) group by D.idDemonstrativoCobranca";
 
-//		echo $sql;
+		echo $sql;
 		
 		$result = $this -> query($sql);
 		if ($mes <10) {
