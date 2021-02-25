@@ -3517,7 +3517,7 @@ $sql .= " AND (D.mes = $mes AND D.ano = $ano) group by D.idDemonstrativoCobranca
 	while ($valorProfessores = mysqli_fetch_array($result6)) {
 		$professor = explode("-", $Professor->getNome($valorProfessores['idProfessor']));
 		  			//	 $nome = $professor[0];
-		$professorNomes .= $professor[0]; //$Professor->getNome($valorProfessores['idProfessor'])."</br>";
+		$professorNomes .= $professor[0]."</br>"; //$Professor->getNome($valorProfessores['idProfessor'])."</br>";
 		
 		if ($valorProfessores['plano'] == '') {
 		
