@@ -3467,7 +3467,7 @@ $sql .= " AND (D.mes = $mes AND D.ano = $ano) group by D.idDemonstrativoCobranca
 				AGP.dataFim IS NULL OR AGP.dataFim = ''
 			) ";
 			
-	//		echo $sql6;
+			echo $sql6;
 			
 	$result7 = $this -> query($sql7);
 	
