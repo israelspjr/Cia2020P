@@ -66,7 +66,7 @@ if($_POST['acao']=="deletar"){
 	$idFeedbackProfessor = $_REQUEST['id'];
 	$idProfessor = $_REQUEST['idProfessor'];
 	$nomeAssistiu = $Professor->getNome($_REQUEST['quemAssistiu']);
-	$idGrupo = $_REQUEST['idGrupo'];
+	$idGrupo = 2822; //$_REQUEST['idGrupo'];
 	echo $idGrupo;
 	$nomeGrupo = $Grupo->getNome($idGrupo);
 	$professorAssistido = $Professor->getNome($_REQUEST['idProfessor']);
