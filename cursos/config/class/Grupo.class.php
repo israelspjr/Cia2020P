@@ -490,6 +490,7 @@ class Grupo extends Database {
 	}
 
 	function getNome($id) {
+		echo $id;
 		$rs = $this -> selectGrupo(" WHERE idGrupo = $id");
 		return $rs[0]['nome'];
 	}

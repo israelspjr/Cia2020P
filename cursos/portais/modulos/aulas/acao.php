@@ -6,6 +6,7 @@ $PlanoAcaoGrupo = new PlanoAcaoGrupo();
 $GerenteTem = new GerenteTem();
 $Funcionario = new Funcionario();
 $Grupo = new Grupo();
+
 error_reporting(E_ALL);
 
 $arrayRetorno = array();
