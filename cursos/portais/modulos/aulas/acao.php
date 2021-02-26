@@ -2,13 +2,15 @@
 require_once($_SERVER['DOCUMENT_ROOT']."/cursos/config/portais.php");
 
 $FeedbackProfessor = new FeedbackProfessor();
+$PlanoAcaoGrupo = new PlanoAcaoGrupo();
+$GerenteTem = new GerenteTem();
+$Funcionario = new Funcionario();
 
 $arrayRetorno = array();
 
 if($_POST['acao']=="deletar"){
 	
 	$arrayRetorno['mensagem'] = "Feedback professor deletado com sucesso";
-	
 	
 	$idFeedbackProfessor = $_REQUEST['id'];
 	$FeedbackProfessor->setIdFeedbackProfessor($idFeedbackProfessor);
@@ -86,9 +88,16 @@ if($_POST['acao']=="deletar"){
 	$FeedbackProfessor->setPergunta12($_POST['pergunta12']);
 	$FeedbackProfessor->setPergunta13($_POST['pergunta13']);	
 	$FeedbackProfessor->setPergunta14($_POST['pergunta14']);
-	$FeedbackProfessor->setPergunta15($_POST['pergunta15']);		
-
+	$FeedbackProfessor->setPergunta15($_POST['pergunta15']);	
 	
+	//Pegar idPlanoAcaoGrupo
+	$idPlanoAcaoGrupo = $PlanoAcaoGrupo->getPAG_atual($_POST['idGrupo']);	
+	$idFuncionario = $GerenteTem->selectGerenteTem_porGrupo($idPlanoAcaoGrupo);
+	$email = "israel@companhiadeidiomas.com.br"; //$Funcionario->getEmail($idFuncionario);
+	$nome = $Funcionario->getNome($idFuncionario);
+	
+	 $paraQuem1 = array("nome" => $nome, "email" => $email);
+      $rs = Uteis::enviarEmail($assunto, $msg, $paraQuem1);
 	
 	if($idFeedbackProfessor != "" && $idFeedbackProfessor > 0 ){
 		$FeedbackProfessor->updateFeedbackProfessor();
