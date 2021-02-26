@@ -8,8 +8,6 @@ $Funcionario = new Funcionario();
 $Grupo = new Grupo();
 $Professor = new Professor();
 
-error_reporting(E_ALL);
-
 $arrayRetorno = array();
 
 /*if($_POST['acao']=="deletar"){
@@ -106,7 +104,7 @@ $arrayRetorno = array();
 		
 	$msg .= "<p>Professor assistido: ".$professorAssistido."</p>";
 	$msg .= "<p>Quem Assistiu: ".$nomeAssistiu."</p>";
-	$msg .= "<p>Grupo:".$nomegrupo."</p>";
+	$msg .= "<p>Grupo:".$nomeGrupo."</p>";
 	$msg .= "<p>Nota:".$_POST['idNotasTipoNota']."</p>";
 	$msg .= "<p>Feedback:".$_POST['obs']."</p>";
 	$msg .= "<p>Por qualquer motivo, caso não concorde delete a avaliação feita no cadastro do professor</p>";
