@@ -357,7 +357,7 @@ class FeedbackProfessor extends Database {
 
 				$html .= "<tr>";
 				$html .= "	
-				<td align=\"center\" onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "?id=" . $valor['idFeedbackProfessor'] . "&disable=1'\"', '#centro')\" >" . Uteis::exibirData($valor['dataAvaliada']) . "</td>
+				<td align=\"center\" onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "?id=" . $valor['idFeedbackProfessor'] . "&disable=1', '#centro')\" >" . Uteis::exibirData($valor['dataAvaliada']) . "</td>
 				<td align=\"center\"> ".$nomeGrupo."</td>
 				<td align=\"center\">".$img."</td>
 				<td align=\"center\"> ".$valor['status2']."</td>
