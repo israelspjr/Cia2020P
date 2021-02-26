@@ -320,6 +320,7 @@ class FeedbackProfessor extends Database {
 			$html = "";
 
 			while ($valor = mysqli_fetch_array($result)) {
+				Uteis:pr($valor);
 				
 				$nomeGrupo = $Grupo->getNome($valor['grupo_idGrupo']);
 				$status = $valor['status'];
@@ -354,34 +355,14 @@ class FeedbackProfessor extends Database {
 					$img = "<img src=\"".CAMINHO_IMG."ruim.png\" title=\"Aula Ruim (vetar professor e verificar trocas)\"/>"; 
 					
 				}
-				
-// onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "?id=" . $valor['idFeedbackProfessor'] . $idPai . "', '#centro')\"
+
 				$html .= "<tr>";
 				$html .= "	
-				<td align=\"center\" onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "?id=" . $valor['idFeedbackProfessor'] . $idPai . "', '#centro')\" >" . Uteis::exibirData($valor['dataAvaliada']) . "</td>
+				<td align=\"center\" onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "?id=" . $valor['idFeedbackProfessor'] . "disable=1\"', '#centro')\" >" . Uteis::exibirData($valor['dataAvaliada']) . "</td>
 				<td align=\"center\"> ".$nomeGrupo."</td>
 				<td align=\"center\">".$img."</td>
 				<td align=\"center\"> ".$valor['status2']."</td>
 				<td align=\"center\">".$nomeAssistido."</td>";
-			/*	<td align=\"center\">".$valor['obs']."</td>";
-				<td>".$pergunta1."</td>
-				<td>".$pergunta2."</td>
-				<td>".$pergunta3."</td>
-				<td>".$pergunta4."</td>
-				<td>".$pergunta5."</td>
-				<td>".$pergunta6."</td>
-				<td>".$pergunta7."</td>
-				<td>".$pergunta8."</td>
-	     		<td>".$pergunta9."</td>
-				<td>".$pergunta10."</td>
-				<td>".$pergunta11."</td>
-				<td>".$pergunta12."</td>
-				<td>".$pergunta13."</td>*/
-		
-		/*	$html .= "	<td align=\"center\">
-			<center><img src=\"" . CAMINHO_IMG . "excluir.png\" onclick=\"deletaRegistro('modulos/aulas/acao.php', " . $valor['idFeedbackProfessor'] . ", '$caminhoAtualizar', '$ondeAtualiza');zerarCentro();carregarModulo('/cursos/portais/modulos/aulas/index.php', '#centro');\" ></center>
-				</td>
-			*/	
 			$html .= "</tr>";
 
 			}
