@@ -8,6 +8,8 @@ $Professor = new Professor();
 
 $idProfessor = $_GET['idProfessor'];
 $idFeedbackProfessor = $_GET['id'];
+$disable = $_GET['disable'];
+echo $disable;
 
 if( $idFeedbackProfessor ){
 	$valor = $FeedbackProfessor->selectFeedbackProfessor("WHERE idFeedbackProfessor =".$idFeedbackProfessor);
