@@ -67,10 +67,7 @@ $arrayRetorno = array();
 	$idFeedbackProfessor = $_REQUEST['id'];
 	$idProfessor = $_REQUEST['idProfessor'];
 	$nomeAssistiu = $Professor->getNome($_REQUEST['quemAssistiu']);
-	$idGrupo = 2822; //$_REQUEST['idGrupo'];
-	Uteis::pr( $idGrupo);
-	echo "testeeeee";
-	$nomeGrupo = $Grupo->getNome($idGrupo);
+	$idGrupo = $_REQUEST['idGrupo'];
 	$professorAssistido = $Professor->getNome($_REQUEST['idProfessor']);
 	
 	$FeedbackProfessor->setIdFeedbackProfessor($idFeedbackProfessor);
@@ -104,6 +101,11 @@ $arrayRetorno = array();
 	$idFuncionario = $GerenteTem->selectGerenteTem_porGrupo($idPlanoAcaoGrupo);
 	$email = "israel@companhiadeidiomas.com.br"; //$Funcionario->getEmail($idFuncionario);
 	$nome = $Funcionario->getNome($idFuncionario);
+	
+	//Uteis::pr( $idGrupo);
+	//echo "testeeeee";
+	//$nomeGrupo = $Grupo->getNome($idGrupo);
+
 	
 	$msg .= "<p>Professor assistido: ".$professorAssistido."</p>";
 	$msg .= "<p>Quem Assistiu: ".$nomeAssistiu."</p>";
