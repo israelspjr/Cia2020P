@@ -78,7 +78,7 @@ function aguardarCarregamentoFeed(){
         <!--<span class="placeholder">Campo Obrigatório</span> </p>
       --><p>
        <label>Grupo:</label>
-           <?php echo $Grupo->selectGrupoSelect("",$idGrupo); ?></p>
+           <?php echo $Grupo->selectGrupoSelect("disabled",$idGrupo); ?></p>
             <p>
       <label>Status:</label>
       <input type="radio" id="status" name="status" value="1" <?php if($status == 1) { echo "checked"; } ?> <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/> <img src="<?php echo CAMINHO_IMG."excelente.png"?>" title="Aula excelente"/> 
