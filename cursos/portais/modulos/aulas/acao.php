@@ -63,6 +63,9 @@ if($_POST['acao']=="deletar"){
 	
 	$idFeedbackProfessor = $_REQUEST['id'];
 	$idProfessor = $_REQUEST['idProfessor'];
+	$nomeAssistiu = $Professor->getNome($_POST['quemAssistiu']);
+	$nomeGrupo = $Grupo->getNome($_POST['idGrupo']);
+	$professorAssistido = $Professor->getNome($_POST['idProfessor']);
 	
 	$FeedbackProfessor->setIdFeedbackProfessor($idFeedbackProfessor);
 	$FeedbackProfessor->setProfessorIdProfessor($idProfessor);
@@ -72,7 +75,7 @@ if($_POST['acao']=="deletar"){
 	$FeedbackProfessor->setGrupoIdGrupo($_POST['idGrupo']);
 	$FeedbackProfessor->setStatus($_POST['status']);
 	$FeedbackProfessor->setStatus2($_POST['idNotasTipoNota']);
-	$FeedbackProfessor->setQuemAssistiu($_POST['quemAssistiu']);
+	$FeedbackProfessor->setQuemAssistiu($nomeAssistiu);
 	$FeedbackProfessor->setProfessorIdAssistido($_POST['idProfessor']);
 	$FeedbackProfessor->setPergunta1($_POST['pergunta1']);
 	$FeedbackProfessor->setPergunta2($_POST['pergunta2']);
@@ -96,10 +99,11 @@ if($_POST['acao']=="deletar"){
 	$email = "israel@companhiadeidiomas.com.br"; //$Funcionario->getEmail($idFuncionario);
 	$nome = $Funcionario->getNome($idFuncionario);
 	
-	$msg .= "<p>Professor assistido: ".$idProfessor."</p>";
-	$msg .= "<p>Quem Assistiu: ".$_POST['quemAssistiu']."</p>";
-	$msg .= "<p>Grupo:".$idGrupo."</p>";
+	$msg .= "<p>Professor assistido: ".$professorAssistido."</p>";
+	$msg .= "<p>Quem Assistiu: ".$nomeAssistiu."</p>";
+	$msg .= "<p>Grupo:".$nomegrupo."</p>";
 	$msg .= "<p>Nota:".$_POST['idNotasTipoNota']."</p>";
+	$msg .= "<p>Feedback:".$_POST['obs']."</p>";
 	$msg .= "<p>Por qualquer motivo, caso não concorde delete a avaliação feita no cadastro do professor</p>";
 	
 	 $paraQuem1 = array("nome" => $nome, "email" => $email);
