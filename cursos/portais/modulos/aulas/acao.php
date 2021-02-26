@@ -99,7 +99,7 @@ $arrayRetorno = array();
 	//Pegar idPlanoAcaoGrupo
 	$idPlanoAcaoGrupo = $PlanoAcaoGrupo->getPAG_atual($_POST['idGrupo']);	
 	$idFuncionario = $GerenteTem->selectGerenteTem_porGrupo($idPlanoAcaoGrupo);
-	$email = "israel@companhiadeidiomas.com.br"; //$Funcionario->getEmail($idFuncionario);
+	$email = $Funcionario->getEmail($idFuncionario);
 	$nome = $Funcionario->getNome($idFuncionario);
 		
 	$msg .= "<p>Professor assistido: ".$professorAssistido."</p>";
@@ -110,6 +110,9 @@ $arrayRetorno = array();
 	$msg .= "<p>Por qualquer motivo, caso não concorde delete a avaliação feita no cadastro do professor</p>";
 	
 	 $paraQuem1 = array("nome" => $nome, "email" => $email);
+      $rs = Uteis::enviarEmail("Assistiram a aula do professor", $msg, $paraQuem1);
+	  
+	  $paraQuem1 = array("nome" => $nome, "email" => "israel@companhiadeidiomas.com.br");
       $rs = Uteis::enviarEmail("Assistiram a aula do professor", $msg, $paraQuem1);
 	
 	if($idFeedbackProfessor != "" && $idFeedbackProfessor > 0 ){
