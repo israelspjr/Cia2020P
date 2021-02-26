@@ -358,7 +358,7 @@ class FeedbackProfessor extends Database {
 // onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "?id=" . $valor['idFeedbackProfessor'] . $idPai . "', '#centro')\"
 				$html .= "<tr>";
 				$html .= "	
-				<td align=\"center\" onclick=\"abrirNivelPagina(this, '" . $caminhoAbrir . "?id=" . $valor['idFeedbackProfessor'] . $idPai . "', '" . $caminhoAtualizar . $idPai . "', '$ondeAtualiza')\" >" . Uteis::exibirData($valor['dataAvaliada']) . "</td>
+				<td align=\"center\" onclick=\"zerarCentro();carregarModulo('" . $caminhoAbrir . "?id=" . $valor['idFeedbackProfessor'] . $idPai . "', '#centro')\" >" . Uteis::exibirData($valor['dataAvaliada']) . "</td>
 				<td align=\"center\"> ".$nomeGrupo."</td>
 				<td align=\"center\">".$img."</td>
 				<td align=\"center\"> ".$valor['status2']."</td>
