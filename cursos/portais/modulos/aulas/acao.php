@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 
 $arrayRetorno = array();
 
-if($_POST['acao']=="deletar"){
+/*if($_POST['acao']=="deletar"){
 	
 	$arrayRetorno['mensagem'] = "Feedback professor deletado com sucesso";
 	
@@ -21,7 +21,7 @@ if($_POST['acao']=="deletar"){
 }elseif($_POST['acao']=="file"){
 
 	/* formatos de imagem permitidos */
-    $permitidos = array(".doc",".docx",".pdf");
+/*    $permitidos = array(".doc",".docx",".pdf");
     $pasta = CAMINHO_UP_ROOT."arquivo/feedbackprofessor/";
 	
     if(isset($_POST)){
@@ -29,20 +29,20 @@ if($_POST['acao']=="deletar"){
         $tamanho_imagem = $_FILES['file']['size'];
          
         /* pega a extensão do arquivo */
-        $ext = strtolower(strrchr($nome_imagem,"."));
+//        $ext = strtolower(strrchr($nome_imagem,"."));
          
         /*  verifica se a extensão está entre as extensões permitidas */
-        if(in_array($ext,$permitidos)){
+ //       if(in_array($ext,$permitidos)){
              
             /* converte o tamanho para KB */
-            $tamanho = round($tamanho_imagem / 1024);
+/*           $tamanho = round($tamanho_imagem / 1024);
              
             if($tamanho < 1024){ //se imagem for até 1MB envia
                 $nome_atual = md5(uniqid(time())).$ext; //nome que dará a imagem
                 $tmp = $_FILES['file']['tmp_name']; //caminho temporário da imagem
                  
                 /* se enviar a foto, insere o nome da foto no banco de dados */
-				if(move_uploaded_file($tmp, $pasta.$nome_atual)){
+	/*			if(move_uploaded_file($tmp, $pasta.$nome_atual)){
                    
                     echo "Arquivo Carregado!<input type=\"hidden\" name=\"file_oculto_feed\" id=\"file_oculto\" value=\"".$nome_atual."\">"; //imprime a foto na tela
 					
@@ -62,12 +62,13 @@ if($_POST['acao']=="deletar"){
 	exit;
 	
 }else{
-	
+	*/
 	$idFeedbackProfessor = $_REQUEST['id'];
 	$idProfessor = $_REQUEST['idProfessor'];
 	$nomeAssistiu = $Professor->getNome($_REQUEST['quemAssistiu']);
 	$idGrupo = 2822; //$_REQUEST['idGrupo'];
-	echo $idGrupo;
+	Uteis::pr( $idGrupo);
+	echo "testeeeee";
 	$nomeGrupo = $Grupo->getNome($idGrupo);
 	$professorAssistido = $Professor->getNome($_REQUEST['idProfessor']);
 	
@@ -123,7 +124,7 @@ if($_POST['acao']=="deletar"){
 		$arrayRetorno['fecharNivel'] = true;
 	}	
 	
-}
+//}
 
 echo json_encode($arrayRetorno);
 
