@@ -142,8 +142,8 @@ function aguardarCarregamentoFeed(){
   <!--    <p><label>O material está adequado ao nível dos alunos? Há desnível grande entre eles?</label>
        <input type="text" id="pergunta8" name="pergunta13" value="<?php echo $pergunta13?>" style="    width: 500px;"/></p>
    -->
-      <p>
-      
+      </div>
+      <div class="linha-inteira">
           <p>
         <label>Feedback:</label>
         <?php if ($disable != 1) {?>
