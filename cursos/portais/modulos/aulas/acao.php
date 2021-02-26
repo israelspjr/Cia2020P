@@ -96,8 +96,14 @@ if($_POST['acao']=="deletar"){
 	$email = "israel@companhiadeidiomas.com.br"; //$Funcionario->getEmail($idFuncionario);
 	$nome = $Funcionario->getNome($idFuncionario);
 	
+	$msg .= "<p>Professor assistido: ".$idProfessor."</p>";
+	$msg .= "<p>Quem Assistiu: ".$_POST['quemAssistiu']."</p>";
+	$msg .= "<p>Grupo:".$idGrupo."</p>";
+	$msg .= "<p>Nota:".$_POST['idNotasTipoNota']."</p>";
+	$msg .= "<p>Por qualquer motivo, caso não concorde delete a avaliação feita no cadastro do professor</p>";
+	
 	 $paraQuem1 = array("nome" => $nome, "email" => $email);
-      $rs = Uteis::enviarEmail($assunto, $msg, $paraQuem1);
+      $rs = Uteis::enviarEmail("Assistiram a aula do professor", $msg, $paraQuem1);
 	
 	if($idFeedbackProfessor != "" && $idFeedbackProfessor > 0 ){
 		$FeedbackProfessor->updateFeedbackProfessor();
