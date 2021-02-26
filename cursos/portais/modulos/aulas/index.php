@@ -16,7 +16,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
       <th>Grupo</th>
       <th>Status</th>
       <th>Nota</th>
-      <th>Professor Assistido</th>
+      <th>Quem Assistiu</th>
   <!--     <th>Feedback</th>-->
       <th></th>
       
@@ -34,7 +34,7 @@ $idProfessor = $_SESSION['idProfessor_SS'];
        <th>Grupo</th>
       <th>Status</th>
       <th>Nota</th>
-      <th>Professor Assistido</th>
+      <th>Quem Assistiu</th>
   <!--     <th>Feedback</th>-->
  	<th></th>
      
