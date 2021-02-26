@@ -66,7 +66,11 @@ function aguardarCarregamentoFeed(){
       <input type="hidden" id="id" name="id" value="<?php echo $idFeedbackProfessor?>" />
     <div class="linha-inteira">
        <p><label>Nome do Professor ? </label>
-      <?php echo $Professor->selectProfessorSelect("required", $idProfessor ," AND candidato = 0") ?></p>
+       <?php if ($disable != 1) {?>
+       <?php echo $Professor->selectProfessorSelect("required", $idProfessor ," AND candidato = 0") ?></p>
+       <?php } else {
+			Uteis::pr($_SESSION);   
+	   }?>
       <p>
        <p>
         <label>Data da aula Assistida:</label>
