@@ -325,7 +325,7 @@ class FeedbackProfessor extends Database {
 				$status = $valor['status'];
 				$nomeAssistido = $Professor->getNome($valor['professor_idAssistido']);
 				
-				if (is_int($valor['quemAssistiu'])) {
+				if (is_int($valor['quemAssistiu']) == true) {
 					$quemAssistiu = $Professor->getNome($valor['quemAssistiu']);	
 				} else {
 					$quemAssistiu = $valor['quemAssistiu']; 
