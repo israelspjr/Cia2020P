@@ -324,6 +324,9 @@ class FeedbackProfessor extends Database {
 				$nomeGrupo = $Grupo->getNome($valor['grupo_idGrupo']);
 				$status = $valor['status'];
 				$nomeAssistido = $Professor->getNome($valor['professor_idAssistido']);
+				if (is_int($valor['quemAssistiu'])) {
+					$quemAssistiu = $Professor->getNome($valor['quemAssistiu']);	
+				}
 				
 				$pergunta1 = $valor['pergunta1'];
 				$pergunta2 = $valor['pergunta2'];
@@ -361,7 +364,7 @@ class FeedbackProfessor extends Database {
 				<td align=\"center\"> ".$nomeGrupo."</td>
 				<td align=\"center\">".$img."</td>
 				<td align=\"center\"> ".$valor['status2']."</td>
-				<td align=\"center\">".$valor['quemAssistiu']."</td>";
+				<td align=\"center\">".$quemAssistiu."</td>";
 			$html .= "</tr>";
 
 			}
