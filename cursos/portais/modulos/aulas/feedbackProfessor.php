@@ -92,10 +92,8 @@ function aguardarCarregamentoFeed(){
      </p>
      <p>
      <label>Nota: </label>
-     <?php echo $TipoNota->selectNotasTipoNotaSelect("", $status2, " AND tipoNota_idTipoNota = 4 ") ?>
-
-      </p>
-      </div>
+      <input type="text" id="idNotasTipoNota" name="idNotasTipoNota" value="<?php echo $status2?>" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?> /></p>
+	    </div>
          <div class="esquerda">
         
     
