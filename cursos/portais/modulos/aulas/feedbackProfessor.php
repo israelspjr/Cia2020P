@@ -69,22 +69,22 @@ function aguardarCarregamentoFeed(){
        <?php if ($disable != 1) {?>
        <?php echo $Professor->selectProfessorSelect("required", $idProfessor ," AND candidato = 0") ?></p>
        <?php } else {
-			Uteis::pr($_SESSION);   
+		     echo ($_SESSION['nome_SS']);   
 	   }?>
       <p>
        <p>
         <label>Data da aula Assistida:</label>
-        <input type="date" name="dataAvaliada" id="dataAvaliada" class="required" value="<?php echo $dataAvaliada?>"/>
+        <input type="date" name="dataAvaliada" id="dataAvaliada" class="required" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?> value="<?php echo $dataAvaliada?>"/>
         <!--<span class="placeholder">Campo Obrigatório</span> </p>
       --><p>
        <label>Grupo:</label>
            <?php echo $Grupo->selectGrupoSelect("",$idGrupo); ?></p>
             <p>
       <label>Status:</label>
-      <input type="radio" id="status" name="status" value="1" <?php if($status == 1) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."excelente.png"?>" title="Aula excelente"/> 
-      <input type="radio" id="status" name="status" value="2" <?php if($status == 2) { echo "checked"; } ?> /> <img src="<?php echo CAMINHO_IMG."boa.png"?>" title="Aula Boa, mas pode ser melhor"/> 
-      <input type="radio" id="status" name="status" value="3" <?php if($status == 3) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."regular.png"?>" /> 
-      <input type="radio" id="status" name="status" value="4" <?php if($status == 4) { echo "checked"; } ?>/> <img src="<?php echo CAMINHO_IMG."ruim.png"?>" /> 
+      <input type="radio" id="status" name="status" value="1" <?php if($status == 1) { echo "checked"; } ?> <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/> <img src="<?php echo CAMINHO_IMG."excelente.png"?>" title="Aula excelente"/> 
+      <input type="radio" id="status" name="status" value="2" <?php if($status == 2) { echo "checked"; } ?> <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?> /> <img src="<?php echo CAMINHO_IMG."boa.png"?>" title="Aula Boa, mas pode ser melhor"/> 
+      <input type="radio" id="status" name="status" value="3" <?php if($status == 3) { echo "checked"; } ?> <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/> <img src="<?php echo CAMINHO_IMG."regular.png"?>" /> 
+      <input type="radio" id="status" name="status" value="4" <?php if($status == 4) { echo "checked"; } ?> <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/> <img src="<?php echo CAMINHO_IMG."ruim.png"?>" /> 
      </p>
      <p>
      <label>Nota: </label>
