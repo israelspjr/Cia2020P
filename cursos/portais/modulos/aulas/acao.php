@@ -96,7 +96,7 @@ if($_POST['acao']=="deletar"){
 		$arrayRetorno['fecharNivel'] = true;
 	}else{
 		$FeedbackProfessor = $FeedbackProfessor->addFeedbackProfessor();
-		$arrayRetorno['mensagem'] = "Feedback professor efetuado com sucesso";
+		$arrayRetorno['mensagem'] = "Feedback professor cadastrado com sucesso";
 		$arrayRetorno['fecharNivel'] = true;
 	}	
 	
