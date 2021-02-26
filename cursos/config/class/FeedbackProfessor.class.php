@@ -324,8 +324,11 @@ class FeedbackProfessor extends Database {
 				$nomeGrupo = $Grupo->getNome($valor['grupo_idGrupo']);
 				$status = $valor['status'];
 				$nomeAssistido = $Professor->getNome($valor['professor_idAssistido']);
+				
 				if (is_int($valor['quemAssistiu'])) {
 					$quemAssistiu = $Professor->getNome($valor['quemAssistiu']);	
+				} else {
+					$quemAssistiu = $valor['quemAssistiu']; 
 				}
 				
 				$pergunta1 = $valor['pergunta1'];
