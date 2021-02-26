@@ -6,6 +6,7 @@ $PlanoAcaoGrupo = new PlanoAcaoGrupo();
 $GerenteTem = new GerenteTem();
 $Funcionario = new Funcionario();
 $Grupo = new Grupo();
+$Professor = new Professor();
 
 error_reporting(E_ALL);
 
@@ -68,6 +69,7 @@ $arrayRetorno = array();
 	$idProfessor = $_REQUEST['idProfessor'];
 	$nomeAssistiu = $Professor->getNome($_REQUEST['quemAssistiu']);
 	$idGrupo = $_REQUEST['idGrupo'];
+	$nomeGrupo = $Grupo->getNome($idGrupo);
 	$professorAssistido = $Professor->getNome($_REQUEST['idProfessor']);
 	
 	$FeedbackProfessor->setIdFeedbackProfessor($idFeedbackProfessor);
@@ -101,12 +103,7 @@ $arrayRetorno = array();
 	$idFuncionario = $GerenteTem->selectGerenteTem_porGrupo($idPlanoAcaoGrupo);
 	$email = "israel@companhiadeidiomas.com.br"; //$Funcionario->getEmail($idFuncionario);
 	$nome = $Funcionario->getNome($idFuncionario);
-	
-	//Uteis::pr( $idGrupo);
-	//echo "testeeeee";
-	//$nomeGrupo = $Grupo->getNome($idGrupo);
-
-	
+		
 	$msg .= "<p>Professor assistido: ".$professorAssistido."</p>";
 	$msg .= "<p>Quem Assistiu: ".$nomeAssistiu."</p>";
 	$msg .= "<p>Grupo:".$nomegrupo."</p>";
