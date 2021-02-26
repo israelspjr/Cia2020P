@@ -98,46 +98,46 @@ function aguardarCarregamentoFeed(){
         
     
             <p><label>O que mais chamou sua atenção?</label>
-       <input type="text" id="pergunta1" name="pergunta1" value="<?php echo $pergunta1?>" style="    width: 500px;" /></p>
+       <input type="text" id="pergunta1" name="pergunta1" value="<?php echo $pergunta1?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
        
         <p><label>Quais técnicas ou práticas chamaram a atenção na aula assistida?</label>
-       <input type="text" id="pergunta2" name="pergunta2" value="<?php echo $pergunta2?>" style="    width: 500px;"/></p>
+       <input type="text" id="pergunta2" name="pergunta2" value="<?php echo $pergunta2?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
      
        <p><label>Quais atitudes positivas você conseguiu observar?</label>
-       <input type="text" id="pergunta3" name="pergunta3" value="<?php echo $pergunta3?>" style="    width: 500px;"/></p>
+       <input type="text" id="pergunta3" name="pergunta3" value="<?php echo $pergunta3?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
      
        <p><label>O que você faria de diferente?</label>
-       <input type="text" id="pergunta4" name="pergunta4" value="<?php echo $pergunta4?>" style="    width: 500px;"/></p>
+       <input type="text" id="pergunta4" name="pergunta4" value="<?php echo $pergunta4?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
        
         <p><label>A aula foi invertida? Se sim, você percebeu que o aluno ou grupo se preparou para a aula?</label>
-       <input type="text" id="pergunta15" name="pergunta15" value="<?php echo $pergunta4?>" style="    width: 500px;"/></p>
+       <input type="text" id="pergunta15" name="pergunta15" value="<?php echo $pergunta4?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
      
       <p><label>Usou VPG ou algo semelhante ao VPG?</label>
-       <input type="text" id="pergunta5" name="pergunta5" value="<?php echo $pergunta5?>" style="    width: 500px;" /></p>
+       <input type="text" id="pergunta5" name="pergunta5" value="<?php echo $pergunta5?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
  
      <p><label>Alunos estavam envolvidos com a aula?</label>
-       <input type="text" id="pergunta6" name="pergunta6" value="<?php echo $pergunta6?>" style="    width: 500px;"/></p>
+       <input type="text" id="pergunta6" name="pergunta6" value="<?php echo $pergunta6?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
       
        <p><label>A aula foi dinâmica e alegre?</label>
-       <input type="text" id="pergunta7" name="pergunta7" value="<?php echo $pergunta7?>" style="    width: 500px;"/></p>
+       <input type="text" id="pergunta7" name="pergunta7" value="<?php echo $pergunta7?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
      
        <p><label>Que recursos visuais o professor utiliza na aula para auxiliar nas explicações e exposições de conteúdo? </label>
-       <input type="text" id="pergunta8" name="pergunta8" value="<?php echo $pergunta8?>" style="    width: 500px;"/></p>
+       <input type="text" id="pergunta8" name="pergunta8" value="<?php echo $pergunta8?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
       
       <p><label>A aula começou e terminou no horário?</label>
-      <input type="text" id="pergunta9" name="pergunta9" value="<?php echo $pergunta9?>" style="    width: 500px;"/></p>
+      <input type="text" id="pergunta9" name="pergunta9" value="<?php echo $pergunta9?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
       
 	  <p><label>Como é o TTT (Teacher Talking Time)? Alto demais ou adequado dentro da proporção ideal de 70 (alunos)/30 (professor)?</label>
-	  <input type="text" id="pergunta8" name="pergunta10" value="<?php echo $pergunta10?>" style="    width: 500px;"/></p>
+	  <input type="text" id="pergunta8" name="pergunta10" value="<?php echo $pergunta10?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
 
 	  <p><label>Como o professor trabalha a correção dos alunos?</label>
-      <input type="text" id="pergunta8" name="pergunta11" value="<?php echo $pergunta11?>" style="    width: 500px;"/></p>
+      <input type="text" id="pergunta8" name="pergunta11" value="<?php echo $pergunta11?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
 
       <p><label>Professor está usando o idioma-alvo durante toda a aula? Caso não, em que momentos ele usa o português?</label>
-      <input type="text" id="pergunta8" name="pergunta12" value="<?php echo $pergunta12?>" style="    width: 500px;"/></p>
+      <input type="text" id="pergunta8" name="pergunta12" value="<?php echo $pergunta12?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
       
          <p><label>Caso a aula seja em grupo, foi possível perceber algum desnível entre os alunos? </label>
-       <input type="text" id="pergunta14" name="pergunta14" value="<?php echo $pergunta14?>" style="    width: 500px;"/></p>
+       <input type="text" id="pergunta14" name="pergunta14" value="<?php echo $pergunta14?>" style="    width: 500px;" <?php if ($disable == 1) { echo "disabled=\"disabled\""; }?>/></p>
 
   <!--    <p><label>O material está adequado ao nível dos alunos? Há desnível grande entre eles?</label>
        <input type="text" id="pergunta8" name="pergunta13" value="<?php echo $pergunta13?>" style="    width: 500px;"/></p>
@@ -146,7 +146,11 @@ function aguardarCarregamentoFeed(){
       
           <p>
         <label>Feedback:</label>
-        <textarea name="obs" id="obs" class="" cols="40" rows="4" ><?php echo $obs?></textarea>
+        <?php if ($disable != 1) {?>
+        	<textarea name="obs" id="obs" class="" cols="40" rows="4" ><?php echo $obs?></textarea>
+      <?php } else {
+		    echo $obs;
+	  }?> 
       </p>
   		<?php if ($disable != 1) {?>
         	<button class="Bblue" onclick="aguardarCarregamentoFeed()">Salvar</button>
