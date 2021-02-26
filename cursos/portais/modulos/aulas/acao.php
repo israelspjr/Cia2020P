@@ -5,6 +5,7 @@ $FeedbackProfessor = new FeedbackProfessor();
 $PlanoAcaoGrupo = new PlanoAcaoGrupo();
 $GerenteTem = new GerenteTem();
 $Funcionario = new Funcionario();
+$Grupo = new Grupo();
 
 $arrayRetorno = array();
 
