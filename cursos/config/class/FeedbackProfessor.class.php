@@ -320,7 +320,6 @@ class FeedbackProfessor extends Database {
 			$html = "";
 
 			while ($valor = mysqli_fetch_array($result)) {
-				Uteis::pr($valor);
 				
 				$nomeGrupo = $Grupo->getNome($valor['grupo_idGrupo']);
 				$status = $valor['status'];
@@ -362,7 +361,7 @@ class FeedbackProfessor extends Database {
 				<td align=\"center\"> ".$nomeGrupo."</td>
 				<td align=\"center\">".$img."</td>
 				<td align=\"center\"> ".$valor['status2']."</td>
-				<td align=\"center\">".$nomeAssistido."</td>";
+				<td align=\"center\">".$valor['quemAssistiu']."</td>";
 			$html .= "</tr>";
 
 			}
