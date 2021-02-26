@@ -60,7 +60,7 @@ function aguardarCarregamentoFeed(){
       <input type="hidden" id="acao" name="acao" value="file" />
       <input type="file" id="add_file_feed" onchange="addArquivo()" name="file" />
     </form>
-    <legend>Cadastro do feedback do professor</legend>
+    <legend> Feedback do professor</legend>
     <form id="form_feed_dados" class="validate" method="post" action="" onsubmit="return false" >
       <input type="hidden" id="quemAssistiu" name="quemAssistiu" value="<?php echo $_SESSION['idProfessor_SS'];?>" />
       <input type="hidden" id="id" name="id" value="<?php echo $idFeedbackProfessor?>" />
@@ -142,8 +142,10 @@ function aguardarCarregamentoFeed(){
         <label>Feedback:</label>
         <textarea name="obs" id="obs" class="" cols="40" rows="4" ><?php echo $obs?></textarea>
       </p>
-  
-        <button class="Bblue" onclick="aguardarCarregamentoFeed()">Salvar</button>
+  		<?php if ($disable != 1) {?>
+        	<button class="Bblue" onclick="aguardarCarregamentoFeed()">Salvar</button>
+        <?php } ?>
+        	<button class="Bblue" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/aulas/index.php', '#centro');">Fechar</button>
       </p>
       </div>
     </form>
