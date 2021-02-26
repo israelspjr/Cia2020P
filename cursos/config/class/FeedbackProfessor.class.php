@@ -320,7 +320,7 @@ class FeedbackProfessor extends Database {
 			$html = "";
 
 			while ($valor = mysqli_fetch_array($result)) {
-				Uteis:pr($valor);
+				Uteis::pr($valor);
 				
 				$nomeGrupo = $Grupo->getNome($valor['grupo_idGrupo']);
 				$status = $valor['status'];
