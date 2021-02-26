@@ -66,7 +66,8 @@ if($_POST['acao']=="deletar"){
 	$idFeedbackProfessor = $_REQUEST['id'];
 	$idProfessor = $_REQUEST['idProfessor'];
 	$nomeAssistiu = $Professor->getNome($_POST['quemAssistiu']);
-	$nomeGrupo = $Grupo->getNome($_POST['idGrupo']);
+	$idGrupo = $_POST['idGrupo'];
+	$nomeGrupo = $Grupo->getNome($idGrupo);
 	$professorAssistido = $Professor->getNome($_POST['idProfessor']);
 	
 	$FeedbackProfessor->setIdFeedbackProfessor($idFeedbackProfessor);
@@ -74,7 +75,7 @@ if($_POST['acao']=="deletar"){
 	$FeedbackProfessor->setAnexo($_POST['file_oculto_feed']);
 	$FeedbackProfessor->setObs($_POST['obs']);
 	$FeedbackProfessor->setDataAvaliada($_POST['dataAvaliada']);
-	$FeedbackProfessor->setGrupoIdGrupo($_POST['idGrupo']);
+	$FeedbackProfessor->setGrupoIdGrupo($idGrupo);
 	$FeedbackProfessor->setStatus($_POST['status']);
 	$FeedbackProfessor->setStatus2($_POST['idNotasTipoNota']);
 	$FeedbackProfessor->setQuemAssistiu($nomeAssistiu);
