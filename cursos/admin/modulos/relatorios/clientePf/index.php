@@ -29,6 +29,7 @@ $arrItens_padrao[] = array(0 => "endereco", 1 => "Endereço");
 $arrItens_opcional[] = array(0 => "nomeExibicao", 1 => "Nome para exibição");
 $arrItens_opcional[] = array(0 => "tipoCliente", 1 => "Tipo de Cliente");
 $arrItens_opcional[] = array(0 => "dataEntrada", 1 => "Data Entrada");
+$arrItens_opcional[] = array(0 => "dataEntradaNivel", 1 => "Data Entrada 1º Nível");
 $arrItens_opcional[] = array(0 => "nivelInicial", 1 => "Nivel Inicial");
 $arrItens_opcional[] = array(0 => "nivelAtual", 1 => "Nivel Atual");
 

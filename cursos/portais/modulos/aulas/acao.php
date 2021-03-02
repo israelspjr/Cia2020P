@@ -111,10 +111,7 @@ $arrayRetorno = array();
 	
 	 $paraQuem1 = array("nome" => $nome, "email" => $email);
       $rs = Uteis::enviarEmail("Assistiram a aula do professor", $msg, $paraQuem1);
-	  
-	  $paraQuem1 = array("nome" => $nome, "email" => "israel@companhiadeidiomas.com.br");
-      $rs = Uteis::enviarEmail("Assistiram a aula do professor", $msg, $paraQuem1);
-	
+	  	
 	if($idFeedbackProfessor != "" && $idFeedbackProfessor > 0 ){
 		$FeedbackProfessor->updateFeedbackProfessor();
 		$arrayRetorno['mensagem'] = MSG_CADATU;
