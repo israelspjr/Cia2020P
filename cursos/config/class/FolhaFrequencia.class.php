@@ -110,7 +110,7 @@ class FolhaFrequencia extends Database {
      */
     function selectFolhaFrequencia($where = "WHERE 1") {
         $sql = "SELECT SQL_CACHE idFolhaFrequencia, finalizadaParcial, finalizadaPrincipal, obs, planoAcaoGrupo_idPlanoAcaoGrupo, professor_idProfessor, dataReferencia, dataCadastro, dataFinalizada FROM folhaFrequencia " . $where;
-        echo $sql;
+   //     echo $sql;
         //exit;
         return $this -> executeQuery($sql);
     }
