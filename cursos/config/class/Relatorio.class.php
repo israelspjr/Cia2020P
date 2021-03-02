@@ -3782,6 +3782,16 @@ FROM
 	
 		//NivelInicial 
 		
+			$sql2 = "SELECT SQL_CACHE P.idIntegranteGrupo, P.planoAcaoGrupo_idPlanoAcaoGrupo, P.clientePf_idClientePf, P.dataEntrada, P.dataSaida, P.obs,   P.dataSaidaDemonstrativo, P.dataRetorno
+		FROM
+    integranteGrupo AS P
+    	WHERE P.clientePf_idClientePf = ".$idClientePf." ORDER BY idIntegranteGrupo ASC";
+	
+	$valorInicial = Uteis::executarQuery($sql2);
+	$dataEntradaNivel = $valorInicial[0]['dataEntrada'];
+	
+	//Data Entrada nivel Atual
+		
 	$sql2 = "SELECT SQL_CACHE P.idIntegranteGrupo, P.planoAcaoGrupo_idPlanoAcaoGrupo, P.clientePf_idClientePf, P.dataEntrada, P.dataSaida, P.obs,   P.dataSaidaDemonstrativo, P.dataRetorno
 		FROM
     integranteGrupo AS P
@@ -3863,6 +3873,8 @@ FROM
 			  $html .= "</td>";
 			} elseif ($campo == "dataEntrada")
 			  $html .= "<td>".Uteis::exibirData($dataEntrada)."</td>";
+			elseif ($campo == "dataEntradaNivel")
+			  $html .= "<td>".Uteis::exibirData($dataEntradaNivel)."</td>";
 			elseif ($campo == "nivelInicial")
 			  $html .= "<td>".$nivelInicial."</td>";
 			elseif ($campo == "nivelAtual")
