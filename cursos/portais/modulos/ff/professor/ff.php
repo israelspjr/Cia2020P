@@ -23,7 +23,6 @@ $valorIds .= $valor2['idPlanoAcaoGrupo'].", ";
 }
 
 $valorIds = substr($valorIds, 0, -2);
-echo $valorIds; 
 
 $add = "WHERE planoAcaoGrupo_idPlanoAcaoGrupo in ( ".$valorIds.") ";
 
