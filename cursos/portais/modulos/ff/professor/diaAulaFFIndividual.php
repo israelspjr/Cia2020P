@@ -465,5 +465,7 @@ $('#div_ff_individual').hide();
 $('#div_ff_individualD').hide();
 $('#div_ff_geral').show();
 $('#div_ff_siglas').hide();
+zerarCentro();
+carregarModulo('modulos/ff/professor/folhaFrequencia_abas.php?idFolhaFrequencia=<?php echo $idFolhaFrequencia?>&Ndados=', '#centro');
 }
 </script> 
