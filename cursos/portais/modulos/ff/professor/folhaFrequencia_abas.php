@@ -14,8 +14,7 @@ $idPAG = $valorFolhaFrequencia[0]['planoAcaoGrupo_idPlanoAcaoGrupo'];
    <button onclick="carregaAbaIndividual()"  class="Bblue">Folha individual</button>
     <button class="Bblue" onclick="carregaAbaIndividualD()">Folha individual Desktop</button>
     <button class="Bblue" onclick="siglas()">Siglas </button>
-    <button class="Bblue" onclick="zerarCentro();carregarModulo('/cursos/portais/modulos/ff/indexProf.php', '#centro')">Acessar Grupos </button>
-        
+         
     <div id="div_ff_geral" class="div_aba_interna" >     
     	<?php require_once "folhaFrequencia.php" ?>
     </div>

@@ -42,6 +42,7 @@ $rsIntegranteGrupo = $IntegranteGrupo->selectIntegranteGrupoFF($idPlanoAcaoGrupo
   
 <fieldset>
   <legend>Folha de frequência individual</legend>
+  <button class="Bblue" onclick="carregaGeral()">Folha geral</button>
     
   <p>Grupo: <strong><?php echo $PlanoAcaoGrupo->getNomeGrupo($idPlanoAcaoGrupo)?></strong></p>
   <p>Professor: <strong><?php echo $Professor->getNome($idProfessor)?></strong></p>
@@ -464,4 +465,12 @@ $('#add_file').on('change', function(){
 
 });
 
+function carregaGeral(){
+$('#div_ff_individual').hide();	
+$('#div_ff_individualD').hide();
+$('#div_ff_geral').show();
+$('#div_ff_siglas').hide();
+zerarCentro();
+carregarModulo('modulos/ff/professor/folhaFrequencia_abas.php?idFolhaFrequencia=<?php echo $idFolhaFrequencia?>&Ndados=', '#centro');
+}
 </script> 
