@@ -2510,7 +2510,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
               $html .= "<td >" . Uteis::exibirData($valor['dataReferencia']) . "</td>";
 				  } else if ($campo == 'nomeProfessor') {
 
-			  $html .= $html2P; //Nome Professor
+			  $html .= "<td>".$nomeProfessor2."</td>"; //$html2P; //Nome Professor
 				  } else if ($campo == 'PROFESSOR') {
 			 
 			  $html .= $html2; //Conceito Professor
