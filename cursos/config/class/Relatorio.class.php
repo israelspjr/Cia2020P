@@ -2315,7 +2315,7 @@ $valor = $RelatorioDesempenho->selectRelatorioDesempenho(" WHERE acompanhamentoC
       while ($valor = mysqli_fetch_array($result)) {
 		  
         $valorProfessor = $AulaGrupoProfessor ->selectAulaGrupoProfessor_periodoDemo($valor['idPlanoAcaoGrupo'], $valor['dataReferencia']);
-		Uteis::pr($valorProfessor);
+	//	Uteis::pr($valorProfessor);
 		$nomeProfessor2 = $Professor->getNome($valorProfessor[0]);
 	    $idPsaIntegranteGrupo = $valor['idPsaIntegranteGrupo'];
 		
